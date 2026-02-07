@@ -1,0 +1,410 @@
+// Prisma Schema for Japanese Analyzer
+// Subscription & Payment System with PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================================
+// USER & AUTHENTICATION
+// ============================================
+
+enum AuthProvider {
+  LOCAL
+  GOOGLE
+  FACEBOOK
+}
+
+enum SubscriptionTier {
+  FREE
+  PRO
+  PREMIUM
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  INCOMPLETE
+  TRIALING
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String?  @unique
+  password  String?  // Nullable for OAuth users
+  provider  AuthProvider @default(LOCAL)
+  providerId String?
+
+  // Subscription fields
+  subscriptionTier   SubscriptionTier   @default(FREE)
+  credits            Int                @default(0)
+  stripeCustomerId   String?            @unique
+  subscriptionExpiry DateTime?
+
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLoginAt DateTime?
+
+  // Relations
+  subscriptions      Subscription[]
+  payments           Payment[]
+  creditTransactions CreditTransaction[]
+  userPackProgress   UserPackProgress[]
+  vocabulary         Vocabulary[]
+  learningStats      LearningStats[]
+  analyses           Analysis[]
+
+  @@index([email])
+  @@index([stripeCustomerId])
+  @@index([subscriptionTier])
+}
+
+// ============================================
+// SUBSCRIPTION MANAGEMENT
+// ============================================
+
+model Subscription {
+  id                String             @id @default(cuid())
+  userId            String
+  user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Subscription details
+  tier              SubscriptionTier
+  status            SubscriptionStatus @default(ACTIVE)
+
+  // Stripe fields
+  stripeSubscriptionId String?         @unique
+  stripePriceId     String?
+  stripeProductId   String?
+
+  // Billing
+  billingPeriod     String             // 'monthly' or 'yearly'
+  currentPeriodStart DateTime?
+  currentPeriodEnd   DateTime?
+  cancelAtPeriodEnd  Boolean           @default(false)
+  canceledAt        DateTime?
+
+  // Credits
+  monthlyCredits    Int                @default(0) // Credits allocated per month
+
+  // Timestamps
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  @@index([userId])
+  @@index([stripeSubscriptionId])
+  @@index([status])
+}
+
+// ============================================
+// PAYMENT PROCESSING
+// ============================================
+
+enum PaymentMethod {
+  CARD
+  ALIPAY
+  WECHAT_PAY
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+enum PaymentType {
+  SUBSCRIPTION
+  CREDIT_TOPUP
+  ONE_TIME
+}
+
+model Payment {
+  id                String         @id @default(cuid())
+  userId            String
+  user              User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Payment details
+  amount            Decimal        @db.Decimal(10, 2)
+  currency          String         @default("usd")
+  paymentMethod     PaymentMethod
+  status            PaymentStatus  @default(PENDING)
+  type              PaymentType
+
+  // Stripe fields
+  stripePaymentIntentId String?    @unique
+  stripeInvoiceId       String?    @unique
+
+  // Additional payment provider IDs (for Alipay/WeChat)
+  externalPaymentId     String?
+
+  // Related entities
+  subscriptionId    String?
+  creditAmount      Int?           // If payment was for credits
+
+  // Timestamps
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  paidAt            DateTime?
+
+  @@index([userId])
+  @@index([stripePaymentIntentId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ============================================
+// CREDIT SYSTEM
+// ============================================
+
+enum CreditTransactionType {
+  PURCHASE          // User bought credits
+  MONTHLY_ALLOCATION // Monthly subscription credits
+  DEDUCTION         // Used credits for feature
+  REFUND            // Credits refunded
+  BONUS             // Bonus credits from promotion
+}
+
+model CreditTransaction {
+  id          String                @id @default(cuid())
+  userId      String
+  user        User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Transaction details
+  amount      Int                   // Positive for additions, negative for deductions
+  balanceAfter Int                  // Balance after this transaction
+  type        CreditTransactionType
+  description String?
+
+  // Related entities
+  paymentId   String?               // If from purchase
+  featureType String?               // e.g., 'premium_pack', 'jlpt_exam'
+  relatedEntityId String?           // ID of pack or exam
+
+  // Timestamps
+  createdAt   DateTime              @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+  @@index([type])
+}
+
+// ============================================
+// FEATURE ACCESS CONTROL
+// ============================================
+
+enum FeatureType {
+  BASIC_VOCABULARY
+  TRAVEL_PACKS
+  MOVIE_PACKS
+  DRAMA_PACKS
+  COMIC_PACKS
+  JLPT_PREP
+  JLPT_MOCK_EXAMS
+  SRS_SYSTEM
+  ADVANCED_ANALYSIS
+}
+
+model FeatureAccess {
+  id          String            @id @default(cuid())
+  featureType FeatureType       @unique
+
+  // Tier requirements
+  minTier     SubscriptionTier
+
+  // Alternative: Credit cost if user doesn't have tier
+  creditCost  Int?
+
+  // Feature limits by tier
+  freeLimitDaily    Int?
+  proLimitDaily     Int?
+  premiumLimitDaily Int?
+
+  // Metadata
+  description String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([featureType])
+}
+
+// ============================================
+// LEARNING CONTENT
+// ============================================
+
+enum PackCategory {
+  VOCABULARY
+  TRAVEL
+  MOVIE
+  DRAMA
+  COMIC
+  JLPT_N5
+  JLPT_N4
+  JLPT_N3
+  JLPT_N2
+  JLPT_N1
+}
+
+model WordPack {
+  id          String         @id @default(cuid())
+  packId      String         @unique
+  title       String
+  description String?
+  category    PackCategory
+
+  // Access control
+  requiredTier SubscriptionTier @default(FREE)
+  creditCost   Int?              // Alternative cost in credits
+
+  // Pack metadata
+  wordCount    Int              @default(0)
+  difficulty   String?          // 'beginner', 'intermediate', 'advanced'
+  tags         String[]
+
+  // Timestamps
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  // Relations
+  words        Word[]
+  userProgress UserPackProgress[]
+
+  @@index([packId])
+  @@index([category])
+  @@index([requiredTier])
+}
+
+model Word {
+  id          String   @id @default(cuid())
+  packId      String
+  pack        WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)
+
+  // Word details
+  word        String
+  reading     String?  // Hiragana reading
+  romaji      String?  // Romanized reading
+  meaning     String   // Chinese translation
+  partOfSpeech String?
+  example     String?  // Example sentence
+  exampleTranslation String?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  vocabulary  Vocabulary[]
+
+  @@index([packId])
+  @@index([word])
+}
+
+// ============================================
+// USER PROGRESS & LEARNING
+// ============================================
+
+model UserPackProgress {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  packId          String
+  pack            WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)
+
+  // Progress tracking
+  wordsLearned    Int      @default(0)
+  wordsReviewed   Int      @default(0)
+  accuracy        Decimal  @db.Decimal(5, 2) @default(0)
+  lastStudiedAt   DateTime?
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, packId])
+  @@index([userId])
+  @@index([packId])
+}
+
+enum VocabularyLevel {
+  LEARNING
+  REVIEWING
+  MASTERED
+}
+
+model Vocabulary {
+  id              String          @id @default(cuid())
+  userId          String
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wordId          String
+  word            Word            @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  // SRS fields
+  level           VocabularyLevel @default(LEARNING)
+  repetitions     Int             @default(0)
+  easeFactor      Decimal         @db.Decimal(5, 2) @default(2.5)
+  interval        Int             @default(1) // Days until next review
+  nextReviewAt    DateTime?
+
+  // Performance
+  correctCount    Int             @default(0)
+  incorrectCount  Int             @default(0)
+
+  // Timestamps
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  lastReviewedAt  DateTime?
+
+  @@unique([userId, wordId])
+  @@index([userId])
+  @@index([wordId])
+  @@index([nextReviewAt])
+}
+
+model LearningStats {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Statistics
+  totalWordsLearned Int      @default(0)
+  totalReviews      Int      @default(0)
+  currentStreak     Int      @default(0)
+  longestStreak     Int      @default(0)
+  totalStudyTime    Int      @default(0) // In minutes
+
+  // Timestamps
+  lastStudyDate     DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// ============================================
+// ANALYSIS HISTORY
+// ============================================
+
+model Analysis {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Analysis data
+  inputText   String   @db.Text
+  result      Json     // Store tokenized analysis
+
+  // Metadata
+  language    String   @default("ja")
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+}
