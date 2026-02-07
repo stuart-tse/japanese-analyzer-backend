@@ -408,3 +408,129 @@ model Analysis {
   @@index([userId])
   @@index([createdAt])
 }
+
+// ============================================
+// ANALYZED VOCABULARY TRACKING
+// ============================================
+
+model AnalyzedVocabulary {
+  id              String   @id @default(cuid())
+  userId          String
+  word            String
+  reading         String?
+  romaji          String?
+  meaning         String?
+  translation     String?
+  partOfSpeech    String?
+  sentence        String?  @db.Text
+  reviewCount     Int      @default(1)
+  lastReviewedAt  DateTime @default(now())
+  analyzedAt      DateTime @default(now())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, word])
+  @@index([userId])
+  @@index([word])
+  @@index([analyzedAt])
+}
+
+// ============================================
+// USER STATISTICS
+// ============================================
+
+model UserStats {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  totalAnalyses     Int      @default(0)
+  totalTranslations Int      @default(0)
+  totalWords        Int      @default(0)
+  learningStreak    Int      @default(0)
+  streakDays        Int      @default(0)
+  lastActivityDate  DateTime?
+  lastActiveAt      DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// ============================================
+// LEARNING MANAGEMENT SYSTEM (LMS)
+// ============================================
+
+enum CourseStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model Course {
+  id             String        @id @default(cuid())
+  slug           String        @unique
+  title          String
+  description    String?       @db.Text
+  level          String        // N5, N4, N3, N2, N1
+  order          Int           @default(0)
+  status         CourseStatus  @default(DRAFT)
+  published      Boolean       @default(false)
+  estimatedHours Int?
+  thumbnail      String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  // Relations
+  lessons        Lesson[]
+
+  @@index([slug])
+  @@index([level])
+  @@index([status])
+  @@index([published])
+}
+
+model Lesson {
+  id          String   @id @default(cuid())
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  slug        String
+  title       String
+  type        String?  // 'lesson', 'quiz', 'review'
+  content     Json     // Lesson content (markdown, exercises, etc.)
+  order       Int      @default(0)
+  duration    Int?     // Estimated minutes
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([courseId, slug])
+  @@index([courseId])
+  @@index([slug])
+  @@index([type])
+}
+
+// ============================================
+// PLACEMENT TEST
+// ============================================
+
+model PlacementQuestion {
+  id                  String   @id @default(cuid())
+  level               String   // N5, N4, N3, N2, N1
+  skillType           String?  // 'vocabulary', 'grammar', 'reading', 'listening'
+  difficulty          Int      @default(1) // 1-5 difficulty scale
+  question            String   @db.Text
+  questionText        String?  @db.Text
+  questionTextChinese String?  @db.Text
+  questionType        String   // 'vocabulary', 'grammar', 'reading'
+  passageText         String?  @db.Text
+  audioUrl            String?
+  options             Json     // Array of answer options
+  correctAnswerId     String
+  explanation         String?  @db.Text
+  order               Int      @default(0)
+  isActive            Boolean  @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([level])
+  @@index([isActive])
+  @@index([difficulty])
+}
