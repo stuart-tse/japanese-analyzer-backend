@@ -11,6 +11,9 @@ const pool = new pg.Pool({
         rejectUnauthorized: false, // Required for AWS RDS
       }
     : undefined,
+  max: 3,                        // Lambda: small pool (default is 10)
+  idleTimeoutMillis: 60000,      // Close idle connections after 60s
+  connectionTimeoutMillis: 10000, // Timeout after 10s
 });
 
 // Create Prisma adapter

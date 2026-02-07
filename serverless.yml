@@ -1,0 +1,50 @@
+service: japanese-analyzer-api
+
+build:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    target: node20
+    platform: node
+    format: esm
+    banner:
+      js: "import { createRequire } from 'module'; const require = createRequire(import.meta.url);"
+    external:
+      - '@prisma/client'
+      - '@prisma/adapter-pg'
+      - pg
+      - pg-native
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-1
+  stage: ${opt:stage, 'prod'}
+  timeout: 30
+  memorySize: 1024
+  environment:
+    NODE_ENV: production
+    DATABASE_URL: ${env:DATABASE_URL}
+    API_KEY: ${env:API_KEY}
+    API_URL: ${env:API_URL}
+    MODEL_NAME: ${env:MODEL_NAME}
+    CORS_ORIGIN: ${env:CORS_ORIGIN}
+    JWT_SECRET: ${env:JWT_SECRET}
+    STRIPE_SECRET_KEY: ${env:STRIPE_SECRET_KEY, ''}
+    STRIPE_WEBHOOK_SECRET: ${env:STRIPE_WEBHOOK_SECRET, ''}
+    MONGODB_URI: ${env:MONGODB_URI, ''}
+
+functions:
+  api:
+    handler: src/lambda.handler
+    events:
+      - httpApi: '*'
+
+package:
+  individually: true
+  patterns:
+    - 'src/generated/prisma/**'
+    - '!src/generated/prisma/libquery_engine-*'
+    - 'src/generated/prisma/libquery_engine-debian-openssl-3.0.x*'
+    - 'data/**'

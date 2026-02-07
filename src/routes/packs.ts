@@ -9,15 +9,13 @@ const router = Router();
 
 // Helper: read JLPT vocabulary for enriching pack words with full data
 import { readFileSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { resolve } from 'path';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const jlptData: Array<{
   word: string; furigana: string; romaji: string;
   meaning_zh_CN: string; jlptLevel: string; pos: string;
 }> = JSON.parse(
-  readFileSync(resolve(__dirname, '../../data/jlpt_vocabulary_all.json'), 'utf-8')
+  readFileSync(resolve(process.cwd(), 'data/jlpt_vocabulary_all.json'), 'utf-8')
 );
 const jlptMap = new Map(jlptData.map(w => [w.word, w]));
 
