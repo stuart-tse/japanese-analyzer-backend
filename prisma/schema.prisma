@@ -423,6 +423,7 @@ model AnalyzedVocabulary {
   translation     String?
   partOfSpeech    String?
   sentence        String?  @db.Text
+  masteryLevel    Int      @default(0)
   reviewCount     Int      @default(1)
   lastReviewedAt  DateTime @default(now())
   analyzedAt      DateTime @default(now())
@@ -498,6 +499,8 @@ model Lesson {
   content     Json     // Lesson content (markdown, exercises, etc.)
   order       Int      @default(0)
   duration    Int?     // Estimated minutes
+  published   Boolean  @default(false)
+  isFree      Boolean  @default(false)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -505,6 +508,7 @@ model Lesson {
   @@index([courseId])
   @@index([slug])
   @@index([type])
+  @@index([published])
 }
 
 // ============================================

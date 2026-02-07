@@ -121,12 +121,14 @@ router.post('/', async (req: Request, res: Response) => {
       }
 
       // By skill type
-      if (!scoresBySkill[result.skillType]) {
-        scoresBySkill[result.skillType] = { correct: 0, total: 0 };
-      }
-      scoresBySkill[result.skillType].total += 1;
-      if (result.isCorrect) {
-        scoresBySkill[result.skillType].correct += 1;
+      if (result.skillType) {
+        if (!scoresBySkill[result.skillType]) {
+          scoresBySkill[result.skillType] = { correct: 0, total: 0 };
+        }
+        scoresBySkill[result.skillType].total += 1;
+        if (result.isCorrect) {
+          scoresBySkill[result.skillType].correct += 1;
+        }
       }
     });
 

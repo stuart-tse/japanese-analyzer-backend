@@ -68,6 +68,31 @@ export type LearningStats = $Result.DefaultSelection<Prisma.$LearningStatsPayloa
  * 
  */
 export type Analysis = $Result.DefaultSelection<Prisma.$AnalysisPayload>
+/**
+ * Model AnalyzedVocabulary
+ * 
+ */
+export type AnalyzedVocabulary = $Result.DefaultSelection<Prisma.$AnalyzedVocabularyPayload>
+/**
+ * Model UserStats
+ * 
+ */
+export type UserStats = $Result.DefaultSelection<Prisma.$UserStatsPayload>
+/**
+ * Model Course
+ * 
+ */
+export type Course = $Result.DefaultSelection<Prisma.$CoursePayload>
+/**
+ * Model Lesson
+ * 
+ */
+export type Lesson = $Result.DefaultSelection<Prisma.$LessonPayload>
+/**
+ * Model PlacementQuestion
+ * 
+ */
+export type PlacementQuestion = $Result.DefaultSelection<Prisma.$PlacementQuestionPayload>
 
 /**
  * Enums
@@ -180,6 +205,15 @@ export const VocabularyLevel: {
 
 export type VocabularyLevel = (typeof VocabularyLevel)[keyof typeof VocabularyLevel]
 
+
+export const CourseStatus: {
+  DRAFT: 'DRAFT',
+  PUBLISHED: 'PUBLISHED',
+  ARCHIVED: 'ARCHIVED'
+};
+
+export type CourseStatus = (typeof CourseStatus)[keyof typeof CourseStatus]
+
 }
 
 export type AuthProvider = $Enums.AuthProvider
@@ -221,6 +255,10 @@ export const PackCategory: typeof $Enums.PackCategory
 export type VocabularyLevel = $Enums.VocabularyLevel
 
 export const VocabularyLevel: typeof $Enums.VocabularyLevel
+
+export type CourseStatus = $Enums.CourseStatus
+
+export const CourseStatus: typeof $Enums.CourseStatus
 
 /**
  * ##  Prisma Client ʲˢ
@@ -448,6 +486,56 @@ export class PrismaClient<
     * ```
     */
   get analysis(): Prisma.AnalysisDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.analyzedVocabulary`: Exposes CRUD operations for the **AnalyzedVocabulary** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more AnalyzedVocabularies
+    * const analyzedVocabularies = await prisma.analyzedVocabulary.findMany()
+    * ```
+    */
+  get analyzedVocabulary(): Prisma.AnalyzedVocabularyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userStats`: Exposes CRUD operations for the **UserStats** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserStats
+    * const userStats = await prisma.userStats.findMany()
+    * ```
+    */
+  get userStats(): Prisma.UserStatsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.course`: Exposes CRUD operations for the **Course** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Courses
+    * const courses = await prisma.course.findMany()
+    * ```
+    */
+  get course(): Prisma.CourseDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.lesson`: Exposes CRUD operations for the **Lesson** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Lessons
+    * const lessons = await prisma.lesson.findMany()
+    * ```
+    */
+  get lesson(): Prisma.LessonDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.placementQuestion`: Exposes CRUD operations for the **PlacementQuestion** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PlacementQuestions
+    * const placementQuestions = await prisma.placementQuestion.findMany()
+    * ```
+    */
+  get placementQuestion(): Prisma.PlacementQuestionDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -892,7 +980,12 @@ export namespace Prisma {
     UserPackProgress: 'UserPackProgress',
     Vocabulary: 'Vocabulary',
     LearningStats: 'LearningStats',
-    Analysis: 'Analysis'
+    Analysis: 'Analysis',
+    AnalyzedVocabulary: 'AnalyzedVocabulary',
+    UserStats: 'UserStats',
+    Course: 'Course',
+    Lesson: 'Lesson',
+    PlacementQuestion: 'PlacementQuestion'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -908,7 +1001,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "subscription" | "payment" | "creditTransaction" | "featureAccess" | "wordPack" | "word" | "userPackProgress" | "vocabulary" | "learningStats" | "analysis"
+      modelProps: "user" | "subscription" | "payment" | "creditTransaction" | "featureAccess" | "wordPack" | "word" | "userPackProgress" | "vocabulary" | "learningStats" | "analysis" | "analyzedVocabulary" | "userStats" | "course" | "lesson" | "placementQuestion"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1726,6 +1819,376 @@ export namespace Prisma {
           }
         }
       }
+      AnalyzedVocabulary: {
+        payload: Prisma.$AnalyzedVocabularyPayload<ExtArgs>
+        fields: Prisma.AnalyzedVocabularyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.AnalyzedVocabularyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.AnalyzedVocabularyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          findFirst: {
+            args: Prisma.AnalyzedVocabularyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.AnalyzedVocabularyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          findMany: {
+            args: Prisma.AnalyzedVocabularyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>[]
+          }
+          create: {
+            args: Prisma.AnalyzedVocabularyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          createMany: {
+            args: Prisma.AnalyzedVocabularyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.AnalyzedVocabularyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>[]
+          }
+          delete: {
+            args: Prisma.AnalyzedVocabularyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          update: {
+            args: Prisma.AnalyzedVocabularyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          deleteMany: {
+            args: Prisma.AnalyzedVocabularyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.AnalyzedVocabularyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AnalyzedVocabularyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>[]
+          }
+          upsert: {
+            args: Prisma.AnalyzedVocabularyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalyzedVocabularyPayload>
+          }
+          aggregate: {
+            args: Prisma.AnalyzedVocabularyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAnalyzedVocabulary>
+          }
+          groupBy: {
+            args: Prisma.AnalyzedVocabularyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AnalyzedVocabularyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.AnalyzedVocabularyCountArgs<ExtArgs>
+            result: $Utils.Optional<AnalyzedVocabularyCountAggregateOutputType> | number
+          }
+        }
+      }
+      UserStats: {
+        payload: Prisma.$UserStatsPayload<ExtArgs>
+        fields: Prisma.UserStatsFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserStatsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserStatsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          findFirst: {
+            args: Prisma.UserStatsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserStatsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          findMany: {
+            args: Prisma.UserStatsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>[]
+          }
+          create: {
+            args: Prisma.UserStatsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          createMany: {
+            args: Prisma.UserStatsCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserStatsCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>[]
+          }
+          delete: {
+            args: Prisma.UserStatsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          update: {
+            args: Prisma.UserStatsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserStatsDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserStatsUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserStatsUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserStatsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserStatsPayload>
+          }
+          aggregate: {
+            args: Prisma.UserStatsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserStats>
+          }
+          groupBy: {
+            args: Prisma.UserStatsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserStatsGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserStatsCountArgs<ExtArgs>
+            result: $Utils.Optional<UserStatsCountAggregateOutputType> | number
+          }
+        }
+      }
+      Course: {
+        payload: Prisma.$CoursePayload<ExtArgs>
+        fields: Prisma.CourseFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CourseFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CourseFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          findFirst: {
+            args: Prisma.CourseFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CourseFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          findMany: {
+            args: Prisma.CourseFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>[]
+          }
+          create: {
+            args: Prisma.CourseCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          createMany: {
+            args: Prisma.CourseCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CourseCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>[]
+          }
+          delete: {
+            args: Prisma.CourseDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          update: {
+            args: Prisma.CourseUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          deleteMany: {
+            args: Prisma.CourseDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CourseUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CourseUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>[]
+          }
+          upsert: {
+            args: Prisma.CourseUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CoursePayload>
+          }
+          aggregate: {
+            args: Prisma.CourseAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCourse>
+          }
+          groupBy: {
+            args: Prisma.CourseGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CourseGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CourseCountArgs<ExtArgs>
+            result: $Utils.Optional<CourseCountAggregateOutputType> | number
+          }
+        }
+      }
+      Lesson: {
+        payload: Prisma.$LessonPayload<ExtArgs>
+        fields: Prisma.LessonFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LessonFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LessonFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          findFirst: {
+            args: Prisma.LessonFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LessonFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          findMany: {
+            args: Prisma.LessonFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>[]
+          }
+          create: {
+            args: Prisma.LessonCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          createMany: {
+            args: Prisma.LessonCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LessonCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>[]
+          }
+          delete: {
+            args: Prisma.LessonDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          update: {
+            args: Prisma.LessonUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          deleteMany: {
+            args: Prisma.LessonDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LessonUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LessonUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>[]
+          }
+          upsert: {
+            args: Prisma.LessonUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LessonPayload>
+          }
+          aggregate: {
+            args: Prisma.LessonAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLesson>
+          }
+          groupBy: {
+            args: Prisma.LessonGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LessonGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LessonCountArgs<ExtArgs>
+            result: $Utils.Optional<LessonCountAggregateOutputType> | number
+          }
+        }
+      }
+      PlacementQuestion: {
+        payload: Prisma.$PlacementQuestionPayload<ExtArgs>
+        fields: Prisma.PlacementQuestionFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PlacementQuestionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PlacementQuestionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          findFirst: {
+            args: Prisma.PlacementQuestionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PlacementQuestionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          findMany: {
+            args: Prisma.PlacementQuestionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>[]
+          }
+          create: {
+            args: Prisma.PlacementQuestionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          createMany: {
+            args: Prisma.PlacementQuestionCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.PlacementQuestionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>[]
+          }
+          delete: {
+            args: Prisma.PlacementQuestionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          update: {
+            args: Prisma.PlacementQuestionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          deleteMany: {
+            args: Prisma.PlacementQuestionDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PlacementQuestionUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PlacementQuestionUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>[]
+          }
+          upsert: {
+            args: Prisma.PlacementQuestionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlacementQuestionPayload>
+          }
+          aggregate: {
+            args: Prisma.PlacementQuestionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePlacementQuestion>
+          }
+          groupBy: {
+            args: Prisma.PlacementQuestionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PlacementQuestionGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PlacementQuestionCountArgs<ExtArgs>
+            result: $Utils.Optional<PlacementQuestionCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1845,6 +2308,11 @@ export namespace Prisma {
     vocabulary?: VocabularyOmit
     learningStats?: LearningStatsOmit
     analysis?: AnalysisOmit
+    analyzedVocabulary?: AnalyzedVocabularyOmit
+    userStats?: UserStatsOmit
+    course?: CourseOmit
+    lesson?: LessonOmit
+    placementQuestion?: PlacementQuestionOmit
   }
 
   /* Types for Logging */
@@ -2073,6 +2541,37 @@ export namespace Prisma {
    */
   export type WordCountOutputTypeCountVocabularyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: VocabularyWhereInput
+  }
+
+
+  /**
+   * Count Type CourseCountOutputType
+   */
+
+  export type CourseCountOutputType = {
+    lessons: number
+  }
+
+  export type CourseCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    lessons?: boolean | CourseCountOutputTypeCountLessonsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * CourseCountOutputType without action
+   */
+  export type CourseCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CourseCountOutputType
+     */
+    select?: CourseCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * CourseCountOutputType without action
+   */
+  export type CourseCountOutputTypeCountLessonsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LessonWhereInput
   }
 
 
@@ -15181,6 +15680,5859 @@ export namespace Prisma {
 
 
   /**
+   * Model AnalyzedVocabulary
+   */
+
+  export type AggregateAnalyzedVocabulary = {
+    _count: AnalyzedVocabularyCountAggregateOutputType | null
+    _avg: AnalyzedVocabularyAvgAggregateOutputType | null
+    _sum: AnalyzedVocabularySumAggregateOutputType | null
+    _min: AnalyzedVocabularyMinAggregateOutputType | null
+    _max: AnalyzedVocabularyMaxAggregateOutputType | null
+  }
+
+  export type AnalyzedVocabularyAvgAggregateOutputType = {
+    masteryLevel: number | null
+    reviewCount: number | null
+  }
+
+  export type AnalyzedVocabularySumAggregateOutputType = {
+    masteryLevel: number | null
+    reviewCount: number | null
+  }
+
+  export type AnalyzedVocabularyMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    word: string | null
+    reading: string | null
+    romaji: string | null
+    meaning: string | null
+    translation: string | null
+    partOfSpeech: string | null
+    sentence: string | null
+    masteryLevel: number | null
+    reviewCount: number | null
+    lastReviewedAt: Date | null
+    analyzedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type AnalyzedVocabularyMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    word: string | null
+    reading: string | null
+    romaji: string | null
+    meaning: string | null
+    translation: string | null
+    partOfSpeech: string | null
+    sentence: string | null
+    masteryLevel: number | null
+    reviewCount: number | null
+    lastReviewedAt: Date | null
+    analyzedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type AnalyzedVocabularyCountAggregateOutputType = {
+    id: number
+    userId: number
+    word: number
+    reading: number
+    romaji: number
+    meaning: number
+    translation: number
+    partOfSpeech: number
+    sentence: number
+    masteryLevel: number
+    reviewCount: number
+    lastReviewedAt: number
+    analyzedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type AnalyzedVocabularyAvgAggregateInputType = {
+    masteryLevel?: true
+    reviewCount?: true
+  }
+
+  export type AnalyzedVocabularySumAggregateInputType = {
+    masteryLevel?: true
+    reviewCount?: true
+  }
+
+  export type AnalyzedVocabularyMinAggregateInputType = {
+    id?: true
+    userId?: true
+    word?: true
+    reading?: true
+    romaji?: true
+    meaning?: true
+    translation?: true
+    partOfSpeech?: true
+    sentence?: true
+    masteryLevel?: true
+    reviewCount?: true
+    lastReviewedAt?: true
+    analyzedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type AnalyzedVocabularyMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    word?: true
+    reading?: true
+    romaji?: true
+    meaning?: true
+    translation?: true
+    partOfSpeech?: true
+    sentence?: true
+    masteryLevel?: true
+    reviewCount?: true
+    lastReviewedAt?: true
+    analyzedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type AnalyzedVocabularyCountAggregateInputType = {
+    id?: true
+    userId?: true
+    word?: true
+    reading?: true
+    romaji?: true
+    meaning?: true
+    translation?: true
+    partOfSpeech?: true
+    sentence?: true
+    masteryLevel?: true
+    reviewCount?: true
+    lastReviewedAt?: true
+    analyzedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type AnalyzedVocabularyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AnalyzedVocabulary to aggregate.
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AnalyzedVocabularies to fetch.
+     */
+    orderBy?: AnalyzedVocabularyOrderByWithRelationInput | AnalyzedVocabularyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: AnalyzedVocabularyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AnalyzedVocabularies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AnalyzedVocabularies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned AnalyzedVocabularies
+    **/
+    _count?: true | AnalyzedVocabularyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: AnalyzedVocabularyAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: AnalyzedVocabularySumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: AnalyzedVocabularyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: AnalyzedVocabularyMaxAggregateInputType
+  }
+
+  export type GetAnalyzedVocabularyAggregateType<T extends AnalyzedVocabularyAggregateArgs> = {
+        [P in keyof T & keyof AggregateAnalyzedVocabulary]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateAnalyzedVocabulary[P]>
+      : GetScalarType<T[P], AggregateAnalyzedVocabulary[P]>
+  }
+
+
+
+
+  export type AnalyzedVocabularyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AnalyzedVocabularyWhereInput
+    orderBy?: AnalyzedVocabularyOrderByWithAggregationInput | AnalyzedVocabularyOrderByWithAggregationInput[]
+    by: AnalyzedVocabularyScalarFieldEnum[] | AnalyzedVocabularyScalarFieldEnum
+    having?: AnalyzedVocabularyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: AnalyzedVocabularyCountAggregateInputType | true
+    _avg?: AnalyzedVocabularyAvgAggregateInputType
+    _sum?: AnalyzedVocabularySumAggregateInputType
+    _min?: AnalyzedVocabularyMinAggregateInputType
+    _max?: AnalyzedVocabularyMaxAggregateInputType
+  }
+
+  export type AnalyzedVocabularyGroupByOutputType = {
+    id: string
+    userId: string
+    word: string
+    reading: string | null
+    romaji: string | null
+    meaning: string | null
+    translation: string | null
+    partOfSpeech: string | null
+    sentence: string | null
+    masteryLevel: number
+    reviewCount: number
+    lastReviewedAt: Date
+    analyzedAt: Date
+    createdAt: Date
+    updatedAt: Date
+    _count: AnalyzedVocabularyCountAggregateOutputType | null
+    _avg: AnalyzedVocabularyAvgAggregateOutputType | null
+    _sum: AnalyzedVocabularySumAggregateOutputType | null
+    _min: AnalyzedVocabularyMinAggregateOutputType | null
+    _max: AnalyzedVocabularyMaxAggregateOutputType | null
+  }
+
+  type GetAnalyzedVocabularyGroupByPayload<T extends AnalyzedVocabularyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<AnalyzedVocabularyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof AnalyzedVocabularyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], AnalyzedVocabularyGroupByOutputType[P]>
+            : GetScalarType<T[P], AnalyzedVocabularyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type AnalyzedVocabularySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    word?: boolean
+    reading?: boolean
+    romaji?: boolean
+    meaning?: boolean
+    translation?: boolean
+    partOfSpeech?: boolean
+    sentence?: boolean
+    masteryLevel?: boolean
+    reviewCount?: boolean
+    lastReviewedAt?: boolean
+    analyzedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["analyzedVocabulary"]>
+
+  export type AnalyzedVocabularySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    word?: boolean
+    reading?: boolean
+    romaji?: boolean
+    meaning?: boolean
+    translation?: boolean
+    partOfSpeech?: boolean
+    sentence?: boolean
+    masteryLevel?: boolean
+    reviewCount?: boolean
+    lastReviewedAt?: boolean
+    analyzedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["analyzedVocabulary"]>
+
+  export type AnalyzedVocabularySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    word?: boolean
+    reading?: boolean
+    romaji?: boolean
+    meaning?: boolean
+    translation?: boolean
+    partOfSpeech?: boolean
+    sentence?: boolean
+    masteryLevel?: boolean
+    reviewCount?: boolean
+    lastReviewedAt?: boolean
+    analyzedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["analyzedVocabulary"]>
+
+  export type AnalyzedVocabularySelectScalar = {
+    id?: boolean
+    userId?: boolean
+    word?: boolean
+    reading?: boolean
+    romaji?: boolean
+    meaning?: boolean
+    translation?: boolean
+    partOfSpeech?: boolean
+    sentence?: boolean
+    masteryLevel?: boolean
+    reviewCount?: boolean
+    lastReviewedAt?: boolean
+    analyzedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type AnalyzedVocabularyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "word" | "reading" | "romaji" | "meaning" | "translation" | "partOfSpeech" | "sentence" | "masteryLevel" | "reviewCount" | "lastReviewedAt" | "analyzedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["analyzedVocabulary"]>
+
+  export type $AnalyzedVocabularyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AnalyzedVocabulary"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      word: string
+      reading: string | null
+      romaji: string | null
+      meaning: string | null
+      translation: string | null
+      partOfSpeech: string | null
+      sentence: string | null
+      masteryLevel: number
+      reviewCount: number
+      lastReviewedAt: Date
+      analyzedAt: Date
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["analyzedVocabulary"]>
+    composites: {}
+  }
+
+  type AnalyzedVocabularyGetPayload<S extends boolean | null | undefined | AnalyzedVocabularyDefaultArgs> = $Result.GetResult<Prisma.$AnalyzedVocabularyPayload, S>
+
+  type AnalyzedVocabularyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AnalyzedVocabularyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AnalyzedVocabularyCountAggregateInputType | true
+    }
+
+  export interface AnalyzedVocabularyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AnalyzedVocabulary'], meta: { name: 'AnalyzedVocabulary' } }
+    /**
+     * Find zero or one AnalyzedVocabulary that matches the filter.
+     * @param {AnalyzedVocabularyFindUniqueArgs} args - Arguments to find a AnalyzedVocabulary
+     * @example
+     * // Get one AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends AnalyzedVocabularyFindUniqueArgs>(args: SelectSubset<T, AnalyzedVocabularyFindUniqueArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one AnalyzedVocabulary that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {AnalyzedVocabularyFindUniqueOrThrowArgs} args - Arguments to find a AnalyzedVocabulary
+     * @example
+     * // Get one AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends AnalyzedVocabularyFindUniqueOrThrowArgs>(args: SelectSubset<T, AnalyzedVocabularyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AnalyzedVocabulary that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyFindFirstArgs} args - Arguments to find a AnalyzedVocabulary
+     * @example
+     * // Get one AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends AnalyzedVocabularyFindFirstArgs>(args?: SelectSubset<T, AnalyzedVocabularyFindFirstArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AnalyzedVocabulary that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyFindFirstOrThrowArgs} args - Arguments to find a AnalyzedVocabulary
+     * @example
+     * // Get one AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends AnalyzedVocabularyFindFirstOrThrowArgs>(args?: SelectSubset<T, AnalyzedVocabularyFindFirstOrThrowArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more AnalyzedVocabularies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all AnalyzedVocabularies
+     * const analyzedVocabularies = await prisma.analyzedVocabulary.findMany()
+     * 
+     * // Get first 10 AnalyzedVocabularies
+     * const analyzedVocabularies = await prisma.analyzedVocabulary.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const analyzedVocabularyWithIdOnly = await prisma.analyzedVocabulary.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends AnalyzedVocabularyFindManyArgs>(args?: SelectSubset<T, AnalyzedVocabularyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a AnalyzedVocabulary.
+     * @param {AnalyzedVocabularyCreateArgs} args - Arguments to create a AnalyzedVocabulary.
+     * @example
+     * // Create one AnalyzedVocabulary
+     * const AnalyzedVocabulary = await prisma.analyzedVocabulary.create({
+     *   data: {
+     *     // ... data to create a AnalyzedVocabulary
+     *   }
+     * })
+     * 
+     */
+    create<T extends AnalyzedVocabularyCreateArgs>(args: SelectSubset<T, AnalyzedVocabularyCreateArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many AnalyzedVocabularies.
+     * @param {AnalyzedVocabularyCreateManyArgs} args - Arguments to create many AnalyzedVocabularies.
+     * @example
+     * // Create many AnalyzedVocabularies
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends AnalyzedVocabularyCreateManyArgs>(args?: SelectSubset<T, AnalyzedVocabularyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many AnalyzedVocabularies and returns the data saved in the database.
+     * @param {AnalyzedVocabularyCreateManyAndReturnArgs} args - Arguments to create many AnalyzedVocabularies.
+     * @example
+     * // Create many AnalyzedVocabularies
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many AnalyzedVocabularies and only return the `id`
+     * const analyzedVocabularyWithIdOnly = await prisma.analyzedVocabulary.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AnalyzedVocabularyCreateManyAndReturnArgs>(args?: SelectSubset<T, AnalyzedVocabularyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a AnalyzedVocabulary.
+     * @param {AnalyzedVocabularyDeleteArgs} args - Arguments to delete one AnalyzedVocabulary.
+     * @example
+     * // Delete one AnalyzedVocabulary
+     * const AnalyzedVocabulary = await prisma.analyzedVocabulary.delete({
+     *   where: {
+     *     // ... filter to delete one AnalyzedVocabulary
+     *   }
+     * })
+     * 
+     */
+    delete<T extends AnalyzedVocabularyDeleteArgs>(args: SelectSubset<T, AnalyzedVocabularyDeleteArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one AnalyzedVocabulary.
+     * @param {AnalyzedVocabularyUpdateArgs} args - Arguments to update one AnalyzedVocabulary.
+     * @example
+     * // Update one AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends AnalyzedVocabularyUpdateArgs>(args: SelectSubset<T, AnalyzedVocabularyUpdateArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more AnalyzedVocabularies.
+     * @param {AnalyzedVocabularyDeleteManyArgs} args - Arguments to filter AnalyzedVocabularies to delete.
+     * @example
+     * // Delete a few AnalyzedVocabularies
+     * const { count } = await prisma.analyzedVocabulary.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends AnalyzedVocabularyDeleteManyArgs>(args?: SelectSubset<T, AnalyzedVocabularyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AnalyzedVocabularies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many AnalyzedVocabularies
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends AnalyzedVocabularyUpdateManyArgs>(args: SelectSubset<T, AnalyzedVocabularyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AnalyzedVocabularies and returns the data updated in the database.
+     * @param {AnalyzedVocabularyUpdateManyAndReturnArgs} args - Arguments to update many AnalyzedVocabularies.
+     * @example
+     * // Update many AnalyzedVocabularies
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more AnalyzedVocabularies and only return the `id`
+     * const analyzedVocabularyWithIdOnly = await prisma.analyzedVocabulary.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AnalyzedVocabularyUpdateManyAndReturnArgs>(args: SelectSubset<T, AnalyzedVocabularyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one AnalyzedVocabulary.
+     * @param {AnalyzedVocabularyUpsertArgs} args - Arguments to update or create a AnalyzedVocabulary.
+     * @example
+     * // Update or create a AnalyzedVocabulary
+     * const analyzedVocabulary = await prisma.analyzedVocabulary.upsert({
+     *   create: {
+     *     // ... data to create a AnalyzedVocabulary
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the AnalyzedVocabulary we want to update
+     *   }
+     * })
+     */
+    upsert<T extends AnalyzedVocabularyUpsertArgs>(args: SelectSubset<T, AnalyzedVocabularyUpsertArgs<ExtArgs>>): Prisma__AnalyzedVocabularyClient<$Result.GetResult<Prisma.$AnalyzedVocabularyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of AnalyzedVocabularies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyCountArgs} args - Arguments to filter AnalyzedVocabularies to count.
+     * @example
+     * // Count the number of AnalyzedVocabularies
+     * const count = await prisma.analyzedVocabulary.count({
+     *   where: {
+     *     // ... the filter for the AnalyzedVocabularies we want to count
+     *   }
+     * })
+    **/
+    count<T extends AnalyzedVocabularyCountArgs>(
+      args?: Subset<T, AnalyzedVocabularyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], AnalyzedVocabularyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a AnalyzedVocabulary.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends AnalyzedVocabularyAggregateArgs>(args: Subset<T, AnalyzedVocabularyAggregateArgs>): Prisma.PrismaPromise<GetAnalyzedVocabularyAggregateType<T>>
+
+    /**
+     * Group by AnalyzedVocabulary.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AnalyzedVocabularyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends AnalyzedVocabularyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: AnalyzedVocabularyGroupByArgs['orderBy'] }
+        : { orderBy?: AnalyzedVocabularyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, AnalyzedVocabularyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAnalyzedVocabularyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the AnalyzedVocabulary model
+   */
+  readonly fields: AnalyzedVocabularyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for AnalyzedVocabulary.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__AnalyzedVocabularyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the AnalyzedVocabulary model
+   */
+  interface AnalyzedVocabularyFieldRefs {
+    readonly id: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly userId: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly word: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly reading: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly romaji: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly meaning: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly translation: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly partOfSpeech: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly sentence: FieldRef<"AnalyzedVocabulary", 'String'>
+    readonly masteryLevel: FieldRef<"AnalyzedVocabulary", 'Int'>
+    readonly reviewCount: FieldRef<"AnalyzedVocabulary", 'Int'>
+    readonly lastReviewedAt: FieldRef<"AnalyzedVocabulary", 'DateTime'>
+    readonly analyzedAt: FieldRef<"AnalyzedVocabulary", 'DateTime'>
+    readonly createdAt: FieldRef<"AnalyzedVocabulary", 'DateTime'>
+    readonly updatedAt: FieldRef<"AnalyzedVocabulary", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * AnalyzedVocabulary findUnique
+   */
+  export type AnalyzedVocabularyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter, which AnalyzedVocabulary to fetch.
+     */
+    where: AnalyzedVocabularyWhereUniqueInput
+  }
+
+  /**
+   * AnalyzedVocabulary findUniqueOrThrow
+   */
+  export type AnalyzedVocabularyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter, which AnalyzedVocabulary to fetch.
+     */
+    where: AnalyzedVocabularyWhereUniqueInput
+  }
+
+  /**
+   * AnalyzedVocabulary findFirst
+   */
+  export type AnalyzedVocabularyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter, which AnalyzedVocabulary to fetch.
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AnalyzedVocabularies to fetch.
+     */
+    orderBy?: AnalyzedVocabularyOrderByWithRelationInput | AnalyzedVocabularyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AnalyzedVocabularies.
+     */
+    cursor?: AnalyzedVocabularyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AnalyzedVocabularies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AnalyzedVocabularies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AnalyzedVocabularies.
+     */
+    distinct?: AnalyzedVocabularyScalarFieldEnum | AnalyzedVocabularyScalarFieldEnum[]
+  }
+
+  /**
+   * AnalyzedVocabulary findFirstOrThrow
+   */
+  export type AnalyzedVocabularyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter, which AnalyzedVocabulary to fetch.
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AnalyzedVocabularies to fetch.
+     */
+    orderBy?: AnalyzedVocabularyOrderByWithRelationInput | AnalyzedVocabularyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AnalyzedVocabularies.
+     */
+    cursor?: AnalyzedVocabularyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AnalyzedVocabularies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AnalyzedVocabularies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AnalyzedVocabularies.
+     */
+    distinct?: AnalyzedVocabularyScalarFieldEnum | AnalyzedVocabularyScalarFieldEnum[]
+  }
+
+  /**
+   * AnalyzedVocabulary findMany
+   */
+  export type AnalyzedVocabularyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter, which AnalyzedVocabularies to fetch.
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AnalyzedVocabularies to fetch.
+     */
+    orderBy?: AnalyzedVocabularyOrderByWithRelationInput | AnalyzedVocabularyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing AnalyzedVocabularies.
+     */
+    cursor?: AnalyzedVocabularyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AnalyzedVocabularies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AnalyzedVocabularies.
+     */
+    skip?: number
+    distinct?: AnalyzedVocabularyScalarFieldEnum | AnalyzedVocabularyScalarFieldEnum[]
+  }
+
+  /**
+   * AnalyzedVocabulary create
+   */
+  export type AnalyzedVocabularyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * The data needed to create a AnalyzedVocabulary.
+     */
+    data: XOR<AnalyzedVocabularyCreateInput, AnalyzedVocabularyUncheckedCreateInput>
+  }
+
+  /**
+   * AnalyzedVocabulary createMany
+   */
+  export type AnalyzedVocabularyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many AnalyzedVocabularies.
+     */
+    data: AnalyzedVocabularyCreateManyInput | AnalyzedVocabularyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * AnalyzedVocabulary createManyAndReturn
+   */
+  export type AnalyzedVocabularyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * The data used to create many AnalyzedVocabularies.
+     */
+    data: AnalyzedVocabularyCreateManyInput | AnalyzedVocabularyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * AnalyzedVocabulary update
+   */
+  export type AnalyzedVocabularyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * The data needed to update a AnalyzedVocabulary.
+     */
+    data: XOR<AnalyzedVocabularyUpdateInput, AnalyzedVocabularyUncheckedUpdateInput>
+    /**
+     * Choose, which AnalyzedVocabulary to update.
+     */
+    where: AnalyzedVocabularyWhereUniqueInput
+  }
+
+  /**
+   * AnalyzedVocabulary updateMany
+   */
+  export type AnalyzedVocabularyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update AnalyzedVocabularies.
+     */
+    data: XOR<AnalyzedVocabularyUpdateManyMutationInput, AnalyzedVocabularyUncheckedUpdateManyInput>
+    /**
+     * Filter which AnalyzedVocabularies to update
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * Limit how many AnalyzedVocabularies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * AnalyzedVocabulary updateManyAndReturn
+   */
+  export type AnalyzedVocabularyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * The data used to update AnalyzedVocabularies.
+     */
+    data: XOR<AnalyzedVocabularyUpdateManyMutationInput, AnalyzedVocabularyUncheckedUpdateManyInput>
+    /**
+     * Filter which AnalyzedVocabularies to update
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * Limit how many AnalyzedVocabularies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * AnalyzedVocabulary upsert
+   */
+  export type AnalyzedVocabularyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * The filter to search for the AnalyzedVocabulary to update in case it exists.
+     */
+    where: AnalyzedVocabularyWhereUniqueInput
+    /**
+     * In case the AnalyzedVocabulary found by the `where` argument doesn't exist, create a new AnalyzedVocabulary with this data.
+     */
+    create: XOR<AnalyzedVocabularyCreateInput, AnalyzedVocabularyUncheckedCreateInput>
+    /**
+     * In case the AnalyzedVocabulary was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<AnalyzedVocabularyUpdateInput, AnalyzedVocabularyUncheckedUpdateInput>
+  }
+
+  /**
+   * AnalyzedVocabulary delete
+   */
+  export type AnalyzedVocabularyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+    /**
+     * Filter which AnalyzedVocabulary to delete.
+     */
+    where: AnalyzedVocabularyWhereUniqueInput
+  }
+
+  /**
+   * AnalyzedVocabulary deleteMany
+   */
+  export type AnalyzedVocabularyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AnalyzedVocabularies to delete
+     */
+    where?: AnalyzedVocabularyWhereInput
+    /**
+     * Limit how many AnalyzedVocabularies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * AnalyzedVocabulary without action
+   */
+  export type AnalyzedVocabularyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AnalyzedVocabulary
+     */
+    select?: AnalyzedVocabularySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AnalyzedVocabulary
+     */
+    omit?: AnalyzedVocabularyOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model UserStats
+   */
+
+  export type AggregateUserStats = {
+    _count: UserStatsCountAggregateOutputType | null
+    _avg: UserStatsAvgAggregateOutputType | null
+    _sum: UserStatsSumAggregateOutputType | null
+    _min: UserStatsMinAggregateOutputType | null
+    _max: UserStatsMaxAggregateOutputType | null
+  }
+
+  export type UserStatsAvgAggregateOutputType = {
+    totalAnalyses: number | null
+    totalTranslations: number | null
+    totalWords: number | null
+    learningStreak: number | null
+    streakDays: number | null
+  }
+
+  export type UserStatsSumAggregateOutputType = {
+    totalAnalyses: number | null
+    totalTranslations: number | null
+    totalWords: number | null
+    learningStreak: number | null
+    streakDays: number | null
+  }
+
+  export type UserStatsMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    totalAnalyses: number | null
+    totalTranslations: number | null
+    totalWords: number | null
+    learningStreak: number | null
+    streakDays: number | null
+    lastActivityDate: Date | null
+    lastActiveAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserStatsMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    totalAnalyses: number | null
+    totalTranslations: number | null
+    totalWords: number | null
+    learningStreak: number | null
+    streakDays: number | null
+    lastActivityDate: Date | null
+    lastActiveAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserStatsCountAggregateOutputType = {
+    id: number
+    userId: number
+    totalAnalyses: number
+    totalTranslations: number
+    totalWords: number
+    learningStreak: number
+    streakDays: number
+    lastActivityDate: number
+    lastActiveAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type UserStatsAvgAggregateInputType = {
+    totalAnalyses?: true
+    totalTranslations?: true
+    totalWords?: true
+    learningStreak?: true
+    streakDays?: true
+  }
+
+  export type UserStatsSumAggregateInputType = {
+    totalAnalyses?: true
+    totalTranslations?: true
+    totalWords?: true
+    learningStreak?: true
+    streakDays?: true
+  }
+
+  export type UserStatsMinAggregateInputType = {
+    id?: true
+    userId?: true
+    totalAnalyses?: true
+    totalTranslations?: true
+    totalWords?: true
+    learningStreak?: true
+    streakDays?: true
+    lastActivityDate?: true
+    lastActiveAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserStatsMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    totalAnalyses?: true
+    totalTranslations?: true
+    totalWords?: true
+    learningStreak?: true
+    streakDays?: true
+    lastActivityDate?: true
+    lastActiveAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserStatsCountAggregateInputType = {
+    id?: true
+    userId?: true
+    totalAnalyses?: true
+    totalTranslations?: true
+    totalWords?: true
+    learningStreak?: true
+    streakDays?: true
+    lastActivityDate?: true
+    lastActiveAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type UserStatsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserStats to aggregate.
+     */
+    where?: UserStatsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserStats to fetch.
+     */
+    orderBy?: UserStatsOrderByWithRelationInput | UserStatsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserStatsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserStats from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserStats.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserStats
+    **/
+    _count?: true | UserStatsCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: UserStatsAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: UserStatsSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserStatsMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserStatsMaxAggregateInputType
+  }
+
+  export type GetUserStatsAggregateType<T extends UserStatsAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserStats]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserStats[P]>
+      : GetScalarType<T[P], AggregateUserStats[P]>
+  }
+
+
+
+
+  export type UserStatsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserStatsWhereInput
+    orderBy?: UserStatsOrderByWithAggregationInput | UserStatsOrderByWithAggregationInput[]
+    by: UserStatsScalarFieldEnum[] | UserStatsScalarFieldEnum
+    having?: UserStatsScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserStatsCountAggregateInputType | true
+    _avg?: UserStatsAvgAggregateInputType
+    _sum?: UserStatsSumAggregateInputType
+    _min?: UserStatsMinAggregateInputType
+    _max?: UserStatsMaxAggregateInputType
+  }
+
+  export type UserStatsGroupByOutputType = {
+    id: string
+    userId: string
+    totalAnalyses: number
+    totalTranslations: number
+    totalWords: number
+    learningStreak: number
+    streakDays: number
+    lastActivityDate: Date | null
+    lastActiveAt: Date | null
+    createdAt: Date
+    updatedAt: Date
+    _count: UserStatsCountAggregateOutputType | null
+    _avg: UserStatsAvgAggregateOutputType | null
+    _sum: UserStatsSumAggregateOutputType | null
+    _min: UserStatsMinAggregateOutputType | null
+    _max: UserStatsMaxAggregateOutputType | null
+  }
+
+  type GetUserStatsGroupByPayload<T extends UserStatsGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserStatsGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserStatsGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserStatsGroupByOutputType[P]>
+            : GetScalarType<T[P], UserStatsGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserStatsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    totalAnalyses?: boolean
+    totalTranslations?: boolean
+    totalWords?: boolean
+    learningStreak?: boolean
+    streakDays?: boolean
+    lastActivityDate?: boolean
+    lastActiveAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["userStats"]>
+
+  export type UserStatsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    totalAnalyses?: boolean
+    totalTranslations?: boolean
+    totalWords?: boolean
+    learningStreak?: boolean
+    streakDays?: boolean
+    lastActivityDate?: boolean
+    lastActiveAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["userStats"]>
+
+  export type UserStatsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    totalAnalyses?: boolean
+    totalTranslations?: boolean
+    totalWords?: boolean
+    learningStreak?: boolean
+    streakDays?: boolean
+    lastActivityDate?: boolean
+    lastActiveAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["userStats"]>
+
+  export type UserStatsSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    totalAnalyses?: boolean
+    totalTranslations?: boolean
+    totalWords?: boolean
+    learningStreak?: boolean
+    streakDays?: boolean
+    lastActivityDate?: boolean
+    lastActiveAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type UserStatsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "totalAnalyses" | "totalTranslations" | "totalWords" | "learningStreak" | "streakDays" | "lastActivityDate" | "lastActiveAt" | "createdAt" | "updatedAt", ExtArgs["result"]["userStats"]>
+
+  export type $UserStatsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserStats"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      totalAnalyses: number
+      totalTranslations: number
+      totalWords: number
+      learningStreak: number
+      streakDays: number
+      lastActivityDate: Date | null
+      lastActiveAt: Date | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["userStats"]>
+    composites: {}
+  }
+
+  type UserStatsGetPayload<S extends boolean | null | undefined | UserStatsDefaultArgs> = $Result.GetResult<Prisma.$UserStatsPayload, S>
+
+  type UserStatsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserStatsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserStatsCountAggregateInputType | true
+    }
+
+  export interface UserStatsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserStats'], meta: { name: 'UserStats' } }
+    /**
+     * Find zero or one UserStats that matches the filter.
+     * @param {UserStatsFindUniqueArgs} args - Arguments to find a UserStats
+     * @example
+     * // Get one UserStats
+     * const userStats = await prisma.userStats.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserStatsFindUniqueArgs>(args: SelectSubset<T, UserStatsFindUniqueArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserStats that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserStatsFindUniqueOrThrowArgs} args - Arguments to find a UserStats
+     * @example
+     * // Get one UserStats
+     * const userStats = await prisma.userStats.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserStatsFindUniqueOrThrowArgs>(args: SelectSubset<T, UserStatsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserStats that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsFindFirstArgs} args - Arguments to find a UserStats
+     * @example
+     * // Get one UserStats
+     * const userStats = await prisma.userStats.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserStatsFindFirstArgs>(args?: SelectSubset<T, UserStatsFindFirstArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserStats that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsFindFirstOrThrowArgs} args - Arguments to find a UserStats
+     * @example
+     * // Get one UserStats
+     * const userStats = await prisma.userStats.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserStatsFindFirstOrThrowArgs>(args?: SelectSubset<T, UserStatsFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserStats that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserStats
+     * const userStats = await prisma.userStats.findMany()
+     * 
+     * // Get first 10 UserStats
+     * const userStats = await prisma.userStats.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userStatsWithIdOnly = await prisma.userStats.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserStatsFindManyArgs>(args?: SelectSubset<T, UserStatsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserStats.
+     * @param {UserStatsCreateArgs} args - Arguments to create a UserStats.
+     * @example
+     * // Create one UserStats
+     * const UserStats = await prisma.userStats.create({
+     *   data: {
+     *     // ... data to create a UserStats
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserStatsCreateArgs>(args: SelectSubset<T, UserStatsCreateArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserStats.
+     * @param {UserStatsCreateManyArgs} args - Arguments to create many UserStats.
+     * @example
+     * // Create many UserStats
+     * const userStats = await prisma.userStats.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserStatsCreateManyArgs>(args?: SelectSubset<T, UserStatsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserStats and returns the data saved in the database.
+     * @param {UserStatsCreateManyAndReturnArgs} args - Arguments to create many UserStats.
+     * @example
+     * // Create many UserStats
+     * const userStats = await prisma.userStats.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserStats and only return the `id`
+     * const userStatsWithIdOnly = await prisma.userStats.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserStatsCreateManyAndReturnArgs>(args?: SelectSubset<T, UserStatsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserStats.
+     * @param {UserStatsDeleteArgs} args - Arguments to delete one UserStats.
+     * @example
+     * // Delete one UserStats
+     * const UserStats = await prisma.userStats.delete({
+     *   where: {
+     *     // ... filter to delete one UserStats
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserStatsDeleteArgs>(args: SelectSubset<T, UserStatsDeleteArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserStats.
+     * @param {UserStatsUpdateArgs} args - Arguments to update one UserStats.
+     * @example
+     * // Update one UserStats
+     * const userStats = await prisma.userStats.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserStatsUpdateArgs>(args: SelectSubset<T, UserStatsUpdateArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserStats.
+     * @param {UserStatsDeleteManyArgs} args - Arguments to filter UserStats to delete.
+     * @example
+     * // Delete a few UserStats
+     * const { count } = await prisma.userStats.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserStatsDeleteManyArgs>(args?: SelectSubset<T, UserStatsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserStats.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserStats
+     * const userStats = await prisma.userStats.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserStatsUpdateManyArgs>(args: SelectSubset<T, UserStatsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserStats and returns the data updated in the database.
+     * @param {UserStatsUpdateManyAndReturnArgs} args - Arguments to update many UserStats.
+     * @example
+     * // Update many UserStats
+     * const userStats = await prisma.userStats.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserStats and only return the `id`
+     * const userStatsWithIdOnly = await prisma.userStats.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserStatsUpdateManyAndReturnArgs>(args: SelectSubset<T, UserStatsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserStats.
+     * @param {UserStatsUpsertArgs} args - Arguments to update or create a UserStats.
+     * @example
+     * // Update or create a UserStats
+     * const userStats = await prisma.userStats.upsert({
+     *   create: {
+     *     // ... data to create a UserStats
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserStats we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserStatsUpsertArgs>(args: SelectSubset<T, UserStatsUpsertArgs<ExtArgs>>): Prisma__UserStatsClient<$Result.GetResult<Prisma.$UserStatsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserStats.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsCountArgs} args - Arguments to filter UserStats to count.
+     * @example
+     * // Count the number of UserStats
+     * const count = await prisma.userStats.count({
+     *   where: {
+     *     // ... the filter for the UserStats we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserStatsCountArgs>(
+      args?: Subset<T, UserStatsCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserStatsCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserStats.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserStatsAggregateArgs>(args: Subset<T, UserStatsAggregateArgs>): Prisma.PrismaPromise<GetUserStatsAggregateType<T>>
+
+    /**
+     * Group by UserStats.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserStatsGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserStatsGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserStatsGroupByArgs['orderBy'] }
+        : { orderBy?: UserStatsGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserStatsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserStatsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserStats model
+   */
+  readonly fields: UserStatsFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserStats.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserStatsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserStats model
+   */
+  interface UserStatsFieldRefs {
+    readonly id: FieldRef<"UserStats", 'String'>
+    readonly userId: FieldRef<"UserStats", 'String'>
+    readonly totalAnalyses: FieldRef<"UserStats", 'Int'>
+    readonly totalTranslations: FieldRef<"UserStats", 'Int'>
+    readonly totalWords: FieldRef<"UserStats", 'Int'>
+    readonly learningStreak: FieldRef<"UserStats", 'Int'>
+    readonly streakDays: FieldRef<"UserStats", 'Int'>
+    readonly lastActivityDate: FieldRef<"UserStats", 'DateTime'>
+    readonly lastActiveAt: FieldRef<"UserStats", 'DateTime'>
+    readonly createdAt: FieldRef<"UserStats", 'DateTime'>
+    readonly updatedAt: FieldRef<"UserStats", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserStats findUnique
+   */
+  export type UserStatsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter, which UserStats to fetch.
+     */
+    where: UserStatsWhereUniqueInput
+  }
+
+  /**
+   * UserStats findUniqueOrThrow
+   */
+  export type UserStatsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter, which UserStats to fetch.
+     */
+    where: UserStatsWhereUniqueInput
+  }
+
+  /**
+   * UserStats findFirst
+   */
+  export type UserStatsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter, which UserStats to fetch.
+     */
+    where?: UserStatsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserStats to fetch.
+     */
+    orderBy?: UserStatsOrderByWithRelationInput | UserStatsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserStats.
+     */
+    cursor?: UserStatsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserStats from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserStats.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserStats.
+     */
+    distinct?: UserStatsScalarFieldEnum | UserStatsScalarFieldEnum[]
+  }
+
+  /**
+   * UserStats findFirstOrThrow
+   */
+  export type UserStatsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter, which UserStats to fetch.
+     */
+    where?: UserStatsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserStats to fetch.
+     */
+    orderBy?: UserStatsOrderByWithRelationInput | UserStatsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserStats.
+     */
+    cursor?: UserStatsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserStats from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserStats.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserStats.
+     */
+    distinct?: UserStatsScalarFieldEnum | UserStatsScalarFieldEnum[]
+  }
+
+  /**
+   * UserStats findMany
+   */
+  export type UserStatsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter, which UserStats to fetch.
+     */
+    where?: UserStatsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserStats to fetch.
+     */
+    orderBy?: UserStatsOrderByWithRelationInput | UserStatsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserStats.
+     */
+    cursor?: UserStatsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserStats from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserStats.
+     */
+    skip?: number
+    distinct?: UserStatsScalarFieldEnum | UserStatsScalarFieldEnum[]
+  }
+
+  /**
+   * UserStats create
+   */
+  export type UserStatsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * The data needed to create a UserStats.
+     */
+    data: XOR<UserStatsCreateInput, UserStatsUncheckedCreateInput>
+  }
+
+  /**
+   * UserStats createMany
+   */
+  export type UserStatsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserStats.
+     */
+    data: UserStatsCreateManyInput | UserStatsCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserStats createManyAndReturn
+   */
+  export type UserStatsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserStats.
+     */
+    data: UserStatsCreateManyInput | UserStatsCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserStats update
+   */
+  export type UserStatsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * The data needed to update a UserStats.
+     */
+    data: XOR<UserStatsUpdateInput, UserStatsUncheckedUpdateInput>
+    /**
+     * Choose, which UserStats to update.
+     */
+    where: UserStatsWhereUniqueInput
+  }
+
+  /**
+   * UserStats updateMany
+   */
+  export type UserStatsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserStats.
+     */
+    data: XOR<UserStatsUpdateManyMutationInput, UserStatsUncheckedUpdateManyInput>
+    /**
+     * Filter which UserStats to update
+     */
+    where?: UserStatsWhereInput
+    /**
+     * Limit how many UserStats to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserStats updateManyAndReturn
+   */
+  export type UserStatsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * The data used to update UserStats.
+     */
+    data: XOR<UserStatsUpdateManyMutationInput, UserStatsUncheckedUpdateManyInput>
+    /**
+     * Filter which UserStats to update
+     */
+    where?: UserStatsWhereInput
+    /**
+     * Limit how many UserStats to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserStats upsert
+   */
+  export type UserStatsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * The filter to search for the UserStats to update in case it exists.
+     */
+    where: UserStatsWhereUniqueInput
+    /**
+     * In case the UserStats found by the `where` argument doesn't exist, create a new UserStats with this data.
+     */
+    create: XOR<UserStatsCreateInput, UserStatsUncheckedCreateInput>
+    /**
+     * In case the UserStats was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserStatsUpdateInput, UserStatsUncheckedUpdateInput>
+  }
+
+  /**
+   * UserStats delete
+   */
+  export type UserStatsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+    /**
+     * Filter which UserStats to delete.
+     */
+    where: UserStatsWhereUniqueInput
+  }
+
+  /**
+   * UserStats deleteMany
+   */
+  export type UserStatsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserStats to delete
+     */
+    where?: UserStatsWhereInput
+    /**
+     * Limit how many UserStats to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserStats without action
+   */
+  export type UserStatsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserStats
+     */
+    select?: UserStatsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserStats
+     */
+    omit?: UserStatsOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Course
+   */
+
+  export type AggregateCourse = {
+    _count: CourseCountAggregateOutputType | null
+    _avg: CourseAvgAggregateOutputType | null
+    _sum: CourseSumAggregateOutputType | null
+    _min: CourseMinAggregateOutputType | null
+    _max: CourseMaxAggregateOutputType | null
+  }
+
+  export type CourseAvgAggregateOutputType = {
+    order: number | null
+    estimatedHours: number | null
+  }
+
+  export type CourseSumAggregateOutputType = {
+    order: number | null
+    estimatedHours: number | null
+  }
+
+  export type CourseMinAggregateOutputType = {
+    id: string | null
+    slug: string | null
+    title: string | null
+    description: string | null
+    level: string | null
+    order: number | null
+    status: $Enums.CourseStatus | null
+    published: boolean | null
+    estimatedHours: number | null
+    thumbnail: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CourseMaxAggregateOutputType = {
+    id: string | null
+    slug: string | null
+    title: string | null
+    description: string | null
+    level: string | null
+    order: number | null
+    status: $Enums.CourseStatus | null
+    published: boolean | null
+    estimatedHours: number | null
+    thumbnail: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CourseCountAggregateOutputType = {
+    id: number
+    slug: number
+    title: number
+    description: number
+    level: number
+    order: number
+    status: number
+    published: number
+    estimatedHours: number
+    thumbnail: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type CourseAvgAggregateInputType = {
+    order?: true
+    estimatedHours?: true
+  }
+
+  export type CourseSumAggregateInputType = {
+    order?: true
+    estimatedHours?: true
+  }
+
+  export type CourseMinAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    description?: true
+    level?: true
+    order?: true
+    status?: true
+    published?: true
+    estimatedHours?: true
+    thumbnail?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CourseMaxAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    description?: true
+    level?: true
+    order?: true
+    status?: true
+    published?: true
+    estimatedHours?: true
+    thumbnail?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CourseCountAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    description?: true
+    level?: true
+    order?: true
+    status?: true
+    published?: true
+    estimatedHours?: true
+    thumbnail?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type CourseAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Course to aggregate.
+     */
+    where?: CourseWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Courses to fetch.
+     */
+    orderBy?: CourseOrderByWithRelationInput | CourseOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CourseWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Courses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Courses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Courses
+    **/
+    _count?: true | CourseCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CourseAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CourseSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CourseMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CourseMaxAggregateInputType
+  }
+
+  export type GetCourseAggregateType<T extends CourseAggregateArgs> = {
+        [P in keyof T & keyof AggregateCourse]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCourse[P]>
+      : GetScalarType<T[P], AggregateCourse[P]>
+  }
+
+
+
+
+  export type CourseGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CourseWhereInput
+    orderBy?: CourseOrderByWithAggregationInput | CourseOrderByWithAggregationInput[]
+    by: CourseScalarFieldEnum[] | CourseScalarFieldEnum
+    having?: CourseScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CourseCountAggregateInputType | true
+    _avg?: CourseAvgAggregateInputType
+    _sum?: CourseSumAggregateInputType
+    _min?: CourseMinAggregateInputType
+    _max?: CourseMaxAggregateInputType
+  }
+
+  export type CourseGroupByOutputType = {
+    id: string
+    slug: string
+    title: string
+    description: string | null
+    level: string
+    order: number
+    status: $Enums.CourseStatus
+    published: boolean
+    estimatedHours: number | null
+    thumbnail: string | null
+    createdAt: Date
+    updatedAt: Date
+    _count: CourseCountAggregateOutputType | null
+    _avg: CourseAvgAggregateOutputType | null
+    _sum: CourseSumAggregateOutputType | null
+    _min: CourseMinAggregateOutputType | null
+    _max: CourseMaxAggregateOutputType | null
+  }
+
+  type GetCourseGroupByPayload<T extends CourseGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CourseGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CourseGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CourseGroupByOutputType[P]>
+            : GetScalarType<T[P], CourseGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CourseSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    description?: boolean
+    level?: boolean
+    order?: boolean
+    status?: boolean
+    published?: boolean
+    estimatedHours?: boolean
+    thumbnail?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    lessons?: boolean | Course$lessonsArgs<ExtArgs>
+    _count?: boolean | CourseCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["course"]>
+
+  export type CourseSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    description?: boolean
+    level?: boolean
+    order?: boolean
+    status?: boolean
+    published?: boolean
+    estimatedHours?: boolean
+    thumbnail?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["course"]>
+
+  export type CourseSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    description?: boolean
+    level?: boolean
+    order?: boolean
+    status?: boolean
+    published?: boolean
+    estimatedHours?: boolean
+    thumbnail?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["course"]>
+
+  export type CourseSelectScalar = {
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    description?: boolean
+    level?: boolean
+    order?: boolean
+    status?: boolean
+    published?: boolean
+    estimatedHours?: boolean
+    thumbnail?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type CourseOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "slug" | "title" | "description" | "level" | "order" | "status" | "published" | "estimatedHours" | "thumbnail" | "createdAt" | "updatedAt", ExtArgs["result"]["course"]>
+  export type CourseInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    lessons?: boolean | Course$lessonsArgs<ExtArgs>
+    _count?: boolean | CourseCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type CourseIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type CourseIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $CoursePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Course"
+    objects: {
+      lessons: Prisma.$LessonPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      slug: string
+      title: string
+      description: string | null
+      level: string
+      order: number
+      status: $Enums.CourseStatus
+      published: boolean
+      estimatedHours: number | null
+      thumbnail: string | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["course"]>
+    composites: {}
+  }
+
+  type CourseGetPayload<S extends boolean | null | undefined | CourseDefaultArgs> = $Result.GetResult<Prisma.$CoursePayload, S>
+
+  type CourseCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CourseFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CourseCountAggregateInputType | true
+    }
+
+  export interface CourseDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Course'], meta: { name: 'Course' } }
+    /**
+     * Find zero or one Course that matches the filter.
+     * @param {CourseFindUniqueArgs} args - Arguments to find a Course
+     * @example
+     * // Get one Course
+     * const course = await prisma.course.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CourseFindUniqueArgs>(args: SelectSubset<T, CourseFindUniqueArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Course that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {CourseFindUniqueOrThrowArgs} args - Arguments to find a Course
+     * @example
+     * // Get one Course
+     * const course = await prisma.course.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CourseFindUniqueOrThrowArgs>(args: SelectSubset<T, CourseFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Course that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseFindFirstArgs} args - Arguments to find a Course
+     * @example
+     * // Get one Course
+     * const course = await prisma.course.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CourseFindFirstArgs>(args?: SelectSubset<T, CourseFindFirstArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Course that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseFindFirstOrThrowArgs} args - Arguments to find a Course
+     * @example
+     * // Get one Course
+     * const course = await prisma.course.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CourseFindFirstOrThrowArgs>(args?: SelectSubset<T, CourseFindFirstOrThrowArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Courses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Courses
+     * const courses = await prisma.course.findMany()
+     * 
+     * // Get first 10 Courses
+     * const courses = await prisma.course.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const courseWithIdOnly = await prisma.course.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CourseFindManyArgs>(args?: SelectSubset<T, CourseFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Course.
+     * @param {CourseCreateArgs} args - Arguments to create a Course.
+     * @example
+     * // Create one Course
+     * const Course = await prisma.course.create({
+     *   data: {
+     *     // ... data to create a Course
+     *   }
+     * })
+     * 
+     */
+    create<T extends CourseCreateArgs>(args: SelectSubset<T, CourseCreateArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Courses.
+     * @param {CourseCreateManyArgs} args - Arguments to create many Courses.
+     * @example
+     * // Create many Courses
+     * const course = await prisma.course.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CourseCreateManyArgs>(args?: SelectSubset<T, CourseCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Courses and returns the data saved in the database.
+     * @param {CourseCreateManyAndReturnArgs} args - Arguments to create many Courses.
+     * @example
+     * // Create many Courses
+     * const course = await prisma.course.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Courses and only return the `id`
+     * const courseWithIdOnly = await prisma.course.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CourseCreateManyAndReturnArgs>(args?: SelectSubset<T, CourseCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Course.
+     * @param {CourseDeleteArgs} args - Arguments to delete one Course.
+     * @example
+     * // Delete one Course
+     * const Course = await prisma.course.delete({
+     *   where: {
+     *     // ... filter to delete one Course
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CourseDeleteArgs>(args: SelectSubset<T, CourseDeleteArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Course.
+     * @param {CourseUpdateArgs} args - Arguments to update one Course.
+     * @example
+     * // Update one Course
+     * const course = await prisma.course.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CourseUpdateArgs>(args: SelectSubset<T, CourseUpdateArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Courses.
+     * @param {CourseDeleteManyArgs} args - Arguments to filter Courses to delete.
+     * @example
+     * // Delete a few Courses
+     * const { count } = await prisma.course.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CourseDeleteManyArgs>(args?: SelectSubset<T, CourseDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Courses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Courses
+     * const course = await prisma.course.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CourseUpdateManyArgs>(args: SelectSubset<T, CourseUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Courses and returns the data updated in the database.
+     * @param {CourseUpdateManyAndReturnArgs} args - Arguments to update many Courses.
+     * @example
+     * // Update many Courses
+     * const course = await prisma.course.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Courses and only return the `id`
+     * const courseWithIdOnly = await prisma.course.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CourseUpdateManyAndReturnArgs>(args: SelectSubset<T, CourseUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Course.
+     * @param {CourseUpsertArgs} args - Arguments to update or create a Course.
+     * @example
+     * // Update or create a Course
+     * const course = await prisma.course.upsert({
+     *   create: {
+     *     // ... data to create a Course
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Course we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CourseUpsertArgs>(args: SelectSubset<T, CourseUpsertArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Courses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseCountArgs} args - Arguments to filter Courses to count.
+     * @example
+     * // Count the number of Courses
+     * const count = await prisma.course.count({
+     *   where: {
+     *     // ... the filter for the Courses we want to count
+     *   }
+     * })
+    **/
+    count<T extends CourseCountArgs>(
+      args?: Subset<T, CourseCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CourseCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Course.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CourseAggregateArgs>(args: Subset<T, CourseAggregateArgs>): Prisma.PrismaPromise<GetCourseAggregateType<T>>
+
+    /**
+     * Group by Course.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CourseGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CourseGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CourseGroupByArgs['orderBy'] }
+        : { orderBy?: CourseGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CourseGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCourseGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Course model
+   */
+  readonly fields: CourseFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Course.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CourseClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    lessons<T extends Course$lessonsArgs<ExtArgs> = {}>(args?: Subset<T, Course$lessonsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Course model
+   */
+  interface CourseFieldRefs {
+    readonly id: FieldRef<"Course", 'String'>
+    readonly slug: FieldRef<"Course", 'String'>
+    readonly title: FieldRef<"Course", 'String'>
+    readonly description: FieldRef<"Course", 'String'>
+    readonly level: FieldRef<"Course", 'String'>
+    readonly order: FieldRef<"Course", 'Int'>
+    readonly status: FieldRef<"Course", 'CourseStatus'>
+    readonly published: FieldRef<"Course", 'Boolean'>
+    readonly estimatedHours: FieldRef<"Course", 'Int'>
+    readonly thumbnail: FieldRef<"Course", 'String'>
+    readonly createdAt: FieldRef<"Course", 'DateTime'>
+    readonly updatedAt: FieldRef<"Course", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Course findUnique
+   */
+  export type CourseFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter, which Course to fetch.
+     */
+    where: CourseWhereUniqueInput
+  }
+
+  /**
+   * Course findUniqueOrThrow
+   */
+  export type CourseFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter, which Course to fetch.
+     */
+    where: CourseWhereUniqueInput
+  }
+
+  /**
+   * Course findFirst
+   */
+  export type CourseFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter, which Course to fetch.
+     */
+    where?: CourseWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Courses to fetch.
+     */
+    orderBy?: CourseOrderByWithRelationInput | CourseOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Courses.
+     */
+    cursor?: CourseWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Courses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Courses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Courses.
+     */
+    distinct?: CourseScalarFieldEnum | CourseScalarFieldEnum[]
+  }
+
+  /**
+   * Course findFirstOrThrow
+   */
+  export type CourseFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter, which Course to fetch.
+     */
+    where?: CourseWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Courses to fetch.
+     */
+    orderBy?: CourseOrderByWithRelationInput | CourseOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Courses.
+     */
+    cursor?: CourseWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Courses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Courses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Courses.
+     */
+    distinct?: CourseScalarFieldEnum | CourseScalarFieldEnum[]
+  }
+
+  /**
+   * Course findMany
+   */
+  export type CourseFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter, which Courses to fetch.
+     */
+    where?: CourseWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Courses to fetch.
+     */
+    orderBy?: CourseOrderByWithRelationInput | CourseOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Courses.
+     */
+    cursor?: CourseWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Courses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Courses.
+     */
+    skip?: number
+    distinct?: CourseScalarFieldEnum | CourseScalarFieldEnum[]
+  }
+
+  /**
+   * Course create
+   */
+  export type CourseCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Course.
+     */
+    data: XOR<CourseCreateInput, CourseUncheckedCreateInput>
+  }
+
+  /**
+   * Course createMany
+   */
+  export type CourseCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Courses.
+     */
+    data: CourseCreateManyInput | CourseCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Course createManyAndReturn
+   */
+  export type CourseCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * The data used to create many Courses.
+     */
+    data: CourseCreateManyInput | CourseCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Course update
+   */
+  export type CourseUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Course.
+     */
+    data: XOR<CourseUpdateInput, CourseUncheckedUpdateInput>
+    /**
+     * Choose, which Course to update.
+     */
+    where: CourseWhereUniqueInput
+  }
+
+  /**
+   * Course updateMany
+   */
+  export type CourseUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Courses.
+     */
+    data: XOR<CourseUpdateManyMutationInput, CourseUncheckedUpdateManyInput>
+    /**
+     * Filter which Courses to update
+     */
+    where?: CourseWhereInput
+    /**
+     * Limit how many Courses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Course updateManyAndReturn
+   */
+  export type CourseUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * The data used to update Courses.
+     */
+    data: XOR<CourseUpdateManyMutationInput, CourseUncheckedUpdateManyInput>
+    /**
+     * Filter which Courses to update
+     */
+    where?: CourseWhereInput
+    /**
+     * Limit how many Courses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Course upsert
+   */
+  export type CourseUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Course to update in case it exists.
+     */
+    where: CourseWhereUniqueInput
+    /**
+     * In case the Course found by the `where` argument doesn't exist, create a new Course with this data.
+     */
+    create: XOR<CourseCreateInput, CourseUncheckedCreateInput>
+    /**
+     * In case the Course was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CourseUpdateInput, CourseUncheckedUpdateInput>
+  }
+
+  /**
+   * Course delete
+   */
+  export type CourseDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    /**
+     * Filter which Course to delete.
+     */
+    where: CourseWhereUniqueInput
+  }
+
+  /**
+   * Course deleteMany
+   */
+  export type CourseDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Courses to delete
+     */
+    where?: CourseWhereInput
+    /**
+     * Limit how many Courses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Course.lessons
+   */
+  export type Course$lessonsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    where?: LessonWhereInput
+    orderBy?: LessonOrderByWithRelationInput | LessonOrderByWithRelationInput[]
+    cursor?: LessonWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LessonScalarFieldEnum | LessonScalarFieldEnum[]
+  }
+
+  /**
+   * Course without action
+   */
+  export type CourseDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Lesson
+   */
+
+  export type AggregateLesson = {
+    _count: LessonCountAggregateOutputType | null
+    _avg: LessonAvgAggregateOutputType | null
+    _sum: LessonSumAggregateOutputType | null
+    _min: LessonMinAggregateOutputType | null
+    _max: LessonMaxAggregateOutputType | null
+  }
+
+  export type LessonAvgAggregateOutputType = {
+    order: number | null
+    duration: number | null
+  }
+
+  export type LessonSumAggregateOutputType = {
+    order: number | null
+    duration: number | null
+  }
+
+  export type LessonMinAggregateOutputType = {
+    id: string | null
+    courseId: string | null
+    slug: string | null
+    title: string | null
+    type: string | null
+    order: number | null
+    duration: number | null
+    published: boolean | null
+    isFree: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type LessonMaxAggregateOutputType = {
+    id: string | null
+    courseId: string | null
+    slug: string | null
+    title: string | null
+    type: string | null
+    order: number | null
+    duration: number | null
+    published: boolean | null
+    isFree: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type LessonCountAggregateOutputType = {
+    id: number
+    courseId: number
+    slug: number
+    title: number
+    type: number
+    content: number
+    order: number
+    duration: number
+    published: number
+    isFree: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type LessonAvgAggregateInputType = {
+    order?: true
+    duration?: true
+  }
+
+  export type LessonSumAggregateInputType = {
+    order?: true
+    duration?: true
+  }
+
+  export type LessonMinAggregateInputType = {
+    id?: true
+    courseId?: true
+    slug?: true
+    title?: true
+    type?: true
+    order?: true
+    duration?: true
+    published?: true
+    isFree?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type LessonMaxAggregateInputType = {
+    id?: true
+    courseId?: true
+    slug?: true
+    title?: true
+    type?: true
+    order?: true
+    duration?: true
+    published?: true
+    isFree?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type LessonCountAggregateInputType = {
+    id?: true
+    courseId?: true
+    slug?: true
+    title?: true
+    type?: true
+    content?: true
+    order?: true
+    duration?: true
+    published?: true
+    isFree?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type LessonAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Lesson to aggregate.
+     */
+    where?: LessonWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Lessons to fetch.
+     */
+    orderBy?: LessonOrderByWithRelationInput | LessonOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LessonWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Lessons from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Lessons.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Lessons
+    **/
+    _count?: true | LessonCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: LessonAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: LessonSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LessonMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LessonMaxAggregateInputType
+  }
+
+  export type GetLessonAggregateType<T extends LessonAggregateArgs> = {
+        [P in keyof T & keyof AggregateLesson]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLesson[P]>
+      : GetScalarType<T[P], AggregateLesson[P]>
+  }
+
+
+
+
+  export type LessonGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LessonWhereInput
+    orderBy?: LessonOrderByWithAggregationInput | LessonOrderByWithAggregationInput[]
+    by: LessonScalarFieldEnum[] | LessonScalarFieldEnum
+    having?: LessonScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LessonCountAggregateInputType | true
+    _avg?: LessonAvgAggregateInputType
+    _sum?: LessonSumAggregateInputType
+    _min?: LessonMinAggregateInputType
+    _max?: LessonMaxAggregateInputType
+  }
+
+  export type LessonGroupByOutputType = {
+    id: string
+    courseId: string
+    slug: string
+    title: string
+    type: string | null
+    content: JsonValue
+    order: number
+    duration: number | null
+    published: boolean
+    isFree: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: LessonCountAggregateOutputType | null
+    _avg: LessonAvgAggregateOutputType | null
+    _sum: LessonSumAggregateOutputType | null
+    _min: LessonMinAggregateOutputType | null
+    _max: LessonMaxAggregateOutputType | null
+  }
+
+  type GetLessonGroupByPayload<T extends LessonGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LessonGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LessonGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LessonGroupByOutputType[P]>
+            : GetScalarType<T[P], LessonGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LessonSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    courseId?: boolean
+    slug?: boolean
+    title?: boolean
+    type?: boolean
+    content?: boolean
+    order?: boolean
+    duration?: boolean
+    published?: boolean
+    isFree?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["lesson"]>
+
+  export type LessonSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    courseId?: boolean
+    slug?: boolean
+    title?: boolean
+    type?: boolean
+    content?: boolean
+    order?: boolean
+    duration?: boolean
+    published?: boolean
+    isFree?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["lesson"]>
+
+  export type LessonSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    courseId?: boolean
+    slug?: boolean
+    title?: boolean
+    type?: boolean
+    content?: boolean
+    order?: boolean
+    duration?: boolean
+    published?: boolean
+    isFree?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["lesson"]>
+
+  export type LessonSelectScalar = {
+    id?: boolean
+    courseId?: boolean
+    slug?: boolean
+    title?: boolean
+    type?: boolean
+    content?: boolean
+    order?: boolean
+    duration?: boolean
+    published?: boolean
+    isFree?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type LessonOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "courseId" | "slug" | "title" | "type" | "content" | "order" | "duration" | "published" | "isFree" | "createdAt" | "updatedAt", ExtArgs["result"]["lesson"]>
+  export type LessonInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }
+  export type LessonIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }
+  export type LessonIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    course?: boolean | CourseDefaultArgs<ExtArgs>
+  }
+
+  export type $LessonPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Lesson"
+    objects: {
+      course: Prisma.$CoursePayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      courseId: string
+      slug: string
+      title: string
+      type: string | null
+      content: Prisma.JsonValue
+      order: number
+      duration: number | null
+      published: boolean
+      isFree: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["lesson"]>
+    composites: {}
+  }
+
+  type LessonGetPayload<S extends boolean | null | undefined | LessonDefaultArgs> = $Result.GetResult<Prisma.$LessonPayload, S>
+
+  type LessonCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LessonFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LessonCountAggregateInputType | true
+    }
+
+  export interface LessonDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Lesson'], meta: { name: 'Lesson' } }
+    /**
+     * Find zero or one Lesson that matches the filter.
+     * @param {LessonFindUniqueArgs} args - Arguments to find a Lesson
+     * @example
+     * // Get one Lesson
+     * const lesson = await prisma.lesson.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LessonFindUniqueArgs>(args: SelectSubset<T, LessonFindUniqueArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Lesson that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LessonFindUniqueOrThrowArgs} args - Arguments to find a Lesson
+     * @example
+     * // Get one Lesson
+     * const lesson = await prisma.lesson.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LessonFindUniqueOrThrowArgs>(args: SelectSubset<T, LessonFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Lesson that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonFindFirstArgs} args - Arguments to find a Lesson
+     * @example
+     * // Get one Lesson
+     * const lesson = await prisma.lesson.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LessonFindFirstArgs>(args?: SelectSubset<T, LessonFindFirstArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Lesson that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonFindFirstOrThrowArgs} args - Arguments to find a Lesson
+     * @example
+     * // Get one Lesson
+     * const lesson = await prisma.lesson.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LessonFindFirstOrThrowArgs>(args?: SelectSubset<T, LessonFindFirstOrThrowArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Lessons that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Lessons
+     * const lessons = await prisma.lesson.findMany()
+     * 
+     * // Get first 10 Lessons
+     * const lessons = await prisma.lesson.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const lessonWithIdOnly = await prisma.lesson.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LessonFindManyArgs>(args?: SelectSubset<T, LessonFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Lesson.
+     * @param {LessonCreateArgs} args - Arguments to create a Lesson.
+     * @example
+     * // Create one Lesson
+     * const Lesson = await prisma.lesson.create({
+     *   data: {
+     *     // ... data to create a Lesson
+     *   }
+     * })
+     * 
+     */
+    create<T extends LessonCreateArgs>(args: SelectSubset<T, LessonCreateArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Lessons.
+     * @param {LessonCreateManyArgs} args - Arguments to create many Lessons.
+     * @example
+     * // Create many Lessons
+     * const lesson = await prisma.lesson.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LessonCreateManyArgs>(args?: SelectSubset<T, LessonCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Lessons and returns the data saved in the database.
+     * @param {LessonCreateManyAndReturnArgs} args - Arguments to create many Lessons.
+     * @example
+     * // Create many Lessons
+     * const lesson = await prisma.lesson.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Lessons and only return the `id`
+     * const lessonWithIdOnly = await prisma.lesson.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LessonCreateManyAndReturnArgs>(args?: SelectSubset<T, LessonCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Lesson.
+     * @param {LessonDeleteArgs} args - Arguments to delete one Lesson.
+     * @example
+     * // Delete one Lesson
+     * const Lesson = await prisma.lesson.delete({
+     *   where: {
+     *     // ... filter to delete one Lesson
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LessonDeleteArgs>(args: SelectSubset<T, LessonDeleteArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Lesson.
+     * @param {LessonUpdateArgs} args - Arguments to update one Lesson.
+     * @example
+     * // Update one Lesson
+     * const lesson = await prisma.lesson.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LessonUpdateArgs>(args: SelectSubset<T, LessonUpdateArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Lessons.
+     * @param {LessonDeleteManyArgs} args - Arguments to filter Lessons to delete.
+     * @example
+     * // Delete a few Lessons
+     * const { count } = await prisma.lesson.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LessonDeleteManyArgs>(args?: SelectSubset<T, LessonDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Lessons.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Lessons
+     * const lesson = await prisma.lesson.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LessonUpdateManyArgs>(args: SelectSubset<T, LessonUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Lessons and returns the data updated in the database.
+     * @param {LessonUpdateManyAndReturnArgs} args - Arguments to update many Lessons.
+     * @example
+     * // Update many Lessons
+     * const lesson = await prisma.lesson.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Lessons and only return the `id`
+     * const lessonWithIdOnly = await prisma.lesson.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LessonUpdateManyAndReturnArgs>(args: SelectSubset<T, LessonUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Lesson.
+     * @param {LessonUpsertArgs} args - Arguments to update or create a Lesson.
+     * @example
+     * // Update or create a Lesson
+     * const lesson = await prisma.lesson.upsert({
+     *   create: {
+     *     // ... data to create a Lesson
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Lesson we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LessonUpsertArgs>(args: SelectSubset<T, LessonUpsertArgs<ExtArgs>>): Prisma__LessonClient<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Lessons.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonCountArgs} args - Arguments to filter Lessons to count.
+     * @example
+     * // Count the number of Lessons
+     * const count = await prisma.lesson.count({
+     *   where: {
+     *     // ... the filter for the Lessons we want to count
+     *   }
+     * })
+    **/
+    count<T extends LessonCountArgs>(
+      args?: Subset<T, LessonCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LessonCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Lesson.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LessonAggregateArgs>(args: Subset<T, LessonAggregateArgs>): Prisma.PrismaPromise<GetLessonAggregateType<T>>
+
+    /**
+     * Group by Lesson.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LessonGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LessonGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LessonGroupByArgs['orderBy'] }
+        : { orderBy?: LessonGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LessonGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLessonGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Lesson model
+   */
+  readonly fields: LessonFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Lesson.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LessonClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    course<T extends CourseDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CourseDefaultArgs<ExtArgs>>): Prisma__CourseClient<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Lesson model
+   */
+  interface LessonFieldRefs {
+    readonly id: FieldRef<"Lesson", 'String'>
+    readonly courseId: FieldRef<"Lesson", 'String'>
+    readonly slug: FieldRef<"Lesson", 'String'>
+    readonly title: FieldRef<"Lesson", 'String'>
+    readonly type: FieldRef<"Lesson", 'String'>
+    readonly content: FieldRef<"Lesson", 'Json'>
+    readonly order: FieldRef<"Lesson", 'Int'>
+    readonly duration: FieldRef<"Lesson", 'Int'>
+    readonly published: FieldRef<"Lesson", 'Boolean'>
+    readonly isFree: FieldRef<"Lesson", 'Boolean'>
+    readonly createdAt: FieldRef<"Lesson", 'DateTime'>
+    readonly updatedAt: FieldRef<"Lesson", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Lesson findUnique
+   */
+  export type LessonFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter, which Lesson to fetch.
+     */
+    where: LessonWhereUniqueInput
+  }
+
+  /**
+   * Lesson findUniqueOrThrow
+   */
+  export type LessonFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter, which Lesson to fetch.
+     */
+    where: LessonWhereUniqueInput
+  }
+
+  /**
+   * Lesson findFirst
+   */
+  export type LessonFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter, which Lesson to fetch.
+     */
+    where?: LessonWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Lessons to fetch.
+     */
+    orderBy?: LessonOrderByWithRelationInput | LessonOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Lessons.
+     */
+    cursor?: LessonWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Lessons from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Lessons.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Lessons.
+     */
+    distinct?: LessonScalarFieldEnum | LessonScalarFieldEnum[]
+  }
+
+  /**
+   * Lesson findFirstOrThrow
+   */
+  export type LessonFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter, which Lesson to fetch.
+     */
+    where?: LessonWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Lessons to fetch.
+     */
+    orderBy?: LessonOrderByWithRelationInput | LessonOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Lessons.
+     */
+    cursor?: LessonWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Lessons from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Lessons.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Lessons.
+     */
+    distinct?: LessonScalarFieldEnum | LessonScalarFieldEnum[]
+  }
+
+  /**
+   * Lesson findMany
+   */
+  export type LessonFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter, which Lessons to fetch.
+     */
+    where?: LessonWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Lessons to fetch.
+     */
+    orderBy?: LessonOrderByWithRelationInput | LessonOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Lessons.
+     */
+    cursor?: LessonWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Lessons from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Lessons.
+     */
+    skip?: number
+    distinct?: LessonScalarFieldEnum | LessonScalarFieldEnum[]
+  }
+
+  /**
+   * Lesson create
+   */
+  export type LessonCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Lesson.
+     */
+    data: XOR<LessonCreateInput, LessonUncheckedCreateInput>
+  }
+
+  /**
+   * Lesson createMany
+   */
+  export type LessonCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Lessons.
+     */
+    data: LessonCreateManyInput | LessonCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Lesson createManyAndReturn
+   */
+  export type LessonCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * The data used to create many Lessons.
+     */
+    data: LessonCreateManyInput | LessonCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Lesson update
+   */
+  export type LessonUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Lesson.
+     */
+    data: XOR<LessonUpdateInput, LessonUncheckedUpdateInput>
+    /**
+     * Choose, which Lesson to update.
+     */
+    where: LessonWhereUniqueInput
+  }
+
+  /**
+   * Lesson updateMany
+   */
+  export type LessonUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Lessons.
+     */
+    data: XOR<LessonUpdateManyMutationInput, LessonUncheckedUpdateManyInput>
+    /**
+     * Filter which Lessons to update
+     */
+    where?: LessonWhereInput
+    /**
+     * Limit how many Lessons to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Lesson updateManyAndReturn
+   */
+  export type LessonUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * The data used to update Lessons.
+     */
+    data: XOR<LessonUpdateManyMutationInput, LessonUncheckedUpdateManyInput>
+    /**
+     * Filter which Lessons to update
+     */
+    where?: LessonWhereInput
+    /**
+     * Limit how many Lessons to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Lesson upsert
+   */
+  export type LessonUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Lesson to update in case it exists.
+     */
+    where: LessonWhereUniqueInput
+    /**
+     * In case the Lesson found by the `where` argument doesn't exist, create a new Lesson with this data.
+     */
+    create: XOR<LessonCreateInput, LessonUncheckedCreateInput>
+    /**
+     * In case the Lesson was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LessonUpdateInput, LessonUncheckedUpdateInput>
+  }
+
+  /**
+   * Lesson delete
+   */
+  export type LessonDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+    /**
+     * Filter which Lesson to delete.
+     */
+    where: LessonWhereUniqueInput
+  }
+
+  /**
+   * Lesson deleteMany
+   */
+  export type LessonDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Lessons to delete
+     */
+    where?: LessonWhereInput
+    /**
+     * Limit how many Lessons to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Lesson without action
+   */
+  export type LessonDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Lesson
+     */
+    select?: LessonSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Lesson
+     */
+    omit?: LessonOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LessonInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model PlacementQuestion
+   */
+
+  export type AggregatePlacementQuestion = {
+    _count: PlacementQuestionCountAggregateOutputType | null
+    _avg: PlacementQuestionAvgAggregateOutputType | null
+    _sum: PlacementQuestionSumAggregateOutputType | null
+    _min: PlacementQuestionMinAggregateOutputType | null
+    _max: PlacementQuestionMaxAggregateOutputType | null
+  }
+
+  export type PlacementQuestionAvgAggregateOutputType = {
+    difficulty: number | null
+    order: number | null
+  }
+
+  export type PlacementQuestionSumAggregateOutputType = {
+    difficulty: number | null
+    order: number | null
+  }
+
+  export type PlacementQuestionMinAggregateOutputType = {
+    id: string | null
+    level: string | null
+    skillType: string | null
+    difficulty: number | null
+    question: string | null
+    questionText: string | null
+    questionTextChinese: string | null
+    questionType: string | null
+    passageText: string | null
+    audioUrl: string | null
+    correctAnswerId: string | null
+    explanation: string | null
+    order: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type PlacementQuestionMaxAggregateOutputType = {
+    id: string | null
+    level: string | null
+    skillType: string | null
+    difficulty: number | null
+    question: string | null
+    questionText: string | null
+    questionTextChinese: string | null
+    questionType: string | null
+    passageText: string | null
+    audioUrl: string | null
+    correctAnswerId: string | null
+    explanation: string | null
+    order: number | null
+    isActive: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type PlacementQuestionCountAggregateOutputType = {
+    id: number
+    level: number
+    skillType: number
+    difficulty: number
+    question: number
+    questionText: number
+    questionTextChinese: number
+    questionType: number
+    passageText: number
+    audioUrl: number
+    options: number
+    correctAnswerId: number
+    explanation: number
+    order: number
+    isActive: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type PlacementQuestionAvgAggregateInputType = {
+    difficulty?: true
+    order?: true
+  }
+
+  export type PlacementQuestionSumAggregateInputType = {
+    difficulty?: true
+    order?: true
+  }
+
+  export type PlacementQuestionMinAggregateInputType = {
+    id?: true
+    level?: true
+    skillType?: true
+    difficulty?: true
+    question?: true
+    questionText?: true
+    questionTextChinese?: true
+    questionType?: true
+    passageText?: true
+    audioUrl?: true
+    correctAnswerId?: true
+    explanation?: true
+    order?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type PlacementQuestionMaxAggregateInputType = {
+    id?: true
+    level?: true
+    skillType?: true
+    difficulty?: true
+    question?: true
+    questionText?: true
+    questionTextChinese?: true
+    questionType?: true
+    passageText?: true
+    audioUrl?: true
+    correctAnswerId?: true
+    explanation?: true
+    order?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type PlacementQuestionCountAggregateInputType = {
+    id?: true
+    level?: true
+    skillType?: true
+    difficulty?: true
+    question?: true
+    questionText?: true
+    questionTextChinese?: true
+    questionType?: true
+    passageText?: true
+    audioUrl?: true
+    options?: true
+    correctAnswerId?: true
+    explanation?: true
+    order?: true
+    isActive?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type PlacementQuestionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlacementQuestion to aggregate.
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlacementQuestions to fetch.
+     */
+    orderBy?: PlacementQuestionOrderByWithRelationInput | PlacementQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PlacementQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlacementQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlacementQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PlacementQuestions
+    **/
+    _count?: true | PlacementQuestionCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: PlacementQuestionAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: PlacementQuestionSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PlacementQuestionMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PlacementQuestionMaxAggregateInputType
+  }
+
+  export type GetPlacementQuestionAggregateType<T extends PlacementQuestionAggregateArgs> = {
+        [P in keyof T & keyof AggregatePlacementQuestion]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePlacementQuestion[P]>
+      : GetScalarType<T[P], AggregatePlacementQuestion[P]>
+  }
+
+
+
+
+  export type PlacementQuestionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlacementQuestionWhereInput
+    orderBy?: PlacementQuestionOrderByWithAggregationInput | PlacementQuestionOrderByWithAggregationInput[]
+    by: PlacementQuestionScalarFieldEnum[] | PlacementQuestionScalarFieldEnum
+    having?: PlacementQuestionScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PlacementQuestionCountAggregateInputType | true
+    _avg?: PlacementQuestionAvgAggregateInputType
+    _sum?: PlacementQuestionSumAggregateInputType
+    _min?: PlacementQuestionMinAggregateInputType
+    _max?: PlacementQuestionMaxAggregateInputType
+  }
+
+  export type PlacementQuestionGroupByOutputType = {
+    id: string
+    level: string
+    skillType: string | null
+    difficulty: number
+    question: string
+    questionText: string | null
+    questionTextChinese: string | null
+    questionType: string
+    passageText: string | null
+    audioUrl: string | null
+    options: JsonValue
+    correctAnswerId: string
+    explanation: string | null
+    order: number
+    isActive: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: PlacementQuestionCountAggregateOutputType | null
+    _avg: PlacementQuestionAvgAggregateOutputType | null
+    _sum: PlacementQuestionSumAggregateOutputType | null
+    _min: PlacementQuestionMinAggregateOutputType | null
+    _max: PlacementQuestionMaxAggregateOutputType | null
+  }
+
+  type GetPlacementQuestionGroupByPayload<T extends PlacementQuestionGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PlacementQuestionGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PlacementQuestionGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PlacementQuestionGroupByOutputType[P]>
+            : GetScalarType<T[P], PlacementQuestionGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PlacementQuestionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    level?: boolean
+    skillType?: boolean
+    difficulty?: boolean
+    question?: boolean
+    questionText?: boolean
+    questionTextChinese?: boolean
+    questionType?: boolean
+    passageText?: boolean
+    audioUrl?: boolean
+    options?: boolean
+    correctAnswerId?: boolean
+    explanation?: boolean
+    order?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["placementQuestion"]>
+
+  export type PlacementQuestionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    level?: boolean
+    skillType?: boolean
+    difficulty?: boolean
+    question?: boolean
+    questionText?: boolean
+    questionTextChinese?: boolean
+    questionType?: boolean
+    passageText?: boolean
+    audioUrl?: boolean
+    options?: boolean
+    correctAnswerId?: boolean
+    explanation?: boolean
+    order?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["placementQuestion"]>
+
+  export type PlacementQuestionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    level?: boolean
+    skillType?: boolean
+    difficulty?: boolean
+    question?: boolean
+    questionText?: boolean
+    questionTextChinese?: boolean
+    questionType?: boolean
+    passageText?: boolean
+    audioUrl?: boolean
+    options?: boolean
+    correctAnswerId?: boolean
+    explanation?: boolean
+    order?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["placementQuestion"]>
+
+  export type PlacementQuestionSelectScalar = {
+    id?: boolean
+    level?: boolean
+    skillType?: boolean
+    difficulty?: boolean
+    question?: boolean
+    questionText?: boolean
+    questionTextChinese?: boolean
+    questionType?: boolean
+    passageText?: boolean
+    audioUrl?: boolean
+    options?: boolean
+    correctAnswerId?: boolean
+    explanation?: boolean
+    order?: boolean
+    isActive?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type PlacementQuestionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "level" | "skillType" | "difficulty" | "question" | "questionText" | "questionTextChinese" | "questionType" | "passageText" | "audioUrl" | "options" | "correctAnswerId" | "explanation" | "order" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["placementQuestion"]>
+
+  export type $PlacementQuestionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PlacementQuestion"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      level: string
+      skillType: string | null
+      difficulty: number
+      question: string
+      questionText: string | null
+      questionTextChinese: string | null
+      questionType: string
+      passageText: string | null
+      audioUrl: string | null
+      options: Prisma.JsonValue
+      correctAnswerId: string
+      explanation: string | null
+      order: number
+      isActive: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["placementQuestion"]>
+    composites: {}
+  }
+
+  type PlacementQuestionGetPayload<S extends boolean | null | undefined | PlacementQuestionDefaultArgs> = $Result.GetResult<Prisma.$PlacementQuestionPayload, S>
+
+  type PlacementQuestionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PlacementQuestionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PlacementQuestionCountAggregateInputType | true
+    }
+
+  export interface PlacementQuestionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PlacementQuestion'], meta: { name: 'PlacementQuestion' } }
+    /**
+     * Find zero or one PlacementQuestion that matches the filter.
+     * @param {PlacementQuestionFindUniqueArgs} args - Arguments to find a PlacementQuestion
+     * @example
+     * // Get one PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PlacementQuestionFindUniqueArgs>(args: SelectSubset<T, PlacementQuestionFindUniqueArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PlacementQuestion that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PlacementQuestionFindUniqueOrThrowArgs} args - Arguments to find a PlacementQuestion
+     * @example
+     * // Get one PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PlacementQuestionFindUniqueOrThrowArgs>(args: SelectSubset<T, PlacementQuestionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlacementQuestion that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionFindFirstArgs} args - Arguments to find a PlacementQuestion
+     * @example
+     * // Get one PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PlacementQuestionFindFirstArgs>(args?: SelectSubset<T, PlacementQuestionFindFirstArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlacementQuestion that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionFindFirstOrThrowArgs} args - Arguments to find a PlacementQuestion
+     * @example
+     * // Get one PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PlacementQuestionFindFirstOrThrowArgs>(args?: SelectSubset<T, PlacementQuestionFindFirstOrThrowArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PlacementQuestions that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PlacementQuestions
+     * const placementQuestions = await prisma.placementQuestion.findMany()
+     * 
+     * // Get first 10 PlacementQuestions
+     * const placementQuestions = await prisma.placementQuestion.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const placementQuestionWithIdOnly = await prisma.placementQuestion.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends PlacementQuestionFindManyArgs>(args?: SelectSubset<T, PlacementQuestionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PlacementQuestion.
+     * @param {PlacementQuestionCreateArgs} args - Arguments to create a PlacementQuestion.
+     * @example
+     * // Create one PlacementQuestion
+     * const PlacementQuestion = await prisma.placementQuestion.create({
+     *   data: {
+     *     // ... data to create a PlacementQuestion
+     *   }
+     * })
+     * 
+     */
+    create<T extends PlacementQuestionCreateArgs>(args: SelectSubset<T, PlacementQuestionCreateArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PlacementQuestions.
+     * @param {PlacementQuestionCreateManyArgs} args - Arguments to create many PlacementQuestions.
+     * @example
+     * // Create many PlacementQuestions
+     * const placementQuestion = await prisma.placementQuestion.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PlacementQuestionCreateManyArgs>(args?: SelectSubset<T, PlacementQuestionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many PlacementQuestions and returns the data saved in the database.
+     * @param {PlacementQuestionCreateManyAndReturnArgs} args - Arguments to create many PlacementQuestions.
+     * @example
+     * // Create many PlacementQuestions
+     * const placementQuestion = await prisma.placementQuestion.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many PlacementQuestions and only return the `id`
+     * const placementQuestionWithIdOnly = await prisma.placementQuestion.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PlacementQuestionCreateManyAndReturnArgs>(args?: SelectSubset<T, PlacementQuestionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a PlacementQuestion.
+     * @param {PlacementQuestionDeleteArgs} args - Arguments to delete one PlacementQuestion.
+     * @example
+     * // Delete one PlacementQuestion
+     * const PlacementQuestion = await prisma.placementQuestion.delete({
+     *   where: {
+     *     // ... filter to delete one PlacementQuestion
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PlacementQuestionDeleteArgs>(args: SelectSubset<T, PlacementQuestionDeleteArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PlacementQuestion.
+     * @param {PlacementQuestionUpdateArgs} args - Arguments to update one PlacementQuestion.
+     * @example
+     * // Update one PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PlacementQuestionUpdateArgs>(args: SelectSubset<T, PlacementQuestionUpdateArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PlacementQuestions.
+     * @param {PlacementQuestionDeleteManyArgs} args - Arguments to filter PlacementQuestions to delete.
+     * @example
+     * // Delete a few PlacementQuestions
+     * const { count } = await prisma.placementQuestion.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PlacementQuestionDeleteManyArgs>(args?: SelectSubset<T, PlacementQuestionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlacementQuestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PlacementQuestions
+     * const placementQuestion = await prisma.placementQuestion.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PlacementQuestionUpdateManyArgs>(args: SelectSubset<T, PlacementQuestionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlacementQuestions and returns the data updated in the database.
+     * @param {PlacementQuestionUpdateManyAndReturnArgs} args - Arguments to update many PlacementQuestions.
+     * @example
+     * // Update many PlacementQuestions
+     * const placementQuestion = await prisma.placementQuestion.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more PlacementQuestions and only return the `id`
+     * const placementQuestionWithIdOnly = await prisma.placementQuestion.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PlacementQuestionUpdateManyAndReturnArgs>(args: SelectSubset<T, PlacementQuestionUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one PlacementQuestion.
+     * @param {PlacementQuestionUpsertArgs} args - Arguments to update or create a PlacementQuestion.
+     * @example
+     * // Update or create a PlacementQuestion
+     * const placementQuestion = await prisma.placementQuestion.upsert({
+     *   create: {
+     *     // ... data to create a PlacementQuestion
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PlacementQuestion we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PlacementQuestionUpsertArgs>(args: SelectSubset<T, PlacementQuestionUpsertArgs<ExtArgs>>): Prisma__PlacementQuestionClient<$Result.GetResult<Prisma.$PlacementQuestionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PlacementQuestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionCountArgs} args - Arguments to filter PlacementQuestions to count.
+     * @example
+     * // Count the number of PlacementQuestions
+     * const count = await prisma.placementQuestion.count({
+     *   where: {
+     *     // ... the filter for the PlacementQuestions we want to count
+     *   }
+     * })
+    **/
+    count<T extends PlacementQuestionCountArgs>(
+      args?: Subset<T, PlacementQuestionCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PlacementQuestionCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PlacementQuestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PlacementQuestionAggregateArgs>(args: Subset<T, PlacementQuestionAggregateArgs>): Prisma.PrismaPromise<GetPlacementQuestionAggregateType<T>>
+
+    /**
+     * Group by PlacementQuestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlacementQuestionGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PlacementQuestionGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PlacementQuestionGroupByArgs['orderBy'] }
+        : { orderBy?: PlacementQuestionGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PlacementQuestionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPlacementQuestionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PlacementQuestion model
+   */
+  readonly fields: PlacementQuestionFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PlacementQuestion.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PlacementQuestionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PlacementQuestion model
+   */
+  interface PlacementQuestionFieldRefs {
+    readonly id: FieldRef<"PlacementQuestion", 'String'>
+    readonly level: FieldRef<"PlacementQuestion", 'String'>
+    readonly skillType: FieldRef<"PlacementQuestion", 'String'>
+    readonly difficulty: FieldRef<"PlacementQuestion", 'Int'>
+    readonly question: FieldRef<"PlacementQuestion", 'String'>
+    readonly questionText: FieldRef<"PlacementQuestion", 'String'>
+    readonly questionTextChinese: FieldRef<"PlacementQuestion", 'String'>
+    readonly questionType: FieldRef<"PlacementQuestion", 'String'>
+    readonly passageText: FieldRef<"PlacementQuestion", 'String'>
+    readonly audioUrl: FieldRef<"PlacementQuestion", 'String'>
+    readonly options: FieldRef<"PlacementQuestion", 'Json'>
+    readonly correctAnswerId: FieldRef<"PlacementQuestion", 'String'>
+    readonly explanation: FieldRef<"PlacementQuestion", 'String'>
+    readonly order: FieldRef<"PlacementQuestion", 'Int'>
+    readonly isActive: FieldRef<"PlacementQuestion", 'Boolean'>
+    readonly createdAt: FieldRef<"PlacementQuestion", 'DateTime'>
+    readonly updatedAt: FieldRef<"PlacementQuestion", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PlacementQuestion findUnique
+   */
+  export type PlacementQuestionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter, which PlacementQuestion to fetch.
+     */
+    where: PlacementQuestionWhereUniqueInput
+  }
+
+  /**
+   * PlacementQuestion findUniqueOrThrow
+   */
+  export type PlacementQuestionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter, which PlacementQuestion to fetch.
+     */
+    where: PlacementQuestionWhereUniqueInput
+  }
+
+  /**
+   * PlacementQuestion findFirst
+   */
+  export type PlacementQuestionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter, which PlacementQuestion to fetch.
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlacementQuestions to fetch.
+     */
+    orderBy?: PlacementQuestionOrderByWithRelationInput | PlacementQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlacementQuestions.
+     */
+    cursor?: PlacementQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlacementQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlacementQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlacementQuestions.
+     */
+    distinct?: PlacementQuestionScalarFieldEnum | PlacementQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * PlacementQuestion findFirstOrThrow
+   */
+  export type PlacementQuestionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter, which PlacementQuestion to fetch.
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlacementQuestions to fetch.
+     */
+    orderBy?: PlacementQuestionOrderByWithRelationInput | PlacementQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlacementQuestions.
+     */
+    cursor?: PlacementQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlacementQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlacementQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlacementQuestions.
+     */
+    distinct?: PlacementQuestionScalarFieldEnum | PlacementQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * PlacementQuestion findMany
+   */
+  export type PlacementQuestionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter, which PlacementQuestions to fetch.
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlacementQuestions to fetch.
+     */
+    orderBy?: PlacementQuestionOrderByWithRelationInput | PlacementQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PlacementQuestions.
+     */
+    cursor?: PlacementQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlacementQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlacementQuestions.
+     */
+    skip?: number
+    distinct?: PlacementQuestionScalarFieldEnum | PlacementQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * PlacementQuestion create
+   */
+  export type PlacementQuestionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * The data needed to create a PlacementQuestion.
+     */
+    data: XOR<PlacementQuestionCreateInput, PlacementQuestionUncheckedCreateInput>
+  }
+
+  /**
+   * PlacementQuestion createMany
+   */
+  export type PlacementQuestionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PlacementQuestions.
+     */
+    data: PlacementQuestionCreateManyInput | PlacementQuestionCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PlacementQuestion createManyAndReturn
+   */
+  export type PlacementQuestionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * The data used to create many PlacementQuestions.
+     */
+    data: PlacementQuestionCreateManyInput | PlacementQuestionCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PlacementQuestion update
+   */
+  export type PlacementQuestionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * The data needed to update a PlacementQuestion.
+     */
+    data: XOR<PlacementQuestionUpdateInput, PlacementQuestionUncheckedUpdateInput>
+    /**
+     * Choose, which PlacementQuestion to update.
+     */
+    where: PlacementQuestionWhereUniqueInput
+  }
+
+  /**
+   * PlacementQuestion updateMany
+   */
+  export type PlacementQuestionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PlacementQuestions.
+     */
+    data: XOR<PlacementQuestionUpdateManyMutationInput, PlacementQuestionUncheckedUpdateManyInput>
+    /**
+     * Filter which PlacementQuestions to update
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * Limit how many PlacementQuestions to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlacementQuestion updateManyAndReturn
+   */
+  export type PlacementQuestionUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * The data used to update PlacementQuestions.
+     */
+    data: XOR<PlacementQuestionUpdateManyMutationInput, PlacementQuestionUncheckedUpdateManyInput>
+    /**
+     * Filter which PlacementQuestions to update
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * Limit how many PlacementQuestions to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlacementQuestion upsert
+   */
+  export type PlacementQuestionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * The filter to search for the PlacementQuestion to update in case it exists.
+     */
+    where: PlacementQuestionWhereUniqueInput
+    /**
+     * In case the PlacementQuestion found by the `where` argument doesn't exist, create a new PlacementQuestion with this data.
+     */
+    create: XOR<PlacementQuestionCreateInput, PlacementQuestionUncheckedCreateInput>
+    /**
+     * In case the PlacementQuestion was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PlacementQuestionUpdateInput, PlacementQuestionUncheckedUpdateInput>
+  }
+
+  /**
+   * PlacementQuestion delete
+   */
+  export type PlacementQuestionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+    /**
+     * Filter which PlacementQuestion to delete.
+     */
+    where: PlacementQuestionWhereUniqueInput
+  }
+
+  /**
+   * PlacementQuestion deleteMany
+   */
+  export type PlacementQuestionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlacementQuestions to delete
+     */
+    where?: PlacementQuestionWhereInput
+    /**
+     * Limit how many PlacementQuestions to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlacementQuestion without action
+   */
+  export type PlacementQuestionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlacementQuestion
+     */
+    select?: PlacementQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlacementQuestion
+     */
+    omit?: PlacementQuestionOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -15382,6 +21734,103 @@ export namespace Prisma {
   };
 
   export type AnalysisScalarFieldEnum = (typeof AnalysisScalarFieldEnum)[keyof typeof AnalysisScalarFieldEnum]
+
+
+  export const AnalyzedVocabularyScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    word: 'word',
+    reading: 'reading',
+    romaji: 'romaji',
+    meaning: 'meaning',
+    translation: 'translation',
+    partOfSpeech: 'partOfSpeech',
+    sentence: 'sentence',
+    masteryLevel: 'masteryLevel',
+    reviewCount: 'reviewCount',
+    lastReviewedAt: 'lastReviewedAt',
+    analyzedAt: 'analyzedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type AnalyzedVocabularyScalarFieldEnum = (typeof AnalyzedVocabularyScalarFieldEnum)[keyof typeof AnalyzedVocabularyScalarFieldEnum]
+
+
+  export const UserStatsScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    totalAnalyses: 'totalAnalyses',
+    totalTranslations: 'totalTranslations',
+    totalWords: 'totalWords',
+    learningStreak: 'learningStreak',
+    streakDays: 'streakDays',
+    lastActivityDate: 'lastActivityDate',
+    lastActiveAt: 'lastActiveAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type UserStatsScalarFieldEnum = (typeof UserStatsScalarFieldEnum)[keyof typeof UserStatsScalarFieldEnum]
+
+
+  export const CourseScalarFieldEnum: {
+    id: 'id',
+    slug: 'slug',
+    title: 'title',
+    description: 'description',
+    level: 'level',
+    order: 'order',
+    status: 'status',
+    published: 'published',
+    estimatedHours: 'estimatedHours',
+    thumbnail: 'thumbnail',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type CourseScalarFieldEnum = (typeof CourseScalarFieldEnum)[keyof typeof CourseScalarFieldEnum]
+
+
+  export const LessonScalarFieldEnum: {
+    id: 'id',
+    courseId: 'courseId',
+    slug: 'slug',
+    title: 'title',
+    type: 'type',
+    content: 'content',
+    order: 'order',
+    duration: 'duration',
+    published: 'published',
+    isFree: 'isFree',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type LessonScalarFieldEnum = (typeof LessonScalarFieldEnum)[keyof typeof LessonScalarFieldEnum]
+
+
+  export const PlacementQuestionScalarFieldEnum: {
+    id: 'id',
+    level: 'level',
+    skillType: 'skillType',
+    difficulty: 'difficulty',
+    question: 'question',
+    questionText: 'questionText',
+    questionTextChinese: 'questionTextChinese',
+    questionType: 'questionType',
+    passageText: 'passageText',
+    audioUrl: 'audioUrl',
+    options: 'options',
+    correctAnswerId: 'correctAnswerId',
+    explanation: 'explanation',
+    order: 'order',
+    isActive: 'isActive',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type PlacementQuestionScalarFieldEnum = (typeof PlacementQuestionScalarFieldEnum)[keyof typeof PlacementQuestionScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -15643,6 +22092,20 @@ export namespace Prisma {
    * Reference to a field of type 'QueryMode'
    */
   export type EnumQueryModeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QueryMode'>
+    
+
+
+  /**
+   * Reference to a field of type 'CourseStatus'
+   */
+  export type EnumCourseStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'CourseStatus'>
+    
+
+
+  /**
+   * Reference to a field of type 'CourseStatus[]'
+   */
+  export type ListEnumCourseStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'CourseStatus[]'>
     
 
 
@@ -16658,6 +23121,494 @@ export namespace Prisma {
     result?: JsonWithAggregatesFilter<"Analysis">
     language?: StringWithAggregatesFilter<"Analysis"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Analysis"> | Date | string
+  }
+
+  export type AnalyzedVocabularyWhereInput = {
+    AND?: AnalyzedVocabularyWhereInput | AnalyzedVocabularyWhereInput[]
+    OR?: AnalyzedVocabularyWhereInput[]
+    NOT?: AnalyzedVocabularyWhereInput | AnalyzedVocabularyWhereInput[]
+    id?: StringFilter<"AnalyzedVocabulary"> | string
+    userId?: StringFilter<"AnalyzedVocabulary"> | string
+    word?: StringFilter<"AnalyzedVocabulary"> | string
+    reading?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    romaji?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    meaning?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    translation?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    partOfSpeech?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    sentence?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    masteryLevel?: IntFilter<"AnalyzedVocabulary"> | number
+    reviewCount?: IntFilter<"AnalyzedVocabulary"> | number
+    lastReviewedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    analyzedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    createdAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    updatedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+  }
+
+  export type AnalyzedVocabularyOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    reading?: SortOrderInput | SortOrder
+    romaji?: SortOrderInput | SortOrder
+    meaning?: SortOrderInput | SortOrder
+    translation?: SortOrderInput | SortOrder
+    partOfSpeech?: SortOrderInput | SortOrder
+    sentence?: SortOrderInput | SortOrder
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+    lastReviewedAt?: SortOrder
+    analyzedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type AnalyzedVocabularyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_word?: AnalyzedVocabularyUserIdWordCompoundUniqueInput
+    AND?: AnalyzedVocabularyWhereInput | AnalyzedVocabularyWhereInput[]
+    OR?: AnalyzedVocabularyWhereInput[]
+    NOT?: AnalyzedVocabularyWhereInput | AnalyzedVocabularyWhereInput[]
+    userId?: StringFilter<"AnalyzedVocabulary"> | string
+    word?: StringFilter<"AnalyzedVocabulary"> | string
+    reading?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    romaji?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    meaning?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    translation?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    partOfSpeech?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    sentence?: StringNullableFilter<"AnalyzedVocabulary"> | string | null
+    masteryLevel?: IntFilter<"AnalyzedVocabulary"> | number
+    reviewCount?: IntFilter<"AnalyzedVocabulary"> | number
+    lastReviewedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    analyzedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    createdAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+    updatedAt?: DateTimeFilter<"AnalyzedVocabulary"> | Date | string
+  }, "id" | "userId_word">
+
+  export type AnalyzedVocabularyOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    reading?: SortOrderInput | SortOrder
+    romaji?: SortOrderInput | SortOrder
+    meaning?: SortOrderInput | SortOrder
+    translation?: SortOrderInput | SortOrder
+    partOfSpeech?: SortOrderInput | SortOrder
+    sentence?: SortOrderInput | SortOrder
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+    lastReviewedAt?: SortOrder
+    analyzedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: AnalyzedVocabularyCountOrderByAggregateInput
+    _avg?: AnalyzedVocabularyAvgOrderByAggregateInput
+    _max?: AnalyzedVocabularyMaxOrderByAggregateInput
+    _min?: AnalyzedVocabularyMinOrderByAggregateInput
+    _sum?: AnalyzedVocabularySumOrderByAggregateInput
+  }
+
+  export type AnalyzedVocabularyScalarWhereWithAggregatesInput = {
+    AND?: AnalyzedVocabularyScalarWhereWithAggregatesInput | AnalyzedVocabularyScalarWhereWithAggregatesInput[]
+    OR?: AnalyzedVocabularyScalarWhereWithAggregatesInput[]
+    NOT?: AnalyzedVocabularyScalarWhereWithAggregatesInput | AnalyzedVocabularyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"AnalyzedVocabulary"> | string
+    userId?: StringWithAggregatesFilter<"AnalyzedVocabulary"> | string
+    word?: StringWithAggregatesFilter<"AnalyzedVocabulary"> | string
+    reading?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    romaji?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    meaning?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    translation?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    partOfSpeech?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    sentence?: StringNullableWithAggregatesFilter<"AnalyzedVocabulary"> | string | null
+    masteryLevel?: IntWithAggregatesFilter<"AnalyzedVocabulary"> | number
+    reviewCount?: IntWithAggregatesFilter<"AnalyzedVocabulary"> | number
+    lastReviewedAt?: DateTimeWithAggregatesFilter<"AnalyzedVocabulary"> | Date | string
+    analyzedAt?: DateTimeWithAggregatesFilter<"AnalyzedVocabulary"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"AnalyzedVocabulary"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"AnalyzedVocabulary"> | Date | string
+  }
+
+  export type UserStatsWhereInput = {
+    AND?: UserStatsWhereInput | UserStatsWhereInput[]
+    OR?: UserStatsWhereInput[]
+    NOT?: UserStatsWhereInput | UserStatsWhereInput[]
+    id?: StringFilter<"UserStats"> | string
+    userId?: StringFilter<"UserStats"> | string
+    totalAnalyses?: IntFilter<"UserStats"> | number
+    totalTranslations?: IntFilter<"UserStats"> | number
+    totalWords?: IntFilter<"UserStats"> | number
+    learningStreak?: IntFilter<"UserStats"> | number
+    streakDays?: IntFilter<"UserStats"> | number
+    lastActivityDate?: DateTimeNullableFilter<"UserStats"> | Date | string | null
+    lastActiveAt?: DateTimeNullableFilter<"UserStats"> | Date | string | null
+    createdAt?: DateTimeFilter<"UserStats"> | Date | string
+    updatedAt?: DateTimeFilter<"UserStats"> | Date | string
+  }
+
+  export type UserStatsOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+    lastActivityDate?: SortOrderInput | SortOrder
+    lastActiveAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserStatsWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId?: string
+    AND?: UserStatsWhereInput | UserStatsWhereInput[]
+    OR?: UserStatsWhereInput[]
+    NOT?: UserStatsWhereInput | UserStatsWhereInput[]
+    totalAnalyses?: IntFilter<"UserStats"> | number
+    totalTranslations?: IntFilter<"UserStats"> | number
+    totalWords?: IntFilter<"UserStats"> | number
+    learningStreak?: IntFilter<"UserStats"> | number
+    streakDays?: IntFilter<"UserStats"> | number
+    lastActivityDate?: DateTimeNullableFilter<"UserStats"> | Date | string | null
+    lastActiveAt?: DateTimeNullableFilter<"UserStats"> | Date | string | null
+    createdAt?: DateTimeFilter<"UserStats"> | Date | string
+    updatedAt?: DateTimeFilter<"UserStats"> | Date | string
+  }, "id" | "userId">
+
+  export type UserStatsOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+    lastActivityDate?: SortOrderInput | SortOrder
+    lastActiveAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: UserStatsCountOrderByAggregateInput
+    _avg?: UserStatsAvgOrderByAggregateInput
+    _max?: UserStatsMaxOrderByAggregateInput
+    _min?: UserStatsMinOrderByAggregateInput
+    _sum?: UserStatsSumOrderByAggregateInput
+  }
+
+  export type UserStatsScalarWhereWithAggregatesInput = {
+    AND?: UserStatsScalarWhereWithAggregatesInput | UserStatsScalarWhereWithAggregatesInput[]
+    OR?: UserStatsScalarWhereWithAggregatesInput[]
+    NOT?: UserStatsScalarWhereWithAggregatesInput | UserStatsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserStats"> | string
+    userId?: StringWithAggregatesFilter<"UserStats"> | string
+    totalAnalyses?: IntWithAggregatesFilter<"UserStats"> | number
+    totalTranslations?: IntWithAggregatesFilter<"UserStats"> | number
+    totalWords?: IntWithAggregatesFilter<"UserStats"> | number
+    learningStreak?: IntWithAggregatesFilter<"UserStats"> | number
+    streakDays?: IntWithAggregatesFilter<"UserStats"> | number
+    lastActivityDate?: DateTimeNullableWithAggregatesFilter<"UserStats"> | Date | string | null
+    lastActiveAt?: DateTimeNullableWithAggregatesFilter<"UserStats"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"UserStats"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"UserStats"> | Date | string
+  }
+
+  export type CourseWhereInput = {
+    AND?: CourseWhereInput | CourseWhereInput[]
+    OR?: CourseWhereInput[]
+    NOT?: CourseWhereInput | CourseWhereInput[]
+    id?: StringFilter<"Course"> | string
+    slug?: StringFilter<"Course"> | string
+    title?: StringFilter<"Course"> | string
+    description?: StringNullableFilter<"Course"> | string | null
+    level?: StringFilter<"Course"> | string
+    order?: IntFilter<"Course"> | number
+    status?: EnumCourseStatusFilter<"Course"> | $Enums.CourseStatus
+    published?: BoolFilter<"Course"> | boolean
+    estimatedHours?: IntNullableFilter<"Course"> | number | null
+    thumbnail?: StringNullableFilter<"Course"> | string | null
+    createdAt?: DateTimeFilter<"Course"> | Date | string
+    updatedAt?: DateTimeFilter<"Course"> | Date | string
+    lessons?: LessonListRelationFilter
+  }
+
+  export type CourseOrderByWithRelationInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    description?: SortOrderInput | SortOrder
+    level?: SortOrder
+    order?: SortOrder
+    status?: SortOrder
+    published?: SortOrder
+    estimatedHours?: SortOrderInput | SortOrder
+    thumbnail?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    lessons?: LessonOrderByRelationAggregateInput
+  }
+
+  export type CourseWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    slug?: string
+    AND?: CourseWhereInput | CourseWhereInput[]
+    OR?: CourseWhereInput[]
+    NOT?: CourseWhereInput | CourseWhereInput[]
+    title?: StringFilter<"Course"> | string
+    description?: StringNullableFilter<"Course"> | string | null
+    level?: StringFilter<"Course"> | string
+    order?: IntFilter<"Course"> | number
+    status?: EnumCourseStatusFilter<"Course"> | $Enums.CourseStatus
+    published?: BoolFilter<"Course"> | boolean
+    estimatedHours?: IntNullableFilter<"Course"> | number | null
+    thumbnail?: StringNullableFilter<"Course"> | string | null
+    createdAt?: DateTimeFilter<"Course"> | Date | string
+    updatedAt?: DateTimeFilter<"Course"> | Date | string
+    lessons?: LessonListRelationFilter
+  }, "id" | "slug">
+
+  export type CourseOrderByWithAggregationInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    description?: SortOrderInput | SortOrder
+    level?: SortOrder
+    order?: SortOrder
+    status?: SortOrder
+    published?: SortOrder
+    estimatedHours?: SortOrderInput | SortOrder
+    thumbnail?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: CourseCountOrderByAggregateInput
+    _avg?: CourseAvgOrderByAggregateInput
+    _max?: CourseMaxOrderByAggregateInput
+    _min?: CourseMinOrderByAggregateInput
+    _sum?: CourseSumOrderByAggregateInput
+  }
+
+  export type CourseScalarWhereWithAggregatesInput = {
+    AND?: CourseScalarWhereWithAggregatesInput | CourseScalarWhereWithAggregatesInput[]
+    OR?: CourseScalarWhereWithAggregatesInput[]
+    NOT?: CourseScalarWhereWithAggregatesInput | CourseScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Course"> | string
+    slug?: StringWithAggregatesFilter<"Course"> | string
+    title?: StringWithAggregatesFilter<"Course"> | string
+    description?: StringNullableWithAggregatesFilter<"Course"> | string | null
+    level?: StringWithAggregatesFilter<"Course"> | string
+    order?: IntWithAggregatesFilter<"Course"> | number
+    status?: EnumCourseStatusWithAggregatesFilter<"Course"> | $Enums.CourseStatus
+    published?: BoolWithAggregatesFilter<"Course"> | boolean
+    estimatedHours?: IntNullableWithAggregatesFilter<"Course"> | number | null
+    thumbnail?: StringNullableWithAggregatesFilter<"Course"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"Course"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Course"> | Date | string
+  }
+
+  export type LessonWhereInput = {
+    AND?: LessonWhereInput | LessonWhereInput[]
+    OR?: LessonWhereInput[]
+    NOT?: LessonWhereInput | LessonWhereInput[]
+    id?: StringFilter<"Lesson"> | string
+    courseId?: StringFilter<"Lesson"> | string
+    slug?: StringFilter<"Lesson"> | string
+    title?: StringFilter<"Lesson"> | string
+    type?: StringNullableFilter<"Lesson"> | string | null
+    content?: JsonFilter<"Lesson">
+    order?: IntFilter<"Lesson"> | number
+    duration?: IntNullableFilter<"Lesson"> | number | null
+    published?: BoolFilter<"Lesson"> | boolean
+    isFree?: BoolFilter<"Lesson"> | boolean
+    createdAt?: DateTimeFilter<"Lesson"> | Date | string
+    updatedAt?: DateTimeFilter<"Lesson"> | Date | string
+    course?: XOR<CourseScalarRelationFilter, CourseWhereInput>
+  }
+
+  export type LessonOrderByWithRelationInput = {
+    id?: SortOrder
+    courseId?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    type?: SortOrderInput | SortOrder
+    content?: SortOrder
+    order?: SortOrder
+    duration?: SortOrderInput | SortOrder
+    published?: SortOrder
+    isFree?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    course?: CourseOrderByWithRelationInput
+  }
+
+  export type LessonWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    courseId_slug?: LessonCourseIdSlugCompoundUniqueInput
+    AND?: LessonWhereInput | LessonWhereInput[]
+    OR?: LessonWhereInput[]
+    NOT?: LessonWhereInput | LessonWhereInput[]
+    courseId?: StringFilter<"Lesson"> | string
+    slug?: StringFilter<"Lesson"> | string
+    title?: StringFilter<"Lesson"> | string
+    type?: StringNullableFilter<"Lesson"> | string | null
+    content?: JsonFilter<"Lesson">
+    order?: IntFilter<"Lesson"> | number
+    duration?: IntNullableFilter<"Lesson"> | number | null
+    published?: BoolFilter<"Lesson"> | boolean
+    isFree?: BoolFilter<"Lesson"> | boolean
+    createdAt?: DateTimeFilter<"Lesson"> | Date | string
+    updatedAt?: DateTimeFilter<"Lesson"> | Date | string
+    course?: XOR<CourseScalarRelationFilter, CourseWhereInput>
+  }, "id" | "courseId_slug">
+
+  export type LessonOrderByWithAggregationInput = {
+    id?: SortOrder
+    courseId?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    type?: SortOrderInput | SortOrder
+    content?: SortOrder
+    order?: SortOrder
+    duration?: SortOrderInput | SortOrder
+    published?: SortOrder
+    isFree?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: LessonCountOrderByAggregateInput
+    _avg?: LessonAvgOrderByAggregateInput
+    _max?: LessonMaxOrderByAggregateInput
+    _min?: LessonMinOrderByAggregateInput
+    _sum?: LessonSumOrderByAggregateInput
+  }
+
+  export type LessonScalarWhereWithAggregatesInput = {
+    AND?: LessonScalarWhereWithAggregatesInput | LessonScalarWhereWithAggregatesInput[]
+    OR?: LessonScalarWhereWithAggregatesInput[]
+    NOT?: LessonScalarWhereWithAggregatesInput | LessonScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Lesson"> | string
+    courseId?: StringWithAggregatesFilter<"Lesson"> | string
+    slug?: StringWithAggregatesFilter<"Lesson"> | string
+    title?: StringWithAggregatesFilter<"Lesson"> | string
+    type?: StringNullableWithAggregatesFilter<"Lesson"> | string | null
+    content?: JsonWithAggregatesFilter<"Lesson">
+    order?: IntWithAggregatesFilter<"Lesson"> | number
+    duration?: IntNullableWithAggregatesFilter<"Lesson"> | number | null
+    published?: BoolWithAggregatesFilter<"Lesson"> | boolean
+    isFree?: BoolWithAggregatesFilter<"Lesson"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"Lesson"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Lesson"> | Date | string
+  }
+
+  export type PlacementQuestionWhereInput = {
+    AND?: PlacementQuestionWhereInput | PlacementQuestionWhereInput[]
+    OR?: PlacementQuestionWhereInput[]
+    NOT?: PlacementQuestionWhereInput | PlacementQuestionWhereInput[]
+    id?: StringFilter<"PlacementQuestion"> | string
+    level?: StringFilter<"PlacementQuestion"> | string
+    skillType?: StringNullableFilter<"PlacementQuestion"> | string | null
+    difficulty?: IntFilter<"PlacementQuestion"> | number
+    question?: StringFilter<"PlacementQuestion"> | string
+    questionText?: StringNullableFilter<"PlacementQuestion"> | string | null
+    questionTextChinese?: StringNullableFilter<"PlacementQuestion"> | string | null
+    questionType?: StringFilter<"PlacementQuestion"> | string
+    passageText?: StringNullableFilter<"PlacementQuestion"> | string | null
+    audioUrl?: StringNullableFilter<"PlacementQuestion"> | string | null
+    options?: JsonFilter<"PlacementQuestion">
+    correctAnswerId?: StringFilter<"PlacementQuestion"> | string
+    explanation?: StringNullableFilter<"PlacementQuestion"> | string | null
+    order?: IntFilter<"PlacementQuestion"> | number
+    isActive?: BoolFilter<"PlacementQuestion"> | boolean
+    createdAt?: DateTimeFilter<"PlacementQuestion"> | Date | string
+    updatedAt?: DateTimeFilter<"PlacementQuestion"> | Date | string
+  }
+
+  export type PlacementQuestionOrderByWithRelationInput = {
+    id?: SortOrder
+    level?: SortOrder
+    skillType?: SortOrderInput | SortOrder
+    difficulty?: SortOrder
+    question?: SortOrder
+    questionText?: SortOrderInput | SortOrder
+    questionTextChinese?: SortOrderInput | SortOrder
+    questionType?: SortOrder
+    passageText?: SortOrderInput | SortOrder
+    audioUrl?: SortOrderInput | SortOrder
+    options?: SortOrder
+    correctAnswerId?: SortOrder
+    explanation?: SortOrderInput | SortOrder
+    order?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PlacementQuestionWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: PlacementQuestionWhereInput | PlacementQuestionWhereInput[]
+    OR?: PlacementQuestionWhereInput[]
+    NOT?: PlacementQuestionWhereInput | PlacementQuestionWhereInput[]
+    level?: StringFilter<"PlacementQuestion"> | string
+    skillType?: StringNullableFilter<"PlacementQuestion"> | string | null
+    difficulty?: IntFilter<"PlacementQuestion"> | number
+    question?: StringFilter<"PlacementQuestion"> | string
+    questionText?: StringNullableFilter<"PlacementQuestion"> | string | null
+    questionTextChinese?: StringNullableFilter<"PlacementQuestion"> | string | null
+    questionType?: StringFilter<"PlacementQuestion"> | string
+    passageText?: StringNullableFilter<"PlacementQuestion"> | string | null
+    audioUrl?: StringNullableFilter<"PlacementQuestion"> | string | null
+    options?: JsonFilter<"PlacementQuestion">
+    correctAnswerId?: StringFilter<"PlacementQuestion"> | string
+    explanation?: StringNullableFilter<"PlacementQuestion"> | string | null
+    order?: IntFilter<"PlacementQuestion"> | number
+    isActive?: BoolFilter<"PlacementQuestion"> | boolean
+    createdAt?: DateTimeFilter<"PlacementQuestion"> | Date | string
+    updatedAt?: DateTimeFilter<"PlacementQuestion"> | Date | string
+  }, "id">
+
+  export type PlacementQuestionOrderByWithAggregationInput = {
+    id?: SortOrder
+    level?: SortOrder
+    skillType?: SortOrderInput | SortOrder
+    difficulty?: SortOrder
+    question?: SortOrder
+    questionText?: SortOrderInput | SortOrder
+    questionTextChinese?: SortOrderInput | SortOrder
+    questionType?: SortOrder
+    passageText?: SortOrderInput | SortOrder
+    audioUrl?: SortOrderInput | SortOrder
+    options?: SortOrder
+    correctAnswerId?: SortOrder
+    explanation?: SortOrderInput | SortOrder
+    order?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: PlacementQuestionCountOrderByAggregateInput
+    _avg?: PlacementQuestionAvgOrderByAggregateInput
+    _max?: PlacementQuestionMaxOrderByAggregateInput
+    _min?: PlacementQuestionMinOrderByAggregateInput
+    _sum?: PlacementQuestionSumOrderByAggregateInput
+  }
+
+  export type PlacementQuestionScalarWhereWithAggregatesInput = {
+    AND?: PlacementQuestionScalarWhereWithAggregatesInput | PlacementQuestionScalarWhereWithAggregatesInput[]
+    OR?: PlacementQuestionScalarWhereWithAggregatesInput[]
+    NOT?: PlacementQuestionScalarWhereWithAggregatesInput | PlacementQuestionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PlacementQuestion"> | string
+    level?: StringWithAggregatesFilter<"PlacementQuestion"> | string
+    skillType?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    difficulty?: IntWithAggregatesFilter<"PlacementQuestion"> | number
+    question?: StringWithAggregatesFilter<"PlacementQuestion"> | string
+    questionText?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    questionTextChinese?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    questionType?: StringWithAggregatesFilter<"PlacementQuestion"> | string
+    passageText?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    audioUrl?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    options?: JsonWithAggregatesFilter<"PlacementQuestion">
+    correctAnswerId?: StringWithAggregatesFilter<"PlacementQuestion"> | string
+    explanation?: StringNullableWithAggregatesFilter<"PlacementQuestion"> | string | null
+    order?: IntWithAggregatesFilter<"PlacementQuestion"> | number
+    isActive?: BoolWithAggregatesFilter<"PlacementQuestion"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"PlacementQuestion"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"PlacementQuestion"> | Date | string
   }
 
   export type UserCreateInput = {
@@ -17789,6 +24740,583 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type AnalyzedVocabularyCreateInput = {
+    id?: string
+    userId: string
+    word: string
+    reading?: string | null
+    romaji?: string | null
+    meaning?: string | null
+    translation?: string | null
+    partOfSpeech?: string | null
+    sentence?: string | null
+    masteryLevel?: number
+    reviewCount?: number
+    lastReviewedAt?: Date | string
+    analyzedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type AnalyzedVocabularyUncheckedCreateInput = {
+    id?: string
+    userId: string
+    word: string
+    reading?: string | null
+    romaji?: string | null
+    meaning?: string | null
+    translation?: string | null
+    partOfSpeech?: string | null
+    sentence?: string | null
+    masteryLevel?: number
+    reviewCount?: number
+    lastReviewedAt?: Date | string
+    analyzedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type AnalyzedVocabularyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    word?: StringFieldUpdateOperationsInput | string
+    reading?: NullableStringFieldUpdateOperationsInput | string | null
+    romaji?: NullableStringFieldUpdateOperationsInput | string | null
+    meaning?: NullableStringFieldUpdateOperationsInput | string | null
+    translation?: NullableStringFieldUpdateOperationsInput | string | null
+    partOfSpeech?: NullableStringFieldUpdateOperationsInput | string | null
+    sentence?: NullableStringFieldUpdateOperationsInput | string | null
+    masteryLevel?: IntFieldUpdateOperationsInput | number
+    reviewCount?: IntFieldUpdateOperationsInput | number
+    lastReviewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    analyzedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AnalyzedVocabularyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    word?: StringFieldUpdateOperationsInput | string
+    reading?: NullableStringFieldUpdateOperationsInput | string | null
+    romaji?: NullableStringFieldUpdateOperationsInput | string | null
+    meaning?: NullableStringFieldUpdateOperationsInput | string | null
+    translation?: NullableStringFieldUpdateOperationsInput | string | null
+    partOfSpeech?: NullableStringFieldUpdateOperationsInput | string | null
+    sentence?: NullableStringFieldUpdateOperationsInput | string | null
+    masteryLevel?: IntFieldUpdateOperationsInput | number
+    reviewCount?: IntFieldUpdateOperationsInput | number
+    lastReviewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    analyzedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AnalyzedVocabularyCreateManyInput = {
+    id?: string
+    userId: string
+    word: string
+    reading?: string | null
+    romaji?: string | null
+    meaning?: string | null
+    translation?: string | null
+    partOfSpeech?: string | null
+    sentence?: string | null
+    masteryLevel?: number
+    reviewCount?: number
+    lastReviewedAt?: Date | string
+    analyzedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type AnalyzedVocabularyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    word?: StringFieldUpdateOperationsInput | string
+    reading?: NullableStringFieldUpdateOperationsInput | string | null
+    romaji?: NullableStringFieldUpdateOperationsInput | string | null
+    meaning?: NullableStringFieldUpdateOperationsInput | string | null
+    translation?: NullableStringFieldUpdateOperationsInput | string | null
+    partOfSpeech?: NullableStringFieldUpdateOperationsInput | string | null
+    sentence?: NullableStringFieldUpdateOperationsInput | string | null
+    masteryLevel?: IntFieldUpdateOperationsInput | number
+    reviewCount?: IntFieldUpdateOperationsInput | number
+    lastReviewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    analyzedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AnalyzedVocabularyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    word?: StringFieldUpdateOperationsInput | string
+    reading?: NullableStringFieldUpdateOperationsInput | string | null
+    romaji?: NullableStringFieldUpdateOperationsInput | string | null
+    meaning?: NullableStringFieldUpdateOperationsInput | string | null
+    translation?: NullableStringFieldUpdateOperationsInput | string | null
+    partOfSpeech?: NullableStringFieldUpdateOperationsInput | string | null
+    sentence?: NullableStringFieldUpdateOperationsInput | string | null
+    masteryLevel?: IntFieldUpdateOperationsInput | number
+    reviewCount?: IntFieldUpdateOperationsInput | number
+    lastReviewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    analyzedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserStatsCreateInput = {
+    id?: string
+    userId: string
+    totalAnalyses?: number
+    totalTranslations?: number
+    totalWords?: number
+    learningStreak?: number
+    streakDays?: number
+    lastActivityDate?: Date | string | null
+    lastActiveAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserStatsUncheckedCreateInput = {
+    id?: string
+    userId: string
+    totalAnalyses?: number
+    totalTranslations?: number
+    totalWords?: number
+    learningStreak?: number
+    streakDays?: number
+    lastActivityDate?: Date | string | null
+    lastActiveAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserStatsUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    totalTranslations?: IntFieldUpdateOperationsInput | number
+    totalWords?: IntFieldUpdateOperationsInput | number
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    streakDays?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastActiveAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserStatsUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    totalTranslations?: IntFieldUpdateOperationsInput | number
+    totalWords?: IntFieldUpdateOperationsInput | number
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    streakDays?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastActiveAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserStatsCreateManyInput = {
+    id?: string
+    userId: string
+    totalAnalyses?: number
+    totalTranslations?: number
+    totalWords?: number
+    learningStreak?: number
+    streakDays?: number
+    lastActivityDate?: Date | string | null
+    lastActiveAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserStatsUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    totalTranslations?: IntFieldUpdateOperationsInput | number
+    totalWords?: IntFieldUpdateOperationsInput | number
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    streakDays?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastActiveAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserStatsUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    totalTranslations?: IntFieldUpdateOperationsInput | number
+    totalWords?: IntFieldUpdateOperationsInput | number
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    streakDays?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastActiveAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CourseCreateInput = {
+    id?: string
+    slug: string
+    title: string
+    description?: string | null
+    level: string
+    order?: number
+    status?: $Enums.CourseStatus
+    published?: boolean
+    estimatedHours?: number | null
+    thumbnail?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lessons?: LessonCreateNestedManyWithoutCourseInput
+  }
+
+  export type CourseUncheckedCreateInput = {
+    id?: string
+    slug: string
+    title: string
+    description?: string | null
+    level: string
+    order?: number
+    status?: $Enums.CourseStatus
+    published?: boolean
+    estimatedHours?: number | null
+    thumbnail?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lessons?: LessonUncheckedCreateNestedManyWithoutCourseInput
+  }
+
+  export type CourseUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lessons?: LessonUpdateManyWithoutCourseNestedInput
+  }
+
+  export type CourseUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lessons?: LessonUncheckedUpdateManyWithoutCourseNestedInput
+  }
+
+  export type CourseCreateManyInput = {
+    id?: string
+    slug: string
+    title: string
+    description?: string | null
+    level: string
+    order?: number
+    status?: $Enums.CourseStatus
+    published?: boolean
+    estimatedHours?: number | null
+    thumbnail?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CourseUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CourseUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LessonCreateInput = {
+    id?: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    course: CourseCreateNestedOneWithoutLessonsInput
+  }
+
+  export type LessonUncheckedCreateInput = {
+    id?: string
+    courseId: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type LessonUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    course?: CourseUpdateOneRequiredWithoutLessonsNestedInput
+  }
+
+  export type LessonUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    courseId?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LessonCreateManyInput = {
+    id?: string
+    courseId: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type LessonUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LessonUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    courseId?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlacementQuestionCreateInput = {
+    id?: string
+    level: string
+    skillType?: string | null
+    difficulty?: number
+    question: string
+    questionText?: string | null
+    questionTextChinese?: string | null
+    questionType: string
+    passageText?: string | null
+    audioUrl?: string | null
+    options: JsonNullValueInput | InputJsonValue
+    correctAnswerId: string
+    explanation?: string | null
+    order?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PlacementQuestionUncheckedCreateInput = {
+    id?: string
+    level: string
+    skillType?: string | null
+    difficulty?: number
+    question: string
+    questionText?: string | null
+    questionTextChinese?: string | null
+    questionType: string
+    passageText?: string | null
+    audioUrl?: string | null
+    options: JsonNullValueInput | InputJsonValue
+    correctAnswerId: string
+    explanation?: string | null
+    order?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PlacementQuestionUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    skillType?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: IntFieldUpdateOperationsInput | number
+    question?: StringFieldUpdateOperationsInput | string
+    questionText?: NullableStringFieldUpdateOperationsInput | string | null
+    questionTextChinese?: NullableStringFieldUpdateOperationsInput | string | null
+    questionType?: StringFieldUpdateOperationsInput | string
+    passageText?: NullableStringFieldUpdateOperationsInput | string | null
+    audioUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    options?: JsonNullValueInput | InputJsonValue
+    correctAnswerId?: StringFieldUpdateOperationsInput | string
+    explanation?: NullableStringFieldUpdateOperationsInput | string | null
+    order?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlacementQuestionUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    skillType?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: IntFieldUpdateOperationsInput | number
+    question?: StringFieldUpdateOperationsInput | string
+    questionText?: NullableStringFieldUpdateOperationsInput | string | null
+    questionTextChinese?: NullableStringFieldUpdateOperationsInput | string | null
+    questionType?: StringFieldUpdateOperationsInput | string
+    passageText?: NullableStringFieldUpdateOperationsInput | string | null
+    audioUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    options?: JsonNullValueInput | InputJsonValue
+    correctAnswerId?: StringFieldUpdateOperationsInput | string
+    explanation?: NullableStringFieldUpdateOperationsInput | string | null
+    order?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlacementQuestionCreateManyInput = {
+    id?: string
+    level: string
+    skillType?: string | null
+    difficulty?: number
+    question: string
+    questionText?: string | null
+    questionTextChinese?: string | null
+    questionType: string
+    passageText?: string | null
+    audioUrl?: string | null
+    options: JsonNullValueInput | InputJsonValue
+    correctAnswerId: string
+    explanation?: string | null
+    order?: number
+    isActive?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PlacementQuestionUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    skillType?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: IntFieldUpdateOperationsInput | number
+    question?: StringFieldUpdateOperationsInput | string
+    questionText?: NullableStringFieldUpdateOperationsInput | string | null
+    questionTextChinese?: NullableStringFieldUpdateOperationsInput | string | null
+    questionType?: StringFieldUpdateOperationsInput | string
+    passageText?: NullableStringFieldUpdateOperationsInput | string | null
+    audioUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    options?: JsonNullValueInput | InputJsonValue
+    correctAnswerId?: StringFieldUpdateOperationsInput | string
+    explanation?: NullableStringFieldUpdateOperationsInput | string | null
+    order?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlacementQuestionUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    skillType?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: IntFieldUpdateOperationsInput | number
+    question?: StringFieldUpdateOperationsInput | string
+    questionText?: NullableStringFieldUpdateOperationsInput | string | null
+    questionTextChinese?: NullableStringFieldUpdateOperationsInput | string | null
+    questionType?: StringFieldUpdateOperationsInput | string
+    passageText?: NullableStringFieldUpdateOperationsInput | string | null
+    audioUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    options?: JsonNullValueInput | InputJsonValue
+    correctAnswerId?: StringFieldUpdateOperationsInput | string
+    explanation?: NullableStringFieldUpdateOperationsInput | string | null
+    order?: IntFieldUpdateOperationsInput | number
+    isActive?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -18907,6 +26435,346 @@ export namespace Prisma {
     _max?: NestedJsonFilter<$PrismaModel>
   }
 
+  export type AnalyzedVocabularyUserIdWordCompoundUniqueInput = {
+    userId: string
+    word: string
+  }
+
+  export type AnalyzedVocabularyCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    reading?: SortOrder
+    romaji?: SortOrder
+    meaning?: SortOrder
+    translation?: SortOrder
+    partOfSpeech?: SortOrder
+    sentence?: SortOrder
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+    lastReviewedAt?: SortOrder
+    analyzedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type AnalyzedVocabularyAvgOrderByAggregateInput = {
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+  }
+
+  export type AnalyzedVocabularyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    reading?: SortOrder
+    romaji?: SortOrder
+    meaning?: SortOrder
+    translation?: SortOrder
+    partOfSpeech?: SortOrder
+    sentence?: SortOrder
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+    lastReviewedAt?: SortOrder
+    analyzedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type AnalyzedVocabularyMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    reading?: SortOrder
+    romaji?: SortOrder
+    meaning?: SortOrder
+    translation?: SortOrder
+    partOfSpeech?: SortOrder
+    sentence?: SortOrder
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+    lastReviewedAt?: SortOrder
+    analyzedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type AnalyzedVocabularySumOrderByAggregateInput = {
+    masteryLevel?: SortOrder
+    reviewCount?: SortOrder
+  }
+
+  export type UserStatsCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+    lastActivityDate?: SortOrder
+    lastActiveAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserStatsAvgOrderByAggregateInput = {
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+  }
+
+  export type UserStatsMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+    lastActivityDate?: SortOrder
+    lastActiveAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserStatsMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+    lastActivityDate?: SortOrder
+    lastActiveAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserStatsSumOrderByAggregateInput = {
+    totalAnalyses?: SortOrder
+    totalTranslations?: SortOrder
+    totalWords?: SortOrder
+    learningStreak?: SortOrder
+    streakDays?: SortOrder
+  }
+
+  export type EnumCourseStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.CourseStatus | EnumCourseStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCourseStatusFilter<$PrismaModel> | $Enums.CourseStatus
+  }
+
+  export type LessonListRelationFilter = {
+    every?: LessonWhereInput
+    some?: LessonWhereInput
+    none?: LessonWhereInput
+  }
+
+  export type LessonOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CourseCountOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    level?: SortOrder
+    order?: SortOrder
+    status?: SortOrder
+    published?: SortOrder
+    estimatedHours?: SortOrder
+    thumbnail?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CourseAvgOrderByAggregateInput = {
+    order?: SortOrder
+    estimatedHours?: SortOrder
+  }
+
+  export type CourseMaxOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    level?: SortOrder
+    order?: SortOrder
+    status?: SortOrder
+    published?: SortOrder
+    estimatedHours?: SortOrder
+    thumbnail?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CourseMinOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    level?: SortOrder
+    order?: SortOrder
+    status?: SortOrder
+    published?: SortOrder
+    estimatedHours?: SortOrder
+    thumbnail?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CourseSumOrderByAggregateInput = {
+    order?: SortOrder
+    estimatedHours?: SortOrder
+  }
+
+  export type EnumCourseStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.CourseStatus | EnumCourseStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCourseStatusWithAggregatesFilter<$PrismaModel> | $Enums.CourseStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumCourseStatusFilter<$PrismaModel>
+    _max?: NestedEnumCourseStatusFilter<$PrismaModel>
+  }
+
+  export type CourseScalarRelationFilter = {
+    is?: CourseWhereInput
+    isNot?: CourseWhereInput
+  }
+
+  export type LessonCourseIdSlugCompoundUniqueInput = {
+    courseId: string
+    slug: string
+  }
+
+  export type LessonCountOrderByAggregateInput = {
+    id?: SortOrder
+    courseId?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    content?: SortOrder
+    order?: SortOrder
+    duration?: SortOrder
+    published?: SortOrder
+    isFree?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type LessonAvgOrderByAggregateInput = {
+    order?: SortOrder
+    duration?: SortOrder
+  }
+
+  export type LessonMaxOrderByAggregateInput = {
+    id?: SortOrder
+    courseId?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    order?: SortOrder
+    duration?: SortOrder
+    published?: SortOrder
+    isFree?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type LessonMinOrderByAggregateInput = {
+    id?: SortOrder
+    courseId?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    type?: SortOrder
+    order?: SortOrder
+    duration?: SortOrder
+    published?: SortOrder
+    isFree?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type LessonSumOrderByAggregateInput = {
+    order?: SortOrder
+    duration?: SortOrder
+  }
+
+  export type PlacementQuestionCountOrderByAggregateInput = {
+    id?: SortOrder
+    level?: SortOrder
+    skillType?: SortOrder
+    difficulty?: SortOrder
+    question?: SortOrder
+    questionText?: SortOrder
+    questionTextChinese?: SortOrder
+    questionType?: SortOrder
+    passageText?: SortOrder
+    audioUrl?: SortOrder
+    options?: SortOrder
+    correctAnswerId?: SortOrder
+    explanation?: SortOrder
+    order?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PlacementQuestionAvgOrderByAggregateInput = {
+    difficulty?: SortOrder
+    order?: SortOrder
+  }
+
+  export type PlacementQuestionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    level?: SortOrder
+    skillType?: SortOrder
+    difficulty?: SortOrder
+    question?: SortOrder
+    questionText?: SortOrder
+    questionTextChinese?: SortOrder
+    questionType?: SortOrder
+    passageText?: SortOrder
+    audioUrl?: SortOrder
+    correctAnswerId?: SortOrder
+    explanation?: SortOrder
+    order?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PlacementQuestionMinOrderByAggregateInput = {
+    id?: SortOrder
+    level?: SortOrder
+    skillType?: SortOrder
+    difficulty?: SortOrder
+    question?: SortOrder
+    questionText?: SortOrder
+    questionTextChinese?: SortOrder
+    questionType?: SortOrder
+    passageText?: SortOrder
+    audioUrl?: SortOrder
+    correctAnswerId?: SortOrder
+    explanation?: SortOrder
+    order?: SortOrder
+    isActive?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PlacementQuestionSumOrderByAggregateInput = {
+    difficulty?: SortOrder
+    order?: SortOrder
+  }
+
   export type SubscriptionCreateNestedManyWithoutUserInput = {
     create?: XOR<SubscriptionCreateWithoutUserInput, SubscriptionUncheckedCreateWithoutUserInput> | SubscriptionCreateWithoutUserInput[] | SubscriptionUncheckedCreateWithoutUserInput[]
     connectOrCreate?: SubscriptionCreateOrConnectWithoutUserInput | SubscriptionCreateOrConnectWithoutUserInput[]
@@ -19560,6 +27428,66 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAnalysesInput, UserUpdateWithoutAnalysesInput>, UserUncheckedUpdateWithoutAnalysesInput>
   }
 
+  export type LessonCreateNestedManyWithoutCourseInput = {
+    create?: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput> | LessonCreateWithoutCourseInput[] | LessonUncheckedCreateWithoutCourseInput[]
+    connectOrCreate?: LessonCreateOrConnectWithoutCourseInput | LessonCreateOrConnectWithoutCourseInput[]
+    createMany?: LessonCreateManyCourseInputEnvelope
+    connect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+  }
+
+  export type LessonUncheckedCreateNestedManyWithoutCourseInput = {
+    create?: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput> | LessonCreateWithoutCourseInput[] | LessonUncheckedCreateWithoutCourseInput[]
+    connectOrCreate?: LessonCreateOrConnectWithoutCourseInput | LessonCreateOrConnectWithoutCourseInput[]
+    createMany?: LessonCreateManyCourseInputEnvelope
+    connect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+  }
+
+  export type EnumCourseStatusFieldUpdateOperationsInput = {
+    set?: $Enums.CourseStatus
+  }
+
+  export type LessonUpdateManyWithoutCourseNestedInput = {
+    create?: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput> | LessonCreateWithoutCourseInput[] | LessonUncheckedCreateWithoutCourseInput[]
+    connectOrCreate?: LessonCreateOrConnectWithoutCourseInput | LessonCreateOrConnectWithoutCourseInput[]
+    upsert?: LessonUpsertWithWhereUniqueWithoutCourseInput | LessonUpsertWithWhereUniqueWithoutCourseInput[]
+    createMany?: LessonCreateManyCourseInputEnvelope
+    set?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    disconnect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    delete?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    connect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    update?: LessonUpdateWithWhereUniqueWithoutCourseInput | LessonUpdateWithWhereUniqueWithoutCourseInput[]
+    updateMany?: LessonUpdateManyWithWhereWithoutCourseInput | LessonUpdateManyWithWhereWithoutCourseInput[]
+    deleteMany?: LessonScalarWhereInput | LessonScalarWhereInput[]
+  }
+
+  export type LessonUncheckedUpdateManyWithoutCourseNestedInput = {
+    create?: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput> | LessonCreateWithoutCourseInput[] | LessonUncheckedCreateWithoutCourseInput[]
+    connectOrCreate?: LessonCreateOrConnectWithoutCourseInput | LessonCreateOrConnectWithoutCourseInput[]
+    upsert?: LessonUpsertWithWhereUniqueWithoutCourseInput | LessonUpsertWithWhereUniqueWithoutCourseInput[]
+    createMany?: LessonCreateManyCourseInputEnvelope
+    set?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    disconnect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    delete?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    connect?: LessonWhereUniqueInput | LessonWhereUniqueInput[]
+    update?: LessonUpdateWithWhereUniqueWithoutCourseInput | LessonUpdateWithWhereUniqueWithoutCourseInput[]
+    updateMany?: LessonUpdateManyWithWhereWithoutCourseInput | LessonUpdateManyWithWhereWithoutCourseInput[]
+    deleteMany?: LessonScalarWhereInput | LessonScalarWhereInput[]
+  }
+
+  export type CourseCreateNestedOneWithoutLessonsInput = {
+    create?: XOR<CourseCreateWithoutLessonsInput, CourseUncheckedCreateWithoutLessonsInput>
+    connectOrCreate?: CourseCreateOrConnectWithoutLessonsInput
+    connect?: CourseWhereUniqueInput
+  }
+
+  export type CourseUpdateOneRequiredWithoutLessonsNestedInput = {
+    create?: XOR<CourseCreateWithoutLessonsInput, CourseUncheckedCreateWithoutLessonsInput>
+    connectOrCreate?: CourseCreateOrConnectWithoutLessonsInput
+    upsert?: CourseUpsertWithoutLessonsInput
+    connect?: CourseWhereUniqueInput
+    update?: XOR<XOR<CourseUpdateToOneWithWhereWithoutLessonsInput, CourseUpdateWithoutLessonsInput>, CourseUncheckedUpdateWithoutLessonsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -19979,6 +27907,23 @@ export namespace Prisma {
     gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
     gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+  }
+
+  export type NestedEnumCourseStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.CourseStatus | EnumCourseStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCourseStatusFilter<$PrismaModel> | $Enums.CourseStatus
+  }
+
+  export type NestedEnumCourseStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.CourseStatus | EnumCourseStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CourseStatus[] | ListEnumCourseStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCourseStatusWithAggregatesFilter<$PrismaModel> | $Enums.CourseStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumCourseStatusFilter<$PrismaModel>
+    _max?: NestedEnumCourseStatusFilter<$PrismaModel>
   }
 
   export type SubscriptionCreateWithoutUserInput = {
@@ -21602,6 +29547,154 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateManyWithoutUserNestedInput
   }
 
+  export type LessonCreateWithoutCourseInput = {
+    id?: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type LessonUncheckedCreateWithoutCourseInput = {
+    id?: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type LessonCreateOrConnectWithoutCourseInput = {
+    where: LessonWhereUniqueInput
+    create: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput>
+  }
+
+  export type LessonCreateManyCourseInputEnvelope = {
+    data: LessonCreateManyCourseInput | LessonCreateManyCourseInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LessonUpsertWithWhereUniqueWithoutCourseInput = {
+    where: LessonWhereUniqueInput
+    update: XOR<LessonUpdateWithoutCourseInput, LessonUncheckedUpdateWithoutCourseInput>
+    create: XOR<LessonCreateWithoutCourseInput, LessonUncheckedCreateWithoutCourseInput>
+  }
+
+  export type LessonUpdateWithWhereUniqueWithoutCourseInput = {
+    where: LessonWhereUniqueInput
+    data: XOR<LessonUpdateWithoutCourseInput, LessonUncheckedUpdateWithoutCourseInput>
+  }
+
+  export type LessonUpdateManyWithWhereWithoutCourseInput = {
+    where: LessonScalarWhereInput
+    data: XOR<LessonUpdateManyMutationInput, LessonUncheckedUpdateManyWithoutCourseInput>
+  }
+
+  export type LessonScalarWhereInput = {
+    AND?: LessonScalarWhereInput | LessonScalarWhereInput[]
+    OR?: LessonScalarWhereInput[]
+    NOT?: LessonScalarWhereInput | LessonScalarWhereInput[]
+    id?: StringFilter<"Lesson"> | string
+    courseId?: StringFilter<"Lesson"> | string
+    slug?: StringFilter<"Lesson"> | string
+    title?: StringFilter<"Lesson"> | string
+    type?: StringNullableFilter<"Lesson"> | string | null
+    content?: JsonFilter<"Lesson">
+    order?: IntFilter<"Lesson"> | number
+    duration?: IntNullableFilter<"Lesson"> | number | null
+    published?: BoolFilter<"Lesson"> | boolean
+    isFree?: BoolFilter<"Lesson"> | boolean
+    createdAt?: DateTimeFilter<"Lesson"> | Date | string
+    updatedAt?: DateTimeFilter<"Lesson"> | Date | string
+  }
+
+  export type CourseCreateWithoutLessonsInput = {
+    id?: string
+    slug: string
+    title: string
+    description?: string | null
+    level: string
+    order?: number
+    status?: $Enums.CourseStatus
+    published?: boolean
+    estimatedHours?: number | null
+    thumbnail?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CourseUncheckedCreateWithoutLessonsInput = {
+    id?: string
+    slug: string
+    title: string
+    description?: string | null
+    level: string
+    order?: number
+    status?: $Enums.CourseStatus
+    published?: boolean
+    estimatedHours?: number | null
+    thumbnail?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CourseCreateOrConnectWithoutLessonsInput = {
+    where: CourseWhereUniqueInput
+    create: XOR<CourseCreateWithoutLessonsInput, CourseUncheckedCreateWithoutLessonsInput>
+  }
+
+  export type CourseUpsertWithoutLessonsInput = {
+    update: XOR<CourseUpdateWithoutLessonsInput, CourseUncheckedUpdateWithoutLessonsInput>
+    create: XOR<CourseCreateWithoutLessonsInput, CourseUncheckedCreateWithoutLessonsInput>
+    where?: CourseWhereInput
+  }
+
+  export type CourseUpdateToOneWithWhereWithoutLessonsInput = {
+    where?: CourseWhereInput
+    data: XOR<CourseUpdateWithoutLessonsInput, CourseUncheckedUpdateWithoutLessonsInput>
+  }
+
+  export type CourseUpdateWithoutLessonsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CourseUncheckedUpdateWithoutLessonsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    level?: StringFieldUpdateOperationsInput | string
+    order?: IntFieldUpdateOperationsInput | number
+    status?: EnumCourseStatusFieldUpdateOperationsInput | $Enums.CourseStatus
+    published?: BoolFieldUpdateOperationsInput | boolean
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    thumbnail?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type SubscriptionCreateManyUserInput = {
     id?: string
     tier: $Enums.SubscriptionTier
@@ -22126,6 +30219,62 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lastReviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type LessonCreateManyCourseInput = {
+    id?: string
+    slug: string
+    title: string
+    type?: string | null
+    content: JsonNullValueInput | InputJsonValue
+    order?: number
+    duration?: number | null
+    published?: boolean
+    isFree?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type LessonUpdateWithoutCourseInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LessonUncheckedUpdateWithoutCourseInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LessonUncheckedUpdateManyWithoutCourseInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    type?: NullableStringFieldUpdateOperationsInput | string | null
+    content?: JsonNullValueInput | InputJsonValue
+    order?: IntFieldUpdateOperationsInput | number
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    published?: BoolFieldUpdateOperationsInput | boolean
+    isFree?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

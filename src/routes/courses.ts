@@ -55,7 +55,7 @@ router.get('/', async (_req: Request, res: Response) => {
  */
 router.get('/:slug', async (req: Request, res: Response) => {
   try {
-    const { slug } = req.params;
+    const slug = Array.isArray(req.params.slug) ? req.params.slug[0] : req.params.slug;
 
     const course = await prisma.course.findUnique({
       where: { slug },
@@ -119,7 +119,8 @@ router.get('/:slug', async (req: Request, res: Response) => {
  */
 router.get('/:courseSlug/lessons/:lessonSlug', async (req: Request, res: Response) => {
   try {
-    const { courseSlug, lessonSlug } = req.params;
+    const courseSlug = Array.isArray(req.params.courseSlug) ? req.params.courseSlug[0] : req.params.courseSlug;
+    const lessonSlug = Array.isArray(req.params.lessonSlug) ? req.params.lessonSlug[0] : req.params.lessonSlug;
 
     // Get the course first
     const course = await prisma.course.findUnique({

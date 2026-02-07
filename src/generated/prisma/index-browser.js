@@ -277,6 +277,88 @@ exports.Prisma.AnalysisScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  reading: 'reading',
+  romaji: 'romaji',
+  meaning: 'meaning',
+  translation: 'translation',
+  partOfSpeech: 'partOfSpeech',
+  sentence: 'sentence',
+  masteryLevel: 'masteryLevel',
+  reviewCount: 'reviewCount',
+  lastReviewedAt: 'lastReviewedAt',
+  analyzedAt: 'analyzedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.UserStatsScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  totalAnalyses: 'totalAnalyses',
+  totalTranslations: 'totalTranslations',
+  totalWords: 'totalWords',
+  learningStreak: 'learningStreak',
+  streakDays: 'streakDays',
+  lastActivityDate: 'lastActivityDate',
+  lastActiveAt: 'lastActiveAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CourseScalarFieldEnum = {
+  id: 'id',
+  slug: 'slug',
+  title: 'title',
+  description: 'description',
+  level: 'level',
+  order: 'order',
+  status: 'status',
+  published: 'published',
+  estimatedHours: 'estimatedHours',
+  thumbnail: 'thumbnail',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LessonScalarFieldEnum = {
+  id: 'id',
+  courseId: 'courseId',
+  slug: 'slug',
+  title: 'title',
+  type: 'type',
+  content: 'content',
+  order: 'order',
+  duration: 'duration',
+  published: 'published',
+  isFree: 'isFree',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlacementQuestionScalarFieldEnum = {
+  id: 'id',
+  level: 'level',
+  skillType: 'skillType',
+  difficulty: 'difficulty',
+  question: 'question',
+  questionText: 'questionText',
+  questionTextChinese: 'questionTextChinese',
+  questionType: 'questionType',
+  passageText: 'passageText',
+  audioUrl: 'audioUrl',
+  options: 'options',
+  correctAnswerId: 'correctAnswerId',
+  explanation: 'explanation',
+  order: 'order',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -379,6 +461,12 @@ exports.VocabularyLevel = exports.$Enums.VocabularyLevel = {
   MASTERED: 'MASTERED'
 };
 
+exports.CourseStatus = exports.$Enums.CourseStatus = {
+  DRAFT: 'DRAFT',
+  PUBLISHED: 'PUBLISHED',
+  ARCHIVED: 'ARCHIVED'
+};
+
 exports.Prisma.ModelName = {
   User: 'User',
   Subscription: 'Subscription',
@@ -390,7 +478,12 @@ exports.Prisma.ModelName = {
   UserPackProgress: 'UserPackProgress',
   Vocabulary: 'Vocabulary',
   LearningStats: 'LearningStats',
-  Analysis: 'Analysis'
+  Analysis: 'Analysis',
+  AnalyzedVocabulary: 'AnalyzedVocabulary',
+  UserStats: 'UserStats',
+  Course: 'Course',
+  Lesson: 'Lesson',
+  PlacementQuestion: 'PlacementQuestion'
 };
 
 /**
