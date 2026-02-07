@@ -1,5 +1,4 @@
 node_modules/
-dist/
 .env
 .env.production
 .env.local
@@ -25,9 +24,6 @@ coverage/
 .elasticbeanstalk/
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-
-# Generated
-/src/generated/prisma
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
