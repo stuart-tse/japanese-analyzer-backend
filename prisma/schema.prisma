@@ -58,6 +58,12 @@ model User {
   email                String                 @unique
   passwordHash         String?
   displayName          String?
+  provider             String                 @default("credentials")
+  providerId           String?
+  avatar               String?
+  phone                String?
+  refreshTokenHash     String?
+  lastLoginAt          DateTime?
   subscriptionTier     String                 @default("FREE")
   credits              Int                    @default(0)
   customerId           String?                @unique
@@ -76,7 +82,11 @@ model User {
   payments             Payment[]
   creditTransactions   CreditTransaction[]
   subscriptions        Subscription[]
+  vocabularies         Vocabulary[]
+  userPackProgress     UserPackProgress[]
+  learningStats        LearningStats?
 
+  @@unique([provider, providerId])
   @@index([email])
   @@index([subscriptionTier])
 }
@@ -355,17 +365,169 @@ model CreditTransaction {
 // ============================================
 
 model Analysis {
-  id          String   @id @default(cuid())
-  userId      String
+  id              String   @id @default(cuid())
+  userId          String
 
-  // Analysis data
-  inputText   String   @db.Text
-  result      Json     // Store tokenized analysis
+  // Analysis data (matches Mongoose: sentence, tokens, translations, fullTranslation)
+  inputText       String   @db.Text          // maps to "sentence"
+  result          Json     // Store tokenized analysis (maps to "tokens")
+  translations    Json?    // maps to Mongoose "translations" field
+  fullTranslation String?  @db.Text
 
   // Metadata
-  language    String   @default("ja")
-  createdAt   DateTime @default(now())
+  language        String   @default("ja")
+  createdAt       DateTime @default(now())
 
   @@index([userId])
   @@index([createdAt])
+  @@index([userId, inputText(ops: raw("text_pattern_ops"))])
+}
+
+// ============================================
+// VOCABULARY (SRS)
+// ============================================
+
+model Vocabulary {
+  id             String    @id @default(cuid())
+  userId         String
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word           String
+  furigana       String    @default("")
+  romaji         String    @default("")
+  meaningZhCN    String    @default("") @map("meaning_zh_cn")
+  jlptLevel      String    @default("")
+  pos            String    @default("")
+  notes          String?
+  mastered       Boolean   @default(false)
+  reviewCount    Int       @default(0)
+  lastReviewedAt DateTime?
+  srsInterval    Int       @default(0)
+  srsEaseFactor  Float     @default(2.5)
+  srsDueDate     DateTime?
+  srsStage       String    @default("new") // new, learning, review, mastered
+  sourcePackId   String?
+  wrongCount     Int       @default(0)
+  createdAt      DateTime  @default(now())
+
+  @@unique([userId, word])
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([userId, srsStage, srsDueDate])
+}
+
+// ============================================
+// WORD PACKS
+// ============================================
+
+model WordPack {
+  id               String   @id @default(cuid())
+  packId           String   @unique
+  nameZhCN         String   @map("name_zh_cn")
+  nameEn           String   @map("name_en")
+  descriptionZhCN  String   @default("") @map("description_zh_cn")
+  category         String
+  jlptLevel        String
+  words            Json     // String[]
+  order            Int
+
+  @@index([jlptLevel, order])
+}
+
+// ============================================
+// USER PACK PROGRESS
+// ============================================
+
+model UserPackProgress {
+  id           String    @id @default(cuid())
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  packId       String
+  status       String    @default("locked") // locked, available, studying, completed
+  studiedWords Json      @default("[]")     // String[]
+  wrongWords   Json      @default("[]")     // String[]
+  quizScore    Int?
+  quizAttempts Int       @default(0)
+  completedAt  DateTime?
+  createdAt    DateTime  @default(now())
+
+  @@unique([userId, packId])
+  @@index([userId, status])
+}
+
+// ============================================
+// LEARNING STATS
+// ============================================
+
+model LearningStats {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalAnalyses     Int      @default(0)
+  totalWordsLearned Int      @default(0)
+  streakDays        Int      @default(0)
+  lastActiveDate    DateTime @default(now())
+  jlptProgress      Json     @default("{}")  // Record<string, number>
+  dailyActivity     Json     @default("[]")  // Array<{date: string, count: number}>
+  achievements      Json     @default("[]")  // String[]
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// ============================================
+// WORD EXAMPLES (AI-generated cache)
+// ============================================
+
+model WordExample {
+  id          String   @id @default(cuid())
+  word        String
+  jlptLevel   String   @default("N5")
+  examples    Json     // Array<{sentence, furigana, meaning_zh_CN}>
+  generatedAt DateTime @default(now())
+
+  @@unique([word, jlptLevel])
+}
+
+// ============================================
+// AI RESPONSE CACHE
+// ============================================
+
+model AnalysisCache {
+  id          String   @id @default(cuid())
+  inputText   String   @db.Text
+  inputHash   String   @unique // SHA-256 of trimmed inputText
+  result      Json     // Array<TokenData>
+  generatedAt DateTime @default(now())
+
+  @@index([inputHash])
+}
+
+model WordDetailCache {
+  id           String   @id @default(cuid())
+  word         String
+  pos          String
+  learningMode String   @default("intermediate")
+  result       Json     // WordDetail JSON
+  generatedAt  DateTime @default(now())
+
+  @@unique([word, pos, learningMode])
+  @@index([word])
+}
+
+model TranslationCache {
+  id          String   @id @default(cuid())
+  inputText   String   @db.Text
+  inputHash   String   @unique // SHA-256 of trimmed inputText
+  result      String   @db.Text // Translated text
+  generatedAt DateTime @default(now())
+
+  @@index([inputHash])
+}
+
+model GrammarAnalysisCache {
+  id          String   @id @default(cuid())
+  inputText   String   @db.Text
+  inputHash   String   @unique // SHA-256 of trimmed inputText
+  result      Json     // Grammar analysis JSON
+  generatedAt DateTime @default(now())
+
+  @@index([inputHash])
 }

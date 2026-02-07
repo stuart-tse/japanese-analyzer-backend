@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { rateLimit } from '../middleware/rateLimit.js';
 import { optionalAuth } from '../middleware/auth.js';
 import { geminiProxy } from '../services/gemini.js';
+import { getAnalysisCache, setAnalysisCache } from '../services/cacheService.js';
 
 const ANALYSIS_PROMPT_TEMPLATE = `请对以下日语句子进行详细的词法分析，并以JSON数组格式返回结果。每个对象应包含以下字段："word", "pos", "furigana", "romaji"。
 
@@ -54,6 +55,39 @@ router.post(
       }
       // Fallback to original response if parsing fails
       return data;
+    },
+
+    // ---- Cache hooks ----
+    async cacheGet(body) {
+      const text = body.prompt as string;
+      const cached = await getAnalysisCache(text);
+      if (!cached) return null;
+      return { ...cached, cached: true };
+    },
+    async cacheSet(body, responseData) {
+      const text = body.prompt as string;
+      // For streaming: responseData is the raw content string
+      if (typeof responseData === 'string') {
+        const trimmed = responseData.trim();
+        if (!trimmed) return;
+        try {
+          const tokens = JSON.parse(trimmed);
+          if (Array.isArray(tokens) && tokens.length > 0) {
+            await setAnalysisCache(text, tokens);
+          }
+        } catch {
+          // Content wasn't valid JSON tokens — skip caching
+        }
+        return;
+      }
+      // For non-streaming: responseData is the transformed { tokens } object
+      const data = responseData as Record<string, unknown>;
+      if (data.tokens && Array.isArray(data.tokens) && (data.tokens as unknown[]).length > 0) {
+        await setAnalysisCache(text, data.tokens);
+      }
+    },
+    cacheToStreamContent(cachedData) {
+      return JSON.stringify(cachedData.tokens);
     },
   }),
 );

@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import { rateLimit } from '../middleware/rateLimit.js';
 import { geminiProxy } from '../services/gemini.js';
+import {
+  getTranslationCache,
+  setTranslationCache,
+} from '../services/cacheService.js';
 
 const router = Router();
 
@@ -31,6 +35,39 @@ ${text}
     },
     extraPayload() {
       return { reasoning_effort: 'none' };
+    },
+
+    // ---- Cache hooks ----
+    async cacheGet(body) {
+      const text = body.text as string;
+      const cached = await getTranslationCache(text);
+      if (!cached) return null;
+      // Wrap in OpenAI-compatible format for frontend
+      return {
+        choices: [{ message: { content: cached } }],
+        cached: true,
+      };
+    },
+    async cacheSet(body, responseData) {
+      const text = body.text as string;
+      // For streaming: responseData is the raw content string
+      if (typeof responseData === 'string') {
+        const trimmed = responseData.trim();
+        if (!trimmed) return;
+        await setTranslationCache(text, trimmed);
+        return;
+      }
+      // For non-streaming: responseData is the full OpenAI response
+      const data = responseData as Record<string, unknown>;
+      const choices = data.choices as Array<{ message?: { content?: string } }> | undefined;
+      const content = choices?.[0]?.message?.content?.trim();
+      if (content) {
+        await setTranslationCache(text, content);
+      }
+    },
+    cacheToStreamContent(cachedData) {
+      const choices = cachedData.choices as Array<{ message?: { content?: string } }>;
+      return choices[0]?.message?.content || '';
     },
   }),
 );

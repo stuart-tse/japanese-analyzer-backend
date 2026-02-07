@@ -125,6 +125,12 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   passwordHash: 'passwordHash',
   displayName: 'displayName',
+  provider: 'provider',
+  providerId: 'providerId',
+  avatar: 'avatar',
+  phone: 'phone',
+  refreshTokenHash: 'refreshTokenHash',
+  lastLoginAt: 'lastLoginAt',
   subscriptionTier: 'subscriptionTier',
   credits: 'credits',
   customerId: 'customerId',
@@ -318,8 +324,112 @@ exports.Prisma.AnalysisScalarFieldEnum = {
   userId: 'userId',
   inputText: 'inputText',
   result: 'result',
+  translations: 'translations',
+  fullTranslation: 'fullTranslation',
   language: 'language',
   createdAt: 'createdAt'
+};
+
+exports.Prisma.VocabularyScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  furigana: 'furigana',
+  romaji: 'romaji',
+  meaningZhCN: 'meaningZhCN',
+  jlptLevel: 'jlptLevel',
+  pos: 'pos',
+  notes: 'notes',
+  mastered: 'mastered',
+  reviewCount: 'reviewCount',
+  lastReviewedAt: 'lastReviewedAt',
+  srsInterval: 'srsInterval',
+  srsEaseFactor: 'srsEaseFactor',
+  srsDueDate: 'srsDueDate',
+  srsStage: 'srsStage',
+  sourcePackId: 'sourcePackId',
+  wrongCount: 'wrongCount',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.WordPackScalarFieldEnum = {
+  id: 'id',
+  packId: 'packId',
+  nameZhCN: 'nameZhCN',
+  nameEn: 'nameEn',
+  descriptionZhCN: 'descriptionZhCN',
+  category: 'category',
+  jlptLevel: 'jlptLevel',
+  words: 'words',
+  order: 'order'
+};
+
+exports.Prisma.UserPackProgressScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  packId: 'packId',
+  status: 'status',
+  studiedWords: 'studiedWords',
+  wrongWords: 'wrongWords',
+  quizScore: 'quizScore',
+  quizAttempts: 'quizAttempts',
+  completedAt: 'completedAt',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LearningStatsScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  totalAnalyses: 'totalAnalyses',
+  totalWordsLearned: 'totalWordsLearned',
+  streakDays: 'streakDays',
+  lastActiveDate: 'lastActiveDate',
+  jlptProgress: 'jlptProgress',
+  dailyActivity: 'dailyActivity',
+  achievements: 'achievements',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.WordExampleScalarFieldEnum = {
+  id: 'id',
+  word: 'word',
+  jlptLevel: 'jlptLevel',
+  examples: 'examples',
+  generatedAt: 'generatedAt'
+};
+
+exports.Prisma.AnalysisCacheScalarFieldEnum = {
+  id: 'id',
+  inputText: 'inputText',
+  inputHash: 'inputHash',
+  result: 'result',
+  generatedAt: 'generatedAt'
+};
+
+exports.Prisma.WordDetailCacheScalarFieldEnum = {
+  id: 'id',
+  word: 'word',
+  pos: 'pos',
+  learningMode: 'learningMode',
+  result: 'result',
+  generatedAt: 'generatedAt'
+};
+
+exports.Prisma.TranslationCacheScalarFieldEnum = {
+  id: 'id',
+  inputText: 'inputText',
+  inputHash: 'inputHash',
+  result: 'result',
+  generatedAt: 'generatedAt'
+};
+
+exports.Prisma.GrammarAnalysisCacheScalarFieldEnum = {
+  id: 'id',
+  inputText: 'inputText',
+  inputHash: 'inputHash',
+  result: 'result',
+  generatedAt: 'generatedAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -406,7 +516,16 @@ exports.Prisma.ModelName = {
   Subscription: 'Subscription',
   Payment: 'Payment',
   CreditTransaction: 'CreditTransaction',
-  Analysis: 'Analysis'
+  Analysis: 'Analysis',
+  Vocabulary: 'Vocabulary',
+  WordPack: 'WordPack',
+  UserPackProgress: 'UserPackProgress',
+  LearningStats: 'LearningStats',
+  WordExample: 'WordExample',
+  AnalysisCache: 'AnalysisCache',
+  WordDetailCache: 'WordDetailCache',
+  TranslationCache: 'TranslationCache',
+  GrammarAnalysisCache: 'GrammarAnalysisCache'
 };
 
 /**

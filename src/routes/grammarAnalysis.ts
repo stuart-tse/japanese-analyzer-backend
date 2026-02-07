@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import { rateLimit } from '../middleware/rateLimit.js';
 import { geminiProxy } from '../services/gemini.js';
+import {
+  getGrammarAnalysisCache,
+  setGrammarAnalysisCache,
+} from '../services/cacheService.js';
 
 const router = Router();
 
@@ -100,6 +104,52 @@ ${JSON.stringify(tokens, null, 2)}
     },
     extraPayload() {
       return { reasoning_effort: 'medium' };
+    },
+
+    // ---- Cache hooks ----
+    async cacheGet(body) {
+      const sentence = body.sentence as string;
+      const cached = await getGrammarAnalysisCache(sentence);
+      if (!cached) return null;
+      // Wrap in OpenAI-compatible format for frontend
+      return {
+        choices: [{ message: { content: JSON.stringify(cached) } }],
+        cached: true,
+      };
+    },
+    async cacheSet(body, responseData) {
+      const sentence = body.sentence as string;
+      // For streaming: responseData is the raw content string
+      if (typeof responseData === 'string') {
+        const trimmed = responseData.trim();
+        if (!trimmed) return;
+        try {
+          const parsed = JSON.parse(trimmed);
+          if (parsed && typeof parsed === 'object' && Object.keys(parsed).length > 0) {
+            await setGrammarAnalysisCache(sentence, parsed);
+          }
+        } catch {
+          // Content wasn't valid JSON — skip caching
+        }
+        return;
+      }
+      // For non-streaming: responseData is the full OpenAI response
+      const data = responseData as Record<string, unknown>;
+      const choices = data.choices as Array<{ message?: { content?: string } }> | undefined;
+      const content = choices?.[0]?.message?.content?.trim();
+      if (!content) return;
+      try {
+        const parsed = JSON.parse(content);
+        if (parsed && typeof parsed === 'object' && Object.keys(parsed).length > 0) {
+          await setGrammarAnalysisCache(sentence, parsed);
+        }
+      } catch {
+        // Content wasn't valid JSON — skip caching
+      }
+    },
+    cacheToStreamContent(cachedData) {
+      const choices = cachedData.choices as Array<{ message?: { content?: string } }>;
+      return choices[0]?.message?.content || '';
     },
   }),
 );
