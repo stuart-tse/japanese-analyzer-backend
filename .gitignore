@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.env
+.env.production
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Elastic Beanstalk
+.elasticbeanstalk/
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Generated
+/src/generated/prisma
