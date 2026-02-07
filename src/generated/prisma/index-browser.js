@@ -123,17 +123,145 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
-  username: 'username',
-  password: 'password',
-  provider: 'provider',
-  providerId: 'providerId',
+  passwordHash: 'passwordHash',
+  displayName: 'displayName',
   subscriptionTier: 'subscriptionTier',
   credits: 'credits',
-  stripeCustomerId: 'stripeCustomerId',
+  customerId: 'customerId',
+  subscriptionId: 'subscriptionId',
   subscriptionExpiry: 'subscriptionExpiry',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  lastLoginAt: 'lastLoginAt'
+  lastActivityDate: 'lastActivityDate',
+  learningStreak: 'learningStreak',
+  totalAnalyses: 'totalAnalyses',
+  wordsLearned: 'wordsLearned'
+};
+
+exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  reading: 'reading',
+  romaji: 'romaji',
+  partOfSpeech: 'partOfSpeech',
+  translation: 'translation',
+  sentence: 'sentence',
+  analyzedAt: 'analyzedAt',
+  reviewCount: 'reviewCount',
+  masteryLevel: 'masteryLevel'
+};
+
+exports.Prisma.CourseScalarFieldEnum = {
+  id: 'id',
+  level: 'level',
+  title: 'title',
+  description: 'description',
+  totalLessons: 'totalLessons',
+  estimatedHours: 'estimatedHours',
+  requiredTier: 'requiredTier',
+  creditCostPerLesson: 'creditCostPerLesson',
+  isPublished: 'isPublished',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LessonScalarFieldEnum = {
+  id: 'id',
+  courseId: 'courseId',
+  lessonNumber: 'lessonNumber',
+  unitNumber: 'unitNumber',
+  title: 'title',
+  description: 'description',
+  vocabularyItems: 'vocabularyItems',
+  grammarPoints: 'grammarPoints',
+  practiceExercises: 'practiceExercises',
+  isQuiz: 'isQuiz',
+  estimatedMinutes: 'estimatedMinutes',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlacementQuestionScalarFieldEnum = {
+  id: 'id',
+  level: 'level',
+  skillType: 'skillType',
+  difficulty: 'difficulty',
+  questionText: 'questionText',
+  questionTextChinese: 'questionTextChinese',
+  passageText: 'passageText',
+  options: 'options',
+  correctAnswerId: 'correctAnswerId',
+  explanation: 'explanation',
+  audioUrl: 'audioUrl',
+  timesShown: 'timesShown',
+  timesCorrect: 'timesCorrect',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LessonNotificationScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  lessonId: 'lessonId',
+  notifiedAt: 'notifiedAt',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.PlacementTestAnswerScalarFieldEnum = {
+  id: 'id',
+  attemptId: 'attemptId',
+  questionId: 'questionId',
+  selectedAnswerId: 'selectedAnswerId',
+  isCorrect: 'isCorrect',
+  timeSpentSeconds: 'timeSpentSeconds',
+  answeredAt: 'answeredAt'
+};
+
+exports.Prisma.PlacementTestAttemptScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  startedAt: 'startedAt',
+  completedAt: 'completedAt',
+  initialLevel: 'initialLevel',
+  finalRecommendedLevel: 'finalRecommendedLevel',
+  skillBreakdown: 'skillBreakdown',
+  totalQuestions: 'totalQuestions',
+  totalCorrect: 'totalCorrect',
+  testDurationSeconds: 'testDurationSeconds'
+};
+
+exports.Prisma.UserFlashcardScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  reading: 'reading',
+  translation: 'translation',
+  exampleSentence: 'exampleSentence',
+  audioUrl: 'audioUrl',
+  sourceLessonId: 'sourceLessonId',
+  timesReviewed: 'timesReviewed',
+  lastReviewedAt: 'lastReviewedAt',
+  nextReviewAt: 'nextReviewAt',
+  easeFactor: 'easeFactor',
+  interval: 'interval',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserLessonProgressScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  lessonId: 'lessonId',
+  vocabularyCompleted: 'vocabularyCompleted',
+  grammarCompleted: 'grammarCompleted',
+  practiceCompleted: 'practiceCompleted',
+  practiceScore: 'practiceScore',
+  isCompleted: 'isCompleted',
+  completedAt: 'completedAt',
+  lastAccessedAt: 'lastAccessedAt',
+  currentTab: 'currentTab',
+  scrollPosition: 'scrollPosition'
 };
 
 exports.Prisma.SubscriptionScalarFieldEnum = {
@@ -185,89 +313,6 @@ exports.Prisma.CreditTransactionScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.FeatureAccessScalarFieldEnum = {
-  id: 'id',
-  featureType: 'featureType',
-  minTier: 'minTier',
-  creditCost: 'creditCost',
-  freeLimitDaily: 'freeLimitDaily',
-  proLimitDaily: 'proLimitDaily',
-  premiumLimitDaily: 'premiumLimitDaily',
-  description: 'description',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.WordPackScalarFieldEnum = {
-  id: 'id',
-  packId: 'packId',
-  title: 'title',
-  description: 'description',
-  category: 'category',
-  requiredTier: 'requiredTier',
-  creditCost: 'creditCost',
-  wordCount: 'wordCount',
-  difficulty: 'difficulty',
-  tags: 'tags',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.WordScalarFieldEnum = {
-  id: 'id',
-  packId: 'packId',
-  word: 'word',
-  reading: 'reading',
-  romaji: 'romaji',
-  meaning: 'meaning',
-  partOfSpeech: 'partOfSpeech',
-  example: 'example',
-  exampleTranslation: 'exampleTranslation',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.UserPackProgressScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  packId: 'packId',
-  wordsLearned: 'wordsLearned',
-  wordsReviewed: 'wordsReviewed',
-  accuracy: 'accuracy',
-  lastStudiedAt: 'lastStudiedAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.VocabularyScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  wordId: 'wordId',
-  level: 'level',
-  repetitions: 'repetitions',
-  easeFactor: 'easeFactor',
-  interval: 'interval',
-  nextReviewAt: 'nextReviewAt',
-  correctCount: 'correctCount',
-  incorrectCount: 'incorrectCount',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  lastReviewedAt: 'lastReviewedAt'
-};
-
-exports.Prisma.LearningStatsScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  totalWordsLearned: 'totalWordsLearned',
-  totalReviews: 'totalReviews',
-  currentStreak: 'currentStreak',
-  longestStreak: 'longestStreak',
-  totalStudyTime: 'totalStudyTime',
-  lastStudyDate: 'lastStudyDate',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
 exports.Prisma.AnalysisScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
@@ -277,91 +322,14 @@ exports.Prisma.AnalysisScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  word: 'word',
-  reading: 'reading',
-  romaji: 'romaji',
-  meaning: 'meaning',
-  translation: 'translation',
-  partOfSpeech: 'partOfSpeech',
-  sentence: 'sentence',
-  masteryLevel: 'masteryLevel',
-  reviewCount: 'reviewCount',
-  lastReviewedAt: 'lastReviewedAt',
-  analyzedAt: 'analyzedAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.UserStatsScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  totalAnalyses: 'totalAnalyses',
-  totalTranslations: 'totalTranslations',
-  totalWords: 'totalWords',
-  learningStreak: 'learningStreak',
-  streakDays: 'streakDays',
-  lastActivityDate: 'lastActivityDate',
-  lastActiveAt: 'lastActiveAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.CourseScalarFieldEnum = {
-  id: 'id',
-  slug: 'slug',
-  title: 'title',
-  description: 'description',
-  level: 'level',
-  order: 'order',
-  status: 'status',
-  published: 'published',
-  estimatedHours: 'estimatedHours',
-  thumbnail: 'thumbnail',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.LessonScalarFieldEnum = {
-  id: 'id',
-  courseId: 'courseId',
-  slug: 'slug',
-  title: 'title',
-  type: 'type',
-  content: 'content',
-  order: 'order',
-  duration: 'duration',
-  published: 'published',
-  isFree: 'isFree',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.PlacementQuestionScalarFieldEnum = {
-  id: 'id',
-  level: 'level',
-  skillType: 'skillType',
-  difficulty: 'difficulty',
-  question: 'question',
-  questionText: 'questionText',
-  questionTextChinese: 'questionTextChinese',
-  questionType: 'questionType',
-  passageText: 'passageText',
-  audioUrl: 'audioUrl',
-  options: 'options',
-  correctAnswerId: 'correctAnswerId',
-  explanation: 'explanation',
-  order: 'order',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.NullableJsonNullValueInput = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull
 };
 
 exports.Prisma.JsonNullValueInput = {
@@ -383,12 +351,6 @@ exports.Prisma.JsonNullValueFilter = {
   JsonNull: Prisma.JsonNull,
   AnyNull: Prisma.AnyNull
 };
-exports.AuthProvider = exports.$Enums.AuthProvider = {
-  LOCAL: 'LOCAL',
-  GOOGLE: 'GOOGLE',
-  FACEBOOK: 'FACEBOOK'
-};
-
 exports.SubscriptionTier = exports.$Enums.SubscriptionTier = {
   FREE: 'FREE',
   PRO: 'PRO',
@@ -430,60 +392,21 @@ exports.CreditTransactionType = exports.$Enums.CreditTransactionType = {
   BONUS: 'BONUS'
 };
 
-exports.FeatureType = exports.$Enums.FeatureType = {
-  BASIC_VOCABULARY: 'BASIC_VOCABULARY',
-  TRAVEL_PACKS: 'TRAVEL_PACKS',
-  MOVIE_PACKS: 'MOVIE_PACKS',
-  DRAMA_PACKS: 'DRAMA_PACKS',
-  COMIC_PACKS: 'COMIC_PACKS',
-  JLPT_PREP: 'JLPT_PREP',
-  JLPT_MOCK_EXAMS: 'JLPT_MOCK_EXAMS',
-  SRS_SYSTEM: 'SRS_SYSTEM',
-  ADVANCED_ANALYSIS: 'ADVANCED_ANALYSIS'
-};
-
-exports.PackCategory = exports.$Enums.PackCategory = {
-  VOCABULARY: 'VOCABULARY',
-  TRAVEL: 'TRAVEL',
-  MOVIE: 'MOVIE',
-  DRAMA: 'DRAMA',
-  COMIC: 'COMIC',
-  JLPT_N5: 'JLPT_N5',
-  JLPT_N4: 'JLPT_N4',
-  JLPT_N3: 'JLPT_N3',
-  JLPT_N2: 'JLPT_N2',
-  JLPT_N1: 'JLPT_N1'
-};
-
-exports.VocabularyLevel = exports.$Enums.VocabularyLevel = {
-  LEARNING: 'LEARNING',
-  REVIEWING: 'REVIEWING',
-  MASTERED: 'MASTERED'
-};
-
-exports.CourseStatus = exports.$Enums.CourseStatus = {
-  DRAFT: 'DRAFT',
-  PUBLISHED: 'PUBLISHED',
-  ARCHIVED: 'ARCHIVED'
-};
-
 exports.Prisma.ModelName = {
   User: 'User',
+  AnalyzedVocabulary: 'AnalyzedVocabulary',
+  Course: 'Course',
+  Lesson: 'Lesson',
+  PlacementQuestion: 'PlacementQuestion',
+  LessonNotification: 'LessonNotification',
+  PlacementTestAnswer: 'PlacementTestAnswer',
+  PlacementTestAttempt: 'PlacementTestAttempt',
+  UserFlashcard: 'UserFlashcard',
+  UserLessonProgress: 'UserLessonProgress',
   Subscription: 'Subscription',
   Payment: 'Payment',
   CreditTransaction: 'CreditTransaction',
-  FeatureAccess: 'FeatureAccess',
-  WordPack: 'WordPack',
-  Word: 'Word',
-  UserPackProgress: 'UserPackProgress',
-  Vocabulary: 'Vocabulary',
-  LearningStats: 'LearningStats',
-  Analysis: 'Analysis',
-  AnalyzedVocabulary: 'AnalyzedVocabulary',
-  UserStats: 'UserStats',
-  Course: 'Course',
-  Lesson: 'Lesson',
-  PlacementQuestion: 'PlacementQuestion'
+  Analysis: 'Analysis'
 };
 
 /**

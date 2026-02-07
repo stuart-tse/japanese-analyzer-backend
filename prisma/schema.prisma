@@ -1,6 +1,3 @@
-// Prisma Schema for Japanese Analyzer
-// Subscription & Payment System with PostgreSQL
-
 generator client {
   provider = "prisma-client-js"
   output   = "../src/generated/prisma"
@@ -11,14 +8,8 @@ datasource db {
 }
 
 // ============================================
-// USER & AUTHENTICATION
+// ENUMS
 // ============================================
-
-enum AuthProvider {
-  LOCAL
-  GOOGLE
-  FACEBOOK
-}
 
 enum SubscriptionTier {
   FREE
@@ -34,37 +25,225 @@ enum SubscriptionStatus {
   TRIALING
 }
 
+enum PaymentMethod {
+  CARD
+  ALIPAY
+  WECHAT_PAY
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+enum PaymentType {
+  SUBSCRIPTION
+  CREDIT_TOPUP
+  ONE_TIME
+}
+
+enum CreditTransactionType {
+  PURCHASE          // User bought credits
+  MONTHLY_ALLOCATION // Monthly subscription credits
+  DEDUCTION         // Used credits for feature
+  REFUND            // Credits refunded
+  BONUS             // Bonus credits from promotion
+}
+
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  username  String?  @unique
-  password  String?  // Nullable for OAuth users
-  provider  AuthProvider @default(LOCAL)
-  providerId String?
-
-  // Subscription fields
-  subscriptionTier   SubscriptionTier   @default(FREE)
-  credits            Int                @default(0)
-  stripeCustomerId   String?            @unique
-  subscriptionExpiry DateTime?
-
-  // Timestamps
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  lastLoginAt DateTime?
-
-  // Relations
-  subscriptions      Subscription[]
-  payments           Payment[]
-  creditTransactions CreditTransaction[]
-  userPackProgress   UserPackProgress[]
-  vocabulary         Vocabulary[]
-  learningStats      LearningStats[]
-  analyses           Analysis[]
+  id                   String                 @id @default(cuid())
+  email                String                 @unique
+  passwordHash         String?
+  displayName          String?
+  subscriptionTier     String                 @default("FREE")
+  credits              Int                    @default(0)
+  customerId           String?                @unique
+  subscriptionId       String?
+  subscriptionExpiry   DateTime?
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
+  lastActivityDate     DateTime?
+  learningStreak       Int                    @default(0)
+  totalAnalyses        Int                    @default(0)
+  wordsLearned         Int                    @default(0)
+  AnalyzedVocabulary   AnalyzedVocabulary[]
+  PlacementTestAttempt PlacementTestAttempt[]
+  UserFlashcard        UserFlashcard[]
+  UserLessonProgress   UserLessonProgress[]
+  payments             Payment[]
+  creditTransactions   CreditTransaction[]
+  subscriptions        Subscription[]
 
   @@index([email])
-  @@index([stripeCustomerId])
   @@index([subscriptionTier])
+}
+
+model AnalyzedVocabulary {
+  id           String   @id @default(cuid())
+  userId       String
+  word         String
+  reading      String?
+  romaji       String?
+  partOfSpeech String?
+  translation  String?
+  sentence     String?
+  analyzedAt   DateTime @default(now())
+  reviewCount  Int      @default(0)
+  masteryLevel Int      @default(0)
+  User         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([word])
+  @@index([userId, word])
+}
+
+model Course {
+  id                  String   @id @default(cuid())
+  level               String
+  title               String
+  description         String?
+  totalLessons        Int
+  estimatedHours      Int?
+  requiredTier        String   @default("FREE")
+  creditCostPerLesson Int      @default(0)
+  isPublished         Boolean  @default(false)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  lessons             Lesson[]
+
+  @@index([level])
+  @@index([isPublished])
+}
+
+model Lesson {
+  id                 String               @id @default(cuid())
+  courseId           String
+  lessonNumber       Int
+  unitNumber         Int?
+  title              String
+  description        String?
+  vocabularyItems    Json?
+  grammarPoints      Json?
+  practiceExercises  Json?
+  isQuiz             Boolean              @default(false)
+  estimatedMinutes   Int                  @default(30)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  course             Course               @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  UserLessonProgress UserLessonProgress[]
+
+  @@unique([courseId, lessonNumber])
+  @@index([courseId, lessonNumber])
+}
+
+model PlacementQuestion {
+  id                  String   @id @default(cuid())
+  level               String
+  skillType           String
+  difficulty          Int
+  questionText        String
+  questionTextChinese String?
+  passageText         String?
+  options             Json
+  correctAnswerId     String
+  explanation         String?
+  audioUrl            String?
+  timesShown          Int      @default(0)
+  timesCorrect        Int      @default(0)
+  isActive            Boolean  @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([difficulty])
+  @@index([level, skillType, isActive])
+}
+
+model LessonNotification {
+  id         String    @id
+  email      String
+  lessonId   String
+  notifiedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([email])
+  @@index([lessonId])
+  @@index([notifiedAt])
+}
+
+model PlacementTestAnswer {
+  id                   String               @id
+  attemptId            String
+  questionId           String
+  selectedAnswerId     String
+  isCorrect            Boolean
+  timeSpentSeconds     Int
+  answeredAt           DateTime             @default(now())
+  PlacementTestAttempt PlacementTestAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@index([attemptId])
+  @@index([questionId])
+}
+
+model PlacementTestAttempt {
+  id                    String                @id
+  userId                String
+  startedAt             DateTime              @default(now())
+  completedAt           DateTime?
+  initialLevel          String?
+  finalRecommendedLevel String?
+  skillBreakdown        Json?
+  totalQuestions        Int
+  totalCorrect          Int
+  testDurationSeconds   Int?
+  PlacementTestAnswer   PlacementTestAnswer[]
+  User                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([completedAt])
+  @@index([userId])
+}
+
+model UserFlashcard {
+  id              String    @id
+  userId          String
+  word            String
+  reading         String?
+  translation     String?
+  exampleSentence String?
+  audioUrl        String?
+  sourceLessonId  String?
+  timesReviewed   Int       @default(0)
+  lastReviewedAt  DateTime?
+  nextReviewAt    DateTime?
+  easeFactor      Float     @default(2.5)
+  interval        Int       @default(0)
+  createdAt       DateTime  @default(now())
+  User            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, nextReviewAt])
+}
+
+model UserLessonProgress {
+  id                  String    @id
+  userId              String
+  lessonId            String
+  vocabularyCompleted Boolean   @default(false)
+  grammarCompleted    Boolean   @default(false)
+  practiceCompleted   Boolean   @default(false)
+  practiceScore       Decimal?  @db.Decimal(5, 2)
+  isCompleted         Boolean   @default(false)
+  completedAt         DateTime?
+  lastAccessedAt      DateTime  @default(now())
+  currentTab          String?
+  scrollPosition      Int?
+  Lesson              Lesson    @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  User                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([lessonId])
+  @@index([userId])
 }
 
 // ============================================
@@ -108,25 +287,6 @@ model Subscription {
 // PAYMENT PROCESSING
 // ============================================
 
-enum PaymentMethod {
-  CARD
-  ALIPAY
-  WECHAT_PAY
-}
-
-enum PaymentStatus {
-  PENDING
-  SUCCEEDED
-  FAILED
-  REFUNDED
-}
-
-enum PaymentType {
-  SUBSCRIPTION
-  CREDIT_TOPUP
-  ONE_TIME
-}
-
 model Payment {
   id                String         @id @default(cuid())
   userId            String
@@ -165,14 +325,6 @@ model Payment {
 // CREDIT SYSTEM
 // ============================================
 
-enum CreditTransactionType {
-  PURCHASE          // User bought credits
-  MONTHLY_ALLOCATION // Monthly subscription credits
-  DEDUCTION         // Used credits for feature
-  REFUND            // Credits refunded
-  BONUS             // Bonus credits from promotion
-}
-
 model CreditTransaction {
   id          String                @id @default(cuid())
   userId      String
@@ -198,204 +350,12 @@ model CreditTransaction {
 }
 
 // ============================================
-// FEATURE ACCESS CONTROL
-// ============================================
-
-enum FeatureType {
-  BASIC_VOCABULARY
-  TRAVEL_PACKS
-  MOVIE_PACKS
-  DRAMA_PACKS
-  COMIC_PACKS
-  JLPT_PREP
-  JLPT_MOCK_EXAMS
-  SRS_SYSTEM
-  ADVANCED_ANALYSIS
-}
-
-model FeatureAccess {
-  id          String            @id @default(cuid())
-  featureType FeatureType       @unique
-
-  // Tier requirements
-  minTier     SubscriptionTier
-
-  // Alternative: Credit cost if user doesn't have tier
-  creditCost  Int?
-
-  // Feature limits by tier
-  freeLimitDaily    Int?
-  proLimitDaily     Int?
-  premiumLimitDaily Int?
-
-  // Metadata
-  description String?
-  createdAt   DateTime          @default(now())
-  updatedAt   DateTime          @updatedAt
-
-  @@index([featureType])
-}
-
-// ============================================
-// LEARNING CONTENT
-// ============================================
-
-enum PackCategory {
-  VOCABULARY
-  TRAVEL
-  MOVIE
-  DRAMA
-  COMIC
-  JLPT_N5
-  JLPT_N4
-  JLPT_N3
-  JLPT_N2
-  JLPT_N1
-}
-
-model WordPack {
-  id          String         @id @default(cuid())
-  packId      String         @unique
-  title       String
-  description String?
-  category    PackCategory
-
-  // Access control
-  requiredTier SubscriptionTier @default(FREE)
-  creditCost   Int?              // Alternative cost in credits
-
-  // Pack metadata
-  wordCount    Int              @default(0)
-  difficulty   String?          // 'beginner', 'intermediate', 'advanced'
-  tags         String[]
-
-  // Timestamps
-  createdAt    DateTime         @default(now())
-  updatedAt    DateTime         @updatedAt
-
-  // Relations
-  words        Word[]
-  userProgress UserPackProgress[]
-
-  @@index([packId])
-  @@index([category])
-  @@index([requiredTier])
-}
-
-model Word {
-  id          String   @id @default(cuid())
-  packId      String
-  pack        WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)
-
-  // Word details
-  word        String
-  reading     String?  // Hiragana reading
-  romaji      String?  // Romanized reading
-  meaning     String   // Chinese translation
-  partOfSpeech String?
-  example     String?  // Example sentence
-  exampleTranslation String?
-
-  // Timestamps
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // Relations
-  vocabulary  Vocabulary[]
-
-  @@index([packId])
-  @@index([word])
-}
-
-// ============================================
-// USER PROGRESS & LEARNING
-// ============================================
-
-model UserPackProgress {
-  id              String   @id @default(cuid())
-  userId          String
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  packId          String
-  pack            WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)
-
-  // Progress tracking
-  wordsLearned    Int      @default(0)
-  wordsReviewed   Int      @default(0)
-  accuracy        Decimal  @db.Decimal(5, 2) @default(0)
-  lastStudiedAt   DateTime?
-
-  // Timestamps
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-
-  @@unique([userId, packId])
-  @@index([userId])
-  @@index([packId])
-}
-
-enum VocabularyLevel {
-  LEARNING
-  REVIEWING
-  MASTERED
-}
-
-model Vocabulary {
-  id              String          @id @default(cuid())
-  userId          String
-  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  wordId          String
-  word            Word            @relation(fields: [wordId], references: [id], onDelete: Cascade)
-
-  // SRS fields
-  level           VocabularyLevel @default(LEARNING)
-  repetitions     Int             @default(0)
-  easeFactor      Decimal         @db.Decimal(5, 2) @default(2.5)
-  interval        Int             @default(1) // Days until next review
-  nextReviewAt    DateTime?
-
-  // Performance
-  correctCount    Int             @default(0)
-  incorrectCount  Int             @default(0)
-
-  // Timestamps
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-  lastReviewedAt  DateTime?
-
-  @@unique([userId, wordId])
-  @@index([userId])
-  @@index([wordId])
-  @@index([nextReviewAt])
-}
-
-model LearningStats {
-  id                String   @id @default(cuid())
-  userId            String   @unique
-  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // Statistics
-  totalWordsLearned Int      @default(0)
-  totalReviews      Int      @default(0)
-  currentStreak     Int      @default(0)
-  longestStreak     Int      @default(0)
-  totalStudyTime    Int      @default(0) // In minutes
-
-  // Timestamps
-  lastStudyDate     DateTime?
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-
-  @@index([userId])
-}
-
-// ============================================
 // ANALYSIS HISTORY
 // ============================================
 
 model Analysis {
   id          String   @id @default(cuid())
   userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   // Analysis data
   inputText   String   @db.Text
@@ -407,134 +367,4 @@ model Analysis {
 
   @@index([userId])
   @@index([createdAt])
-}
-
-// ============================================
-// ANALYZED VOCABULARY TRACKING
-// ============================================
-
-model AnalyzedVocabulary {
-  id              String   @id @default(cuid())
-  userId          String
-  word            String
-  reading         String?
-  romaji          String?
-  meaning         String?
-  translation     String?
-  partOfSpeech    String?
-  sentence        String?  @db.Text
-  masteryLevel    Int      @default(0)
-  reviewCount     Int      @default(1)
-  lastReviewedAt  DateTime @default(now())
-  analyzedAt      DateTime @default(now())
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-
-  @@unique([userId, word])
-  @@index([userId])
-  @@index([word])
-  @@index([analyzedAt])
-}
-
-// ============================================
-// USER STATISTICS
-// ============================================
-
-model UserStats {
-  id                String   @id @default(cuid())
-  userId            String   @unique
-  totalAnalyses     Int      @default(0)
-  totalTranslations Int      @default(0)
-  totalWords        Int      @default(0)
-  learningStreak    Int      @default(0)
-  streakDays        Int      @default(0)
-  lastActivityDate  DateTime?
-  lastActiveAt      DateTime?
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-
-  @@index([userId])
-}
-
-// ============================================
-// LEARNING MANAGEMENT SYSTEM (LMS)
-// ============================================
-
-enum CourseStatus {
-  DRAFT
-  PUBLISHED
-  ARCHIVED
-}
-
-model Course {
-  id             String        @id @default(cuid())
-  slug           String        @unique
-  title          String
-  description    String?       @db.Text
-  level          String        // N5, N4, N3, N2, N1
-  order          Int           @default(0)
-  status         CourseStatus  @default(DRAFT)
-  published      Boolean       @default(false)
-  estimatedHours Int?
-  thumbnail      String?
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
-
-  // Relations
-  lessons        Lesson[]
-
-  @@index([slug])
-  @@index([level])
-  @@index([status])
-  @@index([published])
-}
-
-model Lesson {
-  id          String   @id @default(cuid())
-  courseId    String
-  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  slug        String
-  title       String
-  type        String?  // 'lesson', 'quiz', 'review'
-  content     Json     // Lesson content (markdown, exercises, etc.)
-  order       Int      @default(0)
-  duration    Int?     // Estimated minutes
-  published   Boolean  @default(false)
-  isFree      Boolean  @default(false)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@unique([courseId, slug])
-  @@index([courseId])
-  @@index([slug])
-  @@index([type])
-  @@index([published])
-}
-
-// ============================================
-// PLACEMENT TEST
-// ============================================
-
-model PlacementQuestion {
-  id                  String   @id @default(cuid())
-  level               String   // N5, N4, N3, N2, N1
-  skillType           String?  // 'vocabulary', 'grammar', 'reading', 'listening'
-  difficulty          Int      @default(1) // 1-5 difficulty scale
-  question            String   @db.Text
-  questionText        String?  @db.Text
-  questionTextChinese String?  @db.Text
-  questionType        String   // 'vocabulary', 'grammar', 'reading'
-  passageText         String?  @db.Text
-  audioUrl            String?
-  options             Json     // Array of answer options
-  correctAnswerId     String
-  explanation         String?  @db.Text
-  order               Int      @default(0)
-  isActive            Boolean  @default(true)
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
-
-  @@index([level])
-  @@index([isActive])
-  @@index([difficulty])
 }

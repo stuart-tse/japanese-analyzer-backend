@@ -96,17 +96,145 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
-  username: 'username',
-  password: 'password',
-  provider: 'provider',
-  providerId: 'providerId',
+  passwordHash: 'passwordHash',
+  displayName: 'displayName',
   subscriptionTier: 'subscriptionTier',
   credits: 'credits',
-  stripeCustomerId: 'stripeCustomerId',
+  customerId: 'customerId',
+  subscriptionId: 'subscriptionId',
   subscriptionExpiry: 'subscriptionExpiry',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  lastLoginAt: 'lastLoginAt'
+  lastActivityDate: 'lastActivityDate',
+  learningStreak: 'learningStreak',
+  totalAnalyses: 'totalAnalyses',
+  wordsLearned: 'wordsLearned'
+};
+
+exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  reading: 'reading',
+  romaji: 'romaji',
+  partOfSpeech: 'partOfSpeech',
+  translation: 'translation',
+  sentence: 'sentence',
+  analyzedAt: 'analyzedAt',
+  reviewCount: 'reviewCount',
+  masteryLevel: 'masteryLevel'
+};
+
+exports.Prisma.CourseScalarFieldEnum = {
+  id: 'id',
+  level: 'level',
+  title: 'title',
+  description: 'description',
+  totalLessons: 'totalLessons',
+  estimatedHours: 'estimatedHours',
+  requiredTier: 'requiredTier',
+  creditCostPerLesson: 'creditCostPerLesson',
+  isPublished: 'isPublished',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LessonScalarFieldEnum = {
+  id: 'id',
+  courseId: 'courseId',
+  lessonNumber: 'lessonNumber',
+  unitNumber: 'unitNumber',
+  title: 'title',
+  description: 'description',
+  vocabularyItems: 'vocabularyItems',
+  grammarPoints: 'grammarPoints',
+  practiceExercises: 'practiceExercises',
+  isQuiz: 'isQuiz',
+  estimatedMinutes: 'estimatedMinutes',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlacementQuestionScalarFieldEnum = {
+  id: 'id',
+  level: 'level',
+  skillType: 'skillType',
+  difficulty: 'difficulty',
+  questionText: 'questionText',
+  questionTextChinese: 'questionTextChinese',
+  passageText: 'passageText',
+  options: 'options',
+  correctAnswerId: 'correctAnswerId',
+  explanation: 'explanation',
+  audioUrl: 'audioUrl',
+  timesShown: 'timesShown',
+  timesCorrect: 'timesCorrect',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.LessonNotificationScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  lessonId: 'lessonId',
+  notifiedAt: 'notifiedAt',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.PlacementTestAnswerScalarFieldEnum = {
+  id: 'id',
+  attemptId: 'attemptId',
+  questionId: 'questionId',
+  selectedAnswerId: 'selectedAnswerId',
+  isCorrect: 'isCorrect',
+  timeSpentSeconds: 'timeSpentSeconds',
+  answeredAt: 'answeredAt'
+};
+
+exports.Prisma.PlacementTestAttemptScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  startedAt: 'startedAt',
+  completedAt: 'completedAt',
+  initialLevel: 'initialLevel',
+  finalRecommendedLevel: 'finalRecommendedLevel',
+  skillBreakdown: 'skillBreakdown',
+  totalQuestions: 'totalQuestions',
+  totalCorrect: 'totalCorrect',
+  testDurationSeconds: 'testDurationSeconds'
+};
+
+exports.Prisma.UserFlashcardScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  word: 'word',
+  reading: 'reading',
+  translation: 'translation',
+  exampleSentence: 'exampleSentence',
+  audioUrl: 'audioUrl',
+  sourceLessonId: 'sourceLessonId',
+  timesReviewed: 'timesReviewed',
+  lastReviewedAt: 'lastReviewedAt',
+  nextReviewAt: 'nextReviewAt',
+  easeFactor: 'easeFactor',
+  interval: 'interval',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserLessonProgressScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  lessonId: 'lessonId',
+  vocabularyCompleted: 'vocabularyCompleted',
+  grammarCompleted: 'grammarCompleted',
+  practiceCompleted: 'practiceCompleted',
+  practiceScore: 'practiceScore',
+  isCompleted: 'isCompleted',
+  completedAt: 'completedAt',
+  lastAccessedAt: 'lastAccessedAt',
+  currentTab: 'currentTab',
+  scrollPosition: 'scrollPosition'
 };
 
 exports.Prisma.SubscriptionScalarFieldEnum = {
@@ -158,89 +286,6 @@ exports.Prisma.CreditTransactionScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.FeatureAccessScalarFieldEnum = {
-  id: 'id',
-  featureType: 'featureType',
-  minTier: 'minTier',
-  creditCost: 'creditCost',
-  freeLimitDaily: 'freeLimitDaily',
-  proLimitDaily: 'proLimitDaily',
-  premiumLimitDaily: 'premiumLimitDaily',
-  description: 'description',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.WordPackScalarFieldEnum = {
-  id: 'id',
-  packId: 'packId',
-  title: 'title',
-  description: 'description',
-  category: 'category',
-  requiredTier: 'requiredTier',
-  creditCost: 'creditCost',
-  wordCount: 'wordCount',
-  difficulty: 'difficulty',
-  tags: 'tags',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.WordScalarFieldEnum = {
-  id: 'id',
-  packId: 'packId',
-  word: 'word',
-  reading: 'reading',
-  romaji: 'romaji',
-  meaning: 'meaning',
-  partOfSpeech: 'partOfSpeech',
-  example: 'example',
-  exampleTranslation: 'exampleTranslation',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.UserPackProgressScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  packId: 'packId',
-  wordsLearned: 'wordsLearned',
-  wordsReviewed: 'wordsReviewed',
-  accuracy: 'accuracy',
-  lastStudiedAt: 'lastStudiedAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.VocabularyScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  wordId: 'wordId',
-  level: 'level',
-  repetitions: 'repetitions',
-  easeFactor: 'easeFactor',
-  interval: 'interval',
-  nextReviewAt: 'nextReviewAt',
-  correctCount: 'correctCount',
-  incorrectCount: 'incorrectCount',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  lastReviewedAt: 'lastReviewedAt'
-};
-
-exports.Prisma.LearningStatsScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  totalWordsLearned: 'totalWordsLearned',
-  totalReviews: 'totalReviews',
-  currentStreak: 'currentStreak',
-  longestStreak: 'longestStreak',
-  totalStudyTime: 'totalStudyTime',
-  lastStudyDate: 'lastStudyDate',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
 exports.Prisma.AnalysisScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
@@ -250,91 +295,14 @@ exports.Prisma.AnalysisScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  word: 'word',
-  reading: 'reading',
-  romaji: 'romaji',
-  meaning: 'meaning',
-  translation: 'translation',
-  partOfSpeech: 'partOfSpeech',
-  sentence: 'sentence',
-  masteryLevel: 'masteryLevel',
-  reviewCount: 'reviewCount',
-  lastReviewedAt: 'lastReviewedAt',
-  analyzedAt: 'analyzedAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.UserStatsScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  totalAnalyses: 'totalAnalyses',
-  totalTranslations: 'totalTranslations',
-  totalWords: 'totalWords',
-  learningStreak: 'learningStreak',
-  streakDays: 'streakDays',
-  lastActivityDate: 'lastActivityDate',
-  lastActiveAt: 'lastActiveAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.CourseScalarFieldEnum = {
-  id: 'id',
-  slug: 'slug',
-  title: 'title',
-  description: 'description',
-  level: 'level',
-  order: 'order',
-  status: 'status',
-  published: 'published',
-  estimatedHours: 'estimatedHours',
-  thumbnail: 'thumbnail',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.LessonScalarFieldEnum = {
-  id: 'id',
-  courseId: 'courseId',
-  slug: 'slug',
-  title: 'title',
-  type: 'type',
-  content: 'content',
-  order: 'order',
-  duration: 'duration',
-  published: 'published',
-  isFree: 'isFree',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.PlacementQuestionScalarFieldEnum = {
-  id: 'id',
-  level: 'level',
-  skillType: 'skillType',
-  difficulty: 'difficulty',
-  question: 'question',
-  questionText: 'questionText',
-  questionTextChinese: 'questionTextChinese',
-  questionType: 'questionType',
-  passageText: 'passageText',
-  audioUrl: 'audioUrl',
-  options: 'options',
-  correctAnswerId: 'correctAnswerId',
-  explanation: 'explanation',
-  order: 'order',
-  isActive: 'isActive',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.NullableJsonNullValueInput = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull
 };
 
 exports.Prisma.JsonNullValueInput = {
@@ -356,12 +324,6 @@ exports.Prisma.JsonNullValueFilter = {
   JsonNull: Prisma.JsonNull,
   AnyNull: Prisma.AnyNull
 };
-exports.AuthProvider = exports.$Enums.AuthProvider = {
-  LOCAL: 'LOCAL',
-  GOOGLE: 'GOOGLE',
-  FACEBOOK: 'FACEBOOK'
-};
-
 exports.SubscriptionTier = exports.$Enums.SubscriptionTier = {
   FREE: 'FREE',
   PRO: 'PRO',
@@ -403,60 +365,21 @@ exports.CreditTransactionType = exports.$Enums.CreditTransactionType = {
   BONUS: 'BONUS'
 };
 
-exports.FeatureType = exports.$Enums.FeatureType = {
-  BASIC_VOCABULARY: 'BASIC_VOCABULARY',
-  TRAVEL_PACKS: 'TRAVEL_PACKS',
-  MOVIE_PACKS: 'MOVIE_PACKS',
-  DRAMA_PACKS: 'DRAMA_PACKS',
-  COMIC_PACKS: 'COMIC_PACKS',
-  JLPT_PREP: 'JLPT_PREP',
-  JLPT_MOCK_EXAMS: 'JLPT_MOCK_EXAMS',
-  SRS_SYSTEM: 'SRS_SYSTEM',
-  ADVANCED_ANALYSIS: 'ADVANCED_ANALYSIS'
-};
-
-exports.PackCategory = exports.$Enums.PackCategory = {
-  VOCABULARY: 'VOCABULARY',
-  TRAVEL: 'TRAVEL',
-  MOVIE: 'MOVIE',
-  DRAMA: 'DRAMA',
-  COMIC: 'COMIC',
-  JLPT_N5: 'JLPT_N5',
-  JLPT_N4: 'JLPT_N4',
-  JLPT_N3: 'JLPT_N3',
-  JLPT_N2: 'JLPT_N2',
-  JLPT_N1: 'JLPT_N1'
-};
-
-exports.VocabularyLevel = exports.$Enums.VocabularyLevel = {
-  LEARNING: 'LEARNING',
-  REVIEWING: 'REVIEWING',
-  MASTERED: 'MASTERED'
-};
-
-exports.CourseStatus = exports.$Enums.CourseStatus = {
-  DRAFT: 'DRAFT',
-  PUBLISHED: 'PUBLISHED',
-  ARCHIVED: 'ARCHIVED'
-};
-
 exports.Prisma.ModelName = {
   User: 'User',
+  AnalyzedVocabulary: 'AnalyzedVocabulary',
+  Course: 'Course',
+  Lesson: 'Lesson',
+  PlacementQuestion: 'PlacementQuestion',
+  LessonNotification: 'LessonNotification',
+  PlacementTestAnswer: 'PlacementTestAnswer',
+  PlacementTestAttempt: 'PlacementTestAttempt',
+  UserFlashcard: 'UserFlashcard',
+  UserLessonProgress: 'UserLessonProgress',
   Subscription: 'Subscription',
   Payment: 'Payment',
   CreditTransaction: 'CreditTransaction',
-  FeatureAccess: 'FeatureAccess',
-  WordPack: 'WordPack',
-  Word: 'Word',
-  UserPackProgress: 'UserPackProgress',
-  Vocabulary: 'Vocabulary',
-  LearningStats: 'LearningStats',
-  Analysis: 'Analysis',
-  AnalyzedVocabulary: 'AnalyzedVocabulary',
-  UserStats: 'UserStats',
-  Course: 'Course',
-  Lesson: 'Lesson',
-  PlacementQuestion: 'PlacementQuestion'
+  Analysis: 'Analysis'
 };
 /**
  * Create the Client
@@ -466,10 +389,10 @@ const config = {
   "clientVersion": "7.3.0",
   "engineVersion": "9d6ad21cbbceab97458517b147a6a09ff43aa735",
   "activeProvider": "postgresql",
-  "inlineSchema": "// Prisma Schema for Japanese Analyzer\n// Subscription & Payment System with PostgreSQL\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\n// ============================================\n// USER & AUTHENTICATION\n// ============================================\n\nenum AuthProvider {\n  LOCAL\n  GOOGLE\n  FACEBOOK\n}\n\nenum SubscriptionTier {\n  FREE\n  PRO\n  PREMIUM\n}\n\nenum SubscriptionStatus {\n  ACTIVE\n  PAST_DUE\n  CANCELED\n  INCOMPLETE\n  TRIALING\n}\n\nmodel User {\n  id         String       @id @default(cuid())\n  email      String       @unique\n  username   String?      @unique\n  password   String? // Nullable for OAuth users\n  provider   AuthProvider @default(LOCAL)\n  providerId String?\n\n  // Subscription fields\n  subscriptionTier   SubscriptionTier @default(FREE)\n  credits            Int              @default(0)\n  stripeCustomerId   String?          @unique\n  subscriptionExpiry DateTime?\n\n  // Timestamps\n  createdAt   DateTime  @default(now())\n  updatedAt   DateTime  @updatedAt\n  lastLoginAt DateTime?\n\n  // Relations\n  subscriptions      Subscription[]\n  payments           Payment[]\n  creditTransactions CreditTransaction[]\n  userPackProgress   UserPackProgress[]\n  vocabulary         Vocabulary[]\n  learningStats      LearningStats[]\n  analyses           Analysis[]\n\n  @@index([email])\n  @@index([stripeCustomerId])\n  @@index([subscriptionTier])\n}\n\n// ============================================\n// SUBSCRIPTION MANAGEMENT\n// ============================================\n\nmodel Subscription {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Subscription details\n  tier   SubscriptionTier\n  status SubscriptionStatus @default(ACTIVE)\n\n  // Stripe fields\n  stripeSubscriptionId String? @unique\n  stripePriceId        String?\n  stripeProductId      String?\n\n  // Billing\n  billingPeriod      String // 'monthly' or 'yearly'\n  currentPeriodStart DateTime?\n  currentPeriodEnd   DateTime?\n  cancelAtPeriodEnd  Boolean   @default(false)\n  canceledAt         DateTime?\n\n  // Credits\n  monthlyCredits Int @default(0) // Credits allocated per month\n\n  // Timestamps\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@index([userId])\n  @@index([stripeSubscriptionId])\n  @@index([status])\n}\n\n// ============================================\n// PAYMENT PROCESSING\n// ============================================\n\nenum PaymentMethod {\n  CARD\n  ALIPAY\n  WECHAT_PAY\n}\n\nenum PaymentStatus {\n  PENDING\n  SUCCEEDED\n  FAILED\n  REFUNDED\n}\n\nenum PaymentType {\n  SUBSCRIPTION\n  CREDIT_TOPUP\n  ONE_TIME\n}\n\nmodel Payment {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Payment details\n  amount        Decimal       @db.Decimal(10, 2)\n  currency      String        @default(\"usd\")\n  paymentMethod PaymentMethod\n  status        PaymentStatus @default(PENDING)\n  type          PaymentType\n\n  // Stripe fields\n  stripePaymentIntentId String? @unique\n  stripeInvoiceId       String? @unique\n\n  // Additional payment provider IDs (for Alipay/WeChat)\n  externalPaymentId String?\n\n  // Related entities\n  subscriptionId String?\n  creditAmount   Int? // If payment was for credits\n\n  // Timestamps\n  createdAt DateTime  @default(now())\n  updatedAt DateTime  @updatedAt\n  paidAt    DateTime?\n\n  @@index([userId])\n  @@index([stripePaymentIntentId])\n  @@index([status])\n  @@index([createdAt])\n}\n\n// ============================================\n// CREDIT SYSTEM\n// ============================================\n\nenum CreditTransactionType {\n  PURCHASE // User bought credits\n  MONTHLY_ALLOCATION // Monthly subscription credits\n  DEDUCTION // Used credits for feature\n  REFUND // Credits refunded\n  BONUS // Bonus credits from promotion\n}\n\nmodel CreditTransaction {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Transaction details\n  amount       Int // Positive for additions, negative for deductions\n  balanceAfter Int // Balance after this transaction\n  type         CreditTransactionType\n  description  String?\n\n  // Related entities\n  paymentId       String? // If from purchase\n  featureType     String? // e.g., 'premium_pack', 'jlpt_exam'\n  relatedEntityId String? // ID of pack or exam\n\n  // Timestamps\n  createdAt DateTime @default(now())\n\n  @@index([userId])\n  @@index([createdAt])\n  @@index([type])\n}\n\n// ============================================\n// FEATURE ACCESS CONTROL\n// ============================================\n\nenum FeatureType {\n  BASIC_VOCABULARY\n  TRAVEL_PACKS\n  MOVIE_PACKS\n  DRAMA_PACKS\n  COMIC_PACKS\n  JLPT_PREP\n  JLPT_MOCK_EXAMS\n  SRS_SYSTEM\n  ADVANCED_ANALYSIS\n}\n\nmodel FeatureAccess {\n  id          String      @id @default(cuid())\n  featureType FeatureType @unique\n\n  // Tier requirements\n  minTier SubscriptionTier\n\n  // Alternative: Credit cost if user doesn't have tier\n  creditCost Int?\n\n  // Feature limits by tier\n  freeLimitDaily    Int?\n  proLimitDaily     Int?\n  premiumLimitDaily Int?\n\n  // Metadata\n  description String?\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n\n  @@index([featureType])\n}\n\n// ============================================\n// LEARNING CONTENT\n// ============================================\n\nenum PackCategory {\n  VOCABULARY\n  TRAVEL\n  MOVIE\n  DRAMA\n  COMIC\n  JLPT_N5\n  JLPT_N4\n  JLPT_N3\n  JLPT_N2\n  JLPT_N1\n}\n\nmodel WordPack {\n  id          String       @id @default(cuid())\n  packId      String       @unique\n  title       String\n  description String?\n  category    PackCategory\n\n  // Access control\n  requiredTier SubscriptionTier @default(FREE)\n  creditCost   Int? // Alternative cost in credits\n\n  // Pack metadata\n  wordCount  Int      @default(0)\n  difficulty String? // 'beginner', 'intermediate', 'advanced'\n  tags       String[]\n\n  // Timestamps\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  // Relations\n  words        Word[]\n  userProgress UserPackProgress[]\n\n  @@index([packId])\n  @@index([category])\n  @@index([requiredTier])\n}\n\nmodel Word {\n  id     String   @id @default(cuid())\n  packId String\n  pack   WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)\n\n  // Word details\n  word               String\n  reading            String? // Hiragana reading\n  romaji             String? // Romanized reading\n  meaning            String // Chinese translation\n  partOfSpeech       String?\n  example            String? // Example sentence\n  exampleTranslation String?\n\n  // Timestamps\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  // Relations\n  vocabulary Vocabulary[]\n\n  @@index([packId])\n  @@index([word])\n}\n\n// ============================================\n// USER PROGRESS & LEARNING\n// ============================================\n\nmodel UserPackProgress {\n  id     String   @id @default(cuid())\n  userId String\n  user   User     @relation(fields: [userId], references: [id], onDelete: Cascade)\n  packId String\n  pack   WordPack @relation(fields: [packId], references: [id], onDelete: Cascade)\n\n  // Progress tracking\n  wordsLearned  Int       @default(0)\n  wordsReviewed Int       @default(0)\n  accuracy      Decimal   @default(0) @db.Decimal(5, 2)\n  lastStudiedAt DateTime?\n\n  // Timestamps\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@unique([userId, packId])\n  @@index([userId])\n  @@index([packId])\n}\n\nenum VocabularyLevel {\n  LEARNING\n  REVIEWING\n  MASTERED\n}\n\nmodel Vocabulary {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n  wordId String\n  word   Word   @relation(fields: [wordId], references: [id], onDelete: Cascade)\n\n  // SRS fields\n  level        VocabularyLevel @default(LEARNING)\n  repetitions  Int             @default(0)\n  easeFactor   Decimal         @default(2.5) @db.Decimal(5, 2)\n  interval     Int             @default(1) // Days until next review\n  nextReviewAt DateTime?\n\n  // Performance\n  correctCount   Int @default(0)\n  incorrectCount Int @default(0)\n\n  // Timestamps\n  createdAt      DateTime  @default(now())\n  updatedAt      DateTime  @updatedAt\n  lastReviewedAt DateTime?\n\n  @@unique([userId, wordId])\n  @@index([userId])\n  @@index([wordId])\n  @@index([nextReviewAt])\n}\n\nmodel LearningStats {\n  id     String @id @default(cuid())\n  userId String @unique\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Statistics\n  totalWordsLearned Int @default(0)\n  totalReviews      Int @default(0)\n  currentStreak     Int @default(0)\n  longestStreak     Int @default(0)\n  totalStudyTime    Int @default(0) // In minutes\n\n  // Timestamps\n  lastStudyDate DateTime?\n  createdAt     DateTime  @default(now())\n  updatedAt     DateTime  @updatedAt\n\n  @@index([userId])\n}\n\n// ============================================\n// ANALYSIS HISTORY\n// ============================================\n\nmodel Analysis {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Analysis data\n  inputText String @db.Text\n  result    Json // Store tokenized analysis\n\n  // Metadata\n  language  String   @default(\"ja\")\n  createdAt DateTime @default(now())\n\n  @@index([userId])\n  @@index([createdAt])\n}\n\n// ============================================\n// ANALYZED VOCABULARY TRACKING\n// ============================================\n\nmodel AnalyzedVocabulary {\n  id             String   @id @default(cuid())\n  userId         String\n  word           String\n  reading        String?\n  romaji         String?\n  meaning        String?\n  translation    String?\n  partOfSpeech   String?\n  sentence       String?  @db.Text\n  masteryLevel   Int      @default(0)\n  reviewCount    Int      @default(1)\n  lastReviewedAt DateTime @default(now())\n  analyzedAt     DateTime @default(now())\n  createdAt      DateTime @default(now())\n  updatedAt      DateTime @updatedAt\n\n  @@unique([userId, word])\n  @@index([userId])\n  @@index([word])\n  @@index([analyzedAt])\n}\n\n// ============================================\n// USER STATISTICS\n// ============================================\n\nmodel UserStats {\n  id                String    @id @default(cuid())\n  userId            String    @unique\n  totalAnalyses     Int       @default(0)\n  totalTranslations Int       @default(0)\n  totalWords        Int       @default(0)\n  learningStreak    Int       @default(0)\n  streakDays        Int       @default(0)\n  lastActivityDate  DateTime?\n  lastActiveAt      DateTime?\n  createdAt         DateTime  @default(now())\n  updatedAt         DateTime  @updatedAt\n\n  @@index([userId])\n}\n\n// ============================================\n// LEARNING MANAGEMENT SYSTEM (LMS)\n// ============================================\n\nenum CourseStatus {\n  DRAFT\n  PUBLISHED\n  ARCHIVED\n}\n\nmodel Course {\n  id             String       @id @default(cuid())\n  slug           String       @unique\n  title          String\n  description    String?      @db.Text\n  level          String // N5, N4, N3, N2, N1\n  order          Int          @default(0)\n  status         CourseStatus @default(DRAFT)\n  published      Boolean      @default(false)\n  estimatedHours Int?\n  thumbnail      String?\n  createdAt      DateTime     @default(now())\n  updatedAt      DateTime     @updatedAt\n\n  // Relations\n  lessons Lesson[]\n\n  @@index([slug])\n  @@index([level])\n  @@index([status])\n  @@index([published])\n}\n\nmodel Lesson {\n  id        String   @id @default(cuid())\n  courseId  String\n  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)\n  slug      String\n  title     String\n  type      String? // 'lesson', 'quiz', 'review'\n  content   Json // Lesson content (markdown, exercises, etc.)\n  order     Int      @default(0)\n  duration  Int? // Estimated minutes\n  published Boolean  @default(false)\n  isFree    Boolean  @default(false)\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@unique([courseId, slug])\n  @@index([courseId])\n  @@index([slug])\n  @@index([type])\n  @@index([published])\n}\n\n// ============================================\n// PLACEMENT TEST\n// ============================================\n\nmodel PlacementQuestion {\n  id                  String   @id @default(cuid())\n  level               String // N5, N4, N3, N2, N1\n  skillType           String? // 'vocabulary', 'grammar', 'reading', 'listening'\n  difficulty          Int      @default(1) // 1-5 difficulty scale\n  question            String   @db.Text\n  questionText        String?  @db.Text\n  questionTextChinese String?  @db.Text\n  questionType        String // 'vocabulary', 'grammar', 'reading'\n  passageText         String?  @db.Text\n  audioUrl            String?\n  options             Json // Array of answer options\n  correctAnswerId     String\n  explanation         String?  @db.Text\n  order               Int      @default(0)\n  isActive            Boolean  @default(true)\n  createdAt           DateTime @default(now())\n  updatedAt           DateTime @updatedAt\n\n  @@index([level])\n  @@index([isActive])\n  @@index([difficulty])\n}\n"
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\n// ============================================\n// ENUMS\n// ============================================\n\nenum SubscriptionTier {\n  FREE\n  PRO\n  PREMIUM\n}\n\nenum SubscriptionStatus {\n  ACTIVE\n  PAST_DUE\n  CANCELED\n  INCOMPLETE\n  TRIALING\n}\n\nenum PaymentMethod {\n  CARD\n  ALIPAY\n  WECHAT_PAY\n}\n\nenum PaymentStatus {\n  PENDING\n  SUCCEEDED\n  FAILED\n  REFUNDED\n}\n\nenum PaymentType {\n  SUBSCRIPTION\n  CREDIT_TOPUP\n  ONE_TIME\n}\n\nenum CreditTransactionType {\n  PURCHASE // User bought credits\n  MONTHLY_ALLOCATION // Monthly subscription credits\n  DEDUCTION // Used credits for feature\n  REFUND // Credits refunded\n  BONUS // Bonus credits from promotion\n}\n\nmodel User {\n  id                   String                 @id @default(cuid())\n  email                String                 @unique\n  passwordHash         String?\n  displayName          String?\n  subscriptionTier     String                 @default(\"FREE\")\n  credits              Int                    @default(0)\n  customerId           String?                @unique\n  subscriptionId       String?\n  subscriptionExpiry   DateTime?\n  createdAt            DateTime               @default(now())\n  updatedAt            DateTime               @updatedAt\n  lastActivityDate     DateTime?\n  learningStreak       Int                    @default(0)\n  totalAnalyses        Int                    @default(0)\n  wordsLearned         Int                    @default(0)\n  AnalyzedVocabulary   AnalyzedVocabulary[]\n  PlacementTestAttempt PlacementTestAttempt[]\n  UserFlashcard        UserFlashcard[]\n  UserLessonProgress   UserLessonProgress[]\n  payments             Payment[]\n  creditTransactions   CreditTransaction[]\n  subscriptions        Subscription[]\n\n  @@index([email])\n  @@index([subscriptionTier])\n}\n\nmodel AnalyzedVocabulary {\n  id           String   @id @default(cuid())\n  userId       String\n  word         String\n  reading      String?\n  romaji       String?\n  partOfSpeech String?\n  translation  String?\n  sentence     String?\n  analyzedAt   DateTime @default(now())\n  reviewCount  Int      @default(0)\n  masteryLevel Int      @default(0)\n  User         User     @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@index([userId])\n  @@index([word])\n  @@index([userId, word])\n}\n\nmodel Course {\n  id                  String   @id @default(cuid())\n  level               String\n  title               String\n  description         String?\n  totalLessons        Int\n  estimatedHours      Int?\n  requiredTier        String   @default(\"FREE\")\n  creditCostPerLesson Int      @default(0)\n  isPublished         Boolean  @default(false)\n  createdAt           DateTime @default(now())\n  updatedAt           DateTime @updatedAt\n  lessons             Lesson[]\n\n  @@index([level])\n  @@index([isPublished])\n}\n\nmodel Lesson {\n  id                 String               @id @default(cuid())\n  courseId           String\n  lessonNumber       Int\n  unitNumber         Int?\n  title              String\n  description        String?\n  vocabularyItems    Json?\n  grammarPoints      Json?\n  practiceExercises  Json?\n  isQuiz             Boolean              @default(false)\n  estimatedMinutes   Int                  @default(30)\n  createdAt          DateTime             @default(now())\n  updatedAt          DateTime             @updatedAt\n  course             Course               @relation(fields: [courseId], references: [id], onDelete: Cascade)\n  UserLessonProgress UserLessonProgress[]\n\n  @@unique([courseId, lessonNumber])\n  @@index([courseId, lessonNumber])\n}\n\nmodel PlacementQuestion {\n  id                  String   @id @default(cuid())\n  level               String\n  skillType           String\n  difficulty          Int\n  questionText        String\n  questionTextChinese String?\n  passageText         String?\n  options             Json\n  correctAnswerId     String\n  explanation         String?\n  audioUrl            String?\n  timesShown          Int      @default(0)\n  timesCorrect        Int      @default(0)\n  isActive            Boolean  @default(true)\n  createdAt           DateTime @default(now())\n  updatedAt           DateTime @updatedAt\n\n  @@index([difficulty])\n  @@index([level, skillType, isActive])\n}\n\nmodel LessonNotification {\n  id         String    @id\n  email      String\n  lessonId   String\n  notifiedAt DateTime?\n  createdAt  DateTime  @default(now())\n\n  @@index([email])\n  @@index([lessonId])\n  @@index([notifiedAt])\n}\n\nmodel PlacementTestAnswer {\n  id                   String               @id\n  attemptId            String\n  questionId           String\n  selectedAnswerId     String\n  isCorrect            Boolean\n  timeSpentSeconds     Int\n  answeredAt           DateTime             @default(now())\n  PlacementTestAttempt PlacementTestAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)\n\n  @@index([attemptId])\n  @@index([questionId])\n}\n\nmodel PlacementTestAttempt {\n  id                    String                @id\n  userId                String\n  startedAt             DateTime              @default(now())\n  completedAt           DateTime?\n  initialLevel          String?\n  finalRecommendedLevel String?\n  skillBreakdown        Json?\n  totalQuestions        Int\n  totalCorrect          Int\n  testDurationSeconds   Int?\n  PlacementTestAnswer   PlacementTestAnswer[]\n  User                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@index([completedAt])\n  @@index([userId])\n}\n\nmodel UserFlashcard {\n  id              String    @id\n  userId          String\n  word            String\n  reading         String?\n  translation     String?\n  exampleSentence String?\n  audioUrl        String?\n  sourceLessonId  String?\n  timesReviewed   Int       @default(0)\n  lastReviewedAt  DateTime?\n  nextReviewAt    DateTime?\n  easeFactor      Float     @default(2.5)\n  interval        Int       @default(0)\n  createdAt       DateTime  @default(now())\n  User            User      @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@index([userId])\n  @@index([userId, nextReviewAt])\n}\n\nmodel UserLessonProgress {\n  id                  String    @id\n  userId              String\n  lessonId            String\n  vocabularyCompleted Boolean   @default(false)\n  grammarCompleted    Boolean   @default(false)\n  practiceCompleted   Boolean   @default(false)\n  practiceScore       Decimal?  @db.Decimal(5, 2)\n  isCompleted         Boolean   @default(false)\n  completedAt         DateTime?\n  lastAccessedAt      DateTime  @default(now())\n  currentTab          String?\n  scrollPosition      Int?\n  Lesson              Lesson    @relation(fields: [lessonId], references: [id], onDelete: Cascade)\n  User                User      @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@unique([userId, lessonId])\n  @@index([lessonId])\n  @@index([userId])\n}\n\n// ============================================\n// SUBSCRIPTION MANAGEMENT\n// ============================================\n\nmodel Subscription {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Subscription details\n  tier   SubscriptionTier\n  status SubscriptionStatus @default(ACTIVE)\n\n  // Stripe fields\n  stripeSubscriptionId String? @unique\n  stripePriceId        String?\n  stripeProductId      String?\n\n  // Billing\n  billingPeriod      String // 'monthly' or 'yearly'\n  currentPeriodStart DateTime?\n  currentPeriodEnd   DateTime?\n  cancelAtPeriodEnd  Boolean   @default(false)\n  canceledAt         DateTime?\n\n  // Credits\n  monthlyCredits Int @default(0) // Credits allocated per month\n\n  // Timestamps\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@index([userId])\n  @@index([stripeSubscriptionId])\n  @@index([status])\n}\n\n// ============================================\n// PAYMENT PROCESSING\n// ============================================\n\nmodel Payment {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Payment details\n  amount        Decimal       @db.Decimal(10, 2)\n  currency      String        @default(\"usd\")\n  paymentMethod PaymentMethod\n  status        PaymentStatus @default(PENDING)\n  type          PaymentType\n\n  // Stripe fields\n  stripePaymentIntentId String? @unique\n  stripeInvoiceId       String? @unique\n\n  // Additional payment provider IDs (for Alipay/WeChat)\n  externalPaymentId String?\n\n  // Related entities\n  subscriptionId String?\n  creditAmount   Int? // If payment was for credits\n\n  // Timestamps\n  createdAt DateTime  @default(now())\n  updatedAt DateTime  @updatedAt\n  paidAt    DateTime?\n\n  @@index([userId])\n  @@index([stripePaymentIntentId])\n  @@index([status])\n  @@index([createdAt])\n}\n\n// ============================================\n// CREDIT SYSTEM\n// ============================================\n\nmodel CreditTransaction {\n  id     String @id @default(cuid())\n  userId String\n  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  // Transaction details\n  amount       Int // Positive for additions, negative for deductions\n  balanceAfter Int // Balance after this transaction\n  type         CreditTransactionType\n  description  String?\n\n  // Related entities\n  paymentId       String? // If from purchase\n  featureType     String? // e.g., 'premium_pack', 'jlpt_exam'\n  relatedEntityId String? // ID of pack or exam\n\n  // Timestamps\n  createdAt DateTime @default(now())\n\n  @@index([userId])\n  @@index([createdAt])\n  @@index([type])\n}\n\n// ============================================\n// ANALYSIS HISTORY\n// ============================================\n\nmodel Analysis {\n  id     String @id @default(cuid())\n  userId String\n\n  // Analysis data\n  inputText String @db.Text\n  result    Json // Store tokenized analysis\n\n  // Metadata\n  language  String   @default(\"ja\")\n  createdAt DateTime @default(now())\n\n  @@index([userId])\n  @@index([createdAt])\n}\n"
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"username\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"password\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"provider\",\"kind\":\"enum\",\"type\":\"AuthProvider\"},{\"name\":\"providerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionTier\",\"kind\":\"enum\",\"type\":\"SubscriptionTier\"},{\"name\":\"credits\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"stripeCustomerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionExpiry\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastLoginAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"subscriptions\",\"kind\":\"object\",\"type\":\"Subscription\",\"relationName\":\"SubscriptionToUser\"},{\"name\":\"payments\",\"kind\":\"object\",\"type\":\"Payment\",\"relationName\":\"PaymentToUser\"},{\"name\":\"creditTransactions\",\"kind\":\"object\",\"type\":\"CreditTransaction\",\"relationName\":\"CreditTransactionToUser\"},{\"name\":\"userPackProgress\",\"kind\":\"object\",\"type\":\"UserPackProgress\",\"relationName\":\"UserToUserPackProgress\"},{\"name\":\"vocabulary\",\"kind\":\"object\",\"type\":\"Vocabulary\",\"relationName\":\"UserToVocabulary\"},{\"name\":\"learningStats\",\"kind\":\"object\",\"type\":\"LearningStats\",\"relationName\":\"LearningStatsToUser\"},{\"name\":\"analyses\",\"kind\":\"object\",\"type\":\"Analysis\",\"relationName\":\"AnalysisToUser\"}],\"dbName\":null},\"Subscription\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"SubscriptionToUser\"},{\"name\":\"tier\",\"kind\":\"enum\",\"type\":\"SubscriptionTier\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"SubscriptionStatus\"},{\"name\":\"stripeSubscriptionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripePriceId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripeProductId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"billingPeriod\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"currentPeriodStart\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"currentPeriodEnd\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"cancelAtPeriodEnd\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"canceledAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"monthlyCredits\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Payment\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PaymentToUser\"},{\"name\":\"amount\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"currency\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"paymentMethod\",\"kind\":\"enum\",\"type\":\"PaymentMethod\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"PaymentStatus\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"PaymentType\"},{\"name\":\"stripePaymentIntentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripeInvoiceId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"externalPaymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"creditAmount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"paidAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"CreditTransaction\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"CreditTransactionToUser\"},{\"name\":\"amount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"balanceAfter\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"CreditTransactionType\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"paymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"featureType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"relatedEntityId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"FeatureAccess\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"featureType\",\"kind\":\"enum\",\"type\":\"FeatureType\"},{\"name\":\"minTier\",\"kind\":\"enum\",\"type\":\"SubscriptionTier\"},{\"name\":\"creditCost\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"freeLimitDaily\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"proLimitDaily\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"premiumLimitDaily\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"WordPack\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"packId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"category\",\"kind\":\"enum\",\"type\":\"PackCategory\"},{\"name\":\"requiredTier\",\"kind\":\"enum\",\"type\":\"SubscriptionTier\"},{\"name\":\"creditCost\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"wordCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"difficulty\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"tags\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"words\",\"kind\":\"object\",\"type\":\"Word\",\"relationName\":\"WordToWordPack\"},{\"name\":\"userProgress\",\"kind\":\"object\",\"type\":\"UserPackProgress\",\"relationName\":\"UserPackProgressToWordPack\"}],\"dbName\":null},\"Word\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"packId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pack\",\"kind\":\"object\",\"type\":\"WordPack\",\"relationName\":\"WordToWordPack\"},{\"name\":\"word\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"reading\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"romaji\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"meaning\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"partOfSpeech\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"example\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"exampleTranslation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"vocabulary\",\"kind\":\"object\",\"type\":\"Vocabulary\",\"relationName\":\"VocabularyToWord\"}],\"dbName\":null},\"UserPackProgress\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"UserToUserPackProgress\"},{\"name\":\"packId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pack\",\"kind\":\"object\",\"type\":\"WordPack\",\"relationName\":\"UserPackProgressToWordPack\"},{\"name\":\"wordsLearned\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"wordsReviewed\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"accuracy\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"lastStudiedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Vocabulary\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"UserToVocabulary\"},{\"name\":\"wordId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"word\",\"kind\":\"object\",\"type\":\"Word\",\"relationName\":\"VocabularyToWord\"},{\"name\":\"level\",\"kind\":\"enum\",\"type\":\"VocabularyLevel\"},{\"name\":\"repetitions\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"easeFactor\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"interval\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"nextReviewAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"correctCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"incorrectCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastReviewedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"LearningStats\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"LearningStatsToUser\"},{\"name\":\"totalWordsLearned\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalReviews\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"currentStreak\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"longestStreak\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalStudyTime\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"lastStudyDate\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Analysis\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"AnalysisToUser\"},{\"name\":\"inputText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"result\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"language\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"AnalyzedVocabulary\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"word\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"reading\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"romaji\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"meaning\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"translation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"partOfSpeech\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"sentence\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"masteryLevel\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"reviewCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"lastReviewedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"analyzedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"UserStats\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"totalAnalyses\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalTranslations\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalWords\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"learningStreak\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"streakDays\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"lastActivityDate\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastActiveAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Course\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"level\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"order\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"CourseStatus\"},{\"name\":\"published\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"estimatedHours\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"thumbnail\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lessons\",\"kind\":\"object\",\"type\":\"Lesson\",\"relationName\":\"CourseToLesson\"}],\"dbName\":null},\"Lesson\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"courseId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"course\",\"kind\":\"object\",\"type\":\"Course\",\"relationName\":\"CourseToLesson\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"type\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"content\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"order\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"duration\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"published\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"isFree\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"PlacementQuestion\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"level\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"skillType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"difficulty\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"question\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"questionText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"questionTextChinese\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"questionType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"passageText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"audioUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"options\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"correctAnswerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"explanation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"order\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"isActive\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"passwordHash\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"displayName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionTier\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"credits\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"customerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionExpiry\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastActivityDate\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"learningStreak\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalAnalyses\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"wordsLearned\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"AnalyzedVocabulary\",\"kind\":\"object\",\"type\":\"AnalyzedVocabulary\",\"relationName\":\"AnalyzedVocabularyToUser\"},{\"name\":\"PlacementTestAttempt\",\"kind\":\"object\",\"type\":\"PlacementTestAttempt\",\"relationName\":\"PlacementTestAttemptToUser\"},{\"name\":\"UserFlashcard\",\"kind\":\"object\",\"type\":\"UserFlashcard\",\"relationName\":\"UserToUserFlashcard\"},{\"name\":\"UserLessonProgress\",\"kind\":\"object\",\"type\":\"UserLessonProgress\",\"relationName\":\"UserToUserLessonProgress\"},{\"name\":\"payments\",\"kind\":\"object\",\"type\":\"Payment\",\"relationName\":\"PaymentToUser\"},{\"name\":\"creditTransactions\",\"kind\":\"object\",\"type\":\"CreditTransaction\",\"relationName\":\"CreditTransactionToUser\"},{\"name\":\"subscriptions\",\"kind\":\"object\",\"type\":\"Subscription\",\"relationName\":\"SubscriptionToUser\"}],\"dbName\":null},\"AnalyzedVocabulary\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"word\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"reading\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"romaji\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"partOfSpeech\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"translation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"sentence\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"analyzedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"reviewCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"masteryLevel\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"User\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"AnalyzedVocabularyToUser\"}],\"dbName\":null},\"Course\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"level\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"totalLessons\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"estimatedHours\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"requiredTier\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"creditCostPerLesson\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"isPublished\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lessons\",\"kind\":\"object\",\"type\":\"Lesson\",\"relationName\":\"CourseToLesson\"}],\"dbName\":null},\"Lesson\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"courseId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"lessonNumber\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"unitNumber\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"vocabularyItems\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"grammarPoints\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"practiceExercises\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"isQuiz\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"estimatedMinutes\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"course\",\"kind\":\"object\",\"type\":\"Course\",\"relationName\":\"CourseToLesson\"},{\"name\":\"UserLessonProgress\",\"kind\":\"object\",\"type\":\"UserLessonProgress\",\"relationName\":\"LessonToUserLessonProgress\"}],\"dbName\":null},\"PlacementQuestion\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"level\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"skillType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"difficulty\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"questionText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"questionTextChinese\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"passageText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"options\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"correctAnswerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"explanation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"audioUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"timesShown\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"timesCorrect\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"isActive\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"LessonNotification\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"lessonId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"notifiedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"PlacementTestAnswer\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"attemptId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"questionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"selectedAnswerId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"isCorrect\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"timeSpentSeconds\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"answeredAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"PlacementTestAttempt\",\"kind\":\"object\",\"type\":\"PlacementTestAttempt\",\"relationName\":\"PlacementTestAnswerToPlacementTestAttempt\"}],\"dbName\":null},\"PlacementTestAttempt\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"startedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"completedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"initialLevel\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"finalRecommendedLevel\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"skillBreakdown\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"totalQuestions\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalCorrect\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"testDurationSeconds\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"PlacementTestAnswer\",\"kind\":\"object\",\"type\":\"PlacementTestAnswer\",\"relationName\":\"PlacementTestAnswerToPlacementTestAttempt\"},{\"name\":\"User\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PlacementTestAttemptToUser\"}],\"dbName\":null},\"UserFlashcard\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"word\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"reading\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"translation\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"exampleSentence\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"audioUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"sourceLessonId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"timesReviewed\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"lastReviewedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"nextReviewAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"easeFactor\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"interval\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"User\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"UserToUserFlashcard\"}],\"dbName\":null},\"UserLessonProgress\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"lessonId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"vocabularyCompleted\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"grammarCompleted\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"practiceCompleted\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"practiceScore\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"isCompleted\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"completedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"lastAccessedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"currentTab\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"scrollPosition\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"Lesson\",\"kind\":\"object\",\"type\":\"Lesson\",\"relationName\":\"LessonToUserLessonProgress\"},{\"name\":\"User\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"UserToUserLessonProgress\"}],\"dbName\":null},\"Subscription\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"SubscriptionToUser\"},{\"name\":\"tier\",\"kind\":\"enum\",\"type\":\"SubscriptionTier\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"SubscriptionStatus\"},{\"name\":\"stripeSubscriptionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripePriceId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripeProductId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"billingPeriod\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"currentPeriodStart\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"currentPeriodEnd\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"cancelAtPeriodEnd\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"canceledAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"monthlyCredits\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Payment\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PaymentToUser\"},{\"name\":\"amount\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"currency\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"paymentMethod\",\"kind\":\"enum\",\"type\":\"PaymentMethod\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"PaymentStatus\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"PaymentType\"},{\"name\":\"stripePaymentIntentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"stripeInvoiceId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"externalPaymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"subscriptionId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"creditAmount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"paidAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"CreditTransaction\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"CreditTransactionToUser\"},{\"name\":\"amount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"balanceAfter\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"CreditTransactionType\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"paymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"featureType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"relatedEntityId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Analysis\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"inputText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"result\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"language\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.compilerWasm = {
       getRuntime: async () => require('./query_compiler_fast_bg.js'),
