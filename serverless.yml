@@ -11,10 +11,6 @@ build:
     banner:
       js: "import { createRequire } from 'module'; const require = createRequire(import.meta.url);"
     external:
-      - '@prisma/adapter-pg'
-      - '@prisma/driver-adapter-utils'
-      - '@prisma/client-runtime-utils'
-      - pg
       - pg-native
 
 provider:
