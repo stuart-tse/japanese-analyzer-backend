@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { verifyAccessToken, AccessTokenPayload } from '../utils/jwt.js';
+import { TEXTS } from '../constants/texts.js';
 
 // Use module augmentation that's compatible with Passport's user declaration
 declare module 'express-serve-static-core' {
@@ -14,7 +15,7 @@ declare module 'express-serve-static-core' {
 export function requireAuth(req: Request, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
   if (!authHeader?.startsWith('Bearer ')) {
-    res.status(401).json({ error: { message: '未登录，请先登录' } });
+    res.status(401).json({ error: { message: TEXTS.AUTH.NOT_LOGGED_IN } });
     return;
   }
 
@@ -23,7 +24,7 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
     req.jwtUser = verifyAccessToken(token);
     next();
   } catch {
-    res.status(401).json({ error: { message: '登录已过期，请重新登录' } });
+    res.status(401).json({ error: { message: TEXTS.AUTH.TOKEN_EXPIRED } });
   }
 }
 

@@ -8,6 +8,7 @@ import {
 } from '../utils/jwt.js';
 import { requireAuth } from '../middleware/auth.js';
 import { rateLimit } from '../middleware/rateLimit.js';
+import { TEXTS } from '../constants/texts.js';
 
 const router = Router();
 
@@ -201,11 +202,20 @@ router.get('/me', requireAuth, async (req: Request, res: Response) => {
         email: true,
         provider: true,
         avatar: true,
+        phone: true,
+        role: true,
+        twitter: true,
+        weibo: true,
+        douyin: true,
+        tiktok: true,
+        instagram: true,
+        subscriptionTier: true,
+        credits: true,
         createdAt: true,
       },
     });
     if (!user) {
-      res.status(404).json({ error: { message: '用户不存在' } });
+      res.status(404).json({ error: { message: TEXTS.PROFILE.USER_NOT_FOUND } });
       return;
     }
 
@@ -215,11 +225,20 @@ router.get('/me', requireAuth, async (req: Request, res: Response) => {
       email: user.email,
       provider: user.provider,
       avatar: user.avatar,
+      phone: user.phone,
+      role: user.role,
+      twitter: user.twitter,
+      weibo: user.weibo,
+      douyin: user.douyin,
+      tiktok: user.tiktok,
+      instagram: user.instagram,
+      subscriptionTier: user.subscriptionTier,
+      credits: user.credits,
       createdAt: user.createdAt,
     });
   } catch (error) {
     console.error('Get user error:', error);
-    res.status(500).json({ error: { message: '获取用户信息失败' } });
+    res.status(500).json({ error: { message: TEXTS.PROFILE.FETCH_FAILED } });
   }
 });
 

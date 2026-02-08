@@ -54,27 +54,36 @@ enum CreditTransactionType {
 }
 
 model User {
-  id                   String                 @id @default(cuid())
-  email                String                 @unique
-  passwordHash         String?
-  displayName          String?
-  provider             String                 @default("credentials")
-  providerId           String?
-  avatar               String?
-  phone                String?
-  refreshTokenHash     String?
-  lastLoginAt          DateTime?
-  subscriptionTier     String                 @default("FREE")
-  credits              Int                    @default(0)
-  customerId           String?                @unique
-  subscriptionId       String?
-  subscriptionExpiry   DateTime?
-  createdAt            DateTime               @default(now())
-  updatedAt            DateTime               @updatedAt
-  lastActivityDate     DateTime?
-  learningStreak       Int                    @default(0)
-  totalAnalyses        Int                    @default(0)
-  wordsLearned         Int                    @default(0)
+  id                 String    @id @default(cuid())
+  email              String    @unique
+  passwordHash       String?
+  displayName        String?
+  provider           String    @default("credentials")
+  providerId         String?
+  avatar             String?
+  phone              String?
+  role               String    @default("user") // "user" | "admin"
+  refreshTokenHash   String?
+  lastLoginAt        DateTime?
+  subscriptionTier   String    @default("FREE")
+  credits            Int       @default(0)
+  customerId         String?   @unique
+  subscriptionId     String?
+  subscriptionExpiry DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  lastActivityDate   DateTime?
+  learningStreak     Int       @default(0)
+  totalAnalyses      Int       @default(0)
+  wordsLearned       Int       @default(0)
+
+  // Social links
+  twitter   String?
+  weibo     String?
+  douyin    String?
+  tiktok    String?
+  instagram String?
+
   AnalyzedVocabulary   AnalyzedVocabulary[]
   PlacementTestAttempt PlacementTestAttempt[]
   UserFlashcard        UserFlashcard[]
@@ -85,6 +94,7 @@ model User {
   vocabularies         Vocabulary[]
   userPackProgress     UserPackProgress[]
   learningStats        LearningStats?
+  auditLogs            AuditLog[]
 
   @@unique([provider, providerId])
   @@index([email])
@@ -531,4 +541,25 @@ model GrammarAnalysisCache {
   generatedAt DateTime @default(now())
 
   @@index([inputHash])
+}
+
+// ============================================
+// AUDIT LOG
+// ============================================
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action    String // e.g. "profile.update", "payment_method.delete", "subscription.cancel"
+  entity    String // e.g. "user", "payment_method", "subscription"
+  entityId  String? // ID of the affected entity
+  details   Json? // Additional context (old/new values, metadata)
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
 }

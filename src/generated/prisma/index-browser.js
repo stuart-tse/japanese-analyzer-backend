@@ -129,6 +129,7 @@ exports.Prisma.UserScalarFieldEnum = {
   providerId: 'providerId',
   avatar: 'avatar',
   phone: 'phone',
+  role: 'role',
   refreshTokenHash: 'refreshTokenHash',
   lastLoginAt: 'lastLoginAt',
   subscriptionTier: 'subscriptionTier',
@@ -141,7 +142,12 @@ exports.Prisma.UserScalarFieldEnum = {
   lastActivityDate: 'lastActivityDate',
   learningStreak: 'learningStreak',
   totalAnalyses: 'totalAnalyses',
-  wordsLearned: 'wordsLearned'
+  wordsLearned: 'wordsLearned',
+  twitter: 'twitter',
+  weibo: 'weibo',
+  douyin: 'douyin',
+  tiktok: 'tiktok',
+  instagram: 'instagram'
 };
 
 exports.Prisma.AnalyzedVocabularyScalarFieldEnum = {
@@ -433,6 +439,18 @@ exports.Prisma.GrammarAnalysisCacheScalarFieldEnum = {
   generatedAt: 'generatedAt'
 };
 
+exports.Prisma.AuditLogScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  action: 'action',
+  entity: 'entity',
+  entityId: 'entityId',
+  details: 'details',
+  ipAddress: 'ipAddress',
+  userAgent: 'userAgent',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -526,7 +544,8 @@ exports.Prisma.ModelName = {
   AnalysisCache: 'AnalysisCache',
   WordDetailCache: 'WordDetailCache',
   TranslationCache: 'TranslationCache',
-  GrammarAnalysisCache: 'GrammarAnalysisCache'
+  GrammarAnalysisCache: 'GrammarAnalysisCache',
+  AuditLog: 'AuditLog'
 };
 
 /**

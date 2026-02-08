@@ -25,6 +25,8 @@ import coursesRouter from './courses.js';
 import placementTestRouter from './placementTest.js';
 import analyzedVocabularyRouter from './analyzedVocabulary.js';
 import userStatsRouter from './userStats.js';
+import profileRouter from './profile.js';
+import paymentMethodsRouter from './paymentMethods.js';
 
 const router = Router();
 
@@ -58,10 +60,14 @@ router.use('/packs', packsRouter);
 router.use('/srs', srsRouter);
 router.use('/words', wordExamplesRouter);
 
+// Profile routes (require auth)
+router.use('/me/profile', profileRouter);
+
 // Subscription & Payment routes (require auth)
 router.use('/subscription', subscriptionRouter);
 router.use('/credits', creditsRouter);
 router.use('/payments', asianPaymentsRouter);
+router.use('/payment-methods', paymentMethodsRouter);
 
 // Mobile-optimized routes (require auth)
 router.use('/mobile', mobileRouter);

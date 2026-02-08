@@ -22,6 +22,10 @@ export const stripeMock = {
     list: jest.fn(),
     attach: jest.fn(),
     detach: jest.fn(),
+    retrieve: jest.fn(),
+  },
+  setupIntents: {
+    create: jest.fn(),
   },
   invoices: {
     list: jest.fn(),
