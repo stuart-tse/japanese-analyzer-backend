@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { User } from '../models/User.js';
+import { prisma } from '../config/prisma.js';
 import { hashPassword, comparePassword } from '../utils/password.js';
 import {
   signAccessToken,
@@ -26,39 +26,42 @@ router.post('/register', rateLimit(), async (req: Request, res: Response) => {
       return;
     }
 
-    const existing = await User.findOne({ email });
+    const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
       res.status(409).json({ success: false, message: '该邮箱已被注册' });
       return;
     }
 
     const passwordHash = await hashPassword(password);
-    const user = await User.create({
-      name: name || email.split('@')[0],
-      email,
-      passwordHash,
-      provider: 'credentials',
+    const user = await prisma.user.create({
+      data: {
+        displayName: name || email.split('@')[0],
+        email,
+        passwordHash,
+        provider: 'credentials',
+      },
     });
 
-    const userId = String(user._id);
     const accessToken = signAccessToken({
-      userId,
+      userId: user.id,
       email: user.email,
       provider: user.provider,
     });
-    const refreshToken = signRefreshToken({ userId });
+    const refreshToken = signRefreshToken({ userId: user.id });
 
     // Store refresh token hash
-    user.refreshTokenHash = await hashPassword(refreshToken);
-    await user.save();
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { refreshTokenHash: await hashPassword(refreshToken) },
+    });
 
     res.status(201).json({
       success: true,
       accessToken,
       refreshToken,
       user: {
-        id: user._id,
-        name: user.name,
+        id: user.id,
+        name: user.displayName,
         email: user.email,
         provider: user.provider,
         avatar: user.avatar,
@@ -80,7 +83,9 @@ router.post('/login', rateLimit({ maxTokens: 10, refillRate: 0.5 }), async (req:
       return;
     }
 
-    const user = await User.findOne({ email, provider: 'credentials' });
+    const user = await prisma.user.findFirst({
+      where: { email, provider: 'credentials' },
+    });
     if (!user || !user.passwordHash) {
       res.status(401).json({ success: false, message: '邮箱或密码错误' });
       return;
@@ -92,26 +97,29 @@ router.post('/login', rateLimit({ maxTokens: 10, refillRate: 0.5 }), async (req:
       return;
     }
 
-    const userId = String(user._id);
     const accessToken = signAccessToken({
-      userId,
+      userId: user.id,
       email: user.email,
       provider: user.provider,
     });
-    const refreshToken = signRefreshToken({ userId });
+    const refreshToken = signRefreshToken({ userId: user.id });
 
     // Rotate refresh token
-    user.refreshTokenHash = await hashPassword(refreshToken);
-    user.lastLoginAt = new Date();
-    await user.save();
+    await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        refreshTokenHash: await hashPassword(refreshToken),
+        lastLoginAt: new Date(),
+      },
+    });
 
     res.json({
       success: true,
       accessToken,
       refreshToken,
       user: {
-        id: user._id,
-        name: user.name,
+        id: user.id,
+        name: user.displayName,
         email: user.email,
         provider: user.provider,
         avatar: user.avatar,
@@ -140,7 +148,7 @@ router.post('/refresh', async (req: Request, res: Response) => {
       return;
     }
 
-    const user = await User.findById(payload.userId);
+    const user = await prisma.user.findUnique({ where: { id: payload.userId } });
     if (!user || !user.refreshTokenHash) {
       res.status(401).json({ success: false, message: '用户不存在' });
       return;
@@ -150,23 +158,26 @@ router.post('/refresh', async (req: Request, res: Response) => {
     const valid = await comparePassword(refreshToken, user.refreshTokenHash);
     if (!valid) {
       // Possible token reuse — invalidate all refresh tokens
-      user.refreshTokenHash = undefined;
-      await user.save();
+      await prisma.user.update({
+        where: { id: user.id },
+        data: { refreshTokenHash: null },
+      });
       res.status(401).json({ success: false, message: '刷新令牌已失效，请重新登录' });
       return;
     }
 
     // Issue new token pair (rotation)
-    const userId = String(user._id);
     const newAccessToken = signAccessToken({
-      userId,
+      userId: user.id,
       email: user.email,
       provider: user.provider,
     });
-    const newRefreshToken = signRefreshToken({ userId });
+    const newRefreshToken = signRefreshToken({ userId: user.id });
 
-    user.refreshTokenHash = await hashPassword(newRefreshToken);
-    await user.save();
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { refreshTokenHash: await hashPassword(newRefreshToken) },
+    });
 
     res.json({
       success: true,
@@ -182,15 +193,25 @@ router.post('/refresh', async (req: Request, res: Response) => {
 // GET /auth/me
 router.get('/me', requireAuth, async (req: Request, res: Response) => {
   try {
-    const user = await User.findById(req.jwtUser!.userId).select('-passwordHash -refreshTokenHash');
+    const user = await prisma.user.findUnique({
+      where: { id: req.jwtUser!.userId },
+      select: {
+        id: true,
+        displayName: true,
+        email: true,
+        provider: true,
+        avatar: true,
+        createdAt: true,
+      },
+    });
     if (!user) {
       res.status(404).json({ error: { message: '用户不存在' } });
       return;
     }
 
     res.json({
-      id: user._id,
-      name: user.name,
+      id: user.id,
+      name: user.displayName,
       email: user.email,
       provider: user.provider,
       avatar: user.avatar,

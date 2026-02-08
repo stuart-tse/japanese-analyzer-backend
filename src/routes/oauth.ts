@@ -3,7 +3,7 @@ import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { config } from '../config/index.js';
-import { User, IUser } from '../models/User.js';
+import { prisma } from '../config/prisma.js';
 import { signAccessToken, signRefreshToken } from '../utils/jwt.js';
 import { hashPassword } from '../utils/password.js';
 import { rateLimit } from '../middleware/rateLimit.js';
@@ -18,45 +18,56 @@ async function handleOAuthUser(profile: {
   name: string;
   avatar?: string;
 }): Promise<{ accessToken: string; refreshToken: string }> {
-  let user: IUser | null = await User.findOne({
-    provider: profile.provider,
-    providerId: profile.providerId,
+  // Look up by provider + providerId
+  let user = await prisma.user.findFirst({
+    where: { provider: profile.provider, providerId: profile.providerId },
   });
 
   if (!user) {
     // Check if a user with the same email exists (link accounts)
-    user = await User.findOne({ email: profile.email });
+    user = await prisma.user.findUnique({ where: { email: profile.email } });
     if (user) {
-      user.provider = profile.provider;
-      user.providerId = profile.providerId;
-      if (profile.avatar) user.avatar = profile.avatar;
-      user.lastLoginAt = new Date();
-      await user.save();
+      user = await prisma.user.update({
+        where: { id: user.id },
+        data: {
+          provider: profile.provider,
+          providerId: profile.providerId,
+          avatar: profile.avatar ?? user.avatar,
+          lastLoginAt: new Date(),
+        },
+      });
     } else {
-      user = await User.create({
-        name: profile.name,
-        email: profile.email,
-        provider: profile.provider,
-        providerId: profile.providerId,
-        avatar: profile.avatar,
+      user = await prisma.user.create({
+        data: {
+          displayName: profile.name,
+          email: profile.email,
+          provider: profile.provider,
+          providerId: profile.providerId,
+          avatar: profile.avatar,
+        },
       });
     }
   } else {
-    user.lastLoginAt = new Date();
-    if (profile.avatar) user.avatar = profile.avatar;
-    await user.save();
+    user = await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        lastLoginAt: new Date(),
+        avatar: profile.avatar ?? user.avatar,
+      },
+    });
   }
 
-  const userId = String(user._id);
   const accessToken = signAccessToken({
-    userId,
+    userId: user.id,
     email: user.email,
     provider: user.provider,
   });
-  const refreshToken = signRefreshToken({ userId });
+  const refreshToken = signRefreshToken({ userId: user.id });
 
-  user.refreshTokenHash = await hashPassword(refreshToken);
-  await user.save();
+  await prisma.user.update({
+    where: { id: user.id },
+    data: { refreshTokenHash: await hashPassword(refreshToken) },
+  });
 
   return { accessToken, refreshToken };
 }
@@ -160,35 +171,42 @@ router.post('/phone-login', rateLimit({ maxTokens: 5, refillRate: 0.2 }), async 
     }
 
     // Find or create phone user
-    let user = await User.findOne({ phone, provider: 'phone' });
+    let user = await prisma.user.findFirst({
+      where: { phone, provider: 'phone' },
+    });
     if (!user) {
-      user = await User.create({
-        name: `User ${phone.slice(-4)}`,
-        email: `${phone}@phone.placeholder`,
-        phone,
-        provider: 'phone',
+      user = await prisma.user.create({
+        data: {
+          displayName: `User ${phone.slice(-4)}`,
+          email: `${phone}@phone.placeholder`,
+          phone,
+          provider: 'phone',
+        },
       });
     }
 
-    const userId = String(user._id);
     const accessToken = signAccessToken({
-      userId,
+      userId: user.id,
       email: user.email,
       provider: user.provider,
     });
-    const refreshToken = signRefreshToken({ userId });
+    const refreshToken = signRefreshToken({ userId: user.id });
 
-    user.refreshTokenHash = await hashPassword(refreshToken);
-    user.lastLoginAt = new Date();
-    await user.save();
+    await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        refreshTokenHash: await hashPassword(refreshToken),
+        lastLoginAt: new Date(),
+      },
+    });
 
     res.json({
       success: true,
       accessToken,
       refreshToken,
       user: {
-        id: user._id,
-        name: user.name,
+        id: user.id,
+        name: user.displayName,
         email: user.email,
         provider: user.provider,
         avatar: user.avatar,

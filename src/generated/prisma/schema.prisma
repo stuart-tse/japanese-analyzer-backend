@@ -426,10 +426,11 @@ model WordPack {
   descriptionZhCN String @default("") @map("description_zh_cn")
   category        String
   jlptLevel       String
+  type            String @default("vocabulary") // "vocabulary" | "grammar"
   words           Json // String[]
   order           Int
 
-  @@index([jlptLevel, order])
+  @@index([jlptLevel, type, order])
 }
 
 // ============================================

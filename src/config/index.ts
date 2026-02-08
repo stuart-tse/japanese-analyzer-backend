@@ -16,10 +16,7 @@ export const config = {
   // CORS
   frontendUrl: process.env.FRONTEND_URL || 'http://localhost:3000',
 
-  // MongoDB (Phase 2)
-  mongodbUri: process.env.MONGODB_URI || '',
-
-  // JWT (Phase 2)
+  // JWT
   jwtSecret: process.env.JWT_SECRET || '',
   jwtRefreshSecret: process.env.JWT_REFRESH_SECRET || '',
 
@@ -45,10 +42,6 @@ export const config = {
     },
   },
 
-  // PostgreSQL (Database Migration)
+  // PostgreSQL
   databaseUrl: process.env.DATABASE_URL || '',
-
-  // Feature flags
-  usePostgresForUsers: process.env.USE_POSTGRES_USERS === 'true',
-  usePostgresForPacks: process.env.USE_POSTGRES_PACKS === 'true',
 };

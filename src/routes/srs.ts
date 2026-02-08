@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../middleware/auth.js';
-import { Vocabulary, SrsStage } from '../models/Vocabulary.js';
+import { prisma } from '../config/prisma.js';
 
 const router = Router();
 
@@ -10,21 +10,22 @@ router.get('/due', requireAuth, async (req: Request, res: Response) => {
     const userId = req.jwtUser!.userId;
     const limit = Math.min(50, parseInt(req.query.limit as string) || 20);
 
-    const dueWords = await Vocabulary.find({
-      userId,
-      srsStage: { $in: ['learning', 'review'] as SrsStage[] },
-      srsDueDate: { $lte: new Date() },
-    })
-      .sort({ srsDueDate: 1 })
-      .limit(limit)
-      .lean();
+    const dueWords = await prisma.vocabulary.findMany({
+      where: {
+        userId,
+        srsStage: { in: ['learning', 'review'] },
+        srsDueDate: { lte: new Date() },
+      },
+      orderBy: { srsDueDate: 'asc' },
+      take: limit,
+    });
 
     const result = dueWords.map(v => ({
-      _id: v._id,
+      _id: v.id,
       word: v.word,
       furigana: v.furigana,
       romaji: v.romaji,
-      meaning_zh_CN: v.meaning_zh_CN,
+      meaning_zh_CN: v.meaningZhCN,
       pos: v.pos,
       jlptLevel: v.jlptLevel,
       srsStage: v.srsStage,
@@ -46,15 +47,17 @@ router.get('/stats', requireAuth, async (req: Request, res: Response) => {
     const userId = req.jwtUser!.userId;
 
     const [dueToday, learning, review, mastered, total] = await Promise.all([
-      Vocabulary.countDocuments({
-        userId,
-        srsStage: { $in: ['learning', 'review'] },
-        srsDueDate: { $lte: new Date() },
+      prisma.vocabulary.count({
+        where: {
+          userId,
+          srsStage: { in: ['learning', 'review'] },
+          srsDueDate: { lte: new Date() },
+        },
       }),
-      Vocabulary.countDocuments({ userId, srsStage: 'learning' }),
-      Vocabulary.countDocuments({ userId, srsStage: 'review' }),
-      Vocabulary.countDocuments({ userId, srsStage: 'mastered' }),
-      Vocabulary.countDocuments({ userId, srsStage: { $ne: 'new' } }),
+      prisma.vocabulary.count({ where: { userId, srsStage: 'learning' } }),
+      prisma.vocabulary.count({ where: { userId, srsStage: 'review' } }),
+      prisma.vocabulary.count({ where: { userId, srsStage: 'mastered' } }),
+      prisma.vocabulary.count({ where: { userId, srsStage: { not: 'new' } } }),
     ]);
 
     res.json({ dueToday, learning, review, mastered, total });
@@ -75,42 +78,43 @@ router.post('/review', requireAuth, async (req: Request, res: Response) => {
       return;
     }
 
-    const vocab = await Vocabulary.findOne({ _id: wordId, userId });
+    const vocab = await prisma.vocabulary.findFirst({
+      where: { id: wordId, userId },
+    });
     if (!vocab) {
       res.status(404).json({ error: { message: '词汇不存在' } });
       return;
     }
 
     const now = new Date();
-    let { srsInterval, srsEaseFactor, srsStage } = vocab;
+    let srsInterval = vocab.srsInterval;
+    let srsEaseFactor = vocab.srsEaseFactor;
+    let srsStage = vocab.srsStage;
+    let wrongCount = vocab.wrongCount;
 
     if (srsStage === 'learning') {
       // Learning stage: simple interval progression
       if (quality >= 3) {
-        // Correct
         if (srsInterval === 0) {
           srsInterval = 1;
         } else if (srsInterval === 1) {
           srsInterval = 3;
-          srsStage = 'review'; // Graduate to review stage
+          srsStage = 'review';
         } else {
           srsInterval = 3;
           srsStage = 'review';
         }
       } else {
-        // Wrong — reset
         srsInterval = 0;
-        vocab.wrongCount += 1;
+        wrongCount += 1;
       }
     } else if (srsStage === 'review') {
       // Review stage: SM-2 algorithm
       if (quality < 3) {
-        // Failed — back to learning
         srsStage = 'learning';
         srsInterval = 0;
-        vocab.wrongCount += 1;
+        wrongCount += 1;
       } else {
-        // SM-2 interval calculation
         if (srsInterval === 0) {
           srsInterval = 1;
         } else if (srsInterval === 1) {
@@ -131,25 +135,29 @@ router.post('/review', requireAuth, async (req: Request, res: Response) => {
     }
 
     const srsDueDate = new Date(now.getTime() + srsInterval * 86400000);
+    const mastered = srsStage === 'mastered';
 
-    vocab.srsInterval = srsInterval;
-    vocab.srsEaseFactor = srsEaseFactor;
-    vocab.srsStage = srsStage;
-    vocab.srsDueDate = srsDueDate;
-    vocab.reviewCount += 1;
-    vocab.lastReviewedAt = now;
-    if (srsStage === 'mastered') {
-      vocab.mastered = true;
-    }
-    await vocab.save();
+    const updated = await prisma.vocabulary.update({
+      where: { id: vocab.id },
+      data: {
+        srsInterval,
+        srsEaseFactor,
+        srsStage,
+        srsDueDate,
+        reviewCount: vocab.reviewCount + 1,
+        lastReviewedAt: now,
+        mastered,
+        wrongCount,
+      },
+    });
 
     res.json({
-      word: vocab.word,
-      srsStage: vocab.srsStage,
-      srsInterval: vocab.srsInterval,
-      srsDueDate: vocab.srsDueDate,
-      reviewCount: vocab.reviewCount,
-      mastered: vocab.mastered,
+      word: updated.word,
+      srsStage: updated.srsStage,
+      srsInterval: updated.srsInterval,
+      srsDueDate: updated.srsDueDate,
+      reviewCount: updated.reviewCount,
+      mastered: updated.mastered,
     });
   } catch (error) {
     console.error('SRS review error:', error);

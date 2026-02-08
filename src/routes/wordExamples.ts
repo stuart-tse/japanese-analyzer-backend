@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { WordExample } from '../models/WordExample.js';
+import { prisma } from '../config/prisma.js';
 import { config } from '../config/index.js';
 
 const router = Router();
@@ -15,12 +15,14 @@ const levelDescriptions: Record<string, string> = {
 // GET /words/:word/examples — get or generate cached AI examples
 router.get('/:word/examples', async (req: Request, res: Response) => {
   try {
-    const { word } = req.params;
+    const word = req.params.word as string;
     const level = (req.query.level as string || 'N5').toUpperCase();
     const validLevel = levelDescriptions[level] ? level : 'N5';
 
     // Check cache first (keyed by word + level)
-    const cached = await WordExample.findOne({ word, jlptLevel: validLevel }).lean();
+    const cached = await prisma.wordExample.findUnique({
+      where: { word_jlptLevel: { word, jlptLevel: validLevel } },
+    });
     if (cached) {
       res.json({ word: cached.word, examples: cached.examples, cached: true });
       return;
@@ -83,16 +85,19 @@ Return ONLY the JSON array, no other text.`;
     }
 
     // Save to cache (global, keyed by word + level)
-    await WordExample.findOneAndUpdate(
-      { word, jlptLevel: validLevel },
-      {
+    await prisma.wordExample.upsert({
+      where: { word_jlptLevel: { word, jlptLevel: validLevel } },
+      update: {
+        examples,
+        generatedAt: new Date(),
+      },
+      create: {
         word,
         jlptLevel: validLevel,
         examples,
         generatedAt: new Date(),
       },
-      { upsert: true },
-    );
+    });
 
     res.json({ word, examples, cached: false });
   } catch (error) {

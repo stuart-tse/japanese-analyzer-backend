@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../middleware/auth.js';
-import { Vocabulary } from '../models/Vocabulary.js';
+import { prisma } from '../config/prisma.js';
 
 const router = Router();
 
@@ -13,12 +13,13 @@ router.get('/', requireAuth, async (req: Request, res: Response) => {
     const skip = (page - 1) * limit;
 
     const [items, total] = await Promise.all([
-      Vocabulary.find({ userId })
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .lean(),
-      Vocabulary.countDocuments({ userId }),
+      prisma.vocabulary.findMany({
+        where: { userId },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take: limit,
+      }),
+      prisma.vocabulary.count({ where: { userId } }),
     ]);
 
     res.json({ items, page, limit, total, totalPages: Math.ceil(total / limit) });
@@ -40,22 +41,35 @@ router.post('/', requireAuth, async (req: Request, res: Response) => {
     }
 
     // Upsert: update if already exists, auto-enroll in SRS for new words
-    const vocab = await Vocabulary.findOneAndUpdate(
-      { userId, word },
-      {
-        $set: { furigana, romaji, meaning_zh_CN, jlptLevel, pos, notes },
-        $setOnInsert: {
-          userId, word, mastered: false, reviewCount: 0,
-          srsStage: 'learning',
-          srsInterval: 0,
-          srsEaseFactor: 2.5,
-          srsDueDate: new Date(),
-          wrongCount: 0,
-          sourcePackId: null,
-        },
+    const vocab = await prisma.vocabulary.upsert({
+      where: { userId_word: { userId, word } },
+      update: {
+        furigana: furigana ?? undefined,
+        romaji: romaji ?? undefined,
+        meaningZhCN: meaning_zh_CN ?? undefined,
+        jlptLevel: jlptLevel ?? undefined,
+        pos: pos ?? undefined,
+        notes: notes ?? undefined,
       },
-      { upsert: true, new: true },
-    );
+      create: {
+        userId,
+        word,
+        furigana: furigana || '',
+        romaji: romaji || '',
+        meaningZhCN: meaning_zh_CN || '',
+        jlptLevel: jlptLevel || '',
+        pos: pos || '',
+        notes,
+        mastered: false,
+        reviewCount: 0,
+        srsStage: 'learning',
+        srsInterval: 0,
+        srsEaseFactor: 2.5,
+        srsDueDate: new Date(),
+        wrongCount: 0,
+        sourcePackId: null,
+      },
+    });
 
     res.status(201).json(vocab);
   } catch (error) {
@@ -68,12 +82,17 @@ router.post('/', requireAuth, async (req: Request, res: Response) => {
 router.delete('/:id', requireAuth, async (req: Request, res: Response) => {
   try {
     const userId = req.jwtUser!.userId;
-    const result = await Vocabulary.findOneAndDelete({ _id: req.params.id, userId });
 
-    if (!result) {
+    const existing = await prisma.vocabulary.findFirst({
+      where: { id: req.params.id as string, userId },
+    });
+
+    if (!existing) {
       res.status(404).json({ error: { message: '词汇不存在' } });
       return;
     }
+
+    await prisma.vocabulary.delete({ where: { id: existing.id } });
 
     res.json({ success: true });
   } catch (error) {

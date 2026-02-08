@@ -21145,6 +21145,7 @@ export namespace Prisma {
     descriptionZhCN: string | null
     category: string | null
     jlptLevel: string | null
+    type: string | null
     order: number | null
   }
 
@@ -21156,6 +21157,7 @@ export namespace Prisma {
     descriptionZhCN: string | null
     category: string | null
     jlptLevel: string | null
+    type: string | null
     order: number | null
   }
 
@@ -21167,6 +21169,7 @@ export namespace Prisma {
     descriptionZhCN: number
     category: number
     jlptLevel: number
+    type: number
     words: number
     order: number
     _all: number
@@ -21189,6 +21192,7 @@ export namespace Prisma {
     descriptionZhCN?: true
     category?: true
     jlptLevel?: true
+    type?: true
     order?: true
   }
 
@@ -21200,6 +21204,7 @@ export namespace Prisma {
     descriptionZhCN?: true
     category?: true
     jlptLevel?: true
+    type?: true
     order?: true
   }
 
@@ -21211,6 +21216,7 @@ export namespace Prisma {
     descriptionZhCN?: true
     category?: true
     jlptLevel?: true
+    type?: true
     words?: true
     order?: true
     _all?: true
@@ -21310,6 +21316,7 @@ export namespace Prisma {
     descriptionZhCN: string
     category: string
     jlptLevel: string
+    type: string
     words: JsonValue
     order: number
     _count: WordPackCountAggregateOutputType | null
@@ -21341,6 +21348,7 @@ export namespace Prisma {
     descriptionZhCN?: boolean
     category?: boolean
     jlptLevel?: boolean
+    type?: boolean
     words?: boolean
     order?: boolean
   }, ExtArgs["result"]["wordPack"]>
@@ -21353,6 +21361,7 @@ export namespace Prisma {
     descriptionZhCN?: boolean
     category?: boolean
     jlptLevel?: boolean
+    type?: boolean
     words?: boolean
     order?: boolean
   }, ExtArgs["result"]["wordPack"]>
@@ -21365,6 +21374,7 @@ export namespace Prisma {
     descriptionZhCN?: boolean
     category?: boolean
     jlptLevel?: boolean
+    type?: boolean
     words?: boolean
     order?: boolean
   }, ExtArgs["result"]["wordPack"]>
@@ -21377,11 +21387,12 @@ export namespace Prisma {
     descriptionZhCN?: boolean
     category?: boolean
     jlptLevel?: boolean
+    type?: boolean
     words?: boolean
     order?: boolean
   }
 
-  export type WordPackOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "packId" | "nameZhCN" | "nameEn" | "descriptionZhCN" | "category" | "jlptLevel" | "words" | "order", ExtArgs["result"]["wordPack"]>
+  export type WordPackOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "packId" | "nameZhCN" | "nameEn" | "descriptionZhCN" | "category" | "jlptLevel" | "type" | "words" | "order", ExtArgs["result"]["wordPack"]>
 
   export type $WordPackPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "WordPack"
@@ -21394,6 +21405,7 @@ export namespace Prisma {
       descriptionZhCN: string
       category: string
       jlptLevel: string
+      type: string
       words: Prisma.JsonValue
       order: number
     }, ExtArgs["result"]["wordPack"]>
@@ -21826,6 +21838,7 @@ export namespace Prisma {
     readonly descriptionZhCN: FieldRef<"WordPack", 'String'>
     readonly category: FieldRef<"WordPack", 'String'>
     readonly jlptLevel: FieldRef<"WordPack", 'String'>
+    readonly type: FieldRef<"WordPack", 'String'>
     readonly words: FieldRef<"WordPack", 'Json'>
     readonly order: FieldRef<"WordPack", 'Int'>
   }
@@ -29784,6 +29797,7 @@ export namespace Prisma {
     descriptionZhCN: 'descriptionZhCN',
     category: 'category',
     jlptLevel: 'jlptLevel',
+    type: 'type',
     words: 'words',
     order: 'order'
   };
@@ -31564,6 +31578,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFilter<"WordPack"> | string
     category?: StringFilter<"WordPack"> | string
     jlptLevel?: StringFilter<"WordPack"> | string
+    type?: StringFilter<"WordPack"> | string
     words?: JsonFilter<"WordPack">
     order?: IntFilter<"WordPack"> | number
   }
@@ -31576,6 +31591,7 @@ export namespace Prisma {
     descriptionZhCN?: SortOrder
     category?: SortOrder
     jlptLevel?: SortOrder
+    type?: SortOrder
     words?: SortOrder
     order?: SortOrder
   }
@@ -31591,6 +31607,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFilter<"WordPack"> | string
     category?: StringFilter<"WordPack"> | string
     jlptLevel?: StringFilter<"WordPack"> | string
+    type?: StringFilter<"WordPack"> | string
     words?: JsonFilter<"WordPack">
     order?: IntFilter<"WordPack"> | number
   }, "id" | "packId">
@@ -31603,6 +31620,7 @@ export namespace Prisma {
     descriptionZhCN?: SortOrder
     category?: SortOrder
     jlptLevel?: SortOrder
+    type?: SortOrder
     words?: SortOrder
     order?: SortOrder
     _count?: WordPackCountOrderByAggregateInput
@@ -31623,6 +31641,7 @@ export namespace Prisma {
     descriptionZhCN?: StringWithAggregatesFilter<"WordPack"> | string
     category?: StringWithAggregatesFilter<"WordPack"> | string
     jlptLevel?: StringWithAggregatesFilter<"WordPack"> | string
+    type?: StringWithAggregatesFilter<"WordPack"> | string
     words?: JsonWithAggregatesFilter<"WordPack">
     order?: IntWithAggregatesFilter<"WordPack"> | number
   }
@@ -33737,6 +33756,7 @@ export namespace Prisma {
     descriptionZhCN?: string
     category: string
     jlptLevel: string
+    type?: string
     words: JsonNullValueInput | InputJsonValue
     order: number
   }
@@ -33749,6 +33769,7 @@ export namespace Prisma {
     descriptionZhCN?: string
     category: string
     jlptLevel: string
+    type?: string
     words: JsonNullValueInput | InputJsonValue
     order: number
   }
@@ -33761,6 +33782,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     jlptLevel?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
     words?: JsonNullValueInput | InputJsonValue
     order?: IntFieldUpdateOperationsInput | number
   }
@@ -33773,6 +33795,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     jlptLevel?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
     words?: JsonNullValueInput | InputJsonValue
     order?: IntFieldUpdateOperationsInput | number
   }
@@ -33785,6 +33808,7 @@ export namespace Prisma {
     descriptionZhCN?: string
     category: string
     jlptLevel: string
+    type?: string
     words: JsonNullValueInput | InputJsonValue
     order: number
   }
@@ -33797,6 +33821,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     jlptLevel?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
     words?: JsonNullValueInput | InputJsonValue
     order?: IntFieldUpdateOperationsInput | number
   }
@@ -33809,6 +33834,7 @@ export namespace Prisma {
     descriptionZhCN?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     jlptLevel?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
     words?: JsonNullValueInput | InputJsonValue
     order?: IntFieldUpdateOperationsInput | number
   }
@@ -35745,6 +35771,7 @@ export namespace Prisma {
     descriptionZhCN?: SortOrder
     category?: SortOrder
     jlptLevel?: SortOrder
+    type?: SortOrder
     words?: SortOrder
     order?: SortOrder
   }
@@ -35761,6 +35788,7 @@ export namespace Prisma {
     descriptionZhCN?: SortOrder
     category?: SortOrder
     jlptLevel?: SortOrder
+    type?: SortOrder
     order?: SortOrder
   }
 
@@ -35772,6 +35800,7 @@ export namespace Prisma {
     descriptionZhCN?: SortOrder
     category?: SortOrder
     jlptLevel?: SortOrder
+    type?: SortOrder
     order?: SortOrder
   }
 

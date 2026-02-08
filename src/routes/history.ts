@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../middleware/auth.js';
-import { Analysis } from '../models/Analysis.js';
+import { prisma } from '../config/prisma.js';
 
 const router = Router();
 
@@ -13,12 +13,13 @@ router.get('/', requireAuth, async (req: Request, res: Response) => {
     const skip = (page - 1) * limit;
 
     const [items, total] = await Promise.all([
-      Analysis.find({ userId })
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .lean(),
-      Analysis.countDocuments({ userId }),
+      prisma.analysis.findMany({
+        where: { userId },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take: limit,
+      }),
+      prisma.analysis.count({ where: { userId } }),
     ]);
 
     res.json({
@@ -45,12 +46,14 @@ router.post('/', requireAuth, async (req: Request, res: Response) => {
       return;
     }
 
-    const analysis = await Analysis.create({
-      userId,
-      sentence,
-      tokens: tokens || [],
-      translations: translations || {},
-      fullTranslation,
+    const analysis = await prisma.analysis.create({
+      data: {
+        userId,
+        inputText: sentence,
+        result: tokens || [],
+        translations: translations || {},
+        fullTranslation,
+      },
     });
 
     res.status(201).json(analysis);
@@ -64,12 +67,18 @@ router.post('/', requireAuth, async (req: Request, res: Response) => {
 router.delete('/:id', requireAuth, async (req: Request, res: Response) => {
   try {
     const userId = req.jwtUser!.userId;
-    const result = await Analysis.findOneAndDelete({ _id: req.params.id, userId });
 
-    if (!result) {
+    // Verify ownership before deleting
+    const existing = await prisma.analysis.findFirst({
+      where: { id: req.params.id as string, userId },
+    });
+
+    if (!existing) {
       res.status(404).json({ error: { message: '记录不存在' } });
       return;
     }
+
+    await prisma.analysis.delete({ where: { id: existing.id } });
 
     res.json({ success: true });
   } catch (error) {
