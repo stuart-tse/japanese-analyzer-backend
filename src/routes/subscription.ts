@@ -290,7 +290,7 @@ router.post('/billing-portal', async (req: Request, res: Response) => {
     const { prisma } = await import('../config/prisma.js');
     const user = await prisma.user.findUnique({ where: { id: userId } });
 
-    if (!user?.stripeCustomerId) {
+    if (!user?.customerId) {
       return res.status(400).json({
         error: 'No Stripe customer found. Please create a subscription first.',
       });
@@ -299,7 +299,7 @@ router.post('/billing-portal', async (req: Request, res: Response) => {
     const returnUrl = req.body.returnUrl || `${config.frontendUrl}/settings`;
 
     const session = await stripeService.createBillingPortalSession(
-      user.stripeCustomerId,
+      user.customerId,
       returnUrl
     );
 
@@ -330,14 +330,14 @@ router.get('/payment-methods', async (req: Request, res: Response) => {
     const { prisma } = await import('../config/prisma.js');
     const user = await prisma.user.findUnique({ where: { id: userId } });
 
-    if (!user?.stripeCustomerId) {
+    if (!user?.customerId) {
       return res.json({
         success: true,
         paymentMethods: [],
       });
     }
 
-    const paymentMethods = await stripeService.listPaymentMethods(user.stripeCustomerId);
+    const paymentMethods = await stripeService.listPaymentMethods(user.customerId);
 
     res.json({
       success: true,
@@ -394,14 +394,14 @@ router.get('/invoices', async (req: Request, res: Response) => {
     const { prisma } = await import('../config/prisma.js');
     const user = await prisma.user.findUnique({ where: { id: userId } });
 
-    if (!user?.stripeCustomerId) {
+    if (!user?.customerId) {
       return res.json({
         success: true,
         invoices: [],
       });
     }
 
-    const invoices = await stripeService.listInvoices(user.stripeCustomerId, limit);
+    const invoices = await stripeService.listInvoices(user.customerId, limit);
 
     res.json({
       success: true,

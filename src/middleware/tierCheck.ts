@@ -1,22 +1,44 @@
 import { Request, Response, NextFunction } from 'express';
 import { prisma } from '../config/prisma.js';
-import { SubscriptionTier, FeatureType } from '../generated/prisma/index.js';
 import { creditService } from '../services/creditService.js';
+
+/**
+ * Feature configuration (replaces FeatureAccess DB table)
+ */
+interface FeatureConfig {
+  minTier: string;
+  creditCost?: number;
+  freeLimitDaily?: number | null;
+  proLimitDaily?: number | null;
+  premiumLimitDaily?: number | null;
+}
+
+const FEATURE_CONFIGS: Record<string, FeatureConfig> = {
+  premium_pack: { minTier: 'PRO', creditCost: 10 },
+  jlpt_exam: { minTier: 'PREMIUM', creditCost: 20 },
+  advanced_analysis: {
+    minTier: 'PRO',
+    creditCost: 5,
+    freeLimitDaily: 3,
+    proLimitDaily: 50,
+    premiumLimitDaily: null,
+  },
+};
 
 /**
  * Tier levels for comparison
  */
-const TIER_LEVELS = {
-  [SubscriptionTier.FREE]: 0,
-  [SubscriptionTier.PRO]: 1,
-  [SubscriptionTier.PREMIUM]: 2,
+const TIER_LEVELS: Record<string, number> = {
+  FREE: 0,
+  PRO: 1,
+  PREMIUM: 2,
 };
 
 /**
  * Middleware to check if user has required subscription tier
- * Usage: router.get('/premium-feature', requireTier(SubscriptionTier.PREMIUM), handler)
+ * Usage: router.get('/premium-feature', requireTier('PREMIUM'), handler)
  */
-export function requireTier(minTier: SubscriptionTier) {
+export function requireTier(minTier: string) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       const userId = req.user?.id;
@@ -34,11 +56,11 @@ export function requireTier(minTier: SubscriptionTier) {
         return res.status(404).json({ error: 'User not found' });
       }
 
-      const userTierLevel = TIER_LEVELS[user.subscriptionTier];
-      const minTierLevel = TIER_LEVELS[minTier];
+      const userTierLevel = TIER_LEVELS[user.subscriptionTier] ?? 0;
+      const minTierLevel = TIER_LEVELS[minTier] ?? 0;
 
       if (userTierLevel >= minTierLevel) {
-        return next(); // User has required tier
+        return next();
       }
 
       // Check for subscription expiry
@@ -63,7 +85,6 @@ export function requireTier(minTier: SubscriptionTier) {
         upgradeRequired: true,
       });
     } catch (error) {
-      console.error('Tier check error:', error);
       return res.status(500).json({ error: 'Failed to verify subscription tier' });
     }
   };
@@ -71,9 +92,9 @@ export function requireTier(minTier: SubscriptionTier) {
 
 /**
  * Middleware to check feature access (supports credit alternative)
- * Usage: router.get('/feature', requireFeature(FeatureType.JLPT_PREP), handler)
+ * Usage: router.get('/feature', requireFeature('premium_pack'), handler)
  */
-export function requireFeature(featureType: FeatureType) {
+export function requireFeature(featureType: string) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       const userId = req.user?.id;
@@ -91,16 +112,14 @@ export function requireFeature(featureType: FeatureType) {
         return res.status(404).json({ error: 'User not found' });
       }
 
-      const feature = await prisma.featureAccess.findUnique({
-        where: { featureType },
-      });
+      const feature = FEATURE_CONFIGS[featureType];
 
       if (!feature) {
         return res.status(404).json({ error: 'Feature not found' });
       }
 
-      const userTierLevel = TIER_LEVELS[user.subscriptionTier];
-      const minTierLevel = TIER_LEVELS[feature.minTier];
+      const userTierLevel = TIER_LEVELS[user.subscriptionTier] ?? 0;
+      const minTierLevel = TIER_LEVELS[feature.minTier] ?? 0;
 
       // User has required tier
       if (userTierLevel >= minTierLevel) {
@@ -109,10 +128,9 @@ export function requireFeature(featureType: FeatureType) {
 
       // Check credit alternative
       if (feature.creditCost && user.credits >= feature.creditCost) {
-        // Attach credit info to request for later deduction
         req.featureCredits = {
           cost: feature.creditCost,
-          featureType: featureType.toString(),
+          featureType,
         };
         return next();
       }
@@ -127,7 +145,6 @@ export function requireFeature(featureType: FeatureType) {
         upgradeRequired: !feature.creditCost || user.credits < feature.creditCost,
       });
     } catch (error) {
-      console.error('Feature check error:', error);
       return res.status(500).json({ error: 'Failed to verify feature access' });
     }
   };
@@ -137,20 +154,15 @@ export function requireFeature(featureType: FeatureType) {
  * Middleware to deduct credits after successful request
  * Usage: router.get('/feature', requireFeature(...), deductCredits, handler)
  */
-export async function deductCredits(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export async function deductCredits(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.user?.id;
     const featureCredits = req.featureCredits;
 
     if (!userId || !featureCredits) {
-      return next(); // No credits to deduct
+      return next();
     }
 
-    // Deduct credits
     const success = await creditService.deductCredits(
       userId,
       featureCredits.cost,
@@ -165,19 +177,17 @@ export async function deductCredits(
       });
     }
 
-    // Continue to handler
     next();
   } catch (error) {
-    console.error('Credit deduction error:', error);
     return res.status(500).json({ error: 'Failed to deduct credits' });
   }
 }
 
 /**
  * Middleware to check daily limits
- * Usage: router.post('/analyze', checkDailyLimit(FeatureType.ADVANCED_ANALYSIS), handler)
+ * Usage: router.post('/analyze', checkDailyLimit('advanced_analysis'), handler)
  */
-export function checkDailyLimit(featureType: FeatureType) {
+export function checkDailyLimit(featureType: string) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       const userId = req.user?.id;
@@ -195,31 +205,29 @@ export function checkDailyLimit(featureType: FeatureType) {
         return res.status(404).json({ error: 'User not found' });
       }
 
-      const feature = await prisma.featureAccess.findUnique({
-        where: { featureType },
-      });
+      const feature = FEATURE_CONFIGS[featureType];
 
       if (!feature) {
-        return next(); // No limit defined
+        return next();
       }
 
       // Get limit for user's tier
-      let dailyLimit: number | null = null;
+      let dailyLimit: number | null | undefined = null;
 
       switch (user.subscriptionTier) {
-        case SubscriptionTier.FREE:
+        case 'FREE':
           dailyLimit = feature.freeLimitDaily;
           break;
-        case SubscriptionTier.PRO:
+        case 'PRO':
           dailyLimit = feature.proLimitDaily;
           break;
-        case SubscriptionTier.PREMIUM:
+        case 'PREMIUM':
           dailyLimit = feature.premiumLimitDaily;
           break;
       }
 
       // No limit or unlimited
-      if (dailyLimit === null || dailyLimit < 0) {
+      if (dailyLimit === null || dailyLimit === undefined || dailyLimit < 0) {
         return next();
       }
 
@@ -230,7 +238,7 @@ export function checkDailyLimit(featureType: FeatureType) {
       const todayUsage = await prisma.creditTransaction.count({
         where: {
           userId,
-          featureType: featureType.toString(),
+          featureType,
           createdAt: { gte: startOfDay },
           type: 'DEDUCTION',
         },
@@ -242,7 +250,7 @@ export function checkDailyLimit(featureType: FeatureType) {
           limit: dailyLimit,
           used: todayUsage,
           resetAt: new Date(startOfDay.getTime() + 24 * 60 * 60 * 1000),
-          upgradeRequired: user.subscriptionTier === SubscriptionTier.FREE,
+          upgradeRequired: user.subscriptionTier === 'FREE',
         });
       }
 
@@ -255,7 +263,6 @@ export function checkDailyLimit(featureType: FeatureType) {
 
       next();
     } catch (error) {
-      console.error('Daily limit check error:', error);
       return res.status(500).json({ error: 'Failed to check daily limit' });
     }
   };

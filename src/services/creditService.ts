@@ -110,23 +110,23 @@ export class CreditService {
     }
 
     // Create or get Stripe customer
-    let stripeCustomerId = user.stripeCustomerId;
-    if (!stripeCustomerId) {
+    let custId = user.customerId;
+    if (!custId) {
       const customer = await stripeService.createCustomer(
         user.email,
-        user.username || undefined
+        user.displayName || undefined
       );
-      stripeCustomerId = customer.id;
+      custId = customer.id;
 
       await prisma.user.update({
         where: { id: userId },
-        data: { stripeCustomerId },
+        data: { customerId: custId },
       });
     }
 
     // Create payment intent
     const paymentIntent = await stripeService.createCreditPaymentIntent(
-      stripeCustomerId,
+      custId,
       packageIndex
     );
 
@@ -288,9 +288,14 @@ export class CreditService {
       };
     }
 
-    const feature = await prisma.featureAccess.findUnique({
-      where: { featureType: featureType as any },
-    });
+    // Feature configuration (no FeatureAccess model in schema)
+    const featureConfigs: Record<string, { minTier: string; creditCost: number }> = {
+      premium_pack: { minTier: 'PRO', creditCost: 10 },
+      jlpt_exam: { minTier: 'PREMIUM', creditCost: 20 },
+      advanced_analysis: { minTier: 'PRO', creditCost: 5 },
+    };
+
+    const feature = featureConfigs[featureType];
 
     if (!feature) {
       return {
@@ -302,9 +307,9 @@ export class CreditService {
     }
 
     // Check if user has required tier
-    const tierLevels = { FREE: 0, PRO: 1, PREMIUM: 2 };
-    const userTierLevel = tierLevels[user.subscriptionTier];
-    const minTierLevel = tierLevels[feature.minTier];
+    const tierLevels: Record<string, number> = { FREE: 0, PRO: 1, PREMIUM: 2 };
+    const userTierLevel = tierLevels[user.subscriptionTier] ?? 0;
+    const minTierLevel = tierLevels[feature.minTier] ?? 0;
 
     if (userTierLevel >= minTierLevel) {
       return {

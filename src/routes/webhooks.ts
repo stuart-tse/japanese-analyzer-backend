@@ -227,7 +227,7 @@ async function handlePaymentIntentSucceeded(paymentIntent: Stripe.PaymentIntent)
   }
 
   const user = await prisma.user.findUnique({
-    where: { stripeCustomerId: paymentIntent.customer as string },
+    where: { customerId: paymentIntent.customer as string },
   });
 
   if (!user) {

@@ -12,7 +12,6 @@ const router = Router();
  */
 router.get('/packs', requireAuth, async (req: Request, res: Response) => {
   try {
-    const userId = req.user?.id;
     const page = parseInt(req.query.page as string) || 1;
     const limit = parseInt(req.query.limit as string) || 20;
     const category = req.query.category as string;
@@ -22,27 +21,21 @@ router.get('/packs', requireAuth, async (req: Request, res: Response) => {
       where.category = category;
     }
 
-    // Get packs WITHOUT full word arrays (mobile optimization)
     const packs = await prisma.wordPack.findMany({
       where,
       select: {
         id: true,
         packId: true,
-        title: true,
-        description: true,
+        nameZhCN: true,
+        nameEn: true,
+        descriptionZhCN: true,
         category: true,
-        requiredTier: true,
-        creditCost: true,
-        wordCount: true,
-        difficulty: true,
-        tags: true,
-        createdAt: true,
-        // Exclude heavy relations
-        words: false,
+        jlptLevel: true,
+        order: true,
       },
       skip: (page - 1) * limit,
       take: limit,
-      orderBy: { createdAt: 'desc' },
+      orderBy: { order: 'asc' },
     });
 
     const total = await prisma.wordPack.count({ where });
@@ -57,7 +50,6 @@ router.get('/packs', requireAuth, async (req: Request, res: Response) => {
       },
     });
   } catch (error) {
-    console.error('Error fetching mobile packs:', error);
     res.status(500).json({ error: 'Failed to fetch packs' });
   }
 });
@@ -74,43 +66,28 @@ router.get('/packs/:packId/words', requireAuth, async (req: Request, res: Respon
 
     const pack = await prisma.wordPack.findUnique({
       where: { packId: Array.isArray(packId) ? packId[0] : packId },
-      select: { id: true },
+      select: { id: true, words: true },
     });
 
     if (!pack) {
       return res.status(404).json({ error: 'Pack not found' });
     }
 
-    const words = await prisma.word.findMany({
-      where: { packId: pack.id },
-      select: {
-        id: true,
-        word: true,
-        reading: true,
-        romaji: true,
-        meaning: true,
-        partOfSpeech: true,
-        // Exclude example sentences for lighter payload
-        example: false,
-        exampleTranslation: false,
-      },
-      skip: (page - 1) * limit,
-      take: limit,
-    });
-
-    const total = await prisma.word.count({ where: { packId: pack.id } });
+    // Words stored as JSON string array in the pack
+    const allWords = (pack.words as string[]) || [];
+    const start = (page - 1) * limit;
+    const paginatedWords = allWords.slice(start, start + limit);
 
     res.json({
-      words,
+      words: paginatedWords,
       pagination: {
         page,
         limit,
-        total,
-        pages: Math.ceil(total / limit),
+        total: allWords.length,
+        pages: Math.ceil(allWords.length / limit),
       },
     });
   } catch (error) {
-    console.error('Error fetching pack words:', error);
     res.status(500).json({ error: 'Failed to fetch words' });
   }
 });
@@ -134,7 +111,6 @@ router.post('/sync', requireAuth, async (req: Request, res: Response) => {
 
     const results = [];
 
-    // Process operations in order
     for (const op of operations) {
       try {
         const result = await processSyncOperation(userId, op);
@@ -153,12 +129,11 @@ router.post('/sync', requireAuth, async (req: Request, res: Response) => {
     }
 
     res.json({
-      synced: results.filter(r => r.status === 'success').length,
-      failed: results.filter(r => r.status === 'error').length,
+      synced: results.filter((r) => r.status === 'success').length,
+      failed: results.filter((r) => r.status === 'error').length,
       results,
     });
   } catch (error) {
-    console.error('Error syncing:', error);
     res.status(500).json({ error: 'Failed to sync' });
   }
 });
@@ -171,38 +146,41 @@ async function processSyncOperation(userId: string, operation: any) {
 
   switch (type) {
     case 'vocabulary_review':
-      // Update vocabulary review
       return await prisma.vocabulary.update({
         where: {
-          userId_wordId: {
+          userId_word: {
             userId,
-            wordId: data.wordId,
+            word: data.word,
           },
         },
         data: {
-          repetitions: data.repetitions,
-          easeFactor: data.easeFactor,
-          interval: data.interval,
-          nextReviewAt: data.nextReviewAt,
-          correctCount: data.correctCount,
-          incorrectCount: data.incorrectCount,
+          reviewCount: data.reviewCount,
+          srsEaseFactor: data.easeFactor,
+          srsInterval: data.interval,
+          srsDueDate: data.srsDueDate,
+          wrongCount: data.wrongCount,
           lastReviewedAt: new Date(timestamp),
         },
       });
 
     case 'learning_stats':
-      // Update learning stats
       return await prisma.learningStats.upsert({
         where: { userId },
         create: {
           userId,
-          ...data,
+          totalAnalyses: data.totalAnalyses || 0,
+          totalWordsLearned: data.totalWordsLearned || 0,
+          streakDays: data.streakDays || 0,
         },
-        update: data,
+        update: {
+          totalAnalyses: data.totalAnalyses,
+          totalWordsLearned: data.totalWordsLearned,
+          streakDays: data.streakDays,
+          lastActiveDate: new Date(timestamp),
+        },
       });
 
     case 'pack_progress':
-      // Update pack progress
       return await prisma.userPackProgress.upsert({
         where: {
           userId_packId: {
@@ -213,12 +191,16 @@ async function processSyncOperation(userId: string, operation: any) {
         create: {
           userId,
           packId: data.packId,
-          ...data,
-          lastStudiedAt: new Date(timestamp),
+          status: data.status || 'studying',
+          studiedWords: data.studiedWords || [],
+          wrongWords: data.wrongWords || [],
+          quizScore: data.quizScore,
         },
         update: {
-          ...data,
-          lastStudiedAt: new Date(timestamp),
+          status: data.status,
+          studiedWords: data.studiedWords,
+          wrongWords: data.wrongWords,
+          quizScore: data.quizScore,
         },
       });
 
@@ -239,30 +221,24 @@ router.post('/auth/refresh', async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Refresh token required' });
     }
 
-    // Verify refresh token
     const decoded = jwt.verify(refreshToken, config.jwtRefreshSecret || config.jwtSecret) as any;
 
-    // Generate new access token
-    const accessToken = jwt.sign(
-      { id: decoded.id, email: decoded.email },
-      config.jwtSecret,
-      { expiresIn: '15m' } // Short-lived access token
-    );
+    const accessToken = jwt.sign({ id: decoded.id, email: decoded.email }, config.jwtSecret, {
+      expiresIn: '15m',
+    });
 
-    // Generate new refresh token
     const newRefreshToken = jwt.sign(
       { id: decoded.id, email: decoded.email },
       config.jwtRefreshSecret || config.jwtSecret,
-      { expiresIn: '7d' } // Long-lived refresh token
+      { expiresIn: '7d' }
     );
 
     res.json({
       accessToken,
       refreshToken: newRefreshToken,
-      expiresIn: 900, // 15 minutes in seconds
+      expiresIn: 900,
     });
   } catch (error) {
-    console.error('Error refreshing token:', error);
     res.status(401).json({ error: 'Invalid refresh token' });
   }
 });
@@ -278,37 +254,31 @@ router.get('/user/summary', requireAuth, async (req: Request, res: Response) => 
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    // Get user with subscription info
     const user = await prisma.user.findUnique({
       where: { id: userId },
       select: {
         id: true,
         email: true,
-        username: true,
+        displayName: true,
         subscriptionTier: true,
         credits: true,
         subscriptionExpiry: true,
       },
     });
 
-    // Get learning stats
     const stats = await prisma.learningStats.findUnique({
       where: { userId },
       select: {
         totalWordsLearned: true,
-        totalReviews: true,
-        currentStreak: true,
-        longestStreak: true,
-        totalStudyTime: true,
+        streakDays: true,
       },
     });
 
-    // Get review count due today
     const now = new Date();
     const reviewsDue = await prisma.vocabulary.count({
       where: {
         userId,
-        nextReviewAt: {
+        srsDueDate: {
           lte: now,
         },
       },
@@ -318,15 +288,11 @@ router.get('/user/summary', requireAuth, async (req: Request, res: Response) => 
       user,
       stats: stats || {
         totalWordsLearned: 0,
-        totalReviews: 0,
-        currentStreak: 0,
-        longestStreak: 0,
-        totalStudyTime: 0,
+        streakDays: 0,
       },
       reviewsDue,
     });
   } catch (error) {
-    console.error('Error fetching user summary:', error);
     res.status(500).json({ error: 'Failed to fetch user summary' });
   }
 });
@@ -349,22 +315,21 @@ router.post('/batch-operations', requireAuth, async (req: Request, res: Response
     }
 
     const responses = await Promise.all(
-      requests.map(async (req: any) => {
+      requests.map(async (r: any) => {
         try {
-          // Execute each request
-          switch (req.endpoint) {
+          switch (r.endpoint) {
             case 'packs':
-              return { id: req.id, data: await getMobilePacks(userId, req.params) };
+              return { id: r.id, data: await getMobilePacks(r.params) };
             case 'stats':
-              return { id: req.id, data: await getUserStats(userId) };
+              return { id: r.id, data: await getUserStats(userId) };
             case 'reviews':
-              return { id: req.id, data: await getReviewsDue(userId) };
+              return { id: r.id, data: await getReviewsDue(userId) };
             default:
-              return { id: req.id, error: 'Unknown endpoint' };
+              return { id: r.id, error: 'Unknown endpoint' };
           }
         } catch (error) {
           return {
-            id: req.id,
+            id: r.id,
             error: error instanceof Error ? error.message : 'Unknown error',
           };
         }
@@ -373,21 +338,19 @@ router.post('/batch-operations', requireAuth, async (req: Request, res: Response
 
     res.json({ responses });
   } catch (error) {
-    console.error('Error processing batch operations:', error);
     res.status(500).json({ error: 'Failed to process batch operations' });
   }
 });
 
 // Helper functions for batch operations
-async function getMobilePacks(userId: string, params: any) {
+async function getMobilePacks(params: any) {
   return await prisma.wordPack.findMany({
-    take: params.limit || 10,
+    take: params?.limit || 10,
     select: {
       id: true,
       packId: true,
-      title: true,
+      nameZhCN: true,
       category: true,
-      wordCount: true,
     },
   });
 }
@@ -402,7 +365,7 @@ async function getReviewsDue(userId: string) {
   return await prisma.vocabulary.count({
     where: {
       userId,
-      nextReviewAt: { lte: new Date() },
+      srsDueDate: { lte: new Date() },
     },
   });
 }

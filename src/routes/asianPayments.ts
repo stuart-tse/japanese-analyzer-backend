@@ -52,22 +52,22 @@ router.post('/credits/purchase', requireAuth, async (req: Request, res: Response
     // Get or create Stripe customer
     const user = await prisma.user.findUnique({
       where: { id: userId },
-      select: { stripeCustomerId: true, email: true, username: true },
+      select: { customerId: true, email: true, displayName: true },
     });
 
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    let customerId = user.stripeCustomerId;
+    let customerId = user.customerId;
     if (!customerId) {
       const { stripeService } = await import('../services/stripeService.js');
-      const customer = await stripeService.createCustomer(user.email, user.username || undefined);
+      const customer = await stripeService.createCustomer(user.email, user.displayName || undefined);
       customerId = customer.id;
 
       await prisma.user.update({
         where: { id: userId },
-        data: { stripeCustomerId: customerId },
+        data: { customerId },
       });
     }
 

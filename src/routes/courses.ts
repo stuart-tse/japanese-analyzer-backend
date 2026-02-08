@@ -15,22 +15,17 @@ router.get('/', async (_req: Request, res: Response) => {
           select: { lessons: true },
         },
       },
-      orderBy: [
-        { level: 'asc' }, // N5, N4, N3, N2, N1
-        { order: 'asc' },
-      ],
+      orderBy: { level: 'asc' },
     });
 
-    // Format response with lesson counts
     const formattedCourses = courses.map((course) => ({
       id: course.id,
       title: course.title,
-      slug: course.slug,
       level: course.level,
       description: course.description,
-      published: course.published,
+      isPublished: course.isPublished,
       estimatedHours: course.estimatedHours,
-      order: course.order,
+      totalLessons: course.totalLessons,
       lessonCount: course._count.lessons,
       createdAt: course.createdAt.toISOString(),
       updatedAt: course.updatedAt.toISOString(),
@@ -41,7 +36,6 @@ router.get('/', async (_req: Request, res: Response) => {
       courses: formattedCourses,
     });
   } catch (error) {
-    console.error('Error fetching courses:', error);
     res.status(500).json({
       success: false,
       error: 'Failed to fetch courses',
@@ -50,27 +44,24 @@ router.get('/', async (_req: Request, res: Response) => {
 });
 
 /**
- * GET /courses/:slug
+ * GET /courses/:id
  * Fetch course details with lessons
  */
-router.get('/:slug', async (req: Request, res: Response) => {
+router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const slug = Array.isArray(req.params.slug) ? req.params.slug[0] : req.params.slug;
+    const courseId = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
 
     const course = await prisma.course.findUnique({
-      where: { slug },
+      where: { id: courseId },
       include: {
         lessons: {
-          orderBy: { order: 'asc' },
+          orderBy: { lessonNumber: 'asc' },
           select: {
             id: true,
             title: true,
-            slug: true,
-            order: true,
-            type: true,
-            duration: true,
-            published: true,
-            isFree: true,
+            lessonNumber: true,
+            isQuiz: true,
+            estimatedMinutes: true,
           },
         },
       },
@@ -84,16 +75,14 @@ router.get('/:slug', async (req: Request, res: Response) => {
       return;
     }
 
-    // Format response
     const formattedCourse = {
       id: course.id,
       title: course.title,
-      slug: course.slug,
       level: course.level,
       description: course.description,
-      published: course.published,
+      isPublished: course.isPublished,
       estimatedHours: course.estimatedHours,
-      order: course.order,
+      totalLessons: course.totalLessons,
       lessonCount: course.lessons.length,
       lessons: course.lessons,
       createdAt: course.createdAt.toISOString(),
@@ -105,7 +94,6 @@ router.get('/:slug', async (req: Request, res: Response) => {
       course: formattedCourse,
     });
   } catch (error) {
-    console.error('Error fetching course:', error);
     res.status(500).json({
       success: false,
       error: 'Failed to fetch course',
@@ -114,20 +102,22 @@ router.get('/:slug', async (req: Request, res: Response) => {
 });
 
 /**
- * GET /courses/:courseSlug/lessons/:lessonSlug
+ * GET /courses/:courseId/lessons/:lessonNumber
  * Fetch lesson details with navigation
  */
-router.get('/:courseSlug/lessons/:lessonSlug', async (req: Request, res: Response) => {
+router.get('/:courseId/lessons/:lessonNumber', async (req: Request, res: Response) => {
   try {
-    const courseSlug = Array.isArray(req.params.courseSlug) ? req.params.courseSlug[0] : req.params.courseSlug;
-    const lessonSlug = Array.isArray(req.params.lessonSlug) ? req.params.lessonSlug[0] : req.params.lessonSlug;
+    const courseId = Array.isArray(req.params.courseId) ? req.params.courseId[0] : req.params.courseId;
+    const lessonNumber = parseInt(
+      Array.isArray(req.params.lessonNumber) ? req.params.lessonNumber[0] : req.params.lessonNumber,
+      10
+    );
 
-    // Get the course first
     const course = await prisma.course.findUnique({
-      where: { slug: courseSlug },
+      where: { id: courseId },
       include: {
         lessons: {
-          orderBy: { order: 'asc' },
+          orderBy: { lessonNumber: 'asc' },
         },
       },
     });
@@ -140,8 +130,7 @@ router.get('/:courseSlug/lessons/:lessonSlug', async (req: Request, res: Respons
       return;
     }
 
-    // Find the current lesson
-    const currentLessonIndex = course.lessons.findIndex((l) => l.slug === lessonSlug);
+    const currentLessonIndex = course.lessons.findIndex((l) => l.lessonNumber === lessonNumber);
 
     if (currentLessonIndex === -1) {
       res.status(404).json({
@@ -152,31 +141,29 @@ router.get('/:courseSlug/lessons/:lessonSlug', async (req: Request, res: Respons
     }
 
     const currentLesson = course.lessons[currentLessonIndex];
-
-    // Get previous and next lessons for navigation
     const previousLesson = currentLessonIndex > 0 ? course.lessons[currentLessonIndex - 1] : null;
-    const nextLesson = currentLessonIndex < course.lessons.length - 1 ? course.lessons[currentLessonIndex + 1] : null;
+    const nextLesson =
+      currentLessonIndex < course.lessons.length - 1 ? course.lessons[currentLessonIndex + 1] : null;
 
-    // Format response
     const formattedLesson = {
       id: currentLesson.id,
       title: currentLesson.title,
-      slug: currentLesson.slug,
-      content: currentLesson.content,
-      type: currentLesson.type,
-      order: currentLesson.order,
-      duration: currentLesson.duration,
-      published: currentLesson.published,
-      isFree: currentLesson.isFree,
+      lessonNumber: currentLesson.lessonNumber,
+      vocabularyItems: currentLesson.vocabularyItems,
+      grammarPoints: currentLesson.grammarPoints,
+      practiceExercises: currentLesson.practiceExercises,
+      isQuiz: currentLesson.isQuiz,
+      estimatedMinutes: currentLesson.estimatedMinutes,
       course: {
         id: course.id,
         title: course.title,
         level: course.level,
-        slug: course.slug,
       },
       navigation: {
-        previous: previousLesson ? { slug: previousLesson.slug, title: previousLesson.title } : null,
-        next: nextLesson ? { slug: nextLesson.slug, title: nextLesson.title } : null,
+        previous: previousLesson
+          ? { lessonNumber: previousLesson.lessonNumber, title: previousLesson.title }
+          : null,
+        next: nextLesson ? { lessonNumber: nextLesson.lessonNumber, title: nextLesson.title } : null,
       },
     };
 
@@ -185,7 +172,6 @@ router.get('/:courseSlug/lessons/:lessonSlug', async (req: Request, res: Respons
       lesson: formattedLesson,
     });
   } catch (error) {
-    console.error('Error fetching lesson:', error);
     res.status(500).json({
       success: false,
       error: 'Failed to fetch lesson',

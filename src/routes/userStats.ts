@@ -10,21 +10,21 @@ const router = Router();
  */
 router.get('/', requireAuth, async (req: Request, res: Response) => {
   try {
-    const userId = req.jwtUser!.userId;
+    const userId = req.user?.id;
+    if (!userId) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
 
-    // Fetch user stats
-    let stats = await prisma.userStats.findUnique({
+    let stats = await prisma.learningStats.findUnique({
       where: { userId },
     });
 
-    // Create stats if they don't exist
     if (!stats) {
-      stats = await prisma.userStats.create({
+      stats = await prisma.learningStats.create({
         data: {
           userId,
           totalAnalyses: 0,
-          totalTranslations: 0,
-          totalWords: 0,
+          totalWordsLearned: 0,
           streakDays: 0,
         },
       });
@@ -35,7 +35,6 @@ router.get('/', requireAuth, async (req: Request, res: Response) => {
       stats,
     });
   } catch (error) {
-    console.error('Error fetching user stats:', error);
     res.status(500).json({
       error: 'Failed to fetch user stats',
     });
@@ -48,33 +47,33 @@ router.get('/', requireAuth, async (req: Request, res: Response) => {
  */
 router.post('/', requireAuth, async (req: Request, res: Response) => {
   try {
-    const userId = req.jwtUser!.userId;
-    const { totalAnalyses, totalTranslations, totalWords } = req.body;
+    const userId = req.user?.id;
+    if (!userId) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
 
-    // Get or create stats
-    let stats = await prisma.userStats.findUnique({
+    const { totalAnalyses, totalWordsLearned } = req.body;
+
+    let stats = await prisma.learningStats.findUnique({
       where: { userId },
     });
 
     if (!stats) {
-      stats = await prisma.userStats.create({
+      stats = await prisma.learningStats.create({
         data: {
           userId,
           totalAnalyses: totalAnalyses || 0,
-          totalTranslations: totalTranslations || 0,
-          totalWords: totalWords || 0,
+          totalWordsLearned: totalWordsLearned || 0,
           streakDays: 0,
         },
       });
     } else {
-      // Update existing stats
-      stats = await prisma.userStats.update({
+      stats = await prisma.learningStats.update({
         where: { userId },
         data: {
           totalAnalyses: { increment: totalAnalyses || 0 },
-          totalTranslations: { increment: totalTranslations || 0 },
-          totalWords: { increment: totalWords || 0 },
-          lastActiveAt: new Date(),
+          totalWordsLearned: { increment: totalWordsLearned || 0 },
+          lastActiveDate: new Date(),
         },
       });
     }
@@ -84,7 +83,6 @@ router.post('/', requireAuth, async (req: Request, res: Response) => {
       stats,
     });
   } catch (error) {
-    console.error('Error updating user stats:', error);
     res.status(500).json({
       error: 'Failed to update user stats',
     });
