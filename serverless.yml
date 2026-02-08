@@ -24,6 +24,22 @@ provider:
   stage: ${opt:stage, 'prod'}
   timeout: 60
   memorySize: 1024
+  httpApi:
+    cors:
+      allowedOrigins:
+        - https://masterjapanese.net
+      allowedHeaders:
+        - Content-Type
+        - Authorization
+        - X-Gemini-Key
+      allowedMethods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+        - DELETE
+        - OPTIONS
+      allowCredentials: true
   environment:
     NODE_ENV: production
     DATABASE_URL: ${env:DATABASE_URL}
