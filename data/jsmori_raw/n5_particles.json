@@ -1,0 +1,230 @@
+[
+  {
+    "pattern": "❶ 主題、主語topic marker",
+    "meaning_zh_CN": "私は学生です。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 區別、對比comparison",
+    "meaning_zh_CN": "明日は働きません。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❸ 動作主actor in a sentence",
+    "meaning_zh_CN": "私は野菜と鱼を食べます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 所屬belongs to",
+    "meaning_zh_CN": "私は贸易会社の社员です。これは私の书いた手纸です。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 所有belonging",
+    "meaning_zh_CN": "あれは佐藤さんの伞です。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❸ 所產produced by",
+    "meaning_zh_CN": "それはフランスのスカーフです。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❹ 所在location/profession",
+    "meaning_zh_CN": "机の上にリンゴがあります。この方は作家の铃木さんです。(职业)",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 動作夥伴and; with",
+    "meaning_zh_CN": "明日友达と食事します。(一绪に)",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 並列關係and (specific list)",
+    "meaning_zh_CN": "机の上に本とノートがあります。サッカーと野球(と)どちらが面白いですか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 動作進行時點time of action",
+    "meaning_zh_CN": "何时に会いますか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 存在位置location",
+    "meaning_zh_CN": "机の上にリンゴがあります。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❸ 動作的對象object of action",
+    "meaning_zh_CN": "私は友达に电话をかけました。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❹ 分配單位 (頻率)frequency",
+    "meaning_zh_CN": "一周间に2回日本语を勉强します。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❺ 動作的目的purpose of action",
+    "meaning_zh_CN": "日本へ漫画を勉强しに行きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❻ 進入點entry point",
+    "meaning_zh_CN": "温泉に入りに行きませんか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❼ 到達點arrival point",
+    "meaning_zh_CN": "台北駅に行きました。电车に乗ります。(交通工具)",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 動作進行地點place of action takes place",
+    "meaning_zh_CN": "駅の前で会いましょう。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 交通工具transportation",
+    "meaning_zh_CN": "电车で行きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❸ 行動單位actor unit",
+    "meaning_zh_CN": "一人で行きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❹ 範圍range",
+    "meaning_zh_CN": "日本でどこが一番にぎやかですか。三つで900円です。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❺ 工具・手段tools; methods",
+    "meaning_zh_CN": "彼女と电话で话します。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❻ 原因・理由reason",
+    "meaning_zh_CN": "病気で学校休みます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 方向direction; to",
+    "meaning_zh_CN": "新宿へ行きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 動作作用對象action object",
+    "meaning_zh_CN": "今晩、手纸を书きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 離開點departure point",
+    "meaning_zh_CN": "高校を卒业します。电车を降ります。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❸ 經過點passing point",
+    "meaning_zh_CN": "公园を散歩します。通りを渡ります。(过马路)",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 疑問question",
+    "meaning_zh_CN": "陈さんは学生ですか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 不特點 / 不確定uncertain",
+    "meaning_zh_CN": "次の日曜日、何か用事ありますか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 焦點subject marker",
+    "meaning_zh_CN": "私は日本语が少しわかりません。(←状态动词)",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 逆接however; but",
+    "meaning_zh_CN": "おいしいですが、ちょっとしょっぱいです。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 因為because",
+    "meaning_zh_CN": "时间がありませんから、タクシーで行きます。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❷ 起點since; from",
+    "meaning_zh_CN": "営业时间は何时から何时までですか。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 只…而已merely; no more than",
+    "meaning_zh_CN": "昨日は4时间しか寝ませんでした。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 比較基準than; rather than; more than",
+    "meaning_zh_CN": "京都は东京より静かです。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 像…那麼degree; extent; bounds; upper limit",
+    "meaning_zh_CN": "北海道は冲縄ほど暑くないです。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 同時進行simultaneously",
+    "meaning_zh_CN": "アルバイトをしながら、勉强します。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 強調to emphasize; as well",
+    "meaning_zh_CN": "木村さんも田中さんも先生です。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "❶ 部分列舉and; or (general list)",
+    "meaning_zh_CN": "机の上に本や铅笔などがあります。",
+    "scene": "助词",
+    "jlptLevel": "N5"
+  }
+]

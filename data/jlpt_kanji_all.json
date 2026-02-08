@@ -1,0 +1,5380 @@
+[
+  {
+    "kanji": "一",
+    "readings": [
+      "いち"
+    ],
+    "meaning_en": "one",
+    "meaning_zh_CN": "1",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "二",
+    "readings": [
+      "に"
+    ],
+    "meaning_en": "two",
+    "meaning_zh_CN": "2",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "三",
+    "readings": [
+      "さん"
+    ],
+    "meaning_en": "three",
+    "meaning_zh_CN": "3",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "四四/",
+    "readings": [
+      "よんし"
+    ],
+    "meaning_en": "four",
+    "meaning_zh_CN": "4",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "五",
+    "readings": [
+      "ご"
+    ],
+    "meaning_en": "five",
+    "meaning_zh_CN": "5",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "六",
+    "readings": [
+      "ろく"
+    ],
+    "meaning_en": "six",
+    "meaning_zh_CN": "6",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "七七/",
+    "readings": [
+      "ななしち"
+    ],
+    "meaning_en": "seven",
+    "meaning_zh_CN": "7",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "八",
+    "readings": [
+      "はち"
+    ],
+    "meaning_en": "eight",
+    "meaning_zh_CN": "8",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "九九/",
+    "readings": [
+      "きゅうく"
+    ],
+    "meaning_en": "nine",
+    "meaning_zh_CN": "9",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "十",
+    "readings": [
+      "じゅう"
+    ],
+    "meaning_en": "ten",
+    "meaning_zh_CN": "10",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "百",
+    "readings": [
+      "ひゃく"
+    ],
+    "meaning_en": "hundred",
+    "meaning_zh_CN": "100",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "千",
+    "readings": [
+      "せん"
+    ],
+    "meaning_en": "thousand",
+    "meaning_zh_CN": "1,000",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "万",
+    "readings": [
+      "まん"
+    ],
+    "meaning_en": "ten thousand",
+    "meaning_zh_CN": "10,000",
+    "category": "数字",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "日本人",
+    "readings": [
+      "に   ほん じん"
+    ],
+    "meaning_en": "Japanese",
+    "meaning_zh_CN": "日本人",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "子ども",
+    "readings": [
+      "こ"
+    ],
+    "meaning_en": "child",
+    "meaning_zh_CN": "小孩",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "男",
+    "readings": [
+      "おとこ"
+    ],
+    "meaning_en": "man",
+    "meaning_zh_CN": "男人",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "女",
+    "readings": [
+      "おんな"
+    ],
+    "meaning_en": "woman",
+    "meaning_zh_CN": "女人",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "男子の",
+    "readings": [
+      "おとここ"
+    ],
+    "meaning_en": "boy",
+    "meaning_zh_CN": "男孩",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "女子の",
+    "readings": [
+      "おんなこ"
+    ],
+    "meaning_en": "girl",
+    "meaning_zh_CN": "女孩",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "父",
+    "readings": [
+      "ちち"
+    ],
+    "meaning_en": "(my) father",
+    "meaning_zh_CN": "(称呼自己的)爸爸",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "父おさん",
+    "readings": [
+      "とう"
+    ],
+    "meaning_en": "father",
+    "meaning_zh_CN": "(称呼对方的)爸爸",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "母",
+    "readings": [
+      "はは"
+    ],
+    "meaning_en": "(my) mother",
+    "meaning_zh_CN": "(称呼自己的)妈妈",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "母おさん",
+    "readings": [
+      "かあ"
+    ],
+    "meaning_en": "mother",
+    "meaning_zh_CN": "(称呼对方的)妈妈",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "先生",
+    "readings": [
+      "せん せい"
+    ],
+    "meaning_en": "teacher",
+    "meaning_zh_CN": "老师",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "友達",
+    "readings": [
+      "とも だち"
+    ],
+    "meaning_en": "friend",
+    "meaning_zh_CN": "朋友",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "高校生",
+    "readings": [
+      "こう こう せい"
+    ],
+    "meaning_en": "high school student",
+    "meaning_zh_CN": "高中生",
+    "category": "人",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "目",
+    "readings": [
+      "め"
+    ],
+    "meaning_en": "eye",
+    "meaning_zh_CN": "眼睛",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "口",
+    "readings": [
+      "くち"
+    ],
+    "meaning_en": "mouth",
+    "meaning_zh_CN": "嘴巴",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "耳",
+    "readings": [
+      "みみ"
+    ],
+    "meaning_en": "ear",
+    "meaning_zh_CN": "耳朵",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "手",
+    "readings": [
+      "て"
+    ],
+    "meaning_en": "hand",
+    "meaning_zh_CN": "手",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "足",
+    "readings": [
+      "あし"
+    ],
+    "meaning_en": "foot",
+    "meaning_zh_CN": "脚",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "力",
+    "readings": [
+      "ちから"
+    ],
+    "meaning_en": "power",
+    "meaning_zh_CN": "力量",
+    "category": "身体",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "学校",
+    "readings": [
+      "がっ こう"
+    ],
+    "meaning_en": "school",
+    "meaning_zh_CN": "学校",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "会社",
+    "readings": [
+      "かい しゃ"
+    ],
+    "meaning_en": "company",
+    "meaning_zh_CN": "公司",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "駅",
+    "readings": [
+      "えき"
+    ],
+    "meaning_en": "station",
+    "meaning_zh_CN": "车站",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "店",
+    "readings": [
+      "みせ"
+    ],
+    "meaning_en": "shop",
+    "meaning_zh_CN": "店",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "空港",
+    "readings": [
+      "くう こう"
+    ],
+    "meaning_en": "airport",
+    "meaning_zh_CN": "机场",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "大学",
+    "readings": [
+      "だい がく"
+    ],
+    "meaning_en": "university",
+    "meaning_zh_CN": "大学",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "入口",
+    "readings": [
+      "いり ぐち"
+    ],
+    "meaning_en": "entrance",
+    "meaning_zh_CN": "入口",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "出口",
+    "readings": [
+      "で  ぐち"
+    ],
+    "meaning_en": "exit",
+    "meaning_zh_CN": "出口",
+    "category": "地点；场所",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "車",
+    "readings": [
+      "くるま"
+    ],
+    "meaning_en": "car",
+    "meaning_zh_CN": "车",
+    "category": "交通工具",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "電車",
+    "readings": [
+      "でん しゃ"
+    ],
+    "meaning_en": "train",
+    "meaning_zh_CN": "火车",
+    "category": "交通工具",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "一週間",
+    "readings": [
+      "いっ しゅう かん"
+    ],
+    "meaning_en": "one week",
+    "meaning_zh_CN": "一星期",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "毎日",
+    "readings": [
+      "まい にち"
+    ],
+    "meaning_en": "every day",
+    "meaning_zh_CN": "每天",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "毎週",
+    "readings": [
+      "まい  しゅう"
+    ],
+    "meaning_en": "every week",
+    "meaning_zh_CN": "每周",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "毎年",
+    "readings": [
+      "まい とし"
+    ],
+    "meaning_en": "every month",
+    "meaning_zh_CN": "每年",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "今日",
+    "readings": [
+      "きょう"
+    ],
+    "meaning_en": "today",
+    "meaning_zh_CN": "今天",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "明日",
+    "readings": [
+      "あした"
+    ],
+    "meaning_en": "tomorrow",
+    "meaning_zh_CN": "明天",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "今週",
+    "readings": [
+      "こん  しゅう"
+    ],
+    "meaning_en": "this week",
+    "meaning_zh_CN": "下星期",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "先週",
+    "readings": [
+      "せん  しゅう"
+    ],
+    "meaning_en": "last week",
+    "meaning_zh_CN": "上星期",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "来週",
+    "readings": [
+      "らい  しゅう"
+    ],
+    "meaning_en": "next week",
+    "meaning_zh_CN": "下星期",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "今月",
+    "readings": [
+      "こん げつ"
+    ],
+    "meaning_en": "this month",
+    "meaning_zh_CN": "这个月",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "先月",
+    "readings": [
+      "せん げつ"
+    ],
+    "meaning_en": "last month",
+    "meaning_zh_CN": "上个月",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "来月",
+    "readings": [
+      "らい げつ"
+    ],
+    "meaning_en": "next month",
+    "meaning_zh_CN": "下个月",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "新年",
+    "readings": [
+      "しん ねん"
+    ],
+    "meaning_en": "new year",
+    "meaning_zh_CN": "新年",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "午前",
+    "readings": [
+      "ご  ぜん"
+    ],
+    "meaning_en": "A.M.",
+    "meaning_zh_CN": "早上",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "午後",
+    "readings": [
+      "ご ご"
+    ],
+    "meaning_en": "P.M.",
+    "meaning_zh_CN": "下午",
+    "category": "时间",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "白",
+    "readings": [
+      "しろ"
+    ],
+    "meaning_en": "white",
+    "meaning_zh_CN": "白色",
+    "category": "颜色",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "黒",
+    "readings": [
+      "くろ"
+    ],
+    "meaning_en": "black",
+    "meaning_zh_CN": "黑色",
+    "category": "颜色",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "上",
+    "readings": [
+      "うえ"
+    ],
+    "meaning_en": "above",
+    "meaning_zh_CN": "上",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "下",
+    "readings": [
+      "した"
+    ],
+    "meaning_en": "under",
+    "meaning_zh_CN": "下",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "左",
+    "readings": [
+      "ひだり"
+    ],
+    "meaning_en": "left",
+    "meaning_zh_CN": "左",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "右",
+    "readings": [
+      "みぎ"
+    ],
+    "meaning_en": "right",
+    "meaning_zh_CN": "右",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "前",
+    "readings": [
+      "まえ"
+    ],
+    "meaning_en": "front",
+    "meaning_zh_CN": "前",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "後",
+    "readings": [
+      "うしろ"
+    ],
+    "meaning_en": "back",
+    "meaning_zh_CN": "后",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "中",
+    "readings": [
+      "なか"
+    ],
+    "meaning_en": "inside",
+    "meaning_zh_CN": "中间",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "外",
+    "readings": [
+      "そと"
+    ],
+    "meaning_en": "outside",
+    "meaning_zh_CN": "外面",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "北",
+    "readings": [
+      "きた"
+    ],
+    "meaning_en": "north",
+    "meaning_zh_CN": "北",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "南",
+    "readings": [
+      "みなみ"
+    ],
+    "meaning_en": "south",
+    "meaning_zh_CN": "南",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "東",
+    "readings": [
+      "ひがし"
+    ],
+    "meaning_en": "east",
+    "meaning_zh_CN": "东",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "西",
+    "readings": [
+      "にし"
+    ],
+    "meaning_en": "west",
+    "meaning_zh_CN": "西",
+    "category": "方向",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "日曜日",
+    "readings": [
+      "にちよう   び"
+    ],
+    "meaning_en": "Sunday",
+    "meaning_zh_CN": "星期日",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "月曜日",
+    "readings": [
+      "げつよう   び"
+    ],
+    "meaning_en": "Monday",
+    "meaning_zh_CN": "星期一",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "火曜日",
+    "readings": [
+      "かよう   び"
+    ],
+    "meaning_en": "Tuesday",
+    "meaning_zh_CN": "星期二",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "水曜日",
+    "readings": [
+      "すいよう   び"
+    ],
+    "meaning_en": "Wednesday",
+    "meaning_zh_CN": "星期三",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "木曜日",
+    "readings": [
+      "もくよう   び"
+    ],
+    "meaning_en": "Thursday",
+    "meaning_zh_CN": "星期四",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "金曜日",
+    "readings": [
+      "きんよう   び"
+    ],
+    "meaning_en": "Friday",
+    "meaning_zh_CN": "星期五",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "土曜日",
+    "readings": [
+      "どよう   び"
+    ],
+    "meaning_en": "Saturday",
+    "meaning_zh_CN": "星期六",
+    "category": "日子",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "山",
+    "readings": [
+      "やま"
+    ],
+    "meaning_en": "mountain",
+    "meaning_zh_CN": "山",
+    "category": "大自然",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "川",
+    "readings": [
+      "かわ"
+    ],
+    "meaning_en": "river",
+    "meaning_zh_CN": "河",
+    "category": "大自然",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "空",
+    "readings": [
+      "そら"
+    ],
+    "meaning_en": "sky",
+    "meaning_zh_CN": "天空",
+    "category": "大自然",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "空気",
+    "readings": [
+      "くう   き"
+    ],
+    "meaning_en": "air",
+    "meaning_zh_CN": "空气",
+    "category": "大自然",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "花",
+    "readings": [
+      "はな"
+    ],
+    "meaning_en": "flower",
+    "meaning_zh_CN": "花",
+    "category": "大自然",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "牛",
+    "readings": [
+      "うし"
+    ],
+    "meaning_en": "cow",
+    "meaning_zh_CN": "牛",
+    "category": "动物",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "馬",
+    "readings": [
+      "うま"
+    ],
+    "meaning_en": "horse",
+    "meaning_zh_CN": "马",
+    "category": "动物",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "魚",
+    "readings": [
+      "さかな"
+    ],
+    "meaning_en": "fish",
+    "meaning_zh_CN": "鱼",
+    "category": "动物",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "貝",
+    "readings": [
+      "かい"
+    ],
+    "meaning_en": "shell",
+    "meaning_zh_CN": "贝克",
+    "category": "动物",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "日本語",
+    "readings": [
+      "に  ほん  ご"
+    ],
+    "meaning_en": "Japanese",
+    "meaning_zh_CN": "日文",
+    "category": "语言",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "中国語",
+    "readings": [
+      "ちゅう  ごく    ご"
+    ],
+    "meaning_en": "Chinese",
+    "meaning_zh_CN": "中文",
+    "category": "语言",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "英語",
+    "readings": [
+      "えい  ご"
+    ],
+    "meaning_en": "English",
+    "meaning_zh_CN": "英文",
+    "category": "语言",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "新聞",
+    "readings": [
+      "しん ぶん"
+    ],
+    "meaning_en": "newspaper",
+    "meaning_zh_CN": "报纸",
+    "category": "物品",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "本",
+    "readings": [
+      "ほん"
+    ],
+    "meaning_en": "book",
+    "meaning_zh_CN": "书本",
+    "category": "物品",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "雪",
+    "readings": [
+      "ゆき"
+    ],
+    "meaning_en": "snow",
+    "meaning_zh_CN": "雪",
+    "category": "天气",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "雨",
+    "readings": [
+      "あめ"
+    ],
+    "meaning_en": "rain",
+    "meaning_zh_CN": "雨",
+    "category": "天气",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "大きい",
+    "readings": [
+      "おお"
+    ],
+    "meaning_en": "big",
+    "meaning_zh_CN": "大",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "小さい",
+    "readings": [
+      "ちい"
+    ],
+    "meaning_en": "small",
+    "meaning_zh_CN": "小",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "新しい",
+    "readings": [
+      "あたら"
+    ],
+    "meaning_en": "new",
+    "meaning_zh_CN": "新",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "古い",
+    "readings": [
+      "ふる"
+    ],
+    "meaning_en": "old",
+    "meaning_zh_CN": "旧",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "高い",
+    "readings": [
+      "たか"
+    ],
+    "meaning_en": "expensive / tall",
+    "meaning_zh_CN": "贵；高",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "安い",
+    "readings": [
+      "やす"
+    ],
+    "meaning_en": "cheap",
+    "meaning_zh_CN": "便宜",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "多い",
+    "readings": [
+      "おお"
+    ],
+    "meaning_en": "many",
+    "meaning_zh_CN": "很多",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "少ない",
+    "readings": [
+      "すく"
+    ],
+    "meaning_en": "few",
+    "meaning_zh_CN": "很少",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "少し",
+    "readings": [
+      "すこ"
+    ],
+    "meaning_en": "a few / a little",
+    "meaning_zh_CN": "一点点；少量",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "長い",
+    "readings": [
+      "なが"
+    ],
+    "meaning_en": "long",
+    "meaning_zh_CN": "长",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "早い",
+    "readings": [
+      "はや"
+    ],
+    "meaning_en": "early",
+    "meaning_zh_CN": "早",
+    "category": "形容词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "行く",
+    "readings": [
+      "い"
+    ],
+    "meaning_en": "to go",
+    "meaning_zh_CN": "去",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "来る",
+    "readings": [
+      "く"
+    ],
+    "meaning_en": "to come",
+    "meaning_zh_CN": "来",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "食べる",
+    "readings": [
+      "た"
+    ],
+    "meaning_en": "to eat",
+    "meaning_zh_CN": "吃",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "飲む",
+    "readings": [
+      "の"
+    ],
+    "meaning_en": "to drink",
+    "meaning_zh_CN": "喝",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "書く",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "to write",
+    "meaning_zh_CN": "写",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "見る",
+    "readings": [
+      "み"
+    ],
+    "meaning_en": "to watch / look",
+    "meaning_zh_CN": "看",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "言う",
+    "readings": [
+      "い"
+    ],
+    "meaning_en": "to say",
+    "meaning_zh_CN": "说；讲",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "立つ",
+    "readings": [
+      "た"
+    ],
+    "meaning_en": "to stand",
+    "meaning_zh_CN": "站",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "出る",
+    "readings": [
+      "で"
+    ],
+    "meaning_en": "to go out",
+    "meaning_zh_CN": "出去",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "入る",
+    "readings": [
+      "はい"
+    ],
+    "meaning_en": "to enter",
+    "meaning_zh_CN": "进入",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "話す",
+    "readings": [
+      "はな"
+    ],
+    "meaning_en": "to talk",
+    "meaning_zh_CN": "说；谈",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "読む",
+    "readings": [
+      "よ"
+    ],
+    "meaning_en": "to read",
+    "meaning_zh_CN": "阅读",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "買う",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "to buy",
+    "meaning_zh_CN": "买",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "聞く",
+    "readings": [
+      "き"
+    ],
+    "meaning_en": "to listen",
+    "meaning_zh_CN": "听",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "休む",
+    "readings": [
+      "やす"
+    ],
+    "meaning_en": "to rest",
+    "meaning_zh_CN": "休息",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "会う",
+    "readings": [
+      "あ"
+    ],
+    "meaning_en": "to me",
+    "meaning_zh_CN": "见面",
+    "category": "动词",
+    "jlptLevel": "N5"
+  },
+  {
+    "kanji": "映画館",
+    "readings": [
+      "えい が かん"
+    ],
+    "meaning_en": "movie theater",
+    "meaning_zh_CN": "电影院",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "教室",
+    "readings": [
+      "きょう しつ"
+    ],
+    "meaning_en": "classroom",
+    "meaning_zh_CN": "教室",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "銀行",
+    "readings": [
+      "ぎん こう"
+    ],
+    "meaning_en": "bank",
+    "meaning_zh_CN": "银行",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "工場",
+    "readings": [
+      "こう じょう"
+    ],
+    "meaning_en": "factory",
+    "meaning_zh_CN": "工厂",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "食堂",
+    "readings": [
+      "しょく どう"
+    ],
+    "meaning_en": "canteen",
+    "meaning_zh_CN": "食堂",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "京都市",
+    "readings": [
+      "きょうとし"
+    ],
+    "meaning_en": "Kyoto City",
+    "meaning_zh_CN": "京都市",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "京都府",
+    "readings": [
+      "きょうとふ"
+    ],
+    "meaning_en": "Kyoto prefecture",
+    "meaning_zh_CN": "京都府",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "大学院",
+    "readings": [
+      "だい がく いん"
+    ],
+    "meaning_en": "graduate school",
+    "meaning_zh_CN": "研究所",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "大使館",
+    "readings": [
+      "たい し かん"
+    ],
+    "meaning_en": "embassy",
+    "meaning_zh_CN": "大使馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "建物",
+    "readings": [
+      "たて もの"
+    ],
+    "meaning_en": "building",
+    "meaning_zh_CN": "建筑物",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "図書館",
+    "readings": [
+      "と しょ かん"
+    ],
+    "meaning_en": "library",
+    "meaning_zh_CN": "图书馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "所",
+    "readings": [
+      "ところ"
+    ],
+    "meaning_en": "place",
+    "meaning_zh_CN": "地方；地点",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "長野県",
+    "readings": [
+      "ながのけん"
+    ],
+    "meaning_en": "Nagano prefecture",
+    "meaning_zh_CN": "长野县",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "場所",
+    "readings": [
+      "ば しょ"
+    ],
+    "meaning_en": "place",
+    "meaning_zh_CN": "地方；地点",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "病院",
+    "readings": [
+      "びょう いん"
+    ],
+    "meaning_en": "hospital",
+    "meaning_zh_CN": "医院",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "旅館",
+    "readings": [
+      "りょ かん"
+    ],
+    "meaning_en": "Japanese inn",
+    "meaning_zh_CN": "日式旅馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "兄",
+    "readings": [
+      "あに"
+    ],
+    "meaning_en": "older brother",
+    "meaning_zh_CN": "哥哥",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "姉",
+    "readings": [
+      "あね"
+    ],
+    "meaning_en": "older sister",
+    "meaning_zh_CN": "姐姐",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "妹",
+    "readings": [
+      "いもうと"
+    ],
+    "meaning_en": "younger sister",
+    "meaning_zh_CN": "妹妹",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "弟",
+    "readings": [
+      "おとうと"
+    ],
+    "meaning_en": "younger brother",
+    "meaning_zh_CN": "弟弟",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "兄おさん",
+    "readings": [
+      "にい"
+    ],
+    "meaning_en": "older brother",
+    "meaning_zh_CN": "哥哥 (称呼他人时)",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "姉おさん",
+    "readings": [
+      "ねえ"
+    ],
+    "meaning_en": "older sister",
+    "meaning_zh_CN": "姐姐 (称呼他人时)",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "親",
+    "readings": [
+      "おや"
+    ],
+    "meaning_en": "parent",
+    "meaning_zh_CN": "父母；家长",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "兄弟",
+    "readings": [
+      "きょう   だい"
+    ],
+    "meaning_en": "sibling / brothers",
+    "meaning_zh_CN": "兄弟",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "姉妹",
+    "readings": [
+      "し   まい"
+    ],
+    "meaning_en": "sisters",
+    "meaning_zh_CN": "姐妹",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "母親",
+    "readings": [
+      "はは おや"
+    ],
+    "meaning_en": "mother",
+    "meaning_zh_CN": "妈妈",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "両親",
+    "readings": [
+      "りょう   しん"
+    ],
+    "meaning_en": "parents",
+    "meaning_zh_CN": "父母",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "医者",
+    "readings": [
+      "い   しゃ"
+    ],
+    "meaning_en": "doctor",
+    "meaning_zh_CN": "医生",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "歌手",
+    "readings": [
+      "か   しゅ"
+    ],
+    "meaning_en": "singer",
+    "meaning_zh_CN": "歌手",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "仕事",
+    "readings": [
+      "し   ごと"
+    ],
+    "meaning_en": "work / job",
+    "meaning_zh_CN": "工作",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "店員",
+    "readings": [
+      "てん いん"
+    ],
+    "meaning_en": "staff",
+    "meaning_zh_CN": "店员；售货员",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "自転車",
+    "readings": [
+      "じ   てん しゃ"
+    ],
+    "meaning_en": "bicycle",
+    "meaning_zh_CN": "自行车，单车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "自動車",
+    "readings": [
+      "じ   どう しゃ"
+    ],
+    "meaning_en": "car",
+    "meaning_zh_CN": "汽车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "信号",
+    "readings": [
+      "しん ごう"
+    ],
+    "meaning_en": "traffic light",
+    "meaning_zh_CN": "红绿灯",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "交通",
+    "readings": [
+      "こう つう"
+    ],
+    "meaning_en": "transportation",
+    "meaning_zh_CN": "交通工具",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "地下鉄",
+    "readings": [
+      "ち     か   てつ"
+    ],
+    "meaning_en": "subway",
+    "meaning_zh_CN": "地铁",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "特急",
+    "readings": [
+      "とっ  きゅう"
+    ],
+    "meaning_en": "limited express train",
+    "meaning_zh_CN": "特快列车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "朝",
+    "readings": [
+      "あさ"
+    ],
+    "meaning_en": "morning",
+    "meaning_zh_CN": "早上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "明日",
+    "readings": [
+      "あした"
+    ],
+    "meaning_en": "tomorrow",
+    "meaning_zh_CN": "明天",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "今朝",
+    "readings": [
+      "け さ"
+    ],
+    "meaning_en": "this morning",
+    "meaning_zh_CN": "今天早上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "今度",
+    "readings": [
+      "こん   ど"
+    ],
+    "meaning_en": "next time",
+    "meaning_zh_CN": "这次；下次",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "今晩",
+    "readings": [
+      "こん ばん"
+    ],
+    "meaning_en": "tonight",
+    "meaning_zh_CN": "今晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "今夜",
+    "readings": [
+      "こん   や"
+    ],
+    "meaning_en": "tonight",
+    "meaning_zh_CN": "今晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "夏休み",
+    "readings": [
+      "なつ やす"
+    ],
+    "meaning_en": "summer vacation",
+    "meaning_zh_CN": "暑假",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "昼",
+    "readings": [
+      "ひる"
+    ],
+    "meaning_en": "noon",
+    "meaning_zh_CN": "中午",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "昼休み",
+    "readings": [
+      "ひる やす"
+    ],
+    "meaning_en": "lunch break",
+    "meaning_zh_CN": "午休",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "夕方",
+    "readings": [
+      "ゆう がた"
+    ],
+    "meaning_en": "evening",
+    "meaning_zh_CN": "傍晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "夜",
+    "readings": [
+      "よる"
+    ],
+    "meaning_en": "night",
+    "meaning_zh_CN": "晚上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "秋",
+    "readings": [
+      "あき"
+    ],
+    "meaning_en": "autumn",
+    "meaning_zh_CN": "秋天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "夏",
+    "readings": [
+      "なつ"
+    ],
+    "meaning_en": "summer",
+    "meaning_zh_CN": "夏天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "春",
+    "readings": [
+      "はる"
+    ],
+    "meaning_en": "spring",
+    "meaning_zh_CN": "春天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "冬",
+    "readings": [
+      "ふゆ"
+    ],
+    "meaning_en": "winter",
+    "meaning_zh_CN": "冬天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "味",
+    "readings": [
+      "あじ"
+    ],
+    "meaning_en": "taste",
+    "meaning_zh_CN": "味道",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "頭",
+    "readings": [
+      "あたま"
+    ],
+    "meaning_en": "head",
+    "meaning_zh_CN": "头",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "以下",
+    "readings": [
+      "い か"
+    ],
+    "meaning_en": "less than",
+    "meaning_zh_CN": "少于；以下",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "以外",
+    "readings": [
+      "い   がい"
+    ],
+    "meaning_en": "except",
+    "meaning_zh_CN": "除了",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "池",
+    "readings": [
+      "いけ"
+    ],
+    "meaning_en": "pond",
+    "meaning_zh_CN": "池塘",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "意見",
+    "readings": [
+      "い   けん"
+    ],
+    "meaning_en": "opinion",
+    "meaning_zh_CN": "意见",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "以上",
+    "readings": [
+      "い      じょう"
+    ],
+    "meaning_en": "more than",
+    "meaning_zh_CN": "以上；就这样",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "一回",
+    "readings": [
+      "いっ かい"
+    ],
+    "meaning_en": "once",
+    "meaning_zh_CN": "一次",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "犬",
+    "readings": [
+      "いぬ"
+    ],
+    "meaning_en": "dog",
+    "meaning_zh_CN": "狗",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "意味",
+    "readings": [
+      "い み"
+    ],
+    "meaning_en": "meaning",
+    "meaning_zh_CN": "意思",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "色",
+    "readings": [
+      "いろ"
+    ],
+    "meaning_en": "color",
+    "meaning_zh_CN": "颜色",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "海",
+    "readings": [
+      "うみ"
+    ],
+    "meaning_en": "sea",
+    "meaning_zh_CN": "海",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "映画",
+    "readings": [
+      "えい   が"
+    ],
+    "meaning_en": "movie",
+    "meaning_zh_CN": "电影",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "英語",
+    "readings": [
+      "えい   ご"
+    ],
+    "meaning_en": "English",
+    "meaning_zh_CN": "英文",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "屋上",
+    "readings": [
+      "おく   じょう"
+    ],
+    "meaning_en": "rooftop",
+    "meaning_zh_CN": "屋顶",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "茶お",
+    "readings": [
+      "ちゃ"
+    ],
+    "meaning_en": "tea",
+    "meaning_zh_CN": "茶",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "同じ",
+    "readings": [
+      "おな"
+    ],
+    "meaning_en": "same",
+    "meaning_zh_CN": "一样；相同",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "音",
+    "readings": [
+      "おと"
+    ],
+    "meaning_en": "sound",
+    "meaning_zh_CN": "声音",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "音楽",
+    "readings": [
+      "おん がく"
+    ],
+    "meaning_en": "music",
+    "meaning_zh_CN": "音乐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "海外",
+    "readings": [
+      "かい がい"
+    ],
+    "meaning_en": "overseas",
+    "meaning_zh_CN": "国外",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "買物い",
+    "readings": [
+      "かもの"
+    ],
+    "meaning_en": "shopping",
+    "meaning_zh_CN": "购物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "科学",
+    "readings": [
+      "か   がく"
+    ],
+    "meaning_en": "science",
+    "meaning_zh_CN": "科学",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "顔",
+    "readings": [
+      "かお"
+    ],
+    "meaning_en": "face",
+    "meaning_zh_CN": "脸",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "火事",
+    "readings": [
+      "か じ"
+    ],
+    "meaning_en": "fire",
+    "meaning_zh_CN": "火灾",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "形",
+    "readings": [
+      "かたち"
+    ],
+    "meaning_en": "shape",
+    "meaning_zh_CN": "形状",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "紙",
+    "readings": [
+      "かみ"
+    ],
+    "meaning_en": "paper",
+    "meaning_zh_CN": "纸张",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "体",
+    "readings": [
+      "からだ"
+    ],
+    "meaning_en": "body",
+    "meaning_zh_CN": "身体",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "代わりに",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "instead",
+    "meaning_zh_CN": "取而代之",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "漢字",
+    "readings": [
+      "かん   じ"
+    ],
+    "meaning_en": "kanji",
+    "meaning_zh_CN": "汉字",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "気持ち",
+    "readings": [
+      "き も"
+    ],
+    "meaning_en": "feeling",
+    "meaning_zh_CN": "感觉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "着物",
+    "readings": [
+      "き   もの"
+    ],
+    "meaning_en": "kimono",
+    "meaning_zh_CN": "和服",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "教科書",
+    "readings": [
+      "きょう    か     しょ"
+    ],
+    "meaning_en": "textbook",
+    "meaning_zh_CN": "教科书",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "首",
+    "readings": [
+      "くび"
+    ],
+    "meaning_en": "head",
+    "meaning_zh_CN": "颈；脖头",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "子犬",
+    "readings": [
+      "こ   いぬ"
+    ],
+    "meaning_en": "puppy",
+    "meaning_zh_CN": "小狗",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "工業",
+    "readings": [
+      "こう   ぎょう"
+    ],
+    "meaning_en": "manufacture",
+    "meaning_zh_CN": "工业",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "工事",
+    "readings": [
+      "こう   じ"
+    ],
+    "meaning_en": "construction",
+    "meaning_zh_CN": "施工；建设",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "声",
+    "readings": [
+      "こえ"
+    ],
+    "meaning_en": "voice",
+    "meaning_zh_CN": "声音 (人・动物等)",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "心",
+    "readings": [
+      "こころ"
+    ],
+    "meaning_en": "heart",
+    "meaning_zh_CN": "心",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "米",
+    "readings": [
+      "こめ"
+    ],
+    "meaning_en": "rice",
+    "meaning_zh_CN": "米",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "作文",
+    "readings": [
+      "さく ぶん"
+    ],
+    "meaning_en": "essay",
+    "meaning_zh_CN": "作文；散文",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "産業",
+    "readings": [
+      "さん   ぎょう"
+    ],
+    "meaning_en": "industry",
+    "meaning_zh_CN": "产业",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "字",
+    "readings": [
+      "じ"
+    ],
+    "meaning_en": "letter / character",
+    "meaning_zh_CN": "字",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "自分",
+    "readings": [
+      "じ   ぶん"
+    ],
+    "meaning_en": "oneself",
+    "meaning_zh_CN": "自己",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "小説",
+    "readings": [
+      "しょう   せつ"
+    ],
+    "meaning_en": "novel",
+    "meaning_zh_CN": "小说",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "主人",
+    "readings": [
+      "しゅ じん"
+    ],
+    "meaning_en": "husband",
+    "meaning_zh_CN": "丈夫",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "正月お",
+    "readings": [
+      "しょう   がつ"
+    ],
+    "meaning_en": "the New Year",
+    "meaning_zh_CN": "新年",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "世界",
+    "readings": [
+      "せ   かい"
+    ],
+    "meaning_en": "world",
+    "meaning_zh_CN": "世界",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "風",
+    "readings": [
+      "かぜ"
+    ],
+    "meaning_en": "wind",
+    "meaning_zh_CN": "风",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "切手",
+    "readings": [
+      "きって"
+    ],
+    "meaning_en": "postage stamp",
+    "meaning_zh_CN": "邮票",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "急に",
+    "readings": [
+      "きゅう"
+    ],
+    "meaning_en": "suddenly",
+    "meaning_zh_CN": "突然",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "牛肉",
+    "readings": [
+      "ぎゅう   にく"
+    ],
+    "meaning_en": "beef",
+    "meaning_zh_CN": "牛肉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "近所",
+    "readings": [
+      "きん じょ"
+    ],
+    "meaning_en": "neighborhood",
+    "meaning_zh_CN": "近处；附近",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "区",
+    "readings": [
+      "く"
+    ],
+    "meaning_en": "ward",
+    "meaning_zh_CN": "区域",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "薬",
+    "readings": [
+      "くすり"
+    ],
+    "meaning_en": "medicine",
+    "meaning_zh_CN": "药物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "計画",
+    "readings": [
+      "けい かく"
+    ],
+    "meaning_en": "plan",
+    "meaning_zh_CN": "计划",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "小鳥",
+    "readings": [
+      "こ   とり"
+    ],
+    "meaning_en": "little bird",
+    "meaning_zh_CN": "小鸟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "飯ご",
+    "readings": [
+      "はん"
+    ],
+    "meaning_en": "rice / meal",
+    "meaning_zh_CN": "米饭",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "品物",
+    "readings": [
+      "しな もの"
+    ],
+    "meaning_en": "goods",
+    "meaning_zh_CN": "商品；产品",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "試合",
+    "readings": [
+      "し   あい"
+    ],
+    "meaning_en": "match / game",
+    "meaning_zh_CN": "比赛",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "試験",
+    "readings": [
+      "し   けん"
+    ],
+    "meaning_en": "examination",
+    "meaning_zh_CN": "考试，测验",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "市民",
+    "readings": [
+      "し   みん"
+    ],
+    "meaning_en": "citizen",
+    "meaning_zh_CN": "市民",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "写真",
+    "readings": [
+      "しゃ しん"
+    ],
+    "meaning_en": "picture",
+    "meaning_zh_CN": "照片",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "住所",
+    "readings": [
+      "じゅう   しょ"
+    ],
+    "meaning_en": "address",
+    "meaning_zh_CN": "地址",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "食料品",
+    "readings": [
+      "しょく りょう   ひん"
+    ],
+    "meaning_en": "food",
+    "meaning_zh_CN": "食物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "説明",
+    "readings": [
+      "せつ めい"
+    ],
+    "meaning_en": "explanation",
+    "meaning_zh_CN": "解释",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "台所",
+    "readings": [
+      "だい   どころ"
+    ],
+    "meaning_en": "kitchen",
+    "meaning_zh_CN": "厨房",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "台風",
+    "readings": [
+      "たい ふう"
+    ],
+    "meaning_en": "typhoon",
+    "meaning_zh_CN": "台风",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "地図",
+    "readings": [
+      "ち ず"
+    ],
+    "meaning_en": "map",
+    "meaning_zh_CN": "地图",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "茶色",
+    "readings": [
+      "ちゃ いろ"
+    ],
+    "meaning_en": "brown",
+    "meaning_zh_CN": "棕褐色",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "地理",
+    "readings": [
+      "ち り"
+    ],
+    "meaning_en": "geography",
+    "meaning_zh_CN": "地理",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "手紙",
+    "readings": [
+      "て   がみ"
+    ],
+    "meaning_en": "letter",
+    "meaning_zh_CN": "信",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "天気",
+    "readings": [
+      "てん   き"
+    ],
+    "meaning_en": "weather",
+    "meaning_zh_CN": "天气",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "電池",
+    "readings": [
+      "でん   ち"
+    ],
+    "meaning_en": "battery",
+    "meaning_zh_CN": "电池",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "動物",
+    "readings": [
+      "どう ぶつ"
+    ],
+    "meaning_en": "animal",
+    "meaning_zh_CN": "动物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "特に",
+    "readings": [
+      "とく"
+    ],
+    "meaning_en": "especially",
+    "meaning_zh_CN": "尤其",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "時計",
+    "readings": [
+      "と   けい"
+    ],
+    "meaning_en": "watch / clock",
+    "meaning_zh_CN": "手表；时钟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "鳥",
+    "readings": [
+      "とり"
+    ],
+    "meaning_en": "bird",
+    "meaning_zh_CN": "鸟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "肉",
+    "readings": [
+      "にく"
+    ],
+    "meaning_en": "meat",
+    "meaning_zh_CN": "肉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "日曜日",
+    "readings": [
+      "に     ちよう     び"
+    ],
+    "meaning_en": "Sunday",
+    "meaning_zh_CN": "周日",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "人形",
+    "readings": [
+      "にん   ぎょう"
+    ],
+    "meaning_en": "doll",
+    "meaning_zh_CN": "娃娃",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "林",
+    "readings": [
+      "はやし"
+    ],
+    "meaning_en": "woods",
+    "meaning_zh_CN": "树林",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "晩飯ご",
+    "readings": [
+      "ばんはん"
+    ],
+    "meaning_en": "dinner",
+    "meaning_zh_CN": "晚餐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "光",
+    "readings": [
+      "ひかり"
+    ],
+    "meaning_en": "light",
+    "meaning_zh_CN": "光",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "病気",
+    "readings": [
+      "びょう      き"
+    ],
+    "meaning_en": "illness / disease",
+    "meaning_zh_CN": "生病；疾病",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "服",
+    "readings": [
+      "ふく"
+    ],
+    "meaning_en": "clothes",
+    "meaning_zh_CN": "衣服",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "文",
+    "readings": [
+      "ぶん"
+    ],
+    "meaning_en": "sentence",
+    "meaning_zh_CN": "句子",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "文学",
+    "readings": [
+      "ぶん がく"
+    ],
+    "meaning_en": "literature",
+    "meaning_zh_CN": "文学",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "分野",
+    "readings": [
+      "ぶん   や"
+    ],
+    "meaning_en": "genre",
+    "meaning_zh_CN": "领域，范围",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "引出きし",
+    "readings": [
+      "ひだ"
+    ],
+    "meaning_en": "drawer",
+    "meaning_zh_CN": "抽屉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "本屋",
+    "readings": [
+      "ほん   や"
+    ],
+    "meaning_en": "book store",
+    "meaning_zh_CN": "书店",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "町",
+    "readings": [
+      "まち"
+    ],
+    "meaning_en": "town",
+    "meaning_zh_CN": "城镇",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "真中ん",
+    "readings": [
+      "まなか"
+    ],
+    "meaning_en": "center / middle",
+    "meaning_zh_CN": "中间",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "村",
+    "readings": [
+      "むら"
+    ],
+    "meaning_en": "village",
+    "meaning_zh_CN": "村子",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "森",
+    "readings": [
+      "もり"
+    ],
+    "meaning_en": "forest",
+    "meaning_zh_CN": "森林",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "問題",
+    "readings": [
+      "もん だい"
+    ],
+    "meaning_en": "question / problem",
+    "meaning_zh_CN": "问题",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "野菜",
+    "readings": [
+      "や   さい"
+    ],
+    "meaning_en": "vegetable",
+    "meaning_zh_CN": "蔬菜",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "夕食",
+    "readings": [
+      "ゆう   しょく"
+    ],
+    "meaning_en": "dinner",
+    "meaning_zh_CN": "晚餐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "雪",
+    "readings": [
+      "ゆき"
+    ],
+    "meaning_en": "snow",
+    "meaning_zh_CN": "雪",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "用事",
+    "readings": [
+      "よう   じ"
+    ],
+    "meaning_en": "something to do / errands",
+    "meaning_zh_CN": "(应办的) 事情；事",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "洋服",
+    "readings": [
+      "よう ふく"
+    ],
+    "meaning_en": "clothes (not Japanese style)",
+    "meaning_zh_CN": "西服；洋装",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "料金",
+    "readings": [
+      "りょう  きん"
+    ],
+    "meaning_en": "fee / charge",
+    "meaning_zh_CN": "费用；收费",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "両方",
+    "readings": [
+      "りょう   ほう"
+    ],
+    "meaning_en": "both",
+    "meaning_zh_CN": "两者",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "料理",
+    "readings": [
+      "りょう     り"
+    ],
+    "meaning_en": "cooking",
+    "meaning_zh_CN": "料理",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "青い",
+    "readings": [
+      "あお"
+    ],
+    "meaning_en": "blue",
+    "meaning_zh_CN": "蓝色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "赤い",
+    "readings": [
+      "あか"
+    ],
+    "meaning_en": "red",
+    "meaning_zh_CN": "红色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "明るい",
+    "readings": [
+      "あか"
+    ],
+    "meaning_en": "bright",
+    "meaning_zh_CN": "明亮的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "暖かい",
+    "readings": [
+      "あたた"
+    ],
+    "meaning_en": "warm",
+    "meaning_zh_CN": "温暖的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "頭がいい",
+    "readings": [
+      "あたま"
+    ],
+    "meaning_en": "smart / clever",
+    "meaning_zh_CN": "聪明的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "暑い",
+    "readings": [
+      "あつ"
+    ],
+    "meaning_en": "hot",
+    "meaning_zh_CN": "热的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "重い",
+    "readings": [
+      "おも"
+    ],
+    "meaning_en": "heavy",
+    "meaning_zh_CN": "重的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "軽い",
+    "readings": [
+      "かる"
+    ],
+    "meaning_en": "light",
+    "meaning_zh_CN": "轻的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "暗い",
+    "readings": [
+      "くら"
+    ],
+    "meaning_en": "dark",
+    "meaning_zh_CN": "暗的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "黒い",
+    "readings": [
+      "くろ"
+    ],
+    "meaning_en": "black",
+    "meaning_zh_CN": "黑的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "細かい",
+    "readings": [
+      "こま"
+    ],
+    "meaning_en": "small",
+    "meaning_zh_CN": "细的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "寒い",
+    "readings": [
+      "さむ"
+    ],
+    "meaning_en": "cold",
+    "meaning_zh_CN": "冷的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "白い",
+    "readings": [
+      "しろ"
+    ],
+    "meaning_en": "white",
+    "meaning_zh_CN": "白色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "涼しい",
+    "readings": [
+      "すず"
+    ],
+    "meaning_en": "cool",
+    "meaning_zh_CN": "凉快的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "正しい",
+    "readings": [
+      "ただ"
+    ],
+    "meaning_en": "correct",
+    "meaning_zh_CN": "正确的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "楽しい",
+    "readings": [
+      "たの"
+    ],
+    "meaning_en": "fun",
+    "meaning_zh_CN": "快乐的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "近い",
+    "readings": [
+      "ちか"
+    ],
+    "meaning_en": "near",
+    "meaning_zh_CN": "近的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "都合がいい",
+    "readings": [
+      "つ   ごう"
+    ],
+    "meaning_en": "convenient",
+    "meaning_zh_CN": "方便的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "強い",
+    "readings": [
+      "つよ"
+    ],
+    "meaning_en": "strong",
+    "meaning_zh_CN": "强壮的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "低い",
+    "readings": [
+      "ひく"
+    ],
+    "meaning_en": "low",
+    "meaning_zh_CN": "低的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "広い",
+    "readings": [
+      "ひろ"
+    ],
+    "meaning_en": "wide / spacious",
+    "meaning_zh_CN": "宽的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "太い",
+    "readings": [
+      "ふと"
+    ],
+    "meaning_en": "fat / thick",
+    "meaning_zh_CN": "厚的；肥胖的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "細い",
+    "readings": [
+      "ほそ"
+    ],
+    "meaning_en": "thin",
+    "meaning_zh_CN": "细的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "短い",
+    "readings": [
+      "みじか"
+    ],
+    "meaning_en": "short",
+    "meaning_zh_CN": "短的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "良い",
+    "readings": [
+      "よ"
+    ],
+    "meaning_en": "good",
+    "meaning_zh_CN": "好的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "弱い",
+    "readings": [
+      "よわ"
+    ],
+    "meaning_en": "weak",
+    "meaning_zh_CN": "弱的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "悪い",
+    "readings": [
+      "わる"
+    ],
+    "meaning_en": "bad",
+    "meaning_zh_CN": "坏的；不良的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "元気な",
+    "readings": [
+      "げん   き"
+    ],
+    "meaning_en": "healthy",
+    "meaning_zh_CN": "健康的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "親切な",
+    "readings": [
+      "しん せつ"
+    ],
+    "meaning_en": "kind",
+    "meaning_zh_CN": "亲切的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "好きな",
+    "readings": [
+      "す"
+    ],
+    "meaning_en": "favorite",
+    "meaning_zh_CN": "喜欢的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "大事な",
+    "readings": [
+      "だい   じ"
+    ],
+    "meaning_en": "important",
+    "meaning_zh_CN": "重要的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "大切な",
+    "readings": [
+      "たい せつ"
+    ],
+    "meaning_en": "precious",
+    "meaning_zh_CN": "珍贵的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "大変な",
+    "readings": [
+      "たい へん"
+    ],
+    "meaning_en": "tough (situation)",
+    "meaning_zh_CN": "太费劲的；不得了的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "特別な",
+    "readings": [
+      "とく べつ"
+    ],
+    "meaning_en": "special",
+    "meaning_zh_CN": "特别的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "不便な",
+    "readings": [
+      "ふ   べん"
+    ],
+    "meaning_en": "inconvenient",
+    "meaning_zh_CN": "不便利的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "変な",
+    "readings": [
+      "へん"
+    ],
+    "meaning_en": "weird",
+    "meaning_zh_CN": "奇怪的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "有名な",
+    "readings": [
+      "ゆう めい"
+    ],
+    "meaning_en": "famous",
+    "meaning_zh_CN": "有名的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "開ける",
+    "readings": [
+      "あ"
+    ],
+    "meaning_en": "to open",
+    "meaning_zh_CN": "打开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "開く",
+    "readings": [
+      "あ"
+    ],
+    "meaning_en": "(something) opens",
+    "meaning_zh_CN": "开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "集まる",
+    "readings": [
+      "あつ"
+    ],
+    "meaning_en": "to gather",
+    "meaning_zh_CN": "聚集",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "集める",
+    "readings": [
+      "あつ"
+    ],
+    "meaning_en": "to collect",
+    "meaning_zh_CN": "集合；收集",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "洗う",
+    "readings": [
+      "あら"
+    ],
+    "meaning_en": "to wash",
+    "meaning_zh_CN": "洗",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "歩く",
+    "readings": [
+      "ある"
+    ],
+    "meaning_en": "to walk",
+    "meaning_zh_CN": "走",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "安心する",
+    "readings": [
+      "あん しん"
+    ],
+    "meaning_en": "to be relieved",
+    "meaning_zh_CN": "安心",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "動く",
+    "readings": [
+      "うご"
+    ],
+    "meaning_en": "to move",
+    "meaning_zh_CN": "移动",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "歌う",
+    "readings": [
+      "うた"
+    ],
+    "meaning_en": "to sing",
+    "meaning_zh_CN": "唱",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "産む",
+    "readings": [
+      "う"
+    ],
+    "meaning_en": "to give birth",
+    "meaning_zh_CN": "分娩",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "売る",
+    "readings": [
+      "う"
+    ],
+    "meaning_en": "to sell",
+    "meaning_zh_CN": "卖",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "運転する",
+    "readings": [
+      "うん てん"
+    ],
+    "meaning_en": "to drive",
+    "meaning_zh_CN": "驾驶",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "運動する",
+    "readings": [
+      "うん どう"
+    ],
+    "meaning_en": "to exercise",
+    "meaning_zh_CN": "运动",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "起きる",
+    "readings": [
+      "お"
+    ],
+    "meaning_en": "to get up",
+    "meaning_zh_CN": "起床",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "送る",
+    "readings": [
+      "おく"
+    ],
+    "meaning_en": "to send",
+    "meaning_zh_CN": "送",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "教える",
+    "readings": [
+      "おし"
+    ],
+    "meaning_en": "to teach",
+    "meaning_zh_CN": "教",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "思出いす",
+    "readings": [
+      "おもだ"
+    ],
+    "meaning_en": "to remember",
+    "meaning_zh_CN": "想起",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "思う",
+    "readings": [
+      "おも"
+    ],
+    "meaning_en": "to think",
+    "meaning_zh_CN": "想；思考",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "降りる",
+    "readings": [
+      "お"
+    ],
+    "meaning_en": "to get off",
+    "meaning_zh_CN": "下(车)",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "終わる",
+    "readings": [
+      "お"
+    ],
+    "meaning_en": "to finish",
+    "meaning_zh_CN": "完；结束",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "返す",
+    "readings": [
+      "かえ"
+    ],
+    "meaning_en": "to return",
+    "meaning_zh_CN": "返回",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "帰る",
+    "readings": [
+      "かえ"
+    ],
+    "meaning_en": "to return / to go home",
+    "meaning_zh_CN": "回家",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "貸す",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "to lend",
+    "meaning_zh_CN": "租；借出",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "通う",
+    "readings": [
+      "かよ"
+    ],
+    "meaning_en": "to commute",
+    "meaning_zh_CN": "来往",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "借りる",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "to borrow",
+    "meaning_zh_CN": "借",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "変わる",
+    "readings": [
+      "か"
+    ],
+    "meaning_en": "to change",
+    "meaning_zh_CN": "改变",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "考える",
+    "readings": [
+      "かんが"
+    ],
+    "meaning_en": "to think / to consider",
+    "meaning_zh_CN": "想；考虑",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "強調する",
+    "readings": [
+      "きょう ちょう"
+    ],
+    "meaning_en": "to emphasize",
+    "meaning_zh_CN": "强调",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "切る",
+    "readings": [
+      "き"
+    ],
+    "meaning_en": "to cut",
+    "meaning_zh_CN": "切",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "着る",
+    "readings": [
+      "き"
+    ],
+    "meaning_en": "to put on clothes",
+    "meaning_zh_CN": "穿(上衣)",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "研究する",
+    "readings": [
+      "けん   きゅう"
+    ],
+    "meaning_en": "to research",
+    "meaning_zh_CN": "研究",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "答える",
+    "readings": [
+      "こた"
+    ],
+    "meaning_en": "to answer",
+    "meaning_zh_CN": "回答",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "質問する",
+    "readings": [
+      "しつ もん"
+    ],
+    "meaning_en": "to ask a question",
+    "meaning_zh_CN": "提问",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "死ぬ",
+    "readings": [
+      "し"
+    ],
+    "meaning_en": "to die",
+    "meaning_zh_CN": "死",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "閉める",
+    "readings": [
+      "し"
+    ],
+    "meaning_en": "to close",
+    "meaning_zh_CN": "关闭",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "出発する",
+    "readings": [
+      "しゅっ  ぱつ"
+    ],
+    "meaning_en": "to leave",
+    "meaning_zh_CN": "出发",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "知る",
+    "readings": [
+      "し"
+    ],
+    "meaning_en": "to get to know",
+    "meaning_zh_CN": "知道",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "信じる",
+    "readings": [
+      "しん"
+    ],
+    "meaning_en": "to believe",
+    "meaning_zh_CN": "相信",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "進む",
+    "readings": [
+      "すす"
+    ],
+    "meaning_en": "to proceed",
+    "meaning_zh_CN": "前进",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "住む",
+    "readings": [
+      "す"
+    ],
+    "meaning_en": "to live",
+    "meaning_zh_CN": "住",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "説明する",
+    "readings": [
+      "せつ めい"
+    ],
+    "meaning_en": "to explain",
+    "meaning_zh_CN": "说明；解释",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "世話をする",
+    "readings": [
+      "せ わ"
+    ],
+    "meaning_en": "to take care",
+    "meaning_zh_CN": "照顾",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "建てる",
+    "readings": [
+      "た"
+    ],
+    "meaning_en": "to build",
+    "meaning_zh_CN": "建设",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "注意する",
+    "readings": [
+      "ちゅう    い"
+    ],
+    "meaning_en": "to pay attention",
+    "meaning_zh_CN": "注意",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "中止する",
+    "readings": [
+      "ちゅう    し"
+    ],
+    "meaning_en": "to cancel",
+    "meaning_zh_CN": "取消",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "注文する",
+    "readings": [
+      "ちゅう   もん"
+    ],
+    "meaning_en": "to order",
+    "meaning_zh_CN": "下单；订购",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "使う",
+    "readings": [
+      "つか"
+    ],
+    "meaning_en": "to use",
+    "meaning_zh_CN": "使用",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "着く",
+    "readings": [
+      "つ"
+    ],
+    "meaning_en": "to arrive",
+    "meaning_zh_CN": "到达",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "作る",
+    "readings": [
+      "つく"
+    ],
+    "meaning_en": "to make",
+    "meaning_zh_CN": "做",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "止まる",
+    "readings": [
+      "と"
+    ],
+    "meaning_en": "to stop",
+    "meaning_zh_CN": "停止",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "間合にう",
+    "readings": [
+      "まあ"
+    ],
+    "meaning_en": "to be in time",
+    "meaning_zh_CN": "赶得及",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "入院する",
+    "readings": [
+      "にゅう   いん"
+    ],
+    "meaning_en": "to be hospitalized",
+    "meaning_zh_CN": "入院",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "習う",
+    "readings": [
+      "なら"
+    ],
+    "meaning_en": "to learn",
+    "meaning_zh_CN": "学习",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "乗る",
+    "readings": [
+      "の"
+    ],
+    "meaning_en": "to get on",
+    "meaning_zh_CN": "乘搭",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "運ぶ",
+    "readings": [
+      "はこ"
+    ],
+    "meaning_en": "to carry / to transport",
+    "meaning_zh_CN": "搬运；运送",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "始める",
+    "readings": [
+      "はじ"
+    ],
+    "meaning_en": "to start",
+    "meaning_zh_CN": "开始",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "走る",
+    "readings": [
+      "はし"
+    ],
+    "meaning_en": "to run",
+    "meaning_zh_CN": "跑",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "働く",
+    "readings": [
+      "はたら"
+    ],
+    "meaning_en": "to work",
+    "meaning_zh_CN": "工作",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "引く",
+    "readings": [
+      "ひ"
+    ],
+    "meaning_en": "to pull",
+    "meaning_zh_CN": "拉",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "変化する",
+    "readings": [
+      "へん   か"
+    ],
+    "meaning_en": "to change",
+    "meaning_zh_CN": "变更",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "勉強する",
+    "readings": [
+      "べん   きょう"
+    ],
+    "meaning_en": "to study",
+    "meaning_zh_CN": "用功学习",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "待つ",
+    "readings": [
+      "ま"
+    ],
+    "meaning_en": "to wait",
+    "meaning_zh_CN": "等待",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "回す",
+    "readings": [
+      "まわ"
+    ],
+    "meaning_en": "to turn",
+    "meaning_zh_CN": "转；旋转",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "持つ",
+    "readings": [
+      "も"
+    ],
+    "meaning_en": "to hold",
+    "meaning_zh_CN": "拥有；拿",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "用意する",
+    "readings": [
+      "よう   い"
+    ],
+    "meaning_en": "to prepare",
+    "meaning_zh_CN": "准备；预备",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "利用する",
+    "readings": [
+      "り   よう"
+    ],
+    "meaning_en": "to use",
+    "meaning_zh_CN": "利用",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "旅行する",
+    "readings": [
+      "りょ こう"
+    ],
+    "meaning_en": "to travel",
+    "meaning_zh_CN": "旅行",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "別れる",
+    "readings": [
+      "わか"
+    ],
+    "meaning_en": "to break up",
+    "meaning_zh_CN": "分开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "kanji": "政",
+    "readings": [
+      "せい",
+      "しょう",
+      "まつりごと"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "政治、政府",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "議",
+    "readings": [
+      "ぎ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "讨论/辩论/审议",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "連",
+    "readings": [
+      "れん",
+      "つら(なる)",
+      "つ(れる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "加入/连接",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "対",
+    "readings": [
+      "たい",
+      "つい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "相反",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "内",
+    "readings": [
+      "ない",
+      "だい",
+      "うち"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "里面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "相",
+    "readings": [
+      "そう",
+      "しょう",
+      "あい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "相互/一起/彼此",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "定",
+    "readings": [
+      "てい",
+      "じょう",
+      "さだ(める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "决定/确定",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "選",
+    "readings": [
+      "せん",
+      "えら (ぶ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "选择",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "実",
+    "readings": [
+      "じつ",
+      "み",
+      "みの(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "现实/真相",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "関",
+    "readings": [
+      "かん",
+      "せき",
+      "かか(わる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "参与/联系",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "決",
+    "readings": [
+      "けつ",
+      "き(める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "决定",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "全",
+    "readings": [
+      "ぜん",
+      "すべ (て)",
+      "まった (く)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "全部",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "表",
+    "readings": [
+      "ひょう",
+      "おもて",
+      "あらわ(す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "表/表面/前面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "戦",
+    "readings": [
+      "せん",
+      "いくさ",
+      "たたか(う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "战争/战斗",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "経",
+    "readings": [
+      "けい",
+      "きょう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "经度/通过",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "最",
+    "readings": [
+      "さい",
+      "もっと(も)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "最/极端",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "現",
+    "readings": [
+      "げん",
+      "あらわ(れる)",
+      "うつ(つ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "出现/存在",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "調",
+    "readings": [
+      "ちょう",
+      "しら(べる)",
+      "ととの(う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "调查/检查/调整/语气",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "化",
+    "readings": [],
+    "meaning_en": "",
+    "meaning_zh_CN": "改变/采取的形式",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "当",
+    "readings": [
+      "とう",
+      "あ(たる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "击中/正解/适当",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "約",
+    "readings": [
+      "やく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "承诺/大约/关于",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "法",
+    "readings": [
+      "ほう",
+      "はっ…ほっ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "法律/方法/规则",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "性",
+    "readings": [
+      "せい",
+      "しょう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "性别",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "的",
+    "readings": [
+      "てき",
+      "まと"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "目标/标记",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "要",
+    "readings": [
+      "よう",
+      "い(る)",
+      "かなめ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "需要/必要",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "治",
+    "readings": [
+      "ち",
+      "じ",
+      "おさ(める)",
+      "なお(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "治愈/统治",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "成",
+    "readings": [
+      "せい",
+      "じょう",
+      "な(る)",
+      "な(す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "成为/变成",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "期",
+    "readings": [
+      "き",
+      "ご"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "期间、时间、日期、期限",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "機",
+    "readings": [
+      "き",
+      "はた"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "机器/机会",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "平",
+    "readings": [
+      "へい",
+      "びょう",
+      "ひょう",
+      "たい(ら)",
+      "ひら"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "平坦/平整/和平",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "加",
+    "readings": [
+      "か",
+      "くわ(える)意思：添加/加入的"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "受",
+    "readings": [
+      "じゅ",
+      "う(ける"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "接受",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "続",
+    "readings": [
+      "ぞく",
+      "つづ (く)",
+      "つづ (ける)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "继续，系列，续集",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "数",
+    "readings": [
+      "かず",
+      "かぞ (える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "数",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "記",
+    "readings": [
+      "き",
+      "しる(す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "记下/写下来",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "初",
+    "readings": [
+      "しょ",
+      "はじ(め)",
+      "はつ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "第一次、开始",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "指",
+    "readings": [],
+    "meaning_en": "",
+    "meaning_zh_CN": "手指/指向finger, point to, indicate",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "支",
+    "readings": [
+      "し",
+      "ささ(える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "支持/分支",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "点",
+    "readings": [
+      "てん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "点/标记",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "済",
+    "readings": [
+      "さい",
+      "す(む)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "结束/完成",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "活",
+    "readings": [
+      "かつ",
+      "い (きる)",
+      "い (かす)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "活着",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "原",
+    "readings": [
+      "げん",
+      "はら"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "原先的/起初的",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "解",
+    "readings": [
+      "かい",
+      "げ",
+      "と(く)",
+      "と (ける)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "解开/解决",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "交",
+    "readings": [
+      "こう",
+      "まじ(わる)",
+      "ま(じる)",
+      "か(わす)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "混合",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "予",
+    "readings": [],
+    "meaning_en": "",
+    "meaning_zh_CN": "事先/以前",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "向",
+    "readings": [
+      "こう",
+      "むか(う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "面对/超越",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "際",
+    "readings": [],
+    "meaning_en": "",
+    "meaning_zh_CN": "场合/时间/边缘",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "勝",
+    "readings": [
+      "しょう",
+      "か(つ)",
+      "まさ(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "赢/胜利",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "面",
+    "readings": [
+      "めん",
+      "おも",
+      "おもて",
+      "つら"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "面具/脸/表面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "告",
+    "readings": [
+      "こく",
+      "つ(げる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "通知/告诉/宣布",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "反",
+    "readings": [
+      "はん",
+      "たん",
+      "ほん",
+      "そ(る)",
+      "かえ (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "反",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "認",
+    "readings": [
+      "にん",
+      "みと(める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "承认",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "参",
+    "readings": [
+      "さん",
+      "まい(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "访问/加入/参与",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "利",
+    "readings": [
+      "り",
+      "き(く)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "利润/收益",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "組",
+    "readings": [
+      "そ",
+      "く(む)",
+      "くみ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "协会/集合/单位",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "信",
+    "readings": [
+      "しん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "相信",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "在",
+    "readings": [
+      "ざい",
+      "あ (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "存在",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "件",
+    "readings": [
+      "けん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "案件/事",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "側",
+    "readings": [
+      "そく",
+      "がわ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "边",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "求",
+    "readings": [
+      "きゅう",
+      "もと (める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "请求",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "次",
+    "readings": [
+      "じ",
+      "し",
+      "つぎ",
+      "つ(ぐ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "下一个",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "昨",
+    "readings": [
+      "さく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "昨天/以前",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "増",
+    "readings": [
+      "ぞう",
+      "ま(す)",
+      "ふ(える)",
+      "ふ (やす)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "增加",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "係",
+    "readings": [
+      "けい",
+      "かかり",
+      "かか(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "负责人",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "感",
+    "readings": [
+      "かん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "感觉/情感",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "情",
+    "readings": [
+      "じょう",
+      "せい",
+      "なさ (け)意思：感覺/情感/同情"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "投",
+    "readings": [
+      "とう",
+      "な (げる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "扔",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "示",
+    "readings": [
+      "し",
+      "じ",
+      "しめ (す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "显示/表示",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "変",
+    "readings": [
+      "へん",
+      "か(わる)",
+      "か(える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "改变/不寻常",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "直",
+    "readings": [
+      "ちょく",
+      "じき"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "直接/修复/修理",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "両",
+    "readings": [
+      "りょう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "两者",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "式",
+    "readings": [
+      "しき"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "仪式/风格/方式",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "確",
+    "readings": [
+      "かく",
+      "たしか (める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "确定/确认/明确",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "果",
+    "readings": [
+      "か",
+      "は(たす)",
+      "は(てる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "水果/实现",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "申",
+    "readings": [
+      "しん",
+      "もう (す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "告诉",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "kanji": "基",
+    "readings": [
+      "き",
+      "もと",
+      "もとい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "基础",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "挙",
+    "readings": [
+      "きょ",
+      "あ(げる)",
+      "こぞ(る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "提高",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "応",
+    "readings": [
+      "おう",
+      "こた(える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "回答/回应/答复",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "企",
+    "readings": [
+      "き",
+      "くわだ(てる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "方案/计划",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "検",
+    "readings": [
+      "けん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "检查/调查",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "裁",
+    "readings": [
+      "さい",
+      "さば(く)",
+      "た(つ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "裁缝/判断/裁剪",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "援",
+    "readings": [
+      "えん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "帮助/协助",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "施",
+    "readings": [
+      "し",
+      "せ",
+      "ほどこ(す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "申请/给予/施舍",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "井",
+    "readings": [
+      "しょう",
+      "せい",
+      "い"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "井",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "鮮",
+    "readings": [
+      "せん",
+      "あざ(やか)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "清新/生动/清晰",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "視",
+    "readings": [
+      "し"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "检查/看",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "条",
+    "readings": [
+      "じょう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "文章/条款",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "率",
+    "readings": [
+      "りつ",
+      "そつ",
+      "ひき(いる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "率/领导",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "張",
+    "readings": [
+      "ちょう",
+      "は (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "传播/伸展/延长",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "監",
+    "readings": [
+      "かん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "监督",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "訴",
+    "readings": [
+      "そ",
+      "うった (える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "起诉/投诉",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "益",
+    "readings": [
+      "えき",
+      "やく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "利润/收益",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "購",
+    "readings": [
+      "こう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "买",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "憶",
+    "readings": [
+      "おく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "记住/回忆",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "遭",
+    "readings": [
+      "そう",
+      "あ (う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "遇到/遇见",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "貢",
+    "readings": [
+      "こう / く",
+      "みつ (ぐ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "致敬/贡",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "染",
+    "readings": [
+      "せん",
+      "そ (める)",
+      "そ (まる)",
+      "し(みる)",
+      "し (み)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "染色/染料",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "至",
+    "readings": [
+      "し",
+      "いた (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "达到/到达",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "屈",
+    "readings": [
+      "くつ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "折弯",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "扱",
+    "readings": [
+      "あつか (う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "处理",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "促",
+    "readings": [
+      "そく",
+      "うなが (す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "催促/按/加速",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "挑",
+    "readings": [
+      "ちょう",
+      "いど-む"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "挑战",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "抑",
+    "readings": [
+      "よく",
+      "おさ-える"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "压抑",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "詳",
+    "readings": [
+      "しょう",
+      "くわ (しい)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "详细",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "弊",
+    "readings": [
+      "へい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "邪恶/虐待",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "侮",
+    "readings": [
+      "ぶ",
+      "あなど (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "轻蔑/侮辱/鄙视/轻视",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "辱",
+    "readings": [
+      "じょく",
+      "はずかし (める)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "尴尬/羞辱",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "従",
+    "readings": [
+      "じゅう",
+      "しょう",
+      "じゅ",
+      "したが (う)",
+      "したが (える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "服从/跟随",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "沼",
+    "readings": [
+      "しょう",
+      "ぬま"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "沼泽",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "釈",
+    "readings": [
+      "しゃく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "解释",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "逮",
+    "readings": [
+      "たい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "逮捕/追捕",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "紛",
+    "readings": [
+      "ふん",
+      "まぎ(れる)",
+      "まぎ(らわしい)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "分散",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "慌",
+    "readings": [
+      "こう",
+      "あわ (てる)",
+      "あわ-ただしい"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "困惑/慌乱",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "振",
+    "readings": [
+      "しん",
+      "ふ (る)",
+      "ふ (るう)",
+      "ふ (れる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "措",
+    "readings": [
+      "そ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "措施/搁置",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "懲",
+    "readings": [
+      "ちょう",
+      "こ (りるこ)",
+      "こ (らす)",
+      "こ (らしめる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "惩罚",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "縦",
+    "readings": [
+      "じゅう",
+      "たて"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "垂直",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "銃",
+    "readings": [
+      "じゅう"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "枪",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "携",
+    "readings": [
+      "けい",
+      "たずさ (わる)",
+      "たずさ (える)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "便携/手提",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "障",
+    "readings": [
+      "しょう",
+      "さわ (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "to hinder / to hurt",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "憧",
+    "readings": [
+      "しょう",
+      "あこが (れる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "渴望",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "討",
+    "readings": [
+      "とう",
+      "う (つ)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "攻击/打败",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "託",
+    "readings": [
+      "たく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "委托",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "怠",
+    "readings": [
+      "たい",
+      "おこた (る)",
+      "なま (ける)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "忽略",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "浸",
+    "readings": [
+      "しん",
+      "ひた (す)",
+      "ひた (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "浸入/浸泡",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "索",
+    "readings": [
+      "さく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "索引/搜索",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "濁",
+    "readings": [
+      "だく",
+      "にご (る)",
+      "にご (す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "不洁/浊音",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "倹",
+    "readings": [
+      "けん"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "节俭/经济",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "秩",
+    "readings": [
+      "ちつ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "规律/秩序",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "捗",
+    "readings": [
+      "ちょく"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "取得进步",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "誘",
+    "readings": [
+      "ゆう",
+      "さそ (う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "引诱/邀请",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "焦",
+    "readings": [],
+    "meaning_en": "",
+    "meaning_zh_CN": "烧焦/燃烧",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "脅",
+    "readings": [
+      "きょう",
+      "おど (す)",
+      "おど (かす)",
+      "おびやか (す)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "威胁",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "敷",
+    "readings": [
+      "ふ",
+      "し (く)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "铺开/铺平",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "潰",
+    "readings": [
+      "かい",
+      "つぶ (す)",
+      "つぶ (れる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "压碎/粉碎",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "厳",
+    "readings": [
+      "げん",
+      "ごん",
+      "きび (しい)",
+      "おごそ (か)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "严格/严厉",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "慕",
+    "readings": [
+      "ぼ",
+      "した (う)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "爱慕/崇拜",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "廃",
+    "readings": [
+      "はい",
+      "すた (れる)",
+      "すた (る)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "废除/放弃",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "叙",
+    "readings": [
+      "じょ"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "叙述/描述",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "kanji": "窮",
+    "readings": [
+      "きゅう",
+      "きわ (める)",
+      "きわ (まる)"
+    ],
+    "meaning_en": "",
+    "meaning_zh_CN": "贫困/受苦",
+    "category": "general",
+    "jlptLevel": "N1"
+  }
+]

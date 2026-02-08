@@ -1,0 +1,618 @@
+[
+  {
+    "furigana": "赤い",
+    "word": "あかい",
+    "meaning_en": "紅\nred",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "明るい",
+    "word": "あかるい",
+    "meaning_en": "明亮\nbright",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "温かい",
+    "word": "あたたかい",
+    "meaning_en": "(物件)溫暖 \nwarm",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "暖かい",
+    "word": "あたたかい",
+    "meaning_en": "(天氣)溫暖\nwarm",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "新しい",
+    "word": "あたらしい",
+    "meaning_en": "新 \nnew",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "厚い",
+    "word": "あつい",
+    "meaning_en": "厚 \nthick",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "暑い",
+    "word": "あつい",
+    "meaning_en": "(天氣)熱\nhot(temperature)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "熱い",
+    "word": "あつい",
+    "meaning_en": "(物件)熱 \nhot(heat)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "危ない",
+    "word": "あぶない",
+    "meaning_en": "危險 \ndangerous",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "甘い",
+    "word": "あまい",
+    "meaning_en": "甜\nsweet",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "いい",
+    "meaning_en": "好；良好\ngood",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "忙しい",
+    "word": "いそがしい",
+    "meaning_en": "忙；忙碌\nbusy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "痛い",
+    "word": "いたい",
+    "meaning_en": "痛；疼痛\npainful",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "薄い",
+    "word": "うすい",
+    "meaning_en": "薄；淡\nthin",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "うるさい",
+    "meaning_en": "喧鬧；嘈雜\nnoisy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "美味しい",
+    "word": "おいしい",
+    "meaning_en": "美味\ndelicious",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "多い",
+    "word": "おおい",
+    "meaning_en": "多 \nmany / much",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "大きい",
+    "word": "おおきい",
+    "meaning_en": "大 \nbig",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "遅い",
+    "word": "おそい",
+    "meaning_en": "遲 \nlate",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "重い",
+    "word": "おもい",
+    "meaning_en": "重\nheavy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "面白い",
+    "word": "おもしろい",
+    "meaning_en": "可笑；有趣\ninteresting",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "辛い",
+    "word": "からい",
+    "meaning_en": "辛辣\nhot / spicy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "軽い",
+    "word": "かるい",
+    "meaning_en": "輕\nlight",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "可愛い",
+    "word": "かわいい",
+    "meaning_en": "可愛\nCute",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "黄色い",
+    "word": "きいろい",
+    "meaning_en": "黃\nyellow",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "汚い",
+    "word": "きたない",
+    "meaning_en": "髒\ndirty",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "暗い",
+    "word": "くらい",
+    "meaning_en": "昏暗；黑暗\ndark / dim",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "黒い",
+    "word": "くろい",
+    "meaning_en": "黑\nblack",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "怖い",
+    "word": "こわい",
+    "meaning_en": "可怕；恐怖\nfrightening",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "寒い",
+    "word": "さむい",
+    "meaning_en": "(天氣)寒冷\ncold",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "白い",
+    "word": "しろい",
+    "meaning_en": "白\nwhite",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "涼しい",
+    "word": "すずしい",
+    "meaning_en": "(天氣)涼快 \ncool",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "狭い",
+    "word": "せまい",
+    "meaning_en": "狹窄\nnarrow",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "高い",
+    "word": "たかい",
+    "meaning_en": "高；昂貴 \nhigh / tall / expensive",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "楽しい",
+    "word": "たのしい",
+    "meaning_en": "快樂；愉快\nenjoyable",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "小さい",
+    "word": "ちいさい",
+    "meaning_en": "小 \nsmall",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "近い",
+    "word": "ちかい",
+    "meaning_en": "近\nnear",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "つまらない",
+    "meaning_en": "無趣\nboring",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "冷たい",
+    "word": "つめたい",
+    "meaning_en": "(物件)冷；冰涼\ncold",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "強い",
+    "word": "つよい",
+    "meaning_en": "強\nstrong",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "遠い",
+    "word": "とおい",
+    "meaning_en": "遠\nfar",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "長い",
+    "word": "ながい",
+    "meaning_en": "長\nlong",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "早い",
+    "word": "はやい",
+    "meaning_en": "早\nearly",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "速い",
+    "word": "はやい",
+    "meaning_en": "快 \nquick / fast",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "低い",
+    "word": "ひくい",
+    "meaning_en": "低\nlow",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "広い",
+    "word": "ひろい",
+    "meaning_en": "廣闊；寬闊\nspacious / roomy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "太い",
+    "word": "ふとい",
+    "meaning_en": "粗；肥\nthick / fat",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "古い",
+    "word": "ふるい",
+    "meaning_en": "古老；陳舊 \nold",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "細い",
+    "word": "ほそい",
+    "meaning_en": "纖細；瘦\nthin / slender",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "まずい",
+    "meaning_en": "難吃 \nbad tasting",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "丸い／円い",
+    "word": "まるい",
+    "meaning_en": "圓 \nround",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "短い",
+    "word": "みじかい",
+    "meaning_en": "短 \nshort",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "難しい",
+    "word": "むずかしい",
+    "meaning_en": "困難\ndifficult",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "易しい",
+    "word": "やさしい",
+    "meaning_en": "容易；簡單\neasy",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "安い",
+    "word": "やすい",
+    "meaning_en": "便宜 \ncheap",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "若い",
+    "word": "わかい",
+    "meaning_en": "年輕 \nyoung",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "悪い",
+    "word": "わるい",
+    "meaning_en": "不好；不對；錯；壞\nbad",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "色々",
+    "word": "いろいろ",
+    "meaning_en": "種種；各式各樣\nvarious",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "同じ",
+    "word": "おなじ",
+    "meaning_en": "相同\nsame",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "嫌い",
+    "word": "きらい",
+    "meaning_en": "不喜歡；討厭\nhateful",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "綺麗",
+    "word": "きれい",
+    "meaning_en": "漂亮；乾淨 \nbeautiful / clean",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "結構",
+    "word": "けっこう",
+    "meaning_en": "很好；相當\nvery well / quite",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "元気",
+    "word": "げんき",
+    "meaning_en": "健康 \nenergy / fine",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "静か",
+    "word": "しずか",
+    "meaning_en": "安靜；寧靜\nquiet",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "上手",
+    "word": "じょうず",
+    "meaning_en": "好；拿手\nskillful",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "丈夫",
+    "word": "じょうぶ",
+    "meaning_en": "健康；結實 \nhealthy / strong / well",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "好き",
+    "word": "すき",
+    "meaning_en": "喜歡；喜愛\nlike",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "大好き",
+    "word": "だいすき",
+    "meaning_en": "超喜歡\nlike very much",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "大切",
+    "word": "たいせつ",
+    "meaning_en": "重要；貴重 \nimportant",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "大変",
+    "word": "たいへん",
+    "meaning_en": "不得了；辛苦\nterrible",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "小さい",
+    "word": "ちいさい",
+    "meaning_en": "小\nsmall / little",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "賑やか",
+    "word": "にぎやか",
+    "meaning_en": "熱鬧\nlively",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "暇",
+    "word": "ひま",
+    "meaning_en": "空閒\nbeing bored",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "下手",
+    "word": "へた",
+    "meaning_en": "拙劣；不高明\nnot good at",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "便利",
+    "word": "べんり",
+    "meaning_en": "便利；方便\nconvenience",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "有名",
+    "word": "ゆうめい",
+    "meaning_en": "有名；著名 \nfamous",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  },
+  {
+    "furigana": "立派",
+    "word": "りっぱ",
+    "meaning_en": "優秀；出色\nsplendid",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adj"
+  }
+]

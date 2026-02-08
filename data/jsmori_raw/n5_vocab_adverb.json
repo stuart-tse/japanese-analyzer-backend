@@ -1,0 +1,234 @@
+[
+  {
+    "furigana": "あまり",
+    "word": "too; so; not very...(negative)",
+    "meaning_en": "(後接否定) 不太；不很",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "一番(いち ばん)",
+    "word": "most; best",
+    "meaning_en": "最",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "一緒(いっ しょ)に",
+    "word": "together; with",
+    "meaning_en": "一起",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いつも",
+    "word": "always; all the time",
+    "meaning_en": "總是；常常",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "大勢(おお ぜい)",
+    "word": "a large number of; many people",
+    "meaning_en": "大批；許多人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "先(さき)に",
+    "word": "in advance; beforehand",
+    "meaning_en": "事先；預先",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "すぐに",
+    "word": "right away",
+    "meaning_en": "馬上；立即",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "少(すこ)し",
+    "word": "a little; a few",
+    "meaning_en": "一點點；少量",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "大変(たい へん)",
+    "word": "very much",
+    "meaning_en": "很；非常",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たくさん",
+    "word": "many; a lot",
+    "meaning_en": "很多；許多；好多",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "だけ",
+    "word": "only; just",
+    "meaning_en": "只",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "多分(  た   ぶん)",
+    "word": "probably",
+    "meaning_en": "大概；也許",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "だんだん",
+    "word": "gradually; more and more",
+    "meaning_en": "漸漸；逐漸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ちょうど",
+    "word": "just, exactly; sharp; precisely",
+    "meaning_en": "正",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ちょっと",
+    "word": "a little",
+    "meaning_en": "稍微；一點點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "どうぞ",
+    "word": "please; kindly",
+    "meaning_en": "請",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "どうも",
+    "word": "very much; really",
+    "meaning_en": "實在；太；很",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "時(とき)",
+    "word": "sometimes",
+    "meaning_en": "有時；時常",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "とても",
+    "word": "very much; really",
+    "meaning_en": "非常；很",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "初(はじ)めて",
+    "word": "the first time",
+    "meaning_en": "初次；第一次",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "本当(ほん とう)に",
+    "word": "truly; really; actually",
+    "meaning_en": "真的；實在",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "また",
+    "word": "again; once more",
+    "meaning_en": "又；再",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まだ",
+    "word": "still (affirmative); not yet (negative)",
+    "meaning_en": "仍然；尚；未",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まっすぐ",
+    "word": "straight ahead",
+    "meaning_en": "一直",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "もう",
+    "word": "already; now",
+    "meaning_en": "己；已經",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "一度(いち   ど  )",
+    "word": "again",
+    "meaning_en": "再一次",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "もっと",
+    "word": "more",
+    "meaning_en": "更；更加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ゆっくり",
+    "word": "slowly",
+    "meaning_en": "慢慢地",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "よく",
+    "word": "frequently; a lot; well",
+    "meaning_en": "常常；經常；好好地",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "adverb"
+  }
+]

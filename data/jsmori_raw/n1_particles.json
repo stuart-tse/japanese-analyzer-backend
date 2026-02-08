@@ -1,0 +1,92 @@
+[
+  {
+    "pattern": "だに / だにしない",
+    "meaning_zh_CN": "甚至是～都不能",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "だの～だの",
+    "meaning_zh_CN": "……啦……啦",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "が早いか",
+    "meaning_zh_CN": "做一件事的同时",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "なり",
+    "meaning_zh_CN": "刚～就立刻 ～",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "なりとも",
+    "meaning_zh_CN": "……之类的， ……什么的； 无论……、不管……",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "なり～なり",
+    "meaning_zh_CN": "也可以是～也可以是～",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "～のやら",
+    "meaning_zh_CN": "不知是～呢？",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "すら / ですら",
+    "meaning_zh_CN": "连～也",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "ただ～のみだ",
+    "meaning_zh_CN": "只有",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "たら最後 / たが最後",
+    "meaning_zh_CN": "一旦～就完了",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "たら～たで",
+    "meaning_zh_CN": "就算……了，也……",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "ところを",
+    "meaning_zh_CN": "虽说是～这种情况，却还做了～",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "わ〜わで",
+    "meaning_zh_CN": "又…又… (坏事)",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "や否や (やいなや)",
+    "meaning_zh_CN": "一～就～",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  },
+  {
+    "pattern": "やれ～やれ",
+    "meaning_zh_CN": "什么…啦，什么…啦",
+    "scene": "助词",
+    "jlptLevel": "N1"
+  }
+]

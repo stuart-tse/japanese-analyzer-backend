@@ -1,0 +1,1378 @@
+[
+  {
+    "furigana": "空(あ)く",
+    "word": "to be vacant",
+    "meaning_en": "空缺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "預(あず)かる",
+    "word": "to look after",
+    "meaning_en": "(代人) 保管",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "暖(あたた)まる",
+    "word": "to warm",
+    "meaning_en": "烘暖 (房間；人)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "当(からだ)あたる",
+    "word": "to hit",
+    "meaning_en": "碰上；照；成功",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "扱(あつか)う",
+    "word": "to handle",
+    "meaning_en": "對待；處理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "編(あ)む",
+    "word": "to knit",
+    "meaning_en": "編織",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "表(あらわ)す",
+    "word": "to indicate / to express",
+    "meaning_en": "表現；表示；表達",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "祝(いわ)う",
+    "word": "to celebrate",
+    "meaning_en": "祝賀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "浮(う)く",
+    "word": "to float",
+    "meaning_en": "漂；浮現",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "動(うご)かす",
+    "word": "to move (something)",
+    "meaning_en": "搬動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "失(うしな)う",
+    "word": "to lose",
+    "meaning_en": "失去；遺失；喪失",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "失(な)くす",
+    "word": "to lose",
+    "meaning_en": "丟失",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "疑(うたが)う",
+    "word": "to doubt",
+    "meaning_en": "懷疑",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "打(う)つ",
+    "word": "to hid / to type",
+    "meaning_en": "打；拍",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "移(うつ)す",
+    "word": "to move",
+    "meaning_en": "移動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "映(うつ)す",
+    "word": "to reflect",
+    "meaning_en": "映；照；投射",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "映(うつ)る",
+    "word": "to be reflected",
+    "meaning_en": "映；反射",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "産(う)む",
+    "word": "to give birth",
+    "meaning_en": "生孩子；創作",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "追(お)う",
+    "word": "to follow",
+    "meaning_en": "追；追趕；催逼",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "犯(おか)す",
+    "word": "to commit",
+    "meaning_en": "犯；違犯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "補(おぎな)う",
+    "word": "to make up / to compensate",
+    "meaning_en": "補上；補償",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "(問題を) 起(お)こす",
+    "word": "to cause",
+    "meaning_en": "引起",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "驚(おどろ)かす",
+    "word": "to surprise",
+    "meaning_en": "驚動；嚇唬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "輝(かがや)く",
+    "word": "to sparkle",
+    "meaning_en": "放光；閃耀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "嗅(か)ぐ",
+    "word": "to smell",
+    "meaning_en": "嗅；聞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "隠(かく)す",
+    "word": "to hide",
+    "meaning_en": "掩蓋；隱藏；隱瞞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "囲(かこ)む",
+    "word": "to surround",
+    "meaning_en": "包圍；圍繞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "刈(か)る",
+    "word": "to mow",
+    "meaning_en": "割；修剪",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "乾(かわ)かす",
+    "word": "to dry",
+    "meaning_en": "烘乾；弄乾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "気(き)づく",
+    "word": "to notice",
+    "meaning_en": "注意；發覺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "繰(く)り返(かえ)す",
+    "word": "to repeat",
+    "meaning_en": "反覆；重複",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "加(くわ)わる",
+    "word": "to join",
+    "meaning_en": "加上；參加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "凍(こお)る",
+    "word": "to freeze",
+    "meaning_en": "結冰；凍結",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "異(こと)なる",
+    "word": "to differ",
+    "meaning_en": "不同；不一樣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "好(この)む",
+    "word": "to prefer",
+    "meaning_en": "愛好；喜歡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "こぼす",
+    "word": "to spill",
+    "meaning_en": "灑(液體)；發牢騷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "転(ころ)ぶ",
+    "word": "to fall down",
+    "meaning_en": "跌倒；摔倒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "叫(さけ)ぶ",
+    "word": "to yell",
+    "meaning_en": "喊叫；大叫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "刺(さ)す",
+    "word": "to stab",
+    "meaning_en": "刺；扎；穿",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "指(さ)す",
+    "word": "to point",
+    "meaning_en": "指；指向",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "冷(さ)ます",
+    "word": "to let something cool",
+    "meaning_en": "冷卻；弄涼；降低",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "騒(さわ)ぐ",
+    "word": "to make noise",
+    "meaning_en": "吵鬧；慌張；鬧事",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "沈(しず)む",
+    "word": "to sink",
+    "meaning_en": "沈沒；消沈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "縛(しば)る",
+    "word": "to bind",
+    "meaning_en": "捆；綁；束縛",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "示(しめ)す",
+    "word": "to show / to indicate",
+    "meaning_en": "出示；表示；指示",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "救(すく)う",
+    "word": "to save",
+    "meaning_en": "搶救；救援",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "過(す)ごす",
+    "word": "to spend",
+    "meaning_en": "渡過；過活",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "注(そそ)ぐ",
+    "word": "to pour",
+    "meaning_en": "流入；流；(雨，雪等) 降下；落下 注入；灌入；貫注；流(淚)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "抱(だ)く",
+    "word": "to hug",
+    "meaning_en": "抱；摟抱",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "助(たす)かる",
+    "word": "to be saved",
+    "meaning_en": "得救；有幫助",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "戦(たたか)う",
+    "word": "to fight / to battle",
+    "meaning_en": "戰鬥；戰爭；比賽",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "叩(たた)く",
+    "word": "to hit / to slap",
+    "meaning_en": "敲；打；拍打",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "畳(たた)む",
+    "word": "to fold",
+    "meaning_en": "疊；合上；關閉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "黙(だま)る",
+    "word": "to be silent",
+    "meaning_en": "沈默；默不出聲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "試(ため)す",
+    "word": "to try",
+    "meaning_en": "試；嘗試",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "誓(ちか)う",
+    "word": "to swear",
+    "meaning_en": "宣誓；發誓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "縮(ちぢ)む",
+    "word": "to shrink",
+    "meaning_en": "縮小；收縮；起皺紋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "掴(つか)む",
+    "word": "to grab",
+    "meaning_en": "抓住；獲得",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "造(つく)る",
+    "word": "to create / to build",
+    "meaning_en": "製造",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "繋(つな)ぐ",
+    "word": "to connect",
+    "meaning_en": "系；連起；串起；維繫 (生命)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "潰(つぶ)す",
+    "word": "to crush",
+    "meaning_en": "弄碎；消耗；浪費；打發(時間)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "積(つ)む",
+    "word": "to load / to pile up",
+    "meaning_en": "堆積；積累",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "流(なが)す",
+    "word": "to flush",
+    "meaning_en": "流；漂浮；洗掉；傳播",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "無(な)くなる",
+    "word": "to desappear",
+    "meaning_en": "丟失；遺失",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "似合(に あ)う",
+    "word": "to look good on",
+    "meaning_en": "相稱；合適",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "臭(にお)う",
+    "word": "to smell",
+    "meaning_en": "發臭",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "願(ねが)う",
+    "word": "to wish / to hope",
+    "meaning_en": "願望；希望；祈求",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "残(のこ)す",
+    "word": "to leave (food, message, etc)",
+    "meaning_en": "留下 (食物，訊息等)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "残(のこ)る",
+    "word": "to remain",
+    "meaning_en": "留下；剩餘；殘存",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "除(のぞ)く",
+    "word": "to exclude",
+    "meaning_en": "消除；去掉；除外",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "延(の)ばす",
+    "word": "to postpone",
+    "meaning_en": "延長；延遲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "外(はず)す",
+    "word": "to remove",
+    "meaning_en": "取下；錯過；避開",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "流行(はや)る",
+    "word": "to be popular",
+    "meaning_en": "發流行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "引(ひ)く",
+    "word": "to pull",
+    "meaning_en": "退；(潮) 退落 拉；牽；引誘；查(字典)；減",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "拭(ふ)く",
+    "word": "to wipe",
+    "meaning_en": "擦；抹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "含(ふく)む",
+    "word": "to include",
+    "meaning_en": "含；包含",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "防(ふせ)ぐ",
+    "word": "to prevent",
+    "meaning_en": "防止；預防；防守",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "ぶつかる",
+    "word": "to bump",
+    "meaning_en": "碰；撞；適逢",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "増(ふ)やす",
+    "word": "to increase",
+    "meaning_en": "增加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "混(ま)ぜる",
+    "word": "to mix",
+    "meaning_en": "混合；攪拌；摻合",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "守(まも)る",
+    "word": "to protect",
+    "meaning_en": "保衛；守衛；遵守",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "回(まわ)す",
+    "word": "to turn",
+    "meaning_en": "轉；轉動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "結(むす)ぶ",
+    "word": "to tie",
+    "meaning_en": "結；連結",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "目立(め だ)つ",
+    "word": "to stand out",
+    "meaning_en": "顯眼",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "燃(も)やす",
+    "word": "to burn",
+    "meaning_en": "燒；燃燒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "許(ゆる)す",
+    "word": "to forgive",
+    "meaning_en": "許可；准許；饒恕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "酔(よ)っ払(ぱら)う",
+    "word": "to get drunk",
+    "meaning_en": "醉酒；(暈車，船) 暈得厲害",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "割(わ)る",
+    "word": "to break",
+    "meaning_en": "分；分開；分離；除；低於",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "揚(あ)げる",
+    "word": "to deep-fly",
+    "meaning_en": "炸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "挙(あ)げる",
+    "word": "to raise",
+    "meaning_en": "舉起；提拔；進步",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "憧(あこが)れる",
+    "word": "to yearn",
+    "meaning_en": "憧憬；嚮往",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "預(あず)ける",
+    "word": "to deposit / to put in someone’s care",
+    "meaning_en": "寄存；託付",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "与(あた)える",
+    "word": "to give",
+    "meaning_en": "給；帶來；造成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "温(あたた)める",
+    "word": "to warm (something)",
+    "meaning_en": "烘暖 (東西)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "現(あらわ)れる",
+    "word": "to appear",
+    "meaning_en": "出現",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "合(あ)わせる",
+    "word": "to adjust",
+    "meaning_en": "混合；對照",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "得(え)る",
+    "word": "to obtain",
+    "meaning_en": "得到",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "終(お)える",
+    "word": "to finish",
+    "meaning_en": "完成；結束",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "変(か)える",
+    "word": "to change",
+    "meaning_en": "改變；變動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "重(かさ)ねる",
+    "word": "to pile",
+    "meaning_en": "重疊堆放；重複",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "感(かん)じる",
+    "word": "to feel",
+    "meaning_en": "感覺；覺得",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "組(く)み立(た)てる",
+    "word": "to assemble",
+    "meaning_en": "裝配；構成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "加(くわ)える",
+    "word": "to add",
+    "meaning_en": "加上；加入；給予",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "蹴(け)る",
+    "word": "to kick",
+    "meaning_en": "踢；踹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "避(さ)ける",
+    "word": "to avoid",
+    "meaning_en": "避開；避免",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "進(すす)める",
+    "word": "to proceed",
+    "meaning_en": "前進；進展；推動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "立(た)てる",
+    "word": "to stand (something)",
+    "meaning_en": "立起；制定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "例(たと)える",
+    "word": "to liken",
+    "meaning_en": "比喻；打比方",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "閉(と)じる",
+    "word": "to close",
+    "meaning_en": "閉；合上",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "届(とど)ける",
+    "word": "to deliver",
+    "meaning_en": "送到；遞送；呈報",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "眺(なが)める",
+    "word": "to gaze",
+    "meaning_en": "眺望；注視",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "流(なが)れる",
+    "word": "to flow",
+    "meaning_en": "流動；漂流；流逝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "投(な)げる",
+    "word": "to throw",
+    "meaning_en": "投；拋；摔；投射",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "曲(ま)げる",
+    "word": "to bend",
+    "meaning_en": "彎；折彎；歪曲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "認(みと)める",
+    "word": "to admit",
+    "meaning_en": "認為；承認；認許",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "分(わ)ける",
+    "word": "to divide",
+    "meaning_en": "分開；分類；分配",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "安定(あん てい)する",
+    "word": "to be stable",
+    "meaning_en": "穩定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "悪戯(いたずら)する",
+    "word": "to play a prank",
+    "meaning_en": "惡作劇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "噂(うわさ)をする",
+    "word": "to tell rumors",
+    "meaning_en": "說謠言",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "影響( えい きょう)する",
+    "word": "to influence",
+    "meaning_en": "影響",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "解決(かい けつ)する",
+    "word": "to solve",
+    "meaning_en": "解決",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "開始(かい し )する",
+    "word": "to start",
+    "meaning_en": "開始",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "外出( がい しゅつ)する",
+    "word": "to go out",
+    "meaning_en": "外出；出去",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "回復(かい ふく)する",
+    "word": "to recover",
+    "meaning_en": "恢復",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "拡大(かく だい)する",
+    "word": "to expand / to zoom",
+    "meaning_en": "放大",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "確認(かく にん)する",
+    "word": "to confirm",
+    "meaning_en": "確認",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "活動(かつ どう)する",
+    "word": "to be active",
+    "meaning_en": "活躍",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "我慢( が まん)する",
+    "word": "to bear / to endure",
+    "meaning_en": "忍受",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "完成(かん せい)する",
+    "word": "to complete",
+    "meaning_en": "完成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "完了( かん りょう)する",
+    "word": "to end",
+    "meaning_en": "完成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "帰国( き こく)する",
+    "word": "to go back to my country",
+    "meaning_en": "回國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "共通(きょう つう )する",
+    "word": "to have in common",
+    "meaning_en": "有共同點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "記録( き ろく)する",
+    "word": "to record",
+    "meaning_en": "記錄",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "工夫( く ふう)する",
+    "word": "to devise",
+    "meaning_en": "設法；想辦法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "区別( く べつ)する",
+    "word": "to distinguish",
+    "meaning_en": "區分",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "決定(けっ てい)する",
+    "word": "to decide",
+    "meaning_en": "決定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "検査(けん さ )するto",
+    "word": "inspect",
+    "meaning_en": "檢查",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "行動(こう どう)するto",
+    "word": "act",
+    "meaning_en": "行動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "混乱(こん らん)する",
+    "word": "to be confused",
+    "meaning_en": "混乱",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "撮影(さつ えい)する",
+    "word": "to take a photo / to shoot a film",
+    "meaning_en": "拍照/拍電影",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "刺激( し げき)する",
+    "word": "to stimulate",
+    "meaning_en": "刺激",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "自殺( じ さつ)する",
+    "word": "to commit suicide",
+    "meaning_en": "自殺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "支度( し たく)する",
+    "word": "to prepare",
+    "meaning_en": "準備",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "死亡( し ぼう)する",
+    "word": "to die",
+    "meaning_en": "死",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "主張( しゅ ちょう)する",
+    "word": "to insist",
+    "meaning_en": "主張",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "使用( し よう)する",
+    "word": "to use",
+    "meaning_en": "使用",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "証明(しょう めい )する",
+    "word": "to prove",
+    "meaning_en": "證明",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "制限(せい げん)する",
+    "word": "to restrict / to limit",
+    "meaning_en": "限制",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "整理(せい り )する",
+    "word": "to organize",
+    "meaning_en": "整理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "選択(せん たく)する",
+    "word": "to choose",
+    "meaning_en": "選擇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "宣伝(せん でん)する",
+    "word": "to advertise",
+    "meaning_en": "宣傳",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "想像(そう ぞう)する",
+    "word": "to imagine",
+    "meaning_en": "想像",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "対応(たい おう)する",
+    "word": "to respond",
+    "meaning_en": "回應",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "注目(ちゅう もく )する",
+    "word": "to pay attention",
+    "meaning_en": "注目；注視",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "調査(ちょう さ )する",
+    "word": "to investigate",
+    "meaning_en": "調查",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "調整(ちょう せい )する",
+    "word": "to adjust",
+    "meaning_en": "調整",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "挑戦(ちょう せん )する",
+    "word": "to challenge",
+    "meaning_en": "挑戰",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "追加(つい か )する",
+    "word": "to add",
+    "meaning_en": "追加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "提案(てい あん)する",
+    "word": "to suggest",
+    "meaning_en": "提案；建議",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "納得(なっ とく)する",
+    "word": "to accept / to understand",
+    "meaning_en": "理解；同意；信服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "発見(はっ けん)する",
+    "word": "to discover / to find out",
+    "meaning_en": "發現",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "発達(はっ たつ)する",
+    "word": "to develop",
+    "meaning_en": "發達；發展",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "比較( ひ かく)する",
+    "word": "to compare",
+    "meaning_en": "比較",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "否定( ひ てい)する",
+    "word": "to deny",
+    "meaning_en": "否定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "変化(へん か )する",
+    "word": "(something) change",
+    "meaning_en": "變化；變更",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "変更(へん こう)する",
+    "word": "to change (schedule)",
+    "meaning_en": "變更；更改",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "保存( ほ ぞん)する",
+    "word": "to preserve",
+    "meaning_en": "保存",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "満足(まん ぞく)する",
+    "word": "to be satisfied",
+    "meaning_en": "滿足",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "無視(む し)する",
+    "word": "to ignore",
+    "meaning_en": "無視",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "予想( よ そう)する",
+    "word": "to expect",
+    "meaning_en": "預料；預測",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "予防( よ ぼう)する",
+    "word": "to prevent",
+    "meaning_en": "預防",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  },
+  {
+    "furigana": "理解( り かい)する",
+    "word": "to understand",
+    "meaning_en": "理解；明白；諒解",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "verb"
+  }
+]

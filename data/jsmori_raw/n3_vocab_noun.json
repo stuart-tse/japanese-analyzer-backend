@@ -1,0 +1,6106 @@
+[
+  {
+    "furigana": "相手(あい  て )",
+    "word": "partner",
+    "meaning_en": "對方；對手；伙伴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "明(あ)かり",
+    "word": "light, lamp",
+    "meaning_en": "光；燈光",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "空(あ)き",
+    "word": "empty; vacant; gap; spare time",
+    "meaning_en": "空的；空缺；空隙；空間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "握手(あく しゅ)する",
+    "word": "handshake",
+    "meaning_en": "握手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "あくび →「あくびが出る・がまんする」",
+    "word": "yawn",
+    "meaning_en": "打呵欠",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "明(あ)け方(がた)",
+    "word": "dawn; daybreak",
+    "meaning_en": "黎明；破曉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "朝寝坊(あさ  ね  ぼう)する",
+    "word": "late riser; get up late",
+    "meaning_en": "早上起得晚；懶起床",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "汗(あせ)",
+    "word": "sweat",
+    "meaning_en": "汗；汗水",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "辺(あた)り",
+    "word": "in the vicinity; around",
+    "meaning_en": "附近；周圍；大約",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "集(あつ)まり",
+    "word": "gathering, meeting, congregation",
+    "meaning_en": "集合；集會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "油(あぶら)",
+    "word": "oil",
+    "meaning_en": "油；汽油",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "脂(あぶら)",
+    "word": "fat; grease",
+    "meaning_en": "油脂；脂肪",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "余(あま)り",
+    "word": "the remainder",
+    "meaning_en": "剩餘",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "編物(あみ もの)",
+    "word": "knitting",
+    "meaning_en": "編織；編織品",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "誤(あやま)り",
+    "word": "mistake; error",
+    "meaning_en": "錯誤",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現(あらわ)れ",
+    "word": "sign; expression",
+    "meaning_en": "表現",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "泡(あわ)",
+    "word": "bubble; foam",
+    "meaning_en": "泡；泡沫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "暗記(あん  き )する",
+    "word": "to learn by heart",
+    "meaning_en": "記；背",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "意外( い  がい)",
+    "word": "unexpected; surprising",
+    "meaning_en": "意想不到；出乎意料",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "息(いき)",
+    "word": "breath",
+    "meaning_en": "呼吸；氣息",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "意義(い ぎ)",
+    "word": "meaning; significance",
+    "meaning_en": "意義",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "生(い)き物(もの)",
+    "word": "living thing; life",
+    "meaning_en": "生物；動物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "生(い)け花(ばな)",
+    "word": "flower arrangement",
+    "meaning_en": "插花",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "以後(い ご)",
+    "word": "after, hereafter; since, from that time on",
+    "meaning_en": "以後；之後",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "意思(い し)",
+    "word": "intention",
+    "meaning_en": "心思；意思；想法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "意志(い し)",
+    "word": "will",
+    "meaning_en": "意志；意願",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "医師(い し)",
+    "word": "doctor",
+    "meaning_en": "醫生",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "意識( い  しき)",
+    "word": "consciousness; sense",
+    "meaning_en": "意識；知覺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "衣食住(    い     しょく じゅう)",
+    "word": "food, clothing and shelter",
+    "meaning_en": "衣食住",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "以前( い  ぜん)",
+    "word": "once; before",
+    "meaning_en": "以前；之前；從前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "痛(いた)み",
+    "word": "pain",
+    "meaning_en": "痛；痛苦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜一(いち) → [日本一]",
+    "word": "the first",
+    "meaning_en": "第一",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "位置(い ち)",
+    "word": "position; location",
+    "meaning_en": "位置",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "一流( いち  りゅう)",
+    "word": "first-class; of the first rank",
+    "meaning_en": "一流；第一流",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "一家(いっ  か )",
+    "word": "a family",
+    "meaning_en": "一家；全家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "一種(いっ しゅ)",
+    "word": "a kind; a sort",
+    "meaning_en": "一種",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "一生( いっ  しょう)",
+    "word": "one’s whole life; lifetime",
+    "meaning_en": "一生；一輩子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "一方(いっ ぽう)",
+    "word": "one side; on the other hand",
+    "meaning_en": "一方；一方面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "移転( い  てん)する",
+    "word": "move",
+    "meaning_en": "遷移；搬家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "井戸(い ど)",
+    "word": "well",
+    "meaning_en": "井",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "移動( い  どう)する",
+    "word": "movement",
+    "meaning_en": "移動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "従兄弟(いとこ)・従姉妹(いとこ)",
+    "word": "cousin",
+    "meaning_en": "堂兄弟；堂姊妹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "居眠( い  ねむ)りする",
+    "word": "doze",
+    "meaning_en": "打瞌睡；打盹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "命(いのち)",
+    "word": "life, life span",
+    "meaning_en": "生命；壽命",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "衣服( い  ふく)",
+    "word": "clothes",
+    "meaning_en": "衣服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "居間(い ま)",
+    "word": "living room",
+    "meaning_en": "起居室；客廳",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "以来( い  らい)",
+    "word": "since; since then",
+    "meaning_en": "以來；以後",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "依頼( い  らい)する",
+    "word": "ask; request",
+    "meaning_en": "委託；依靠",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "入(い)れ物(もの)",
+    "word": "container; case",
+    "meaning_en": "容器；器皿",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "岩(いわ)",
+    "word": "rock; crag",
+    "meaning_en": "岩石",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "印刷(いん さつ)する",
+    "word": "printing; print",
+    "meaning_en": "印刷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "印象( いん  しょう)",
+    "word": "impression",
+    "meaning_en": "印象",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "引退(いん たい)する",
+    "word": "retirement",
+    "meaning_en": "引退；退休",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "引用(いん よう)する",
+    "word": "quotation; citation",
+    "meaning_en": "引用",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "引力( いん  りょく)",
+    "word": "gravitation; attraction",
+    "meaning_en": "引力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "受取(うけ とり)",
+    "word": "receipt, acknowledgment",
+    "meaning_en": "收據；收領",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "内(うち)",
+    "word": "inside; house; among; during; while",
+    "meaning_en": "内部；房子；之内；趁…時",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "内側(うち がわ)",
+    "word": "inner, inside",
+    "meaning_en": "裡頭；裡面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "生(う)まれ",
+    "word": "birth; origin; lineage",
+    "meaning_en": "出生；誕生；出身",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "永久( えい  きゅう)",
+    "word": "everlasting; forever",
+    "meaning_en": "永久；永遠",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "影響( えい  きょう)",
+    "word": "influence; effect",
+    "meaning_en": "影響",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "笑顔( え  がお)",
+    "word": "smiling face",
+    "meaning_en": "笑臉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "絵(え)の具(ぐ)",
+    "word": "colors; paints",
+    "meaning_en": "顏料；水彩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "円(えん)",
+    "word": "circle",
+    "meaning_en": "圓；圈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "延期(えん  き )する",
+    "word": "to postpone; to put off",
+    "meaning_en": "延期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "援助(えん じょ)する",
+    "word": "assist, aid; support",
+    "meaning_en": "支援；援助",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "演説(えん ぜつ)",
+    "word": "speech; address",
+    "meaning_en": "演說；演講",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "延長( えん  ちょう)する",
+    "word": "extend; lengthen",
+    "meaning_en": "延長",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "甥(おい)",
+    "word": "nephew",
+    "meaning_en": "姪兒；外甥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "応援(おう えん)する",
+    "word": "help; support; cheer",
+    "meaning_en": "支援；援助；聲援",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "応接(おう せつ)する",
+    "word": "reception; interview",
+    "meaning_en": "應接；接待",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "応対(おう たい)する",
+    "word": "reception",
+    "meaning_en": "接待；對應",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "横断(おう だん) →「横断歩道」",
+    "word": "crossing; go across",
+    "meaning_en": "横斷；横越；橫渡；橫過",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "往復(おう ふく)する",
+    "word": "round trip; to go back and forth",
+    "meaning_en": "往返；來回",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "応募(おう  ぼ )する",
+    "word": "application; entry",
+    "meaning_en": "應募；應徵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "応用(おう よう)する",
+    "word": "application; put to practical use",
+    "meaning_en": "應用",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大通(おお どお)り",
+    "word": "main street",
+    "meaning_en": "大道；大街",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大家(おおや)さん",
+    "word": "landlord",
+    "meaning_en": "房東；房主",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おかえり",
+    "word": "return; welcome",
+    "meaning_en": "回來；歡迎",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お代(か)わり",
+    "word": "second helping; another bowl",
+    "meaning_en": "添飯；再添一碗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "御辞儀(お じ ぎ)",
+    "word": "a bow",
+    "meaning_en": "行禮；鞠躬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おしゃべりする",
+    "word": "chat, idle talk; talkative",
+    "meaning_en": "説話；聊天；愛説話",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お互(たが)い",
+    "word": "each other; one another",
+    "meaning_en": "彼此；互相",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お出掛(で か)け",
+    "word": "go out",
+    "meaning_en": "出外",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "落(おと)し物(もの)",
+    "word": "lost article",
+    "meaning_en": "失物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "各々(おの おの)",
+    "word": "each",
+    "meaning_en": "各自",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お昼(ひる)",
+    "word": "lunch; noon",
+    "meaning_en": "午飯；中午",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お参(まい)り",
+    "word": "worship; shrine visit",
+    "meaning_en": "參拜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おまえ",
+    "word": "you (to one’s equal or junior)",
+    "meaning_en": "你 (對同輩以下的稱呼)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "思(おも)い出(で)",
+    "word": "memory; recollection",
+    "meaning_en": "回憶；回想",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "親(おや)",
+    "word": "parent",
+    "meaning_en": "雙親；父母",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おやすみ",
+    "word": "holiday; vacation; Good night",
+    "meaning_en": "假期；晚安",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おやつ",
+    "word": "snack",
+    "meaning_en": "點心；零食",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "親指(おや ゆび)",
+    "word": "thumb; big toe",
+    "meaning_en": "拇指；大腳趾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "音(おん)",
+    "word": "sound; noise; pronunciation",
+    "meaning_en": "音；聲音；讀音",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "温泉(おん せん)",
+    "word": "hot spring",
+    "meaning_en": "溫泉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "温度(おん  ど )",
+    "word": "temperature",
+    "meaning_en": "溫度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "蚊(か)",
+    "word": "mosquito",
+    "meaning_en": "蚊子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "貝(かい)",
+    "word": "shell; shellfish",
+    "meaning_en": "貝殻；貝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "～会(かい) → [運動会]",
+    "word": "meeting; society",
+    "meaning_en": "〜會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会員(かい いん)",
+    "word": "member",
+    "meaning_en": "會員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "絵画(かい  が )",
+    "word": "picture; painting",
+    "meaning_en": "繪畫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "海外(かい がい)",
+    "word": "foreign countries; overseas",
+    "meaning_en": "海外",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "解決(かい けつ)する",
+    "word": "solve; settle",
+    "meaning_en": "解決",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "改札(かい さつ)する",
+    "word": "examine tickets",
+    "meaning_en": "查票",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "改札口(かい さつ ぐち)",
+    "word": "ticket gate",
+    "meaning_en": "閘口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "解散(かい さん)する",
+    "word": "breakup",
+    "meaning_en": "解散；解體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "改造(かい ぞう)する",
+    "word": "reconstruction; reorganization",
+    "meaning_en": "改造；改組",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "開店(かい てん)する",
+    "word": "open a store",
+    "meaning_en": "開店；開舗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "解答(かい とう)する",
+    "word": "answer; solution",
+    "meaning_en": "解答",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "回答(かい とう)する",
+    "word": "reply; answer",
+    "meaning_en": "回答",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会費(かい  ひ )",
+    "word": "membership fee",
+    "meaning_en": "會費",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "外部(がい  ぶ )",
+    "word": "outside; exterior; external",
+    "meaning_en": "外部；外面；外界",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "海洋(かい よう)",
+    "word": "ocean",
+    "meaning_en": "海洋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "価格( か  かく)",
+    "word": "price",
+    "meaning_en": "價格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "係(かかり)",
+    "word": "charge; a person in charge",
+    "meaning_en": "擔任；負責人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "書留(かき とめ)",
+    "word": "registered mail",
+    "meaning_en": "掛號信",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "書取(かき とり)",
+    "word": "write down; dictation",
+    "meaning_en": "抄寫；記錄；默寫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "限(かぎ)り",
+    "word": "limit; to the utmost as far as; as long as",
+    "meaning_en": "限度；竭盡；在…範圍內",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "各(かく)～ → [各駅、各国]",
+    "word": "each",
+    "meaning_en": "各～",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "額(がく)",
+    "word": "amount; sum; frame",
+    "meaning_en": "金額；框子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "各自(かく  じ )",
+    "word": "each one; everyone",
+    "meaning_en": "各自；每個人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学者(がく しゃ)",
+    "word": "scholar",
+    "meaning_en": "學者",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学習( がく  しゅう)する",
+    "word": "study; learn",
+    "meaning_en": "學習",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "拡大(かく だい)する",
+    "word": "magnification; spread",
+    "meaning_en": "擴大；放大",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "各地(かく  ち )",
+    "word": "various places",
+    "meaning_en": "各地",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "拡張( かく  ちょう)する",
+    "word": "extension; expansion; enlargement",
+    "meaning_en": "擴張；擴大",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "確認(かく にん)する",
+    "word": "confirmation",
+    "meaning_en": "確認",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学年(がく ねん)",
+    "word": "school year; academic year",
+    "meaning_en": "學年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学問(がく もん)",
+    "word": "learning, studies",
+    "meaning_en": "學問；學識",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "確率(かく りつ)",
+    "word": "probability",
+    "meaning_en": "概率；可能性",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "影(かげ)",
+    "word": "shadow; image, reflection",
+    "meaning_en": "影；陰影",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "掛(か)け算(ざん)",
+    "word": "multiplication",
+    "meaning_en": "乘法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "過去(か こ)",
+    "word": "the past",
+    "meaning_en": "過去",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下降( か  こう)",
+    "word": "descent; decline; go down",
+    "meaning_en": "下降",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "飾(かざ)り",
+    "word": "decoration; ornament",
+    "meaning_en": "裝飾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "火山( か  ざん)",
+    "word": "volcano",
+    "meaning_en": "火山",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "貸(か)し",
+    "word": "loan; lending",
+    "meaning_en": "借出；貸款",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "家事(か じ)",
+    "word": "housework",
+    "meaning_en": "家務",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "過失( か  しつ)",
+    "word": "fault; mistake",
+    "meaning_en": "過失；過錯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歌手( か  しゅ)",
+    "word": "singer",
+    "meaning_en": "歌手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "過剰(    か     じょう)",
+    "word": "excess; surplus",
+    "meaning_en": "過剩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "数(かず)",
+    "word": "number; numerous",
+    "meaning_en": "數；數目；多數",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下線( か  せん)",
+    "word": "underline",
+    "meaning_en": "下面劃線",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "型(かた)",
+    "word": "pattern; form, model; type",
+    "meaning_en": "模型；形式",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "肩(かた)",
+    "word": "shoulder",
+    "meaning_en": "肩；肩膀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "方々(かた がた)",
+    "word": "everyone",
+    "meaning_en": "(敬語) 諸位；各位",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "刀(かたな)",
+    "word": "sword",
+    "meaning_en": "刀；武士刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "片道(かた みち)",
+    "word": "one way",
+    "meaning_en": "單程",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "勝(か)ち",
+    "word": "win; victory",
+    "meaning_en": "勝利",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "価値(か ち)",
+    "word": "value; worth",
+    "meaning_en": "價值",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学科(がっ  か )",
+    "word": "subject; course of study",
+    "meaning_en": "學科",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学会(がっ かい)",
+    "word": "a learned society; academic meeting",
+    "meaning_en": "學會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "活気(かっ  き )",
+    "word": "life; vigor, animation",
+    "meaning_en": "活力；朝氣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学期(がっ  き )",
+    "word": "school term; semester",
+    "meaning_en": "學期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "楽器(がっ  き )",
+    "word": "musical instrument",
+    "meaning_en": "樂器",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学級( がっ  きゅう)",
+    "word": "grade; form",
+    "meaning_en": "班級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "各国(かっ こく)",
+    "word": "each country",
+    "meaning_en": "各國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "活動(かつ どう)",
+    "word": "activity",
+    "meaning_en": "活動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "仮名(か な)",
+    "word": "kana; Japanese syllabary",
+    "meaning_en": "假名",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "金(かね)",
+    "word": "money, metal",
+    "meaning_en": "錢；金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "株式会社(かぶ しき がい しゃ)",
+    "word": "company",
+    "meaning_en": "公司",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歌舞伎(か ぶ き)",
+    "word": "Kabuki",
+    "meaning_en": "歌舞伎",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "我慢( が  まん)する",
+    "word": "patience, endurance, perseverance",
+    "meaning_en": "忍耐；容忍",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "上(かみ)",
+    "word": "the top; the upper part",
+    "meaning_en": "上邊；上部",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "剃刀(かみそり)",
+    "word": "razor",
+    "meaning_en": "剃刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "髪(かみ)の毛(け)",
+    "word": "hair",
+    "meaning_en": "頭髮",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "科目( か  もく)",
+    "word": "subject; curriculum",
+    "meaning_en": "科目",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜間(かん)",
+    "word": "for; during; in; between; among",
+    "meaning_en": "期間；之間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "感覚(かん かく)",
+    "word": "sense; feeling",
+    "meaning_en": "感覺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "換気(かん  き ) →「換気扇」",
+    "word": "ventilation",
+    "meaning_en": "通風",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "環境( かん  きょう)",
+    "word": "environment; surroundings",
+    "meaning_en": "環境",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歓迎(かん げい)する",
+    "word": "welcome",
+    "meaning_en": "歡迎",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "観光(かん こう)する",
+    "word": "sightseeing",
+    "meaning_en": "觀光",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "関西(かん さい)",
+    "word": "the Kansai district",
+    "meaning_en": "關西",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "観察(かん さつ)する",
+    "word": "observation",
+    "meaning_en": "觀察",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "感(かん)じ",
+    "word": "feeling; impression",
+    "meaning_en": "感覺；印象",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "感謝(かん しゃ)する",
+    "word": "thanks; gratitude",
+    "meaning_en": "感謝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "感情( かん  じょう)",
+    "word": "emotion, passion, sentiment",
+    "meaning_en": "感情；情緒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "関心(かん しん)",
+    "word": "interest; concern",
+    "meaning_en": "關心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "完成(かん せい)する",
+    "word": "completion; finish",
+    "meaning_en": "完成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "間接(かん せつ)",
+    "word": "indirect",
+    "meaning_en": "間接",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "缶詰(かん づめ)",
+    "word": "canned food",
+    "meaning_en": "罐頭",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "関東(かん とう)",
+    "word": "the Kanto district",
+    "meaning_en": "關東",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "感動(かん どう)する",
+    "word": "impression; emotion",
+    "meaning_en": "感動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "乾杯(かん ぱい)する",
+    "word": "a toast; Cheers!",
+    "meaning_en": "乾杯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "看板(かん ばん)",
+    "word": "board; billboard",
+    "meaning_en": "招牌；廣告牌",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜期(き) →「学期、時期」",
+    "word": "period; term, age",
+    "meaning_en": "〜期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "気温( き  おん)",
+    "word": "temperature",
+    "meaning_en": "氣溫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "期間( き  かん)",
+    "word": "a period, a term",
+    "meaning_en": "期間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "器具(き ぐ)",
+    "word": "appliance; apparatus",
+    "meaning_en": "器具",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "期限( き  げん)",
+    "word": "term; deadline",
+    "meaning_en": "期限",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "記号( き  ごう)",
+    "word": "symbol; sign",
+    "meaning_en": "記號；符號",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "記者( き  しゃ)",
+    "word": "reporter, journalist",
+    "meaning_en": "記者",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "傷(きず)",
+    "word": "injury, wound",
+    "meaning_en": "傷；創傷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "期待( き  たい)する",
+    "word": "expectation",
+    "meaning_en": "期待",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "記入(    き     にゅう)する",
+    "word": "entry; enter; fill out",
+    "meaning_en": "填寫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "希望( き  ぼう)する",
+    "word": "hope; wish, desire",
+    "meaning_en": "希望；期望",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "基本( き  ほん)",
+    "word": "basis; foundation",
+    "meaning_en": "基本；基礎",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "決(き)まり",
+    "word": "rule; regulation; habit; conclusion",
+    "meaning_en": "規定；決定；慣例；了結",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "疑問( ぎ  もん)",
+    "word": "question; doubt",
+    "meaning_en": "疑問",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "休業(きゅう ぎょう)する",
+    "word": "close a business; take a holiday",
+    "meaning_en": "停業；休業",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "吸収(きゅう しゅう)する",
+    "word": "absorb",
+    "meaning_en": "吸收",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "休息(きゅう  そく )する",
+    "word": "rest",
+    "meaning_en": "休息",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "給与(きゅう     よ    )",
+    "word": "pay, salary",
+    "meaning_en": "工資；薪金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "給料(きゅう りょう)",
+    "word": "salary; wages; pay",
+    "meaning_en": "工資；薪金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "教科書(きょう  か   しょ )",
+    "word": "textbook",
+    "meaning_en": "教科書",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "競技(きょう     ぎ    )する",
+    "word": "race; game",
+    "meaning_en": "比賽；競技",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "教師(きょう     し    )",
+    "word": "teacher",
+    "meaning_en": "教師",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "行事(ぎょう    じ   )",
+    "word": "event; function",
+    "meaning_en": "活動；儀式",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "教授(きょう  じゅ )",
+    "word": "professor, teaching",
+    "meaning_en": "教授",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "協力(きょう りょく)する",
+    "word": "cooperation",
+    "meaning_en": "協力；合作",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "許可(きょ  か )する",
+    "word": "permission; license",
+    "meaning_en": "許可",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "局(きょく)",
+    "word": "bureau; post office; broadcasting station",
+    "meaning_en": "局",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "距離(きょ  り )",
+    "word": "distance",
+    "meaning_en": "距離",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "切(き)れ",
+    "word": "cut; scrap",
+    "meaning_en": "刀的銳利；碎片",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "記録( き  ろく)する",
+    "word": "record",
+    "meaning_en": "記錄",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "金(きん)",
+    "word": "gold; golden",
+    "meaning_en": "黃金；金色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "銀(ぎん)",
+    "word": "silver",
+    "meaning_en": "銀；銀色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "禁煙(きん えん)する",
+    "word": "prohibit smoking",
+    "meaning_en": "禁煙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "金額(きん がく)",
+    "word": "amount of money",
+    "meaning_en": "金額",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "禁止(きん  し )する",
+    "word": "prohibition; ban",
+    "meaning_en": "禁止",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "近代(きん だい)",
+    "word": "modern ages",
+    "meaning_en": "近代；現代",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "緊張( きん  ちょう)する",
+    "word": "tension; strain; nervous",
+    "meaning_en": "緊張",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "空席(くう せき)",
+    "word": "empty seat; vacant seat",
+    "meaning_en": "空位",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "屑(くず)",
+    "word": "waste; rubbish; trash",
+    "meaning_en": "碎片；廢物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "薬指(くすり  ゆび )",
+    "word": "ring finger",
+    "meaning_en": "無名指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下(くだ)り",
+    "word": "descent; down",
+    "meaning_en": "下；下行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "唇(くちびる)",
+    "word": "lip",
+    "meaning_en": "嘴唇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "組合(くみ あわ)せ",
+    "word": "combination; assortment; matching",
+    "meaning_en": "配合；組合",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "位(くらい)",
+    "word": "rank, grade",
+    "meaning_en": "職位；階級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "暮(く)らし",
+    "word": "living; livelihood; life",
+    "meaning_en": "生活；生計",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "苦労( く  ろう)",
+    "word": "trouble; hardship",
+    "meaning_en": "辛苦；艱苦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "訓練(くん れん)する",
+    "word": "training; drill",
+    "meaning_en": "訓練",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "経営(けい えい)する",
+    "word": "management; operation",
+    "meaning_en": "經營",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "敬語(けい  ご )",
+    "word": "honorific expression",
+    "meaning_en": "敬語",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "傾向(けい こう)",
+    "word": "trend; tendency",
+    "meaning_en": "傾向",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "警告(けい こく)する",
+    "word": "warning; caution",
+    "meaning_en": "警告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "計算(けい さん)する",
+    "word": "calculation; figure out",
+    "meaning_en": "計算",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "掲示(けい  じ )する",
+    "word": "notice; bulletin",
+    "meaning_en": "告示；佈告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "形式(けい しき)",
+    "word": "form; formality",
+    "meaning_en": "形式；方式",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "芸術( げい  じゅつ)",
+    "word": "art",
+    "meaning_en": "藝術",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "継続(けい ぞく)する",
+    "word": "continuation",
+    "meaning_en": "繼續",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "携帯(けい たい)電話(でん  わ )",
+    "word": "mobile phone",
+    "meaning_en": "手機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "芸能(げい のう)",
+    "word": "entertainments",
+    "meaning_en": "文娛；娛樂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "経由(けい  ゆ )する",
+    "word": "via; by way of",
+    "meaning_en": "經由；經過",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "劇場( げき  じょう)",
+    "word": "theater",
+    "meaning_en": "劇場",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下車( げ  しゃ)する",
+    "word": "get off (the train, the car)",
+    "meaning_en": "下車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下駄(げ た)",
+    "word": "(wooden) clogs",
+    "meaning_en": "木屐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "血液(けつ えき)",
+    "word": "blood",
+    "meaning_en": "血液",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結果(けっ  か )",
+    "word": "result, consequence",
+    "meaning_en": "結果",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結局( けっ  きょく)",
+    "word": "after all; in the end",
+    "meaning_en": "最後；結果；到底",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "決心(けっ しん)",
+    "word": "determination; resolution",
+    "meaning_en": "決心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "欠席(けっ せき)する",
+    "word": "absence",
+    "meaning_en": "缺席",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "決定(けっ てい)する",
+    "word": "determination",
+    "meaning_en": "決定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "欠点(けっ てん)",
+    "word": "fault; defect",
+    "meaning_en": "缺點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "月末(げつ まつ)",
+    "word": "end of the month",
+    "meaning_en": "月底",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結論(けつ ろん)",
+    "word": "conclusion",
+    "meaning_en": "結論",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "煙(けむり)",
+    "word": "smoke",
+    "meaning_en": "煙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "件(けん)",
+    "word": "business, matter, case",
+    "meaning_en": "事；事情",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "券(けん)",
+    "word": "ticket; coupon",
+    "meaning_en": "卷；票",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "限界(げん かい)",
+    "word": "limit, limitation",
+    "meaning_en": "界限；限度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現金(げん きん)",
+    "word": "cash",
+    "meaning_en": "現金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "言語(げん  ご )",
+    "word": "language",
+    "meaning_en": "語言；言語",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "検査(けん  さ )する",
+    "word": "inspection; examination",
+    "meaning_en": "檢查",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現在(げん ざい)",
+    "word": "present",
+    "meaning_en": "現在；目前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現実(げん じつ)",
+    "word": "reality; actually",
+    "meaning_en": "現實",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "研修( けん  しゅう)",
+    "word": "training",
+    "meaning_en": "研修；進修",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "謙遜(けん そん)する",
+    "word": "modesty; humility",
+    "meaning_en": "謙遜；謙虛",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "検討(けん とう)する",
+    "word": "examination",
+    "meaning_en": "檢討；探討",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現場(げん  ば )",
+    "word": "spot; scene; site",
+    "meaning_en": "現場；地點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "懸命(けん めい)",
+    "word": "eager, earnest; strenuous",
+    "meaning_en": "拼命；盡力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幸運(こう うん)",
+    "word": "good fortune; good luck",
+    "meaning_en": "幸運",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "講演(こう えん)する",
+    "word": "lecture",
+    "meaning_en": "演講；演說",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "効果(こう  か )",
+    "word": "effect; result",
+    "meaning_en": "効果",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "公害(こう がい)",
+    "word": "pollution",
+    "meaning_en": "污染",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "合格(ごう かく)する",
+    "word": "pass (an exam); succeed; be qualified",
+    "meaning_en": "合格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交換(こう かん)する",
+    "word": "exchange",
+    "meaning_en": "交換；更換",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "高級( こう  きゅう)",
+    "word": "high-class; high-grade",
+    "meaning_en": "高級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "合計(ごう けい)する",
+    "word": "total; sum",
+    "meaning_en": "總計；合計",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "広告(こう こく)",
+    "word": "advertisement; commercial",
+    "meaning_en": "廣告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交差(こう  さ )",
+    "word": "crossing; intersect",
+    "meaning_en": "交叉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "講師(こう  し )",
+    "word": "lecturer, instructor",
+    "meaning_en": "講師",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "高速(こう そく)",
+    "word": "high speed; freeway",
+    "meaning_en": "高速",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "行動(こう どう)する",
+    "word": "action; behavior",
+    "meaning_en": "行動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "後輩(こう はい)",
+    "word": "one’s junior",
+    "meaning_en": "晚辈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幸福(こう ふく)",
+    "word": "happiness",
+    "meaning_en": "幸福",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交流( こう  りゅう)",
+    "word": "exchange; interchange",
+    "meaning_en": "交流",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "氷(こおり)",
+    "word": "ice",
+    "meaning_en": "冰",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "呼吸(    こ     きゅう)する",
+    "word": "breathing; respiration",
+    "meaning_en": "呼吸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "故郷(   こ    きょう)",
+    "word": "one’s home; one’s hometown",
+    "meaning_en": "故鄉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国語(こく  ご )",
+    "word": "national language; Japanese",
+    "meaning_en": "國語；本國語言",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "黒板(こく ばん)",
+    "word": "blackboard",
+    "meaning_en": "黑板",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国民(こく みん)",
+    "word": "the nation; the people",
+    "meaning_en": "國民",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国立(こく りつ)",
+    "word": "national",
+    "meaning_en": "國立",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "個人( こ  じん)",
+    "word": "individual",
+    "meaning_en": "個人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "個体( こ  たい)",
+    "word": "individual",
+    "meaning_en": "個體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小遣( こ  づか)い",
+    "word": "pocket money",
+    "meaning_en": "零用錢",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小包(      こ       づつみ)",
+    "word": "package; parcel",
+    "meaning_en": "包裹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "こないだ",
+    "word": "some days ago; lately",
+    "meaning_en": "不久以前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "好(この)み",
+    "word": "taste; fondness; fashion",
+    "meaning_en": "嗜好；時興；流行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "御免( ご  めん)",
+    "word": "your pardon; permission",
+    "meaning_en": "請原諒；允許",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小指( こ  ゆび)",
+    "word": "little finger",
+    "meaning_en": "小指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "再(さい)～ ←「再試合、 再使用」",
+    "word": "re-",
+    "meaning_en": "再〜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "最(さい)〜 「最高、 最終」",
+    "word": "most",
+    "meaning_en": "最〜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "最高(さい こう)",
+    "word": "the highest; the best; really",
+    "meaning_en": "最高；最好；極好",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "最終( さい  しゅう)",
+    "word": "the last; the final",
+    "meaning_en": "最後",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先(さき)",
+    "word": "point; tip; destination",
+    "meaning_en": "尖；目的地",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "刺身(さし  み )",
+    "word": "sashimi, slices of raw fish",
+    "meaning_en": "刺身；魚生",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "撮影(さつ えい)する",
+    "word": "photographing; filming",
+    "meaning_en": "攝影",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "作家(さっ  か )",
+    "word": "author, writer",
+    "meaning_en": "作家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "皿(さら)",
+    "word": "dish; plate",
+    "meaning_en": "盤子；碟子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "再来月( さ  らい げつ)",
+    "word": "the month after next",
+    "meaning_en": "下個再下個月",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "再来週(   さ    らい  しゅう)",
+    "word": "the week after next",
+    "meaning_en": "下個再下個星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜山(さん) → 「富士山」",
+    "word": "mountain",
+    "meaning_en": "〜山",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "参加(さん  か )する",
+    "word": "participate in; take part in",
+    "meaning_en": "參加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "三角(さん かく)",
+    "word": "triangle",
+    "meaning_en": "三角形",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "参考(さん こう) → 「参考書」",
+    "word": "reference",
+    "meaning_en": "參考",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "賛成(さん せい)する",
+    "word": "approval; support; agreement",
+    "meaning_en": "贊成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幸(しあわ)せ",
+    "word": "good fortune; luck; happiness",
+    "meaning_en": "幸福；幸運",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "四角( し  かく)",
+    "word": "square; quadrilateral",
+    "meaning_en": "四角形；四方形",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜時間目( じ  かん  め )",
+    "word": "hour (ordinal)",
+    "meaning_en": "第〜小時",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "時間割( じ  かん わり)",
+    "word": "timetable; schedule",
+    "meaning_en": "時間表",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "四季(し き)",
+    "word": "four seasons",
+    "meaning_en": "四季",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "時期(じ き)",
+    "word": "time",
+    "meaning_en": "時期；期間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "支給(   し    きゅう)する",
+    "word": "provide; supply; payment",
+    "meaning_en": "支付；支給",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "資源( し  げん)",
+    "word": "resources",
+    "meaning_en": "資源",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "事件( じ  けん)",
+    "word": "incident; case",
+    "meaning_en": "事件",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "時刻( じ  こく) →「時刻表」",
+    "word": "time; hour",
+    "meaning_en": "時間；時刻",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指示(し じ)",
+    "word": "instruction; indication; direction",
+    "meaning_en": "指示",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "事実( じ  じつ)",
+    "word": "fact; truth; in fact",
+    "meaning_en": "事實；事實上",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "支出(   し     しゅつ)する",
+    "word": "expenses; expenditure",
+    "meaning_en": "支出",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "事情(    じ     じょう)",
+    "word": "circumstances; reasons",
+    "meaning_en": "情形；情況；縁故",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自身( じ  しん)",
+    "word": "self; oneself; one’s own",
+    "meaning_en": "自己；自身；本身",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自然( し  ぜん)",
+    "word": "nature, natural; naturally",
+    "meaning_en": "自然",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自然( し  ぜん)科学( か  がく)",
+    "word": "natural science",
+    "meaning_en": "自然科學",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "失業( しつ  ぎょう)",
+    "word": "unemployment",
+    "meaning_en": "失業",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "実験(じっ けん)",
+    "word": "experiment; test",
+    "meaning_en": "實驗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "実際(じっ さい)",
+    "word": "truth; fact; in fact, really, indeed",
+    "meaning_en": "實際；事實；的確",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "湿度(しつ  ど )",
+    "word": "humidity",
+    "meaning_en": "濕度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "しっぽ",
+    "word": "tail; end",
+    "meaning_en": "尾巴；末端",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "失望(しつ ぼう)する",
+    "word": "disappointment; despair",
+    "meaning_en": "失望",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "実用(じつ よう)",
+    "word": "practical use",
+    "meaning_en": "實用",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "実力( じつ  りょく)",
+    "word": "one’s ability",
+    "meaning_en": "實力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指定( し  てい)する",
+    "word": "specify",
+    "meaning_en": "指定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "支店( し  てん)",
+    "word": "branch",
+    "meaning_en": "支店；分店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指導( し  どう)する",
+    "word": "guidance; instruction",
+    "meaning_en": "指導；教導",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "児童( じ  どう)",
+    "word": "child",
+    "meaning_en": "兒童",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自動( じ  どう)",
+    "word": "automatic",
+    "meaning_en": "自動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自動( じ  どう)販売機(はん ばい  き )",
+    "word": "vending machine",
+    "meaning_en": "自動售賣機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "支払(    し     はらい)",
+    "word": "payment",
+    "meaning_en": "支付；付款",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "しまい = 「終わり」",
+    "word": "end; finish",
+    "meaning_en": "完了；停止",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "姉妹( し  まい)",
+    "word": "sisters",
+    "meaning_en": "姐妹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "締切(しめ きり)",
+    "word": "deadline; closing",
+    "meaning_en": "截止期限",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "弱点(じゃく  てん )",
+    "word": "weakness; disadvantage",
+    "meaning_en": "缺點；弱點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "じゃんけん",
+    "word": "rock-paper-scissors",
+    "meaning_en": "猜拳",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "周囲(しゅう     い    )",
+    "word": "circumference; surroundings",
+    "meaning_en": "周圍；四周",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "集合(しゅう  ごう )する",
+    "word": "gather, assemble",
+    "meaning_en": "集合",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "渋滞(じゅう  たい )",
+    "word": "traffic jam; be congested",
+    "meaning_en": "堵塞停滯不前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "住宅(じゅう  たく )",
+    "word": "house; housing",
+    "meaning_en": "住宅",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "集団(しゅう  だん )",
+    "word": "group",
+    "meaning_en": "集團",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "集中(しゅう ちゅう)する",
+    "word": "concentration",
+    "meaning_en": "集中",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "終点(しゅう  てん )",
+    "word": "end of a line; terminal",
+    "meaning_en": "終點站",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "収入(しゅう にゅう)",
+    "word": "income; earnings, revenue",
+    "meaning_en": "收入",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "修理(しゅう     り    )する",
+    "word": "repair",
+    "meaning_en": "修理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "終了(しゅう りょう)する",
+    "word": "end; finish",
+    "meaning_en": "完了；結束",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "祝日(しゅく  じつ )",
+    "word": "public holiday; national holiday",
+    "meaning_en": "節日；假日",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "宿泊(しゅく  はく )する",
+    "word": "lodging",
+    "meaning_en": "投宿",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "受験(じゅ けん)する",
+    "word": "take an exam",
+    "meaning_en": "考試；投考",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "主語(しゅ  ご )",
+    "word": "subject",
+    "meaning_en": "主語",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "手段(しゅ だん)",
+    "word": "means",
+    "meaning_en": "手段；方法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "主張( しゅ  ちょう)する",
+    "word": "assertion, claim; insistence",
+    "meaning_en": "主張",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出勤(しゅっ  きん )する",
+    "word": "attendance (at work)",
+    "meaning_en": "出勤",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出身(しゅっ  しん )",
+    "word": "come from; be a graduate of",
+    "meaning_en": "出生於；從…畢業",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出張(しゅっ ちょう)する",
+    "word": "business trip",
+    "meaning_en": "出差",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出版(しゅっ  ぱん )する",
+    "word": "publish",
+    "meaning_en": "出版",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出版社(しゅっ ぱん  しゃ )",
+    "word": "publishing company",
+    "meaning_en": "出版社",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "需要(じゅ よう)",
+    "word": "demand",
+    "meaning_en": "需要；需求",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "種類(しゅ るい)",
+    "word": "kind; sort",
+    "meaning_en": "種類",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "順番(じゅん  ばん )",
+    "word": "order; turn",
+    "meaning_en": "順序；次序",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "～所(しょ) → 「洗面所、 研究所」",
+    "word": "place",
+    "meaning_en": "～所",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "奨学金(しょう がく  きん )",
+    "word": "scholarship",
+    "meaning_en": "獎學金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "状況(じょう きょう)",
+    "word": "condition; situation; circumstances",
+    "meaning_en": "狀況",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "条件(じょう  けん )",
+    "word": "condition; requirement",
+    "meaning_en": "條件",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "状態(じょう  たい )",
+    "word": "state, situation; condition",
+    "meaning_en": "狀態",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "冗談(じょう  だん )",
+    "word": "joke",
+    "meaning_en": "笑話；玩笑",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "商店(しょう  てん )",
+    "word": "store; shop",
+    "meaning_en": "商店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "少年(しょう  ねん )",
+    "word": "teenage boy",
+    "meaning_en": "少年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "商品(しょう  ひん )",
+    "word": "goods; merchandise",
+    "meaning_en": "商品",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "情報(じょう  ほう )",
+    "word": "information",
+    "meaning_en": "情報",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "証明(しょう  めい ) →「証明書」",
+    "word": "proof, evidence; testimony",
+    "meaning_en": "證明",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "初級( しょ  きゅう)",
+    "word": "beginner’s elementary, introductory",
+    "meaning_en": "初級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "職業(しょく ぎょう)",
+    "word": "occupation; job",
+    "meaning_en": "職業",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "職場(しょく    ば   )",
+    "word": "workplace",
+    "meaning_en": "工作場所",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "助手(じょ しゅ)",
+    "word": "assistant",
+    "meaning_en": "助手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "女優(じょ ゆう)",
+    "word": "actress",
+    "meaning_en": "女演員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "処理(しょ  り )する",
+    "word": "management; treatment; processing",
+    "meaning_en": "處理；辧理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "書類(しょ るい)",
+    "word": "documents; papers",
+    "meaning_en": "文件；資料",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "知合(しり  あ )い",
+    "word": "acquaintance",
+    "meaning_en": "相識；相識的人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "資料(    し     りょう)",
+    "word": "data; material",
+    "meaning_en": "資料",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "新幹線(しん かん せん)",
+    "word": "Shinkansen, bullet train",
+    "meaning_en": "新幹線",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "信号(しん ごう)",
+    "word": "signal; traffic lights",
+    "meaning_en": "信號；交通燈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "人口(じん こう)",
+    "word": "population",
+    "meaning_en": "人口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "申請(しん せい)する",
+    "word": "application; apply for",
+    "meaning_en": "申請",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "身体(しん たい)",
+    "word": "body",
+    "meaning_en": "身體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "診断(しん だん)する",
+    "word": "diagnosis",
+    "meaning_en": "診斷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "身長( しん  ちょう)",
+    "word": "height",
+    "meaning_en": "身高",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "人物(じん ぶつ)",
+    "word": "person; character",
+    "meaning_en": "人；人物；人品",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "進歩(しん  ぽ )する",
+    "word": "progress; advancement; improvement",
+    "meaning_en": "進步",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "深夜(しん  や )",
+    "word": "midnight",
+    "meaning_en": "深夜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "親友(しん ゆう)",
+    "word": "close friend",
+    "meaning_en": "親密朋友",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "親類(しん るい)",
+    "word": "relative",
+    "meaning_en": "親戚；親屬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "推薦(すい せん)する",
+    "word": "recommendation",
+    "meaning_en": "推薦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "数(すう)",
+    "word": "number, several",
+    "meaning_en": "數；數學",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "数字(すう  じ )",
+    "word": "numeral; figure",
+    "meaning_en": "數字",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "姿(すがた)",
+    "word": "figure; form; appearance; condition",
+    "meaning_en": "姿態；装束；状態",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "背(せ)",
+    "word": "the back",
+    "meaning_en": "背後；背面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "性格(せい かく)",
+    "word": "character; personality",
+    "meaning_en": "性格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "成功(せい こう)する",
+    "word": "success",
+    "meaning_en": "成功",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "性質(せい しつ)",
+    "word": "nature; disposition",
+    "meaning_en": "性質；性情；性格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "成績(せい せき)",
+    "word": "grade; result; performance",
+    "meaning_en": "成績",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "青年(せい ねん)",
+    "word": "youth",
+    "meaning_en": "青年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "製品(せい ひん)",
+    "word": "product; manufactured goods",
+    "meaning_en": "製品",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "制服(せい ふく)",
+    "word": "uniform",
+    "meaning_en": "制服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "性別(せい べつ)",
+    "word": "sex distinction",
+    "meaning_en": "性別",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "正方形(せい ほう けい)",
+    "word": "square",
+    "meaning_en": "正方形",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "生命(せい めい)",
+    "word": "life",
+    "meaning_en": "生命",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "正門(せい もん)",
+    "word": "main entrance; front gate",
+    "meaning_en": "正門",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "整理(せい  り )する",
+    "word": "arrangement; put in order",
+    "meaning_en": "整理；收拾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "咳(せき)",
+    "word": "cough",
+    "meaning_en": "咳嗽",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "責任(せき にん)",
+    "word": "responsibility",
+    "meaning_en": "責任",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "接近(せっ きん)する",
+    "word": "approach",
+    "meaning_en": "接近",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "設計(せっ けい)する",
+    "word": "design; plan",
+    "meaning_en": "設計；計劃",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "説明書(せつ めい しょ)",
+    "word": "manual",
+    "meaning_en": "説明書",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "全員(ぜん いん)",
+    "word": "all members",
+    "meaning_en": "全體成員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "前後(ぜん  ご )",
+    "word": "front & rear; before & after; order, about",
+    "meaning_en": "前後；相繼；左右",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "専攻(せん こう)する",
+    "word": "major in",
+    "meaning_en": "主修；專攻",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "全国(ぜん こく)",
+    "word": "all over the country; national",
+    "meaning_en": "全國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "選手(せん しゅ)",
+    "word": "athlete; player",
+    "meaning_en": "選手；運動員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "全身(ぜん しん)",
+    "word": "the whole body",
+    "meaning_en": "全身",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "前進(ぜん しん)する",
+    "word": "advance; move forward; progress",
+    "meaning_en": "前進；進步",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "扇子(せん  す )",
+    "word": "folding fan",
+    "meaning_en": "扇子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先々月(せん せん げつ)",
+    "word": "the month before last",
+    "meaning_en": "前個月",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先々週(  せん  せん  しゅう)",
+    "word": "the week before last",
+    "meaning_en": "前星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "全体(ぜん たい)",
+    "word": "the whole; all over; in all; entirely",
+    "meaning_en": "全體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "選択(せん たく)する",
+    "word": "choice; choose; select",
+    "meaning_en": "選擇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "扇風機(せん ぷう  き )",
+    "word": "electric fan",
+    "meaning_en": "電風扇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "全力( ぜん  りょく)",
+    "word": "all one’s might",
+    "meaning_en": "全力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "線路(せん  ろ )",
+    "word": "railroad line; railroad track",
+    "meaning_en": "鐵路線；軌道",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "増加(ぞう  か )する",
+    "word": "increase",
+    "meaning_en": "増加",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "創作(そう さく)",
+    "word": "original work; creation",
+    "meaning_en": "創作",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "想像(そう ぞう)する",
+    "word": "imagination; guess",
+    "meaning_en": "想像",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "送別(そう べつ)",
+    "word": "farewell",
+    "meaning_en": "歡送",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "速達(そく たつ)",
+    "word": "express delivery",
+    "meaning_en": "快郵；快信",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "速度(そく  ど )",
+    "word": "speed",
+    "meaning_en": "速度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "組織( そ  しき)",
+    "word": "organization; tissue",
+    "meaning_en": "組織",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "袖(そで)",
+    "word": "sleeve",
+    "meaning_en": "衣袖",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "そのころ",
+    "word": "at that time; in those days",
+    "meaning_en": "那時候",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "尊敬(そん けい)する",
+    "word": "respect",
+    "meaning_en": "尊敬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "金額(きん がく)",
+    "word": "amount of money",
+    "meaning_en": "金額",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "禁止(きん  し )する",
+    "word": "prohibition; ban",
+    "meaning_en": "禁止",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "近代(きん だい)",
+    "word": "modern ages",
+    "meaning_en": "近代；現代",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "緊張( きん  ちょう)する",
+    "word": "tension; strain; nervous",
+    "meaning_en": "緊張",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "空席(くう せき)",
+    "word": "empty seat; vacant seat",
+    "meaning_en": "空位",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "屑(くず)",
+    "word": "waste; rubbish; trash",
+    "meaning_en": "碎片；廢物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "薬指(くすり  ゆび )",
+    "word": "ring finger",
+    "meaning_en": "無名指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下(くだ)り",
+    "word": "descent; down",
+    "meaning_en": "下；下行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "唇(くちびる)",
+    "word": "lip",
+    "meaning_en": "嘴唇",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "組合(くみ あわ)せ",
+    "word": "combination; assortment; matching",
+    "meaning_en": "配合；組合",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "位(くらい)",
+    "word": "rank, grade",
+    "meaning_en": "職位；階級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "暮(く)らし",
+    "word": "living; livelihood; life",
+    "meaning_en": "生活；生計",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "苦労( く  ろう)",
+    "word": "trouble; hardship",
+    "meaning_en": "辛苦；艱苦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "訓練(くん れん)する",
+    "word": "training; drill",
+    "meaning_en": "訓練",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "経営(けい えい)する",
+    "word": "management; operation",
+    "meaning_en": "經營",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "敬語(けい  ご )",
+    "word": "honorific expression",
+    "meaning_en": "敬語",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "傾向(けい こう)",
+    "word": "trend; tendency",
+    "meaning_en": "傾向",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "警告(けい こく)する",
+    "word": "warning; caution",
+    "meaning_en": "警告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "計算(けい さん)する",
+    "word": "calculation; figure out",
+    "meaning_en": "計算",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "掲示(けい  じ )する",
+    "word": "notice; bulletin",
+    "meaning_en": "告示；佈告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "形式(けい しき)",
+    "word": "form; formality",
+    "meaning_en": "形式；方式",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "芸術( げい  じゅつ)",
+    "word": "art",
+    "meaning_en": "藝術",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "継続(けい ぞく)する",
+    "word": "continuation",
+    "meaning_en": "繼續",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "携帯(けい たい)電話(でん  わ )",
+    "word": "mobile phone",
+    "meaning_en": "手機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "芸能(げい のう)",
+    "word": "entertainments",
+    "meaning_en": "文娛；娛樂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "経由(けい  ゆ )する",
+    "word": "via; by way of",
+    "meaning_en": "經由；經過",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "劇場( げき  じょう)",
+    "word": "theater",
+    "meaning_en": "劇場",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下車( げ  しゃ)する",
+    "word": "get off (the train, the car)",
+    "meaning_en": "下車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下駄(げ た)",
+    "word": "(wooden) clogs",
+    "meaning_en": "木屐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "血液(けつ えき)",
+    "word": "blood",
+    "meaning_en": "血液",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結果(けっ  か )",
+    "word": "result, consequence",
+    "meaning_en": "結果",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結局( けっ  きょく)",
+    "word": "after all; in the end",
+    "meaning_en": "最後；結果；到底",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "決心(けっ しん)",
+    "word": "determination; resolution",
+    "meaning_en": "決心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "欠席(けっ せき)する",
+    "word": "absence",
+    "meaning_en": "缺席",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "決定(けっ てい)する",
+    "word": "determination",
+    "meaning_en": "決定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "欠点(けっ てん)",
+    "word": "fault; defect",
+    "meaning_en": "缺點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "月末(げつ まつ)",
+    "word": "end of the month",
+    "meaning_en": "月底",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結論(けつ ろん)",
+    "word": "conclusion",
+    "meaning_en": "結論",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "煙(けむり)",
+    "word": "smoke",
+    "meaning_en": "煙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "件(けん)",
+    "word": "business, matter, case",
+    "meaning_en": "事；事情",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "券(けん)",
+    "word": "ticket; coupon",
+    "meaning_en": "卷；票",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "限界(げん かい)",
+    "word": "limit, limitation",
+    "meaning_en": "界限；限度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現金(げん きん)",
+    "word": "cash",
+    "meaning_en": "現金",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "言語(げん  ご )",
+    "word": "language",
+    "meaning_en": "語言；言語",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "検査(けん  さ )する",
+    "word": "inspection; examination",
+    "meaning_en": "檢查",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現在(げん ざい)",
+    "word": "present",
+    "meaning_en": "現在；目前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現実(げん じつ)",
+    "word": "reality; actually",
+    "meaning_en": "現實",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "研修( けん  しゅう)",
+    "word": "training",
+    "meaning_en": "研修；進修",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "謙遜(けん そん)する",
+    "word": "modesty; humility",
+    "meaning_en": "謙遜；謙虛",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "検討(けん とう)する",
+    "word": "examination",
+    "meaning_en": "檢討；探討",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "現場(げん  ば )",
+    "word": "spot; scene; site",
+    "meaning_en": "現場；地點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "懸命(けん めい)",
+    "word": "eager, earnest; strenuous",
+    "meaning_en": "拼命；盡力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幸運(こう うん)",
+    "word": "good fortune; good luck",
+    "meaning_en": "幸運",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "講演(こう えん)する",
+    "word": "lecture",
+    "meaning_en": "演講；演說",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "効果(こう  か )",
+    "word": "effect; result",
+    "meaning_en": "効果",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "公害(こう がい)",
+    "word": "pollution",
+    "meaning_en": "污染",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "合格(ごう かく)する",
+    "word": "pass (an exam); succeed; be qualified",
+    "meaning_en": "合格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交換(こう かん)する",
+    "word": "exchange",
+    "meaning_en": "交換；更換",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "高級( こう  きゅう)",
+    "word": "high-class; high-grade",
+    "meaning_en": "高級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "合計(ごう けい)する",
+    "word": "total; sum",
+    "meaning_en": "總計；合計",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "広告(こう こく)",
+    "word": "advertisement; commercial",
+    "meaning_en": "廣告",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交差(こう  さ )",
+    "word": "crossing; intersect",
+    "meaning_en": "交叉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "講師(こう  し )",
+    "word": "lecturer, instructor",
+    "meaning_en": "講師",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "高速(こう そく)",
+    "word": "high speed; freeway",
+    "meaning_en": "高速",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "行動(こう どう)する",
+    "word": "action; behavior",
+    "meaning_en": "行動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "後輩(こう はい)",
+    "word": "one’s junior",
+    "meaning_en": "晚辈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幸福(こう ふく)",
+    "word": "happiness",
+    "meaning_en": "幸福",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交流( こう  りゅう)",
+    "word": "exchange; interchange",
+    "meaning_en": "交流",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "氷(こおり)",
+    "word": "ice",
+    "meaning_en": "冰",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "呼吸(    こ     きゅう)する",
+    "word": "breathing; respiration",
+    "meaning_en": "呼吸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "故郷(   こ    きょう)",
+    "word": "one’s home; one’s hometown",
+    "meaning_en": "故鄉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国語(こく  ご )",
+    "word": "national language; Japanese",
+    "meaning_en": "國語；本國語言",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "黒板(こく ばん)",
+    "word": "blackboard",
+    "meaning_en": "黑板",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国民(こく みん)",
+    "word": "the nation; the people",
+    "meaning_en": "國民",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国立(こく りつ)",
+    "word": "national",
+    "meaning_en": "國立",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "個人( こ  じん)",
+    "word": "individual",
+    "meaning_en": "個人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "個体( こ  たい)",
+    "word": "individual",
+    "meaning_en": "個體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小遣( こ  づか)い",
+    "word": "pocket money",
+    "meaning_en": "零用錢",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小包(      こ       づつみ)",
+    "word": "package; parcel",
+    "meaning_en": "包裹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "こないだ",
+    "word": "some days ago; lately",
+    "meaning_en": "不久以前",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "好(この)み",
+    "word": "taste; fondness; fashion",
+    "meaning_en": "嗜好；時興; 流行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "御免( ご  めん)",
+    "word": "your pardon; permission",
+    "meaning_en": "請原諒；允許",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小指( こ  ゆび)",
+    "word": "little finger",
+    "meaning_en": "小指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "第(だい)〜 → 「第一、第二」",
+    "word": "the -st, -nd, -rd, -th, etc.",
+    "meaning_en": "第～",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体育(たい いく)",
+    "word": "physical training; physical education",
+    "meaning_en": "體育",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "第一(だい いち)",
+    "word": "the first",
+    "meaning_en": "第一",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体温(たい おん)",
+    "word": "body temperature",
+    "meaning_en": "體溫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大会(たい かい)",
+    "word": "convention; conference; rally",
+    "meaning_en": "大會；集會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大学院(だい がく いん)",
+    "word": "graduate school",
+    "meaning_en": "研究院",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体重( たい  じゅう)",
+    "word": "weight",
+    "meaning_en": "體重",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "対象( たい  しょう)",
+    "word": "object; target for",
+    "meaning_en": "對象；目標",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "態度(たい  ど )",
+    "word": "attitude; manner",
+    "meaning_en": "態度；舉止",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大半(たい はん)",
+    "word": "the majority",
+    "meaning_en": "大半；大多數",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "代表( だい  ひょう)する",
+    "word": "representative; represent",
+    "meaning_en": "代表",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大部分(だい  ぶ  ぶん)",
+    "word": "the greater part of, the majority",
+    "meaning_en": "大部份；多半",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "太陽(たい よう)",
+    "word": "sun",
+    "meaning_en": "太陽",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体力( たい  りょく)",
+    "word": "physical strength",
+    "meaning_en": "體力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "互(たが)い",
+    "word": "mutual; one another",
+    "meaning_en": "互相",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "宝(たから)",
+    "word": "treasure",
+    "meaning_en": "珍寶；財寶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "立場(たち  ば )",
+    "word": "position; situation; viewpoint",
+    "meaning_en": "立場；觀點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "他人( た  にん)",
+    "word": "others; outsider; stranger",
+    "meaning_en": "別人；他人；外人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "度(たび)",
+    "word": "every time; number of times",
+    "meaning_en": "每次；次數",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "旅(たび)",
+    "word": "trip; journey",
+    "meaning_en": "旅行；旅遊",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "短期(たん  き )",
+    "word": "short term",
+    "meaning_en": "短期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "誕生( たん  じょう)",
+    "word": "birth",
+    "meaning_en": "誕生；出生",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "団体(だん たい)",
+    "word": "group; organization",
+    "meaning_en": "團體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地下(ち か)",
+    "word": "underground",
+    "meaning_en": "地下",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "違(ちが)い",
+    "word": "difference; distinction",
+    "meaning_en": "不同；分別",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地球(     ち      きゅう)",
+    "word": "earth",
+    "meaning_en": "地球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地区(ち く)",
+    "word": "district, zone, area",
+    "meaning_en": "地區",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "遅刻( ち  こく)する",
+    "word": "be late",
+    "meaning_en": "遲到",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "父親(ちち おや)",
+    "word": "father",
+    "meaning_en": "父親",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地点( ち  てん)",
+    "word": "spot; place",
+    "meaning_en": "地點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地方( ち  ほう)",
+    "word": "locality, district, region",
+    "meaning_en": "地方；地區",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中央(ちゅう  おう )",
+    "word": "center; middle; government",
+    "meaning_en": "中央；中間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中間(ちゅう  かん )",
+    "word": "the middle; midway, neutral",
+    "meaning_en": "中間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中古(ちゅう     こ    )",
+    "word": "used; secondhand",
+    "meaning_en": "舊的；二手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "駐車(ちゅう  しゃ )する",
+    "word": "parking",
+    "meaning_en": "停車；泊車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "昼食(ちゅう しょく)",
+    "word": "lunch",
+    "meaning_en": "午飯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中心(ちゅう  しん )",
+    "word": "center; middle; core",
+    "meaning_en": "中心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "注目(ちゅう  もく )する",
+    "word": "notice; attention",
+    "meaning_en": "注目；注視",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "長期(ちょう    き   )",
+    "word": "long term",
+    "meaning_en": "長期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "調査(ちょう    さ   )する",
+    "word": "investigation",
+    "meaning_en": "調查",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "調子(ちょう    し   )",
+    "word": "tone; pitch; condition",
+    "meaning_en": "音調；語調；情況；狀態",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "長所(ちょう  しょ )",
+    "word": "strong point, merit",
+    "meaning_en": "長處；優點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "長方形(ちょう ほう  けい )",
+    "word": "rectangle",
+    "meaning_en": "長方形",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "～丁目(ちょう     め    ) →「二丁目」",
+    "word": "city block",
+    "meaning_en": "第～幾街區",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "直後(ちょく     ご    )",
+    "word": "immediately after, right after",
+    "meaning_en": "剛…後；… 之後不久",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "直線(ちょく  せん )",
+    "word": "straight line",
+    "meaning_en": "直線",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "著者(ちょ しゃ)",
+    "word": "writer; author",
+    "meaning_en": "著者；作者",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "直角(ちょっかく)",
+    "word": "right angle",
+    "meaning_en": "直角",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "直径(ちょっけい)",
+    "word": "diameter",
+    "meaning_en": "直徑",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "通過(つう  か )する",
+    "word": "pass",
+    "meaning_en": "通過；經過",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "通学(つう がく)する",
+    "word": "go to school",
+    "meaning_en": "就讀；上學",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "通勤(つう きん)する",
+    "word": "commute",
+    "meaning_en": "通勤",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "通行(つう こう)する",
+    "word": "traffic; passage",
+    "meaning_en": "通行；往來",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "通知(つう  ち )する",
+    "word": "notice; notify",
+    "meaning_en": "通知",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "疲(つか)れ",
+    "word": "fatigue",
+    "meaning_en": "疲倦；疲勞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "付(つ)き合(あ)い",
+    "word": "association, acquaintance, be sociable",
+    "meaning_en": "交際；交往；應酬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "続(つづ)き",
+    "word": "series; sequel",
+    "meaning_en": "繼續；連續",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "つもり",
+    "word": "intention; motive",
+    "meaning_en": "打算；意圖",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "釣(つ)り",
+    "word": "fishing",
+    "meaning_en": "釣魚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "連(つ)れ",
+    "word": "companion; mate",
+    "meaning_en": "同伴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出会(で あ)い",
+    "word": "encounter; meeting",
+    "meaning_en": "遇見；碰見",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "停止(てい  し )する",
+    "word": "stop",
+    "meaning_en": "停止",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "停車(てい しゃ)する",
+    "word": "stop the car",
+    "meaning_en": "停車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "程度(てい  ど )",
+    "word": "degree; level, standard; about",
+    "meaning_en": "程度；左右",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出入(で い)り",
+    "word": "coming & going; receipts & payments",
+    "meaning_en": "出入；進出；収支",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出入口(  で   いり ぐち)",
+    "word": "entrance and exit",
+    "meaning_en": "出入口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "停留所( てい りゅう じょ )",
+    "word": "(bus) stop",
+    "meaning_en": "巴士站；公車站",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出来上(で き あ)がり",
+    "word": "finish; completion",
+    "meaning_en": "完成",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "手伝( て  つだ)い",
+    "word": "help; assistance",
+    "meaning_en": "幫助",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "手続( て  つづ)き",
+    "word": "procedure",
+    "meaning_en": "手續",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出迎( で  むか)え",
+    "word": "go to meet someone",
+    "meaning_en": "迎接",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "電球( でん  きゅう)",
+    "word": "light bulb",
+    "meaning_en": "電燈泡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "電卓(でん たく)",
+    "word": "(pocket) calculator",
+    "meaning_en": "小型計算機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "電池(でん  ち )",
+    "word": "battery",
+    "meaning_en": "電池",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "問(と)い合(あ)わせ",
+    "word": "inquiry",
+    "meaning_en": "詢問",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "統計(とう けい)",
+    "word": "statistics",
+    "meaning_en": "統計",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "動作(どう  さ )",
+    "word": "movement",
+    "meaning_en": "動作",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "同時(どう  じ )",
+    "word": "simultaneously; at the same time",
+    "meaning_en": "同時",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "当日(とう じつ)",
+    "word": "that day",
+    "meaning_en": "當日",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "同僚( どう  りょう)",
+    "word": "colleague; co-worker",
+    "meaning_en": "同僚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "道路(どう  ろ )",
+    "word": "road; street",
+    "meaning_en": "道路",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "独身(どく しん)",
+    "word": "single",
+    "meaning_en": "獨身；單身",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "特徴( とく  ちょう)",
+    "word": "characteristic; trait",
+    "meaning_en": "特徵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "所々(ところ どころ)",
+    "word": "here and there",
+    "meaning_en": "這裡那裡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "登山( と  ざん)する",
+    "word": "mountain climbing",
+    "meaning_en": "登山",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "年寄(とし より)",
+    "word": "an old person",
+    "meaning_en": "老人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "戸棚( と  だな)",
+    "word": "cupboard; cabinet",
+    "meaning_en": "櫃",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "努力(     ど      りょく)する",
+    "word": "effort; endeavor",
+    "meaning_en": "努力",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "泥(どろ)",
+    "word": "mud",
+    "meaning_en": "泥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "仲(なか)",
+    "word": "relations",
+    "meaning_en": "關係",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "半(なか)ば",
+    "word": "half; halfway, middle",
+    "meaning_en": "一半；中途",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "仲間(なか  ま )",
+    "word": "companion; fellow worker",
+    "meaning_en": "夥伴；朋友",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中身(なか  み )",
+    "word": "contents; substance",
+    "meaning_en": "內容；裡面的東西",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中味(なか  み )",
+    "word": "contents; substance",
+    "meaning_en": "内容；裡面的東西；本質",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中指(なか ゆび)",
+    "word": "middle finger",
+    "meaning_en": "中指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "仲良(なか  よ )し",
+    "word": "good friend",
+    "meaning_en": "好朋友",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日(にち)",
+    "word": "day; date; Japan",
+    "meaning_en": "日；日期；日本",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日常( にち  じょう)",
+    "word": "daily; everyday",
+    "meaning_en": "日常",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日用品(にち よう ひん)",
+    "word": "daily necessities",
+    "meaning_en": "日用品",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "入社(にゅう  しゃ )する",
+    "word": "enter a company",
+    "meaning_en": "加入公司",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "入場(にゅう じょう)する",
+    "word": "entrance; admission",
+    "meaning_en": "入場",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "人間(にん げん)",
+    "word": "human being; human",
+    "meaning_en": "人；人類",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "布(ぬの)",
+    "word": "cloth; fabric",
+    "meaning_en": "布",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "願(ねが)い",
+    "word": "wish; desire; request",
+    "meaning_en": "願望；希望；請求",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鼠(ねずみ)",
+    "word": "mouse; rat",
+    "meaning_en": "老鼠",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "熱湯(ねっとう)",
+    "word": "hot water",
+    "meaning_en": "熱水",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "年間(ねん かん)",
+    "word": "annual; yearly",
+    "meaning_en": "年間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "年月(ねん げつ)",
+    "word": "time, years",
+    "meaning_en": "年月；光陰；時間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "年中( ねん  じゅう)",
+    "word": "throughout the year, all the year round",
+    "meaning_en": "全年；整年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "年齢(ねん れい)",
+    "word": "age",
+    "meaning_en": "年齡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "残(のこ)り",
+    "word": "rest; remainder",
+    "meaning_en": "殘餘；剩餘",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "望(のぞ)み",
+    "word": "wish; desire; hope; expectation",
+    "meaning_en": "希望；願望",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "上(のぼ)り",
+    "word": "ascent; up, go uphill",
+    "meaning_en": "上；登；上行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "乗換(のり かえ)",
+    "word": "change; transfer",
+    "meaning_en": "轉車；換乘",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "場(ば)",
+    "word": "place, spot; scene",
+    "meaning_en": "場所；場面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "拝啓(はい けい)",
+    "word": "Dear; To whom it may concern",
+    "meaning_en": "敬啟者",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "配達(はい たつ)する",
+    "word": "delivery, deliver",
+    "meaning_en": "送；投遞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "俳優(はい ゆう)",
+    "word": "actor, actress",
+    "meaning_en": "演員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "馬鹿(ばか)",
+    "word": "fool; foolish; stupid",
+    "meaning_en": "愚蠢；傻瓜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "はさみ",
+    "word": "scissors",
+    "meaning_en": "剪刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "発見(はっ けん)する",
+    "word": "discovery",
+    "meaning_en": "發現",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "発車(はっ しゃ)する",
+    "word": "departure",
+    "meaning_en": "發車；開車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "発表( はっ  ぴょう)する",
+    "word": "publication; presentation; announce",
+    "meaning_en": "發表",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "発明(はつ めい)する",
+    "word": "invention",
+    "meaning_en": "發明",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花束(はな たば)",
+    "word": "bouquet; bunch of flowers",
+    "meaning_en": "花束",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花火(はな  び )",
+    "word": "fireworks",
+    "meaning_en": "煙花",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "幅(はば)",
+    "word": "width; breadth",
+    "meaning_en": "寬度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "母親(はは おや)",
+    "word": "mother",
+    "meaning_en": "母親",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歯磨( は  みが)き",
+    "word": "toothpaste",
+    "meaning_en": "牙膏",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "場面( ば  めん)",
+    "word": "scene; sight",
+    "meaning_en": "場面；情景",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "晴(は)れ",
+    "word": "fine weather",
+    "meaning_en": "晴天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "半径(はん けい)",
+    "word": "radius",
+    "meaning_en": "半徑",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "判断(はん だん)する",
+    "word": "judgement; decision",
+    "meaning_en": "判斷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "比較( ひ  かく)する",
+    "word": "comparison",
+    "meaning_en": "比較",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "引算(ひき ざん)",
+    "word": "subtraction",
+    "meaning_en": "減法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "筆者(ひっ しゃ)",
+    "word": "writer",
+    "meaning_en": "筆者；作者",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "否定( ひ  てい)する",
+    "word": "negation; denial",
+    "meaning_en": "否定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "人差指(ひと さし ゆび)",
+    "word": "forefinger; index finger",
+    "meaning_en": "食指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "秘密( ひ  みつ)",
+    "word": "secret",
+    "meaning_en": "秘密",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "費用( ひ  よう)",
+    "word": "expense; cost",
+    "meaning_en": "費用",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "広(ひろ)さ",
+    "word": "width",
+    "meaning_en": "寬度；闊度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "広場(ひろ  ば )",
+    "word": "square, plaza",
+    "meaning_en": "廣場",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夫婦(ふう  ふ )",
+    "word": "couple; husband and wife",
+    "meaning_en": "夫婦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "付近( ふ  きん)",
+    "word": "neighborhood",
+    "meaning_en": "附近",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "服装(ふく そう)",
+    "word": "clothes",
+    "meaning_en": "服裝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夫妻( ふ  さい)",
+    "word": "husband and wife",
+    "meaning_en": "夫妻",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夫人( ふ  じん)",
+    "word": "a person’s wife",
+    "meaning_en": "夫人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "婦人( ふ  じん)",
+    "word": "woman; lady",
+    "meaning_en": "婦女",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "文房具(ぶん ぼう  ぐ )",
+    "word": "stationery",
+    "meaning_en": "文具",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "平均(へい きん)",
+    "word": "average; balance",
+    "meaning_en": "平均",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "平和(へい  わ )",
+    "word": "peace",
+    "meaning_en": "和平",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "変化(へん  か )する",
+    "word": "change; variety",
+    "meaning_en": "變化",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "編集( へん  しゅう)する",
+    "word": "editing; compilation",
+    "meaning_en": "編輯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "返信(へん しん)する",
+    "word": "answer; reply",
+    "meaning_en": "回覆；回信",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "包丁( ほう  ちょう)",
+    "word": "kitchen knife",
+    "meaning_en": "刀；菜刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歩道( ほ  どう)",
+    "word": "sidewalk",
+    "meaning_en": "行人道",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "本人(ほん にん)",
+    "word": "the person himself/herself",
+    "meaning_en": "本人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "本来(ほん らい)",
+    "word": "originally, essentially, by nature",
+    "meaning_en": "本来；原來",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "負(ま)け",
+    "word": "defeat; loss",
+    "meaning_en": "輸；敗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "孫(まご)",
+    "word": "grandchild",
+    "meaning_en": "孫；孫女",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "街角(まち かど)",
+    "word": "street corner",
+    "meaning_en": "街角",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "丸(まる)",
+    "word": "circle; whole; period; full stop",
+    "meaning_en": "圓圈；完整句號",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "回(まわ)り",
+    "word": "rotation",
+    "meaning_en": "旋轉；轉動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "満点(まん てん)",
+    "word": "perfect score",
+    "meaning_en": "滿分",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "見掛(み か)け",
+    "word": "appearance; look",
+    "meaning_en": "外觀；外表",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "見出(み だ)し",
+    "word": "heading; headline, title",
+    "meaning_en": "標題",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "見本( み  ほん)",
+    "word": "sample; specimen",
+    "meaning_en": "樣品；貨樣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "明後日(みょう    ご     にち  )",
+    "word": "the day after tomorrow",
+    "meaning_en": "後天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "向(む)かい",
+    "word": "facing; opposite; the other side",
+    "meaning_en": "正面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "迎(むか)え",
+    "word": "welcome; meeting",
+    "meaning_en": "迎接",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "胸(むね)",
+    "word": "chest; breast; one’s heart",
+    "meaning_en": "胸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "名刺(めい  し )",
+    "word": "business card",
+    "meaning_en": "名片",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "名所(めい しょ)",
+    "word": "famous place",
+    "meaning_en": "名勝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "名物(めい ぶつ)",
+    "word": "famous product; local specialty",
+    "meaning_en": "名產",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "命令(めい れい)する",
+    "word": "order; command",
+    "meaning_en": "命令",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "飯(めし)",
+    "word": "meal; boiled rice",
+    "meaning_en": "飯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "面積(めん せき)",
+    "word": "area",
+    "meaning_en": "面積",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "面接(めん せつ)する",
+    "word": "interview",
+    "meaning_en": "面試",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "申込(もうし  こみ )",
+    "word": "application",
+    "meaning_en": "申請",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "申(もう)し訳(わけ)",
+    "word": "apology; excuse",
+    "meaning_en": "道歉；申辯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "目的(もく てき)",
+    "word": "purpose; aim; goal",
+    "meaning_en": "目的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "目的地(もく てき  ち )",
+    "word": "destination",
+    "meaning_en": "目的地",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "目標( もく  ひょう)",
+    "word": "goal, aim",
+    "meaning_en": "目標",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "文字(も じ)",
+    "word": "character; letter",
+    "meaning_en": "字；文字",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "者(もの)",
+    "word": "person",
+    "meaning_en": "者；人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "物語( もの  がたり)",
+    "word": "story, tale, fiction",
+    "meaning_en": "故事；小說",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "物事(もの ごと)",
+    "word": "things; everything",
+    "meaning_en": "事物；事情",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "文句(もん  く )",
+    "word": "complaint; expression; phrase",
+    "meaning_en": "牢騷；意見；詞句",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "やかん",
+    "word": "kettle",
+    "meaning_en": "水壺",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夜間( や  かん)",
+    "word": "night; nighttime",
+    "meaning_en": "夜間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "家賃( や  ちん)",
+    "word": "rent",
+    "meaning_en": "房租",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夕刊(ゆう かん)",
+    "word": "evening paper",
+    "meaning_en": "晚報",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "優勝( ゆう  しょう)する",
+    "word": "victory",
+    "meaning_en": "優勝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "友情( ゆう  じょう)",
+    "word": "friendship",
+    "meaning_en": "友情",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "友人(ゆう じん)",
+    "word": "friend",
+    "meaning_en": "友人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夕飯(ゆう はん)",
+    "word": "dinner; supper",
+    "meaning_en": "晚飯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "郵便(ゆう びん)",
+    "word": "mail; post",
+    "meaning_en": "郵政；郵件",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "用紙(よう  し )",
+    "word": "form",
+    "meaning_en": "用紙；格式紙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "用心(よう じん)する",
+    "word": "precaution; care",
+    "meaning_en": "注意；小心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "様子(よう  す )",
+    "word": "look; appearance",
+    "meaning_en": "樣子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "要点(よう てん)",
+    "word": "main point",
+    "meaning_en": "要點",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "予測( よ  そく)する",
+    "word": "forecast; predict; estimate",
+    "meaning_en": "預測",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夜中( よ  なか)",
+    "word": "middle of the night",
+    "meaning_en": "半夜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "予備(よ び)",
+    "word": "reserve; preparatory",
+    "meaning_en": "預備；準備",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "〜ら → 「山田さんら、 きみら 」",
+    "word": "and others",
+    "meaning_en": "〜們",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "落第(らく だい)",
+    "word": "fail an examination",
+    "meaning_en": "不及格",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "理解( り  かい)する",
+    "word": "understanding; comprehension",
+    "meaning_en": "理解",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "離婚( り  こん)する",
+    "word": "divorce",
+    "meaning_en": "離婚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "寮(りょう)",
+    "word": "dorm; dormitory",
+    "meaning_en": "宿舍",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "領収(りょう しゅう)する",
+    "word": "receive",
+    "meaning_en": "收；接收",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "領収書(りょう しゅう  しょ )",
+    "word": "receipt",
+    "meaning_en": "收據",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "留守番( る   す  ばん)",
+    "word": "look after a house while owner is away",
+    "meaning_en": "看家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "列車(れっ しゃ)",
+    "word": "train",
+    "meaning_en": "列車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "列島(れっ とう)",
+    "word": "chain of islands",
+    "meaning_en": "列島",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "録音(ろく おん)する",
+    "word": "audio recording",
+    "meaning_en": "錄音",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "わが〜 →「わが国、 わが社」",
+    "word": "my, our",
+    "meaning_en": "我的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "若者(わか もの)",
+    "word": "young person",
+    "meaning_en": "年青人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "別(わか)れ",
+    "word": "parting; farewell; separation",
+    "meaning_en": "告別；離別",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "笑(わら) い",
+    "word": "laugh; laughter; smile",
+    "meaning_en": "笑；笑聲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "割算(わり さん)",
+    "word": "division",
+    "meaning_en": "除法",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  },
+  {
+    "furigana": "割引(わり びき)",
+    "word": "discount; reduction",
+    "meaning_en": "折扣；減價",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N3",
+    "pos": "noun"
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "pattern": "いくら～ても＝「どんなに〜ても」",
+    "meaning_zh_CN": "无论……也……",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "から〜にかけて",
+    "meaning_zh_CN": "从～到～",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "こそ",
+    "meaning_zh_CN": "正是",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "くらい / ぐらい",
+    "meaning_zh_CN": "程度",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "さえ",
+    "meaning_zh_CN": "甚至连～",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "しかない",
+    "meaning_zh_CN": "只能，只有",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "数量 + は",
+    "meaning_zh_CN": "起码……、至少……",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "たものだ",
+    "meaning_zh_CN": "表示回忆",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "といい",
+    "meaning_zh_CN": "要是…该多好",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "っけ",
+    "meaning_zh_CN": "是～吗？是不是…来着",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "たらいい",
+    "meaning_zh_CN": "要是…该多好",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "として",
+    "meaning_zh_CN": "作为，以～的名义",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "とは限らない",
+    "meaning_zh_CN": "未必",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "なんか / なんて / など",
+    "meaning_zh_CN": "…之类的",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "にしては",
+    "meaning_zh_CN": "与～不符、虽说是",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "にしても",
+    "meaning_zh_CN": "不管是～",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "にとって",
+    "meaning_zh_CN": "对于～来说",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "について",
+    "meaning_zh_CN": "关于",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "には",
+    "meaning_zh_CN": "为了〜",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "〜は別として",
+    "meaning_zh_CN": "～另当别论",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "ば～ほど",
+    "meaning_zh_CN": "越～越～",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "ば～のに",
+    "meaning_zh_CN": "无法实现的假设",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "ばいい",
+    "meaning_zh_CN": "要是…该多好",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "ほど",
+    "meaning_zh_CN": "表示程度",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "ほど～ない",
+    "meaning_zh_CN": "没有比……更",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "〜も〜ば～も",
+    "meaning_zh_CN": "既～又～",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  },
+  {
+    "pattern": "もしも〜たら",
+    "meaning_zh_CN": "假设…的话",
+    "scene": "助词",
+    "jlptLevel": "N3"
+  }
+]

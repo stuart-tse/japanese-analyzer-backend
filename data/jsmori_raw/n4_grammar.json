@@ -1,0 +1,446 @@
+[
+  {
+    "pattern": "〜間",
+    "meaning_zh_CN": "～期间",
+    "scene": "时点・场面",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜間に",
+    "meaning_zh_CN": "在…期间内，在…结束之前，趁着…",
+    "scene": "时点・场面",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜終わる",
+    "meaning_zh_CN": "…完",
+    "scene": "动作的结束",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "（疑問詞）〜か",
+    "meaning_zh_CN": "表示不确定的疑问。",
+    "scene": "(副助词)",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜がする",
+    "meaning_zh_CN": "觉得；(看)到、(听)到、(闻)到、(感)到",
+    "scene": "様子・状态",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜かどうか",
+    "meaning_zh_CN": "是不是…",
+    "scene": "(接续)",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜かもしれない",
+    "meaning_zh_CN": "可能，说不定",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ことがある",
+    "meaning_zh_CN": "有时也会〜",
+    "scene": "変化・不定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ことにする",
+    "meaning_zh_CN": "决定",
+    "scene": "决定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ことになる",
+    "meaning_zh_CN": "规定",
+    "scene": "决定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜させてください",
+    "meaning_zh_CN": "请允许我～",
+    "scene": "依赖",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜しか〜ない",
+    "meaning_zh_CN": "只…",
+    "scene": "程度",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜し、〜し",
+    "meaning_zh_CN": "又…又…；\n因为…",
+    "scene": "并列\n原因・理由",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜すぎる",
+    "meaning_zh_CN": "太〜",
+    "scene": "程度",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "（形容詞）する",
+    "meaning_zh_CN": "做成…，变成…",
+    "scene": "変化・不定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜そうです（傳聞）",
+    "meaning_zh_CN": "听说…、据说…",
+    "scene": "伝闻",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜そうです（様態）",
+    "meaning_zh_CN": "看起来…、好像…",
+    "scene": "様态",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜出す",
+    "meaning_zh_CN": "开始…",
+    "scene": "意図的行为・动作の开始と终了",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜たばかり",
+    "meaning_zh_CN": "刚～",
+    "scene": "时间的前后",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ために",
+    "meaning_zh_CN": "为了～",
+    "scene": "目的",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜たらいいですか",
+    "meaning_zh_CN": "怎么做才好呢",
+    "scene": "提议",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜たらどうですか",
+    "meaning_zh_CN": "如果～怎么样呢",
+    "scene": "提议",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜続ける",
+    "meaning_zh_CN": "不停地…、连续地…",
+    "scene": "意図的行为・动作の开始と终了",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜って",
+    "meaning_zh_CN": "说明名字",
+    "scene": "名前の绍介",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜つもりだ",
+    "meaning_zh_CN": "打算",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜て／で（理由・原因）",
+    "meaning_zh_CN": "由于",
+    "scene": "原因・理由",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜てある",
+    "meaning_zh_CN": "某动作结果存留",
+    "scene": "様子・状态",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "（自動詞）ている",
+    "meaning_zh_CN": "一直在…",
+    "scene": "付帯状态・非付帯状态",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ていく",
+    "meaning_zh_CN": "〜去",
+    "scene": "移动の状态・方向性",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ておく",
+    "meaning_zh_CN": "先～",
+    "scene": "意図的行为・动作の开始と终了",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ていただけませんか",
+    "meaning_zh_CN": "请您～",
+    "scene": "敬意",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜てくる（変化・移動）",
+    "meaning_zh_CN": "～来、开始变得〜",
+    "scene": "変化・移动",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜てくる（出去再回來）",
+    "meaning_zh_CN": "出去再回来",
+    "scene": "方向性",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜てしまう",
+    "meaning_zh_CN": "❶ …完 \n❷ 遗憾",
+    "scene": "❶意図的行为・动作の开始と终了\n❷経过・结末",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜でしょう",
+    "meaning_zh_CN": "大概…吧",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜てみる",
+    "meaning_zh_CN": "试着…看",
+    "scene": "意図的行为・动作の开始と终了",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ても",
+    "meaning_zh_CN": "就算～",
+    "scene": "逆接条件",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜と",
+    "meaning_zh_CN": "一…就…",
+    "scene": "条件",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ところだ",
+    "meaning_zh_CN": "…的时候",
+    "scene": "时点・场面",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜という",
+    "meaning_zh_CN": "叫作…",
+    "scene": "名前の绍介",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "なかなか〜ない",
+    "meaning_zh_CN": "不容易…、难以…",
+    "scene": "可能・难易",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜なさい",
+    "meaning_zh_CN": "请〜",
+    "scene": "命令",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜なら",
+    "meaning_zh_CN": "如果～",
+    "scene": "条件",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜にくい",
+    "meaning_zh_CN": "难…、不容易…",
+    "scene": "可能・难易",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜にする",
+    "meaning_zh_CN": "决定",
+    "scene": "决定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ので",
+    "meaning_zh_CN": "由于",
+    "scene": "原因・理由",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜のに",
+    "meaning_zh_CN": "明明…却",
+    "scene": "逆接・譲歩",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜のは〜です",
+    "meaning_zh_CN": "表示强调",
+    "scene": "心の强调",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ば",
+    "meaning_zh_CN": "如果",
+    "scene": "条件",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜は〜が、〜は（対比）",
+    "meaning_zh_CN": "表示对比",
+    "scene": "対比",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ばかり",
+    "meaning_zh_CN": "总是…、一味…",
+    "scene": "强调",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜はずだ",
+    "meaning_zh_CN": "应该…一定(会)…",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜始める",
+    "meaning_zh_CN": "开始〜",
+    "scene": "意図的行为・动作の开始と终了",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜必要がある",
+    "meaning_zh_CN": "必须〜",
+    "scene": "义务",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ほうがいい",
+    "meaning_zh_CN": "我建议你还是…的好",
+    "scene": "助言",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ほど〜ない",
+    "meaning_zh_CN": "…没有…那么",
+    "scene": "比较",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "まだ〜ていない",
+    "meaning_zh_CN": "现在还没…",
+    "scene": "様子・状态",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜までに",
+    "meaning_zh_CN": "最迟……之前",
+    "scene": "时点・场面",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜まま",
+    "meaning_zh_CN": "保持原样",
+    "scene": "経过・结末",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜みたいだ（推量）",
+    "meaning_zh_CN": "感觉好像是…、估计是…",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜みたいな / 〜みたいに（例示）",
+    "meaning_zh_CN": "像～那样的",
+    "scene": "例示",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "数量 + も",
+    "meaning_zh_CN": "表示数量很大",
+    "scene": "强调",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜やすい",
+    "meaning_zh_CN": "容易～",
+    "scene": "可能・难易",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようだ（推量）",
+    "meaning_zh_CN": "似乎～",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようと思う",
+    "meaning_zh_CN": "想要～；打算～",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようと思っている",
+    "meaning_zh_CN": "打算～ (说明意图和计划)",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ような / 〜ように （例示）",
+    "meaning_zh_CN": "像…那样",
+    "scene": "例示",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ように（目標・期待）",
+    "meaning_zh_CN": "期待〜",
+    "scene": "目的",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようにしている",
+    "meaning_zh_CN": "表示长期习惯",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようにする",
+    "meaning_zh_CN": "记得要～",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜ようになる",
+    "meaning_zh_CN": "变得～",
+    "scene": "変化・不定",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜予定だ",
+    "meaning_zh_CN": "准备…；打算…",
+    "scene": "意志",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜らしい（推量）",
+    "meaning_zh_CN": "据说…；好像…",
+    "scene": "推量",
+    "jlptLevel": "N4"
+  },
+  {
+    "pattern": "〜らしい（典型）",
+    "meaning_zh_CN": "有…特点的",
+    "scene": "典型",
+    "jlptLevel": "N4"
+  }
+]

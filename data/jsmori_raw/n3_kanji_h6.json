@@ -1,0 +1,602 @@
+[
+  {
+    "word": "政",
+    "reading": "せい、しょう、まつりごと",
+    "meaning_en": "",
+    "meaning_zh_CN": "政治、政府",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "議",
+    "reading": "ぎ",
+    "meaning_en": "",
+    "meaning_zh_CN": "讨论/辩论/审议",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "連",
+    "reading": "れん、つら(なる)、つ(れる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "加入/连接",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "対",
+    "reading": "たい、つい",
+    "meaning_en": "",
+    "meaning_zh_CN": "相反",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "内",
+    "reading": "ない、だい、うち",
+    "meaning_en": "",
+    "meaning_zh_CN": "里面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "相",
+    "reading": "そう、しょう、あい",
+    "meaning_en": "",
+    "meaning_zh_CN": "相互/一起/彼此",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "定",
+    "reading": "てい、じょう、さだ(める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "决定/确定",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "選",
+    "reading": "せん、えら (ぶ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "选择",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "実",
+    "reading": "じつ、み、みの(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "现实/真相",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "関",
+    "reading": "かん、せき、かか(わる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "参与/联系",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "決",
+    "reading": "けつ、き(める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "决定",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "全",
+    "reading": "ぜん、すべ (て)、まった (く)",
+    "meaning_en": "",
+    "meaning_zh_CN": "全部",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "表",
+    "reading": "ひょう、おもて、あらわ(す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "表/表面/前面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "戦",
+    "reading": "せん、いくさ、たたか(う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "战争/战斗",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "経",
+    "reading": "けい、きょう",
+    "meaning_en": "",
+    "meaning_zh_CN": "经度/通过",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "最",
+    "reading": "さい、もっと(も)",
+    "meaning_en": "",
+    "meaning_zh_CN": "最/极端",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "現",
+    "reading": "げん、あらわ(れる)、うつ(つ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "出现/存在",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "調",
+    "reading": "ちょう、しら(べる)、ととの(う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "调查/检查/调整/语气",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "化",
+    "reading": "",
+    "meaning_en": "",
+    "meaning_zh_CN": "改变/采取的形式",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "当",
+    "reading": "とう、あ(たる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "击中/正解/适当",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "約",
+    "reading": "やく",
+    "meaning_en": "",
+    "meaning_zh_CN": "承诺/大约/关于",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "法",
+    "reading": "ほう、はっ…ほっ",
+    "meaning_en": "",
+    "meaning_zh_CN": "法律/方法/规则",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "性",
+    "reading": "せい、しょう",
+    "meaning_en": "",
+    "meaning_zh_CN": "性别",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "的",
+    "reading": "てき、まと",
+    "meaning_en": "",
+    "meaning_zh_CN": "目标/标记",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "要",
+    "reading": "よう、い(る)、 かなめ",
+    "meaning_en": "",
+    "meaning_zh_CN": "需要/必要",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "治",
+    "reading": "ち、じ、おさ(める)、なお(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "治愈/统治",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "成",
+    "reading": "せい、じょう、な(る)、な(す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "成为/变成",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "期",
+    "reading": "き、ご",
+    "meaning_en": "",
+    "meaning_zh_CN": "期间、时间、日期、期限",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "機",
+    "reading": "き、はた",
+    "meaning_en": "",
+    "meaning_zh_CN": "机器/机会",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "平",
+    "reading": "へい、びょう、ひょう、たい(ら)、ひら",
+    "meaning_en": "",
+    "meaning_zh_CN": "平坦/平整/和平",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "加",
+    "reading": "か、くわ(える)意思：添加/加入的",
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "受",
+    "reading": "じゅ、う(ける",
+    "meaning_en": "",
+    "meaning_zh_CN": "接受",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "続",
+    "reading": "ぞく、つづ (く)、つづ (ける)",
+    "meaning_en": "",
+    "meaning_zh_CN": "继续，系列，续集",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "数",
+    "reading": "かず、かぞ (える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "数",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "記",
+    "reading": "き、しる(す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "记下/写下来",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "初",
+    "reading": "しょ、はじ(め)、はつ",
+    "meaning_en": "",
+    "meaning_zh_CN": "第一次、开始",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "指",
+    "reading": "",
+    "meaning_en": "",
+    "meaning_zh_CN": "手指/指向finger, point to, indicate",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "支",
+    "reading": "し、ささ(える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "支持/分支",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "点",
+    "reading": "てん",
+    "meaning_en": "",
+    "meaning_zh_CN": "点/标记",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "済",
+    "reading": "さい、す(む)",
+    "meaning_en": "",
+    "meaning_zh_CN": "结束/完成",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "活",
+    "reading": "かつ、い (きる)、い (かす)",
+    "meaning_en": "",
+    "meaning_zh_CN": "活着",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "原",
+    "reading": "げん、はら",
+    "meaning_en": "",
+    "meaning_zh_CN": "原先的/起初的",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "解",
+    "reading": "かい、げ、と(く)、と (ける)",
+    "meaning_en": "",
+    "meaning_zh_CN": "解开/解决",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "交",
+    "reading": "こう、まじ(わる)、 ま(じる)、 か(わす)",
+    "meaning_en": "",
+    "meaning_zh_CN": "混合",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "予",
+    "reading": "",
+    "meaning_en": "",
+    "meaning_zh_CN": "事先/以前",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "向",
+    "reading": "こう、むか(う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "面对/超越",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "際",
+    "reading": "",
+    "meaning_en": "",
+    "meaning_zh_CN": "场合/时间/边缘",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "勝",
+    "reading": "しょう、か(つ)、 まさ(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "赢/胜利",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "面",
+    "reading": "めん、おも、おもて、つら",
+    "meaning_en": "",
+    "meaning_zh_CN": "面具/脸/表面",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "告",
+    "reading": "こく、つ(げる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "通知/告诉/宣布",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "反",
+    "reading": "はん、たん、ほん、そ(る)、かえ (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "反",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "認",
+    "reading": "にん、みと(める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "承认",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "参",
+    "reading": "さん、まい(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "访问/加入/参与",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "利",
+    "reading": "り、き(く)",
+    "meaning_en": "",
+    "meaning_zh_CN": "利润/收益",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "組",
+    "reading": "そ、く(む)、くみ",
+    "meaning_en": "",
+    "meaning_zh_CN": "协会/集合/单位",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "信",
+    "reading": "しん",
+    "meaning_en": "",
+    "meaning_zh_CN": "相信",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "在",
+    "reading": "ざい、あ (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "存在",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "件",
+    "reading": "けん",
+    "meaning_en": "",
+    "meaning_zh_CN": "案件/事",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "側",
+    "reading": "そく、がわ",
+    "meaning_en": "",
+    "meaning_zh_CN": "边",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "求",
+    "reading": "きゅう、もと (める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "请求",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "次",
+    "reading": "じ、し、つぎ、つ(ぐ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "下一个",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "昨",
+    "reading": "さく",
+    "meaning_en": "",
+    "meaning_zh_CN": "昨天/以前",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "増",
+    "reading": "ぞう、ま(す)、 ふ(える)、ふ (やす)",
+    "meaning_en": "",
+    "meaning_zh_CN": "增加",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "係",
+    "reading": "けい、かかり、かか(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "负责人",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "感",
+    "reading": "かん",
+    "meaning_en": "",
+    "meaning_zh_CN": "感觉/情感",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "情",
+    "reading": "じょう、せい、なさ (け)意思：感覺/情感/同情",
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "投",
+    "reading": "とう、な (げる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "扔",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "示",
+    "reading": "し、じ、しめ (す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "显示/表示",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "変",
+    "reading": "へん、か(わる)、か(える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "改变/不寻常",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "直",
+    "reading": "ちょく、じき",
+    "meaning_en": "",
+    "meaning_zh_CN": "直接/修复/修理",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "両",
+    "reading": "りょう",
+    "meaning_en": "",
+    "meaning_zh_CN": "两者",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "式",
+    "reading": "しき",
+    "meaning_en": "",
+    "meaning_zh_CN": "仪式/风格/方式",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "確",
+    "reading": "かく、たしか (める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "确定/确认/明确",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "果",
+    "reading": "か、は(たす)、は(てる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "水果/实现",
+    "category": "general",
+    "jlptLevel": "N3"
+  },
+  {
+    "word": "申",
+    "reading": "しん、もう (す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "告诉",
+    "category": "general",
+    "jlptLevel": "N3"
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "furigana": "浅(あさ)い",
+    "word": "shallow",
+    "meaning_en": "淺的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "うまい",
+    "word": "skilful / good",
+    "meaning_en": "好的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "うるさい",
+    "word": "noisy",
+    "meaning_en": "嘈雜的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "嬉(うれ)しい",
+    "word": "be glad",
+    "meaning_en": "快樂的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "美(うつく)しい",
+    "word": "beautiful",
+    "meaning_en": "美麗的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "おかしい",
+    "word": "strange / funny",
+    "meaning_en": "奇怪的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "硬(かた)い",
+    "word": "hard",
+    "meaning_en": "硬的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "悲(かな)しい",
+    "word": "sad",
+    "meaning_en": "傷心的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "厳(きび)しい",
+    "word": "strict",
+    "meaning_en": "嚴格的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "臭(くさ)い",
+    "word": "smelly",
+    "meaning_en": "臭的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "苦(くるし)い",
+    "word": "painful",
+    "meaning_en": "苦的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "細(こま)かい",
+    "word": "fine",
+    "meaning_en": "詳細的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "寂(さび)しい",
+    "word": "lonely",
+    "meaning_en": "寂寞的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "少(すく)ない",
+    "word": "very few / little",
+    "meaning_en": "少的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "すごい",
+    "word": "fantastic / terrible",
+    "meaning_en": "出色的；骇人的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "素晴(すば)らしい",
+    "word": "wonderful",
+    "meaning_en": "極好的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "正(ただ)しい",
+    "word": "right / correct",
+    "meaning_en": "正確的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "苦(にが)い",
+    "word": "bitter",
+    "meaning_en": "苦的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "恥(は)ずかしい",
+    "word": "embarassing",
+    "meaning_en": "慚愧的；害羞的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "酷(ひど)い",
+    "word": "terrible; awful​",
+    "meaning_en": "殘酷的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "深(ふか)い",
+    "word": "deep",
+    "meaning_en": "深的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "太(ふと)い",
+    "word": "thick / fat",
+    "meaning_en": "厚的；肥胖的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "珍(めずら)しい",
+    "word": "unusual",
+    "meaning_en": "稀有的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "優(やさ)しい",
+    "word": "kind",
+    "meaning_en": "溫柔的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "柔(やわ)らかい",
+    "word": "soft",
+    "meaning_en": "柔軟的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "よろしい",
+    "word": "good",
+    "meaning_en": "好的；出色的",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "安心(あん しん)",
+    "word": "peace of mind",
+    "meaning_en": "放心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "安全(あん ぜん)",
+    "word": "safety",
+    "meaning_en": "安全",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "簡単(かん たん)",
+    "word": "simple / easy",
+    "meaning_en": "簡單",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "危険(  き   けん)",
+    "word": "dangerous",
+    "meaning_en": "危險",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "急(きゅう)",
+    "word": "sudden; unexpected",
+    "meaning_en": "急",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "残念(ざん ねん)",
+    "word": "sorry",
+    "meaning_en": "遺憾，可惜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "自由(  じ   ゆう)",
+    "word": "freedom",
+    "meaning_en": "自由；随意",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "十分(じゅう   ぶん  )",
+    "word": "enough",
+    "meaning_en": "充分，足夠",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "親切(しん せつ)",
+    "word": "kindness",
+    "meaning_en": "熱情；好心",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "大事(だい   じ  )",
+    "word": "important / serious",
+    "meaning_en": "重要；重大問題",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "確(たし)か",
+    "word": "surely",
+    "meaning_en": "確實",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "小(ちい)さな(連體詞)",
+    "word": "small",
+    "meaning_en": "小",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "丁寧(てい ねい)",
+    "word": "polite",
+    "meaning_en": "有禮貌",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "適当(てき とう)",
+    "word": "suitable",
+    "meaning_en": "適當",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "特別(とく べつ)",
+    "word": "special",
+    "meaning_en": "特別，格外",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "必要(ひつ よう)",
+    "word": "necessary",
+    "meaning_en": "必需",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "不便(  ふ   べん)",
+    "word": "inconvenience",
+    "meaning_en": "不方便",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "変(へん)",
+    "word": "strange; weird",
+    "meaning_en": "異常，古怪",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "熱心(ねっ しん)",
+    "word": "eager",
+    "meaning_en": "熱情",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "複雑(ふく ざつ)",
+    "word": "complicate",
+    "meaning_en": "複雜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "真面目(ま じ め)",
+    "word": "serious",
+    "meaning_en": "認真，正直",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "無理(む り)",
+    "word": "impossible",
+    "meaning_en": "無理；勉強",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "肯定",
+    "meaning_en": "否定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "現在",
+    "word": "高い",
+    "meaning_en": "高くない",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "過去",
+    "word": "高かった",
+    "meaning_en": "高くなかった",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "",
+    "word": "肯定",
+    "meaning_en": "否定",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "現在",
+    "word": "元気だ",
+    "meaning_en": "元気じゃない",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  },
+  {
+    "furigana": "過去",
+    "word": "元気だった",
+    "meaning_en": "元気じゃなかった",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "adj"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "pattern": "〜あとで",
+    "meaning_zh_CN": "…之后",
+    "scene": "时间的前后",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "あまり〜ない",
+    "meaning_zh_CN": "不太～；没多少～",
+    "scene": "程度",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜がいちばん",
+    "meaning_zh_CN": "…是最…",
+    "scene": "程度",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜方",
+    "meaning_zh_CN": "〜的方法、方式",
+    "scene": "",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜が欲しい",
+    "meaning_zh_CN": "想要…",
+    "scene": "愿望",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜から",
+    "meaning_zh_CN": "因为，由于",
+    "scene": "原因・理由",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "ぜひ",
+    "meaning_zh_CN": "一定；务必",
+    "scene": "(副词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜だけ",
+    "meaning_zh_CN": "只〜 (表示限定)",
+    "scene": "限界",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜で（手段・方法）",
+    "meaning_zh_CN": "用〜",
+    "scene": "(格助词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜てから",
+    "meaning_zh_CN": "先～再～",
+    "scene": "时间的前后",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜でしょう（確認・同意）",
+    "meaning_zh_CN": "大概…吧",
+    "scene": "推量",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜てはいけない",
+    "meaning_zh_CN": "不可以…",
+    "scene": "禁止",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜てもいいですか",
+    "meaning_zh_CN": "也可以吗？",
+    "scene": "许可",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "どうやって",
+    "meaning_zh_CN": "怎么…",
+    "scene": "(接续词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜と思う",
+    "meaning_zh_CN": "我认为…",
+    "scene": "推量",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "とても",
+    "meaning_zh_CN": "很，非常 程度",
+    "scene": "(副词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "どんな",
+    "meaning_zh_CN": "怎样的，什么样的",
+    "scene": "(连体词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜たい",
+    "meaning_zh_CN": "想要",
+    "scene": "愿望",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜たり〜たり",
+    "meaning_zh_CN": "或者～或者～(列举)",
+    "scene": "并列",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜とき",
+    "meaning_zh_CN": "时候",
+    "scene": "时点・场面",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ないで",
+    "meaning_zh_CN": "不V1，V2",
+    "scene": "决定",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ないでください",
+    "meaning_zh_CN": "请不要…",
+    "scene": "否定",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ながら",
+    "meaning_zh_CN": "一边…",
+    "scene": "(接续助词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜なくてもいい",
+    "meaning_zh_CN": "即使不是～也没关系",
+    "scene": "不必要",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜なければならない",
+    "meaning_zh_CN": "必须，不得不",
+    "scene": "义务",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜なる",
+    "meaning_zh_CN": "变成，变得",
+    "scene": "变化，不定",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "（目的）に行く / 来る / 帰る",
+    "meaning_zh_CN": "为了～(去/来/回)",
+    "scene": "目的",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜はどうですか",
+    "meaning_zh_CN": "怎么样",
+    "scene": "(副词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜は〜より",
+    "meaning_zh_CN": "比",
+    "scene": "对比",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜前に",
+    "meaning_zh_CN": "～之前",
+    "scene": "时间的前后",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ましょう",
+    "meaning_zh_CN": "大家一起…吧",
+    "scene": "劝诱",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ましょうか",
+    "meaning_zh_CN": "我来(为你)…吧",
+    "scene": "提议，建议",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜ませんか",
+    "meaning_zh_CN": "…好吗？",
+    "scene": "劝诱",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "もう〜した",
+    "meaning_zh_CN": "已经…",
+    "scene": "(副词)",
+    "jlptLevel": "N5"
+  },
+  {
+    "pattern": "〜をください",
+    "meaning_zh_CN": "请给我～",
+    "scene": "命令",
+    "jlptLevel": "N5"
+  }
+]

@@ -1,0 +1,848 @@
+[
+  {
+    "pattern": "〜あげく",
+    "meaning_zh_CN": "终究…，…之后，结果",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜あまり",
+    "meaning_zh_CN": "过于",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "【N2 文法】あまりの〜に / あまりの〜で （意思・用法・例句）",
+    "meaning_zh_CN": "由于太…才…",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜以上は",
+    "meaning_zh_CN": "正因为…",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜一方で",
+    "meaning_zh_CN": "(另)一方面",
+    "scene": "(対比 / 并列)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜以来",
+    "meaning_zh_CN": "自从～以来",
+    "scene": "(时间の前后)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜上で❶ (〜てから)",
+    "meaning_zh_CN": "在…基础之上",
+    "scene": "",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜上で❷ (目的)",
+    "meaning_zh_CN": "为了…",
+    "scene": "(目的)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜上は",
+    "meaning_zh_CN": "既然…",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜得る / 〜得ない",
+    "meaning_zh_CN": "能、可以",
+    "scene": "(可能・难易)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜折に",
+    "meaning_zh_CN": "在…之际",
+    "scene": "(时点・场面)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜かいがあって / 〜かいもなく",
+    "meaning_zh_CN": "有效果，有意义，起作用",
+    "scene": "(时点・场面)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜限り❶ (限界)",
+    "meaning_zh_CN": "以…为限；尽量",
+    "scene": "(限界)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜限り❷ (条件の範囲)",
+    "meaning_zh_CN": "只要…就…",
+    "scene": "(条件の范囲)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜がたい",
+    "meaning_zh_CN": "不容易，难于…",
+    "scene": "(可能・难易)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜かと思うと / 〜かと思ったら",
+    "meaning_zh_CN": "刚…就…",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜か〜ないかのうちに",
+    "meaning_zh_CN": "刚…就…",
+    "scene": "(时间的前后)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜かねない",
+    "meaning_zh_CN": "难免……",
+    "scene": "(推量)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜かねる",
+    "meaning_zh_CN": "很难",
+    "scene": "(可能・难易)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜かのようだ / 〜かのように",
+    "meaning_zh_CN": "就好像是…",
+    "scene": "(比况)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜からいうと / 〜からいって / 〜からいえば",
+    "meaning_zh_CN": "从～方面来判断的话",
+    "scene": "(判断の立场)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜からして",
+    "meaning_zh_CN": "从～来看",
+    "scene": "(起点・终点)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜からすると",
+    "meaning_zh_CN": "从～的立场考虑的话",
+    "scene": "(判断の立场)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜からといって",
+    "meaning_zh_CN": "虽说；不能仅因为…就…",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜気味",
+    "meaning_zh_CN": "有点…的感觉",
+    "scene": "(倾向)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜きり",
+    "meaning_zh_CN": "❶ 自从～就一直 \n❷ 只有……",
+    "scene": "(経过・结末)\n(限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜くせに / 〜くせして",
+    "meaning_zh_CN": "虽然…可是…",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜くらいなら",
+    "meaning_zh_CN": "与其忍受〜还不如…",
+    "scene": "(比较)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜げ",
+    "meaning_zh_CN": "看起来…、好像…",
+    "scene": "(様态)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことだ (助言・忠告)",
+    "meaning_zh_CN": "应该…、就得…",
+    "scene": "(助言・忠告)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことだし",
+    "meaning_zh_CN": "因为",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことなく",
+    "meaning_zh_CN": "没有、不",
+    "scene": "(付帯状态・非付帯状态)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことだろう / 〜ことか",
+    "meaning_zh_CN": "多么…啊",
+    "scene": "(感叹)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことになると / こととなると",
+    "meaning_zh_CN": "若是这个话题的话～",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ことに (は)",
+    "meaning_zh_CN": "非常让人…的是",
+    "scene": "(感叹)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ざるを得ない",
+    "meaning_zh_CN": "不得不～，无论如何也躲不过～",
+    "scene": "(强制)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜次第",
+    "meaning_zh_CN": "～之后马上",
+    "scene": "(时间の前后)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜次第だ / 〜次第で❶",
+    "meaning_zh_CN": "按照，根据",
+    "scene": "(関连・対応)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜次第だ / 〜次第で❷",
+    "meaning_zh_CN": "因此",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜末に / 〜末の",
+    "meaning_zh_CN": "最后",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ずじまい",
+    "meaning_zh_CN": "最终还是没有～",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ずにはいられない/〜ないではいられない",
+    "meaning_zh_CN": "不能不",
+    "scene": "(强制)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜そうにない",
+    "meaning_zh_CN": "看起来不会…",
+    "scene": "(判断)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜だけあって / 〜だけのことはあって",
+    "meaning_zh_CN": "不愧是",
+    "scene": "(评価の视点)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜だけに",
+    "meaning_zh_CN": "不愧是；正因为～反倒…",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜だけまし",
+    "meaning_zh_CN": "这还算不错的",
+    "scene": "(程度)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜たて",
+    "meaning_zh_CN": "刚〜",
+    "scene": "接尾语",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜たものではない",
+    "meaning_zh_CN": "不应该、不可能",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜っこない",
+    "meaning_zh_CN": "绝不",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜つつ❶ (同時進行)",
+    "meaning_zh_CN": "一边～，一边～",
+    "scene": "(时点・场面)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜つつ❷ (逆接)",
+    "meaning_zh_CN": "却，但是",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜つつある",
+    "meaning_zh_CN": "现在正在进行～",
+    "scene": "(进行)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜っぽい",
+    "meaning_zh_CN": "总是",
+    "scene": "(倾向)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てこのかた",
+    "meaning_zh_CN": "自从～以来，就～",
+    "scene": "(时间の前后)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てでも",
+    "meaning_zh_CN": "就算～也要",
+    "scene": "(軽重の强调)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てならない",
+    "meaning_zh_CN": "不可遏止的感情、感觉",
+    "scene": "(心情の强调)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てはいられ",
+    "meaning_zh_CN": "不能再…下去，不能…",
+    "scene": "(强制)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てはならない",
+    "meaning_zh_CN": "不能…",
+    "scene": "(禁止)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てまで / 〜までして",
+    "meaning_zh_CN": "即使～也要…",
+    "scene": "(軽重の强调)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜てみせる",
+    "meaning_zh_CN": "努力做～",
+    "scene": "(意図的行为・动作の开始と终了)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜というものではない",
+    "meaning_zh_CN": "不能说～",
+    "scene": "(部分否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜といった",
+    "meaning_zh_CN": "那样的",
+    "scene": "(例示)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜といったら",
+    "meaning_zh_CN": "要说～",
+    "scene": "(话题)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜とかで",
+    "meaning_zh_CN": "听说",
+    "scene": "(伝闻)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜どころか",
+    "meaning_zh_CN": "别说〜",
+    "scene": "(対比)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ところだった",
+    "meaning_zh_CN": "差点就〜",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜どころではない",
+    "meaning_zh_CN": "实在不能～",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜として〜ない",
+    "meaning_zh_CN": "完全没有～，一点也没～",
+    "scene": "(軽重の强调)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜とともに (相関関係)",
+    "meaning_zh_CN": "与～一起",
+    "scene": "(并列)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜となると / 〜となれば / 〜となったら",
+    "meaning_zh_CN": "如果那样的话",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜とは (定義)",
+    "meaning_zh_CN": "〜是…",
+    "scene": "(话题)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ないことには〜ない",
+    "meaning_zh_CN": "如果不做～",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ないことはない / 〜ないこともない",
+    "meaning_zh_CN": "可能",
+    "scene": "(部分否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ないで済む / 〜ずに済む",
+    "meaning_zh_CN": "不用……了，用不着……就能解决",
+    "scene": "(其他)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ないでもない / 〜ないものでもない",
+    "meaning_zh_CN": "也不是完全不～，也有可能～",
+    "scene": "(部分否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ないとも限らない",
+    "meaning_zh_CN": "也许会…，也未必不…",
+    "scene": "(部分否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ながら (逆説)",
+    "meaning_zh_CN": "虽然…但是",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜なんて",
+    "meaning_zh_CN": "～这一事实",
+    "scene": "(感叹)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にあたり / 〜にあたって",
+    "meaning_zh_CN": "要做～的时候",
+    "scene": "(时点・场面)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に応じて",
+    "meaning_zh_CN": "与～相应 (产生变化)",
+    "scene": "(関连・対応)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に限って",
+    "meaning_zh_CN": "只限",
+    "scene": "(限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に限らず",
+    "meaning_zh_CN": "不只〜",
+    "scene": "(非限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に限り (限定)",
+    "meaning_zh_CN": "只限于",
+    "scene": "(限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に加えて",
+    "meaning_zh_CN": "加上～",
+    "scene": "(付加)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に越したことはない",
+    "meaning_zh_CN": "没有…更好；…是最好的",
+    "scene": "(主张・断定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に応えて",
+    "meaning_zh_CN": "按照〜的要求",
+    "scene": "(対象)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に際して",
+    "meaning_zh_CN": "值此〜之际",
+    "scene": "(时点・场面)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に先立って / 〜に先立ち",
+    "meaning_zh_CN": "在…之前",
+    "scene": "(时间の前后)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に相違ない",
+    "meaning_zh_CN": "认为一定是～",
+    "scene": "(推量)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にしたら / 〜にすれば / 〜にしてみたら",
+    "meaning_zh_CN": "从～的角度看的话",
+    "scene": "(判断の立场)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にしては",
+    "meaning_zh_CN": "与～不符；虽说是～",
+    "scene": "(评価の视点)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にすぎない",
+    "meaning_zh_CN": "只是～；只不过～",
+    "scene": "(主张・断定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に沿って",
+    "meaning_zh_CN": "按照",
+    "scene": "(基准)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜につき",
+    "meaning_zh_CN": "由于",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜につけて",
+    "meaning_zh_CN": "每当…就…；每逢…",
+    "scene": "(関连・対応)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にて",
+    "meaning_zh_CN": "在……\n用……，以……\n于……",
+    "scene": "(时点・场面)\n(手段・媒介)\n(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にともなって",
+    "meaning_zh_CN": "随着～逐渐…",
+    "scene": "(相関関系)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にほかならない",
+    "meaning_zh_CN": "不是别的，而是〜",
+    "scene": "(主张・断定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜にも関わらず",
+    "meaning_zh_CN": "虽然…但是",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜に基づいて",
+    "meaning_zh_CN": "基于～",
+    "scene": "(基准)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ぬ",
+    "meaning_zh_CN": "不……",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ぬきにして / 〜ぬきで",
+    "meaning_zh_CN": "不算〜",
+    "scene": "(付帯状态・非付帯状态)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ぬく",
+    "meaning_zh_CN": "坚持到最后",
+    "scene": "(意図的行为・动作の开始と终了)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜の上では / 〜上(じょう)の",
+    "meaning_zh_CN": "从～(方面、角度等)来说",
+    "scene": "(判断の立场)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜のことだから",
+    "meaning_zh_CN": "由于〜",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜のもとで",
+    "meaning_zh_CN": "在～之下",
+    "scene": "(基准)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜のみならず",
+    "meaning_zh_CN": "不只是",
+    "scene": "(非限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ばかりか",
+    "meaning_zh_CN": "何止是～",
+    "scene": "(非限定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ばかりだ",
+    "meaning_zh_CN": "一直～",
+    "scene": "(进行)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ばかりに",
+    "meaning_zh_CN": "正是由于～",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜はさておき",
+    "meaning_zh_CN": "先不考虑～",
+    "scene": "(无関系・除外)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜はともかくとして",
+    "meaning_zh_CN": "先不考虑～",
+    "scene": "(无関系・除外)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ぱなし",
+    "meaning_zh_CN": "只做了～，不做后面必须得做的事",
+    "scene": "(経过・结末)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜はまだしも / 〜ならまだしも",
+    "meaning_zh_CN": "～也就罢了，可是… (表示埋怨)",
+    "scene": "(其他)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜はもとより",
+    "meaning_zh_CN": "〜不用说了；不仅…其他还有",
+    "scene": "(付加)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜反面",
+    "meaning_zh_CN": "～ 一方面，另一方面",
+    "scene": "(対比)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ぶる",
+    "meaning_zh_CN": "摆架子……；装作……的样子",
+    "scene": "(其他)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜まい",
+    "meaning_zh_CN": "❶ 绝不 \n❷ 不会～吧",
+    "scene": "(意志)\n(推量)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ままに",
+    "meaning_zh_CN": "任凭",
+    "scene": "(其他)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜もかまわず",
+    "meaning_zh_CN": "不在意",
+    "scene": "(无関系・除外)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜もしない",
+    "meaning_zh_CN": "一点都不～",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものか / 〜ものですか",
+    "meaning_zh_CN": "绝不～",
+    "scene": "(否定)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものがある",
+    "meaning_zh_CN": "很～；总觉得～",
+    "scene": "(感叹)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものだ❶ (感慨)",
+    "meaning_zh_CN": "实在是～",
+    "scene": "(感叹)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものだ❷ (当然 / 忠告・義務)",
+    "meaning_zh_CN": "应该～",
+    "scene": "(助言)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものだから",
+    "meaning_zh_CN": "因为～",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "～ものではない",
+    "meaning_zh_CN": "不应该～",
+    "scene": "(助言)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものなら",
+    "meaning_zh_CN": "如果～的话",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ものの",
+    "meaning_zh_CN": "虽然…但是",
+    "scene": "(逆接・譲歩)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜もん / 〜んだもん",
+    "meaning_zh_CN": "因为",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜やら〜やら",
+    "meaning_zh_CN": "…啦…啦",
+    "scene": "(例示)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ようとしている",
+    "meaning_zh_CN": "马上就要～了",
+    "scene": "(进行)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜ようものなら",
+    "meaning_zh_CN": "如果那么做了的话",
+    "scene": "(条件)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜を契機に / 〜を契機として",
+    "meaning_zh_CN": "以～为契机",
+    "scene": "(関连・対応)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜を頼りに / 〜を頼りとして",
+    "meaning_zh_CN": "借助～；依靠～",
+    "scene": "(其他)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜を問わず",
+    "meaning_zh_CN": "不管～",
+    "scene": "(无関系・除外)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜を除いて / 〜を除き / 〜を除けば",
+    "meaning_zh_CN": "除…之外",
+    "scene": "(范囲)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜をはじめ",
+    "meaning_zh_CN": "以～为代表",
+    "scene": "(起点・终点)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜をめぐって",
+    "meaning_zh_CN": "围绕～",
+    "scene": "(対象)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜をもとに",
+    "meaning_zh_CN": "以～为素材",
+    "scene": "(基准)",
+    "jlptLevel": "N2"
+  },
+  {
+    "pattern": "〜んだから / 〜のだから",
+    "meaning_zh_CN": "因为",
+    "scene": "(原因・理由)",
+    "jlptLevel": "N2"
+  }
+]

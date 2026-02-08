@@ -13,6 +13,7 @@
     "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "test:unit": "NODE_OPTIONS=--experimental-vm-modules jest tests/unit",
     "test:integration": "NODE_OPTIONS=--experimental-vm-modules jest tests/integration",
+    "test:e2e": "npx playwright test",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:seed": "tsx prisma/seed.ts",
@@ -20,6 +21,7 @@
     "deploy:remove": "npx serverless remove"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
     "@prisma/adapter-pg": "^7.3.0",
     "@prisma/client": "^7.3.0",
     "bcryptjs": "^2.4.3",
@@ -27,17 +29,18 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^7.0.0",
-    "mongoose": "^8.9.5",
+    "opencc-js": "^1.0.5",
     "passport": "^0.7.0",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0",
     "pg": "^8.18.0",
     "prisma": "^7.3.0",
     "serverless-http": "^4.0.0",
-    "stripe": "^20.3.0"
+    "stripe": "^20.3.0",
+    "wanakana": "^5.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",

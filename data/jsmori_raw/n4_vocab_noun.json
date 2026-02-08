@@ -1,0 +1,1874 @@
+[
+  {
+    "furigana": "家族(  か   ぞく)",
+    "word": "family",
+    "meaning_en": "家族",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "親(おや)",
+    "word": "parent",
+    "meaning_en": "雙親；父母",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "両親(りょう   しん  )",
+    "word": "parents",
+    "meaning_en": "父母",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "父親(ちち おや)",
+    "word": "father",
+    "meaning_en": "父親",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "母親(はは おや)",
+    "word": "mother",
+    "meaning_en": "母親",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "孫(まご)",
+    "word": "grandchild",
+    "meaning_en": "孫子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "",
+    "word": "※說到自己的家人時\nTalking about your family",
+    "meaning_en": "※稱呼他人時\nTalking about another's family",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "爸爸\nDad, Father",
+    "word": "父(ちち)",
+    "meaning_en": "お父(とう) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "媽媽\nMom, Mother",
+    "word": "母(はは)",
+    "meaning_en": "お母(かあ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "哥哥\nOlder brother",
+    "word": "兄(あに)",
+    "meaning_en": "お兄(にい) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "姐姐\nOlder sister",
+    "word": "姉(あね)",
+    "meaning_en": "お姉(ねえ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "弟弟\nYounger brother",
+    "word": "弟(おとうと)",
+    "meaning_en": "弟(おとうと) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "妹妹\nYounger sister",
+    "word": "妹(いもうと)",
+    "meaning_en": "妹(いもうと) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "祖父\nGrandfather",
+    "word": "祖父(そふ)",
+    "meaning_en": "おじいさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "祖母\nGrandmother",
+    "word": "祖母(そぼ)",
+    "meaning_en": "おばあさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "伯叔舅\nUncle",
+    "word": "叔父(おじ) ／伯父(おじ)",
+    "meaning_en": "おじさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "伯叔舅(母)\nAunt",
+    "word": "叔母(おば) ／伯母(おば)",
+    "meaning_en": "おばさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "丈夫\nHusband",
+    "word": "夫(おっと)",
+    "meaning_en": "ご主人(しゅじん)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "妻子\nWife",
+    "word": "妻(つま)",
+    "meaning_en": "奧(おく) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "兒子\nSon",
+    "word": "息子(むすこ)",
+    "meaning_en": "息子(むすこ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "女兒\nDaughter",
+    "word": "娘(むすめ)",
+    "meaning_en": "お嬢(じょう) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先輩(せん ぱい)",
+    "word": "senior",
+    "meaning_en": "前輩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "後輩(こう はい)",
+    "word": "junior",
+    "meaning_en": "後輩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "男性(だん せい)",
+    "word": "man",
+    "meaning_en": "男子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "女性(じょ せい)",
+    "word": "woman",
+    "meaning_en": "女子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国民(こく みん)",
+    "word": "nation",
+    "meaning_en": "國民",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "市民(  し   みん)",
+    "word": "citizen",
+    "meaning_en": "市民",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体(からだ)",
+    "word": "body",
+    "meaning_en": "身體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "頭(あたま)",
+    "word": "head",
+    "meaning_en": "頭",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "顔(かお)",
+    "word": "face",
+    "meaning_en": "臉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "髪(かみ)",
+    "word": "hair",
+    "meaning_en": "頭髮",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "髭(ひげ)",
+    "word": "beard",
+    "meaning_en": "鬍鬚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鼻(はな)",
+    "word": "nose",
+    "meaning_en": "鼻子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "首(くび)",
+    "word": "neck",
+    "meaning_en": "頸；脖子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "喉(のど)",
+    "word": "throat",
+    "meaning_en": "喉嚨",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "腕(うで)",
+    "word": "arm",
+    "meaning_en": "胳膊；前臂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指(ゆび)",
+    "word": "finger",
+    "meaning_en": "手指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "胸(むね)",
+    "word": "chest",
+    "meaning_en": "胸",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お腹(なか)",
+    "word": "stomach",
+    "meaning_en": "肚子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "腰(こし)",
+    "word": "lower back",
+    "meaning_en": "腰",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お尻(しり)",
+    "word": "butt",
+    "meaning_en": "屁股",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "背中(  せ   なか)",
+    "word": "back",
+    "meaning_en": "背",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "骨(ほね)",
+    "word": "bone",
+    "meaning_en": "骨頭",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "仕事(  し   ごと)",
+    "word": "work",
+    "meaning_en": "工作",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "社長(  しゃ   ちょう)",
+    "word": "company president",
+    "meaning_en": "社長",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "部長(     ぶ      ちょう)",
+    "word": "general manager",
+    "meaning_en": "部長",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "課長(    か     ちょう)",
+    "word": "section manager",
+    "meaning_en": "科長",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "同僚( どう  りょう)",
+    "word": "colleague",
+    "meaning_en": "同事",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歯医(は い)者(しゃ)",
+    "word": "dentist",
+    "meaning_en": "牙醫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "警察(けい さつ)",
+    "word": "police",
+    "meaning_en": "警察",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "店員(てん いん)",
+    "word": "staff",
+    "meaning_en": "店員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "駅員(えき いん)",
+    "word": "station staff",
+    "meaning_en": "站務員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会社員(かい しゃ いん)",
+    "word": "company employee",
+    "meaning_en": "公司員工；上班族",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "銀行員(ぎん こう いん)",
+    "word": "bank clerk",
+    "meaning_en": "銀行職員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "運転手(うん てん しゅ)",
+    "word": "driver",
+    "meaning_en": "司機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歌手(  か   しゅ)",
+    "word": "singer",
+    "meaning_en": "歌手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アルバイト",
+    "word": "part-time job",
+    "meaning_en": "打工；兼職",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "面接(めん せつ)",
+    "word": "interview",
+    "meaning_en": "面試",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "履歴(  り   れき)書(しょ)",
+    "word": "resume",
+    "meaning_en": "履歷表",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "書類(しょ るい)",
+    "word": "documents",
+    "meaning_en": "文件",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "給料(きゅう りょう)",
+    "word": "salary",
+    "meaning_en": "薪資",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "出張(しゅっ ちょう)",
+    "word": "business trip",
+    "meaning_en": "出差",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会議(かい   ぎ  )",
+    "word": "meeting",
+    "meaning_en": "會議",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "工業(  こう   ぎょう)/産業(  さん   ぎょう)",
+    "word": "industry",
+    "meaning_en": "工業/産業",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "貿易(ぼう えき)",
+    "word": "trade",
+    "meaning_en": "貿易",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "食(た)べ物(もの)",
+    "word": "food",
+    "meaning_en": "食物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "飲(の)み物(もの)",
+    "word": "beverage",
+    "meaning_en": "飲料",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "料理(りょう        り       )",
+    "word": "cuisine",
+    "meaning_en": "料理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "野菜(  や   さい)",
+    "word": "vegetable",
+    "meaning_en": "蔬菜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "玉(たま)ねぎ",
+    "word": "onion",
+    "meaning_en": "洋蔥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "人参(にん じん)",
+    "word": "carrot",
+    "meaning_en": "蘿蔔",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "茄子(な す)",
+    "word": "eggplant",
+    "meaning_en": "茄子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "米(こめ)",
+    "word": "rice",
+    "meaning_en": "米",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "朝食(ちょう しょく)",
+    "word": "breakfast",
+    "meaning_en": "早餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "昼食(ちゅう しょく)",
+    "word": "lunch",
+    "meaning_en": "午餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夕食( ゆう  しょく)",
+    "word": "dinner",
+    "meaning_en": "晚餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "肉(にく)",
+    "word": "meat",
+    "meaning_en": "肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "牛肉(ぎゅう   にく  )",
+    "word": "beef",
+    "meaning_en": "牛肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "豚肉 (ぶた にく)",
+    "word": "pork",
+    "meaning_en": "豬肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鶏肉(とり にく)",
+    "word": "chicken",
+    "meaning_en": "雞肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スープ",
+    "word": "soup",
+    "meaning_en": "湯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サンドイッチ",
+    "word": "sandwich",
+    "meaning_en": "三明治",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サラダ",
+    "word": "salad",
+    "meaning_en": "沙拉；沙律",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スパゲッティ",
+    "word": "spaghetti",
+    "meaning_en": "意大利面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ケーキ",
+    "word": "cake",
+    "meaning_en": "蛋糕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お酒(さけ)",
+    "word": "liquor / sake",
+    "meaning_en": "酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お茶(ちゃ)",
+    "word": "tea",
+    "meaning_en": "茶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お湯(ゆ)",
+    "word": "hot water",
+    "meaning_en": "熱水",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ワイン",
+    "word": "wine",
+    "meaning_en": "紅酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ジュース",
+    "word": "juice",
+    "meaning_en": "果汁",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "和食(      わ       しょく)",
+    "word": "Japanese food",
+    "meaning_en": "日本餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "洋食(  よう   しょく)",
+    "word": "western food",
+    "meaning_en": "西餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "乗(の)り物(もの)",
+    "word": "vehicle",
+    "meaning_en": "交通工具",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自転車(  じ   てん しゃ)",
+    "word": "bicycle",
+    "meaning_en": "自行車；單車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自動車(  じ   どう しゃ)",
+    "word": "car",
+    "meaning_en": "汽車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "タクシー",
+    "word": "taxi",
+    "meaning_en": "德士；的士",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "飛行機( ひ  こう  き )",
+    "word": "airplane",
+    "meaning_en": "飛機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "船(ふね)",
+    "word": "ship",
+    "meaning_en": "船",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "救急車(きゅう きゅう  しゃ )",
+    "word": "ambulance",
+    "meaning_en": "救護車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "消防車(しょう  ぼう  しゃ )",
+    "word": "fire engine",
+    "meaning_en": "消防車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "新幹線(しん かん せん)",
+    "word": "bullet train",
+    "meaning_en": "新幹線；高速列車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "普通(  ふ   つう)（電車(でん しゃ)）",
+    "word": "local train",
+    "meaning_en": "普通列车",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "急行(きゅう   こう  )（電車(でん しゃ)）",
+    "word": "express train",
+    "meaning_en": "急行列车",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "特急(  とっ   きゅう)（電車(でん しゃ)）",
+    "word": "limited-express train",
+    "meaning_en": "特急列车",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地下鉄(   ち     か   てつ)",
+    "word": "subway",
+    "meaning_en": "地鐵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "信号(しん ごう)",
+    "word": "traffic light",
+    "meaning_en": "紅綠燈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "道路(どう   ろ  )",
+    "word": "road",
+    "meaning_en": "道路，馬路",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交通(こう つう)",
+    "word": "transportation",
+    "meaning_en": "交通",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "交通(こう つう)渋滞(じゅう  たい )",
+    "word": "traffic jam",
+    "meaning_en": "交通堵塞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "工事中( こう   じ   ちゅう)",
+    "word": "under construction",
+    "meaning_en": "施工中",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "服(ふく)",
+    "word": "clothes",
+    "meaning_en": "衣服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "洋服(よう ふく)",
+    "word": "western-style clothes",
+    "meaning_en": "洋裝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "和服(  わ   ふく)",
+    "word": "Japanese-style clothes",
+    "meaning_en": "和服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "着物(  き   もの)",
+    "word": "kimono",
+    "meaning_en": "和服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "コート",
+    "word": "coat",
+    "meaning_en": "大衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スカート",
+    "word": "skirt",
+    "meaning_en": "半身裙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "セーター",
+    "word": "sweater",
+    "meaning_en": "毛衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "マフラー",
+    "word": "winter scarf",
+    "meaning_en": "圍巾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "帽子(ぼう   し  )",
+    "word": "cap / hat",
+    "meaning_en": "帽子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スーツ",
+    "word": "suit",
+    "meaning_en": "西裝，套裝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドレス",
+    "word": "dress",
+    "meaning_en": "連身裙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指輪(ゆび   わ  )",
+    "word": "ring",
+    "meaning_en": "戒指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "手袋(      て       ぶくろ)",
+    "word": "gloves",
+    "meaning_en": "手套",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ジャケット/上着(うわぎ)",
+    "word": "jacket",
+    "meaning_en": "夾克；外套",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下着(した   ぎ  )",
+    "word": "underwear",
+    "meaning_en": "內衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ネクタイ",
+    "word": "necktie",
+    "meaning_en": "領帶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ズボン",
+    "word": "pants",
+    "meaning_en": "長褲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ブーツ",
+    "word": "boots",
+    "meaning_en": "靴子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スニーカー",
+    "word": "sneaker",
+    "meaning_en": "輕便運動鞋；布鞋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ハイヒール",
+    "word": "high heels",
+    "meaning_en": "高跟鞋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サンダル",
+    "word": "sandals",
+    "meaning_en": "涼鞋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "靴下(くつ した)",
+    "word": "socks",
+    "meaning_en": "襪子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ポケット",
+    "word": "pocket",
+    "meaning_en": "口袋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アクセサリー",
+    "word": "accessory",
+    "meaning_en": "配飾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "眼鏡(めがね)",
+    "word": "glasses",
+    "meaning_en": "眼鏡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "北(きた)",
+    "word": "north",
+    "meaning_en": "北",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "南(みなみ)",
+    "word": "south",
+    "meaning_en": "南",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "東(ひがし)",
+    "word": "east",
+    "meaning_en": "東",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "西(にし)",
+    "word": "west",
+    "meaning_en": "西",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "北東(ほく とう)",
+    "word": "northeast",
+    "meaning_en": "東北",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "北西(ほく せい)",
+    "word": "northwest",
+    "meaning_en": "西北",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "南東(なん とう)",
+    "word": "southeast",
+    "meaning_en": "東南",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "南西(なん せい)",
+    "word": "southwest",
+    "meaning_en": "西南",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "世界(  せ   かい)",
+    "word": "world",
+    "meaning_en": "世界",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アジア",
+    "word": "Asia",
+    "meaning_en": "亞洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ヨーロッパ",
+    "word": "Europe",
+    "meaning_en": "歐洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "北(きた)アメリカ",
+    "word": "North America",
+    "meaning_en": "北美洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "南(みなみ)アメリカ",
+    "word": "South America",
+    "meaning_en": "南美洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アフリカ",
+    "word": "Africa",
+    "meaning_en": "非洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国(くに)",
+    "word": "country",
+    "meaning_en": "國家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日本(  に   ほん)",
+    "word": "Japan",
+    "meaning_en": "日本",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "韓国(かん こく)",
+    "word": "Korea",
+    "meaning_en": "韓國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中国(ちゅう   ごく  )",
+    "word": "China",
+    "meaning_en": "中國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アメリカ",
+    "word": "America",
+    "meaning_en": "美國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "カナダ",
+    "word": "Canada",
+    "meaning_en": "加拿大",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ブラジル",
+    "word": "Brazil",
+    "meaning_en": "巴西",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "オーストラリア",
+    "word": "Australia",
+    "meaning_en": "澳洲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "フランス",
+    "word": "France",
+    "meaning_en": "法國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドイツ",
+    "word": "Germany",
+    "meaning_en": "德國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "イギリス",
+    "word": "The United Kingdom",
+    "meaning_en": "英國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ロシア",
+    "word": "Rusia",
+    "meaning_en": "俄羅斯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "フィリピン",
+    "word": "Philippines",
+    "meaning_en": "菲律賓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "タイ",
+    "word": "Thailand",
+    "meaning_en": "泰國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "インドネシア",
+    "word": "Indonesia",
+    "meaning_en": "印尼",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "インド",
+    "word": "India",
+    "meaning_en": "印度",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "エジプト",
+    "word": "Egypt",
+    "meaning_en": "埃及",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "色(いろ)",
+    "word": "color",
+    "meaning_en": "顏色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "青色(あお いろ)",
+    "word": "blue",
+    "meaning_en": "藍色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "赤色(あか いろ)",
+    "word": "red",
+    "meaning_en": "紅色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "黒色(くろ いろ)",
+    "word": "black",
+    "meaning_en": "黑色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "白色(しろ いろ)",
+    "word": "white",
+    "meaning_en": "白色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "黄色(  き   いろ)",
+    "word": "yellow",
+    "meaning_en": "黃色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "茶色(ちゃ いろ)",
+    "word": "brown",
+    "meaning_en": "褐色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "銀色(ぎん いろ)",
+    "word": "silver",
+    "meaning_en": "銀色",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "病気(びょう     き    )",
+    "word": "illness",
+    "meaning_en": "生病",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "風邪(か ぜ)",
+    "word": "cold",
+    "meaning_en": "傷風，感冒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "熱(ねつ)",
+    "word": "fever",
+    "meaning_en": "發燒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "咳(せき)",
+    "word": "cough",
+    "meaning_en": "咳嗽",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "事故(じ こ)",
+    "word": "accident",
+    "meaning_en": "事故",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "怪我(け が)",
+    "word": "injury",
+    "meaning_en": "受傷",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "火事(か じ)",
+    "word": "fire / burning",
+    "meaning_en": "火災",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "景色(  け   しき)",
+    "word": "scenery",
+    "meaning_en": "風景",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "空気(くう   き  )",
+    "word": "air",
+    "meaning_en": "空氣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "湖(みずうみ)",
+    "word": "lake",
+    "meaning_en": "湖",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "風(かぜ)",
+    "word": "wind",
+    "meaning_en": "風",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "海(うみ)",
+    "word": "sea",
+    "meaning_en": "海",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "林(はやし)",
+    "word": "woods / small forest",
+    "meaning_en": "樹林",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "森(もり)",
+    "word": "forest",
+    "meaning_en": "森林",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "池(いけ)",
+    "word": "pond",
+    "meaning_en": "池塘",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "光(ひかり)",
+    "word": "light",
+    "meaning_en": "光",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "音(おと)",
+    "word": "sound",
+    "meaning_en": "聲音(非生物)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "太陽(たい よう)",
+    "word": "sun",
+    "meaning_en": "太陽",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "雲(くも)",
+    "word": "cloud",
+    "meaning_en": "雲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "季節(  き   せつ)",
+    "word": "season",
+    "meaning_en": "季節",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "天気(てん   き  )",
+    "word": "weather",
+    "meaning_en": "天氣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "天気(てん   き  )予報(  よ   ほう)",
+    "word": "weather forecast",
+    "meaning_en": "天氣預報",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "梅雨(つ ゆ)",
+    "word": "rainy season",
+    "meaning_en": "雨季",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "趣味(しゅ   み  )",
+    "word": "hobby",
+    "meaning_en": "愛好，興趣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "買(か)い物(もの)",
+    "word": "shopping",
+    "meaning_en": "購物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "写真(しゃ しん)",
+    "word": "picture",
+    "meaning_en": "照片",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "映画(えい   が  )",
+    "word": "movie",
+    "meaning_en": "電影",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "旅行(りょ こう)",
+    "word": "travel",
+    "meaning_en": "旅行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ゲーム",
+    "word": "game",
+    "meaning_en": "遊戲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アニメ",
+    "word": "anime",
+    "meaning_en": "動漫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "漫画(まん   が  )",
+    "word": "comic",
+    "meaning_en": "漫畫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "テニス",
+    "word": "tennis",
+    "meaning_en": "網球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サッカー",
+    "word": "soccer",
+    "meaning_en": "足球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バスケットボール",
+    "word": "basketball",
+    "meaning_en": "籃球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ゴルフ",
+    "word": "golf",
+    "meaning_en": "高爾夫",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "野球(      や      きゅう)",
+    "word": "baseball",
+    "meaning_en": "棒球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "卓球(  たっ   きゅう)",
+    "word": "table tennis",
+    "meaning_en": "桌球，乒乓球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "音楽(おん がく)",
+    "word": "music",
+    "meaning_en": "音樂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歌(うた)",
+    "word": "song",
+    "meaning_en": "歌曲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "カラオケ",
+    "word": "karaoke",
+    "meaning_en": "卡拉OK",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ピアノ",
+    "word": "piano",
+    "meaning_en": "鋼琴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ギター",
+    "word": "guitar",
+    "meaning_en": "吉他",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バイオリン",
+    "word": "violin",
+    "meaning_en": "小提琴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ロック",
+    "word": "rock",
+    "meaning_en": "搖滾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ジャズ",
+    "word": "jazz",
+    "meaning_en": "爵士樂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "動物(どう ぶつ)",
+    "word": "animal",
+    "meaning_en": "動物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "犬(いぬ)",
+    "word": "dog",
+    "meaning_en": "狗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "子犬(  こ   いぬ)",
+    "word": "puppy",
+    "meaning_en": "小狗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "猫(ねこ)",
+    "word": "cat",
+    "meaning_en": "貓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "子猫(  こ   ねこ)",
+    "word": "kitten",
+    "meaning_en": "小貓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鳥(とり)",
+    "word": "bird",
+    "meaning_en": "鳥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "小鳥(  こ   とり)",
+    "word": "small bird",
+    "meaning_en": "小鳥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "展覧会(てん らん かい)",
+    "word": "exhibition",
+    "meaning_en": "展覽會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "コンサート",
+    "word": "concert",
+    "meaning_en": "演唱會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "結婚式(けっ こん しき)",
+    "word": "wedding ceremony",
+    "meaning_en": "婚禮",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "運動会(うん どう かい)",
+    "word": "sports day",
+    "meaning_en": "運動日",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花見(はな   み  )",
+    "word": "cherry blossom viewing",
+    "meaning_en": "賞櫻",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お祭(まつ)り",
+    "word": "festival",
+    "meaning_en": "祭典",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花火(はな   び  )大会(たい  かい)",
+    "word": "firework festival",
+    "meaning_en": "煙花大會",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  },
+  {
+    "furigana": "クリスマス",
+    "word": "Christmas",
+    "meaning_en": "聖誕節",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N4",
+    "pos": "noun"
+  }
+]

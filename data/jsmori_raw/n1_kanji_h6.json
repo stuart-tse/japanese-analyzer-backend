@@ -1,0 +1,522 @@
+[
+  {
+    "word": "基",
+    "reading": "き、もと、もとい",
+    "meaning_en": "",
+    "meaning_zh_CN": "基础",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "挙",
+    "reading": "きょ、あ(げる)、 こぞ(る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "提高",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "応",
+    "reading": "おう、こた(える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "回答/回应/答复",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "企",
+    "reading": "き、くわだ(てる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "方案/计划",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "検",
+    "reading": "けん",
+    "meaning_en": "",
+    "meaning_zh_CN": "检查/调查",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "裁",
+    "reading": "さい、さば(く)、た(つ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "裁缝/判断/裁剪",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "援",
+    "reading": "えん",
+    "meaning_en": "",
+    "meaning_zh_CN": "帮助/协助",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "施",
+    "reading": "し、せ、ほどこ(す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "申请/给予/施舍",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "井",
+    "reading": "しょう、せい、い",
+    "meaning_en": "",
+    "meaning_zh_CN": "井",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "鮮",
+    "reading": "せん、あざ(やか)",
+    "meaning_en": "",
+    "meaning_zh_CN": "清新/生动/清晰",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "視",
+    "reading": "し",
+    "meaning_en": "",
+    "meaning_zh_CN": "检查/看",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "条",
+    "reading": "じょう",
+    "meaning_en": "",
+    "meaning_zh_CN": "文章/条款",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "率",
+    "reading": "りつ、そつ、ひき(いる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "率/领导",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "張",
+    "reading": "ちょう、は (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "传播/伸展/延长",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "監",
+    "reading": "かん",
+    "meaning_en": "",
+    "meaning_zh_CN": "监督",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "訴",
+    "reading": "そ、うった (える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "起诉/投诉",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "益",
+    "reading": "えき、やく",
+    "meaning_en": "",
+    "meaning_zh_CN": "利润/收益",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "購",
+    "reading": "こう",
+    "meaning_en": "",
+    "meaning_zh_CN": "买",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "憶",
+    "reading": "おく",
+    "meaning_en": "",
+    "meaning_zh_CN": "记住/回忆",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "遭",
+    "reading": "そう、あ (う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "遇到/遇见",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "貢",
+    "reading": "こう / く、みつ (ぐ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "致敬/贡",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "染",
+    "reading": "せん、そ (める)、そ (まる)、し(みる)、し (み)",
+    "meaning_en": "",
+    "meaning_zh_CN": "染色/染料",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "至",
+    "reading": "し、いた (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "达到/到达",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "屈",
+    "reading": "くつ",
+    "meaning_en": "",
+    "meaning_zh_CN": "折弯",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "扱",
+    "reading": "あつか (う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "处理",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "促",
+    "reading": "そく、うなが (す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "催促/按/加速",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "挑",
+    "reading": "ちょう、いど-む",
+    "meaning_en": "",
+    "meaning_zh_CN": "挑战",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "抑",
+    "reading": "よく、おさ-える",
+    "meaning_en": "",
+    "meaning_zh_CN": "压抑",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "詳",
+    "reading": "しょう、くわ (しい)",
+    "meaning_en": "",
+    "meaning_zh_CN": "详细",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "弊",
+    "reading": "へい",
+    "meaning_en": "",
+    "meaning_zh_CN": "邪恶/虐待",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "侮",
+    "reading": "ぶ、あなど (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "轻蔑/侮辱/鄙视/轻视",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "辱",
+    "reading": "じょく、はずかし (める)",
+    "meaning_en": "",
+    "meaning_zh_CN": "尴尬/羞辱",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "従",
+    "reading": "じゅう、しょう、じゅ、したが (う)、したが (える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "服从/跟随",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "沼",
+    "reading": "しょう、ぬま",
+    "meaning_en": "",
+    "meaning_zh_CN": "沼泽",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "釈",
+    "reading": "しゃく",
+    "meaning_en": "",
+    "meaning_zh_CN": "解释",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "逮",
+    "reading": "たい",
+    "meaning_en": "",
+    "meaning_zh_CN": "逮捕/追捕",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "紛",
+    "reading": "ふん、まぎ(れる)、まぎ(らわしい)",
+    "meaning_en": "",
+    "meaning_zh_CN": "分散",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "慌",
+    "reading": "こう、あわ (てる)、あわ-ただしい",
+    "meaning_en": "",
+    "meaning_zh_CN": "困惑/慌乱",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "振",
+    "reading": "しん、ふ (る)、ふ (るう)、ふ (れる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "措",
+    "reading": "そ",
+    "meaning_en": "",
+    "meaning_zh_CN": "措施/搁置",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "懲",
+    "reading": "ちょう、こ (りるこ)、こ (らす)、こ (らしめる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "惩罚",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "縦",
+    "reading": "じゅう、たて",
+    "meaning_en": "",
+    "meaning_zh_CN": "垂直",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "銃",
+    "reading": "じゅう",
+    "meaning_en": "",
+    "meaning_zh_CN": "枪",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "携",
+    "reading": "けい、たずさ (わる)、たずさ (える)",
+    "meaning_en": "",
+    "meaning_zh_CN": "便携/手提",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "障",
+    "reading": "しょう、さわ (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "to hinder / to hurt",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "憧",
+    "reading": "しょう、あこが (れる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "渴望",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "討",
+    "reading": "とう、う (つ)",
+    "meaning_en": "",
+    "meaning_zh_CN": "攻击/打败",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "託",
+    "reading": "たく",
+    "meaning_en": "",
+    "meaning_zh_CN": "委托",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "怠",
+    "reading": "たい、おこた (る)、なま (ける)",
+    "meaning_en": "",
+    "meaning_zh_CN": "忽略",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "浸",
+    "reading": "しん、ひた (す)、ひた (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "浸入/浸泡",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "索",
+    "reading": "さく",
+    "meaning_en": "",
+    "meaning_zh_CN": "索引/搜索",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "濁",
+    "reading": "だく、にご (る)、にご (す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "不洁/浊音",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "倹",
+    "reading": "けん",
+    "meaning_en": "",
+    "meaning_zh_CN": "节俭/经济",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "秩",
+    "reading": "ちつ",
+    "meaning_en": "",
+    "meaning_zh_CN": "规律/秩序",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "捗",
+    "reading": "ちょく",
+    "meaning_en": "",
+    "meaning_zh_CN": "取得进步",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "誘",
+    "reading": "ゆう、さそ (う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "引诱/邀请",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "焦",
+    "reading": "",
+    "meaning_en": "",
+    "meaning_zh_CN": "烧焦/燃烧",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "脅",
+    "reading": "きょう、おど (す)、おど (かす)、おびやか (す)",
+    "meaning_en": "",
+    "meaning_zh_CN": "威胁",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "敷",
+    "reading": "ふ、し (く)",
+    "meaning_en": "",
+    "meaning_zh_CN": "铺开/铺平",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "潰",
+    "reading": "かい、つぶ (す)、つぶ (れる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "压碎/粉碎",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "厳",
+    "reading": "げん、ごん、きび (しい)、おごそ (か)",
+    "meaning_en": "",
+    "meaning_zh_CN": "严格/严厉",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "慕",
+    "reading": "ぼ、した (う)",
+    "meaning_en": "",
+    "meaning_zh_CN": "爱慕/崇拜",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "廃",
+    "reading": "はい、すた (れる)、すた (る)",
+    "meaning_en": "",
+    "meaning_zh_CN": "废除/放弃",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "叙",
+    "reading": "じょ",
+    "meaning_en": "",
+    "meaning_zh_CN": "叙述/描述",
+    "category": "general",
+    "jlptLevel": "N1"
+  },
+  {
+    "word": "窮",
+    "reading": "きゅう、きわ (める)、きわ (まる)",
+    "meaning_en": "",
+    "meaning_zh_CN": "贫困/受苦",
+    "category": "general",
+    "jlptLevel": "N1"
+  }
+]

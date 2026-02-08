@@ -1,0 +1,2058 @@
+[
+  {
+    "furigana": "一",
+    "word": "いち",
+    "meaning_en": "1",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "二",
+    "word": "に",
+    "meaning_en": "2",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "三",
+    "word": "さん",
+    "meaning_en": "3",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "四",
+    "word": "よん / し",
+    "meaning_en": "4",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "五",
+    "word": "ご",
+    "meaning_en": "5",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "六",
+    "word": "ろく",
+    "meaning_en": "6",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "七",
+    "word": "なな / しち",
+    "meaning_en": "7",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "八",
+    "word": "はち",
+    "meaning_en": "8",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "九",
+    "word": "きゅう / く",
+    "meaning_en": "9",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "十",
+    "word": "じゅう",
+    "meaning_en": "10",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "十一",
+    "word": "じゅういち",
+    "meaning_en": "11",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "十二",
+    "word": "じゅうに",
+    "meaning_en": "12",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "十四",
+    "word": "じゅうよん",
+    "meaning_en": "14",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "二十",
+    "word": "にじゅう",
+    "meaning_en": "20",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "三十",
+    "word": "さんじゅう",
+    "meaning_en": "30",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "三十一",
+    "word": "さんじゅういち",
+    "meaning_en": "31",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "百",
+    "word": "ひゃく",
+    "meaning_en": "100",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "月曜日(げつ よう  び )",
+    "word": "Monday",
+    "meaning_en": "星期一",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "火曜日( か  よう  び )",
+    "word": "Tuesday",
+    "meaning_en": "星期二",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "水曜日(すい よう  び )",
+    "word": "Wednesday",
+    "meaning_en": "星期三",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "木曜日(もく よう  び )",
+    "word": "Thursday",
+    "meaning_en": "星期四",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "金曜日(きん よう  び )",
+    "word": "Friday",
+    "meaning_en": "星期五",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "土曜日( ど  よう  び )",
+    "word": "Saturday",
+    "meaning_en": "星期六",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日曜日(にち よう  び )",
+    "word": "Sunday",
+    "meaning_en": "星期日",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日本語( に ほん ご )",
+    "word": "Japanese",
+    "meaning_en": "日文",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "韓国語(かん こく  ご )",
+    "word": "Korean",
+    "meaning_en": "韓文",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中国語(ちゅう ごく ご )",
+    "word": "Chinese",
+    "meaning_en": "中文",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "英語(えい  ご )",
+    "word": "English",
+    "meaning_en": "英文",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "国(くに)",
+    "word": "country",
+    "meaning_en": "國家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "日本( に  ほん)",
+    "word": "Japan",
+    "meaning_en": "日本",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "韓国(かん こく)",
+    "word": "Korea",
+    "meaning_en": "韓國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "中国(ちゅう  ごく )",
+    "word": "China",
+    "meaning_en": "中國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "フィリピン",
+    "word": "Philippines",
+    "meaning_en": "菲律賓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アメリカ",
+    "word": "America",
+    "meaning_en": "美國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドイツ",
+    "word": "German",
+    "meaning_en": "德國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "イギリス",
+    "word": "UK",
+    "meaning_en": "英國",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "銀行員(ぎん こう いん)",
+    "word": "banker",
+    "meaning_en": "銀行職員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会社員(かい しゃ いん)",
+    "word": "company employee",
+    "meaning_en": "公司員工；上班族",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "医者( い  しゃ)",
+    "word": "doctor",
+    "meaning_en": "醫生",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先生(せん せい)",
+    "word": "teacher",
+    "meaning_en": "老師",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "エンジニア",
+    "word": "engineer",
+    "meaning_en": "工程師",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "店員(てん いん)",
+    "word": "staff",
+    "meaning_en": "店員",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "歌手( か  しゅ)",
+    "word": "singer",
+    "meaning_en": "歌手",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "警察官(けい さつ かん)",
+    "word": "police man",
+    "meaning_en": "警察",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学生(がく せい)",
+    "word": "student",
+    "meaning_en": "學生",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "主婦(しゅ  ふ  )",
+    "word": "housewife",
+    "meaning_en": "家庭主婦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "銀行(ぎん こう)",
+    "word": "bank",
+    "meaning_en": "銀行",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "郵便局(ゆう びん きょ  く )",
+    "word": "post office",
+    "meaning_en": "郵局",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "薬屋(くすり    や    ) / 薬局( やっ  きょく)",
+    "word": "drug store",
+    "meaning_en": "藥店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "病院(びょう いん )",
+    "word": "hospital",
+    "meaning_en": "醫院",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "会社(かい しゃ)",
+    "word": "company",
+    "meaning_en": "公司",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スーパー",
+    "word": "supermarket",
+    "meaning_en": "超市",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "喫茶店(きっ  さ  てん) / カフェ",
+    "word": "café",
+    "meaning_en": "咖啡店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "レストラン",
+    "word": "restaurant",
+    "meaning_en": "餐廳",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "デパート",
+    "word": "department store",
+    "meaning_en": "百貨商店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "映画館(えい  が  かん)",
+    "word": "cinema",
+    "meaning_en": "電影院",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "本屋(ほん  や  )",
+    "word": "book store",
+    "meaning_en": "書店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花屋(はな  や  )",
+    "word": "flower shop",
+    "meaning_en": "花店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ケーキ屋(や)",
+    "word": "cake shop",
+    "meaning_en": "蛋糕店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ラーメン屋(や)",
+    "word": "ramen shop",
+    "meaning_en": "拉麵店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "コンビニ",
+    "word": "convenience store",
+    "meaning_en": "便利商店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "うち",
+    "word": "home",
+    "meaning_en": "家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "学校(がっ こう)",
+    "word": "school",
+    "meaning_en": "學校",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大学(だい がく)",
+    "word": "university",
+    "meaning_en": "大學",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アパート",
+    "word": "apartment",
+    "meaning_en": "公寓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "トイレ / お手洗( て  あら)い",
+    "word": "toilet",
+    "meaning_en": "廁所",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "博物館(はく ぶつ かん)",
+    "word": "museum",
+    "meaning_en": "博物館",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "公園(こう えん)",
+    "word": "park",
+    "meaning_en": "公園",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "大使館(たい  し  かん)",
+    "word": "embassy",
+    "meaning_en": "大使館",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "町(まち)",
+    "word": "town",
+    "meaning_en": "城鎮",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "北口(きた ぐち)",
+    "word": "north exit",
+    "meaning_en": "北出站口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "南口(みなみ ぐち )",
+    "word": "south exit",
+    "meaning_en": "南出站口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "東口(ひがし ぐち )",
+    "word": "east exit",
+    "meaning_en": "東出站口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "西口(にし ぐち)",
+    "word": "west exit",
+    "meaning_en": "西出站口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "季節( き  せつ)",
+    "word": "season",
+    "meaning_en": "季節",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "春(はる)",
+    "word": "spring",
+    "meaning_en": "春天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "夏(なつ)",
+    "word": "summer",
+    "meaning_en": "夏天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "秋(あき)",
+    "word": "autumn",
+    "meaning_en": "秋天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "冬(ふゆ)",
+    "word": "winter",
+    "meaning_en": "冬天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "家族(  か  ぞく)",
+    "word": "family",
+    "meaning_en": "家人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "友達(とも だち)",
+    "word": "friend",
+    "meaning_en": "朋友",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "兄弟(きょう  だい )",
+    "word": "sibling",
+    "meaning_en": "兄弟",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "男(おとこ) / 男性(だん せい)",
+    "word": "man",
+    "meaning_en": "男人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "女(おんな) / 女性(じょ せい)",
+    "word": "woman",
+    "meaning_en": "女人",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "両親(りょう  しん )",
+    "word": "parents",
+    "meaning_en": "父母",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "子供(  こ  ども)",
+    "word": "child",
+    "meaning_en": "孩子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "孫(まご)",
+    "word": "grandchild",
+    "meaning_en": "孫子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "",
+    "word": "※說到自己的家人時\nTalking about your family",
+    "meaning_en": "※稱呼他人時\nTalking about another's family",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "爸爸\nDad, Father",
+    "word": "父(ちち)",
+    "meaning_en": "お父(とう) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "媽媽\nMom, Mother",
+    "word": "母(はは)",
+    "meaning_en": "お母(かあ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "哥哥\nOlder brother",
+    "word": "兄(あに)",
+    "meaning_en": "お兄(にい) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "姐姐\nOlder sister",
+    "word": "姉(あね)",
+    "meaning_en": "お姉(ねえ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "弟弟\nYounger brother",
+    "word": "弟(おとうと)",
+    "meaning_en": "弟(おとうと) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "妹妹\nYounger sister",
+    "word": "妹(いもうと)",
+    "meaning_en": "妹(いもうと) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "祖父\nGrandfather",
+    "word": "祖父(そふ)",
+    "meaning_en": "おじいさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "祖母\nGrandmother",
+    "word": "祖母(そぼ)",
+    "meaning_en": "おばあさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "伯叔舅\nUncle",
+    "word": "叔父(おじ) ／伯父(おじ)",
+    "meaning_en": "おじさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "伯叔舅(母)\nAunt",
+    "word": "叔母(おば) ／伯母(おば)",
+    "meaning_en": "おばさん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "丈夫\nHusband",
+    "word": "夫(おっと)",
+    "meaning_en": "ご主人(しゅじん)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "妻子\nWife",
+    "word": "妻(つま)",
+    "meaning_en": "奧(おく) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "兒子\nSon",
+    "word": "息子(むすこ)",
+    "meaning_en": "息子(むすこ) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "女兒\nDaughter",
+    "word": "娘(むすめ)",
+    "meaning_en": "お嬢(じょう) さん",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "動物(どう ぶつ)",
+    "word": "animal",
+    "meaning_en": "動物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "犬(いぬ)",
+    "word": "dog",
+    "meaning_en": "狗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "猫(ねこ)",
+    "word": "cat",
+    "meaning_en": "貓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "豚(ぶた)",
+    "word": "pig",
+    "meaning_en": "豬",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "牛(うし)",
+    "word": "cow",
+    "meaning_en": "牛",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鶏(にわとり)",
+    "word": "chicken",
+    "meaning_en": "雞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鳥(とり)",
+    "word": "bird",
+    "meaning_en": "鳥",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "服(ふく)",
+    "word": "clothes",
+    "meaning_en": "衣服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "着物( き もの)",
+    "word": "kimono",
+    "meaning_en": "和服",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "帽子(ぼう し )",
+    "word": "hat / cap",
+    "meaning_en": "帽子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スーツ",
+    "word": "suit",
+    "meaning_en": "西裝",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ジャケット",
+    "word": "jacket",
+    "meaning_en": "外套",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "セーター",
+    "word": "sweater",
+    "meaning_en": "毛衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "コート",
+    "word": "coat",
+    "meaning_en": "大衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "Tシャツ",
+    "word": "T-shirt",
+    "meaning_en": "T恤",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドレス",
+    "word": "dress",
+    "meaning_en": "連身裙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "下着(した ぎ )",
+    "word": "underwear",
+    "meaning_en": "內衣；貼身衣物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "イヤリング",
+    "word": "earing",
+    "meaning_en": "耳環",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ベルト",
+    "word": "belt",
+    "meaning_en": "腰帶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ネクタイ",
+    "word": "necktie",
+    "meaning_en": "領帶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "手袋( て ぶくろ)",
+    "word": "gloves",
+    "meaning_en": "手套",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "めがね",
+    "word": "glasses",
+    "meaning_en": "眼鏡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サングラス",
+    "word": "sunglasses",
+    "meaning_en": "墨鏡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ズボン",
+    "word": "pants",
+    "meaning_en": "長褲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スカート",
+    "word": "skirt",
+    "meaning_en": "半身裙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "靴下(くつ した)",
+    "word": "socks",
+    "meaning_en": "襪子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "靴(くつ)",
+    "word": "shoes",
+    "meaning_en": "鞋子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サンダル",
+    "word": "sandals",
+    "meaning_en": "涼鞋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "海(うみ)",
+    "word": "sea",
+    "meaning_en": "海",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "川(かわ)",
+    "word": "river",
+    "meaning_en": "河",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "山(やま)",
+    "word": "mountain",
+    "meaning_en": "山",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "風(かぜ)",
+    "word": "wind",
+    "meaning_en": "風",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "木(き)",
+    "word": "tree",
+    "meaning_en": "樹",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "森(もり)",
+    "word": "forest",
+    "meaning_en": "森林",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "空(そら)",
+    "word": "sky",
+    "meaning_en": "天空",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "雲(くも)",
+    "word": "cloud",
+    "meaning_en": "雲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "池(いけ)",
+    "word": "pond",
+    "meaning_en": "池塘",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花(はな)",
+    "word": "flower",
+    "meaning_en": "花",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "草(くさ)",
+    "word": "grass",
+    "meaning_en": "草",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "体(からだ)",
+    "word": "body",
+    "meaning_en": "身體",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "頭(あたま)",
+    "word": "head",
+    "meaning_en": "頭",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "首(くび)",
+    "word": "neck",
+    "meaning_en": "脖子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "腕(うで)",
+    "word": "arm",
+    "meaning_en": "上臂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "指(ゆび)",
+    "word": "finger",
+    "meaning_en": "手指",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "口(くち)",
+    "word": "mouth",
+    "meaning_en": "嘴巴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "耳(みみ)",
+    "word": "ear",
+    "meaning_en": "耳朵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "目(め)",
+    "word": "eye",
+    "meaning_en": "眼睛",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鼻(はな)",
+    "word": "nose",
+    "meaning_en": "鼻子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "髪(かみ)",
+    "word": "hair",
+    "meaning_en": "頭髮",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "食(た)べ物(もの)",
+    "word": "food",
+    "meaning_en": "食物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "料理(りょう    り    )",
+    "word": "cuisine / dish",
+    "meaning_en": "料理",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ご飯(はん)",
+    "word": "rice / meal",
+    "meaning_en": "飯；餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "パン",
+    "word": "bread",
+    "meaning_en": "麵包",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ラーメン",
+    "word": "ramen",
+    "meaning_en": "拉麵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スパゲッティ",
+    "word": "spaghetti",
+    "meaning_en": "意大利面",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "カレーライス",
+    "word": "curry rice",
+    "meaning_en": "咖哩飯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ハンバーガー",
+    "word": "hamburger",
+    "meaning_en": "漢堡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サンドウィッチ",
+    "word": "sandwich",
+    "meaning_en": "三文治",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドーナッツ",
+    "word": "donut",
+    "meaning_en": "甜甜圈",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "弁当(べん とう)",
+    "word": "lunch box",
+    "meaning_en": "便當",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "アイスクリーム",
+    "word": "ice cream",
+    "meaning_en": "冰淇淋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ケーキ",
+    "word": "cake",
+    "meaning_en": "蛋糕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "朝(あさ)ご飯(はん)",
+    "word": "breakfast",
+    "meaning_en": "早餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "昼(ひる)ご飯(はん)",
+    "word": "lunch",
+    "meaning_en": "午餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "晩(ばん)ご飯(はん)",
+    "word": "dinner",
+    "meaning_en": "晚餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "スープ",
+    "word": "soup",
+    "meaning_en": "湯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "うどん",
+    "word": "udon",
+    "meaning_en": "烏冬麵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "味噌汁(  み    そ   しる)",
+    "word": "miso soup",
+    "meaning_en": "味增湯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ピザ",
+    "word": "pizza",
+    "meaning_en": "披薩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おにぎり",
+    "word": "rice ball",
+    "meaning_en": "飯糰",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "魚(さかな)",
+    "word": "fish",
+    "meaning_en": "魚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "牛肉(ぎゅう  にく )",
+    "word": "beef",
+    "meaning_en": "牛肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "豚肉(ぶた にく)",
+    "word": "pork",
+    "meaning_en": "豬肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鶏肉(とり にく)",
+    "word": "chicken",
+    "meaning_en": "雞肉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "卵(たまご)",
+    "word": "egg",
+    "meaning_en": "蛋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "水(みず)",
+    "word": "water",
+    "meaning_en": "水",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "牛乳(ぎゅう にゅう)",
+    "word": "milk",
+    "meaning_en": "牛奶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ビール",
+    "word": "beer",
+    "meaning_en": "啤酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お茶(ちゃ)",
+    "word": "tea",
+    "meaning_en": "茶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "コーヒー",
+    "word": "coffee",
+    "meaning_en": "咖啡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ワイン",
+    "word": "wine",
+    "meaning_en": "紅酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ジュース",
+    "word": "juice",
+    "meaning_en": "果汁",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "お酒(さけ)",
+    "word": "liquor",
+    "meaning_en": "酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "りんご",
+    "word": "apple",
+    "meaning_en": "蘋果",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バナナ",
+    "word": "banana",
+    "meaning_en": "香蕉",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "みかん",
+    "word": "mandarin orange",
+    "meaning_en": "桔子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "いちご",
+    "word": "strawberry",
+    "meaning_en": "草莓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "車(くるま)",
+    "word": "car",
+    "meaning_en": "車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "タクシー",
+    "word": "taxi",
+    "meaning_en": "計程車；的士",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バス",
+    "word": "bus",
+    "meaning_en": "巴士；公車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バイク",
+    "word": "motorcycle",
+    "meaning_en": "摩托車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "自転車(  じ  てん しゃ)",
+    "word": "bicycle",
+    "meaning_en": "單車；自行車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "電車(でん しゃ)",
+    "word": "train",
+    "meaning_en": "通勤火車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "地下鉄(   ち    か   てつ)",
+    "word": "subway",
+    "meaning_en": "地鐵",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "飛行機( ひ こう き )",
+    "word": "airplane",
+    "meaning_en": "飛機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "船(ふね)",
+    "word": "ship",
+    "meaning_en": "船",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "テニス",
+    "word": "tennis",
+    "meaning_en": "網球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "サッカー",
+    "word": "soccer",
+    "meaning_en": "足球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "バスケットボール",
+    "word": "basketball",
+    "meaning_en": "籃球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ゴルフ",
+    "word": "golf",
+    "meaning_en": "高爾夫球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "野球(      や      きゅう)",
+    "word": "baseball",
+    "meaning_en": "棒球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "卓球(  たっ  きゅう)",
+    "word": "table tennis",
+    "meaning_en": "桌球；乒乓",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "鉛筆(えん ぴつ)",
+    "word": "pencil",
+    "meaning_en": "鉛筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ペン",
+    "word": "pen",
+    "meaning_en": "筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ボールペン",
+    "word": "ballpoint pen",
+    "meaning_en": "原子筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "シャーペン",
+    "word": "mechanical pencil",
+    "meaning_en": "原自動鉛筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "万年筆(まん ねん ひつ)",
+    "word": "fountain pen",
+    "meaning_en": "鋼筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "消(け)しゴム",
+    "word": "eraser",
+    "meaning_en": "橡皮擦",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "はさみ",
+    "word": "scissors",
+    "meaning_en": "剪刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "紙(かみ)",
+    "word": "paper",
+    "meaning_en": "紙張",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ノート",
+    "word": "notebook",
+    "meaning_en": "筆記本",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "筆箱(ふで ばこ)",
+    "word": "pencil case",
+    "meaning_en": "筆盒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "計算機(けい さん  き )",
+    "word": "calculator",
+    "meaning_en": "計算機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "音楽(おん がく)",
+    "word": "music",
+    "meaning_en": "音樂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ピアノ",
+    "word": "piano",
+    "meaning_en": "鋼琴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ギター",
+    "word": "guitar",
+    "meaning_en": "吉他",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "カラオケ",
+    "word": "karaoke",
+    "meaning_en": "卡拉OK",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "いえ / うち",
+    "word": "home",
+    "meaning_en": "家",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "玄関(げん かん)",
+    "word": "entrance hall",
+    "meaning_en": "玄關",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "台所(  だい  どころ)",
+    "word": "kitchen",
+    "meaning_en": "廚房",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "部屋(へ や)",
+    "word": "room",
+    "meaning_en": "房間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ドア / 扉(と)",
+    "word": "door",
+    "meaning_en": "門",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "テーブル",
+    "word": "table",
+    "meaning_en": "桌子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "イス",
+    "word": "chair",
+    "meaning_en": "椅子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "机(つくえ)",
+    "word": "desk",
+    "meaning_en": "桌子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "押(お)し入(い)れ",
+    "word": "closet",
+    "meaning_en": "抽屜",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "本棚(ほん だな)",
+    "word": "bookshelf",
+    "meaning_en": "書架",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "窓(まど)",
+    "word": "window",
+    "meaning_en": "窗口",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "階段(かい だん)",
+    "word": "stairs",
+    "meaning_en": "樓梯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "ベッド",
+    "word": "bed",
+    "meaning_en": "床",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "花瓶(  か  びん)",
+    "word": "vase",
+    "meaning_en": "花瓶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "屋根(や ね)",
+    "word": "roof",
+    "meaning_en": "屋頂",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "キッチン",
+    "word": "kitchen",
+    "meaning_en": "廚房",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "エアコン",
+    "word": "air conditioner",
+    "meaning_en": "冷氣機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "おととい",
+    "word": "day before yesterday",
+    "meaning_en": "前天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "昨日(  き  のう)",
+    "word": "yesterday",
+    "meaning_en": "昨天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今日(きょう)",
+    "word": "today",
+    "meaning_en": "今天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "明日(あした)",
+    "word": "tomorrow",
+    "meaning_en": "明天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "あさって",
+    "word": "day after tomorrow",
+    "meaning_en": "後天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先週( せん  しゅう)",
+    "word": "last week",
+    "meaning_en": "上個星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今週( こん  しゅう)",
+    "word": "this week",
+    "meaning_en": "這個星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "来週( らい しゅう)",
+    "word": "next week",
+    "meaning_en": "下個星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "先月(せん げつ)",
+    "word": "last month",
+    "meaning_en": "上個月",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今月(こん げつ)",
+    "word": "this month",
+    "meaning_en": "這個月",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "来月(らい げつ)",
+    "word": "next month",
+    "meaning_en": "下個月",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "去年(きょ ねん)",
+    "word": "last year",
+    "meaning_en": "去年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今年( こ  とし)",
+    "word": "this year",
+    "meaning_en": "今年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "来年(らい ねん)",
+    "word": "next year",
+    "meaning_en": "明年",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "毎日(まい にち)",
+    "word": "every day",
+    "meaning_en": "每天",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "毎週( まい  しゅう)",
+    "word": "every week",
+    "meaning_en": "每個星期",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "毎晩(まい ばん)",
+    "word": "every night",
+    "meaning_en": "每晚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今朝(け さ)",
+    "word": "this morning",
+    "meaning_en": "今早",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "今晩(こん ばん)",
+    "word": "this evening",
+    "meaning_en": "今晚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "昨日(  き  のう)の夜(よる)",
+    "word": "last night",
+    "meaning_en": "昨晚",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  },
+  {
+    "furigana": "誕生日( たん じょう   び  )",
+    "word": "birthday",
+    "meaning_en": "生日",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "noun"
+  }
+]

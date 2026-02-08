@@ -1,0 +1,2082 @@
+[
+  {
+    "word": "映画館",
+    "reading": "えい が かん",
+    "meaning_en": "movie theater",
+    "meaning_zh_CN": "电影院",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "教室",
+    "reading": "きょう しつ",
+    "meaning_en": "classroom",
+    "meaning_zh_CN": "教室",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "銀行",
+    "reading": "ぎん こう",
+    "meaning_en": "bank",
+    "meaning_zh_CN": "银行",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "工場",
+    "reading": "こう じょう",
+    "meaning_en": "factory",
+    "meaning_zh_CN": "工厂",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "食堂",
+    "reading": "しょく どう",
+    "meaning_en": "canteen",
+    "meaning_zh_CN": "食堂",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "京都市",
+    "reading": "きょうとし",
+    "meaning_en": "Kyoto City",
+    "meaning_zh_CN": "京都市",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "京都府",
+    "reading": "きょうとふ",
+    "meaning_en": "Kyoto prefecture",
+    "meaning_zh_CN": "京都府",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "大学院",
+    "reading": "だい がく いん",
+    "meaning_en": "graduate school",
+    "meaning_zh_CN": "研究所",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "大使館",
+    "reading": "たい し かん",
+    "meaning_en": "embassy",
+    "meaning_zh_CN": "大使馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "建物",
+    "reading": "たて もの",
+    "meaning_en": "building",
+    "meaning_zh_CN": "建筑物",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "図書館",
+    "reading": "と しょ かん",
+    "meaning_en": "library",
+    "meaning_zh_CN": "图书馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "所",
+    "reading": "ところ",
+    "meaning_en": "place",
+    "meaning_zh_CN": "地方；地点",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "長野県",
+    "reading": "ながのけん",
+    "meaning_en": "Nagano prefecture",
+    "meaning_zh_CN": "长野县",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "場所",
+    "reading": "ば しょ",
+    "meaning_en": "place",
+    "meaning_zh_CN": "地方；地点",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "病院",
+    "reading": "びょう いん",
+    "meaning_en": "hospital",
+    "meaning_zh_CN": "医院",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "旅館",
+    "reading": "りょ かん",
+    "meaning_en": "Japanese inn",
+    "meaning_zh_CN": "日式旅馆",
+    "category": "场所( ば しょ)・建物(たて もの)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "兄",
+    "reading": "あに",
+    "meaning_en": "older brother",
+    "meaning_zh_CN": "哥哥",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "姉",
+    "reading": "あね",
+    "meaning_en": "older sister",
+    "meaning_zh_CN": "姐姐",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "妹",
+    "reading": "いもうと",
+    "meaning_en": "younger sister",
+    "meaning_zh_CN": "妹妹",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "弟",
+    "reading": "おとうと",
+    "meaning_en": "younger brother",
+    "meaning_zh_CN": "弟弟",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "兄おさん",
+    "reading": "にい",
+    "meaning_en": "older brother",
+    "meaning_zh_CN": "哥哥 (称呼他人时)",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "姉おさん",
+    "reading": "ねえ",
+    "meaning_en": "older sister",
+    "meaning_zh_CN": "姐姐 (称呼他人时)",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "親",
+    "reading": "おや",
+    "meaning_en": "parent",
+    "meaning_zh_CN": "父母；家长",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "兄弟",
+    "reading": "きょう   だい",
+    "meaning_en": "sibling / brothers",
+    "meaning_zh_CN": "兄弟",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "姉妹",
+    "reading": "し   まい",
+    "meaning_en": "sisters",
+    "meaning_zh_CN": "姐妹",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "母親",
+    "reading": "はは おや",
+    "meaning_en": "mother",
+    "meaning_zh_CN": "妈妈",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "両親",
+    "reading": "りょう   しん",
+    "meaning_en": "parents",
+    "meaning_zh_CN": "父母",
+    "category": "家族( か ぞく)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "医者",
+    "reading": "い   しゃ",
+    "meaning_en": "doctor",
+    "meaning_zh_CN": "医生",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "歌手",
+    "reading": "か   しゅ",
+    "meaning_en": "singer",
+    "meaning_zh_CN": "歌手",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "仕事",
+    "reading": "し   ごと",
+    "meaning_en": "work / job",
+    "meaning_zh_CN": "工作",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "店員",
+    "reading": "てん いん",
+    "meaning_en": "staff",
+    "meaning_zh_CN": "店员；售货员",
+    "category": "职业(しょく ぎょう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "自転車",
+    "reading": "じ   てん しゃ",
+    "meaning_en": "bicycle",
+    "meaning_zh_CN": "自行车，单车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "自動車",
+    "reading": "じ   どう しゃ",
+    "meaning_en": "car",
+    "meaning_zh_CN": "汽车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "信号",
+    "reading": "しん ごう",
+    "meaning_en": "traffic light",
+    "meaning_zh_CN": "红绿灯",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "交通",
+    "reading": "こう つう",
+    "meaning_en": "transportation",
+    "meaning_zh_CN": "交通工具",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "地下鉄",
+    "reading": "ち     か   てつ",
+    "meaning_en": "subway",
+    "meaning_zh_CN": "地铁",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "特急",
+    "reading": "とっ  きゅう",
+    "meaning_en": "limited express train",
+    "meaning_zh_CN": "特快列车",
+    "category": "乗(の)り物(もの)・交通(こう つう)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "朝",
+    "reading": "あさ",
+    "meaning_en": "morning",
+    "meaning_zh_CN": "早上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "明日",
+    "reading": "あした",
+    "meaning_en": "tomorrow",
+    "meaning_zh_CN": "明天",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "今朝",
+    "reading": "け さ",
+    "meaning_en": "this morning",
+    "meaning_zh_CN": "今天早上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "今度",
+    "reading": "こん   ど",
+    "meaning_en": "next time",
+    "meaning_zh_CN": "这次；下次",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "今晩",
+    "reading": "こん ばん",
+    "meaning_en": "tonight",
+    "meaning_zh_CN": "今晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "今夜",
+    "reading": "こん   や",
+    "meaning_en": "tonight",
+    "meaning_zh_CN": "今晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "夏休み",
+    "reading": "なつ やす",
+    "meaning_en": "summer vacation",
+    "meaning_zh_CN": "暑假",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "昼",
+    "reading": "ひる",
+    "meaning_en": "noon",
+    "meaning_zh_CN": "中午",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "昼休み",
+    "reading": "ひる やす",
+    "meaning_en": "lunch break",
+    "meaning_zh_CN": "午休",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "夕方",
+    "reading": "ゆう がた",
+    "meaning_en": "evening",
+    "meaning_zh_CN": "傍晚",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "夜",
+    "reading": "よる",
+    "meaning_en": "night",
+    "meaning_zh_CN": "晚上",
+    "category": "时间(  じ   かん)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "秋",
+    "reading": "あき",
+    "meaning_en": "autumn",
+    "meaning_zh_CN": "秋天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "夏",
+    "reading": "なつ",
+    "meaning_en": "summer",
+    "meaning_zh_CN": "夏天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "春",
+    "reading": "はる",
+    "meaning_en": "spring",
+    "meaning_zh_CN": "春天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "冬",
+    "reading": "ふゆ",
+    "meaning_en": "winter",
+    "meaning_zh_CN": "冬天",
+    "category": "季节(  き   せつ)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "味",
+    "reading": "あじ",
+    "meaning_en": "taste",
+    "meaning_zh_CN": "味道",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "頭",
+    "reading": "あたま",
+    "meaning_en": "head",
+    "meaning_zh_CN": "头",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "以下",
+    "reading": "い か",
+    "meaning_en": "less than",
+    "meaning_zh_CN": "少于；以下",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "以外",
+    "reading": "い   がい",
+    "meaning_en": "except",
+    "meaning_zh_CN": "除了",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "池",
+    "reading": "いけ",
+    "meaning_en": "pond",
+    "meaning_zh_CN": "池塘",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "意見",
+    "reading": "い   けん",
+    "meaning_en": "opinion",
+    "meaning_zh_CN": "意见",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "以上",
+    "reading": "い      じょう",
+    "meaning_en": "more than",
+    "meaning_zh_CN": "以上；就这样",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "一回",
+    "reading": "いっ かい",
+    "meaning_en": "once",
+    "meaning_zh_CN": "一次",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "犬",
+    "reading": "いぬ",
+    "meaning_en": "dog",
+    "meaning_zh_CN": "狗",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "意味",
+    "reading": "い み",
+    "meaning_en": "meaning",
+    "meaning_zh_CN": "意思",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "色",
+    "reading": "いろ",
+    "meaning_en": "color",
+    "meaning_zh_CN": "颜色",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "海",
+    "reading": "うみ",
+    "meaning_en": "sea",
+    "meaning_zh_CN": "海",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "映画",
+    "reading": "えい   が",
+    "meaning_en": "movie",
+    "meaning_zh_CN": "电影",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "英語",
+    "reading": "えい   ご",
+    "meaning_en": "English",
+    "meaning_zh_CN": "英文",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "屋上",
+    "reading": "おく   じょう",
+    "meaning_en": "rooftop",
+    "meaning_zh_CN": "屋顶",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "茶お",
+    "reading": "ちゃ",
+    "meaning_en": "tea",
+    "meaning_zh_CN": "茶",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "同じ",
+    "reading": "おな",
+    "meaning_en": "same",
+    "meaning_zh_CN": "一样；相同",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "音",
+    "reading": "おと",
+    "meaning_en": "sound",
+    "meaning_zh_CN": "声音",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "音楽",
+    "reading": "おん がく",
+    "meaning_en": "music",
+    "meaning_zh_CN": "音乐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "海外",
+    "reading": "かい がい",
+    "meaning_en": "overseas",
+    "meaning_zh_CN": "国外",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "買物い",
+    "reading": "かもの",
+    "meaning_en": "shopping",
+    "meaning_zh_CN": "购物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "科学",
+    "reading": "か   がく",
+    "meaning_en": "science",
+    "meaning_zh_CN": "科学",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "顔",
+    "reading": "かお",
+    "meaning_en": "face",
+    "meaning_zh_CN": "脸",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "火事",
+    "reading": "か じ",
+    "meaning_en": "fire",
+    "meaning_zh_CN": "火灾",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "形",
+    "reading": "かたち",
+    "meaning_en": "shape",
+    "meaning_zh_CN": "形状",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "紙",
+    "reading": "かみ",
+    "meaning_en": "paper",
+    "meaning_zh_CN": "纸张",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "体",
+    "reading": "からだ",
+    "meaning_en": "body",
+    "meaning_zh_CN": "身体",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "代わりに",
+    "reading": "か",
+    "meaning_en": "instead",
+    "meaning_zh_CN": "取而代之",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "漢字",
+    "reading": "かん   じ",
+    "meaning_en": "kanji",
+    "meaning_zh_CN": "汉字",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "気持ち",
+    "reading": "き も",
+    "meaning_en": "feeling",
+    "meaning_zh_CN": "感觉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "着物",
+    "reading": "き   もの",
+    "meaning_en": "kimono",
+    "meaning_zh_CN": "和服",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "教科書",
+    "reading": "きょう    か     しょ",
+    "meaning_en": "textbook",
+    "meaning_zh_CN": "教科书",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "首",
+    "reading": "くび",
+    "meaning_en": "head",
+    "meaning_zh_CN": "颈；脖头",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "子犬",
+    "reading": "こ   いぬ",
+    "meaning_en": "puppy",
+    "meaning_zh_CN": "小狗",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "工業",
+    "reading": "こう   ぎょう",
+    "meaning_en": "manufacture",
+    "meaning_zh_CN": "工业",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "工事",
+    "reading": "こう   じ",
+    "meaning_en": "construction",
+    "meaning_zh_CN": "施工；建设",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "声",
+    "reading": "こえ",
+    "meaning_en": "voice",
+    "meaning_zh_CN": "声音 (人・动物等)",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "心",
+    "reading": "こころ",
+    "meaning_en": "heart",
+    "meaning_zh_CN": "心",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "米",
+    "reading": "こめ",
+    "meaning_en": "rice",
+    "meaning_zh_CN": "米",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "作文",
+    "reading": "さく ぶん",
+    "meaning_en": "essay",
+    "meaning_zh_CN": "作文；散文",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "産業",
+    "reading": "さん   ぎょう",
+    "meaning_en": "industry",
+    "meaning_zh_CN": "产业",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "字",
+    "reading": "じ",
+    "meaning_en": "letter / character",
+    "meaning_zh_CN": "字",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "自分",
+    "reading": "じ   ぶん",
+    "meaning_en": "oneself",
+    "meaning_zh_CN": "自己",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "小説",
+    "reading": "しょう   せつ",
+    "meaning_en": "novel",
+    "meaning_zh_CN": "小说",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "主人",
+    "reading": "しゅ じん",
+    "meaning_en": "husband",
+    "meaning_zh_CN": "丈夫",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "正月お",
+    "reading": "しょう   がつ",
+    "meaning_en": "the New Year",
+    "meaning_zh_CN": "新年",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "世界",
+    "reading": "せ   かい",
+    "meaning_en": "world",
+    "meaning_zh_CN": "世界",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "風",
+    "reading": "かぜ",
+    "meaning_en": "wind",
+    "meaning_zh_CN": "风",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "切手",
+    "reading": "きって",
+    "meaning_en": "postage stamp",
+    "meaning_zh_CN": "邮票",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "急に",
+    "reading": "きゅう",
+    "meaning_en": "suddenly",
+    "meaning_zh_CN": "突然",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "牛肉",
+    "reading": "ぎゅう   にく",
+    "meaning_en": "beef",
+    "meaning_zh_CN": "牛肉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "近所",
+    "reading": "きん じょ",
+    "meaning_en": "neighborhood",
+    "meaning_zh_CN": "近处；附近",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "区",
+    "reading": "く",
+    "meaning_en": "ward",
+    "meaning_zh_CN": "区域",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "薬",
+    "reading": "くすり",
+    "meaning_en": "medicine",
+    "meaning_zh_CN": "药物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "計画",
+    "reading": "けい かく",
+    "meaning_en": "plan",
+    "meaning_zh_CN": "计划",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "小鳥",
+    "reading": "こ   とり",
+    "meaning_en": "little bird",
+    "meaning_zh_CN": "小鸟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "飯ご",
+    "reading": "はん",
+    "meaning_en": "rice / meal",
+    "meaning_zh_CN": "米饭",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "品物",
+    "reading": "しな もの",
+    "meaning_en": "goods",
+    "meaning_zh_CN": "商品；产品",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "試合",
+    "reading": "し   あい",
+    "meaning_en": "match / game",
+    "meaning_zh_CN": "比赛",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "試験",
+    "reading": "し   けん",
+    "meaning_en": "examination",
+    "meaning_zh_CN": "考试，测验",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "市民",
+    "reading": "し   みん",
+    "meaning_en": "citizen",
+    "meaning_zh_CN": "市民",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "写真",
+    "reading": "しゃ しん",
+    "meaning_en": "picture",
+    "meaning_zh_CN": "照片",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "住所",
+    "reading": "じゅう   しょ",
+    "meaning_en": "address",
+    "meaning_zh_CN": "地址",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "食料品",
+    "reading": "しょく りょう   ひん",
+    "meaning_en": "food",
+    "meaning_zh_CN": "食物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "説明",
+    "reading": "せつ めい",
+    "meaning_en": "explanation",
+    "meaning_zh_CN": "解释",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "台所",
+    "reading": "だい   どころ",
+    "meaning_en": "kitchen",
+    "meaning_zh_CN": "厨房",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "台風",
+    "reading": "たい ふう",
+    "meaning_en": "typhoon",
+    "meaning_zh_CN": "台风",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "地図",
+    "reading": "ち ず",
+    "meaning_en": "map",
+    "meaning_zh_CN": "地图",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "茶色",
+    "reading": "ちゃ いろ",
+    "meaning_en": "brown",
+    "meaning_zh_CN": "棕褐色",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "地理",
+    "reading": "ち り",
+    "meaning_en": "geography",
+    "meaning_zh_CN": "地理",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "手紙",
+    "reading": "て   がみ",
+    "meaning_en": "letter",
+    "meaning_zh_CN": "信",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "天気",
+    "reading": "てん   き",
+    "meaning_en": "weather",
+    "meaning_zh_CN": "天气",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "電池",
+    "reading": "でん   ち",
+    "meaning_en": "battery",
+    "meaning_zh_CN": "电池",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "動物",
+    "reading": "どう ぶつ",
+    "meaning_en": "animal",
+    "meaning_zh_CN": "动物",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "特に",
+    "reading": "とく",
+    "meaning_en": "especially",
+    "meaning_zh_CN": "尤其",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "時計",
+    "reading": "と   けい",
+    "meaning_en": "watch / clock",
+    "meaning_zh_CN": "手表；时钟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "鳥",
+    "reading": "とり",
+    "meaning_en": "bird",
+    "meaning_zh_CN": "鸟",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "肉",
+    "reading": "にく",
+    "meaning_en": "meat",
+    "meaning_zh_CN": "肉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "日曜日",
+    "reading": "に     ちよう     び",
+    "meaning_en": "Sunday",
+    "meaning_zh_CN": "周日",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "人形",
+    "reading": "にん   ぎょう",
+    "meaning_en": "doll",
+    "meaning_zh_CN": "娃娃",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "林",
+    "reading": "はやし",
+    "meaning_en": "woods",
+    "meaning_zh_CN": "树林",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "晩飯ご",
+    "reading": "ばんはん",
+    "meaning_en": "dinner",
+    "meaning_zh_CN": "晚餐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "光",
+    "reading": "ひかり",
+    "meaning_en": "light",
+    "meaning_zh_CN": "光",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "病気",
+    "reading": "びょう      き",
+    "meaning_en": "illness / disease",
+    "meaning_zh_CN": "生病；疾病",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "服",
+    "reading": "ふく",
+    "meaning_en": "clothes",
+    "meaning_zh_CN": "衣服",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "文",
+    "reading": "ぶん",
+    "meaning_en": "sentence",
+    "meaning_zh_CN": "句子",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "文学",
+    "reading": "ぶん がく",
+    "meaning_en": "literature",
+    "meaning_zh_CN": "文学",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "分野",
+    "reading": "ぶん   や",
+    "meaning_en": "genre",
+    "meaning_zh_CN": "领域，范围",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "引出きし",
+    "reading": "ひだ",
+    "meaning_en": "drawer",
+    "meaning_zh_CN": "抽屉",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "本屋",
+    "reading": "ほん   や",
+    "meaning_en": "book store",
+    "meaning_zh_CN": "书店",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "町",
+    "reading": "まち",
+    "meaning_en": "town",
+    "meaning_zh_CN": "城镇",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "真中ん",
+    "reading": "まなか",
+    "meaning_en": "center / middle",
+    "meaning_zh_CN": "中间",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "村",
+    "reading": "むら",
+    "meaning_en": "village",
+    "meaning_zh_CN": "村子",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "森",
+    "reading": "もり",
+    "meaning_en": "forest",
+    "meaning_zh_CN": "森林",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "問題",
+    "reading": "もん だい",
+    "meaning_en": "question / problem",
+    "meaning_zh_CN": "问题",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "野菜",
+    "reading": "や   さい",
+    "meaning_en": "vegetable",
+    "meaning_zh_CN": "蔬菜",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "夕食",
+    "reading": "ゆう   しょく",
+    "meaning_en": "dinner",
+    "meaning_zh_CN": "晚餐",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "雪",
+    "reading": "ゆき",
+    "meaning_en": "snow",
+    "meaning_zh_CN": "雪",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "用事",
+    "reading": "よう   じ",
+    "meaning_en": "something to do / errands",
+    "meaning_zh_CN": "(应办的) 事情；事",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "洋服",
+    "reading": "よう ふく",
+    "meaning_en": "clothes (not Japanese style)",
+    "meaning_zh_CN": "西服；洋装",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "料金",
+    "reading": "りょう  きん",
+    "meaning_en": "fee / charge",
+    "meaning_zh_CN": "费用；收费",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "両方",
+    "reading": "りょう   ほう",
+    "meaning_en": "both",
+    "meaning_zh_CN": "两者",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "料理",
+    "reading": "りょう     り",
+    "meaning_en": "cooking",
+    "meaning_zh_CN": "料理",
+    "category": "その他(ほか)",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "青い",
+    "reading": "あお",
+    "meaning_en": "blue",
+    "meaning_zh_CN": "蓝色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "赤い",
+    "reading": "あか",
+    "meaning_en": "red",
+    "meaning_zh_CN": "红色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "明るい",
+    "reading": "あか",
+    "meaning_en": "bright",
+    "meaning_zh_CN": "明亮的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "暖かい",
+    "reading": "あたた",
+    "meaning_en": "warm",
+    "meaning_zh_CN": "温暖的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "頭がいい",
+    "reading": "あたま",
+    "meaning_en": "smart / clever",
+    "meaning_zh_CN": "聪明的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "暑い",
+    "reading": "あつ",
+    "meaning_en": "hot",
+    "meaning_zh_CN": "热的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "重い",
+    "reading": "おも",
+    "meaning_en": "heavy",
+    "meaning_zh_CN": "重的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "軽い",
+    "reading": "かる",
+    "meaning_en": "light",
+    "meaning_zh_CN": "轻的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "暗い",
+    "reading": "くら",
+    "meaning_en": "dark",
+    "meaning_zh_CN": "暗的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "黒い",
+    "reading": "くろ",
+    "meaning_en": "black",
+    "meaning_zh_CN": "黑的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "細かい",
+    "reading": "こま",
+    "meaning_en": "small",
+    "meaning_zh_CN": "细的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "寒い",
+    "reading": "さむ",
+    "meaning_en": "cold",
+    "meaning_zh_CN": "冷的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "白い",
+    "reading": "しろ",
+    "meaning_en": "white",
+    "meaning_zh_CN": "白色的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "涼しい",
+    "reading": "すず",
+    "meaning_en": "cool",
+    "meaning_zh_CN": "凉快的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "正しい",
+    "reading": "ただ",
+    "meaning_en": "correct",
+    "meaning_zh_CN": "正确的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "楽しい",
+    "reading": "たの",
+    "meaning_en": "fun",
+    "meaning_zh_CN": "快乐的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "近い",
+    "reading": "ちか",
+    "meaning_en": "near",
+    "meaning_zh_CN": "近的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "都合がいい",
+    "reading": "つ   ごう",
+    "meaning_en": "convenient",
+    "meaning_zh_CN": "方便的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "強い",
+    "reading": "つよ",
+    "meaning_en": "strong",
+    "meaning_zh_CN": "强壮的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "低い",
+    "reading": "ひく",
+    "meaning_en": "low",
+    "meaning_zh_CN": "低的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "広い",
+    "reading": "ひろ",
+    "meaning_en": "wide / spacious",
+    "meaning_zh_CN": "宽的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "太い",
+    "reading": "ふと",
+    "meaning_en": "fat / thick",
+    "meaning_zh_CN": "厚的；肥胖的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "細い",
+    "reading": "ほそ",
+    "meaning_en": "thin",
+    "meaning_zh_CN": "细的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "短い",
+    "reading": "みじか",
+    "meaning_en": "short",
+    "meaning_zh_CN": "短的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "良い",
+    "reading": "よ",
+    "meaning_en": "good",
+    "meaning_zh_CN": "好的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "弱い",
+    "reading": "よわ",
+    "meaning_en": "weak",
+    "meaning_zh_CN": "弱的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "悪い",
+    "reading": "わる",
+    "meaning_en": "bad",
+    "meaning_zh_CN": "坏的；不良的",
+    "category": "い形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "元気な",
+    "reading": "げん   き",
+    "meaning_en": "healthy",
+    "meaning_zh_CN": "健康的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "親切な",
+    "reading": "しん せつ",
+    "meaning_en": "kind",
+    "meaning_zh_CN": "亲切的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "好きな",
+    "reading": "す",
+    "meaning_en": "favorite",
+    "meaning_zh_CN": "喜欢的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "大事な",
+    "reading": "だい   じ",
+    "meaning_en": "important",
+    "meaning_zh_CN": "重要的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "大切な",
+    "reading": "たい せつ",
+    "meaning_en": "precious",
+    "meaning_zh_CN": "珍贵的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "大変な",
+    "reading": "たい へん",
+    "meaning_en": "tough (situation)",
+    "meaning_zh_CN": "太费劲的；不得了的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "特別な",
+    "reading": "とく べつ",
+    "meaning_en": "special",
+    "meaning_zh_CN": "特别的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "不便な",
+    "reading": "ふ   べん",
+    "meaning_en": "inconvenient",
+    "meaning_zh_CN": "不便利的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "変な",
+    "reading": "へん",
+    "meaning_en": "weird",
+    "meaning_zh_CN": "奇怪的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "有名な",
+    "reading": "ゆう めい",
+    "meaning_en": "famous",
+    "meaning_zh_CN": "有名的",
+    "category": "な形容词(けい よう し )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "開ける",
+    "reading": "あ",
+    "meaning_en": "to open",
+    "meaning_zh_CN": "打开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "開く",
+    "reading": "あ",
+    "meaning_en": "(something) opens",
+    "meaning_zh_CN": "开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "集まる",
+    "reading": "あつ",
+    "meaning_en": "to gather",
+    "meaning_zh_CN": "聚集",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "集める",
+    "reading": "あつ",
+    "meaning_en": "to collect",
+    "meaning_zh_CN": "集合；收集",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "洗う",
+    "reading": "あら",
+    "meaning_en": "to wash",
+    "meaning_zh_CN": "洗",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "歩く",
+    "reading": "ある",
+    "meaning_en": "to walk",
+    "meaning_zh_CN": "走",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "安心する",
+    "reading": "あん しん",
+    "meaning_en": "to be relieved",
+    "meaning_zh_CN": "安心",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "動く",
+    "reading": "うご",
+    "meaning_en": "to move",
+    "meaning_zh_CN": "移动",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "歌う",
+    "reading": "うた",
+    "meaning_en": "to sing",
+    "meaning_zh_CN": "唱",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "産む",
+    "reading": "う",
+    "meaning_en": "to give birth",
+    "meaning_zh_CN": "分娩",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "売る",
+    "reading": "う",
+    "meaning_en": "to sell",
+    "meaning_zh_CN": "卖",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "運転する",
+    "reading": "うん てん",
+    "meaning_en": "to drive",
+    "meaning_zh_CN": "驾驶",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "運動する",
+    "reading": "うん どう",
+    "meaning_en": "to exercise",
+    "meaning_zh_CN": "运动",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "起きる",
+    "reading": "お",
+    "meaning_en": "to get up",
+    "meaning_zh_CN": "起床",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "送る",
+    "reading": "おく",
+    "meaning_en": "to send",
+    "meaning_zh_CN": "送",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "教える",
+    "reading": "おし",
+    "meaning_en": "to teach",
+    "meaning_zh_CN": "教",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "思出いす",
+    "reading": "おもだ",
+    "meaning_en": "to remember",
+    "meaning_zh_CN": "想起",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "思う",
+    "reading": "おも",
+    "meaning_en": "to think",
+    "meaning_zh_CN": "想；思考",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "降りる",
+    "reading": "お",
+    "meaning_en": "to get off",
+    "meaning_zh_CN": "下(车)",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "終わる",
+    "reading": "お",
+    "meaning_en": "to finish",
+    "meaning_zh_CN": "完；结束",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "返す",
+    "reading": "かえ",
+    "meaning_en": "to return",
+    "meaning_zh_CN": "返回",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "帰る",
+    "reading": "かえ",
+    "meaning_en": "to return / to go home",
+    "meaning_zh_CN": "回家",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "貸す",
+    "reading": "か",
+    "meaning_en": "to lend",
+    "meaning_zh_CN": "租；借出",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "通う",
+    "reading": "かよ",
+    "meaning_en": "to commute",
+    "meaning_zh_CN": "来往",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "借りる",
+    "reading": "か",
+    "meaning_en": "to borrow",
+    "meaning_zh_CN": "借",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "変わる",
+    "reading": "か",
+    "meaning_en": "to change",
+    "meaning_zh_CN": "改变",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "考える",
+    "reading": "かんが",
+    "meaning_en": "to think / to consider",
+    "meaning_zh_CN": "想；考虑",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "強調する",
+    "reading": "きょう ちょう",
+    "meaning_en": "to emphasize",
+    "meaning_zh_CN": "强调",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "切る",
+    "reading": "き",
+    "meaning_en": "to cut",
+    "meaning_zh_CN": "切",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "着る",
+    "reading": "き",
+    "meaning_en": "to put on clothes",
+    "meaning_zh_CN": "穿(上衣)",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "研究する",
+    "reading": "けん   きゅう",
+    "meaning_en": "to research",
+    "meaning_zh_CN": "研究",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "答える",
+    "reading": "こた",
+    "meaning_en": "to answer",
+    "meaning_zh_CN": "回答",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "質問する",
+    "reading": "しつ もん",
+    "meaning_en": "to ask a question",
+    "meaning_zh_CN": "提问",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "死ぬ",
+    "reading": "し",
+    "meaning_en": "to die",
+    "meaning_zh_CN": "死",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "閉める",
+    "reading": "し",
+    "meaning_en": "to close",
+    "meaning_zh_CN": "关闭",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "出発する",
+    "reading": "しゅっ  ぱつ",
+    "meaning_en": "to leave",
+    "meaning_zh_CN": "出发",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "知る",
+    "reading": "し",
+    "meaning_en": "to get to know",
+    "meaning_zh_CN": "知道",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "信じる",
+    "reading": "しん",
+    "meaning_en": "to believe",
+    "meaning_zh_CN": "相信",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "進む",
+    "reading": "すす",
+    "meaning_en": "to proceed",
+    "meaning_zh_CN": "前进",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "住む",
+    "reading": "す",
+    "meaning_en": "to live",
+    "meaning_zh_CN": "住",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "説明する",
+    "reading": "せつ めい",
+    "meaning_en": "to explain",
+    "meaning_zh_CN": "说明；解释",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "世話をする",
+    "reading": "せ わ",
+    "meaning_en": "to take care",
+    "meaning_zh_CN": "照顾",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "建てる",
+    "reading": "た",
+    "meaning_en": "to build",
+    "meaning_zh_CN": "建设",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "注意する",
+    "reading": "ちゅう    い",
+    "meaning_en": "to pay attention",
+    "meaning_zh_CN": "注意",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "中止する",
+    "reading": "ちゅう    し",
+    "meaning_en": "to cancel",
+    "meaning_zh_CN": "取消",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "注文する",
+    "reading": "ちゅう   もん",
+    "meaning_en": "to order",
+    "meaning_zh_CN": "下单；订购",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "使う",
+    "reading": "つか",
+    "meaning_en": "to use",
+    "meaning_zh_CN": "使用",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "着く",
+    "reading": "つ",
+    "meaning_en": "to arrive",
+    "meaning_zh_CN": "到达",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "作る",
+    "reading": "つく",
+    "meaning_en": "to make",
+    "meaning_zh_CN": "做",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "止まる",
+    "reading": "と",
+    "meaning_en": "to stop",
+    "meaning_zh_CN": "停止",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "間合にう",
+    "reading": "まあ",
+    "meaning_en": "to be in time",
+    "meaning_zh_CN": "赶得及",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "入院する",
+    "reading": "にゅう   いん",
+    "meaning_en": "to be hospitalized",
+    "meaning_zh_CN": "入院",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "習う",
+    "reading": "なら",
+    "meaning_en": "to learn",
+    "meaning_zh_CN": "学习",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "乗る",
+    "reading": "の",
+    "meaning_en": "to get on",
+    "meaning_zh_CN": "乘搭",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "運ぶ",
+    "reading": "はこ",
+    "meaning_en": "to carry / to transport",
+    "meaning_zh_CN": "搬运；运送",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "始める",
+    "reading": "はじ",
+    "meaning_en": "to start",
+    "meaning_zh_CN": "开始",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "走る",
+    "reading": "はし",
+    "meaning_en": "to run",
+    "meaning_zh_CN": "跑",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "働く",
+    "reading": "はたら",
+    "meaning_en": "to work",
+    "meaning_zh_CN": "工作",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "引く",
+    "reading": "ひ",
+    "meaning_en": "to pull",
+    "meaning_zh_CN": "拉",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "変化する",
+    "reading": "へん   か",
+    "meaning_en": "to change",
+    "meaning_zh_CN": "变更",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "勉強する",
+    "reading": "べん   きょう",
+    "meaning_en": "to study",
+    "meaning_zh_CN": "用功学习",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "待つ",
+    "reading": "ま",
+    "meaning_en": "to wait",
+    "meaning_zh_CN": "等待",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "回す",
+    "reading": "まわ",
+    "meaning_en": "to turn",
+    "meaning_zh_CN": "转；旋转",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "持つ",
+    "reading": "も",
+    "meaning_en": "to hold",
+    "meaning_zh_CN": "拥有；拿",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "用意する",
+    "reading": "よう   い",
+    "meaning_en": "to prepare",
+    "meaning_zh_CN": "准备；预备",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "利用する",
+    "reading": "り   よう",
+    "meaning_en": "to use",
+    "meaning_zh_CN": "利用",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "旅行する",
+    "reading": "りょ こう",
+    "meaning_en": "to travel",
+    "meaning_zh_CN": "旅行",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  },
+  {
+    "word": "別れる",
+    "reading": "わか",
+    "meaning_en": "to break up",
+    "meaning_zh_CN": "分开",
+    "category": "动词(どう   し  )",
+    "jlptLevel": "N4"
+  }
+]

@@ -1,0 +1,826 @@
+[
+  {
+    "furigana": "相変(あい  か )わらず",
+    "word": "as usual, as before",
+    "meaning_en": "",
+    "meaning_zh_CN": "仍旧；依旧",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "あいにく",
+    "word": "unfortunately, untimely",
+    "meaning_en": "",
+    "meaning_zh_CN": "不凑巧；偏偏",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "飽(からだ)くまで",
+    "word": "to the end (utmost); persistently",
+    "meaning_en": "",
+    "meaning_zh_CN": "到底；彻底",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "改(あらた)めて",
+    "word": "anew; over again",
+    "meaning_en": "",
+    "meaning_zh_CN": "重新；再一次",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いきいき",
+    "word": "lively, vividly",
+    "meaning_en": "",
+    "meaning_zh_CN": "活泼；生动",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いきなり",
+    "word": "suddenly",
+    "meaning_en": "",
+    "meaning_zh_CN": "突然；冷不防",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いくぶん (幾分)",
+    "word": "a little, somewhat",
+    "meaning_en": "",
+    "meaning_zh_CN": "稍微；一点",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いずれ",
+    "word": "in any case",
+    "meaning_en": "",
+    "meaning_zh_CN": "反正；早晚",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いちおう (一応)",
+    "word": "by and large; in a way; just in case",
+    "meaning_en": "",
+    "meaning_zh_CN": "大致上；大体；姑且",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いちだんと (一段と)",
+    "word": "still more",
+    "meaning_en": "",
+    "meaning_zh_CN": "更加；加",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いっきに (一気に)",
+    "word": "all at once; immediately; instantly; right away",
+    "meaning_en": "",
+    "meaning_zh_CN": "一口气地；不停地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いっせいに(一斉に)",
+    "word": "all at once; simultaneously",
+    "meaning_en": "",
+    "meaning_zh_CN": "同时；一齐",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いっそう(一層)",
+    "word": "all the more; still",
+    "meaning_en": "",
+    "meaning_zh_CN": "更加；进一步",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いったん (一旦)",
+    "word": "for a moment, once",
+    "meaning_en": "",
+    "meaning_zh_CN": "姑且；一旦",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "今(いま)に",
+    "word": "soon; before long",
+    "meaning_en": "",
+    "meaning_zh_CN": "不久；迟早",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "今(いま)にも",
+    "word": "at any moment",
+    "meaning_en": "",
+    "meaning_zh_CN": "马上；眼看就要",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "いらいら",
+    "word": "grow impatient, get irritated",
+    "meaning_en": "",
+    "meaning_zh_CN": "焦急；焦躁",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "言(い)わば",
+    "word": "so to speak",
+    "meaning_en": "",
+    "meaning_zh_CN": "说起来;可以说",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "うろうろ",
+    "word": "stroll; flutter",
+    "meaning_en": "",
+    "meaning_zh_CN": "徘徊；徬徨；不知所措",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "うんと",
+    "word": "a lot",
+    "meaning_en": "",
+    "meaning_zh_CN": "很多；非常地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "おおいに (大いに)",
+    "word": "much; greatly",
+    "meaning_en": "",
+    "meaning_zh_CN": "很；非常",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "おもに (主に)",
+    "word": "chiefly, mainly, mostly",
+    "meaning_en": "",
+    "meaning_zh_CN": "主要地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "思(おも)わず",
+    "word": "in spite of oneself, unconsciously",
+    "meaning_en": "",
+    "meaning_zh_CN": "不由得；不知不觉地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "必(かなら)ずしも",
+    "word": "not necessarily",
+    "meaning_en": "",
+    "meaning_zh_CN": "(后接否定) 不一定；未必",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "逆(ぎゃく)に",
+    "word": "conversely; on the contrary",
+    "meaning_en": "",
+    "meaning_zh_CN": "相反",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "偶然(ぐう ぜん)",
+    "word": "by chance; by accident; unexpectedly",
+    "meaning_en": "",
+    "meaning_zh_CN": "偶然；没想到",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "くれぐれも",
+    "word": "give my best regards",
+    "meaning_en": "",
+    "meaning_zh_CN": "衷心地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "現(げん)に",
+    "word": "actually, really",
+    "meaning_en": "",
+    "meaning_zh_CN": "确实；确定",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "極(ごく)",
+    "word": "very; exceedingly; extremely",
+    "meaning_en": "",
+    "meaning_zh_CN": "极；最",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "再三(さい さん)",
+    "word": "again and again",
+    "meaning_en": "",
+    "meaning_zh_CN": "再三",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "さすが",
+    "word": "indeed; as may be expected",
+    "meaning_en": "",
+    "meaning_zh_CN": "真不愧是；毕竟是",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "さっさと",
+    "word": "quickly; promptly",
+    "meaning_en": "",
+    "meaning_zh_CN": "赶快地;迅速地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ざっと",
+    "word": "briefly, roughly, approximately",
+    "meaning_en": "",
+    "meaning_zh_CN": "大概；粗略地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "さっぱり",
+    "word": "neatly, not at all; not in the least",
+    "meaning_en": "",
+    "meaning_zh_CN": "(后接否定)一点也不",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "しいんと",
+    "word": "quietly, silently",
+    "meaning_en": "",
+    "meaning_zh_CN": "寂静",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "じかに (直に)",
+    "word": "directly, at first hand, personally",
+    "meaning_en": "",
+    "meaning_zh_CN": "直接地；亲自",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "しきゅう (至急)",
+    "word": "urgent, immediately",
+    "meaning_en": "",
+    "meaning_zh_CN": "赶紧；紧急",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "しきりに",
+    "word": "frequently, eagerly, earnestly",
+    "meaning_en": "",
+    "meaning_zh_CN": "频繁地；不断地；热情地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "しじゅう (始終)",
+    "word": "always, constantly",
+    "meaning_en": "",
+    "meaning_zh_CN": "经常；总是",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "次第( し  だい)に",
+    "word": "gradually (progress into a state); in sequence; in order",
+    "meaning_en": "",
+    "meaning_zh_CN": "逐渐地；慢慢地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "しみじみ",
+    "word": "keenly, heartily, seriously",
+    "meaning_en": "",
+    "meaning_zh_CN": "深切；亲密；仔细",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "じゅんじゅん (順々)",
+    "word": "in order, one after another, one by one",
+    "meaning_en": "",
+    "meaning_zh_CN": "接顺序；依吹",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "じょじょに (徐々に)",
+    "word": "gradually, slowly",
+    "meaning_en": "",
+    "meaning_zh_CN": "徐徐；慢慢",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "末(すえ)に",
+    "word": "finally; after; following; at the end/ conclusion of",
+    "meaning_en": "",
+    "meaning_zh_CN": "结果；最后 (经过一段时间)",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "すっと",
+    "word": "abruptly, quickly",
+    "meaning_en": "",
+    "meaning_zh_CN": "飞快地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ずらりと",
+    "word": "in a row",
+    "meaning_en": "",
+    "meaning_zh_CN": "一大排",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "せいぜい (精々)",
+    "word": "as much as possible; at most",
+    "meaning_en": "",
+    "meaning_zh_CN": "尽量；充其量",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "せっせと",
+    "word": "diligently; hard",
+    "meaning_en": "",
+    "meaning_zh_CN": "拼命地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ぜひとも",
+    "word": "surely, certainly",
+    "meaning_en": "",
+    "meaning_zh_CN": "一定；务必",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "せめて",
+    "word": "at least",
+    "meaning_en": "",
+    "meaning_zh_CN": "至少",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ぞくぞく(続々)",
+    "word": "successively, one after another",
+    "meaning_en": "",
+    "meaning_zh_CN": "陆续；连续不断",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "そっくり",
+    "word": "entirely; exactly like, just as it is",
+    "meaning_en": "",
+    "meaning_zh_CN": "全部；一模一样；原封不动",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "そっと",
+    "word": "quietly, secretly",
+    "meaning_en": "",
+    "meaning_zh_CN": "轻轻地；俏俏地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "その上(うえ)",
+    "word": "besides; in addition; furthermore",
+    "meaning_en": "",
+    "meaning_zh_CN": "而且；再加上；又",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "そのうち",
+    "word": "before long; some day, by and by",
+    "meaning_en": "",
+    "meaning_zh_CN": "一会儿；不久；近日",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たいして (大して)",
+    "word": "(not) very; (not) much",
+    "meaning_en": "",
+    "meaning_zh_CN": "(后接否定)并不那么",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たいそう (大層)",
+    "word": "very much",
+    "meaning_en": "",
+    "meaning_zh_CN": "非常",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "だいぶん (大分)",
+    "word": "very",
+    "meaning_en": "",
+    "meaning_zh_CN": "很；非常",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たえず (絶えず)",
+    "word": "all the time, always, continuously",
+    "meaning_en": "",
+    "meaning_zh_CN": "经常；连续",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たしょう (多少)",
+    "word": "more or less; somewhat",
+    "meaning_en": "",
+    "meaning_zh_CN": "多少",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たった(唯)",
+    "word": "only; no more than",
+    "meaning_en": "",
+    "meaning_zh_CN": "只；仅",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "たんに (単に)",
+    "word": "only, simply",
+    "meaning_en": "",
+    "meaning_zh_CN": "只；仅",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ちゃくちゃく (着々)",
+    "word": "steadily, step by step",
+    "meaning_en": "",
+    "meaning_zh_CN": "稳步地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ついで",
+    "word": "next",
+    "meaning_en": "",
+    "meaning_zh_CN": "接着；其次",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ついに (遂に)",
+    "word": "in the end; after all",
+    "meaning_en": "",
+    "meaning_zh_CN": "终于",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "てんてん (点々)",
+    "word": "scattered; in drops",
+    "meaning_en": "",
+    "meaning_zh_CN": "稀疏；一滴滴",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "てんてんと (転々と)",
+    "word": "from place to place; rolling",
+    "meaning_en": "",
+    "meaning_zh_CN": "转来转去；滚动",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "どうせ",
+    "word": "after all; in the end; anyway, anyhow",
+    "meaning_en": "",
+    "meaning_zh_CN": "终究；反正；无论如何",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "どうやら",
+    "word": "possibly; apparently; seems like; somehow; barely",
+    "meaning_en": "",
+    "meaning_zh_CN": "好像；看来；总算",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "とたん (途端)に",
+    "word": "as soon as; immediately",
+    "meaning_en": "",
+    "meaning_zh_CN": "刚一；正当",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "とっくに",
+    "word": "a long time ago",
+    "meaning_en": "",
+    "meaning_zh_CN": "很久以前；早就",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "どっと",
+    "word": "suddenly, all at once",
+    "meaning_en": "",
+    "meaning_zh_CN": "突然；一下子",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "なにしろ",
+    "word": "anyway; anyhow",
+    "meaning_en": "",
+    "meaning_zh_CN": "不管怎样；反正",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "なにぶん (何分)",
+    "word": "some, anyway, please",
+    "meaning_en": "",
+    "meaning_zh_CN": "某种；某些；毕竟；请",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "なんとも",
+    "word": "really, not at all; nothing, cannot",
+    "meaning_en": "",
+    "meaning_zh_CN": "实在；(接否定)怎么也",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "のこらず (残らず)",
+    "word": "all; wholly; without exception",
+    "meaning_en": "",
+    "meaning_zh_CN": "全部",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "はきはき",
+    "word": "briskly",
+    "meaning_en": "",
+    "meaning_zh_CN": "干脆；爽快",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "はたして(果して)",
+    "word": "as was expected; really; sure enough",
+    "meaning_en": "",
+    "meaning_zh_CN": "果然；果真",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ばったり",
+    "word": "suddenly; by chance",
+    "meaning_en": "",
+    "meaning_zh_CN": "突然",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ひととおり(一通り)",
+    "word": "generally; briefly",
+    "meaning_en": "",
+    "meaning_zh_CN": "大概；一般",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ひとまず",
+    "word": "for the present",
+    "meaning_en": "",
+    "meaning_zh_CN": "暂时；姑且",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ひとりでに",
+    "word": "by oneself, automatically",
+    "meaning_en": "",
+    "meaning_zh_CN": "自己；自动地",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ふと",
+    "word": "suddenly",
+    "meaning_en": "",
+    "meaning_zh_CN": "突然；偶然",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ほうぼう (方々)",
+    "word": "everywhere; all around",
+    "meaning_en": "",
+    "meaning_zh_CN": "各到处",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ほぼ",
+    "word": "almost; about",
+    "meaning_en": "",
+    "meaning_zh_CN": "大致；大概",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まごまご",
+    "word": "confused; hesitated",
+    "meaning_en": "",
+    "meaning_zh_CN": "徬徨；不知所措",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まさに",
+    "word": "certainly; be about to",
+    "meaning_en": "",
+    "meaning_zh_CN": "的确；快要",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まだしも",
+    "word": "rather; better​",
+    "meaning_en": "",
+    "meaning_zh_CN": "还好；还行；还算可以",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まっさき (真っ先)",
+    "word": "at the very beginning; first of all",
+    "meaning_en": "",
+    "meaning_zh_CN": "最先；首先",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "まったく～ない",
+    "word": "not at all",
+    "meaning_en": "",
+    "meaning_zh_CN": "全然(不)；完全(不)",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "めいめい (銘々)",
+    "word": "each; individually",
+    "meaning_en": "",
+    "meaning_zh_CN": "各自；各个",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "めちゃくちゃ",
+    "word": "excessively; mess up",
+    "meaning_en": "",
+    "meaning_zh_CN": "胡乱；乱七八糟",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "めっきり",
+    "word": "remarkably",
+    "meaning_en": "",
+    "meaning_zh_CN": "显著",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "めったに",
+    "word": "seldom, rarely",
+    "meaning_en": "",
+    "meaning_zh_CN": "(后接否定) 很少",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "もしかしたら",
+    "word": "perhaps, maybe",
+    "meaning_en": "",
+    "meaning_zh_CN": "或许；可能",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "もしかすると",
+    "word": "perhaps; maybe",
+    "meaning_en": "",
+    "meaning_zh_CN": "或许；可能",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "もともと(元々)",
+    "word": "originally, by nature",
+    "meaning_en": "",
+    "meaning_zh_CN": "根本 ; 本来",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "やや",
+    "word": "a little; more or less; rather",
+    "meaning_en": "",
+    "meaning_zh_CN": "稍微",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ゆうゆう (悠々)",
+    "word": "calmly, composedly",
+    "meaning_en": "",
+    "meaning_zh_CN": "悠悠然；不慌不忙",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "ようやく (漸く)",
+    "word": "gradually; barely",
+    "meaning_en": "",
+    "meaning_zh_CN": "渐渐；勉勉强强",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "よほど / よっぽど",
+    "word": "very; greatly; much; to a large extent",
+    "meaning_en": "",
+    "meaning_zh_CN": "颇；很；相当",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "わりと(割と)",
+    "word": "comparatively; rather",
+    "meaning_en": "",
+    "meaning_zh_CN": "比较",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  },
+  {
+    "furigana": "わずかに",
+    "word": "slightly; only; barely; narrowly",
+    "meaning_en": "",
+    "meaning_zh_CN": "总算；好歹；勉勉强强",
+    "jlptLevel": "N2",
+    "pos": "adverb"
+  }
+]

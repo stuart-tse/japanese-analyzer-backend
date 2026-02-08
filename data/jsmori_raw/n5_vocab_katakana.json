@@ -1,0 +1,538 @@
+[
+  {
+    "furigana": "アパート",
+    "word": "apartment",
+    "meaning_en": "公寓住宅",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "エアコン",
+    "word": "air conditioner",
+    "meaning_en": "冷氣機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "エレベーター",
+    "word": "elevator",
+    "meaning_en": "升降機；電梯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "カップ",
+    "word": "cup",
+    "meaning_en": "茶杯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "カメラ",
+    "word": "camera",
+    "meaning_en": "相機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "カレー",
+    "word": "curry",
+    "meaning_en": "咖哩",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "カレンダー",
+    "word": "calendar",
+    "meaning_en": "日曆；月曆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ギター",
+    "word": "guitar",
+    "meaning_en": "吉他",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "キロ［キログラム］",
+    "word": "kilogram",
+    "meaning_en": "千克",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "キロ［キロメートル］",
+    "word": "kilometer",
+    "meaning_en": "公里",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "クラス",
+    "word": "class",
+    "meaning_en": "班；級",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "グラム",
+    "word": "gram",
+    "meaning_en": "克 (重量單位)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ケーキ",
+    "word": "cake",
+    "meaning_en": "蛋糕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "コート",
+    "word": "coat",
+    "meaning_en": "大衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "コーヒー",
+    "word": "coffee",
+    "meaning_en": "咖啡",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "コップ",
+    "word": "cup / glass",
+    "meaning_en": "杯子；玻璃杯",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "コピー(する)",
+    "word": "copy",
+    "meaning_en": "複印；複製",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ゴミ",
+    "word": "trash / garbage / rubbish",
+    "meaning_en": "垃圾",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "サンドイチ",
+    "word": "sandwich",
+    "meaning_en": "三明治；三文治",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "シャツ",
+    "word": "shirt",
+    "meaning_en": "汗衫；襯衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "シャワー",
+    "word": "shower",
+    "meaning_en": "淋浴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ジュース",
+    "word": "juice",
+    "meaning_en": "果汁",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "スーパー",
+    "word": "supermarket",
+    "meaning_en": "超市",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "スカート",
+    "word": "skirt",
+    "meaning_en": "裙子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ストーブ",
+    "word": "stove",
+    "meaning_en": "爐子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "スプーン",
+    "word": "spoon",
+    "meaning_en": "湯匙",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "スポーツ",
+    "word": "sports",
+    "meaning_en": "運動",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ズボン",
+    "word": "trousers",
+    "meaning_en": "褲子；西褲",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "スリーパー",
+    "word": "slipper",
+    "meaning_en": "拖鞋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "セーター",
+    "word": "sweater",
+    "meaning_en": "毛衣",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "タクシー",
+    "word": "taxi",
+    "meaning_en": "計程車；的士",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "テーブル",
+    "word": "table",
+    "meaning_en": "桌子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "テスト",
+    "word": "test",
+    "meaning_en": "測驗",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "テニス",
+    "word": "tennis",
+    "meaning_en": "網球",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "デパート",
+    "word": "department store",
+    "meaning_en": "百貨公司",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "テレビ",
+    "word": "TV",
+    "meaning_en": "電視",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ドア",
+    "word": "door",
+    "meaning_en": "門",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "トイレ",
+    "word": "restroom",
+    "meaning_en": "廁所；洗手間",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "トマト",
+    "word": "tomato",
+    "meaning_en": "番茄",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ナイフ",
+    "word": "knife",
+    "meaning_en": "刀",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ニュース",
+    "word": "news",
+    "meaning_en": "新聞",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ネクタイ",
+    "word": "necktie",
+    "meaning_en": "領帶",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ノート",
+    "word": "notebook",
+    "meaning_en": "筆記；筆記本",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "パーティー",
+    "word": "party",
+    "meaning_en": "派對",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "バス",
+    "word": "bus",
+    "meaning_en": "巴士；公車",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "バター",
+    "word": "butter",
+    "meaning_en": "奶油；牛油",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "パン",
+    "word": "bread",
+    "meaning_en": "麵包",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ハンカチ",
+    "word": "handkerchief",
+    "meaning_en": "手帕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ピアノ",
+    "word": "piano",
+    "meaning_en": "鋼琴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ビール",
+    "word": "beer",
+    "meaning_en": "啤酒",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "プール",
+    "word": "pool",
+    "meaning_en": "游泳池",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "フォーク",
+    "word": "fork",
+    "meaning_en": "叉子",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ページ",
+    "word": "page",
+    "meaning_en": "頁",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ベッド",
+    "word": "bed",
+    "meaning_en": "床",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ペット",
+    "word": "pet",
+    "meaning_en": "寵物",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ペン",
+    "word": "pen",
+    "meaning_en": "筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ボールペン",
+    "word": "ballpoint pen",
+    "meaning_en": "圓珠筆；原子筆",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ポケット",
+    "word": "pocket",
+    "meaning_en": "口袋",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ポスト",
+    "word": "mailbox / postbox",
+    "meaning_en": "郵筒；信箱",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ボタン",
+    "word": "button",
+    "meaning_en": "紐扣；按鈕",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ホテル",
+    "word": "hotel",
+    "meaning_en": "飯店；酒店",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "マッチ",
+    "word": "match",
+    "meaning_en": "火柴",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "メートル",
+    "word": "meter",
+    "meaning_en": "米 (長度單位)",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ラジオ",
+    "word": "radio",
+    "meaning_en": "收音機",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "ランチ",
+    "word": "lunch",
+    "meaning_en": "午餐",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "レコード",
+    "word": "record",
+    "meaning_en": "唱片",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  },
+  {
+    "furigana": "レストラン",
+    "word": "restaurant",
+    "meaning_en": "餐廳",
+    "meaning_zh_CN": "",
+    "jlptLevel": "N5",
+    "pos": "katakana"
+  }
+]
