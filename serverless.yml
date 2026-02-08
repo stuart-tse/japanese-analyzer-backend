@@ -11,8 +11,9 @@ build:
     banner:
       js: "import { createRequire } from 'module'; const require = createRequire(import.meta.url);"
     external:
-      - '@prisma/client'
       - '@prisma/adapter-pg'
+      - '@prisma/driver-adapter-utils'
+      - '@prisma/client-runtime-utils'
       - pg
       - pg-native
 
@@ -47,5 +48,8 @@ package:
   patterns:
     - 'src/generated/prisma/**'
     - '!src/generated/prisma/libquery_engine-*'
-    - 'src/generated/prisma/libquery_engine-debian-openssl-3.0.x*'
+    - '!src/generated/prisma/*.d.ts'
+    - '!src/generated/prisma/**/*.d.ts'
+    - '!src/generated/prisma/*-base64.js'
+    - '!src/generated/prisma/* [0-9]*'
     - 'data/**'
