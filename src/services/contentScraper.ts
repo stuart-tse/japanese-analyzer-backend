@@ -1,5 +1,5 @@
 import { Readability } from '@mozilla/readability';
-import { JSDOM } from 'jsdom';
+import { parseHTML } from 'linkedom';
 
 export interface ScrapeResult {
   title: string;
@@ -31,8 +31,10 @@ export async function scrapeUrl(url: string): Promise<ScrapeResult> {
   }
 
   const html = await response.text();
-  const dom = new JSDOM(html, { url });
-  const reader = new Readability(dom.window.document);
+  const { document } = parseHTML(html);
+  // Set documentURI for Readability to resolve relative URLs
+  Object.defineProperty(document, 'documentURI', { value: url });
+  const reader = new Readability(document as any);
   const article = reader.parse();
 
   if (!article) {
