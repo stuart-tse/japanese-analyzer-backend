@@ -133,6 +133,51 @@ export type GrammarAnalysisCache = $Result.DefaultSelection<Prisma.$GrammarAnaly
  * 
  */
 export type AuditLog = $Result.DefaultSelection<Prisma.$AuditLogPayload>
+/**
+ * Model Topic
+ * 
+ */
+export type Topic = $Result.DefaultSelection<Prisma.$TopicPayload>
+/**
+ * Model ContentSource
+ * 
+ */
+export type ContentSource = $Result.DefaultSelection<Prisma.$ContentSourcePayload>
+/**
+ * Model ContentItem
+ * 
+ */
+export type ContentItem = $Result.DefaultSelection<Prisma.$ContentItemPayload>
+/**
+ * Model ContentSection
+ * 
+ */
+export type ContentSection = $Result.DefaultSelection<Prisma.$ContentSectionPayload>
+/**
+ * Model ContentAudio
+ * 
+ */
+export type ContentAudio = $Result.DefaultSelection<Prisma.$ContentAudioPayload>
+/**
+ * Model GeneratedQuestion
+ * 
+ */
+export type GeneratedQuestion = $Result.DefaultSelection<Prisma.$GeneratedQuestionPayload>
+/**
+ * Model GeneratedSRSItem
+ * 
+ */
+export type GeneratedSRSItem = $Result.DefaultSelection<Prisma.$GeneratedSRSItemPayload>
+/**
+ * Model UserContentProgress
+ * 
+ */
+export type UserContentProgress = $Result.DefaultSelection<Prisma.$UserContentProgressPayload>
+/**
+ * Model ContentImportJob
+ * 
+ */
+export type ContentImportJob = $Result.DefaultSelection<Prisma.$ContentImportJobPayload>
 
 /**
  * Enums
@@ -196,6 +241,41 @@ export const CreditTransactionType: {
 
 export type CreditTransactionType = (typeof CreditTransactionType)[keyof typeof CreditTransactionType]
 
+
+export const ContentType: {
+  ARTICLE: 'ARTICLE',
+  NEWS: 'NEWS',
+  BLOG: 'BLOG',
+  MAGAZINE: 'MAGAZINE',
+  SONG: 'SONG',
+  ANIME: 'ANIME',
+  PODCAST: 'PODCAST'
+};
+
+export type ContentType = (typeof ContentType)[keyof typeof ContentType]
+
+
+export const ContentStatus: {
+  DRAFT: 'DRAFT',
+  PROCESSING: 'PROCESSING',
+  READY: 'READY',
+  FAILED: 'FAILED',
+  ARCHIVED: 'ARCHIVED'
+};
+
+export type ContentStatus = (typeof ContentStatus)[keyof typeof ContentStatus]
+
+
+export const QuestionType: {
+  MCQ: 'MCQ',
+  CLOZE: 'CLOZE',
+  READING_COMPREHENSION: 'READING_COMPREHENSION',
+  LISTENING: 'LISTENING',
+  DICTATION: 'DICTATION'
+};
+
+export type QuestionType = (typeof QuestionType)[keyof typeof QuestionType]
+
 }
 
 export type SubscriptionTier = $Enums.SubscriptionTier
@@ -221,6 +301,18 @@ export const PaymentType: typeof $Enums.PaymentType
 export type CreditTransactionType = $Enums.CreditTransactionType
 
 export const CreditTransactionType: typeof $Enums.CreditTransactionType
+
+export type ContentType = $Enums.ContentType
+
+export const ContentType: typeof $Enums.ContentType
+
+export type ContentStatus = $Enums.ContentStatus
+
+export const ContentStatus: typeof $Enums.ContentStatus
+
+export type QuestionType = $Enums.QuestionType
+
+export const QuestionType: typeof $Enums.QuestionType
 
 /**
  * ##  Prisma Client ʲˢ
@@ -578,6 +670,96 @@ export class PrismaClient<
     * ```
     */
   get auditLog(): Prisma.AuditLogDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.topic`: Exposes CRUD operations for the **Topic** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Topics
+    * const topics = await prisma.topic.findMany()
+    * ```
+    */
+  get topic(): Prisma.TopicDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.contentSource`: Exposes CRUD operations for the **ContentSource** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ContentSources
+    * const contentSources = await prisma.contentSource.findMany()
+    * ```
+    */
+  get contentSource(): Prisma.ContentSourceDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.contentItem`: Exposes CRUD operations for the **ContentItem** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ContentItems
+    * const contentItems = await prisma.contentItem.findMany()
+    * ```
+    */
+  get contentItem(): Prisma.ContentItemDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.contentSection`: Exposes CRUD operations for the **ContentSection** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ContentSections
+    * const contentSections = await prisma.contentSection.findMany()
+    * ```
+    */
+  get contentSection(): Prisma.ContentSectionDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.contentAudio`: Exposes CRUD operations for the **ContentAudio** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ContentAudios
+    * const contentAudios = await prisma.contentAudio.findMany()
+    * ```
+    */
+  get contentAudio(): Prisma.ContentAudioDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.generatedQuestion`: Exposes CRUD operations for the **GeneratedQuestion** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GeneratedQuestions
+    * const generatedQuestions = await prisma.generatedQuestion.findMany()
+    * ```
+    */
+  get generatedQuestion(): Prisma.GeneratedQuestionDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.generatedSRSItem`: Exposes CRUD operations for the **GeneratedSRSItem** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GeneratedSRSItems
+    * const generatedSRSItems = await prisma.generatedSRSItem.findMany()
+    * ```
+    */
+  get generatedSRSItem(): Prisma.GeneratedSRSItemDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userContentProgress`: Exposes CRUD operations for the **UserContentProgress** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserContentProgresses
+    * const userContentProgresses = await prisma.userContentProgress.findMany()
+    * ```
+    */
+  get userContentProgress(): Prisma.UserContentProgressDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.contentImportJob`: Exposes CRUD operations for the **ContentImportJob** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ContentImportJobs
+    * const contentImportJobs = await prisma.contentImportJob.findMany()
+    * ```
+    */
+  get contentImportJob(): Prisma.ContentImportJobDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -1035,7 +1217,16 @@ export namespace Prisma {
     WordDetailCache: 'WordDetailCache',
     TranslationCache: 'TranslationCache',
     GrammarAnalysisCache: 'GrammarAnalysisCache',
-    AuditLog: 'AuditLog'
+    AuditLog: 'AuditLog',
+    Topic: 'Topic',
+    ContentSource: 'ContentSource',
+    ContentItem: 'ContentItem',
+    ContentSection: 'ContentSection',
+    ContentAudio: 'ContentAudio',
+    GeneratedQuestion: 'GeneratedQuestion',
+    GeneratedSRSItem: 'GeneratedSRSItem',
+    UserContentProgress: 'UserContentProgress',
+    ContentImportJob: 'ContentImportJob'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -1051,7 +1242,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "analyzedVocabulary" | "course" | "lesson" | "placementQuestion" | "lessonNotification" | "placementTestAnswer" | "placementTestAttempt" | "userFlashcard" | "userLessonProgress" | "subscription" | "payment" | "creditTransaction" | "analysis" | "vocabulary" | "wordPack" | "userPackProgress" | "learningStats" | "wordExample" | "analysisCache" | "wordDetailCache" | "translationCache" | "grammarAnalysisCache" | "auditLog"
+      modelProps: "user" | "analyzedVocabulary" | "course" | "lesson" | "placementQuestion" | "lessonNotification" | "placementTestAnswer" | "placementTestAttempt" | "userFlashcard" | "userLessonProgress" | "subscription" | "payment" | "creditTransaction" | "analysis" | "vocabulary" | "wordPack" | "userPackProgress" | "learningStats" | "wordExample" | "analysisCache" | "wordDetailCache" | "translationCache" | "grammarAnalysisCache" | "auditLog" | "topic" | "contentSource" | "contentItem" | "contentSection" | "contentAudio" | "generatedQuestion" | "generatedSRSItem" | "userContentProgress" | "contentImportJob"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2831,6 +3022,672 @@ export namespace Prisma {
           }
         }
       }
+      Topic: {
+        payload: Prisma.$TopicPayload<ExtArgs>
+        fields: Prisma.TopicFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.TopicFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.TopicFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          findFirst: {
+            args: Prisma.TopicFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.TopicFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          findMany: {
+            args: Prisma.TopicFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>[]
+          }
+          create: {
+            args: Prisma.TopicCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          createMany: {
+            args: Prisma.TopicCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.TopicCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>[]
+          }
+          delete: {
+            args: Prisma.TopicDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          update: {
+            args: Prisma.TopicUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          deleteMany: {
+            args: Prisma.TopicDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.TopicUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.TopicUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>[]
+          }
+          upsert: {
+            args: Prisma.TopicUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TopicPayload>
+          }
+          aggregate: {
+            args: Prisma.TopicAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTopic>
+          }
+          groupBy: {
+            args: Prisma.TopicGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TopicGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.TopicCountArgs<ExtArgs>
+            result: $Utils.Optional<TopicCountAggregateOutputType> | number
+          }
+        }
+      }
+      ContentSource: {
+        payload: Prisma.$ContentSourcePayload<ExtArgs>
+        fields: Prisma.ContentSourceFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ContentSourceFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ContentSourceFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          findFirst: {
+            args: Prisma.ContentSourceFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ContentSourceFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          findMany: {
+            args: Prisma.ContentSourceFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>[]
+          }
+          create: {
+            args: Prisma.ContentSourceCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          createMany: {
+            args: Prisma.ContentSourceCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ContentSourceCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>[]
+          }
+          delete: {
+            args: Prisma.ContentSourceDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          update: {
+            args: Prisma.ContentSourceUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          deleteMany: {
+            args: Prisma.ContentSourceDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ContentSourceUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ContentSourceUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>[]
+          }
+          upsert: {
+            args: Prisma.ContentSourceUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSourcePayload>
+          }
+          aggregate: {
+            args: Prisma.ContentSourceAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContentSource>
+          }
+          groupBy: {
+            args: Prisma.ContentSourceGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContentSourceGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ContentSourceCountArgs<ExtArgs>
+            result: $Utils.Optional<ContentSourceCountAggregateOutputType> | number
+          }
+        }
+      }
+      ContentItem: {
+        payload: Prisma.$ContentItemPayload<ExtArgs>
+        fields: Prisma.ContentItemFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ContentItemFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ContentItemFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          findFirst: {
+            args: Prisma.ContentItemFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ContentItemFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          findMany: {
+            args: Prisma.ContentItemFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>[]
+          }
+          create: {
+            args: Prisma.ContentItemCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          createMany: {
+            args: Prisma.ContentItemCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ContentItemCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>[]
+          }
+          delete: {
+            args: Prisma.ContentItemDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          update: {
+            args: Prisma.ContentItemUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          deleteMany: {
+            args: Prisma.ContentItemDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ContentItemUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ContentItemUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>[]
+          }
+          upsert: {
+            args: Prisma.ContentItemUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentItemPayload>
+          }
+          aggregate: {
+            args: Prisma.ContentItemAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContentItem>
+          }
+          groupBy: {
+            args: Prisma.ContentItemGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContentItemGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ContentItemCountArgs<ExtArgs>
+            result: $Utils.Optional<ContentItemCountAggregateOutputType> | number
+          }
+        }
+      }
+      ContentSection: {
+        payload: Prisma.$ContentSectionPayload<ExtArgs>
+        fields: Prisma.ContentSectionFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ContentSectionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ContentSectionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          findFirst: {
+            args: Prisma.ContentSectionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ContentSectionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          findMany: {
+            args: Prisma.ContentSectionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>[]
+          }
+          create: {
+            args: Prisma.ContentSectionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          createMany: {
+            args: Prisma.ContentSectionCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ContentSectionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>[]
+          }
+          delete: {
+            args: Prisma.ContentSectionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          update: {
+            args: Prisma.ContentSectionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          deleteMany: {
+            args: Prisma.ContentSectionDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ContentSectionUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ContentSectionUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>[]
+          }
+          upsert: {
+            args: Prisma.ContentSectionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentSectionPayload>
+          }
+          aggregate: {
+            args: Prisma.ContentSectionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContentSection>
+          }
+          groupBy: {
+            args: Prisma.ContentSectionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContentSectionGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ContentSectionCountArgs<ExtArgs>
+            result: $Utils.Optional<ContentSectionCountAggregateOutputType> | number
+          }
+        }
+      }
+      ContentAudio: {
+        payload: Prisma.$ContentAudioPayload<ExtArgs>
+        fields: Prisma.ContentAudioFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ContentAudioFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ContentAudioFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          findFirst: {
+            args: Prisma.ContentAudioFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ContentAudioFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          findMany: {
+            args: Prisma.ContentAudioFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>[]
+          }
+          create: {
+            args: Prisma.ContentAudioCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          createMany: {
+            args: Prisma.ContentAudioCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ContentAudioCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>[]
+          }
+          delete: {
+            args: Prisma.ContentAudioDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          update: {
+            args: Prisma.ContentAudioUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          deleteMany: {
+            args: Prisma.ContentAudioDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ContentAudioUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ContentAudioUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>[]
+          }
+          upsert: {
+            args: Prisma.ContentAudioUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentAudioPayload>
+          }
+          aggregate: {
+            args: Prisma.ContentAudioAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContentAudio>
+          }
+          groupBy: {
+            args: Prisma.ContentAudioGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContentAudioGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ContentAudioCountArgs<ExtArgs>
+            result: $Utils.Optional<ContentAudioCountAggregateOutputType> | number
+          }
+        }
+      }
+      GeneratedQuestion: {
+        payload: Prisma.$GeneratedQuestionPayload<ExtArgs>
+        fields: Prisma.GeneratedQuestionFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GeneratedQuestionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GeneratedQuestionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          findFirst: {
+            args: Prisma.GeneratedQuestionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GeneratedQuestionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          findMany: {
+            args: Prisma.GeneratedQuestionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>[]
+          }
+          create: {
+            args: Prisma.GeneratedQuestionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          createMany: {
+            args: Prisma.GeneratedQuestionCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GeneratedQuestionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>[]
+          }
+          delete: {
+            args: Prisma.GeneratedQuestionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          update: {
+            args: Prisma.GeneratedQuestionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          deleteMany: {
+            args: Prisma.GeneratedQuestionDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GeneratedQuestionUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GeneratedQuestionUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>[]
+          }
+          upsert: {
+            args: Prisma.GeneratedQuestionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedQuestionPayload>
+          }
+          aggregate: {
+            args: Prisma.GeneratedQuestionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGeneratedQuestion>
+          }
+          groupBy: {
+            args: Prisma.GeneratedQuestionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GeneratedQuestionGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GeneratedQuestionCountArgs<ExtArgs>
+            result: $Utils.Optional<GeneratedQuestionCountAggregateOutputType> | number
+          }
+        }
+      }
+      GeneratedSRSItem: {
+        payload: Prisma.$GeneratedSRSItemPayload<ExtArgs>
+        fields: Prisma.GeneratedSRSItemFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GeneratedSRSItemFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GeneratedSRSItemFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          findFirst: {
+            args: Prisma.GeneratedSRSItemFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GeneratedSRSItemFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          findMany: {
+            args: Prisma.GeneratedSRSItemFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>[]
+          }
+          create: {
+            args: Prisma.GeneratedSRSItemCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          createMany: {
+            args: Prisma.GeneratedSRSItemCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GeneratedSRSItemCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>[]
+          }
+          delete: {
+            args: Prisma.GeneratedSRSItemDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          update: {
+            args: Prisma.GeneratedSRSItemUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          deleteMany: {
+            args: Prisma.GeneratedSRSItemDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GeneratedSRSItemUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GeneratedSRSItemUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>[]
+          }
+          upsert: {
+            args: Prisma.GeneratedSRSItemUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GeneratedSRSItemPayload>
+          }
+          aggregate: {
+            args: Prisma.GeneratedSRSItemAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGeneratedSRSItem>
+          }
+          groupBy: {
+            args: Prisma.GeneratedSRSItemGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GeneratedSRSItemGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GeneratedSRSItemCountArgs<ExtArgs>
+            result: $Utils.Optional<GeneratedSRSItemCountAggregateOutputType> | number
+          }
+        }
+      }
+      UserContentProgress: {
+        payload: Prisma.$UserContentProgressPayload<ExtArgs>
+        fields: Prisma.UserContentProgressFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserContentProgressFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserContentProgressFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          findFirst: {
+            args: Prisma.UserContentProgressFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserContentProgressFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          findMany: {
+            args: Prisma.UserContentProgressFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>[]
+          }
+          create: {
+            args: Prisma.UserContentProgressCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          createMany: {
+            args: Prisma.UserContentProgressCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserContentProgressCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>[]
+          }
+          delete: {
+            args: Prisma.UserContentProgressDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          update: {
+            args: Prisma.UserContentProgressUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserContentProgressDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserContentProgressUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserContentProgressUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserContentProgressUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserContentProgressPayload>
+          }
+          aggregate: {
+            args: Prisma.UserContentProgressAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserContentProgress>
+          }
+          groupBy: {
+            args: Prisma.UserContentProgressGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserContentProgressGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserContentProgressCountArgs<ExtArgs>
+            result: $Utils.Optional<UserContentProgressCountAggregateOutputType> | number
+          }
+        }
+      }
+      ContentImportJob: {
+        payload: Prisma.$ContentImportJobPayload<ExtArgs>
+        fields: Prisma.ContentImportJobFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ContentImportJobFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ContentImportJobFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          findFirst: {
+            args: Prisma.ContentImportJobFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ContentImportJobFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          findMany: {
+            args: Prisma.ContentImportJobFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>[]
+          }
+          create: {
+            args: Prisma.ContentImportJobCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          createMany: {
+            args: Prisma.ContentImportJobCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ContentImportJobCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>[]
+          }
+          delete: {
+            args: Prisma.ContentImportJobDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          update: {
+            args: Prisma.ContentImportJobUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          deleteMany: {
+            args: Prisma.ContentImportJobDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ContentImportJobUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ContentImportJobUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>[]
+          }
+          upsert: {
+            args: Prisma.ContentImportJobUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContentImportJobPayload>
+          }
+          aggregate: {
+            args: Prisma.ContentImportJobAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContentImportJob>
+          }
+          groupBy: {
+            args: Prisma.ContentImportJobGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContentImportJobGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ContentImportJobCountArgs<ExtArgs>
+            result: $Utils.Optional<ContentImportJobCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2963,6 +3820,15 @@ export namespace Prisma {
     translationCache?: TranslationCacheOmit
     grammarAnalysisCache?: GrammarAnalysisCacheOmit
     auditLog?: AuditLogOmit
+    topic?: TopicOmit
+    contentSource?: ContentSourceOmit
+    contentItem?: ContentItemOmit
+    contentSection?: ContentSectionOmit
+    contentAudio?: ContentAudioOmit
+    generatedQuestion?: GeneratedQuestionOmit
+    generatedSRSItem?: GeneratedSRSItemOmit
+    userContentProgress?: UserContentProgressOmit
+    contentImportJob?: ContentImportJobOmit
   }
 
   /* Types for Logging */
@@ -3053,6 +3919,7 @@ export namespace Prisma {
     vocabularies: number
     userPackProgress: number
     auditLogs: number
+    contentProgress: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3066,6 +3933,7 @@ export namespace Prisma {
     vocabularies?: boolean | UserCountOutputTypeCountVocabulariesArgs
     userPackProgress?: boolean | UserCountOutputTypeCountUserPackProgressArgs
     auditLogs?: boolean | UserCountOutputTypeCountAuditLogsArgs
+    contentProgress?: boolean | UserCountOutputTypeCountContentProgressArgs
   }
 
   // Custom InputTypes
@@ -3147,6 +4015,13 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountAuditLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: AuditLogWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountContentProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserContentProgressWhereInput
   }
 
 
@@ -3240,6 +4115,135 @@ export namespace Prisma {
    */
   export type PlacementTestAttemptCountOutputTypeCountPlacementTestAnswerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: PlacementTestAnswerWhereInput
+  }
+
+
+  /**
+   * Count Type TopicCountOutputType
+   */
+
+  export type TopicCountOutputType = {
+    content: number
+  }
+
+  export type TopicCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    content?: boolean | TopicCountOutputTypeCountContentArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * TopicCountOutputType without action
+   */
+  export type TopicCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TopicCountOutputType
+     */
+    select?: TopicCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * TopicCountOutputType without action
+   */
+  export type TopicCountOutputTypeCountContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentItemWhereInput
+  }
+
+
+  /**
+   * Count Type ContentSourceCountOutputType
+   */
+
+  export type ContentSourceCountOutputType = {
+    content: number
+  }
+
+  export type ContentSourceCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    content?: boolean | ContentSourceCountOutputTypeCountContentArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ContentSourceCountOutputType without action
+   */
+  export type ContentSourceCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSourceCountOutputType
+     */
+    select?: ContentSourceCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ContentSourceCountOutputType without action
+   */
+  export type ContentSourceCountOutputTypeCountContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentItemWhereInput
+  }
+
+
+  /**
+   * Count Type ContentItemCountOutputType
+   */
+
+  export type ContentItemCountOutputType = {
+    sections: number
+    audio: number
+    questions: number
+    srsItems: number
+    userProgress: number
+  }
+
+  export type ContentItemCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    sections?: boolean | ContentItemCountOutputTypeCountSectionsArgs
+    audio?: boolean | ContentItemCountOutputTypeCountAudioArgs
+    questions?: boolean | ContentItemCountOutputTypeCountQuestionsArgs
+    srsItems?: boolean | ContentItemCountOutputTypeCountSrsItemsArgs
+    userProgress?: boolean | ContentItemCountOutputTypeCountUserProgressArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItemCountOutputType
+     */
+    select?: ContentItemCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeCountSectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentSectionWhereInput
+  }
+
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeCountAudioArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentAudioWhereInput
+  }
+
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeCountQuestionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GeneratedQuestionWhereInput
+  }
+
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeCountSrsItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GeneratedSRSItemWhereInput
+  }
+
+  /**
+   * ContentItemCountOutputType without action
+   */
+  export type ContentItemCountOutputTypeCountUserProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserContentProgressWhereInput
   }
 
 
@@ -3644,6 +4648,7 @@ export namespace Prisma {
     userPackProgress?: boolean | User$userPackProgressArgs<ExtArgs>
     learningStats?: boolean | User$learningStatsArgs<ExtArgs>
     auditLogs?: boolean | User$auditLogsArgs<ExtArgs>
+    contentProgress?: boolean | User$contentProgressArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -3750,6 +4755,7 @@ export namespace Prisma {
     userPackProgress?: boolean | User$userPackProgressArgs<ExtArgs>
     learningStats?: boolean | User$learningStatsArgs<ExtArgs>
     auditLogs?: boolean | User$auditLogsArgs<ExtArgs>
+    contentProgress?: boolean | User$contentProgressArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -3769,6 +4775,7 @@ export namespace Prisma {
       userPackProgress: Prisma.$UserPackProgressPayload<ExtArgs>[]
       learningStats: Prisma.$LearningStatsPayload<ExtArgs> | null
       auditLogs: Prisma.$AuditLogPayload<ExtArgs>[]
+      contentProgress: Prisma.$UserContentProgressPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -4203,6 +5210,7 @@ export namespace Prisma {
     userPackProgress<T extends User$userPackProgressArgs<ExtArgs> = {}>(args?: Subset<T, User$userPackProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPackProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     learningStats<T extends User$learningStatsArgs<ExtArgs> = {}>(args?: Subset<T, User$learningStatsArgs<ExtArgs>>): Prisma__LearningStatsClient<$Result.GetResult<Prisma.$LearningStatsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     auditLogs<T extends User$auditLogsArgs<ExtArgs> = {}>(args?: Subset<T, User$auditLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    contentProgress<T extends User$contentProgressArgs<ExtArgs> = {}>(args?: Subset<T, User$contentProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4903,6 +5911,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: AuditLogScalarFieldEnum | AuditLogScalarFieldEnum[]
+  }
+
+  /**
+   * User.contentProgress
+   */
+  export type User$contentProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    where?: UserContentProgressWhereInput
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    cursor?: UserContentProgressWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
   }
 
   /**
@@ -30811,6 +31843,10562 @@ export namespace Prisma {
 
 
   /**
+   * Model Topic
+   */
+
+  export type AggregateTopic = {
+    _count: TopicCountAggregateOutputType | null
+    _avg: TopicAvgAggregateOutputType | null
+    _sum: TopicSumAggregateOutputType | null
+    _min: TopicMinAggregateOutputType | null
+    _max: TopicMaxAggregateOutputType | null
+  }
+
+  export type TopicAvgAggregateOutputType = {
+    sortOrder: number | null
+  }
+
+  export type TopicSumAggregateOutputType = {
+    sortOrder: number | null
+  }
+
+  export type TopicMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    nameZh: string | null
+    nameJa: string | null
+    icon: string | null
+    sortOrder: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TopicMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    nameZh: string | null
+    nameJa: string | null
+    icon: string | null
+    sortOrder: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type TopicCountAggregateOutputType = {
+    id: number
+    name: number
+    nameZh: number
+    nameJa: number
+    icon: number
+    sortOrder: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type TopicAvgAggregateInputType = {
+    sortOrder?: true
+  }
+
+  export type TopicSumAggregateInputType = {
+    sortOrder?: true
+  }
+
+  export type TopicMinAggregateInputType = {
+    id?: true
+    name?: true
+    nameZh?: true
+    nameJa?: true
+    icon?: true
+    sortOrder?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TopicMaxAggregateInputType = {
+    id?: true
+    name?: true
+    nameZh?: true
+    nameJa?: true
+    icon?: true
+    sortOrder?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type TopicCountAggregateInputType = {
+    id?: true
+    name?: true
+    nameZh?: true
+    nameJa?: true
+    icon?: true
+    sortOrder?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type TopicAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Topic to aggregate.
+     */
+    where?: TopicWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Topics to fetch.
+     */
+    orderBy?: TopicOrderByWithRelationInput | TopicOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: TopicWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Topics from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Topics.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Topics
+    **/
+    _count?: true | TopicCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: TopicAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: TopicSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: TopicMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: TopicMaxAggregateInputType
+  }
+
+  export type GetTopicAggregateType<T extends TopicAggregateArgs> = {
+        [P in keyof T & keyof AggregateTopic]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateTopic[P]>
+      : GetScalarType<T[P], AggregateTopic[P]>
+  }
+
+
+
+
+  export type TopicGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TopicWhereInput
+    orderBy?: TopicOrderByWithAggregationInput | TopicOrderByWithAggregationInput[]
+    by: TopicScalarFieldEnum[] | TopicScalarFieldEnum
+    having?: TopicScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: TopicCountAggregateInputType | true
+    _avg?: TopicAvgAggregateInputType
+    _sum?: TopicSumAggregateInputType
+    _min?: TopicMinAggregateInputType
+    _max?: TopicMaxAggregateInputType
+  }
+
+  export type TopicGroupByOutputType = {
+    id: string
+    name: string
+    nameZh: string
+    nameJa: string
+    icon: string
+    sortOrder: number
+    createdAt: Date
+    updatedAt: Date
+    _count: TopicCountAggregateOutputType | null
+    _avg: TopicAvgAggregateOutputType | null
+    _sum: TopicSumAggregateOutputType | null
+    _min: TopicMinAggregateOutputType | null
+    _max: TopicMaxAggregateOutputType | null
+  }
+
+  type GetTopicGroupByPayload<T extends TopicGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<TopicGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof TopicGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], TopicGroupByOutputType[P]>
+            : GetScalarType<T[P], TopicGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type TopicSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    nameZh?: boolean
+    nameJa?: boolean
+    icon?: boolean
+    sortOrder?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    content?: boolean | Topic$contentArgs<ExtArgs>
+    _count?: boolean | TopicCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["topic"]>
+
+  export type TopicSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    nameZh?: boolean
+    nameJa?: boolean
+    icon?: boolean
+    sortOrder?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["topic"]>
+
+  export type TopicSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    nameZh?: boolean
+    nameJa?: boolean
+    icon?: boolean
+    sortOrder?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["topic"]>
+
+  export type TopicSelectScalar = {
+    id?: boolean
+    name?: boolean
+    nameZh?: boolean
+    nameJa?: boolean
+    icon?: boolean
+    sortOrder?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type TopicOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "nameZh" | "nameJa" | "icon" | "sortOrder" | "createdAt" | "updatedAt", ExtArgs["result"]["topic"]>
+  export type TopicInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    content?: boolean | Topic$contentArgs<ExtArgs>
+    _count?: boolean | TopicCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type TopicIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type TopicIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $TopicPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Topic"
+    objects: {
+      content: Prisma.$ContentItemPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      nameZh: string
+      nameJa: string
+      icon: string
+      sortOrder: number
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["topic"]>
+    composites: {}
+  }
+
+  type TopicGetPayload<S extends boolean | null | undefined | TopicDefaultArgs> = $Result.GetResult<Prisma.$TopicPayload, S>
+
+  type TopicCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TopicFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TopicCountAggregateInputType | true
+    }
+
+  export interface TopicDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Topic'], meta: { name: 'Topic' } }
+    /**
+     * Find zero or one Topic that matches the filter.
+     * @param {TopicFindUniqueArgs} args - Arguments to find a Topic
+     * @example
+     * // Get one Topic
+     * const topic = await prisma.topic.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends TopicFindUniqueArgs>(args: SelectSubset<T, TopicFindUniqueArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Topic that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {TopicFindUniqueOrThrowArgs} args - Arguments to find a Topic
+     * @example
+     * // Get one Topic
+     * const topic = await prisma.topic.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends TopicFindUniqueOrThrowArgs>(args: SelectSubset<T, TopicFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Topic that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicFindFirstArgs} args - Arguments to find a Topic
+     * @example
+     * // Get one Topic
+     * const topic = await prisma.topic.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends TopicFindFirstArgs>(args?: SelectSubset<T, TopicFindFirstArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Topic that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicFindFirstOrThrowArgs} args - Arguments to find a Topic
+     * @example
+     * // Get one Topic
+     * const topic = await prisma.topic.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends TopicFindFirstOrThrowArgs>(args?: SelectSubset<T, TopicFindFirstOrThrowArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Topics that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Topics
+     * const topics = await prisma.topic.findMany()
+     * 
+     * // Get first 10 Topics
+     * const topics = await prisma.topic.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const topicWithIdOnly = await prisma.topic.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends TopicFindManyArgs>(args?: SelectSubset<T, TopicFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Topic.
+     * @param {TopicCreateArgs} args - Arguments to create a Topic.
+     * @example
+     * // Create one Topic
+     * const Topic = await prisma.topic.create({
+     *   data: {
+     *     // ... data to create a Topic
+     *   }
+     * })
+     * 
+     */
+    create<T extends TopicCreateArgs>(args: SelectSubset<T, TopicCreateArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Topics.
+     * @param {TopicCreateManyArgs} args - Arguments to create many Topics.
+     * @example
+     * // Create many Topics
+     * const topic = await prisma.topic.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends TopicCreateManyArgs>(args?: SelectSubset<T, TopicCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Topics and returns the data saved in the database.
+     * @param {TopicCreateManyAndReturnArgs} args - Arguments to create many Topics.
+     * @example
+     * // Create many Topics
+     * const topic = await prisma.topic.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Topics and only return the `id`
+     * const topicWithIdOnly = await prisma.topic.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TopicCreateManyAndReturnArgs>(args?: SelectSubset<T, TopicCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Topic.
+     * @param {TopicDeleteArgs} args - Arguments to delete one Topic.
+     * @example
+     * // Delete one Topic
+     * const Topic = await prisma.topic.delete({
+     *   where: {
+     *     // ... filter to delete one Topic
+     *   }
+     * })
+     * 
+     */
+    delete<T extends TopicDeleteArgs>(args: SelectSubset<T, TopicDeleteArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Topic.
+     * @param {TopicUpdateArgs} args - Arguments to update one Topic.
+     * @example
+     * // Update one Topic
+     * const topic = await prisma.topic.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends TopicUpdateArgs>(args: SelectSubset<T, TopicUpdateArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Topics.
+     * @param {TopicDeleteManyArgs} args - Arguments to filter Topics to delete.
+     * @example
+     * // Delete a few Topics
+     * const { count } = await prisma.topic.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends TopicDeleteManyArgs>(args?: SelectSubset<T, TopicDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Topics.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Topics
+     * const topic = await prisma.topic.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends TopicUpdateManyArgs>(args: SelectSubset<T, TopicUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Topics and returns the data updated in the database.
+     * @param {TopicUpdateManyAndReturnArgs} args - Arguments to update many Topics.
+     * @example
+     * // Update many Topics
+     * const topic = await prisma.topic.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Topics and only return the `id`
+     * const topicWithIdOnly = await prisma.topic.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends TopicUpdateManyAndReturnArgs>(args: SelectSubset<T, TopicUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Topic.
+     * @param {TopicUpsertArgs} args - Arguments to update or create a Topic.
+     * @example
+     * // Update or create a Topic
+     * const topic = await prisma.topic.upsert({
+     *   create: {
+     *     // ... data to create a Topic
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Topic we want to update
+     *   }
+     * })
+     */
+    upsert<T extends TopicUpsertArgs>(args: SelectSubset<T, TopicUpsertArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Topics.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicCountArgs} args - Arguments to filter Topics to count.
+     * @example
+     * // Count the number of Topics
+     * const count = await prisma.topic.count({
+     *   where: {
+     *     // ... the filter for the Topics we want to count
+     *   }
+     * })
+    **/
+    count<T extends TopicCountArgs>(
+      args?: Subset<T, TopicCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], TopicCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Topic.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends TopicAggregateArgs>(args: Subset<T, TopicAggregateArgs>): Prisma.PrismaPromise<GetTopicAggregateType<T>>
+
+    /**
+     * Group by Topic.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TopicGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends TopicGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: TopicGroupByArgs['orderBy'] }
+        : { orderBy?: TopicGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, TopicGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTopicGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Topic model
+   */
+  readonly fields: TopicFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Topic.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__TopicClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    content<T extends Topic$contentArgs<ExtArgs> = {}>(args?: Subset<T, Topic$contentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Topic model
+   */
+  interface TopicFieldRefs {
+    readonly id: FieldRef<"Topic", 'String'>
+    readonly name: FieldRef<"Topic", 'String'>
+    readonly nameZh: FieldRef<"Topic", 'String'>
+    readonly nameJa: FieldRef<"Topic", 'String'>
+    readonly icon: FieldRef<"Topic", 'String'>
+    readonly sortOrder: FieldRef<"Topic", 'Int'>
+    readonly createdAt: FieldRef<"Topic", 'DateTime'>
+    readonly updatedAt: FieldRef<"Topic", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Topic findUnique
+   */
+  export type TopicFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter, which Topic to fetch.
+     */
+    where: TopicWhereUniqueInput
+  }
+
+  /**
+   * Topic findUniqueOrThrow
+   */
+  export type TopicFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter, which Topic to fetch.
+     */
+    where: TopicWhereUniqueInput
+  }
+
+  /**
+   * Topic findFirst
+   */
+  export type TopicFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter, which Topic to fetch.
+     */
+    where?: TopicWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Topics to fetch.
+     */
+    orderBy?: TopicOrderByWithRelationInput | TopicOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Topics.
+     */
+    cursor?: TopicWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Topics from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Topics.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Topics.
+     */
+    distinct?: TopicScalarFieldEnum | TopicScalarFieldEnum[]
+  }
+
+  /**
+   * Topic findFirstOrThrow
+   */
+  export type TopicFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter, which Topic to fetch.
+     */
+    where?: TopicWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Topics to fetch.
+     */
+    orderBy?: TopicOrderByWithRelationInput | TopicOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Topics.
+     */
+    cursor?: TopicWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Topics from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Topics.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Topics.
+     */
+    distinct?: TopicScalarFieldEnum | TopicScalarFieldEnum[]
+  }
+
+  /**
+   * Topic findMany
+   */
+  export type TopicFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter, which Topics to fetch.
+     */
+    where?: TopicWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Topics to fetch.
+     */
+    orderBy?: TopicOrderByWithRelationInput | TopicOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Topics.
+     */
+    cursor?: TopicWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Topics from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Topics.
+     */
+    skip?: number
+    distinct?: TopicScalarFieldEnum | TopicScalarFieldEnum[]
+  }
+
+  /**
+   * Topic create
+   */
+  export type TopicCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Topic.
+     */
+    data: XOR<TopicCreateInput, TopicUncheckedCreateInput>
+  }
+
+  /**
+   * Topic createMany
+   */
+  export type TopicCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Topics.
+     */
+    data: TopicCreateManyInput | TopicCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Topic createManyAndReturn
+   */
+  export type TopicCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * The data used to create many Topics.
+     */
+    data: TopicCreateManyInput | TopicCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Topic update
+   */
+  export type TopicUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Topic.
+     */
+    data: XOR<TopicUpdateInput, TopicUncheckedUpdateInput>
+    /**
+     * Choose, which Topic to update.
+     */
+    where: TopicWhereUniqueInput
+  }
+
+  /**
+   * Topic updateMany
+   */
+  export type TopicUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Topics.
+     */
+    data: XOR<TopicUpdateManyMutationInput, TopicUncheckedUpdateManyInput>
+    /**
+     * Filter which Topics to update
+     */
+    where?: TopicWhereInput
+    /**
+     * Limit how many Topics to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Topic updateManyAndReturn
+   */
+  export type TopicUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * The data used to update Topics.
+     */
+    data: XOR<TopicUpdateManyMutationInput, TopicUncheckedUpdateManyInput>
+    /**
+     * Filter which Topics to update
+     */
+    where?: TopicWhereInput
+    /**
+     * Limit how many Topics to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Topic upsert
+   */
+  export type TopicUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Topic to update in case it exists.
+     */
+    where: TopicWhereUniqueInput
+    /**
+     * In case the Topic found by the `where` argument doesn't exist, create a new Topic with this data.
+     */
+    create: XOR<TopicCreateInput, TopicUncheckedCreateInput>
+    /**
+     * In case the Topic was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TopicUpdateInput, TopicUncheckedUpdateInput>
+  }
+
+  /**
+   * Topic delete
+   */
+  export type TopicDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    /**
+     * Filter which Topic to delete.
+     */
+    where: TopicWhereUniqueInput
+  }
+
+  /**
+   * Topic deleteMany
+   */
+  export type TopicDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Topics to delete
+     */
+    where?: TopicWhereInput
+    /**
+     * Limit how many Topics to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Topic.content
+   */
+  export type Topic$contentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    where?: ContentItemWhereInput
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    cursor?: ContentItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * Topic without action
+   */
+  export type TopicDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ContentSource
+   */
+
+  export type AggregateContentSource = {
+    _count: ContentSourceCountAggregateOutputType | null
+    _min: ContentSourceMinAggregateOutputType | null
+    _max: ContentSourceMaxAggregateOutputType | null
+  }
+
+  export type ContentSourceMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    type: string | null
+    baseUrl: string | null
+    description: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentSourceMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    type: string | null
+    baseUrl: string | null
+    description: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentSourceCountAggregateOutputType = {
+    id: number
+    name: number
+    type: number
+    baseUrl: number
+    description: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ContentSourceMinAggregateInputType = {
+    id?: true
+    name?: true
+    type?: true
+    baseUrl?: true
+    description?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentSourceMaxAggregateInputType = {
+    id?: true
+    name?: true
+    type?: true
+    baseUrl?: true
+    description?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentSourceCountAggregateInputType = {
+    id?: true
+    name?: true
+    type?: true
+    baseUrl?: true
+    description?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ContentSourceAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentSource to aggregate.
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSources to fetch.
+     */
+    orderBy?: ContentSourceOrderByWithRelationInput | ContentSourceOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ContentSourceWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSources from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSources.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ContentSources
+    **/
+    _count?: true | ContentSourceCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ContentSourceMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ContentSourceMaxAggregateInputType
+  }
+
+  export type GetContentSourceAggregateType<T extends ContentSourceAggregateArgs> = {
+        [P in keyof T & keyof AggregateContentSource]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateContentSource[P]>
+      : GetScalarType<T[P], AggregateContentSource[P]>
+  }
+
+
+
+
+  export type ContentSourceGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentSourceWhereInput
+    orderBy?: ContentSourceOrderByWithAggregationInput | ContentSourceOrderByWithAggregationInput[]
+    by: ContentSourceScalarFieldEnum[] | ContentSourceScalarFieldEnum
+    having?: ContentSourceScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ContentSourceCountAggregateInputType | true
+    _min?: ContentSourceMinAggregateInputType
+    _max?: ContentSourceMaxAggregateInputType
+  }
+
+  export type ContentSourceGroupByOutputType = {
+    id: string
+    name: string
+    type: string
+    baseUrl: string
+    description: string
+    createdAt: Date
+    updatedAt: Date
+    _count: ContentSourceCountAggregateOutputType | null
+    _min: ContentSourceMinAggregateOutputType | null
+    _max: ContentSourceMaxAggregateOutputType | null
+  }
+
+  type GetContentSourceGroupByPayload<T extends ContentSourceGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ContentSourceGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ContentSourceGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ContentSourceGroupByOutputType[P]>
+            : GetScalarType<T[P], ContentSourceGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ContentSourceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    type?: boolean
+    baseUrl?: boolean
+    description?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    content?: boolean | ContentSource$contentArgs<ExtArgs>
+    _count?: boolean | ContentSourceCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentSource"]>
+
+  export type ContentSourceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    type?: boolean
+    baseUrl?: boolean
+    description?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["contentSource"]>
+
+  export type ContentSourceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    type?: boolean
+    baseUrl?: boolean
+    description?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }, ExtArgs["result"]["contentSource"]>
+
+  export type ContentSourceSelectScalar = {
+    id?: boolean
+    name?: boolean
+    type?: boolean
+    baseUrl?: boolean
+    description?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ContentSourceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "type" | "baseUrl" | "description" | "createdAt" | "updatedAt", ExtArgs["result"]["contentSource"]>
+  export type ContentSourceInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    content?: boolean | ContentSource$contentArgs<ExtArgs>
+    _count?: boolean | ContentSourceCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ContentSourceIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type ContentSourceIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $ContentSourcePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ContentSource"
+    objects: {
+      content: Prisma.$ContentItemPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      type: string
+      baseUrl: string
+      description: string
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["contentSource"]>
+    composites: {}
+  }
+
+  type ContentSourceGetPayload<S extends boolean | null | undefined | ContentSourceDefaultArgs> = $Result.GetResult<Prisma.$ContentSourcePayload, S>
+
+  type ContentSourceCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContentSourceFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContentSourceCountAggregateInputType | true
+    }
+
+  export interface ContentSourceDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ContentSource'], meta: { name: 'ContentSource' } }
+    /**
+     * Find zero or one ContentSource that matches the filter.
+     * @param {ContentSourceFindUniqueArgs} args - Arguments to find a ContentSource
+     * @example
+     * // Get one ContentSource
+     * const contentSource = await prisma.contentSource.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ContentSourceFindUniqueArgs>(args: SelectSubset<T, ContentSourceFindUniqueArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ContentSource that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ContentSourceFindUniqueOrThrowArgs} args - Arguments to find a ContentSource
+     * @example
+     * // Get one ContentSource
+     * const contentSource = await prisma.contentSource.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ContentSourceFindUniqueOrThrowArgs>(args: SelectSubset<T, ContentSourceFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentSource that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceFindFirstArgs} args - Arguments to find a ContentSource
+     * @example
+     * // Get one ContentSource
+     * const contentSource = await prisma.contentSource.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ContentSourceFindFirstArgs>(args?: SelectSubset<T, ContentSourceFindFirstArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentSource that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceFindFirstOrThrowArgs} args - Arguments to find a ContentSource
+     * @example
+     * // Get one ContentSource
+     * const contentSource = await prisma.contentSource.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ContentSourceFindFirstOrThrowArgs>(args?: SelectSubset<T, ContentSourceFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ContentSources that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ContentSources
+     * const contentSources = await prisma.contentSource.findMany()
+     * 
+     * // Get first 10 ContentSources
+     * const contentSources = await prisma.contentSource.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const contentSourceWithIdOnly = await prisma.contentSource.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ContentSourceFindManyArgs>(args?: SelectSubset<T, ContentSourceFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ContentSource.
+     * @param {ContentSourceCreateArgs} args - Arguments to create a ContentSource.
+     * @example
+     * // Create one ContentSource
+     * const ContentSource = await prisma.contentSource.create({
+     *   data: {
+     *     // ... data to create a ContentSource
+     *   }
+     * })
+     * 
+     */
+    create<T extends ContentSourceCreateArgs>(args: SelectSubset<T, ContentSourceCreateArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ContentSources.
+     * @param {ContentSourceCreateManyArgs} args - Arguments to create many ContentSources.
+     * @example
+     * // Create many ContentSources
+     * const contentSource = await prisma.contentSource.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ContentSourceCreateManyArgs>(args?: SelectSubset<T, ContentSourceCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ContentSources and returns the data saved in the database.
+     * @param {ContentSourceCreateManyAndReturnArgs} args - Arguments to create many ContentSources.
+     * @example
+     * // Create many ContentSources
+     * const contentSource = await prisma.contentSource.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ContentSources and only return the `id`
+     * const contentSourceWithIdOnly = await prisma.contentSource.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ContentSourceCreateManyAndReturnArgs>(args?: SelectSubset<T, ContentSourceCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ContentSource.
+     * @param {ContentSourceDeleteArgs} args - Arguments to delete one ContentSource.
+     * @example
+     * // Delete one ContentSource
+     * const ContentSource = await prisma.contentSource.delete({
+     *   where: {
+     *     // ... filter to delete one ContentSource
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ContentSourceDeleteArgs>(args: SelectSubset<T, ContentSourceDeleteArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ContentSource.
+     * @param {ContentSourceUpdateArgs} args - Arguments to update one ContentSource.
+     * @example
+     * // Update one ContentSource
+     * const contentSource = await prisma.contentSource.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ContentSourceUpdateArgs>(args: SelectSubset<T, ContentSourceUpdateArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ContentSources.
+     * @param {ContentSourceDeleteManyArgs} args - Arguments to filter ContentSources to delete.
+     * @example
+     * // Delete a few ContentSources
+     * const { count } = await prisma.contentSource.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ContentSourceDeleteManyArgs>(args?: SelectSubset<T, ContentSourceDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentSources.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ContentSources
+     * const contentSource = await prisma.contentSource.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ContentSourceUpdateManyArgs>(args: SelectSubset<T, ContentSourceUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentSources and returns the data updated in the database.
+     * @param {ContentSourceUpdateManyAndReturnArgs} args - Arguments to update many ContentSources.
+     * @example
+     * // Update many ContentSources
+     * const contentSource = await prisma.contentSource.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ContentSources and only return the `id`
+     * const contentSourceWithIdOnly = await prisma.contentSource.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ContentSourceUpdateManyAndReturnArgs>(args: SelectSubset<T, ContentSourceUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ContentSource.
+     * @param {ContentSourceUpsertArgs} args - Arguments to update or create a ContentSource.
+     * @example
+     * // Update or create a ContentSource
+     * const contentSource = await prisma.contentSource.upsert({
+     *   create: {
+     *     // ... data to create a ContentSource
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ContentSource we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ContentSourceUpsertArgs>(args: SelectSubset<T, ContentSourceUpsertArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ContentSources.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceCountArgs} args - Arguments to filter ContentSources to count.
+     * @example
+     * // Count the number of ContentSources
+     * const count = await prisma.contentSource.count({
+     *   where: {
+     *     // ... the filter for the ContentSources we want to count
+     *   }
+     * })
+    **/
+    count<T extends ContentSourceCountArgs>(
+      args?: Subset<T, ContentSourceCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ContentSourceCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ContentSource.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ContentSourceAggregateArgs>(args: Subset<T, ContentSourceAggregateArgs>): Prisma.PrismaPromise<GetContentSourceAggregateType<T>>
+
+    /**
+     * Group by ContentSource.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSourceGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ContentSourceGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ContentSourceGroupByArgs['orderBy'] }
+        : { orderBy?: ContentSourceGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ContentSourceGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContentSourceGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ContentSource model
+   */
+  readonly fields: ContentSourceFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ContentSource.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ContentSourceClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    content<T extends ContentSource$contentArgs<ExtArgs> = {}>(args?: Subset<T, ContentSource$contentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ContentSource model
+   */
+  interface ContentSourceFieldRefs {
+    readonly id: FieldRef<"ContentSource", 'String'>
+    readonly name: FieldRef<"ContentSource", 'String'>
+    readonly type: FieldRef<"ContentSource", 'String'>
+    readonly baseUrl: FieldRef<"ContentSource", 'String'>
+    readonly description: FieldRef<"ContentSource", 'String'>
+    readonly createdAt: FieldRef<"ContentSource", 'DateTime'>
+    readonly updatedAt: FieldRef<"ContentSource", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ContentSource findUnique
+   */
+  export type ContentSourceFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSource to fetch.
+     */
+    where: ContentSourceWhereUniqueInput
+  }
+
+  /**
+   * ContentSource findUniqueOrThrow
+   */
+  export type ContentSourceFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSource to fetch.
+     */
+    where: ContentSourceWhereUniqueInput
+  }
+
+  /**
+   * ContentSource findFirst
+   */
+  export type ContentSourceFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSource to fetch.
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSources to fetch.
+     */
+    orderBy?: ContentSourceOrderByWithRelationInput | ContentSourceOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentSources.
+     */
+    cursor?: ContentSourceWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSources from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSources.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentSources.
+     */
+    distinct?: ContentSourceScalarFieldEnum | ContentSourceScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSource findFirstOrThrow
+   */
+  export type ContentSourceFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSource to fetch.
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSources to fetch.
+     */
+    orderBy?: ContentSourceOrderByWithRelationInput | ContentSourceOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentSources.
+     */
+    cursor?: ContentSourceWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSources from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSources.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentSources.
+     */
+    distinct?: ContentSourceScalarFieldEnum | ContentSourceScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSource findMany
+   */
+  export type ContentSourceFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSources to fetch.
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSources to fetch.
+     */
+    orderBy?: ContentSourceOrderByWithRelationInput | ContentSourceOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ContentSources.
+     */
+    cursor?: ContentSourceWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSources from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSources.
+     */
+    skip?: number
+    distinct?: ContentSourceScalarFieldEnum | ContentSourceScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSource create
+   */
+  export type ContentSourceCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ContentSource.
+     */
+    data: XOR<ContentSourceCreateInput, ContentSourceUncheckedCreateInput>
+  }
+
+  /**
+   * ContentSource createMany
+   */
+  export type ContentSourceCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ContentSources.
+     */
+    data: ContentSourceCreateManyInput | ContentSourceCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentSource createManyAndReturn
+   */
+  export type ContentSourceCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * The data used to create many ContentSources.
+     */
+    data: ContentSourceCreateManyInput | ContentSourceCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentSource update
+   */
+  export type ContentSourceUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ContentSource.
+     */
+    data: XOR<ContentSourceUpdateInput, ContentSourceUncheckedUpdateInput>
+    /**
+     * Choose, which ContentSource to update.
+     */
+    where: ContentSourceWhereUniqueInput
+  }
+
+  /**
+   * ContentSource updateMany
+   */
+  export type ContentSourceUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ContentSources.
+     */
+    data: XOR<ContentSourceUpdateManyMutationInput, ContentSourceUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentSources to update
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * Limit how many ContentSources to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentSource updateManyAndReturn
+   */
+  export type ContentSourceUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * The data used to update ContentSources.
+     */
+    data: XOR<ContentSourceUpdateManyMutationInput, ContentSourceUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentSources to update
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * Limit how many ContentSources to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentSource upsert
+   */
+  export type ContentSourceUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ContentSource to update in case it exists.
+     */
+    where: ContentSourceWhereUniqueInput
+    /**
+     * In case the ContentSource found by the `where` argument doesn't exist, create a new ContentSource with this data.
+     */
+    create: XOR<ContentSourceCreateInput, ContentSourceUncheckedCreateInput>
+    /**
+     * In case the ContentSource was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContentSourceUpdateInput, ContentSourceUncheckedUpdateInput>
+  }
+
+  /**
+   * ContentSource delete
+   */
+  export type ContentSourceDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    /**
+     * Filter which ContentSource to delete.
+     */
+    where: ContentSourceWhereUniqueInput
+  }
+
+  /**
+   * ContentSource deleteMany
+   */
+  export type ContentSourceDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentSources to delete
+     */
+    where?: ContentSourceWhereInput
+    /**
+     * Limit how many ContentSources to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentSource.content
+   */
+  export type ContentSource$contentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    where?: ContentItemWhereInput
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    cursor?: ContentItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSource without action
+   */
+  export type ContentSourceDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ContentItem
+   */
+
+  export type AggregateContentItem = {
+    _count: ContentItemCountAggregateOutputType | null
+    _avg: ContentItemAvgAggregateOutputType | null
+    _sum: ContentItemSumAggregateOutputType | null
+    _min: ContentItemMinAggregateOutputType | null
+    _max: ContentItemMaxAggregateOutputType | null
+  }
+
+  export type ContentItemAvgAggregateOutputType = {
+    wordCount: number | null
+    estimatedMinutes: number | null
+  }
+
+  export type ContentItemSumAggregateOutputType = {
+    wordCount: number | null
+    estimatedMinutes: number | null
+  }
+
+  export type ContentItemMinAggregateOutputType = {
+    id: string | null
+    sourceId: string | null
+    topicId: string | null
+    title: string | null
+    titleZh: string | null
+    url: string | null
+    imageUrl: string | null
+    rawText: string | null
+    cleanedText: string | null
+    simplifiedText: string | null
+    summary: string | null
+    contentType: $Enums.ContentType | null
+    status: $Enums.ContentStatus | null
+    jlptLevel: string | null
+    wordCount: number | null
+    estimatedMinutes: number | null
+    publishedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentItemMaxAggregateOutputType = {
+    id: string | null
+    sourceId: string | null
+    topicId: string | null
+    title: string | null
+    titleZh: string | null
+    url: string | null
+    imageUrl: string | null
+    rawText: string | null
+    cleanedText: string | null
+    simplifiedText: string | null
+    summary: string | null
+    contentType: $Enums.ContentType | null
+    status: $Enums.ContentStatus | null
+    jlptLevel: string | null
+    wordCount: number | null
+    estimatedMinutes: number | null
+    publishedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentItemCountAggregateOutputType = {
+    id: number
+    sourceId: number
+    topicId: number
+    title: number
+    titleZh: number
+    url: number
+    imageUrl: number
+    rawText: number
+    cleanedText: number
+    simplifiedText: number
+    summary: number
+    contentType: number
+    status: number
+    jlptLevel: number
+    wordCount: number
+    estimatedMinutes: number
+    extractedVocab: number
+    extractedGrammar: number
+    publishedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ContentItemAvgAggregateInputType = {
+    wordCount?: true
+    estimatedMinutes?: true
+  }
+
+  export type ContentItemSumAggregateInputType = {
+    wordCount?: true
+    estimatedMinutes?: true
+  }
+
+  export type ContentItemMinAggregateInputType = {
+    id?: true
+    sourceId?: true
+    topicId?: true
+    title?: true
+    titleZh?: true
+    url?: true
+    imageUrl?: true
+    rawText?: true
+    cleanedText?: true
+    simplifiedText?: true
+    summary?: true
+    contentType?: true
+    status?: true
+    jlptLevel?: true
+    wordCount?: true
+    estimatedMinutes?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentItemMaxAggregateInputType = {
+    id?: true
+    sourceId?: true
+    topicId?: true
+    title?: true
+    titleZh?: true
+    url?: true
+    imageUrl?: true
+    rawText?: true
+    cleanedText?: true
+    simplifiedText?: true
+    summary?: true
+    contentType?: true
+    status?: true
+    jlptLevel?: true
+    wordCount?: true
+    estimatedMinutes?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentItemCountAggregateInputType = {
+    id?: true
+    sourceId?: true
+    topicId?: true
+    title?: true
+    titleZh?: true
+    url?: true
+    imageUrl?: true
+    rawText?: true
+    cleanedText?: true
+    simplifiedText?: true
+    summary?: true
+    contentType?: true
+    status?: true
+    jlptLevel?: true
+    wordCount?: true
+    estimatedMinutes?: true
+    extractedVocab?: true
+    extractedGrammar?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ContentItemAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentItem to aggregate.
+     */
+    where?: ContentItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentItems to fetch.
+     */
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ContentItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ContentItems
+    **/
+    _count?: true | ContentItemCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ContentItemAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ContentItemSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ContentItemMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ContentItemMaxAggregateInputType
+  }
+
+  export type GetContentItemAggregateType<T extends ContentItemAggregateArgs> = {
+        [P in keyof T & keyof AggregateContentItem]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateContentItem[P]>
+      : GetScalarType<T[P], AggregateContentItem[P]>
+  }
+
+
+
+
+  export type ContentItemGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentItemWhereInput
+    orderBy?: ContentItemOrderByWithAggregationInput | ContentItemOrderByWithAggregationInput[]
+    by: ContentItemScalarFieldEnum[] | ContentItemScalarFieldEnum
+    having?: ContentItemScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ContentItemCountAggregateInputType | true
+    _avg?: ContentItemAvgAggregateInputType
+    _sum?: ContentItemSumAggregateInputType
+    _min?: ContentItemMinAggregateInputType
+    _max?: ContentItemMaxAggregateInputType
+  }
+
+  export type ContentItemGroupByOutputType = {
+    id: string
+    sourceId: string | null
+    topicId: string | null
+    title: string
+    titleZh: string
+    url: string
+    imageUrl: string | null
+    rawText: string
+    cleanedText: string
+    simplifiedText: string | null
+    summary: string | null
+    contentType: $Enums.ContentType
+    status: $Enums.ContentStatus
+    jlptLevel: string
+    wordCount: number
+    estimatedMinutes: number
+    extractedVocab: JsonValue | null
+    extractedGrammar: JsonValue | null
+    publishedAt: Date | null
+    createdAt: Date
+    updatedAt: Date
+    _count: ContentItemCountAggregateOutputType | null
+    _avg: ContentItemAvgAggregateOutputType | null
+    _sum: ContentItemSumAggregateOutputType | null
+    _min: ContentItemMinAggregateOutputType | null
+    _max: ContentItemMaxAggregateOutputType | null
+  }
+
+  type GetContentItemGroupByPayload<T extends ContentItemGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ContentItemGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ContentItemGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ContentItemGroupByOutputType[P]>
+            : GetScalarType<T[P], ContentItemGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ContentItemSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    sourceId?: boolean
+    topicId?: boolean
+    title?: boolean
+    titleZh?: boolean
+    url?: boolean
+    imageUrl?: boolean
+    rawText?: boolean
+    cleanedText?: boolean
+    simplifiedText?: boolean
+    summary?: boolean
+    contentType?: boolean
+    status?: boolean
+    jlptLevel?: boolean
+    wordCount?: boolean
+    estimatedMinutes?: boolean
+    extractedVocab?: boolean
+    extractedGrammar?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    sections?: boolean | ContentItem$sectionsArgs<ExtArgs>
+    audio?: boolean | ContentItem$audioArgs<ExtArgs>
+    questions?: boolean | ContentItem$questionsArgs<ExtArgs>
+    srsItems?: boolean | ContentItem$srsItemsArgs<ExtArgs>
+    userProgress?: boolean | ContentItem$userProgressArgs<ExtArgs>
+    importJob?: boolean | ContentItem$importJobArgs<ExtArgs>
+    _count?: boolean | ContentItemCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentItem"]>
+
+  export type ContentItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    sourceId?: boolean
+    topicId?: boolean
+    title?: boolean
+    titleZh?: boolean
+    url?: boolean
+    imageUrl?: boolean
+    rawText?: boolean
+    cleanedText?: boolean
+    simplifiedText?: boolean
+    summary?: boolean
+    contentType?: boolean
+    status?: boolean
+    jlptLevel?: boolean
+    wordCount?: boolean
+    estimatedMinutes?: boolean
+    extractedVocab?: boolean
+    extractedGrammar?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+  }, ExtArgs["result"]["contentItem"]>
+
+  export type ContentItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    sourceId?: boolean
+    topicId?: boolean
+    title?: boolean
+    titleZh?: boolean
+    url?: boolean
+    imageUrl?: boolean
+    rawText?: boolean
+    cleanedText?: boolean
+    simplifiedText?: boolean
+    summary?: boolean
+    contentType?: boolean
+    status?: boolean
+    jlptLevel?: boolean
+    wordCount?: boolean
+    estimatedMinutes?: boolean
+    extractedVocab?: boolean
+    extractedGrammar?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+  }, ExtArgs["result"]["contentItem"]>
+
+  export type ContentItemSelectScalar = {
+    id?: boolean
+    sourceId?: boolean
+    topicId?: boolean
+    title?: boolean
+    titleZh?: boolean
+    url?: boolean
+    imageUrl?: boolean
+    rawText?: boolean
+    cleanedText?: boolean
+    simplifiedText?: boolean
+    summary?: boolean
+    contentType?: boolean
+    status?: boolean
+    jlptLevel?: boolean
+    wordCount?: boolean
+    estimatedMinutes?: boolean
+    extractedVocab?: boolean
+    extractedGrammar?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ContentItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "sourceId" | "topicId" | "title" | "titleZh" | "url" | "imageUrl" | "rawText" | "cleanedText" | "simplifiedText" | "summary" | "contentType" | "status" | "jlptLevel" | "wordCount" | "estimatedMinutes" | "extractedVocab" | "extractedGrammar" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["contentItem"]>
+  export type ContentItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    sections?: boolean | ContentItem$sectionsArgs<ExtArgs>
+    audio?: boolean | ContentItem$audioArgs<ExtArgs>
+    questions?: boolean | ContentItem$questionsArgs<ExtArgs>
+    srsItems?: boolean | ContentItem$srsItemsArgs<ExtArgs>
+    userProgress?: boolean | ContentItem$userProgressArgs<ExtArgs>
+    importJob?: boolean | ContentItem$importJobArgs<ExtArgs>
+    _count?: boolean | ContentItemCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ContentItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+  }
+  export type ContentItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    source?: boolean | ContentItem$sourceArgs<ExtArgs>
+    topic?: boolean | ContentItem$topicArgs<ExtArgs>
+  }
+
+  export type $ContentItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ContentItem"
+    objects: {
+      source: Prisma.$ContentSourcePayload<ExtArgs> | null
+      topic: Prisma.$TopicPayload<ExtArgs> | null
+      sections: Prisma.$ContentSectionPayload<ExtArgs>[]
+      audio: Prisma.$ContentAudioPayload<ExtArgs>[]
+      questions: Prisma.$GeneratedQuestionPayload<ExtArgs>[]
+      srsItems: Prisma.$GeneratedSRSItemPayload<ExtArgs>[]
+      userProgress: Prisma.$UserContentProgressPayload<ExtArgs>[]
+      importJob: Prisma.$ContentImportJobPayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      sourceId: string | null
+      topicId: string | null
+      title: string
+      titleZh: string
+      url: string
+      imageUrl: string | null
+      rawText: string
+      cleanedText: string
+      simplifiedText: string | null
+      summary: string | null
+      contentType: $Enums.ContentType
+      status: $Enums.ContentStatus
+      jlptLevel: string
+      wordCount: number
+      estimatedMinutes: number
+      extractedVocab: Prisma.JsonValue | null
+      extractedGrammar: Prisma.JsonValue | null
+      publishedAt: Date | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["contentItem"]>
+    composites: {}
+  }
+
+  type ContentItemGetPayload<S extends boolean | null | undefined | ContentItemDefaultArgs> = $Result.GetResult<Prisma.$ContentItemPayload, S>
+
+  type ContentItemCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContentItemFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContentItemCountAggregateInputType | true
+    }
+
+  export interface ContentItemDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ContentItem'], meta: { name: 'ContentItem' } }
+    /**
+     * Find zero or one ContentItem that matches the filter.
+     * @param {ContentItemFindUniqueArgs} args - Arguments to find a ContentItem
+     * @example
+     * // Get one ContentItem
+     * const contentItem = await prisma.contentItem.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ContentItemFindUniqueArgs>(args: SelectSubset<T, ContentItemFindUniqueArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ContentItem that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ContentItemFindUniqueOrThrowArgs} args - Arguments to find a ContentItem
+     * @example
+     * // Get one ContentItem
+     * const contentItem = await prisma.contentItem.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ContentItemFindUniqueOrThrowArgs>(args: SelectSubset<T, ContentItemFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentItem that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemFindFirstArgs} args - Arguments to find a ContentItem
+     * @example
+     * // Get one ContentItem
+     * const contentItem = await prisma.contentItem.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ContentItemFindFirstArgs>(args?: SelectSubset<T, ContentItemFindFirstArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentItem that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemFindFirstOrThrowArgs} args - Arguments to find a ContentItem
+     * @example
+     * // Get one ContentItem
+     * const contentItem = await prisma.contentItem.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ContentItemFindFirstOrThrowArgs>(args?: SelectSubset<T, ContentItemFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ContentItems that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ContentItems
+     * const contentItems = await prisma.contentItem.findMany()
+     * 
+     * // Get first 10 ContentItems
+     * const contentItems = await prisma.contentItem.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const contentItemWithIdOnly = await prisma.contentItem.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ContentItemFindManyArgs>(args?: SelectSubset<T, ContentItemFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ContentItem.
+     * @param {ContentItemCreateArgs} args - Arguments to create a ContentItem.
+     * @example
+     * // Create one ContentItem
+     * const ContentItem = await prisma.contentItem.create({
+     *   data: {
+     *     // ... data to create a ContentItem
+     *   }
+     * })
+     * 
+     */
+    create<T extends ContentItemCreateArgs>(args: SelectSubset<T, ContentItemCreateArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ContentItems.
+     * @param {ContentItemCreateManyArgs} args - Arguments to create many ContentItems.
+     * @example
+     * // Create many ContentItems
+     * const contentItem = await prisma.contentItem.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ContentItemCreateManyArgs>(args?: SelectSubset<T, ContentItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ContentItems and returns the data saved in the database.
+     * @param {ContentItemCreateManyAndReturnArgs} args - Arguments to create many ContentItems.
+     * @example
+     * // Create many ContentItems
+     * const contentItem = await prisma.contentItem.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ContentItems and only return the `id`
+     * const contentItemWithIdOnly = await prisma.contentItem.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ContentItemCreateManyAndReturnArgs>(args?: SelectSubset<T, ContentItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ContentItem.
+     * @param {ContentItemDeleteArgs} args - Arguments to delete one ContentItem.
+     * @example
+     * // Delete one ContentItem
+     * const ContentItem = await prisma.contentItem.delete({
+     *   where: {
+     *     // ... filter to delete one ContentItem
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ContentItemDeleteArgs>(args: SelectSubset<T, ContentItemDeleteArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ContentItem.
+     * @param {ContentItemUpdateArgs} args - Arguments to update one ContentItem.
+     * @example
+     * // Update one ContentItem
+     * const contentItem = await prisma.contentItem.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ContentItemUpdateArgs>(args: SelectSubset<T, ContentItemUpdateArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ContentItems.
+     * @param {ContentItemDeleteManyArgs} args - Arguments to filter ContentItems to delete.
+     * @example
+     * // Delete a few ContentItems
+     * const { count } = await prisma.contentItem.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ContentItemDeleteManyArgs>(args?: SelectSubset<T, ContentItemDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentItems.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ContentItems
+     * const contentItem = await prisma.contentItem.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ContentItemUpdateManyArgs>(args: SelectSubset<T, ContentItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentItems and returns the data updated in the database.
+     * @param {ContentItemUpdateManyAndReturnArgs} args - Arguments to update many ContentItems.
+     * @example
+     * // Update many ContentItems
+     * const contentItem = await prisma.contentItem.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ContentItems and only return the `id`
+     * const contentItemWithIdOnly = await prisma.contentItem.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ContentItemUpdateManyAndReturnArgs>(args: SelectSubset<T, ContentItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ContentItem.
+     * @param {ContentItemUpsertArgs} args - Arguments to update or create a ContentItem.
+     * @example
+     * // Update or create a ContentItem
+     * const contentItem = await prisma.contentItem.upsert({
+     *   create: {
+     *     // ... data to create a ContentItem
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ContentItem we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ContentItemUpsertArgs>(args: SelectSubset<T, ContentItemUpsertArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ContentItems.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemCountArgs} args - Arguments to filter ContentItems to count.
+     * @example
+     * // Count the number of ContentItems
+     * const count = await prisma.contentItem.count({
+     *   where: {
+     *     // ... the filter for the ContentItems we want to count
+     *   }
+     * })
+    **/
+    count<T extends ContentItemCountArgs>(
+      args?: Subset<T, ContentItemCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ContentItemCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ContentItem.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ContentItemAggregateArgs>(args: Subset<T, ContentItemAggregateArgs>): Prisma.PrismaPromise<GetContentItemAggregateType<T>>
+
+    /**
+     * Group by ContentItem.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentItemGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ContentItemGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ContentItemGroupByArgs['orderBy'] }
+        : { orderBy?: ContentItemGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ContentItemGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContentItemGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ContentItem model
+   */
+  readonly fields: ContentItemFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ContentItem.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ContentItemClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    source<T extends ContentItem$sourceArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$sourceArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    topic<T extends ContentItem$topicArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$topicArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    sections<T extends ContentItem$sectionsArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$sectionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    audio<T extends ContentItem$audioArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$audioArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    questions<T extends ContentItem$questionsArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$questionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    srsItems<T extends ContentItem$srsItemsArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$srsItemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    userProgress<T extends ContentItem$userProgressArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$userProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    importJob<T extends ContentItem$importJobArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$importJobArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ContentItem model
+   */
+  interface ContentItemFieldRefs {
+    readonly id: FieldRef<"ContentItem", 'String'>
+    readonly sourceId: FieldRef<"ContentItem", 'String'>
+    readonly topicId: FieldRef<"ContentItem", 'String'>
+    readonly title: FieldRef<"ContentItem", 'String'>
+    readonly titleZh: FieldRef<"ContentItem", 'String'>
+    readonly url: FieldRef<"ContentItem", 'String'>
+    readonly imageUrl: FieldRef<"ContentItem", 'String'>
+    readonly rawText: FieldRef<"ContentItem", 'String'>
+    readonly cleanedText: FieldRef<"ContentItem", 'String'>
+    readonly simplifiedText: FieldRef<"ContentItem", 'String'>
+    readonly summary: FieldRef<"ContentItem", 'String'>
+    readonly contentType: FieldRef<"ContentItem", 'ContentType'>
+    readonly status: FieldRef<"ContentItem", 'ContentStatus'>
+    readonly jlptLevel: FieldRef<"ContentItem", 'String'>
+    readonly wordCount: FieldRef<"ContentItem", 'Int'>
+    readonly estimatedMinutes: FieldRef<"ContentItem", 'Int'>
+    readonly extractedVocab: FieldRef<"ContentItem", 'Json'>
+    readonly extractedGrammar: FieldRef<"ContentItem", 'Json'>
+    readonly publishedAt: FieldRef<"ContentItem", 'DateTime'>
+    readonly createdAt: FieldRef<"ContentItem", 'DateTime'>
+    readonly updatedAt: FieldRef<"ContentItem", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ContentItem findUnique
+   */
+  export type ContentItemFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentItem to fetch.
+     */
+    where: ContentItemWhereUniqueInput
+  }
+
+  /**
+   * ContentItem findUniqueOrThrow
+   */
+  export type ContentItemFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentItem to fetch.
+     */
+    where: ContentItemWhereUniqueInput
+  }
+
+  /**
+   * ContentItem findFirst
+   */
+  export type ContentItemFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentItem to fetch.
+     */
+    where?: ContentItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentItems to fetch.
+     */
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentItems.
+     */
+    cursor?: ContentItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentItems.
+     */
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem findFirstOrThrow
+   */
+  export type ContentItemFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentItem to fetch.
+     */
+    where?: ContentItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentItems to fetch.
+     */
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentItems.
+     */
+    cursor?: ContentItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentItems.
+     */
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem findMany
+   */
+  export type ContentItemFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentItems to fetch.
+     */
+    where?: ContentItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentItems to fetch.
+     */
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ContentItems.
+     */
+    cursor?: ContentItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentItems.
+     */
+    skip?: number
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem create
+   */
+  export type ContentItemCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ContentItem.
+     */
+    data: XOR<ContentItemCreateInput, ContentItemUncheckedCreateInput>
+  }
+
+  /**
+   * ContentItem createMany
+   */
+  export type ContentItemCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ContentItems.
+     */
+    data: ContentItemCreateManyInput | ContentItemCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentItem createManyAndReturn
+   */
+  export type ContentItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * The data used to create many ContentItems.
+     */
+    data: ContentItemCreateManyInput | ContentItemCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentItem update
+   */
+  export type ContentItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ContentItem.
+     */
+    data: XOR<ContentItemUpdateInput, ContentItemUncheckedUpdateInput>
+    /**
+     * Choose, which ContentItem to update.
+     */
+    where: ContentItemWhereUniqueInput
+  }
+
+  /**
+   * ContentItem updateMany
+   */
+  export type ContentItemUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ContentItems.
+     */
+    data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentItems to update
+     */
+    where?: ContentItemWhereInput
+    /**
+     * Limit how many ContentItems to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentItem updateManyAndReturn
+   */
+  export type ContentItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * The data used to update ContentItems.
+     */
+    data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentItems to update
+     */
+    where?: ContentItemWhereInput
+    /**
+     * Limit how many ContentItems to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentItem upsert
+   */
+  export type ContentItemUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ContentItem to update in case it exists.
+     */
+    where: ContentItemWhereUniqueInput
+    /**
+     * In case the ContentItem found by the `where` argument doesn't exist, create a new ContentItem with this data.
+     */
+    create: XOR<ContentItemCreateInput, ContentItemUncheckedCreateInput>
+    /**
+     * In case the ContentItem was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContentItemUpdateInput, ContentItemUncheckedUpdateInput>
+  }
+
+  /**
+   * ContentItem delete
+   */
+  export type ContentItemDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    /**
+     * Filter which ContentItem to delete.
+     */
+    where: ContentItemWhereUniqueInput
+  }
+
+  /**
+   * ContentItem deleteMany
+   */
+  export type ContentItemDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentItems to delete
+     */
+    where?: ContentItemWhereInput
+    /**
+     * Limit how many ContentItems to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentItem.source
+   */
+  export type ContentItem$sourceArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSource
+     */
+    select?: ContentSourceSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSource
+     */
+    omit?: ContentSourceOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSourceInclude<ExtArgs> | null
+    where?: ContentSourceWhereInput
+  }
+
+  /**
+   * ContentItem.topic
+   */
+  export type ContentItem$topicArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    where?: TopicWhereInput
+  }
+
+  /**
+   * ContentItem.sections
+   */
+  export type ContentItem$sectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    where?: ContentSectionWhereInput
+    orderBy?: ContentSectionOrderByWithRelationInput | ContentSectionOrderByWithRelationInput[]
+    cursor?: ContentSectionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContentSectionScalarFieldEnum | ContentSectionScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem.audio
+   */
+  export type ContentItem$audioArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    where?: ContentAudioWhereInput
+    orderBy?: ContentAudioOrderByWithRelationInput | ContentAudioOrderByWithRelationInput[]
+    cursor?: ContentAudioWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContentAudioScalarFieldEnum | ContentAudioScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem.questions
+   */
+  export type ContentItem$questionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    where?: GeneratedQuestionWhereInput
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    cursor?: GeneratedQuestionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GeneratedQuestionScalarFieldEnum | GeneratedQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem.srsItems
+   */
+  export type ContentItem$srsItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    where?: GeneratedSRSItemWhereInput
+    orderBy?: GeneratedSRSItemOrderByWithRelationInput | GeneratedSRSItemOrderByWithRelationInput[]
+    cursor?: GeneratedSRSItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GeneratedSRSItemScalarFieldEnum | GeneratedSRSItemScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem.userProgress
+   */
+  export type ContentItem$userProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    where?: UserContentProgressWhereInput
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    cursor?: UserContentProgressWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
+  }
+
+  /**
+   * ContentItem.importJob
+   */
+  export type ContentItem$importJobArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    where?: ContentImportJobWhereInput
+  }
+
+  /**
+   * ContentItem without action
+   */
+  export type ContentItemDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ContentSection
+   */
+
+  export type AggregateContentSection = {
+    _count: ContentSectionCountAggregateOutputType | null
+    _avg: ContentSectionAvgAggregateOutputType | null
+    _sum: ContentSectionSumAggregateOutputType | null
+    _min: ContentSectionMinAggregateOutputType | null
+    _max: ContentSectionMaxAggregateOutputType | null
+  }
+
+  export type ContentSectionAvgAggregateOutputType = {
+    orderIndex: number | null
+  }
+
+  export type ContentSectionSumAggregateOutputType = {
+    orderIndex: number | null
+  }
+
+  export type ContentSectionMinAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    orderIndex: number | null
+    type: string | null
+    text: string | null
+    jlptLevel: string | null
+  }
+
+  export type ContentSectionMaxAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    orderIndex: number | null
+    type: string | null
+    text: string | null
+    jlptLevel: string | null
+  }
+
+  export type ContentSectionCountAggregateOutputType = {
+    id: number
+    contentItemId: number
+    orderIndex: number
+    type: number
+    text: number
+    jlptLevel: number
+    vocabHighlights: number
+    grammarTags: number
+    _all: number
+  }
+
+
+  export type ContentSectionAvgAggregateInputType = {
+    orderIndex?: true
+  }
+
+  export type ContentSectionSumAggregateInputType = {
+    orderIndex?: true
+  }
+
+  export type ContentSectionMinAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    orderIndex?: true
+    type?: true
+    text?: true
+    jlptLevel?: true
+  }
+
+  export type ContentSectionMaxAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    orderIndex?: true
+    type?: true
+    text?: true
+    jlptLevel?: true
+  }
+
+  export type ContentSectionCountAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    orderIndex?: true
+    type?: true
+    text?: true
+    jlptLevel?: true
+    vocabHighlights?: true
+    grammarTags?: true
+    _all?: true
+  }
+
+  export type ContentSectionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentSection to aggregate.
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSections to fetch.
+     */
+    orderBy?: ContentSectionOrderByWithRelationInput | ContentSectionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ContentSectionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSections from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSections.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ContentSections
+    **/
+    _count?: true | ContentSectionCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ContentSectionAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ContentSectionSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ContentSectionMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ContentSectionMaxAggregateInputType
+  }
+
+  export type GetContentSectionAggregateType<T extends ContentSectionAggregateArgs> = {
+        [P in keyof T & keyof AggregateContentSection]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateContentSection[P]>
+      : GetScalarType<T[P], AggregateContentSection[P]>
+  }
+
+
+
+
+  export type ContentSectionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentSectionWhereInput
+    orderBy?: ContentSectionOrderByWithAggregationInput | ContentSectionOrderByWithAggregationInput[]
+    by: ContentSectionScalarFieldEnum[] | ContentSectionScalarFieldEnum
+    having?: ContentSectionScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ContentSectionCountAggregateInputType | true
+    _avg?: ContentSectionAvgAggregateInputType
+    _sum?: ContentSectionSumAggregateInputType
+    _min?: ContentSectionMinAggregateInputType
+    _max?: ContentSectionMaxAggregateInputType
+  }
+
+  export type ContentSectionGroupByOutputType = {
+    id: string
+    contentItemId: string
+    orderIndex: number
+    type: string
+    text: string
+    jlptLevel: string | null
+    vocabHighlights: JsonValue | null
+    grammarTags: JsonValue | null
+    _count: ContentSectionCountAggregateOutputType | null
+    _avg: ContentSectionAvgAggregateOutputType | null
+    _sum: ContentSectionSumAggregateOutputType | null
+    _min: ContentSectionMinAggregateOutputType | null
+    _max: ContentSectionMaxAggregateOutputType | null
+  }
+
+  type GetContentSectionGroupByPayload<T extends ContentSectionGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ContentSectionGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ContentSectionGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ContentSectionGroupByOutputType[P]>
+            : GetScalarType<T[P], ContentSectionGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ContentSectionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    orderIndex?: boolean
+    type?: boolean
+    text?: boolean
+    jlptLevel?: boolean
+    vocabHighlights?: boolean
+    grammarTags?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentSection"]>
+
+  export type ContentSectionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    orderIndex?: boolean
+    type?: boolean
+    text?: boolean
+    jlptLevel?: boolean
+    vocabHighlights?: boolean
+    grammarTags?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentSection"]>
+
+  export type ContentSectionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    orderIndex?: boolean
+    type?: boolean
+    text?: boolean
+    jlptLevel?: boolean
+    vocabHighlights?: boolean
+    grammarTags?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentSection"]>
+
+  export type ContentSectionSelectScalar = {
+    id?: boolean
+    contentItemId?: boolean
+    orderIndex?: boolean
+    type?: boolean
+    text?: boolean
+    jlptLevel?: boolean
+    vocabHighlights?: boolean
+    grammarTags?: boolean
+  }
+
+  export type ContentSectionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "orderIndex" | "type" | "text" | "jlptLevel" | "vocabHighlights" | "grammarTags", ExtArgs["result"]["contentSection"]>
+  export type ContentSectionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentSectionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentSectionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $ContentSectionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ContentSection"
+    objects: {
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      contentItemId: string
+      orderIndex: number
+      type: string
+      text: string
+      jlptLevel: string | null
+      vocabHighlights: Prisma.JsonValue | null
+      grammarTags: Prisma.JsonValue | null
+    }, ExtArgs["result"]["contentSection"]>
+    composites: {}
+  }
+
+  type ContentSectionGetPayload<S extends boolean | null | undefined | ContentSectionDefaultArgs> = $Result.GetResult<Prisma.$ContentSectionPayload, S>
+
+  type ContentSectionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContentSectionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContentSectionCountAggregateInputType | true
+    }
+
+  export interface ContentSectionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ContentSection'], meta: { name: 'ContentSection' } }
+    /**
+     * Find zero or one ContentSection that matches the filter.
+     * @param {ContentSectionFindUniqueArgs} args - Arguments to find a ContentSection
+     * @example
+     * // Get one ContentSection
+     * const contentSection = await prisma.contentSection.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ContentSectionFindUniqueArgs>(args: SelectSubset<T, ContentSectionFindUniqueArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ContentSection that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ContentSectionFindUniqueOrThrowArgs} args - Arguments to find a ContentSection
+     * @example
+     * // Get one ContentSection
+     * const contentSection = await prisma.contentSection.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ContentSectionFindUniqueOrThrowArgs>(args: SelectSubset<T, ContentSectionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentSection that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionFindFirstArgs} args - Arguments to find a ContentSection
+     * @example
+     * // Get one ContentSection
+     * const contentSection = await prisma.contentSection.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ContentSectionFindFirstArgs>(args?: SelectSubset<T, ContentSectionFindFirstArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentSection that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionFindFirstOrThrowArgs} args - Arguments to find a ContentSection
+     * @example
+     * // Get one ContentSection
+     * const contentSection = await prisma.contentSection.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ContentSectionFindFirstOrThrowArgs>(args?: SelectSubset<T, ContentSectionFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ContentSections that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ContentSections
+     * const contentSections = await prisma.contentSection.findMany()
+     * 
+     * // Get first 10 ContentSections
+     * const contentSections = await prisma.contentSection.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const contentSectionWithIdOnly = await prisma.contentSection.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ContentSectionFindManyArgs>(args?: SelectSubset<T, ContentSectionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ContentSection.
+     * @param {ContentSectionCreateArgs} args - Arguments to create a ContentSection.
+     * @example
+     * // Create one ContentSection
+     * const ContentSection = await prisma.contentSection.create({
+     *   data: {
+     *     // ... data to create a ContentSection
+     *   }
+     * })
+     * 
+     */
+    create<T extends ContentSectionCreateArgs>(args: SelectSubset<T, ContentSectionCreateArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ContentSections.
+     * @param {ContentSectionCreateManyArgs} args - Arguments to create many ContentSections.
+     * @example
+     * // Create many ContentSections
+     * const contentSection = await prisma.contentSection.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ContentSectionCreateManyArgs>(args?: SelectSubset<T, ContentSectionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ContentSections and returns the data saved in the database.
+     * @param {ContentSectionCreateManyAndReturnArgs} args - Arguments to create many ContentSections.
+     * @example
+     * // Create many ContentSections
+     * const contentSection = await prisma.contentSection.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ContentSections and only return the `id`
+     * const contentSectionWithIdOnly = await prisma.contentSection.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ContentSectionCreateManyAndReturnArgs>(args?: SelectSubset<T, ContentSectionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ContentSection.
+     * @param {ContentSectionDeleteArgs} args - Arguments to delete one ContentSection.
+     * @example
+     * // Delete one ContentSection
+     * const ContentSection = await prisma.contentSection.delete({
+     *   where: {
+     *     // ... filter to delete one ContentSection
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ContentSectionDeleteArgs>(args: SelectSubset<T, ContentSectionDeleteArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ContentSection.
+     * @param {ContentSectionUpdateArgs} args - Arguments to update one ContentSection.
+     * @example
+     * // Update one ContentSection
+     * const contentSection = await prisma.contentSection.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ContentSectionUpdateArgs>(args: SelectSubset<T, ContentSectionUpdateArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ContentSections.
+     * @param {ContentSectionDeleteManyArgs} args - Arguments to filter ContentSections to delete.
+     * @example
+     * // Delete a few ContentSections
+     * const { count } = await prisma.contentSection.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ContentSectionDeleteManyArgs>(args?: SelectSubset<T, ContentSectionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentSections.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ContentSections
+     * const contentSection = await prisma.contentSection.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ContentSectionUpdateManyArgs>(args: SelectSubset<T, ContentSectionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentSections and returns the data updated in the database.
+     * @param {ContentSectionUpdateManyAndReturnArgs} args - Arguments to update many ContentSections.
+     * @example
+     * // Update many ContentSections
+     * const contentSection = await prisma.contentSection.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ContentSections and only return the `id`
+     * const contentSectionWithIdOnly = await prisma.contentSection.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ContentSectionUpdateManyAndReturnArgs>(args: SelectSubset<T, ContentSectionUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ContentSection.
+     * @param {ContentSectionUpsertArgs} args - Arguments to update or create a ContentSection.
+     * @example
+     * // Update or create a ContentSection
+     * const contentSection = await prisma.contentSection.upsert({
+     *   create: {
+     *     // ... data to create a ContentSection
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ContentSection we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ContentSectionUpsertArgs>(args: SelectSubset<T, ContentSectionUpsertArgs<ExtArgs>>): Prisma__ContentSectionClient<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ContentSections.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionCountArgs} args - Arguments to filter ContentSections to count.
+     * @example
+     * // Count the number of ContentSections
+     * const count = await prisma.contentSection.count({
+     *   where: {
+     *     // ... the filter for the ContentSections we want to count
+     *   }
+     * })
+    **/
+    count<T extends ContentSectionCountArgs>(
+      args?: Subset<T, ContentSectionCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ContentSectionCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ContentSection.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ContentSectionAggregateArgs>(args: Subset<T, ContentSectionAggregateArgs>): Prisma.PrismaPromise<GetContentSectionAggregateType<T>>
+
+    /**
+     * Group by ContentSection.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentSectionGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ContentSectionGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ContentSectionGroupByArgs['orderBy'] }
+        : { orderBy?: ContentSectionGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ContentSectionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContentSectionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ContentSection model
+   */
+  readonly fields: ContentSectionFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ContentSection.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ContentSectionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ContentSection model
+   */
+  interface ContentSectionFieldRefs {
+    readonly id: FieldRef<"ContentSection", 'String'>
+    readonly contentItemId: FieldRef<"ContentSection", 'String'>
+    readonly orderIndex: FieldRef<"ContentSection", 'Int'>
+    readonly type: FieldRef<"ContentSection", 'String'>
+    readonly text: FieldRef<"ContentSection", 'String'>
+    readonly jlptLevel: FieldRef<"ContentSection", 'String'>
+    readonly vocabHighlights: FieldRef<"ContentSection", 'Json'>
+    readonly grammarTags: FieldRef<"ContentSection", 'Json'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ContentSection findUnique
+   */
+  export type ContentSectionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSection to fetch.
+     */
+    where: ContentSectionWhereUniqueInput
+  }
+
+  /**
+   * ContentSection findUniqueOrThrow
+   */
+  export type ContentSectionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSection to fetch.
+     */
+    where: ContentSectionWhereUniqueInput
+  }
+
+  /**
+   * ContentSection findFirst
+   */
+  export type ContentSectionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSection to fetch.
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSections to fetch.
+     */
+    orderBy?: ContentSectionOrderByWithRelationInput | ContentSectionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentSections.
+     */
+    cursor?: ContentSectionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSections from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSections.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentSections.
+     */
+    distinct?: ContentSectionScalarFieldEnum | ContentSectionScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSection findFirstOrThrow
+   */
+  export type ContentSectionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSection to fetch.
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSections to fetch.
+     */
+    orderBy?: ContentSectionOrderByWithRelationInput | ContentSectionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentSections.
+     */
+    cursor?: ContentSectionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSections from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSections.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentSections.
+     */
+    distinct?: ContentSectionScalarFieldEnum | ContentSectionScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSection findMany
+   */
+  export type ContentSectionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentSections to fetch.
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentSections to fetch.
+     */
+    orderBy?: ContentSectionOrderByWithRelationInput | ContentSectionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ContentSections.
+     */
+    cursor?: ContentSectionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentSections from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentSections.
+     */
+    skip?: number
+    distinct?: ContentSectionScalarFieldEnum | ContentSectionScalarFieldEnum[]
+  }
+
+  /**
+   * ContentSection create
+   */
+  export type ContentSectionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ContentSection.
+     */
+    data: XOR<ContentSectionCreateInput, ContentSectionUncheckedCreateInput>
+  }
+
+  /**
+   * ContentSection createMany
+   */
+  export type ContentSectionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ContentSections.
+     */
+    data: ContentSectionCreateManyInput | ContentSectionCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentSection createManyAndReturn
+   */
+  export type ContentSectionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * The data used to create many ContentSections.
+     */
+    data: ContentSectionCreateManyInput | ContentSectionCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentSection update
+   */
+  export type ContentSectionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ContentSection.
+     */
+    data: XOR<ContentSectionUpdateInput, ContentSectionUncheckedUpdateInput>
+    /**
+     * Choose, which ContentSection to update.
+     */
+    where: ContentSectionWhereUniqueInput
+  }
+
+  /**
+   * ContentSection updateMany
+   */
+  export type ContentSectionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ContentSections.
+     */
+    data: XOR<ContentSectionUpdateManyMutationInput, ContentSectionUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentSections to update
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * Limit how many ContentSections to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentSection updateManyAndReturn
+   */
+  export type ContentSectionUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * The data used to update ContentSections.
+     */
+    data: XOR<ContentSectionUpdateManyMutationInput, ContentSectionUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentSections to update
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * Limit how many ContentSections to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentSection upsert
+   */
+  export type ContentSectionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ContentSection to update in case it exists.
+     */
+    where: ContentSectionWhereUniqueInput
+    /**
+     * In case the ContentSection found by the `where` argument doesn't exist, create a new ContentSection with this data.
+     */
+    create: XOR<ContentSectionCreateInput, ContentSectionUncheckedCreateInput>
+    /**
+     * In case the ContentSection was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContentSectionUpdateInput, ContentSectionUncheckedUpdateInput>
+  }
+
+  /**
+   * ContentSection delete
+   */
+  export type ContentSectionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+    /**
+     * Filter which ContentSection to delete.
+     */
+    where: ContentSectionWhereUniqueInput
+  }
+
+  /**
+   * ContentSection deleteMany
+   */
+  export type ContentSectionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentSections to delete
+     */
+    where?: ContentSectionWhereInput
+    /**
+     * Limit how many ContentSections to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentSection without action
+   */
+  export type ContentSectionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentSection
+     */
+    select?: ContentSectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentSection
+     */
+    omit?: ContentSectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentSectionInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ContentAudio
+   */
+
+  export type AggregateContentAudio = {
+    _count: ContentAudioCountAggregateOutputType | null
+    _avg: ContentAudioAvgAggregateOutputType | null
+    _sum: ContentAudioSumAggregateOutputType | null
+    _min: ContentAudioMinAggregateOutputType | null
+    _max: ContentAudioMaxAggregateOutputType | null
+  }
+
+  export type ContentAudioAvgAggregateOutputType = {
+    duration: number | null
+  }
+
+  export type ContentAudioSumAggregateOutputType = {
+    duration: number | null
+  }
+
+  export type ContentAudioMinAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    audioUrl: string | null
+    type: string | null
+    duration: number | null
+    transcript: string | null
+    createdAt: Date | null
+  }
+
+  export type ContentAudioMaxAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    audioUrl: string | null
+    type: string | null
+    duration: number | null
+    transcript: string | null
+    createdAt: Date | null
+  }
+
+  export type ContentAudioCountAggregateOutputType = {
+    id: number
+    contentItemId: number
+    audioUrl: number
+    type: number
+    duration: number
+    transcript: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ContentAudioAvgAggregateInputType = {
+    duration?: true
+  }
+
+  export type ContentAudioSumAggregateInputType = {
+    duration?: true
+  }
+
+  export type ContentAudioMinAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    audioUrl?: true
+    type?: true
+    duration?: true
+    transcript?: true
+    createdAt?: true
+  }
+
+  export type ContentAudioMaxAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    audioUrl?: true
+    type?: true
+    duration?: true
+    transcript?: true
+    createdAt?: true
+  }
+
+  export type ContentAudioCountAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    audioUrl?: true
+    type?: true
+    duration?: true
+    transcript?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ContentAudioAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentAudio to aggregate.
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentAudios to fetch.
+     */
+    orderBy?: ContentAudioOrderByWithRelationInput | ContentAudioOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ContentAudioWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentAudios from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentAudios.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ContentAudios
+    **/
+    _count?: true | ContentAudioCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ContentAudioAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ContentAudioSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ContentAudioMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ContentAudioMaxAggregateInputType
+  }
+
+  export type GetContentAudioAggregateType<T extends ContentAudioAggregateArgs> = {
+        [P in keyof T & keyof AggregateContentAudio]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateContentAudio[P]>
+      : GetScalarType<T[P], AggregateContentAudio[P]>
+  }
+
+
+
+
+  export type ContentAudioGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentAudioWhereInput
+    orderBy?: ContentAudioOrderByWithAggregationInput | ContentAudioOrderByWithAggregationInput[]
+    by: ContentAudioScalarFieldEnum[] | ContentAudioScalarFieldEnum
+    having?: ContentAudioScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ContentAudioCountAggregateInputType | true
+    _avg?: ContentAudioAvgAggregateInputType
+    _sum?: ContentAudioSumAggregateInputType
+    _min?: ContentAudioMinAggregateInputType
+    _max?: ContentAudioMaxAggregateInputType
+  }
+
+  export type ContentAudioGroupByOutputType = {
+    id: string
+    contentItemId: string
+    audioUrl: string
+    type: string
+    duration: number | null
+    transcript: string | null
+    createdAt: Date
+    _count: ContentAudioCountAggregateOutputType | null
+    _avg: ContentAudioAvgAggregateOutputType | null
+    _sum: ContentAudioSumAggregateOutputType | null
+    _min: ContentAudioMinAggregateOutputType | null
+    _max: ContentAudioMaxAggregateOutputType | null
+  }
+
+  type GetContentAudioGroupByPayload<T extends ContentAudioGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ContentAudioGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ContentAudioGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ContentAudioGroupByOutputType[P]>
+            : GetScalarType<T[P], ContentAudioGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ContentAudioSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    audioUrl?: boolean
+    type?: boolean
+    duration?: boolean
+    transcript?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentAudio"]>
+
+  export type ContentAudioSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    audioUrl?: boolean
+    type?: boolean
+    duration?: boolean
+    transcript?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentAudio"]>
+
+  export type ContentAudioSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    audioUrl?: boolean
+    type?: boolean
+    duration?: boolean
+    transcript?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentAudio"]>
+
+  export type ContentAudioSelectScalar = {
+    id?: boolean
+    contentItemId?: boolean
+    audioUrl?: boolean
+    type?: boolean
+    duration?: boolean
+    transcript?: boolean
+    createdAt?: boolean
+  }
+
+  export type ContentAudioOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "audioUrl" | "type" | "duration" | "transcript" | "createdAt", ExtArgs["result"]["contentAudio"]>
+  export type ContentAudioInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentAudioIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentAudioIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $ContentAudioPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ContentAudio"
+    objects: {
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      contentItemId: string
+      audioUrl: string
+      type: string
+      duration: number | null
+      transcript: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["contentAudio"]>
+    composites: {}
+  }
+
+  type ContentAudioGetPayload<S extends boolean | null | undefined | ContentAudioDefaultArgs> = $Result.GetResult<Prisma.$ContentAudioPayload, S>
+
+  type ContentAudioCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContentAudioFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContentAudioCountAggregateInputType | true
+    }
+
+  export interface ContentAudioDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ContentAudio'], meta: { name: 'ContentAudio' } }
+    /**
+     * Find zero or one ContentAudio that matches the filter.
+     * @param {ContentAudioFindUniqueArgs} args - Arguments to find a ContentAudio
+     * @example
+     * // Get one ContentAudio
+     * const contentAudio = await prisma.contentAudio.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ContentAudioFindUniqueArgs>(args: SelectSubset<T, ContentAudioFindUniqueArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ContentAudio that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ContentAudioFindUniqueOrThrowArgs} args - Arguments to find a ContentAudio
+     * @example
+     * // Get one ContentAudio
+     * const contentAudio = await prisma.contentAudio.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ContentAudioFindUniqueOrThrowArgs>(args: SelectSubset<T, ContentAudioFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentAudio that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioFindFirstArgs} args - Arguments to find a ContentAudio
+     * @example
+     * // Get one ContentAudio
+     * const contentAudio = await prisma.contentAudio.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ContentAudioFindFirstArgs>(args?: SelectSubset<T, ContentAudioFindFirstArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentAudio that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioFindFirstOrThrowArgs} args - Arguments to find a ContentAudio
+     * @example
+     * // Get one ContentAudio
+     * const contentAudio = await prisma.contentAudio.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ContentAudioFindFirstOrThrowArgs>(args?: SelectSubset<T, ContentAudioFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ContentAudios that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ContentAudios
+     * const contentAudios = await prisma.contentAudio.findMany()
+     * 
+     * // Get first 10 ContentAudios
+     * const contentAudios = await prisma.contentAudio.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const contentAudioWithIdOnly = await prisma.contentAudio.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ContentAudioFindManyArgs>(args?: SelectSubset<T, ContentAudioFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ContentAudio.
+     * @param {ContentAudioCreateArgs} args - Arguments to create a ContentAudio.
+     * @example
+     * // Create one ContentAudio
+     * const ContentAudio = await prisma.contentAudio.create({
+     *   data: {
+     *     // ... data to create a ContentAudio
+     *   }
+     * })
+     * 
+     */
+    create<T extends ContentAudioCreateArgs>(args: SelectSubset<T, ContentAudioCreateArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ContentAudios.
+     * @param {ContentAudioCreateManyArgs} args - Arguments to create many ContentAudios.
+     * @example
+     * // Create many ContentAudios
+     * const contentAudio = await prisma.contentAudio.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ContentAudioCreateManyArgs>(args?: SelectSubset<T, ContentAudioCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ContentAudios and returns the data saved in the database.
+     * @param {ContentAudioCreateManyAndReturnArgs} args - Arguments to create many ContentAudios.
+     * @example
+     * // Create many ContentAudios
+     * const contentAudio = await prisma.contentAudio.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ContentAudios and only return the `id`
+     * const contentAudioWithIdOnly = await prisma.contentAudio.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ContentAudioCreateManyAndReturnArgs>(args?: SelectSubset<T, ContentAudioCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ContentAudio.
+     * @param {ContentAudioDeleteArgs} args - Arguments to delete one ContentAudio.
+     * @example
+     * // Delete one ContentAudio
+     * const ContentAudio = await prisma.contentAudio.delete({
+     *   where: {
+     *     // ... filter to delete one ContentAudio
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ContentAudioDeleteArgs>(args: SelectSubset<T, ContentAudioDeleteArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ContentAudio.
+     * @param {ContentAudioUpdateArgs} args - Arguments to update one ContentAudio.
+     * @example
+     * // Update one ContentAudio
+     * const contentAudio = await prisma.contentAudio.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ContentAudioUpdateArgs>(args: SelectSubset<T, ContentAudioUpdateArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ContentAudios.
+     * @param {ContentAudioDeleteManyArgs} args - Arguments to filter ContentAudios to delete.
+     * @example
+     * // Delete a few ContentAudios
+     * const { count } = await prisma.contentAudio.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ContentAudioDeleteManyArgs>(args?: SelectSubset<T, ContentAudioDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentAudios.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ContentAudios
+     * const contentAudio = await prisma.contentAudio.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ContentAudioUpdateManyArgs>(args: SelectSubset<T, ContentAudioUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentAudios and returns the data updated in the database.
+     * @param {ContentAudioUpdateManyAndReturnArgs} args - Arguments to update many ContentAudios.
+     * @example
+     * // Update many ContentAudios
+     * const contentAudio = await prisma.contentAudio.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ContentAudios and only return the `id`
+     * const contentAudioWithIdOnly = await prisma.contentAudio.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ContentAudioUpdateManyAndReturnArgs>(args: SelectSubset<T, ContentAudioUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ContentAudio.
+     * @param {ContentAudioUpsertArgs} args - Arguments to update or create a ContentAudio.
+     * @example
+     * // Update or create a ContentAudio
+     * const contentAudio = await prisma.contentAudio.upsert({
+     *   create: {
+     *     // ... data to create a ContentAudio
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ContentAudio we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ContentAudioUpsertArgs>(args: SelectSubset<T, ContentAudioUpsertArgs<ExtArgs>>): Prisma__ContentAudioClient<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ContentAudios.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioCountArgs} args - Arguments to filter ContentAudios to count.
+     * @example
+     * // Count the number of ContentAudios
+     * const count = await prisma.contentAudio.count({
+     *   where: {
+     *     // ... the filter for the ContentAudios we want to count
+     *   }
+     * })
+    **/
+    count<T extends ContentAudioCountArgs>(
+      args?: Subset<T, ContentAudioCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ContentAudioCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ContentAudio.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ContentAudioAggregateArgs>(args: Subset<T, ContentAudioAggregateArgs>): Prisma.PrismaPromise<GetContentAudioAggregateType<T>>
+
+    /**
+     * Group by ContentAudio.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentAudioGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ContentAudioGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ContentAudioGroupByArgs['orderBy'] }
+        : { orderBy?: ContentAudioGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ContentAudioGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContentAudioGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ContentAudio model
+   */
+  readonly fields: ContentAudioFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ContentAudio.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ContentAudioClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ContentAudio model
+   */
+  interface ContentAudioFieldRefs {
+    readonly id: FieldRef<"ContentAudio", 'String'>
+    readonly contentItemId: FieldRef<"ContentAudio", 'String'>
+    readonly audioUrl: FieldRef<"ContentAudio", 'String'>
+    readonly type: FieldRef<"ContentAudio", 'String'>
+    readonly duration: FieldRef<"ContentAudio", 'Int'>
+    readonly transcript: FieldRef<"ContentAudio", 'String'>
+    readonly createdAt: FieldRef<"ContentAudio", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ContentAudio findUnique
+   */
+  export type ContentAudioFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentAudio to fetch.
+     */
+    where: ContentAudioWhereUniqueInput
+  }
+
+  /**
+   * ContentAudio findUniqueOrThrow
+   */
+  export type ContentAudioFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentAudio to fetch.
+     */
+    where: ContentAudioWhereUniqueInput
+  }
+
+  /**
+   * ContentAudio findFirst
+   */
+  export type ContentAudioFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentAudio to fetch.
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentAudios to fetch.
+     */
+    orderBy?: ContentAudioOrderByWithRelationInput | ContentAudioOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentAudios.
+     */
+    cursor?: ContentAudioWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentAudios from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentAudios.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentAudios.
+     */
+    distinct?: ContentAudioScalarFieldEnum | ContentAudioScalarFieldEnum[]
+  }
+
+  /**
+   * ContentAudio findFirstOrThrow
+   */
+  export type ContentAudioFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentAudio to fetch.
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentAudios to fetch.
+     */
+    orderBy?: ContentAudioOrderByWithRelationInput | ContentAudioOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentAudios.
+     */
+    cursor?: ContentAudioWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentAudios from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentAudios.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentAudios.
+     */
+    distinct?: ContentAudioScalarFieldEnum | ContentAudioScalarFieldEnum[]
+  }
+
+  /**
+   * ContentAudio findMany
+   */
+  export type ContentAudioFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentAudios to fetch.
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentAudios to fetch.
+     */
+    orderBy?: ContentAudioOrderByWithRelationInput | ContentAudioOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ContentAudios.
+     */
+    cursor?: ContentAudioWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentAudios from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentAudios.
+     */
+    skip?: number
+    distinct?: ContentAudioScalarFieldEnum | ContentAudioScalarFieldEnum[]
+  }
+
+  /**
+   * ContentAudio create
+   */
+  export type ContentAudioCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ContentAudio.
+     */
+    data: XOR<ContentAudioCreateInput, ContentAudioUncheckedCreateInput>
+  }
+
+  /**
+   * ContentAudio createMany
+   */
+  export type ContentAudioCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ContentAudios.
+     */
+    data: ContentAudioCreateManyInput | ContentAudioCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentAudio createManyAndReturn
+   */
+  export type ContentAudioCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * The data used to create many ContentAudios.
+     */
+    data: ContentAudioCreateManyInput | ContentAudioCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentAudio update
+   */
+  export type ContentAudioUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ContentAudio.
+     */
+    data: XOR<ContentAudioUpdateInput, ContentAudioUncheckedUpdateInput>
+    /**
+     * Choose, which ContentAudio to update.
+     */
+    where: ContentAudioWhereUniqueInput
+  }
+
+  /**
+   * ContentAudio updateMany
+   */
+  export type ContentAudioUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ContentAudios.
+     */
+    data: XOR<ContentAudioUpdateManyMutationInput, ContentAudioUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentAudios to update
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * Limit how many ContentAudios to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentAudio updateManyAndReturn
+   */
+  export type ContentAudioUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * The data used to update ContentAudios.
+     */
+    data: XOR<ContentAudioUpdateManyMutationInput, ContentAudioUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentAudios to update
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * Limit how many ContentAudios to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentAudio upsert
+   */
+  export type ContentAudioUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ContentAudio to update in case it exists.
+     */
+    where: ContentAudioWhereUniqueInput
+    /**
+     * In case the ContentAudio found by the `where` argument doesn't exist, create a new ContentAudio with this data.
+     */
+    create: XOR<ContentAudioCreateInput, ContentAudioUncheckedCreateInput>
+    /**
+     * In case the ContentAudio was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContentAudioUpdateInput, ContentAudioUncheckedUpdateInput>
+  }
+
+  /**
+   * ContentAudio delete
+   */
+  export type ContentAudioDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+    /**
+     * Filter which ContentAudio to delete.
+     */
+    where: ContentAudioWhereUniqueInput
+  }
+
+  /**
+   * ContentAudio deleteMany
+   */
+  export type ContentAudioDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentAudios to delete
+     */
+    where?: ContentAudioWhereInput
+    /**
+     * Limit how many ContentAudios to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentAudio without action
+   */
+  export type ContentAudioDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentAudio
+     */
+    select?: ContentAudioSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentAudio
+     */
+    omit?: ContentAudioOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentAudioInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GeneratedQuestion
+   */
+
+  export type AggregateGeneratedQuestion = {
+    _count: GeneratedQuestionCountAggregateOutputType | null
+    _min: GeneratedQuestionMinAggregateOutputType | null
+    _max: GeneratedQuestionMaxAggregateOutputType | null
+  }
+
+  export type GeneratedQuestionMinAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    type: $Enums.QuestionType | null
+    prompt: string | null
+    answer: string | null
+    explanation: string | null
+    jlptLevel: string | null
+    createdAt: Date | null
+  }
+
+  export type GeneratedQuestionMaxAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    type: $Enums.QuestionType | null
+    prompt: string | null
+    answer: string | null
+    explanation: string | null
+    jlptLevel: string | null
+    createdAt: Date | null
+  }
+
+  export type GeneratedQuestionCountAggregateOutputType = {
+    id: number
+    contentItemId: number
+    type: number
+    prompt: number
+    options: number
+    answer: number
+    explanation: number
+    explanationWrong: number
+    jlptLevel: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GeneratedQuestionMinAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    type?: true
+    prompt?: true
+    answer?: true
+    explanation?: true
+    jlptLevel?: true
+    createdAt?: true
+  }
+
+  export type GeneratedQuestionMaxAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    type?: true
+    prompt?: true
+    answer?: true
+    explanation?: true
+    jlptLevel?: true
+    createdAt?: true
+  }
+
+  export type GeneratedQuestionCountAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    type?: true
+    prompt?: true
+    options?: true
+    answer?: true
+    explanation?: true
+    explanationWrong?: true
+    jlptLevel?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GeneratedQuestionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GeneratedQuestion to aggregate.
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedQuestions to fetch.
+     */
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GeneratedQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GeneratedQuestions
+    **/
+    _count?: true | GeneratedQuestionCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GeneratedQuestionMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GeneratedQuestionMaxAggregateInputType
+  }
+
+  export type GetGeneratedQuestionAggregateType<T extends GeneratedQuestionAggregateArgs> = {
+        [P in keyof T & keyof AggregateGeneratedQuestion]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGeneratedQuestion[P]>
+      : GetScalarType<T[P], AggregateGeneratedQuestion[P]>
+  }
+
+
+
+
+  export type GeneratedQuestionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GeneratedQuestionWhereInput
+    orderBy?: GeneratedQuestionOrderByWithAggregationInput | GeneratedQuestionOrderByWithAggregationInput[]
+    by: GeneratedQuestionScalarFieldEnum[] | GeneratedQuestionScalarFieldEnum
+    having?: GeneratedQuestionScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GeneratedQuestionCountAggregateInputType | true
+    _min?: GeneratedQuestionMinAggregateInputType
+    _max?: GeneratedQuestionMaxAggregateInputType
+  }
+
+  export type GeneratedQuestionGroupByOutputType = {
+    id: string
+    contentItemId: string
+    type: $Enums.QuestionType
+    prompt: string
+    options: JsonValue | null
+    answer: string
+    explanation: string
+    explanationWrong: JsonValue | null
+    jlptLevel: string | null
+    createdAt: Date
+    _count: GeneratedQuestionCountAggregateOutputType | null
+    _min: GeneratedQuestionMinAggregateOutputType | null
+    _max: GeneratedQuestionMaxAggregateOutputType | null
+  }
+
+  type GetGeneratedQuestionGroupByPayload<T extends GeneratedQuestionGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GeneratedQuestionGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GeneratedQuestionGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GeneratedQuestionGroupByOutputType[P]>
+            : GetScalarType<T[P], GeneratedQuestionGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GeneratedQuestionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    type?: boolean
+    prompt?: boolean
+    options?: boolean
+    answer?: boolean
+    explanation?: boolean
+    explanationWrong?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedQuestion"]>
+
+  export type GeneratedQuestionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    type?: boolean
+    prompt?: boolean
+    options?: boolean
+    answer?: boolean
+    explanation?: boolean
+    explanationWrong?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedQuestion"]>
+
+  export type GeneratedQuestionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    type?: boolean
+    prompt?: boolean
+    options?: boolean
+    answer?: boolean
+    explanation?: boolean
+    explanationWrong?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedQuestion"]>
+
+  export type GeneratedQuestionSelectScalar = {
+    id?: boolean
+    contentItemId?: boolean
+    type?: boolean
+    prompt?: boolean
+    options?: boolean
+    answer?: boolean
+    explanation?: boolean
+    explanationWrong?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+  }
+
+  export type GeneratedQuestionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "type" | "prompt" | "options" | "answer" | "explanation" | "explanationWrong" | "jlptLevel" | "createdAt", ExtArgs["result"]["generatedQuestion"]>
+  export type GeneratedQuestionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type GeneratedQuestionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type GeneratedQuestionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $GeneratedQuestionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GeneratedQuestion"
+    objects: {
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      contentItemId: string
+      type: $Enums.QuestionType
+      prompt: string
+      options: Prisma.JsonValue | null
+      answer: string
+      explanation: string
+      explanationWrong: Prisma.JsonValue | null
+      jlptLevel: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["generatedQuestion"]>
+    composites: {}
+  }
+
+  type GeneratedQuestionGetPayload<S extends boolean | null | undefined | GeneratedQuestionDefaultArgs> = $Result.GetResult<Prisma.$GeneratedQuestionPayload, S>
+
+  type GeneratedQuestionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GeneratedQuestionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GeneratedQuestionCountAggregateInputType | true
+    }
+
+  export interface GeneratedQuestionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GeneratedQuestion'], meta: { name: 'GeneratedQuestion' } }
+    /**
+     * Find zero or one GeneratedQuestion that matches the filter.
+     * @param {GeneratedQuestionFindUniqueArgs} args - Arguments to find a GeneratedQuestion
+     * @example
+     * // Get one GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GeneratedQuestionFindUniqueArgs>(args: SelectSubset<T, GeneratedQuestionFindUniqueArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GeneratedQuestion that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GeneratedQuestionFindUniqueOrThrowArgs} args - Arguments to find a GeneratedQuestion
+     * @example
+     * // Get one GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GeneratedQuestionFindUniqueOrThrowArgs>(args: SelectSubset<T, GeneratedQuestionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GeneratedQuestion that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionFindFirstArgs} args - Arguments to find a GeneratedQuestion
+     * @example
+     * // Get one GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GeneratedQuestionFindFirstArgs>(args?: SelectSubset<T, GeneratedQuestionFindFirstArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GeneratedQuestion that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionFindFirstOrThrowArgs} args - Arguments to find a GeneratedQuestion
+     * @example
+     * // Get one GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GeneratedQuestionFindFirstOrThrowArgs>(args?: SelectSubset<T, GeneratedQuestionFindFirstOrThrowArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GeneratedQuestions that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GeneratedQuestions
+     * const generatedQuestions = await prisma.generatedQuestion.findMany()
+     * 
+     * // Get first 10 GeneratedQuestions
+     * const generatedQuestions = await prisma.generatedQuestion.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const generatedQuestionWithIdOnly = await prisma.generatedQuestion.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GeneratedQuestionFindManyArgs>(args?: SelectSubset<T, GeneratedQuestionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GeneratedQuestion.
+     * @param {GeneratedQuestionCreateArgs} args - Arguments to create a GeneratedQuestion.
+     * @example
+     * // Create one GeneratedQuestion
+     * const GeneratedQuestion = await prisma.generatedQuestion.create({
+     *   data: {
+     *     // ... data to create a GeneratedQuestion
+     *   }
+     * })
+     * 
+     */
+    create<T extends GeneratedQuestionCreateArgs>(args: SelectSubset<T, GeneratedQuestionCreateArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GeneratedQuestions.
+     * @param {GeneratedQuestionCreateManyArgs} args - Arguments to create many GeneratedQuestions.
+     * @example
+     * // Create many GeneratedQuestions
+     * const generatedQuestion = await prisma.generatedQuestion.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GeneratedQuestionCreateManyArgs>(args?: SelectSubset<T, GeneratedQuestionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GeneratedQuestions and returns the data saved in the database.
+     * @param {GeneratedQuestionCreateManyAndReturnArgs} args - Arguments to create many GeneratedQuestions.
+     * @example
+     * // Create many GeneratedQuestions
+     * const generatedQuestion = await prisma.generatedQuestion.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GeneratedQuestions and only return the `id`
+     * const generatedQuestionWithIdOnly = await prisma.generatedQuestion.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GeneratedQuestionCreateManyAndReturnArgs>(args?: SelectSubset<T, GeneratedQuestionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GeneratedQuestion.
+     * @param {GeneratedQuestionDeleteArgs} args - Arguments to delete one GeneratedQuestion.
+     * @example
+     * // Delete one GeneratedQuestion
+     * const GeneratedQuestion = await prisma.generatedQuestion.delete({
+     *   where: {
+     *     // ... filter to delete one GeneratedQuestion
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GeneratedQuestionDeleteArgs>(args: SelectSubset<T, GeneratedQuestionDeleteArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GeneratedQuestion.
+     * @param {GeneratedQuestionUpdateArgs} args - Arguments to update one GeneratedQuestion.
+     * @example
+     * // Update one GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GeneratedQuestionUpdateArgs>(args: SelectSubset<T, GeneratedQuestionUpdateArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GeneratedQuestions.
+     * @param {GeneratedQuestionDeleteManyArgs} args - Arguments to filter GeneratedQuestions to delete.
+     * @example
+     * // Delete a few GeneratedQuestions
+     * const { count } = await prisma.generatedQuestion.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GeneratedQuestionDeleteManyArgs>(args?: SelectSubset<T, GeneratedQuestionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GeneratedQuestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GeneratedQuestions
+     * const generatedQuestion = await prisma.generatedQuestion.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GeneratedQuestionUpdateManyArgs>(args: SelectSubset<T, GeneratedQuestionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GeneratedQuestions and returns the data updated in the database.
+     * @param {GeneratedQuestionUpdateManyAndReturnArgs} args - Arguments to update many GeneratedQuestions.
+     * @example
+     * // Update many GeneratedQuestions
+     * const generatedQuestion = await prisma.generatedQuestion.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GeneratedQuestions and only return the `id`
+     * const generatedQuestionWithIdOnly = await prisma.generatedQuestion.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GeneratedQuestionUpdateManyAndReturnArgs>(args: SelectSubset<T, GeneratedQuestionUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GeneratedQuestion.
+     * @param {GeneratedQuestionUpsertArgs} args - Arguments to update or create a GeneratedQuestion.
+     * @example
+     * // Update or create a GeneratedQuestion
+     * const generatedQuestion = await prisma.generatedQuestion.upsert({
+     *   create: {
+     *     // ... data to create a GeneratedQuestion
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GeneratedQuestion we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GeneratedQuestionUpsertArgs>(args: SelectSubset<T, GeneratedQuestionUpsertArgs<ExtArgs>>): Prisma__GeneratedQuestionClient<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GeneratedQuestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionCountArgs} args - Arguments to filter GeneratedQuestions to count.
+     * @example
+     * // Count the number of GeneratedQuestions
+     * const count = await prisma.generatedQuestion.count({
+     *   where: {
+     *     // ... the filter for the GeneratedQuestions we want to count
+     *   }
+     * })
+    **/
+    count<T extends GeneratedQuestionCountArgs>(
+      args?: Subset<T, GeneratedQuestionCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GeneratedQuestionCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GeneratedQuestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GeneratedQuestionAggregateArgs>(args: Subset<T, GeneratedQuestionAggregateArgs>): Prisma.PrismaPromise<GetGeneratedQuestionAggregateType<T>>
+
+    /**
+     * Group by GeneratedQuestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedQuestionGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GeneratedQuestionGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GeneratedQuestionGroupByArgs['orderBy'] }
+        : { orderBy?: GeneratedQuestionGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GeneratedQuestionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGeneratedQuestionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GeneratedQuestion model
+   */
+  readonly fields: GeneratedQuestionFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GeneratedQuestion.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GeneratedQuestionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GeneratedQuestion model
+   */
+  interface GeneratedQuestionFieldRefs {
+    readonly id: FieldRef<"GeneratedQuestion", 'String'>
+    readonly contentItemId: FieldRef<"GeneratedQuestion", 'String'>
+    readonly type: FieldRef<"GeneratedQuestion", 'QuestionType'>
+    readonly prompt: FieldRef<"GeneratedQuestion", 'String'>
+    readonly options: FieldRef<"GeneratedQuestion", 'Json'>
+    readonly answer: FieldRef<"GeneratedQuestion", 'String'>
+    readonly explanation: FieldRef<"GeneratedQuestion", 'String'>
+    readonly explanationWrong: FieldRef<"GeneratedQuestion", 'Json'>
+    readonly jlptLevel: FieldRef<"GeneratedQuestion", 'String'>
+    readonly createdAt: FieldRef<"GeneratedQuestion", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GeneratedQuestion findUnique
+   */
+  export type GeneratedQuestionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedQuestion to fetch.
+     */
+    where: GeneratedQuestionWhereUniqueInput
+  }
+
+  /**
+   * GeneratedQuestion findUniqueOrThrow
+   */
+  export type GeneratedQuestionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedQuestion to fetch.
+     */
+    where: GeneratedQuestionWhereUniqueInput
+  }
+
+  /**
+   * GeneratedQuestion findFirst
+   */
+  export type GeneratedQuestionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedQuestion to fetch.
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedQuestions to fetch.
+     */
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GeneratedQuestions.
+     */
+    cursor?: GeneratedQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GeneratedQuestions.
+     */
+    distinct?: GeneratedQuestionScalarFieldEnum | GeneratedQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedQuestion findFirstOrThrow
+   */
+  export type GeneratedQuestionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedQuestion to fetch.
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedQuestions to fetch.
+     */
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GeneratedQuestions.
+     */
+    cursor?: GeneratedQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedQuestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GeneratedQuestions.
+     */
+    distinct?: GeneratedQuestionScalarFieldEnum | GeneratedQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedQuestion findMany
+   */
+  export type GeneratedQuestionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedQuestions to fetch.
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedQuestions to fetch.
+     */
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GeneratedQuestions.
+     */
+    cursor?: GeneratedQuestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedQuestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedQuestions.
+     */
+    skip?: number
+    distinct?: GeneratedQuestionScalarFieldEnum | GeneratedQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedQuestion create
+   */
+  export type GeneratedQuestionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GeneratedQuestion.
+     */
+    data: XOR<GeneratedQuestionCreateInput, GeneratedQuestionUncheckedCreateInput>
+  }
+
+  /**
+   * GeneratedQuestion createMany
+   */
+  export type GeneratedQuestionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GeneratedQuestions.
+     */
+    data: GeneratedQuestionCreateManyInput | GeneratedQuestionCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GeneratedQuestion createManyAndReturn
+   */
+  export type GeneratedQuestionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * The data used to create many GeneratedQuestions.
+     */
+    data: GeneratedQuestionCreateManyInput | GeneratedQuestionCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GeneratedQuestion update
+   */
+  export type GeneratedQuestionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GeneratedQuestion.
+     */
+    data: XOR<GeneratedQuestionUpdateInput, GeneratedQuestionUncheckedUpdateInput>
+    /**
+     * Choose, which GeneratedQuestion to update.
+     */
+    where: GeneratedQuestionWhereUniqueInput
+  }
+
+  /**
+   * GeneratedQuestion updateMany
+   */
+  export type GeneratedQuestionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GeneratedQuestions.
+     */
+    data: XOR<GeneratedQuestionUpdateManyMutationInput, GeneratedQuestionUncheckedUpdateManyInput>
+    /**
+     * Filter which GeneratedQuestions to update
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * Limit how many GeneratedQuestions to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GeneratedQuestion updateManyAndReturn
+   */
+  export type GeneratedQuestionUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * The data used to update GeneratedQuestions.
+     */
+    data: XOR<GeneratedQuestionUpdateManyMutationInput, GeneratedQuestionUncheckedUpdateManyInput>
+    /**
+     * Filter which GeneratedQuestions to update
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * Limit how many GeneratedQuestions to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GeneratedQuestion upsert
+   */
+  export type GeneratedQuestionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GeneratedQuestion to update in case it exists.
+     */
+    where: GeneratedQuestionWhereUniqueInput
+    /**
+     * In case the GeneratedQuestion found by the `where` argument doesn't exist, create a new GeneratedQuestion with this data.
+     */
+    create: XOR<GeneratedQuestionCreateInput, GeneratedQuestionUncheckedCreateInput>
+    /**
+     * In case the GeneratedQuestion was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GeneratedQuestionUpdateInput, GeneratedQuestionUncheckedUpdateInput>
+  }
+
+  /**
+   * GeneratedQuestion delete
+   */
+  export type GeneratedQuestionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    /**
+     * Filter which GeneratedQuestion to delete.
+     */
+    where: GeneratedQuestionWhereUniqueInput
+  }
+
+  /**
+   * GeneratedQuestion deleteMany
+   */
+  export type GeneratedQuestionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GeneratedQuestions to delete
+     */
+    where?: GeneratedQuestionWhereInput
+    /**
+     * Limit how many GeneratedQuestions to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GeneratedQuestion without action
+   */
+  export type GeneratedQuestionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GeneratedSRSItem
+   */
+
+  export type AggregateGeneratedSRSItem = {
+    _count: GeneratedSRSItemCountAggregateOutputType | null
+    _min: GeneratedSRSItemMinAggregateOutputType | null
+    _max: GeneratedSRSItemMaxAggregateOutputType | null
+  }
+
+  export type GeneratedSRSItemMinAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    userId: string | null
+    word: string | null
+    furigana: string | null
+    pos: string | null
+    meaningZh: string | null
+    contextSentence: string | null
+    cardType: string | null
+    jlptLevel: string | null
+    createdAt: Date | null
+  }
+
+  export type GeneratedSRSItemMaxAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    userId: string | null
+    word: string | null
+    furigana: string | null
+    pos: string | null
+    meaningZh: string | null
+    contextSentence: string | null
+    cardType: string | null
+    jlptLevel: string | null
+    createdAt: Date | null
+  }
+
+  export type GeneratedSRSItemCountAggregateOutputType = {
+    id: number
+    contentItemId: number
+    userId: number
+    word: number
+    furigana: number
+    pos: number
+    meaningZh: number
+    contextSentence: number
+    cardType: number
+    jlptLevel: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GeneratedSRSItemMinAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    userId?: true
+    word?: true
+    furigana?: true
+    pos?: true
+    meaningZh?: true
+    contextSentence?: true
+    cardType?: true
+    jlptLevel?: true
+    createdAt?: true
+  }
+
+  export type GeneratedSRSItemMaxAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    userId?: true
+    word?: true
+    furigana?: true
+    pos?: true
+    meaningZh?: true
+    contextSentence?: true
+    cardType?: true
+    jlptLevel?: true
+    createdAt?: true
+  }
+
+  export type GeneratedSRSItemCountAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    userId?: true
+    word?: true
+    furigana?: true
+    pos?: true
+    meaningZh?: true
+    contextSentence?: true
+    cardType?: true
+    jlptLevel?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GeneratedSRSItemAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GeneratedSRSItem to aggregate.
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedSRSItems to fetch.
+     */
+    orderBy?: GeneratedSRSItemOrderByWithRelationInput | GeneratedSRSItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GeneratedSRSItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedSRSItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedSRSItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GeneratedSRSItems
+    **/
+    _count?: true | GeneratedSRSItemCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GeneratedSRSItemMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GeneratedSRSItemMaxAggregateInputType
+  }
+
+  export type GetGeneratedSRSItemAggregateType<T extends GeneratedSRSItemAggregateArgs> = {
+        [P in keyof T & keyof AggregateGeneratedSRSItem]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGeneratedSRSItem[P]>
+      : GetScalarType<T[P], AggregateGeneratedSRSItem[P]>
+  }
+
+
+
+
+  export type GeneratedSRSItemGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GeneratedSRSItemWhereInput
+    orderBy?: GeneratedSRSItemOrderByWithAggregationInput | GeneratedSRSItemOrderByWithAggregationInput[]
+    by: GeneratedSRSItemScalarFieldEnum[] | GeneratedSRSItemScalarFieldEnum
+    having?: GeneratedSRSItemScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GeneratedSRSItemCountAggregateInputType | true
+    _min?: GeneratedSRSItemMinAggregateInputType
+    _max?: GeneratedSRSItemMaxAggregateInputType
+  }
+
+  export type GeneratedSRSItemGroupByOutputType = {
+    id: string
+    contentItemId: string
+    userId: string | null
+    word: string
+    furigana: string
+    pos: string
+    meaningZh: string
+    contextSentence: string
+    cardType: string
+    jlptLevel: string | null
+    createdAt: Date
+    _count: GeneratedSRSItemCountAggregateOutputType | null
+    _min: GeneratedSRSItemMinAggregateOutputType | null
+    _max: GeneratedSRSItemMaxAggregateOutputType | null
+  }
+
+  type GetGeneratedSRSItemGroupByPayload<T extends GeneratedSRSItemGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GeneratedSRSItemGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GeneratedSRSItemGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GeneratedSRSItemGroupByOutputType[P]>
+            : GetScalarType<T[P], GeneratedSRSItemGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GeneratedSRSItemSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    userId?: boolean
+    word?: boolean
+    furigana?: boolean
+    pos?: boolean
+    meaningZh?: boolean
+    contextSentence?: boolean
+    cardType?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedSRSItem"]>
+
+  export type GeneratedSRSItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    userId?: boolean
+    word?: boolean
+    furigana?: boolean
+    pos?: boolean
+    meaningZh?: boolean
+    contextSentence?: boolean
+    cardType?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedSRSItem"]>
+
+  export type GeneratedSRSItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    userId?: boolean
+    word?: boolean
+    furigana?: boolean
+    pos?: boolean
+    meaningZh?: boolean
+    contextSentence?: boolean
+    cardType?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["generatedSRSItem"]>
+
+  export type GeneratedSRSItemSelectScalar = {
+    id?: boolean
+    contentItemId?: boolean
+    userId?: boolean
+    word?: boolean
+    furigana?: boolean
+    pos?: boolean
+    meaningZh?: boolean
+    contextSentence?: boolean
+    cardType?: boolean
+    jlptLevel?: boolean
+    createdAt?: boolean
+  }
+
+  export type GeneratedSRSItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "userId" | "word" | "furigana" | "pos" | "meaningZh" | "contextSentence" | "cardType" | "jlptLevel" | "createdAt", ExtArgs["result"]["generatedSRSItem"]>
+  export type GeneratedSRSItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type GeneratedSRSItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type GeneratedSRSItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $GeneratedSRSItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GeneratedSRSItem"
+    objects: {
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      contentItemId: string
+      userId: string | null
+      word: string
+      furigana: string
+      pos: string
+      meaningZh: string
+      contextSentence: string
+      cardType: string
+      jlptLevel: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["generatedSRSItem"]>
+    composites: {}
+  }
+
+  type GeneratedSRSItemGetPayload<S extends boolean | null | undefined | GeneratedSRSItemDefaultArgs> = $Result.GetResult<Prisma.$GeneratedSRSItemPayload, S>
+
+  type GeneratedSRSItemCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GeneratedSRSItemFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GeneratedSRSItemCountAggregateInputType | true
+    }
+
+  export interface GeneratedSRSItemDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GeneratedSRSItem'], meta: { name: 'GeneratedSRSItem' } }
+    /**
+     * Find zero or one GeneratedSRSItem that matches the filter.
+     * @param {GeneratedSRSItemFindUniqueArgs} args - Arguments to find a GeneratedSRSItem
+     * @example
+     * // Get one GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GeneratedSRSItemFindUniqueArgs>(args: SelectSubset<T, GeneratedSRSItemFindUniqueArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GeneratedSRSItem that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GeneratedSRSItemFindUniqueOrThrowArgs} args - Arguments to find a GeneratedSRSItem
+     * @example
+     * // Get one GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GeneratedSRSItemFindUniqueOrThrowArgs>(args: SelectSubset<T, GeneratedSRSItemFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GeneratedSRSItem that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemFindFirstArgs} args - Arguments to find a GeneratedSRSItem
+     * @example
+     * // Get one GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GeneratedSRSItemFindFirstArgs>(args?: SelectSubset<T, GeneratedSRSItemFindFirstArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GeneratedSRSItem that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemFindFirstOrThrowArgs} args - Arguments to find a GeneratedSRSItem
+     * @example
+     * // Get one GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GeneratedSRSItemFindFirstOrThrowArgs>(args?: SelectSubset<T, GeneratedSRSItemFindFirstOrThrowArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GeneratedSRSItems that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GeneratedSRSItems
+     * const generatedSRSItems = await prisma.generatedSRSItem.findMany()
+     * 
+     * // Get first 10 GeneratedSRSItems
+     * const generatedSRSItems = await prisma.generatedSRSItem.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const generatedSRSItemWithIdOnly = await prisma.generatedSRSItem.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GeneratedSRSItemFindManyArgs>(args?: SelectSubset<T, GeneratedSRSItemFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GeneratedSRSItem.
+     * @param {GeneratedSRSItemCreateArgs} args - Arguments to create a GeneratedSRSItem.
+     * @example
+     * // Create one GeneratedSRSItem
+     * const GeneratedSRSItem = await prisma.generatedSRSItem.create({
+     *   data: {
+     *     // ... data to create a GeneratedSRSItem
+     *   }
+     * })
+     * 
+     */
+    create<T extends GeneratedSRSItemCreateArgs>(args: SelectSubset<T, GeneratedSRSItemCreateArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GeneratedSRSItems.
+     * @param {GeneratedSRSItemCreateManyArgs} args - Arguments to create many GeneratedSRSItems.
+     * @example
+     * // Create many GeneratedSRSItems
+     * const generatedSRSItem = await prisma.generatedSRSItem.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GeneratedSRSItemCreateManyArgs>(args?: SelectSubset<T, GeneratedSRSItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GeneratedSRSItems and returns the data saved in the database.
+     * @param {GeneratedSRSItemCreateManyAndReturnArgs} args - Arguments to create many GeneratedSRSItems.
+     * @example
+     * // Create many GeneratedSRSItems
+     * const generatedSRSItem = await prisma.generatedSRSItem.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GeneratedSRSItems and only return the `id`
+     * const generatedSRSItemWithIdOnly = await prisma.generatedSRSItem.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GeneratedSRSItemCreateManyAndReturnArgs>(args?: SelectSubset<T, GeneratedSRSItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GeneratedSRSItem.
+     * @param {GeneratedSRSItemDeleteArgs} args - Arguments to delete one GeneratedSRSItem.
+     * @example
+     * // Delete one GeneratedSRSItem
+     * const GeneratedSRSItem = await prisma.generatedSRSItem.delete({
+     *   where: {
+     *     // ... filter to delete one GeneratedSRSItem
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GeneratedSRSItemDeleteArgs>(args: SelectSubset<T, GeneratedSRSItemDeleteArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GeneratedSRSItem.
+     * @param {GeneratedSRSItemUpdateArgs} args - Arguments to update one GeneratedSRSItem.
+     * @example
+     * // Update one GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GeneratedSRSItemUpdateArgs>(args: SelectSubset<T, GeneratedSRSItemUpdateArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GeneratedSRSItems.
+     * @param {GeneratedSRSItemDeleteManyArgs} args - Arguments to filter GeneratedSRSItems to delete.
+     * @example
+     * // Delete a few GeneratedSRSItems
+     * const { count } = await prisma.generatedSRSItem.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GeneratedSRSItemDeleteManyArgs>(args?: SelectSubset<T, GeneratedSRSItemDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GeneratedSRSItems.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GeneratedSRSItems
+     * const generatedSRSItem = await prisma.generatedSRSItem.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GeneratedSRSItemUpdateManyArgs>(args: SelectSubset<T, GeneratedSRSItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GeneratedSRSItems and returns the data updated in the database.
+     * @param {GeneratedSRSItemUpdateManyAndReturnArgs} args - Arguments to update many GeneratedSRSItems.
+     * @example
+     * // Update many GeneratedSRSItems
+     * const generatedSRSItem = await prisma.generatedSRSItem.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GeneratedSRSItems and only return the `id`
+     * const generatedSRSItemWithIdOnly = await prisma.generatedSRSItem.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GeneratedSRSItemUpdateManyAndReturnArgs>(args: SelectSubset<T, GeneratedSRSItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GeneratedSRSItem.
+     * @param {GeneratedSRSItemUpsertArgs} args - Arguments to update or create a GeneratedSRSItem.
+     * @example
+     * // Update or create a GeneratedSRSItem
+     * const generatedSRSItem = await prisma.generatedSRSItem.upsert({
+     *   create: {
+     *     // ... data to create a GeneratedSRSItem
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GeneratedSRSItem we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GeneratedSRSItemUpsertArgs>(args: SelectSubset<T, GeneratedSRSItemUpsertArgs<ExtArgs>>): Prisma__GeneratedSRSItemClient<$Result.GetResult<Prisma.$GeneratedSRSItemPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GeneratedSRSItems.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemCountArgs} args - Arguments to filter GeneratedSRSItems to count.
+     * @example
+     * // Count the number of GeneratedSRSItems
+     * const count = await prisma.generatedSRSItem.count({
+     *   where: {
+     *     // ... the filter for the GeneratedSRSItems we want to count
+     *   }
+     * })
+    **/
+    count<T extends GeneratedSRSItemCountArgs>(
+      args?: Subset<T, GeneratedSRSItemCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GeneratedSRSItemCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GeneratedSRSItem.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GeneratedSRSItemAggregateArgs>(args: Subset<T, GeneratedSRSItemAggregateArgs>): Prisma.PrismaPromise<GetGeneratedSRSItemAggregateType<T>>
+
+    /**
+     * Group by GeneratedSRSItem.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GeneratedSRSItemGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GeneratedSRSItemGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GeneratedSRSItemGroupByArgs['orderBy'] }
+        : { orderBy?: GeneratedSRSItemGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GeneratedSRSItemGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGeneratedSRSItemGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GeneratedSRSItem model
+   */
+  readonly fields: GeneratedSRSItemFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GeneratedSRSItem.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GeneratedSRSItemClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GeneratedSRSItem model
+   */
+  interface GeneratedSRSItemFieldRefs {
+    readonly id: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly contentItemId: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly userId: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly word: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly furigana: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly pos: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly meaningZh: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly contextSentence: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly cardType: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly jlptLevel: FieldRef<"GeneratedSRSItem", 'String'>
+    readonly createdAt: FieldRef<"GeneratedSRSItem", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GeneratedSRSItem findUnique
+   */
+  export type GeneratedSRSItemFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedSRSItem to fetch.
+     */
+    where: GeneratedSRSItemWhereUniqueInput
+  }
+
+  /**
+   * GeneratedSRSItem findUniqueOrThrow
+   */
+  export type GeneratedSRSItemFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedSRSItem to fetch.
+     */
+    where: GeneratedSRSItemWhereUniqueInput
+  }
+
+  /**
+   * GeneratedSRSItem findFirst
+   */
+  export type GeneratedSRSItemFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedSRSItem to fetch.
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedSRSItems to fetch.
+     */
+    orderBy?: GeneratedSRSItemOrderByWithRelationInput | GeneratedSRSItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GeneratedSRSItems.
+     */
+    cursor?: GeneratedSRSItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedSRSItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedSRSItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GeneratedSRSItems.
+     */
+    distinct?: GeneratedSRSItemScalarFieldEnum | GeneratedSRSItemScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedSRSItem findFirstOrThrow
+   */
+  export type GeneratedSRSItemFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedSRSItem to fetch.
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedSRSItems to fetch.
+     */
+    orderBy?: GeneratedSRSItemOrderByWithRelationInput | GeneratedSRSItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GeneratedSRSItems.
+     */
+    cursor?: GeneratedSRSItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedSRSItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedSRSItems.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GeneratedSRSItems.
+     */
+    distinct?: GeneratedSRSItemScalarFieldEnum | GeneratedSRSItemScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedSRSItem findMany
+   */
+  export type GeneratedSRSItemFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter, which GeneratedSRSItems to fetch.
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GeneratedSRSItems to fetch.
+     */
+    orderBy?: GeneratedSRSItemOrderByWithRelationInput | GeneratedSRSItemOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GeneratedSRSItems.
+     */
+    cursor?: GeneratedSRSItemWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GeneratedSRSItems from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GeneratedSRSItems.
+     */
+    skip?: number
+    distinct?: GeneratedSRSItemScalarFieldEnum | GeneratedSRSItemScalarFieldEnum[]
+  }
+
+  /**
+   * GeneratedSRSItem create
+   */
+  export type GeneratedSRSItemCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GeneratedSRSItem.
+     */
+    data: XOR<GeneratedSRSItemCreateInput, GeneratedSRSItemUncheckedCreateInput>
+  }
+
+  /**
+   * GeneratedSRSItem createMany
+   */
+  export type GeneratedSRSItemCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GeneratedSRSItems.
+     */
+    data: GeneratedSRSItemCreateManyInput | GeneratedSRSItemCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GeneratedSRSItem createManyAndReturn
+   */
+  export type GeneratedSRSItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * The data used to create many GeneratedSRSItems.
+     */
+    data: GeneratedSRSItemCreateManyInput | GeneratedSRSItemCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GeneratedSRSItem update
+   */
+  export type GeneratedSRSItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GeneratedSRSItem.
+     */
+    data: XOR<GeneratedSRSItemUpdateInput, GeneratedSRSItemUncheckedUpdateInput>
+    /**
+     * Choose, which GeneratedSRSItem to update.
+     */
+    where: GeneratedSRSItemWhereUniqueInput
+  }
+
+  /**
+   * GeneratedSRSItem updateMany
+   */
+  export type GeneratedSRSItemUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GeneratedSRSItems.
+     */
+    data: XOR<GeneratedSRSItemUpdateManyMutationInput, GeneratedSRSItemUncheckedUpdateManyInput>
+    /**
+     * Filter which GeneratedSRSItems to update
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * Limit how many GeneratedSRSItems to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GeneratedSRSItem updateManyAndReturn
+   */
+  export type GeneratedSRSItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * The data used to update GeneratedSRSItems.
+     */
+    data: XOR<GeneratedSRSItemUpdateManyMutationInput, GeneratedSRSItemUncheckedUpdateManyInput>
+    /**
+     * Filter which GeneratedSRSItems to update
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * Limit how many GeneratedSRSItems to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GeneratedSRSItem upsert
+   */
+  export type GeneratedSRSItemUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GeneratedSRSItem to update in case it exists.
+     */
+    where: GeneratedSRSItemWhereUniqueInput
+    /**
+     * In case the GeneratedSRSItem found by the `where` argument doesn't exist, create a new GeneratedSRSItem with this data.
+     */
+    create: XOR<GeneratedSRSItemCreateInput, GeneratedSRSItemUncheckedCreateInput>
+    /**
+     * In case the GeneratedSRSItem was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GeneratedSRSItemUpdateInput, GeneratedSRSItemUncheckedUpdateInput>
+  }
+
+  /**
+   * GeneratedSRSItem delete
+   */
+  export type GeneratedSRSItemDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+    /**
+     * Filter which GeneratedSRSItem to delete.
+     */
+    where: GeneratedSRSItemWhereUniqueInput
+  }
+
+  /**
+   * GeneratedSRSItem deleteMany
+   */
+  export type GeneratedSRSItemDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GeneratedSRSItems to delete
+     */
+    where?: GeneratedSRSItemWhereInput
+    /**
+     * Limit how many GeneratedSRSItems to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GeneratedSRSItem without action
+   */
+  export type GeneratedSRSItemDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedSRSItem
+     */
+    select?: GeneratedSRSItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedSRSItem
+     */
+    omit?: GeneratedSRSItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedSRSItemInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model UserContentProgress
+   */
+
+  export type AggregateUserContentProgress = {
+    _count: UserContentProgressCountAggregateOutputType | null
+    _avg: UserContentProgressAvgAggregateOutputType | null
+    _sum: UserContentProgressSumAggregateOutputType | null
+    _min: UserContentProgressMinAggregateOutputType | null
+    _max: UserContentProgressMaxAggregateOutputType | null
+  }
+
+  export type UserContentProgressAvgAggregateOutputType = {
+    lastSectionIndex: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+  }
+
+  export type UserContentProgressSumAggregateOutputType = {
+    lastSectionIndex: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+  }
+
+  export type UserContentProgressMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    contentItemId: string | null
+    status: string | null
+    lastSectionIndex: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserContentProgressMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    contentItemId: string | null
+    status: string | null
+    lastSectionIndex: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserContentProgressCountAggregateOutputType = {
+    id: number
+    userId: number
+    contentItemId: number
+    status: number
+    lastSectionIndex: number
+    savedWords: number
+    quizScore: number
+    quizAttempts: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type UserContentProgressAvgAggregateInputType = {
+    lastSectionIndex?: true
+    quizScore?: true
+    quizAttempts?: true
+  }
+
+  export type UserContentProgressSumAggregateInputType = {
+    lastSectionIndex?: true
+    quizScore?: true
+    quizAttempts?: true
+  }
+
+  export type UserContentProgressMinAggregateInputType = {
+    id?: true
+    userId?: true
+    contentItemId?: true
+    status?: true
+    lastSectionIndex?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserContentProgressMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    contentItemId?: true
+    status?: true
+    lastSectionIndex?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserContentProgressCountAggregateInputType = {
+    id?: true
+    userId?: true
+    contentItemId?: true
+    status?: true
+    lastSectionIndex?: true
+    savedWords?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type UserContentProgressAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserContentProgress to aggregate.
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserContentProgresses to fetch.
+     */
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserContentProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserContentProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserContentProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserContentProgresses
+    **/
+    _count?: true | UserContentProgressCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: UserContentProgressAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: UserContentProgressSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserContentProgressMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserContentProgressMaxAggregateInputType
+  }
+
+  export type GetUserContentProgressAggregateType<T extends UserContentProgressAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserContentProgress]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserContentProgress[P]>
+      : GetScalarType<T[P], AggregateUserContentProgress[P]>
+  }
+
+
+
+
+  export type UserContentProgressGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserContentProgressWhereInput
+    orderBy?: UserContentProgressOrderByWithAggregationInput | UserContentProgressOrderByWithAggregationInput[]
+    by: UserContentProgressScalarFieldEnum[] | UserContentProgressScalarFieldEnum
+    having?: UserContentProgressScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserContentProgressCountAggregateInputType | true
+    _avg?: UserContentProgressAvgAggregateInputType
+    _sum?: UserContentProgressSumAggregateInputType
+    _min?: UserContentProgressMinAggregateInputType
+    _max?: UserContentProgressMaxAggregateInputType
+  }
+
+  export type UserContentProgressGroupByOutputType = {
+    id: string
+    userId: string
+    contentItemId: string
+    status: string
+    lastSectionIndex: number
+    savedWords: JsonValue
+    quizScore: number | null
+    quizAttempts: number
+    createdAt: Date
+    updatedAt: Date
+    _count: UserContentProgressCountAggregateOutputType | null
+    _avg: UserContentProgressAvgAggregateOutputType | null
+    _sum: UserContentProgressSumAggregateOutputType | null
+    _min: UserContentProgressMinAggregateOutputType | null
+    _max: UserContentProgressMaxAggregateOutputType | null
+  }
+
+  type GetUserContentProgressGroupByPayload<T extends UserContentProgressGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserContentProgressGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserContentProgressGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserContentProgressGroupByOutputType[P]>
+            : GetScalarType<T[P], UserContentProgressGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserContentProgressSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    contentItemId?: boolean
+    status?: boolean
+    lastSectionIndex?: boolean
+    savedWords?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userContentProgress"]>
+
+  export type UserContentProgressSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    contentItemId?: boolean
+    status?: boolean
+    lastSectionIndex?: boolean
+    savedWords?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userContentProgress"]>
+
+  export type UserContentProgressSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    contentItemId?: boolean
+    status?: boolean
+    lastSectionIndex?: boolean
+    savedWords?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userContentProgress"]>
+
+  export type UserContentProgressSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    contentItemId?: boolean
+    status?: boolean
+    lastSectionIndex?: boolean
+    savedWords?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type UserContentProgressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "contentItemId" | "status" | "lastSectionIndex" | "savedWords" | "quizScore" | "quizAttempts" | "createdAt" | "updatedAt", ExtArgs["result"]["userContentProgress"]>
+  export type UserContentProgressInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type UserContentProgressIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type UserContentProgressIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $UserContentProgressPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserContentProgress"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      contentItemId: string
+      status: string
+      lastSectionIndex: number
+      savedWords: Prisma.JsonValue
+      quizScore: number | null
+      quizAttempts: number
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["userContentProgress"]>
+    composites: {}
+  }
+
+  type UserContentProgressGetPayload<S extends boolean | null | undefined | UserContentProgressDefaultArgs> = $Result.GetResult<Prisma.$UserContentProgressPayload, S>
+
+  type UserContentProgressCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserContentProgressFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserContentProgressCountAggregateInputType | true
+    }
+
+  export interface UserContentProgressDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserContentProgress'], meta: { name: 'UserContentProgress' } }
+    /**
+     * Find zero or one UserContentProgress that matches the filter.
+     * @param {UserContentProgressFindUniqueArgs} args - Arguments to find a UserContentProgress
+     * @example
+     * // Get one UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserContentProgressFindUniqueArgs>(args: SelectSubset<T, UserContentProgressFindUniqueArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserContentProgress that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserContentProgressFindUniqueOrThrowArgs} args - Arguments to find a UserContentProgress
+     * @example
+     * // Get one UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserContentProgressFindUniqueOrThrowArgs>(args: SelectSubset<T, UserContentProgressFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserContentProgress that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressFindFirstArgs} args - Arguments to find a UserContentProgress
+     * @example
+     * // Get one UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserContentProgressFindFirstArgs>(args?: SelectSubset<T, UserContentProgressFindFirstArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserContentProgress that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressFindFirstOrThrowArgs} args - Arguments to find a UserContentProgress
+     * @example
+     * // Get one UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserContentProgressFindFirstOrThrowArgs>(args?: SelectSubset<T, UserContentProgressFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserContentProgresses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserContentProgresses
+     * const userContentProgresses = await prisma.userContentProgress.findMany()
+     * 
+     * // Get first 10 UserContentProgresses
+     * const userContentProgresses = await prisma.userContentProgress.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userContentProgressWithIdOnly = await prisma.userContentProgress.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserContentProgressFindManyArgs>(args?: SelectSubset<T, UserContentProgressFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserContentProgress.
+     * @param {UserContentProgressCreateArgs} args - Arguments to create a UserContentProgress.
+     * @example
+     * // Create one UserContentProgress
+     * const UserContentProgress = await prisma.userContentProgress.create({
+     *   data: {
+     *     // ... data to create a UserContentProgress
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserContentProgressCreateArgs>(args: SelectSubset<T, UserContentProgressCreateArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserContentProgresses.
+     * @param {UserContentProgressCreateManyArgs} args - Arguments to create many UserContentProgresses.
+     * @example
+     * // Create many UserContentProgresses
+     * const userContentProgress = await prisma.userContentProgress.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserContentProgressCreateManyArgs>(args?: SelectSubset<T, UserContentProgressCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserContentProgresses and returns the data saved in the database.
+     * @param {UserContentProgressCreateManyAndReturnArgs} args - Arguments to create many UserContentProgresses.
+     * @example
+     * // Create many UserContentProgresses
+     * const userContentProgress = await prisma.userContentProgress.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserContentProgresses and only return the `id`
+     * const userContentProgressWithIdOnly = await prisma.userContentProgress.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserContentProgressCreateManyAndReturnArgs>(args?: SelectSubset<T, UserContentProgressCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserContentProgress.
+     * @param {UserContentProgressDeleteArgs} args - Arguments to delete one UserContentProgress.
+     * @example
+     * // Delete one UserContentProgress
+     * const UserContentProgress = await prisma.userContentProgress.delete({
+     *   where: {
+     *     // ... filter to delete one UserContentProgress
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserContentProgressDeleteArgs>(args: SelectSubset<T, UserContentProgressDeleteArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserContentProgress.
+     * @param {UserContentProgressUpdateArgs} args - Arguments to update one UserContentProgress.
+     * @example
+     * // Update one UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserContentProgressUpdateArgs>(args: SelectSubset<T, UserContentProgressUpdateArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserContentProgresses.
+     * @param {UserContentProgressDeleteManyArgs} args - Arguments to filter UserContentProgresses to delete.
+     * @example
+     * // Delete a few UserContentProgresses
+     * const { count } = await prisma.userContentProgress.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserContentProgressDeleteManyArgs>(args?: SelectSubset<T, UserContentProgressDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserContentProgresses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserContentProgresses
+     * const userContentProgress = await prisma.userContentProgress.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserContentProgressUpdateManyArgs>(args: SelectSubset<T, UserContentProgressUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserContentProgresses and returns the data updated in the database.
+     * @param {UserContentProgressUpdateManyAndReturnArgs} args - Arguments to update many UserContentProgresses.
+     * @example
+     * // Update many UserContentProgresses
+     * const userContentProgress = await prisma.userContentProgress.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserContentProgresses and only return the `id`
+     * const userContentProgressWithIdOnly = await prisma.userContentProgress.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserContentProgressUpdateManyAndReturnArgs>(args: SelectSubset<T, UserContentProgressUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserContentProgress.
+     * @param {UserContentProgressUpsertArgs} args - Arguments to update or create a UserContentProgress.
+     * @example
+     * // Update or create a UserContentProgress
+     * const userContentProgress = await prisma.userContentProgress.upsert({
+     *   create: {
+     *     // ... data to create a UserContentProgress
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserContentProgress we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserContentProgressUpsertArgs>(args: SelectSubset<T, UserContentProgressUpsertArgs<ExtArgs>>): Prisma__UserContentProgressClient<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserContentProgresses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressCountArgs} args - Arguments to filter UserContentProgresses to count.
+     * @example
+     * // Count the number of UserContentProgresses
+     * const count = await prisma.userContentProgress.count({
+     *   where: {
+     *     // ... the filter for the UserContentProgresses we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserContentProgressCountArgs>(
+      args?: Subset<T, UserContentProgressCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserContentProgressCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserContentProgress.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserContentProgressAggregateArgs>(args: Subset<T, UserContentProgressAggregateArgs>): Prisma.PrismaPromise<GetUserContentProgressAggregateType<T>>
+
+    /**
+     * Group by UserContentProgress.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserContentProgressGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserContentProgressGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserContentProgressGroupByArgs['orderBy'] }
+        : { orderBy?: UserContentProgressGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserContentProgressGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserContentProgressGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserContentProgress model
+   */
+  readonly fields: UserContentProgressFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserContentProgress.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserContentProgressClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserContentProgress model
+   */
+  interface UserContentProgressFieldRefs {
+    readonly id: FieldRef<"UserContentProgress", 'String'>
+    readonly userId: FieldRef<"UserContentProgress", 'String'>
+    readonly contentItemId: FieldRef<"UserContentProgress", 'String'>
+    readonly status: FieldRef<"UserContentProgress", 'String'>
+    readonly lastSectionIndex: FieldRef<"UserContentProgress", 'Int'>
+    readonly savedWords: FieldRef<"UserContentProgress", 'Json'>
+    readonly quizScore: FieldRef<"UserContentProgress", 'Int'>
+    readonly quizAttempts: FieldRef<"UserContentProgress", 'Int'>
+    readonly createdAt: FieldRef<"UserContentProgress", 'DateTime'>
+    readonly updatedAt: FieldRef<"UserContentProgress", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserContentProgress findUnique
+   */
+  export type UserContentProgressFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserContentProgress to fetch.
+     */
+    where: UserContentProgressWhereUniqueInput
+  }
+
+  /**
+   * UserContentProgress findUniqueOrThrow
+   */
+  export type UserContentProgressFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserContentProgress to fetch.
+     */
+    where: UserContentProgressWhereUniqueInput
+  }
+
+  /**
+   * UserContentProgress findFirst
+   */
+  export type UserContentProgressFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserContentProgress to fetch.
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserContentProgresses to fetch.
+     */
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserContentProgresses.
+     */
+    cursor?: UserContentProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserContentProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserContentProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserContentProgresses.
+     */
+    distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserContentProgress findFirstOrThrow
+   */
+  export type UserContentProgressFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserContentProgress to fetch.
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserContentProgresses to fetch.
+     */
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserContentProgresses.
+     */
+    cursor?: UserContentProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserContentProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserContentProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserContentProgresses.
+     */
+    distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserContentProgress findMany
+   */
+  export type UserContentProgressFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserContentProgresses to fetch.
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserContentProgresses to fetch.
+     */
+    orderBy?: UserContentProgressOrderByWithRelationInput | UserContentProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserContentProgresses.
+     */
+    cursor?: UserContentProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserContentProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserContentProgresses.
+     */
+    skip?: number
+    distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserContentProgress create
+   */
+  export type UserContentProgressCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserContentProgress.
+     */
+    data: XOR<UserContentProgressCreateInput, UserContentProgressUncheckedCreateInput>
+  }
+
+  /**
+   * UserContentProgress createMany
+   */
+  export type UserContentProgressCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserContentProgresses.
+     */
+    data: UserContentProgressCreateManyInput | UserContentProgressCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserContentProgress createManyAndReturn
+   */
+  export type UserContentProgressCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserContentProgresses.
+     */
+    data: UserContentProgressCreateManyInput | UserContentProgressCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * UserContentProgress update
+   */
+  export type UserContentProgressUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserContentProgress.
+     */
+    data: XOR<UserContentProgressUpdateInput, UserContentProgressUncheckedUpdateInput>
+    /**
+     * Choose, which UserContentProgress to update.
+     */
+    where: UserContentProgressWhereUniqueInput
+  }
+
+  /**
+   * UserContentProgress updateMany
+   */
+  export type UserContentProgressUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserContentProgresses.
+     */
+    data: XOR<UserContentProgressUpdateManyMutationInput, UserContentProgressUncheckedUpdateManyInput>
+    /**
+     * Filter which UserContentProgresses to update
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * Limit how many UserContentProgresses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserContentProgress updateManyAndReturn
+   */
+  export type UserContentProgressUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * The data used to update UserContentProgresses.
+     */
+    data: XOR<UserContentProgressUpdateManyMutationInput, UserContentProgressUncheckedUpdateManyInput>
+    /**
+     * Filter which UserContentProgresses to update
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * Limit how many UserContentProgresses to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * UserContentProgress upsert
+   */
+  export type UserContentProgressUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserContentProgress to update in case it exists.
+     */
+    where: UserContentProgressWhereUniqueInput
+    /**
+     * In case the UserContentProgress found by the `where` argument doesn't exist, create a new UserContentProgress with this data.
+     */
+    create: XOR<UserContentProgressCreateInput, UserContentProgressUncheckedCreateInput>
+    /**
+     * In case the UserContentProgress was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserContentProgressUpdateInput, UserContentProgressUncheckedUpdateInput>
+  }
+
+  /**
+   * UserContentProgress delete
+   */
+  export type UserContentProgressDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+    /**
+     * Filter which UserContentProgress to delete.
+     */
+    where: UserContentProgressWhereUniqueInput
+  }
+
+  /**
+   * UserContentProgress deleteMany
+   */
+  export type UserContentProgressDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserContentProgresses to delete
+     */
+    where?: UserContentProgressWhereInput
+    /**
+     * Limit how many UserContentProgresses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserContentProgress without action
+   */
+  export type UserContentProgressDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserContentProgress
+     */
+    select?: UserContentProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserContentProgress
+     */
+    omit?: UserContentProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserContentProgressInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ContentImportJob
+   */
+
+  export type AggregateContentImportJob = {
+    _count: ContentImportJobCountAggregateOutputType | null
+    _avg: ContentImportJobAvgAggregateOutputType | null
+    _sum: ContentImportJobSumAggregateOutputType | null
+    _min: ContentImportJobMinAggregateOutputType | null
+    _max: ContentImportJobMaxAggregateOutputType | null
+  }
+
+  export type ContentImportJobAvgAggregateOutputType = {
+    progress: number | null
+  }
+
+  export type ContentImportJobSumAggregateOutputType = {
+    progress: number | null
+  }
+
+  export type ContentImportJobMinAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    url: string | null
+    status: string | null
+    progress: number | null
+    error: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentImportJobMaxAggregateOutputType = {
+    id: string | null
+    contentItemId: string | null
+    url: string | null
+    status: string | null
+    progress: number | null
+    error: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ContentImportJobCountAggregateOutputType = {
+    id: number
+    contentItemId: number
+    url: number
+    status: number
+    progress: number
+    error: number
+    scrapeResult: number
+    aiAnalysis: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ContentImportJobAvgAggregateInputType = {
+    progress?: true
+  }
+
+  export type ContentImportJobSumAggregateInputType = {
+    progress?: true
+  }
+
+  export type ContentImportJobMinAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    url?: true
+    status?: true
+    progress?: true
+    error?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentImportJobMaxAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    url?: true
+    status?: true
+    progress?: true
+    error?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ContentImportJobCountAggregateInputType = {
+    id?: true
+    contentItemId?: true
+    url?: true
+    status?: true
+    progress?: true
+    error?: true
+    scrapeResult?: true
+    aiAnalysis?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ContentImportJobAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentImportJob to aggregate.
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentImportJobs to fetch.
+     */
+    orderBy?: ContentImportJobOrderByWithRelationInput | ContentImportJobOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ContentImportJobWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentImportJobs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentImportJobs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ContentImportJobs
+    **/
+    _count?: true | ContentImportJobCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ContentImportJobAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ContentImportJobSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ContentImportJobMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ContentImportJobMaxAggregateInputType
+  }
+
+  export type GetContentImportJobAggregateType<T extends ContentImportJobAggregateArgs> = {
+        [P in keyof T & keyof AggregateContentImportJob]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateContentImportJob[P]>
+      : GetScalarType<T[P], AggregateContentImportJob[P]>
+  }
+
+
+
+
+  export type ContentImportJobGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentImportJobWhereInput
+    orderBy?: ContentImportJobOrderByWithAggregationInput | ContentImportJobOrderByWithAggregationInput[]
+    by: ContentImportJobScalarFieldEnum[] | ContentImportJobScalarFieldEnum
+    having?: ContentImportJobScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ContentImportJobCountAggregateInputType | true
+    _avg?: ContentImportJobAvgAggregateInputType
+    _sum?: ContentImportJobSumAggregateInputType
+    _min?: ContentImportJobMinAggregateInputType
+    _max?: ContentImportJobMaxAggregateInputType
+  }
+
+  export type ContentImportJobGroupByOutputType = {
+    id: string
+    contentItemId: string
+    url: string
+    status: string
+    progress: number
+    error: string | null
+    scrapeResult: JsonValue | null
+    aiAnalysis: JsonValue | null
+    createdAt: Date
+    updatedAt: Date
+    _count: ContentImportJobCountAggregateOutputType | null
+    _avg: ContentImportJobAvgAggregateOutputType | null
+    _sum: ContentImportJobSumAggregateOutputType | null
+    _min: ContentImportJobMinAggregateOutputType | null
+    _max: ContentImportJobMaxAggregateOutputType | null
+  }
+
+  type GetContentImportJobGroupByPayload<T extends ContentImportJobGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ContentImportJobGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ContentImportJobGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ContentImportJobGroupByOutputType[P]>
+            : GetScalarType<T[P], ContentImportJobGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ContentImportJobSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    url?: boolean
+    status?: boolean
+    progress?: boolean
+    error?: boolean
+    scrapeResult?: boolean
+    aiAnalysis?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentImportJob"]>
+
+  export type ContentImportJobSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    url?: boolean
+    status?: boolean
+    progress?: boolean
+    error?: boolean
+    scrapeResult?: boolean
+    aiAnalysis?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentImportJob"]>
+
+  export type ContentImportJobSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    contentItemId?: boolean
+    url?: boolean
+    status?: boolean
+    progress?: boolean
+    error?: boolean
+    scrapeResult?: boolean
+    aiAnalysis?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contentImportJob"]>
+
+  export type ContentImportJobSelectScalar = {
+    id?: boolean
+    contentItemId?: boolean
+    url?: boolean
+    status?: boolean
+    progress?: boolean
+    error?: boolean
+    scrapeResult?: boolean
+    aiAnalysis?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ContentImportJobOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "url" | "status" | "progress" | "error" | "scrapeResult" | "aiAnalysis" | "createdAt" | "updatedAt", ExtArgs["result"]["contentImportJob"]>
+  export type ContentImportJobInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentImportJobIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+  export type ContentImportJobIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+  }
+
+  export type $ContentImportJobPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ContentImportJob"
+    objects: {
+      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      contentItemId: string
+      url: string
+      status: string
+      progress: number
+      error: string | null
+      scrapeResult: Prisma.JsonValue | null
+      aiAnalysis: Prisma.JsonValue | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["contentImportJob"]>
+    composites: {}
+  }
+
+  type ContentImportJobGetPayload<S extends boolean | null | undefined | ContentImportJobDefaultArgs> = $Result.GetResult<Prisma.$ContentImportJobPayload, S>
+
+  type ContentImportJobCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContentImportJobFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContentImportJobCountAggregateInputType | true
+    }
+
+  export interface ContentImportJobDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ContentImportJob'], meta: { name: 'ContentImportJob' } }
+    /**
+     * Find zero or one ContentImportJob that matches the filter.
+     * @param {ContentImportJobFindUniqueArgs} args - Arguments to find a ContentImportJob
+     * @example
+     * // Get one ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ContentImportJobFindUniqueArgs>(args: SelectSubset<T, ContentImportJobFindUniqueArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ContentImportJob that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ContentImportJobFindUniqueOrThrowArgs} args - Arguments to find a ContentImportJob
+     * @example
+     * // Get one ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ContentImportJobFindUniqueOrThrowArgs>(args: SelectSubset<T, ContentImportJobFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentImportJob that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobFindFirstArgs} args - Arguments to find a ContentImportJob
+     * @example
+     * // Get one ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ContentImportJobFindFirstArgs>(args?: SelectSubset<T, ContentImportJobFindFirstArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ContentImportJob that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobFindFirstOrThrowArgs} args - Arguments to find a ContentImportJob
+     * @example
+     * // Get one ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ContentImportJobFindFirstOrThrowArgs>(args?: SelectSubset<T, ContentImportJobFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ContentImportJobs that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ContentImportJobs
+     * const contentImportJobs = await prisma.contentImportJob.findMany()
+     * 
+     * // Get first 10 ContentImportJobs
+     * const contentImportJobs = await prisma.contentImportJob.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const contentImportJobWithIdOnly = await prisma.contentImportJob.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ContentImportJobFindManyArgs>(args?: SelectSubset<T, ContentImportJobFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ContentImportJob.
+     * @param {ContentImportJobCreateArgs} args - Arguments to create a ContentImportJob.
+     * @example
+     * // Create one ContentImportJob
+     * const ContentImportJob = await prisma.contentImportJob.create({
+     *   data: {
+     *     // ... data to create a ContentImportJob
+     *   }
+     * })
+     * 
+     */
+    create<T extends ContentImportJobCreateArgs>(args: SelectSubset<T, ContentImportJobCreateArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ContentImportJobs.
+     * @param {ContentImportJobCreateManyArgs} args - Arguments to create many ContentImportJobs.
+     * @example
+     * // Create many ContentImportJobs
+     * const contentImportJob = await prisma.contentImportJob.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ContentImportJobCreateManyArgs>(args?: SelectSubset<T, ContentImportJobCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ContentImportJobs and returns the data saved in the database.
+     * @param {ContentImportJobCreateManyAndReturnArgs} args - Arguments to create many ContentImportJobs.
+     * @example
+     * // Create many ContentImportJobs
+     * const contentImportJob = await prisma.contentImportJob.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ContentImportJobs and only return the `id`
+     * const contentImportJobWithIdOnly = await prisma.contentImportJob.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ContentImportJobCreateManyAndReturnArgs>(args?: SelectSubset<T, ContentImportJobCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ContentImportJob.
+     * @param {ContentImportJobDeleteArgs} args - Arguments to delete one ContentImportJob.
+     * @example
+     * // Delete one ContentImportJob
+     * const ContentImportJob = await prisma.contentImportJob.delete({
+     *   where: {
+     *     // ... filter to delete one ContentImportJob
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ContentImportJobDeleteArgs>(args: SelectSubset<T, ContentImportJobDeleteArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ContentImportJob.
+     * @param {ContentImportJobUpdateArgs} args - Arguments to update one ContentImportJob.
+     * @example
+     * // Update one ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ContentImportJobUpdateArgs>(args: SelectSubset<T, ContentImportJobUpdateArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ContentImportJobs.
+     * @param {ContentImportJobDeleteManyArgs} args - Arguments to filter ContentImportJobs to delete.
+     * @example
+     * // Delete a few ContentImportJobs
+     * const { count } = await prisma.contentImportJob.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ContentImportJobDeleteManyArgs>(args?: SelectSubset<T, ContentImportJobDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentImportJobs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ContentImportJobs
+     * const contentImportJob = await prisma.contentImportJob.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ContentImportJobUpdateManyArgs>(args: SelectSubset<T, ContentImportJobUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ContentImportJobs and returns the data updated in the database.
+     * @param {ContentImportJobUpdateManyAndReturnArgs} args - Arguments to update many ContentImportJobs.
+     * @example
+     * // Update many ContentImportJobs
+     * const contentImportJob = await prisma.contentImportJob.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ContentImportJobs and only return the `id`
+     * const contentImportJobWithIdOnly = await prisma.contentImportJob.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ContentImportJobUpdateManyAndReturnArgs>(args: SelectSubset<T, ContentImportJobUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ContentImportJob.
+     * @param {ContentImportJobUpsertArgs} args - Arguments to update or create a ContentImportJob.
+     * @example
+     * // Update or create a ContentImportJob
+     * const contentImportJob = await prisma.contentImportJob.upsert({
+     *   create: {
+     *     // ... data to create a ContentImportJob
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ContentImportJob we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ContentImportJobUpsertArgs>(args: SelectSubset<T, ContentImportJobUpsertArgs<ExtArgs>>): Prisma__ContentImportJobClient<$Result.GetResult<Prisma.$ContentImportJobPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ContentImportJobs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobCountArgs} args - Arguments to filter ContentImportJobs to count.
+     * @example
+     * // Count the number of ContentImportJobs
+     * const count = await prisma.contentImportJob.count({
+     *   where: {
+     *     // ... the filter for the ContentImportJobs we want to count
+     *   }
+     * })
+    **/
+    count<T extends ContentImportJobCountArgs>(
+      args?: Subset<T, ContentImportJobCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ContentImportJobCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ContentImportJob.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ContentImportJobAggregateArgs>(args: Subset<T, ContentImportJobAggregateArgs>): Prisma.PrismaPromise<GetContentImportJobAggregateType<T>>
+
+    /**
+     * Group by ContentImportJob.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ContentImportJobGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ContentImportJobGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ContentImportJobGroupByArgs['orderBy'] }
+        : { orderBy?: ContentImportJobGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ContentImportJobGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContentImportJobGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ContentImportJob model
+   */
+  readonly fields: ContentImportJobFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ContentImportJob.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ContentImportJobClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ContentImportJob model
+   */
+  interface ContentImportJobFieldRefs {
+    readonly id: FieldRef<"ContentImportJob", 'String'>
+    readonly contentItemId: FieldRef<"ContentImportJob", 'String'>
+    readonly url: FieldRef<"ContentImportJob", 'String'>
+    readonly status: FieldRef<"ContentImportJob", 'String'>
+    readonly progress: FieldRef<"ContentImportJob", 'Int'>
+    readonly error: FieldRef<"ContentImportJob", 'String'>
+    readonly scrapeResult: FieldRef<"ContentImportJob", 'Json'>
+    readonly aiAnalysis: FieldRef<"ContentImportJob", 'Json'>
+    readonly createdAt: FieldRef<"ContentImportJob", 'DateTime'>
+    readonly updatedAt: FieldRef<"ContentImportJob", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ContentImportJob findUnique
+   */
+  export type ContentImportJobFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentImportJob to fetch.
+     */
+    where: ContentImportJobWhereUniqueInput
+  }
+
+  /**
+   * ContentImportJob findUniqueOrThrow
+   */
+  export type ContentImportJobFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentImportJob to fetch.
+     */
+    where: ContentImportJobWhereUniqueInput
+  }
+
+  /**
+   * ContentImportJob findFirst
+   */
+  export type ContentImportJobFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentImportJob to fetch.
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentImportJobs to fetch.
+     */
+    orderBy?: ContentImportJobOrderByWithRelationInput | ContentImportJobOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentImportJobs.
+     */
+    cursor?: ContentImportJobWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentImportJobs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentImportJobs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentImportJobs.
+     */
+    distinct?: ContentImportJobScalarFieldEnum | ContentImportJobScalarFieldEnum[]
+  }
+
+  /**
+   * ContentImportJob findFirstOrThrow
+   */
+  export type ContentImportJobFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentImportJob to fetch.
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentImportJobs to fetch.
+     */
+    orderBy?: ContentImportJobOrderByWithRelationInput | ContentImportJobOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ContentImportJobs.
+     */
+    cursor?: ContentImportJobWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentImportJobs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentImportJobs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ContentImportJobs.
+     */
+    distinct?: ContentImportJobScalarFieldEnum | ContentImportJobScalarFieldEnum[]
+  }
+
+  /**
+   * ContentImportJob findMany
+   */
+  export type ContentImportJobFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter, which ContentImportJobs to fetch.
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ContentImportJobs to fetch.
+     */
+    orderBy?: ContentImportJobOrderByWithRelationInput | ContentImportJobOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ContentImportJobs.
+     */
+    cursor?: ContentImportJobWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ContentImportJobs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ContentImportJobs.
+     */
+    skip?: number
+    distinct?: ContentImportJobScalarFieldEnum | ContentImportJobScalarFieldEnum[]
+  }
+
+  /**
+   * ContentImportJob create
+   */
+  export type ContentImportJobCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ContentImportJob.
+     */
+    data: XOR<ContentImportJobCreateInput, ContentImportJobUncheckedCreateInput>
+  }
+
+  /**
+   * ContentImportJob createMany
+   */
+  export type ContentImportJobCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ContentImportJobs.
+     */
+    data: ContentImportJobCreateManyInput | ContentImportJobCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ContentImportJob createManyAndReturn
+   */
+  export type ContentImportJobCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * The data used to create many ContentImportJobs.
+     */
+    data: ContentImportJobCreateManyInput | ContentImportJobCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentImportJob update
+   */
+  export type ContentImportJobUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ContentImportJob.
+     */
+    data: XOR<ContentImportJobUpdateInput, ContentImportJobUncheckedUpdateInput>
+    /**
+     * Choose, which ContentImportJob to update.
+     */
+    where: ContentImportJobWhereUniqueInput
+  }
+
+  /**
+   * ContentImportJob updateMany
+   */
+  export type ContentImportJobUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ContentImportJobs.
+     */
+    data: XOR<ContentImportJobUpdateManyMutationInput, ContentImportJobUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentImportJobs to update
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * Limit how many ContentImportJobs to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentImportJob updateManyAndReturn
+   */
+  export type ContentImportJobUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * The data used to update ContentImportJobs.
+     */
+    data: XOR<ContentImportJobUpdateManyMutationInput, ContentImportJobUncheckedUpdateManyInput>
+    /**
+     * Filter which ContentImportJobs to update
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * Limit how many ContentImportJobs to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ContentImportJob upsert
+   */
+  export type ContentImportJobUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ContentImportJob to update in case it exists.
+     */
+    where: ContentImportJobWhereUniqueInput
+    /**
+     * In case the ContentImportJob found by the `where` argument doesn't exist, create a new ContentImportJob with this data.
+     */
+    create: XOR<ContentImportJobCreateInput, ContentImportJobUncheckedCreateInput>
+    /**
+     * In case the ContentImportJob was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ContentImportJobUpdateInput, ContentImportJobUncheckedUpdateInput>
+  }
+
+  /**
+   * ContentImportJob delete
+   */
+  export type ContentImportJobDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+    /**
+     * Filter which ContentImportJob to delete.
+     */
+    where: ContentImportJobWhereUniqueInput
+  }
+
+  /**
+   * ContentImportJob deleteMany
+   */
+  export type ContentImportJobDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ContentImportJobs to delete
+     */
+    where?: ContentImportJobWhereInput
+    /**
+     * Limit how many ContentImportJobs to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ContentImportJob without action
+   */
+  export type ContentImportJobDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentImportJob
+     */
+    select?: ContentImportJobSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentImportJob
+     */
+    omit?: ContentImportJobOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentImportJobInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -31227,6 +42815,152 @@ export namespace Prisma {
   export type AuditLogScalarFieldEnum = (typeof AuditLogScalarFieldEnum)[keyof typeof AuditLogScalarFieldEnum]
 
 
+  export const TopicScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    nameZh: 'nameZh',
+    nameJa: 'nameJa',
+    icon: 'icon',
+    sortOrder: 'sortOrder',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type TopicScalarFieldEnum = (typeof TopicScalarFieldEnum)[keyof typeof TopicScalarFieldEnum]
+
+
+  export const ContentSourceScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    type: 'type',
+    baseUrl: 'baseUrl',
+    description: 'description',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ContentSourceScalarFieldEnum = (typeof ContentSourceScalarFieldEnum)[keyof typeof ContentSourceScalarFieldEnum]
+
+
+  export const ContentItemScalarFieldEnum: {
+    id: 'id',
+    sourceId: 'sourceId',
+    topicId: 'topicId',
+    title: 'title',
+    titleZh: 'titleZh',
+    url: 'url',
+    imageUrl: 'imageUrl',
+    rawText: 'rawText',
+    cleanedText: 'cleanedText',
+    simplifiedText: 'simplifiedText',
+    summary: 'summary',
+    contentType: 'contentType',
+    status: 'status',
+    jlptLevel: 'jlptLevel',
+    wordCount: 'wordCount',
+    estimatedMinutes: 'estimatedMinutes',
+    extractedVocab: 'extractedVocab',
+    extractedGrammar: 'extractedGrammar',
+    publishedAt: 'publishedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ContentItemScalarFieldEnum = (typeof ContentItemScalarFieldEnum)[keyof typeof ContentItemScalarFieldEnum]
+
+
+  export const ContentSectionScalarFieldEnum: {
+    id: 'id',
+    contentItemId: 'contentItemId',
+    orderIndex: 'orderIndex',
+    type: 'type',
+    text: 'text',
+    jlptLevel: 'jlptLevel',
+    vocabHighlights: 'vocabHighlights',
+    grammarTags: 'grammarTags'
+  };
+
+  export type ContentSectionScalarFieldEnum = (typeof ContentSectionScalarFieldEnum)[keyof typeof ContentSectionScalarFieldEnum]
+
+
+  export const ContentAudioScalarFieldEnum: {
+    id: 'id',
+    contentItemId: 'contentItemId',
+    audioUrl: 'audioUrl',
+    type: 'type',
+    duration: 'duration',
+    transcript: 'transcript',
+    createdAt: 'createdAt'
+  };
+
+  export type ContentAudioScalarFieldEnum = (typeof ContentAudioScalarFieldEnum)[keyof typeof ContentAudioScalarFieldEnum]
+
+
+  export const GeneratedQuestionScalarFieldEnum: {
+    id: 'id',
+    contentItemId: 'contentItemId',
+    type: 'type',
+    prompt: 'prompt',
+    options: 'options',
+    answer: 'answer',
+    explanation: 'explanation',
+    explanationWrong: 'explanationWrong',
+    jlptLevel: 'jlptLevel',
+    createdAt: 'createdAt'
+  };
+
+  export type GeneratedQuestionScalarFieldEnum = (typeof GeneratedQuestionScalarFieldEnum)[keyof typeof GeneratedQuestionScalarFieldEnum]
+
+
+  export const GeneratedSRSItemScalarFieldEnum: {
+    id: 'id',
+    contentItemId: 'contentItemId',
+    userId: 'userId',
+    word: 'word',
+    furigana: 'furigana',
+    pos: 'pos',
+    meaningZh: 'meaningZh',
+    contextSentence: 'contextSentence',
+    cardType: 'cardType',
+    jlptLevel: 'jlptLevel',
+    createdAt: 'createdAt'
+  };
+
+  export type GeneratedSRSItemScalarFieldEnum = (typeof GeneratedSRSItemScalarFieldEnum)[keyof typeof GeneratedSRSItemScalarFieldEnum]
+
+
+  export const UserContentProgressScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    contentItemId: 'contentItemId',
+    status: 'status',
+    lastSectionIndex: 'lastSectionIndex',
+    savedWords: 'savedWords',
+    quizScore: 'quizScore',
+    quizAttempts: 'quizAttempts',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type UserContentProgressScalarFieldEnum = (typeof UserContentProgressScalarFieldEnum)[keyof typeof UserContentProgressScalarFieldEnum]
+
+
+  export const ContentImportJobScalarFieldEnum: {
+    id: 'id',
+    contentItemId: 'contentItemId',
+    url: 'url',
+    status: 'status',
+    progress: 'progress',
+    error: 'error',
+    scrapeResult: 'scrapeResult',
+    aiAnalysis: 'aiAnalysis',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ContentImportJobScalarFieldEnum = (typeof ContentImportJobScalarFieldEnum)[keyof typeof ContentImportJobScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -31453,6 +43187,48 @@ export namespace Prisma {
    */
   export type ListEnumCreditTransactionTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'CreditTransactionType[]'>
     
+
+
+  /**
+   * Reference to a field of type 'ContentType'
+   */
+  export type EnumContentTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ContentType'>
+    
+
+
+  /**
+   * Reference to a field of type 'ContentType[]'
+   */
+  export type ListEnumContentTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ContentType[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'ContentStatus'
+   */
+  export type EnumContentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ContentStatus'>
+    
+
+
+  /**
+   * Reference to a field of type 'ContentStatus[]'
+   */
+  export type ListEnumContentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ContentStatus[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'QuestionType'
+   */
+  export type EnumQuestionTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QuestionType'>
+    
+
+
+  /**
+   * Reference to a field of type 'QuestionType[]'
+   */
+  export type ListEnumQuestionTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QuestionType[]'>
+    
   /**
    * Deep Input Types
    */
@@ -31500,6 +43276,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressListRelationFilter
     learningStats?: XOR<LearningStatsNullableScalarRelationFilter, LearningStatsWhereInput> | null
     auditLogs?: AuditLogListRelationFilter
+    contentProgress?: UserContentProgressListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -31541,6 +43318,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressOrderByRelationAggregateInput
     learningStats?: LearningStatsOrderByWithRelationInput
     auditLogs?: AuditLogOrderByRelationAggregateInput
+    contentProgress?: UserContentProgressOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -31586,6 +43364,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressListRelationFilter
     learningStats?: XOR<LearningStatsNullableScalarRelationFilter, LearningStatsWhereInput> | null
     auditLogs?: AuditLogListRelationFilter
+    contentProgress?: UserContentProgressListRelationFilter
   }, "id" | "email" | "customerId" | "provider_providerId">
 
   export type UserOrderByWithAggregationInput = {
@@ -33524,6 +45303,774 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"AuditLog"> | Date | string
   }
 
+  export type TopicWhereInput = {
+    AND?: TopicWhereInput | TopicWhereInput[]
+    OR?: TopicWhereInput[]
+    NOT?: TopicWhereInput | TopicWhereInput[]
+    id?: StringFilter<"Topic"> | string
+    name?: StringFilter<"Topic"> | string
+    nameZh?: StringFilter<"Topic"> | string
+    nameJa?: StringFilter<"Topic"> | string
+    icon?: StringFilter<"Topic"> | string
+    sortOrder?: IntFilter<"Topic"> | number
+    createdAt?: DateTimeFilter<"Topic"> | Date | string
+    updatedAt?: DateTimeFilter<"Topic"> | Date | string
+    content?: ContentItemListRelationFilter
+  }
+
+  export type TopicOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    nameZh?: SortOrder
+    nameJa?: SortOrder
+    icon?: SortOrder
+    sortOrder?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    content?: ContentItemOrderByRelationAggregateInput
+  }
+
+  export type TopicWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    name?: string
+    AND?: TopicWhereInput | TopicWhereInput[]
+    OR?: TopicWhereInput[]
+    NOT?: TopicWhereInput | TopicWhereInput[]
+    nameZh?: StringFilter<"Topic"> | string
+    nameJa?: StringFilter<"Topic"> | string
+    icon?: StringFilter<"Topic"> | string
+    sortOrder?: IntFilter<"Topic"> | number
+    createdAt?: DateTimeFilter<"Topic"> | Date | string
+    updatedAt?: DateTimeFilter<"Topic"> | Date | string
+    content?: ContentItemListRelationFilter
+  }, "id" | "name">
+
+  export type TopicOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    nameZh?: SortOrder
+    nameJa?: SortOrder
+    icon?: SortOrder
+    sortOrder?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: TopicCountOrderByAggregateInput
+    _avg?: TopicAvgOrderByAggregateInput
+    _max?: TopicMaxOrderByAggregateInput
+    _min?: TopicMinOrderByAggregateInput
+    _sum?: TopicSumOrderByAggregateInput
+  }
+
+  export type TopicScalarWhereWithAggregatesInput = {
+    AND?: TopicScalarWhereWithAggregatesInput | TopicScalarWhereWithAggregatesInput[]
+    OR?: TopicScalarWhereWithAggregatesInput[]
+    NOT?: TopicScalarWhereWithAggregatesInput | TopicScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Topic"> | string
+    name?: StringWithAggregatesFilter<"Topic"> | string
+    nameZh?: StringWithAggregatesFilter<"Topic"> | string
+    nameJa?: StringWithAggregatesFilter<"Topic"> | string
+    icon?: StringWithAggregatesFilter<"Topic"> | string
+    sortOrder?: IntWithAggregatesFilter<"Topic"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Topic"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Topic"> | Date | string
+  }
+
+  export type ContentSourceWhereInput = {
+    AND?: ContentSourceWhereInput | ContentSourceWhereInput[]
+    OR?: ContentSourceWhereInput[]
+    NOT?: ContentSourceWhereInput | ContentSourceWhereInput[]
+    id?: StringFilter<"ContentSource"> | string
+    name?: StringFilter<"ContentSource"> | string
+    type?: StringFilter<"ContentSource"> | string
+    baseUrl?: StringFilter<"ContentSource"> | string
+    description?: StringFilter<"ContentSource"> | string
+    createdAt?: DateTimeFilter<"ContentSource"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentSource"> | Date | string
+    content?: ContentItemListRelationFilter
+  }
+
+  export type ContentSourceOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    baseUrl?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    content?: ContentItemOrderByRelationAggregateInput
+  }
+
+  export type ContentSourceWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    name?: string
+    AND?: ContentSourceWhereInput | ContentSourceWhereInput[]
+    OR?: ContentSourceWhereInput[]
+    NOT?: ContentSourceWhereInput | ContentSourceWhereInput[]
+    type?: StringFilter<"ContentSource"> | string
+    baseUrl?: StringFilter<"ContentSource"> | string
+    description?: StringFilter<"ContentSource"> | string
+    createdAt?: DateTimeFilter<"ContentSource"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentSource"> | Date | string
+    content?: ContentItemListRelationFilter
+  }, "id" | "name">
+
+  export type ContentSourceOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    baseUrl?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ContentSourceCountOrderByAggregateInput
+    _max?: ContentSourceMaxOrderByAggregateInput
+    _min?: ContentSourceMinOrderByAggregateInput
+  }
+
+  export type ContentSourceScalarWhereWithAggregatesInput = {
+    AND?: ContentSourceScalarWhereWithAggregatesInput | ContentSourceScalarWhereWithAggregatesInput[]
+    OR?: ContentSourceScalarWhereWithAggregatesInput[]
+    NOT?: ContentSourceScalarWhereWithAggregatesInput | ContentSourceScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ContentSource"> | string
+    name?: StringWithAggregatesFilter<"ContentSource"> | string
+    type?: StringWithAggregatesFilter<"ContentSource"> | string
+    baseUrl?: StringWithAggregatesFilter<"ContentSource"> | string
+    description?: StringWithAggregatesFilter<"ContentSource"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ContentSource"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ContentSource"> | Date | string
+  }
+
+  export type ContentItemWhereInput = {
+    AND?: ContentItemWhereInput | ContentItemWhereInput[]
+    OR?: ContentItemWhereInput[]
+    NOT?: ContentItemWhereInput | ContentItemWhereInput[]
+    id?: StringFilter<"ContentItem"> | string
+    sourceId?: StringNullableFilter<"ContentItem"> | string | null
+    topicId?: StringNullableFilter<"ContentItem"> | string | null
+    title?: StringFilter<"ContentItem"> | string
+    titleZh?: StringFilter<"ContentItem"> | string
+    url?: StringFilter<"ContentItem"> | string
+    imageUrl?: StringNullableFilter<"ContentItem"> | string | null
+    rawText?: StringFilter<"ContentItem"> | string
+    cleanedText?: StringFilter<"ContentItem"> | string
+    simplifiedText?: StringNullableFilter<"ContentItem"> | string | null
+    summary?: StringNullableFilter<"ContentItem"> | string | null
+    contentType?: EnumContentTypeFilter<"ContentItem"> | $Enums.ContentType
+    status?: EnumContentStatusFilter<"ContentItem"> | $Enums.ContentStatus
+    jlptLevel?: StringFilter<"ContentItem"> | string
+    wordCount?: IntFilter<"ContentItem"> | number
+    estimatedMinutes?: IntFilter<"ContentItem"> | number
+    extractedVocab?: JsonNullableFilter<"ContentItem">
+    extractedGrammar?: JsonNullableFilter<"ContentItem">
+    publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
+    createdAt?: DateTimeFilter<"ContentItem"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
+    source?: XOR<ContentSourceNullableScalarRelationFilter, ContentSourceWhereInput> | null
+    topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    sections?: ContentSectionListRelationFilter
+    audio?: ContentAudioListRelationFilter
+    questions?: GeneratedQuestionListRelationFilter
+    srsItems?: GeneratedSRSItemListRelationFilter
+    userProgress?: UserContentProgressListRelationFilter
+    importJob?: XOR<ContentImportJobNullableScalarRelationFilter, ContentImportJobWhereInput> | null
+  }
+
+  export type ContentItemOrderByWithRelationInput = {
+    id?: SortOrder
+    sourceId?: SortOrderInput | SortOrder
+    topicId?: SortOrderInput | SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    url?: SortOrder
+    imageUrl?: SortOrderInput | SortOrder
+    rawText?: SortOrder
+    cleanedText?: SortOrder
+    simplifiedText?: SortOrderInput | SortOrder
+    summary?: SortOrderInput | SortOrder
+    contentType?: SortOrder
+    status?: SortOrder
+    jlptLevel?: SortOrder
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+    extractedVocab?: SortOrderInput | SortOrder
+    extractedGrammar?: SortOrderInput | SortOrder
+    publishedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    source?: ContentSourceOrderByWithRelationInput
+    topic?: TopicOrderByWithRelationInput
+    sections?: ContentSectionOrderByRelationAggregateInput
+    audio?: ContentAudioOrderByRelationAggregateInput
+    questions?: GeneratedQuestionOrderByRelationAggregateInput
+    srsItems?: GeneratedSRSItemOrderByRelationAggregateInput
+    userProgress?: UserContentProgressOrderByRelationAggregateInput
+    importJob?: ContentImportJobOrderByWithRelationInput
+  }
+
+  export type ContentItemWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ContentItemWhereInput | ContentItemWhereInput[]
+    OR?: ContentItemWhereInput[]
+    NOT?: ContentItemWhereInput | ContentItemWhereInput[]
+    sourceId?: StringNullableFilter<"ContentItem"> | string | null
+    topicId?: StringNullableFilter<"ContentItem"> | string | null
+    title?: StringFilter<"ContentItem"> | string
+    titleZh?: StringFilter<"ContentItem"> | string
+    url?: StringFilter<"ContentItem"> | string
+    imageUrl?: StringNullableFilter<"ContentItem"> | string | null
+    rawText?: StringFilter<"ContentItem"> | string
+    cleanedText?: StringFilter<"ContentItem"> | string
+    simplifiedText?: StringNullableFilter<"ContentItem"> | string | null
+    summary?: StringNullableFilter<"ContentItem"> | string | null
+    contentType?: EnumContentTypeFilter<"ContentItem"> | $Enums.ContentType
+    status?: EnumContentStatusFilter<"ContentItem"> | $Enums.ContentStatus
+    jlptLevel?: StringFilter<"ContentItem"> | string
+    wordCount?: IntFilter<"ContentItem"> | number
+    estimatedMinutes?: IntFilter<"ContentItem"> | number
+    extractedVocab?: JsonNullableFilter<"ContentItem">
+    extractedGrammar?: JsonNullableFilter<"ContentItem">
+    publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
+    createdAt?: DateTimeFilter<"ContentItem"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
+    source?: XOR<ContentSourceNullableScalarRelationFilter, ContentSourceWhereInput> | null
+    topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    sections?: ContentSectionListRelationFilter
+    audio?: ContentAudioListRelationFilter
+    questions?: GeneratedQuestionListRelationFilter
+    srsItems?: GeneratedSRSItemListRelationFilter
+    userProgress?: UserContentProgressListRelationFilter
+    importJob?: XOR<ContentImportJobNullableScalarRelationFilter, ContentImportJobWhereInput> | null
+  }, "id">
+
+  export type ContentItemOrderByWithAggregationInput = {
+    id?: SortOrder
+    sourceId?: SortOrderInput | SortOrder
+    topicId?: SortOrderInput | SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    url?: SortOrder
+    imageUrl?: SortOrderInput | SortOrder
+    rawText?: SortOrder
+    cleanedText?: SortOrder
+    simplifiedText?: SortOrderInput | SortOrder
+    summary?: SortOrderInput | SortOrder
+    contentType?: SortOrder
+    status?: SortOrder
+    jlptLevel?: SortOrder
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+    extractedVocab?: SortOrderInput | SortOrder
+    extractedGrammar?: SortOrderInput | SortOrder
+    publishedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ContentItemCountOrderByAggregateInput
+    _avg?: ContentItemAvgOrderByAggregateInput
+    _max?: ContentItemMaxOrderByAggregateInput
+    _min?: ContentItemMinOrderByAggregateInput
+    _sum?: ContentItemSumOrderByAggregateInput
+  }
+
+  export type ContentItemScalarWhereWithAggregatesInput = {
+    AND?: ContentItemScalarWhereWithAggregatesInput | ContentItemScalarWhereWithAggregatesInput[]
+    OR?: ContentItemScalarWhereWithAggregatesInput[]
+    NOT?: ContentItemScalarWhereWithAggregatesInput | ContentItemScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ContentItem"> | string
+    sourceId?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    topicId?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    title?: StringWithAggregatesFilter<"ContentItem"> | string
+    titleZh?: StringWithAggregatesFilter<"ContentItem"> | string
+    url?: StringWithAggregatesFilter<"ContentItem"> | string
+    imageUrl?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    rawText?: StringWithAggregatesFilter<"ContentItem"> | string
+    cleanedText?: StringWithAggregatesFilter<"ContentItem"> | string
+    simplifiedText?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    summary?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    contentType?: EnumContentTypeWithAggregatesFilter<"ContentItem"> | $Enums.ContentType
+    status?: EnumContentStatusWithAggregatesFilter<"ContentItem"> | $Enums.ContentStatus
+    jlptLevel?: StringWithAggregatesFilter<"ContentItem"> | string
+    wordCount?: IntWithAggregatesFilter<"ContentItem"> | number
+    estimatedMinutes?: IntWithAggregatesFilter<"ContentItem"> | number
+    extractedVocab?: JsonNullableWithAggregatesFilter<"ContentItem">
+    extractedGrammar?: JsonNullableWithAggregatesFilter<"ContentItem">
+    publishedAt?: DateTimeNullableWithAggregatesFilter<"ContentItem"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"ContentItem"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ContentItem"> | Date | string
+  }
+
+  export type ContentSectionWhereInput = {
+    AND?: ContentSectionWhereInput | ContentSectionWhereInput[]
+    OR?: ContentSectionWhereInput[]
+    NOT?: ContentSectionWhereInput | ContentSectionWhereInput[]
+    id?: StringFilter<"ContentSection"> | string
+    contentItemId?: StringFilter<"ContentSection"> | string
+    orderIndex?: IntFilter<"ContentSection"> | number
+    type?: StringFilter<"ContentSection"> | string
+    text?: StringFilter<"ContentSection"> | string
+    jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
+    vocabHighlights?: JsonNullableFilter<"ContentSection">
+    grammarTags?: JsonNullableFilter<"ContentSection">
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type ContentSectionOrderByWithRelationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    orderIndex?: SortOrder
+    type?: SortOrder
+    text?: SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    vocabHighlights?: SortOrderInput | SortOrder
+    grammarTags?: SortOrderInput | SortOrder
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type ContentSectionWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    contentItemId_orderIndex?: ContentSectionContentItemIdOrderIndexCompoundUniqueInput
+    AND?: ContentSectionWhereInput | ContentSectionWhereInput[]
+    OR?: ContentSectionWhereInput[]
+    NOT?: ContentSectionWhereInput | ContentSectionWhereInput[]
+    contentItemId?: StringFilter<"ContentSection"> | string
+    orderIndex?: IntFilter<"ContentSection"> | number
+    type?: StringFilter<"ContentSection"> | string
+    text?: StringFilter<"ContentSection"> | string
+    jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
+    vocabHighlights?: JsonNullableFilter<"ContentSection">
+    grammarTags?: JsonNullableFilter<"ContentSection">
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id" | "contentItemId_orderIndex">
+
+  export type ContentSectionOrderByWithAggregationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    orderIndex?: SortOrder
+    type?: SortOrder
+    text?: SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    vocabHighlights?: SortOrderInput | SortOrder
+    grammarTags?: SortOrderInput | SortOrder
+    _count?: ContentSectionCountOrderByAggregateInput
+    _avg?: ContentSectionAvgOrderByAggregateInput
+    _max?: ContentSectionMaxOrderByAggregateInput
+    _min?: ContentSectionMinOrderByAggregateInput
+    _sum?: ContentSectionSumOrderByAggregateInput
+  }
+
+  export type ContentSectionScalarWhereWithAggregatesInput = {
+    AND?: ContentSectionScalarWhereWithAggregatesInput | ContentSectionScalarWhereWithAggregatesInput[]
+    OR?: ContentSectionScalarWhereWithAggregatesInput[]
+    NOT?: ContentSectionScalarWhereWithAggregatesInput | ContentSectionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ContentSection"> | string
+    contentItemId?: StringWithAggregatesFilter<"ContentSection"> | string
+    orderIndex?: IntWithAggregatesFilter<"ContentSection"> | number
+    type?: StringWithAggregatesFilter<"ContentSection"> | string
+    text?: StringWithAggregatesFilter<"ContentSection"> | string
+    jlptLevel?: StringNullableWithAggregatesFilter<"ContentSection"> | string | null
+    vocabHighlights?: JsonNullableWithAggregatesFilter<"ContentSection">
+    grammarTags?: JsonNullableWithAggregatesFilter<"ContentSection">
+  }
+
+  export type ContentAudioWhereInput = {
+    AND?: ContentAudioWhereInput | ContentAudioWhereInput[]
+    OR?: ContentAudioWhereInput[]
+    NOT?: ContentAudioWhereInput | ContentAudioWhereInput[]
+    id?: StringFilter<"ContentAudio"> | string
+    contentItemId?: StringFilter<"ContentAudio"> | string
+    audioUrl?: StringFilter<"ContentAudio"> | string
+    type?: StringFilter<"ContentAudio"> | string
+    duration?: IntNullableFilter<"ContentAudio"> | number | null
+    transcript?: StringNullableFilter<"ContentAudio"> | string | null
+    createdAt?: DateTimeFilter<"ContentAudio"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type ContentAudioOrderByWithRelationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    audioUrl?: SortOrder
+    type?: SortOrder
+    duration?: SortOrderInput | SortOrder
+    transcript?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type ContentAudioWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ContentAudioWhereInput | ContentAudioWhereInput[]
+    OR?: ContentAudioWhereInput[]
+    NOT?: ContentAudioWhereInput | ContentAudioWhereInput[]
+    contentItemId?: StringFilter<"ContentAudio"> | string
+    audioUrl?: StringFilter<"ContentAudio"> | string
+    type?: StringFilter<"ContentAudio"> | string
+    duration?: IntNullableFilter<"ContentAudio"> | number | null
+    transcript?: StringNullableFilter<"ContentAudio"> | string | null
+    createdAt?: DateTimeFilter<"ContentAudio"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id">
+
+  export type ContentAudioOrderByWithAggregationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    audioUrl?: SortOrder
+    type?: SortOrder
+    duration?: SortOrderInput | SortOrder
+    transcript?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: ContentAudioCountOrderByAggregateInput
+    _avg?: ContentAudioAvgOrderByAggregateInput
+    _max?: ContentAudioMaxOrderByAggregateInput
+    _min?: ContentAudioMinOrderByAggregateInput
+    _sum?: ContentAudioSumOrderByAggregateInput
+  }
+
+  export type ContentAudioScalarWhereWithAggregatesInput = {
+    AND?: ContentAudioScalarWhereWithAggregatesInput | ContentAudioScalarWhereWithAggregatesInput[]
+    OR?: ContentAudioScalarWhereWithAggregatesInput[]
+    NOT?: ContentAudioScalarWhereWithAggregatesInput | ContentAudioScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ContentAudio"> | string
+    contentItemId?: StringWithAggregatesFilter<"ContentAudio"> | string
+    audioUrl?: StringWithAggregatesFilter<"ContentAudio"> | string
+    type?: StringWithAggregatesFilter<"ContentAudio"> | string
+    duration?: IntNullableWithAggregatesFilter<"ContentAudio"> | number | null
+    transcript?: StringNullableWithAggregatesFilter<"ContentAudio"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"ContentAudio"> | Date | string
+  }
+
+  export type GeneratedQuestionWhereInput = {
+    AND?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
+    OR?: GeneratedQuestionWhereInput[]
+    NOT?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
+    id?: StringFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
+    prompt?: StringFilter<"GeneratedQuestion"> | string
+    options?: JsonNullableFilter<"GeneratedQuestion">
+    answer?: StringFilter<"GeneratedQuestion"> | string
+    explanation?: StringFilter<"GeneratedQuestion"> | string
+    explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
+    jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type GeneratedQuestionOrderByWithRelationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    type?: SortOrder
+    prompt?: SortOrder
+    options?: SortOrderInput | SortOrder
+    answer?: SortOrder
+    explanation?: SortOrder
+    explanationWrong?: SortOrderInput | SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type GeneratedQuestionWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
+    OR?: GeneratedQuestionWhereInput[]
+    NOT?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
+    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
+    prompt?: StringFilter<"GeneratedQuestion"> | string
+    options?: JsonNullableFilter<"GeneratedQuestion">
+    answer?: StringFilter<"GeneratedQuestion"> | string
+    explanation?: StringFilter<"GeneratedQuestion"> | string
+    explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
+    jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id">
+
+  export type GeneratedQuestionOrderByWithAggregationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    type?: SortOrder
+    prompt?: SortOrder
+    options?: SortOrderInput | SortOrder
+    answer?: SortOrder
+    explanation?: SortOrder
+    explanationWrong?: SortOrderInput | SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: GeneratedQuestionCountOrderByAggregateInput
+    _max?: GeneratedQuestionMaxOrderByAggregateInput
+    _min?: GeneratedQuestionMinOrderByAggregateInput
+  }
+
+  export type GeneratedQuestionScalarWhereWithAggregatesInput = {
+    AND?: GeneratedQuestionScalarWhereWithAggregatesInput | GeneratedQuestionScalarWhereWithAggregatesInput[]
+    OR?: GeneratedQuestionScalarWhereWithAggregatesInput[]
+    NOT?: GeneratedQuestionScalarWhereWithAggregatesInput | GeneratedQuestionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    type?: EnumQuestionTypeWithAggregatesFilter<"GeneratedQuestion"> | $Enums.QuestionType
+    prompt?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    options?: JsonNullableWithAggregatesFilter<"GeneratedQuestion">
+    answer?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    explanation?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    explanationWrong?: JsonNullableWithAggregatesFilter<"GeneratedQuestion">
+    jlptLevel?: StringNullableWithAggregatesFilter<"GeneratedQuestion"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"GeneratedQuestion"> | Date | string
+  }
+
+  export type GeneratedSRSItemWhereInput = {
+    AND?: GeneratedSRSItemWhereInput | GeneratedSRSItemWhereInput[]
+    OR?: GeneratedSRSItemWhereInput[]
+    NOT?: GeneratedSRSItemWhereInput | GeneratedSRSItemWhereInput[]
+    id?: StringFilter<"GeneratedSRSItem"> | string
+    contentItemId?: StringFilter<"GeneratedSRSItem"> | string
+    userId?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    word?: StringFilter<"GeneratedSRSItem"> | string
+    furigana?: StringFilter<"GeneratedSRSItem"> | string
+    pos?: StringFilter<"GeneratedSRSItem"> | string
+    meaningZh?: StringFilter<"GeneratedSRSItem"> | string
+    contextSentence?: StringFilter<"GeneratedSRSItem"> | string
+    cardType?: StringFilter<"GeneratedSRSItem"> | string
+    jlptLevel?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedSRSItem"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type GeneratedSRSItemOrderByWithRelationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    userId?: SortOrderInput | SortOrder
+    word?: SortOrder
+    furigana?: SortOrder
+    pos?: SortOrder
+    meaningZh?: SortOrder
+    contextSentence?: SortOrder
+    cardType?: SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type GeneratedSRSItemWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: GeneratedSRSItemWhereInput | GeneratedSRSItemWhereInput[]
+    OR?: GeneratedSRSItemWhereInput[]
+    NOT?: GeneratedSRSItemWhereInput | GeneratedSRSItemWhereInput[]
+    contentItemId?: StringFilter<"GeneratedSRSItem"> | string
+    userId?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    word?: StringFilter<"GeneratedSRSItem"> | string
+    furigana?: StringFilter<"GeneratedSRSItem"> | string
+    pos?: StringFilter<"GeneratedSRSItem"> | string
+    meaningZh?: StringFilter<"GeneratedSRSItem"> | string
+    contextSentence?: StringFilter<"GeneratedSRSItem"> | string
+    cardType?: StringFilter<"GeneratedSRSItem"> | string
+    jlptLevel?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedSRSItem"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id">
+
+  export type GeneratedSRSItemOrderByWithAggregationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    userId?: SortOrderInput | SortOrder
+    word?: SortOrder
+    furigana?: SortOrder
+    pos?: SortOrder
+    meaningZh?: SortOrder
+    contextSentence?: SortOrder
+    cardType?: SortOrder
+    jlptLevel?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: GeneratedSRSItemCountOrderByAggregateInput
+    _max?: GeneratedSRSItemMaxOrderByAggregateInput
+    _min?: GeneratedSRSItemMinOrderByAggregateInput
+  }
+
+  export type GeneratedSRSItemScalarWhereWithAggregatesInput = {
+    AND?: GeneratedSRSItemScalarWhereWithAggregatesInput | GeneratedSRSItemScalarWhereWithAggregatesInput[]
+    OR?: GeneratedSRSItemScalarWhereWithAggregatesInput[]
+    NOT?: GeneratedSRSItemScalarWhereWithAggregatesInput | GeneratedSRSItemScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    contentItemId?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    userId?: StringNullableWithAggregatesFilter<"GeneratedSRSItem"> | string | null
+    word?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    furigana?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    pos?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    meaningZh?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    contextSentence?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    cardType?: StringWithAggregatesFilter<"GeneratedSRSItem"> | string
+    jlptLevel?: StringNullableWithAggregatesFilter<"GeneratedSRSItem"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"GeneratedSRSItem"> | Date | string
+  }
+
+  export type UserContentProgressWhereInput = {
+    AND?: UserContentProgressWhereInput | UserContentProgressWhereInput[]
+    OR?: UserContentProgressWhereInput[]
+    NOT?: UserContentProgressWhereInput | UserContentProgressWhereInput[]
+    id?: StringFilter<"UserContentProgress"> | string
+    userId?: StringFilter<"UserContentProgress"> | string
+    contentItemId?: StringFilter<"UserContentProgress"> | string
+    status?: StringFilter<"UserContentProgress"> | string
+    lastSectionIndex?: IntFilter<"UserContentProgress"> | number
+    savedWords?: JsonFilter<"UserContentProgress">
+    quizScore?: IntNullableFilter<"UserContentProgress"> | number | null
+    quizAttempts?: IntFilter<"UserContentProgress"> | number
+    createdAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type UserContentProgressOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    contentItemId?: SortOrder
+    status?: SortOrder
+    lastSectionIndex?: SortOrder
+    savedWords?: SortOrder
+    quizScore?: SortOrderInput | SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type UserContentProgressWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_contentItemId?: UserContentProgressUserIdContentItemIdCompoundUniqueInput
+    AND?: UserContentProgressWhereInput | UserContentProgressWhereInput[]
+    OR?: UserContentProgressWhereInput[]
+    NOT?: UserContentProgressWhereInput | UserContentProgressWhereInput[]
+    userId?: StringFilter<"UserContentProgress"> | string
+    contentItemId?: StringFilter<"UserContentProgress"> | string
+    status?: StringFilter<"UserContentProgress"> | string
+    lastSectionIndex?: IntFilter<"UserContentProgress"> | number
+    savedWords?: JsonFilter<"UserContentProgress">
+    quizScore?: IntNullableFilter<"UserContentProgress"> | number | null
+    quizAttempts?: IntFilter<"UserContentProgress"> | number
+    createdAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id" | "userId_contentItemId">
+
+  export type UserContentProgressOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    contentItemId?: SortOrder
+    status?: SortOrder
+    lastSectionIndex?: SortOrder
+    savedWords?: SortOrder
+    quizScore?: SortOrderInput | SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: UserContentProgressCountOrderByAggregateInput
+    _avg?: UserContentProgressAvgOrderByAggregateInput
+    _max?: UserContentProgressMaxOrderByAggregateInput
+    _min?: UserContentProgressMinOrderByAggregateInput
+    _sum?: UserContentProgressSumOrderByAggregateInput
+  }
+
+  export type UserContentProgressScalarWhereWithAggregatesInput = {
+    AND?: UserContentProgressScalarWhereWithAggregatesInput | UserContentProgressScalarWhereWithAggregatesInput[]
+    OR?: UserContentProgressScalarWhereWithAggregatesInput[]
+    NOT?: UserContentProgressScalarWhereWithAggregatesInput | UserContentProgressScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserContentProgress"> | string
+    userId?: StringWithAggregatesFilter<"UserContentProgress"> | string
+    contentItemId?: StringWithAggregatesFilter<"UserContentProgress"> | string
+    status?: StringWithAggregatesFilter<"UserContentProgress"> | string
+    lastSectionIndex?: IntWithAggregatesFilter<"UserContentProgress"> | number
+    savedWords?: JsonWithAggregatesFilter<"UserContentProgress">
+    quizScore?: IntNullableWithAggregatesFilter<"UserContentProgress"> | number | null
+    quizAttempts?: IntWithAggregatesFilter<"UserContentProgress"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"UserContentProgress"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"UserContentProgress"> | Date | string
+  }
+
+  export type ContentImportJobWhereInput = {
+    AND?: ContentImportJobWhereInput | ContentImportJobWhereInput[]
+    OR?: ContentImportJobWhereInput[]
+    NOT?: ContentImportJobWhereInput | ContentImportJobWhereInput[]
+    id?: StringFilter<"ContentImportJob"> | string
+    contentItemId?: StringFilter<"ContentImportJob"> | string
+    url?: StringFilter<"ContentImportJob"> | string
+    status?: StringFilter<"ContentImportJob"> | string
+    progress?: IntFilter<"ContentImportJob"> | number
+    error?: StringNullableFilter<"ContentImportJob"> | string | null
+    scrapeResult?: JsonNullableFilter<"ContentImportJob">
+    aiAnalysis?: JsonNullableFilter<"ContentImportJob">
+    createdAt?: DateTimeFilter<"ContentImportJob"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentImportJob"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }
+
+  export type ContentImportJobOrderByWithRelationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    url?: SortOrder
+    status?: SortOrder
+    progress?: SortOrder
+    error?: SortOrderInput | SortOrder
+    scrapeResult?: SortOrderInput | SortOrder
+    aiAnalysis?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    contentItem?: ContentItemOrderByWithRelationInput
+  }
+
+  export type ContentImportJobWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    contentItemId?: string
+    AND?: ContentImportJobWhereInput | ContentImportJobWhereInput[]
+    OR?: ContentImportJobWhereInput[]
+    NOT?: ContentImportJobWhereInput | ContentImportJobWhereInput[]
+    url?: StringFilter<"ContentImportJob"> | string
+    status?: StringFilter<"ContentImportJob"> | string
+    progress?: IntFilter<"ContentImportJob"> | number
+    error?: StringNullableFilter<"ContentImportJob"> | string | null
+    scrapeResult?: JsonNullableFilter<"ContentImportJob">
+    aiAnalysis?: JsonNullableFilter<"ContentImportJob">
+    createdAt?: DateTimeFilter<"ContentImportJob"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentImportJob"> | Date | string
+    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+  }, "id" | "contentItemId">
+
+  export type ContentImportJobOrderByWithAggregationInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    url?: SortOrder
+    status?: SortOrder
+    progress?: SortOrder
+    error?: SortOrderInput | SortOrder
+    scrapeResult?: SortOrderInput | SortOrder
+    aiAnalysis?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ContentImportJobCountOrderByAggregateInput
+    _avg?: ContentImportJobAvgOrderByAggregateInput
+    _max?: ContentImportJobMaxOrderByAggregateInput
+    _min?: ContentImportJobMinOrderByAggregateInput
+    _sum?: ContentImportJobSumOrderByAggregateInput
+  }
+
+  export type ContentImportJobScalarWhereWithAggregatesInput = {
+    AND?: ContentImportJobScalarWhereWithAggregatesInput | ContentImportJobScalarWhereWithAggregatesInput[]
+    OR?: ContentImportJobScalarWhereWithAggregatesInput[]
+    NOT?: ContentImportJobScalarWhereWithAggregatesInput | ContentImportJobScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ContentImportJob"> | string
+    contentItemId?: StringWithAggregatesFilter<"ContentImportJob"> | string
+    url?: StringWithAggregatesFilter<"ContentImportJob"> | string
+    status?: StringWithAggregatesFilter<"ContentImportJob"> | string
+    progress?: IntWithAggregatesFilter<"ContentImportJob"> | number
+    error?: StringNullableWithAggregatesFilter<"ContentImportJob"> | string | null
+    scrapeResult?: JsonNullableWithAggregatesFilter<"ContentImportJob">
+    aiAnalysis?: JsonNullableWithAggregatesFilter<"ContentImportJob">
+    createdAt?: DateTimeWithAggregatesFilter<"ContentImportJob"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ContentImportJob"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email: string
@@ -33563,6 +46110,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -33604,6 +46152,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -33645,6 +46194,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -33686,6 +46236,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -35883,6 +48434,862 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type TopicCreateInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemCreateNestedManyWithoutTopicInput
+  }
+
+  export type TopicUncheckedCreateInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemUncheckedCreateNestedManyWithoutTopicInput
+  }
+
+  export type TopicUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUpdateManyWithoutTopicNestedInput
+  }
+
+  export type TopicUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUncheckedUpdateManyWithoutTopicNestedInput
+  }
+
+  export type TopicCreateManyInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TopicUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TopicUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSourceCreateInput = {
+    id?: string
+    name: string
+    type: string
+    baseUrl?: string
+    description?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemCreateNestedManyWithoutSourceInput
+  }
+
+  export type ContentSourceUncheckedCreateInput = {
+    id?: string
+    name: string
+    type: string
+    baseUrl?: string
+    description?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemUncheckedCreateNestedManyWithoutSourceInput
+  }
+
+  export type ContentSourceUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUpdateManyWithoutSourceNestedInput
+  }
+
+  export type ContentSourceUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUncheckedUpdateManyWithoutSourceNestedInput
+  }
+
+  export type ContentSourceCreateManyInput = {
+    id?: string
+    name: string
+    type: string
+    baseUrl?: string
+    description?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentSourceUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSourceUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentItemCreateInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemCreateManyInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentItemUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentItemUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSectionCreateInput = {
+    id?: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    contentItem: ContentItemCreateNestedOneWithoutSectionsInput
+  }
+
+  export type ContentSectionUncheckedCreateInput = {
+    id?: string
+    contentItemId: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    contentItem?: ContentItemUpdateOneRequiredWithoutSectionsNestedInput
+  }
+
+  export type ContentSectionUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionCreateManyInput = {
+    id?: string
+    contentItemId: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentAudioCreateInput = {
+    id?: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+    contentItem: ContentItemCreateNestedOneWithoutAudioInput
+  }
+
+  export type ContentAudioUncheckedCreateInput = {
+    id?: string
+    contentItemId: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ContentAudioUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneRequiredWithoutAudioNestedInput
+  }
+
+  export type ContentAudioUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentAudioCreateManyInput = {
+    id?: string
+    contentItemId: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ContentAudioUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentAudioUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionCreateInput = {
+    id?: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+    contentItem: ContentItemCreateNestedOneWithoutQuestionsInput
+  }
+
+  export type GeneratedQuestionUncheckedCreateInput = {
+    id?: string
+    contentItemId: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneRequiredWithoutQuestionsNestedInput
+  }
+
+  export type GeneratedQuestionUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionCreateManyInput = {
+    id?: string
+    contentItemId: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemCreateInput = {
+    id?: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+    contentItem: ContentItemCreateNestedOneWithoutSrsItemsInput
+  }
+
+  export type GeneratedSRSItemUncheckedCreateInput = {
+    id?: string
+    contentItemId: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedSRSItemUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneRequiredWithoutSrsItemsNestedInput
+  }
+
+  export type GeneratedSRSItemUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemCreateManyInput = {
+    id?: string
+    contentItemId: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedSRSItemUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressCreateInput = {
+    id?: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutContentProgressInput
+    contentItem: ContentItemCreateNestedOneWithoutUserProgressInput
+  }
+
+  export type UserContentProgressUncheckedCreateInput = {
+    id?: string
+    userId: string
+    contentItemId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserContentProgressUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutContentProgressNestedInput
+    contentItem?: ContentItemUpdateOneRequiredWithoutUserProgressNestedInput
+  }
+
+  export type UserContentProgressUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressCreateManyInput = {
+    id?: string
+    userId: string
+    contentItemId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserContentProgressUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentImportJobCreateInput = {
+    id?: string
+    url: string
+    status?: string
+    progress?: number
+    error?: string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    contentItem: ContentItemCreateNestedOneWithoutImportJobInput
+  }
+
+  export type ContentImportJobUncheckedCreateInput = {
+    id?: string
+    contentItemId: string
+    url: string
+    status?: string
+    progress?: number
+    error?: string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentImportJobUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneRequiredWithoutImportJobNestedInput
+  }
+
+  export type ContentImportJobUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentImportJobCreateManyInput = {
+    id?: string
+    contentItemId: string
+    url: string
+    status?: string
+    progress?: number
+    error?: string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentImportJobUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentImportJobUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -36011,6 +49418,12 @@ export namespace Prisma {
     none?: AuditLogWhereInput
   }
 
+  export type UserContentProgressListRelationFilter = {
+    every?: UserContentProgressWhereInput
+    some?: UserContentProgressWhereInput
+    none?: UserContentProgressWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -36053,6 +49466,10 @@ export namespace Prisma {
   }
 
   export type AuditLogOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserContentProgressOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -37664,6 +51081,530 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type ContentItemListRelationFilter = {
+    every?: ContentItemWhereInput
+    some?: ContentItemWhereInput
+    none?: ContentItemWhereInput
+  }
+
+  export type ContentItemOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type TopicCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    nameZh?: SortOrder
+    nameJa?: SortOrder
+    icon?: SortOrder
+    sortOrder?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TopicAvgOrderByAggregateInput = {
+    sortOrder?: SortOrder
+  }
+
+  export type TopicMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    nameZh?: SortOrder
+    nameJa?: SortOrder
+    icon?: SortOrder
+    sortOrder?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TopicMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    nameZh?: SortOrder
+    nameJa?: SortOrder
+    icon?: SortOrder
+    sortOrder?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type TopicSumOrderByAggregateInput = {
+    sortOrder?: SortOrder
+  }
+
+  export type ContentSourceCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    baseUrl?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentSourceMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    baseUrl?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentSourceMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    baseUrl?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EnumContentTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentType | EnumContentTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentTypeFilter<$PrismaModel> | $Enums.ContentType
+  }
+
+  export type EnumContentStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentStatus | EnumContentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentStatusFilter<$PrismaModel> | $Enums.ContentStatus
+  }
+
+  export type ContentSourceNullableScalarRelationFilter = {
+    is?: ContentSourceWhereInput | null
+    isNot?: ContentSourceWhereInput | null
+  }
+
+  export type TopicNullableScalarRelationFilter = {
+    is?: TopicWhereInput | null
+    isNot?: TopicWhereInput | null
+  }
+
+  export type ContentSectionListRelationFilter = {
+    every?: ContentSectionWhereInput
+    some?: ContentSectionWhereInput
+    none?: ContentSectionWhereInput
+  }
+
+  export type ContentAudioListRelationFilter = {
+    every?: ContentAudioWhereInput
+    some?: ContentAudioWhereInput
+    none?: ContentAudioWhereInput
+  }
+
+  export type GeneratedQuestionListRelationFilter = {
+    every?: GeneratedQuestionWhereInput
+    some?: GeneratedQuestionWhereInput
+    none?: GeneratedQuestionWhereInput
+  }
+
+  export type GeneratedSRSItemListRelationFilter = {
+    every?: GeneratedSRSItemWhereInput
+    some?: GeneratedSRSItemWhereInput
+    none?: GeneratedSRSItemWhereInput
+  }
+
+  export type ContentImportJobNullableScalarRelationFilter = {
+    is?: ContentImportJobWhereInput | null
+    isNot?: ContentImportJobWhereInput | null
+  }
+
+  export type ContentSectionOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ContentAudioOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GeneratedQuestionOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GeneratedSRSItemOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ContentItemCountOrderByAggregateInput = {
+    id?: SortOrder
+    sourceId?: SortOrder
+    topicId?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    url?: SortOrder
+    imageUrl?: SortOrder
+    rawText?: SortOrder
+    cleanedText?: SortOrder
+    simplifiedText?: SortOrder
+    summary?: SortOrder
+    contentType?: SortOrder
+    status?: SortOrder
+    jlptLevel?: SortOrder
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+    extractedVocab?: SortOrder
+    extractedGrammar?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentItemAvgOrderByAggregateInput = {
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+  }
+
+  export type ContentItemMaxOrderByAggregateInput = {
+    id?: SortOrder
+    sourceId?: SortOrder
+    topicId?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    url?: SortOrder
+    imageUrl?: SortOrder
+    rawText?: SortOrder
+    cleanedText?: SortOrder
+    simplifiedText?: SortOrder
+    summary?: SortOrder
+    contentType?: SortOrder
+    status?: SortOrder
+    jlptLevel?: SortOrder
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentItemMinOrderByAggregateInput = {
+    id?: SortOrder
+    sourceId?: SortOrder
+    topicId?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    url?: SortOrder
+    imageUrl?: SortOrder
+    rawText?: SortOrder
+    cleanedText?: SortOrder
+    simplifiedText?: SortOrder
+    summary?: SortOrder
+    contentType?: SortOrder
+    status?: SortOrder
+    jlptLevel?: SortOrder
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentItemSumOrderByAggregateInput = {
+    wordCount?: SortOrder
+    estimatedMinutes?: SortOrder
+  }
+
+  export type EnumContentTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentType | EnumContentTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentTypeWithAggregatesFilter<$PrismaModel> | $Enums.ContentType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumContentTypeFilter<$PrismaModel>
+    _max?: NestedEnumContentTypeFilter<$PrismaModel>
+  }
+
+  export type EnumContentStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentStatus | EnumContentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentStatusWithAggregatesFilter<$PrismaModel> | $Enums.ContentStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumContentStatusFilter<$PrismaModel>
+    _max?: NestedEnumContentStatusFilter<$PrismaModel>
+  }
+
+  export type ContentItemScalarRelationFilter = {
+    is?: ContentItemWhereInput
+    isNot?: ContentItemWhereInput
+  }
+
+  export type ContentSectionContentItemIdOrderIndexCompoundUniqueInput = {
+    contentItemId: string
+    orderIndex: number
+  }
+
+  export type ContentSectionCountOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    orderIndex?: SortOrder
+    type?: SortOrder
+    text?: SortOrder
+    jlptLevel?: SortOrder
+    vocabHighlights?: SortOrder
+    grammarTags?: SortOrder
+  }
+
+  export type ContentSectionAvgOrderByAggregateInput = {
+    orderIndex?: SortOrder
+  }
+
+  export type ContentSectionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    orderIndex?: SortOrder
+    type?: SortOrder
+    text?: SortOrder
+    jlptLevel?: SortOrder
+  }
+
+  export type ContentSectionMinOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    orderIndex?: SortOrder
+    type?: SortOrder
+    text?: SortOrder
+    jlptLevel?: SortOrder
+  }
+
+  export type ContentSectionSumOrderByAggregateInput = {
+    orderIndex?: SortOrder
+  }
+
+  export type ContentAudioCountOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    audioUrl?: SortOrder
+    type?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ContentAudioAvgOrderByAggregateInput = {
+    duration?: SortOrder
+  }
+
+  export type ContentAudioMaxOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    audioUrl?: SortOrder
+    type?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ContentAudioMinOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    audioUrl?: SortOrder
+    type?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ContentAudioSumOrderByAggregateInput = {
+    duration?: SortOrder
+  }
+
+  export type EnumQuestionTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.QuestionType | EnumQuestionTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumQuestionTypeFilter<$PrismaModel> | $Enums.QuestionType
+  }
+
+  export type GeneratedQuestionCountOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    type?: SortOrder
+    prompt?: SortOrder
+    options?: SortOrder
+    answer?: SortOrder
+    explanation?: SortOrder
+    explanationWrong?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GeneratedQuestionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    type?: SortOrder
+    prompt?: SortOrder
+    answer?: SortOrder
+    explanation?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GeneratedQuestionMinOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    type?: SortOrder
+    prompt?: SortOrder
+    answer?: SortOrder
+    explanation?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EnumQuestionTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.QuestionType | EnumQuestionTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumQuestionTypeWithAggregatesFilter<$PrismaModel> | $Enums.QuestionType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumQuestionTypeFilter<$PrismaModel>
+    _max?: NestedEnumQuestionTypeFilter<$PrismaModel>
+  }
+
+  export type GeneratedSRSItemCountOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    furigana?: SortOrder
+    pos?: SortOrder
+    meaningZh?: SortOrder
+    contextSentence?: SortOrder
+    cardType?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GeneratedSRSItemMaxOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    furigana?: SortOrder
+    pos?: SortOrder
+    meaningZh?: SortOrder
+    contextSentence?: SortOrder
+    cardType?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GeneratedSRSItemMinOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    userId?: SortOrder
+    word?: SortOrder
+    furigana?: SortOrder
+    pos?: SortOrder
+    meaningZh?: SortOrder
+    contextSentence?: SortOrder
+    cardType?: SortOrder
+    jlptLevel?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserContentProgressUserIdContentItemIdCompoundUniqueInput = {
+    userId: string
+    contentItemId: string
+  }
+
+  export type UserContentProgressCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    contentItemId?: SortOrder
+    status?: SortOrder
+    lastSectionIndex?: SortOrder
+    savedWords?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserContentProgressAvgOrderByAggregateInput = {
+    lastSectionIndex?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+  }
+
+  export type UserContentProgressMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    contentItemId?: SortOrder
+    status?: SortOrder
+    lastSectionIndex?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserContentProgressMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    contentItemId?: SortOrder
+    status?: SortOrder
+    lastSectionIndex?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserContentProgressSumOrderByAggregateInput = {
+    lastSectionIndex?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+  }
+
+  export type ContentImportJobCountOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    url?: SortOrder
+    status?: SortOrder
+    progress?: SortOrder
+    error?: SortOrder
+    scrapeResult?: SortOrder
+    aiAnalysis?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentImportJobAvgOrderByAggregateInput = {
+    progress?: SortOrder
+  }
+
+  export type ContentImportJobMaxOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    url?: SortOrder
+    status?: SortOrder
+    progress?: SortOrder
+    error?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentImportJobMinOrderByAggregateInput = {
+    id?: SortOrder
+    contentItemId?: SortOrder
+    url?: SortOrder
+    status?: SortOrder
+    progress?: SortOrder
+    error?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ContentImportJobSumOrderByAggregateInput = {
+    progress?: SortOrder
+  }
+
   export type AnalyzedVocabularyCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -37740,6 +51681,13 @@ export namespace Prisma {
     connect?: AuditLogWhereUniqueInput | AuditLogWhereUniqueInput[]
   }
 
+  export type UserContentProgressCreateNestedManyWithoutUserInput = {
+    create?: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput> | UserContentProgressCreateWithoutUserInput[] | UserContentProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutUserInput | UserContentProgressCreateOrConnectWithoutUserInput[]
+    createMany?: UserContentProgressCreateManyUserInputEnvelope
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -37814,6 +51762,13 @@ export namespace Prisma {
     connectOrCreate?: AuditLogCreateOrConnectWithoutUserInput | AuditLogCreateOrConnectWithoutUserInput[]
     createMany?: AuditLogCreateManyUserInputEnvelope
     connect?: AuditLogWhereUniqueInput | AuditLogWhereUniqueInput[]
+  }
+
+  export type UserContentProgressUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput> | UserContentProgressCreateWithoutUserInput[] | UserContentProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutUserInput | UserContentProgressCreateOrConnectWithoutUserInput[]
+    createMany?: UserContentProgressCreateManyUserInputEnvelope
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -37990,6 +51945,20 @@ export namespace Prisma {
     deleteMany?: AuditLogScalarWhereInput | AuditLogScalarWhereInput[]
   }
 
+  export type UserContentProgressUpdateManyWithoutUserNestedInput = {
+    create?: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput> | UserContentProgressCreateWithoutUserInput[] | UserContentProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutUserInput | UserContentProgressCreateOrConnectWithoutUserInput[]
+    upsert?: UserContentProgressUpsertWithWhereUniqueWithoutUserInput | UserContentProgressUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: UserContentProgressCreateManyUserInputEnvelope
+    set?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    disconnect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    delete?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    update?: UserContentProgressUpdateWithWhereUniqueWithoutUserInput | UserContentProgressUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: UserContentProgressUpdateManyWithWhereWithoutUserInput | UserContentProgressUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -38138,6 +52107,20 @@ export namespace Prisma {
     update?: AuditLogUpdateWithWhereUniqueWithoutUserInput | AuditLogUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: AuditLogUpdateManyWithWhereWithoutUserInput | AuditLogUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: AuditLogScalarWhereInput | AuditLogScalarWhereInput[]
+  }
+
+  export type UserContentProgressUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput> | UserContentProgressCreateWithoutUserInput[] | UserContentProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutUserInput | UserContentProgressCreateOrConnectWithoutUserInput[]
+    upsert?: UserContentProgressUpsertWithWhereUniqueWithoutUserInput | UserContentProgressUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: UserContentProgressCreateManyUserInputEnvelope
+    set?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    disconnect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    delete?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    update?: UserContentProgressUpdateWithWhereUniqueWithoutUserInput | UserContentProgressUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: UserContentProgressUpdateManyWithWhereWithoutUserInput | UserContentProgressUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutAnalyzedVocabularyInput = {
@@ -38520,6 +52503,474 @@ export namespace Prisma {
     upsert?: UserUpsertWithoutAuditLogsInput
     connect?: UserWhereUniqueInput
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAuditLogsInput, UserUpdateWithoutAuditLogsInput>, UserUncheckedUpdateWithoutAuditLogsInput>
+  }
+
+  export type ContentItemCreateNestedManyWithoutTopicInput = {
+    create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
+    createMany?: ContentItemCreateManyTopicInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type ContentItemUncheckedCreateNestedManyWithoutTopicInput = {
+    create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
+    createMany?: ContentItemCreateManyTopicInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type ContentItemUpdateManyWithoutTopicNestedInput = {
+    create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutTopicInput | ContentItemUpsertWithWhereUniqueWithoutTopicInput[]
+    createMany?: ContentItemCreateManyTopicInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutTopicInput | ContentItemUpdateWithWhereUniqueWithoutTopicInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutTopicInput | ContentItemUpdateManyWithWhereWithoutTopicInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type ContentItemUncheckedUpdateManyWithoutTopicNestedInput = {
+    create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutTopicInput | ContentItemUpsertWithWhereUniqueWithoutTopicInput[]
+    createMany?: ContentItemCreateManyTopicInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutTopicInput | ContentItemUpdateWithWhereUniqueWithoutTopicInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutTopicInput | ContentItemUpdateManyWithWhereWithoutTopicInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type ContentItemCreateNestedManyWithoutSourceInput = {
+    create?: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput> | ContentItemCreateWithoutSourceInput[] | ContentItemUncheckedCreateWithoutSourceInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSourceInput | ContentItemCreateOrConnectWithoutSourceInput[]
+    createMany?: ContentItemCreateManySourceInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type ContentItemUncheckedCreateNestedManyWithoutSourceInput = {
+    create?: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput> | ContentItemCreateWithoutSourceInput[] | ContentItemUncheckedCreateWithoutSourceInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSourceInput | ContentItemCreateOrConnectWithoutSourceInput[]
+    createMany?: ContentItemCreateManySourceInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type ContentItemUpdateManyWithoutSourceNestedInput = {
+    create?: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput> | ContentItemCreateWithoutSourceInput[] | ContentItemUncheckedCreateWithoutSourceInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSourceInput | ContentItemCreateOrConnectWithoutSourceInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutSourceInput | ContentItemUpsertWithWhereUniqueWithoutSourceInput[]
+    createMany?: ContentItemCreateManySourceInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutSourceInput | ContentItemUpdateWithWhereUniqueWithoutSourceInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutSourceInput | ContentItemUpdateManyWithWhereWithoutSourceInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type ContentItemUncheckedUpdateManyWithoutSourceNestedInput = {
+    create?: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput> | ContentItemCreateWithoutSourceInput[] | ContentItemUncheckedCreateWithoutSourceInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSourceInput | ContentItemCreateOrConnectWithoutSourceInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutSourceInput | ContentItemUpsertWithWhereUniqueWithoutSourceInput[]
+    createMany?: ContentItemCreateManySourceInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutSourceInput | ContentItemUpdateWithWhereUniqueWithoutSourceInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutSourceInput | ContentItemUpdateManyWithWhereWithoutSourceInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type ContentSourceCreateNestedOneWithoutContentInput = {
+    create?: XOR<ContentSourceCreateWithoutContentInput, ContentSourceUncheckedCreateWithoutContentInput>
+    connectOrCreate?: ContentSourceCreateOrConnectWithoutContentInput
+    connect?: ContentSourceWhereUniqueInput
+  }
+
+  export type TopicCreateNestedOneWithoutContentInput = {
+    create?: XOR<TopicCreateWithoutContentInput, TopicUncheckedCreateWithoutContentInput>
+    connectOrCreate?: TopicCreateOrConnectWithoutContentInput
+    connect?: TopicWhereUniqueInput
+  }
+
+  export type ContentSectionCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput> | ContentSectionCreateWithoutContentItemInput[] | ContentSectionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentSectionCreateOrConnectWithoutContentItemInput | ContentSectionCreateOrConnectWithoutContentItemInput[]
+    createMany?: ContentSectionCreateManyContentItemInputEnvelope
+    connect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+  }
+
+  export type ContentAudioCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput> | ContentAudioCreateWithoutContentItemInput[] | ContentAudioUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentAudioCreateOrConnectWithoutContentItemInput | ContentAudioCreateOrConnectWithoutContentItemInput[]
+    createMany?: ContentAudioCreateManyContentItemInputEnvelope
+    connect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+  }
+
+  export type GeneratedQuestionCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput> | GeneratedQuestionCreateWithoutContentItemInput[] | GeneratedQuestionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutContentItemInput | GeneratedQuestionCreateOrConnectWithoutContentItemInput[]
+    createMany?: GeneratedQuestionCreateManyContentItemInputEnvelope
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+  }
+
+  export type GeneratedSRSItemCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput> | GeneratedSRSItemCreateWithoutContentItemInput[] | GeneratedSRSItemUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedSRSItemCreateOrConnectWithoutContentItemInput | GeneratedSRSItemCreateOrConnectWithoutContentItemInput[]
+    createMany?: GeneratedSRSItemCreateManyContentItemInputEnvelope
+    connect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+  }
+
+  export type UserContentProgressCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput> | UserContentProgressCreateWithoutContentItemInput[] | UserContentProgressUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutContentItemInput | UserContentProgressCreateOrConnectWithoutContentItemInput[]
+    createMany?: UserContentProgressCreateManyContentItemInputEnvelope
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+  }
+
+  export type ContentImportJobCreateNestedOneWithoutContentItemInput = {
+    create?: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+    connectOrCreate?: ContentImportJobCreateOrConnectWithoutContentItemInput
+    connect?: ContentImportJobWhereUniqueInput
+  }
+
+  export type ContentSectionUncheckedCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput> | ContentSectionCreateWithoutContentItemInput[] | ContentSectionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentSectionCreateOrConnectWithoutContentItemInput | ContentSectionCreateOrConnectWithoutContentItemInput[]
+    createMany?: ContentSectionCreateManyContentItemInputEnvelope
+    connect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+  }
+
+  export type ContentAudioUncheckedCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput> | ContentAudioCreateWithoutContentItemInput[] | ContentAudioUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentAudioCreateOrConnectWithoutContentItemInput | ContentAudioCreateOrConnectWithoutContentItemInput[]
+    createMany?: ContentAudioCreateManyContentItemInputEnvelope
+    connect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+  }
+
+  export type GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput> | GeneratedQuestionCreateWithoutContentItemInput[] | GeneratedQuestionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutContentItemInput | GeneratedQuestionCreateOrConnectWithoutContentItemInput[]
+    createMany?: GeneratedQuestionCreateManyContentItemInputEnvelope
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+  }
+
+  export type GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput> | GeneratedSRSItemCreateWithoutContentItemInput[] | GeneratedSRSItemUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedSRSItemCreateOrConnectWithoutContentItemInput | GeneratedSRSItemCreateOrConnectWithoutContentItemInput[]
+    createMany?: GeneratedSRSItemCreateManyContentItemInputEnvelope
+    connect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+  }
+
+  export type UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput = {
+    create?: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput> | UserContentProgressCreateWithoutContentItemInput[] | UserContentProgressUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutContentItemInput | UserContentProgressCreateOrConnectWithoutContentItemInput[]
+    createMany?: UserContentProgressCreateManyContentItemInputEnvelope
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+  }
+
+  export type ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput = {
+    create?: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+    connectOrCreate?: ContentImportJobCreateOrConnectWithoutContentItemInput
+    connect?: ContentImportJobWhereUniqueInput
+  }
+
+  export type EnumContentTypeFieldUpdateOperationsInput = {
+    set?: $Enums.ContentType
+  }
+
+  export type EnumContentStatusFieldUpdateOperationsInput = {
+    set?: $Enums.ContentStatus
+  }
+
+  export type ContentSourceUpdateOneWithoutContentNestedInput = {
+    create?: XOR<ContentSourceCreateWithoutContentInput, ContentSourceUncheckedCreateWithoutContentInput>
+    connectOrCreate?: ContentSourceCreateOrConnectWithoutContentInput
+    upsert?: ContentSourceUpsertWithoutContentInput
+    disconnect?: ContentSourceWhereInput | boolean
+    delete?: ContentSourceWhereInput | boolean
+    connect?: ContentSourceWhereUniqueInput
+    update?: XOR<XOR<ContentSourceUpdateToOneWithWhereWithoutContentInput, ContentSourceUpdateWithoutContentInput>, ContentSourceUncheckedUpdateWithoutContentInput>
+  }
+
+  export type TopicUpdateOneWithoutContentNestedInput = {
+    create?: XOR<TopicCreateWithoutContentInput, TopicUncheckedCreateWithoutContentInput>
+    connectOrCreate?: TopicCreateOrConnectWithoutContentInput
+    upsert?: TopicUpsertWithoutContentInput
+    disconnect?: TopicWhereInput | boolean
+    delete?: TopicWhereInput | boolean
+    connect?: TopicWhereUniqueInput
+    update?: XOR<XOR<TopicUpdateToOneWithWhereWithoutContentInput, TopicUpdateWithoutContentInput>, TopicUncheckedUpdateWithoutContentInput>
+  }
+
+  export type ContentSectionUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput> | ContentSectionCreateWithoutContentItemInput[] | ContentSectionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentSectionCreateOrConnectWithoutContentItemInput | ContentSectionCreateOrConnectWithoutContentItemInput[]
+    upsert?: ContentSectionUpsertWithWhereUniqueWithoutContentItemInput | ContentSectionUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: ContentSectionCreateManyContentItemInputEnvelope
+    set?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    disconnect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    delete?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    connect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    update?: ContentSectionUpdateWithWhereUniqueWithoutContentItemInput | ContentSectionUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: ContentSectionUpdateManyWithWhereWithoutContentItemInput | ContentSectionUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: ContentSectionScalarWhereInput | ContentSectionScalarWhereInput[]
+  }
+
+  export type ContentAudioUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput> | ContentAudioCreateWithoutContentItemInput[] | ContentAudioUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentAudioCreateOrConnectWithoutContentItemInput | ContentAudioCreateOrConnectWithoutContentItemInput[]
+    upsert?: ContentAudioUpsertWithWhereUniqueWithoutContentItemInput | ContentAudioUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: ContentAudioCreateManyContentItemInputEnvelope
+    set?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    disconnect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    delete?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    connect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    update?: ContentAudioUpdateWithWhereUniqueWithoutContentItemInput | ContentAudioUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: ContentAudioUpdateManyWithWhereWithoutContentItemInput | ContentAudioUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: ContentAudioScalarWhereInput | ContentAudioScalarWhereInput[]
+  }
+
+  export type GeneratedQuestionUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput> | GeneratedQuestionCreateWithoutContentItemInput[] | GeneratedQuestionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutContentItemInput | GeneratedQuestionCreateOrConnectWithoutContentItemInput[]
+    upsert?: GeneratedQuestionUpsertWithWhereUniqueWithoutContentItemInput | GeneratedQuestionUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: GeneratedQuestionCreateManyContentItemInputEnvelope
+    set?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    disconnect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    delete?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    update?: GeneratedQuestionUpdateWithWhereUniqueWithoutContentItemInput | GeneratedQuestionUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: GeneratedQuestionUpdateManyWithWhereWithoutContentItemInput | GeneratedQuestionUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+  }
+
+  export type GeneratedSRSItemUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput> | GeneratedSRSItemCreateWithoutContentItemInput[] | GeneratedSRSItemUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedSRSItemCreateOrConnectWithoutContentItemInput | GeneratedSRSItemCreateOrConnectWithoutContentItemInput[]
+    upsert?: GeneratedSRSItemUpsertWithWhereUniqueWithoutContentItemInput | GeneratedSRSItemUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: GeneratedSRSItemCreateManyContentItemInputEnvelope
+    set?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    disconnect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    delete?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    connect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    update?: GeneratedSRSItemUpdateWithWhereUniqueWithoutContentItemInput | GeneratedSRSItemUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: GeneratedSRSItemUpdateManyWithWhereWithoutContentItemInput | GeneratedSRSItemUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: GeneratedSRSItemScalarWhereInput | GeneratedSRSItemScalarWhereInput[]
+  }
+
+  export type UserContentProgressUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput> | UserContentProgressCreateWithoutContentItemInput[] | UserContentProgressUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutContentItemInput | UserContentProgressCreateOrConnectWithoutContentItemInput[]
+    upsert?: UserContentProgressUpsertWithWhereUniqueWithoutContentItemInput | UserContentProgressUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: UserContentProgressCreateManyContentItemInputEnvelope
+    set?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    disconnect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    delete?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    update?: UserContentProgressUpdateWithWhereUniqueWithoutContentItemInput | UserContentProgressUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: UserContentProgressUpdateManyWithWhereWithoutContentItemInput | UserContentProgressUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+  }
+
+  export type ContentImportJobUpdateOneWithoutContentItemNestedInput = {
+    create?: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+    connectOrCreate?: ContentImportJobCreateOrConnectWithoutContentItemInput
+    upsert?: ContentImportJobUpsertWithoutContentItemInput
+    disconnect?: ContentImportJobWhereInput | boolean
+    delete?: ContentImportJobWhereInput | boolean
+    connect?: ContentImportJobWhereUniqueInput
+    update?: XOR<XOR<ContentImportJobUpdateToOneWithWhereWithoutContentItemInput, ContentImportJobUpdateWithoutContentItemInput>, ContentImportJobUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput> | ContentSectionCreateWithoutContentItemInput[] | ContentSectionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentSectionCreateOrConnectWithoutContentItemInput | ContentSectionCreateOrConnectWithoutContentItemInput[]
+    upsert?: ContentSectionUpsertWithWhereUniqueWithoutContentItemInput | ContentSectionUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: ContentSectionCreateManyContentItemInputEnvelope
+    set?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    disconnect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    delete?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    connect?: ContentSectionWhereUniqueInput | ContentSectionWhereUniqueInput[]
+    update?: ContentSectionUpdateWithWhereUniqueWithoutContentItemInput | ContentSectionUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: ContentSectionUpdateManyWithWhereWithoutContentItemInput | ContentSectionUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: ContentSectionScalarWhereInput | ContentSectionScalarWhereInput[]
+  }
+
+  export type ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput> | ContentAudioCreateWithoutContentItemInput[] | ContentAudioUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: ContentAudioCreateOrConnectWithoutContentItemInput | ContentAudioCreateOrConnectWithoutContentItemInput[]
+    upsert?: ContentAudioUpsertWithWhereUniqueWithoutContentItemInput | ContentAudioUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: ContentAudioCreateManyContentItemInputEnvelope
+    set?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    disconnect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    delete?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    connect?: ContentAudioWhereUniqueInput | ContentAudioWhereUniqueInput[]
+    update?: ContentAudioUpdateWithWhereUniqueWithoutContentItemInput | ContentAudioUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: ContentAudioUpdateManyWithWhereWithoutContentItemInput | ContentAudioUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: ContentAudioScalarWhereInput | ContentAudioScalarWhereInput[]
+  }
+
+  export type GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput> | GeneratedQuestionCreateWithoutContentItemInput[] | GeneratedQuestionUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutContentItemInput | GeneratedQuestionCreateOrConnectWithoutContentItemInput[]
+    upsert?: GeneratedQuestionUpsertWithWhereUniqueWithoutContentItemInput | GeneratedQuestionUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: GeneratedQuestionCreateManyContentItemInputEnvelope
+    set?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    disconnect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    delete?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    update?: GeneratedQuestionUpdateWithWhereUniqueWithoutContentItemInput | GeneratedQuestionUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: GeneratedQuestionUpdateManyWithWhereWithoutContentItemInput | GeneratedQuestionUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+  }
+
+  export type GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput> | GeneratedSRSItemCreateWithoutContentItemInput[] | GeneratedSRSItemUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: GeneratedSRSItemCreateOrConnectWithoutContentItemInput | GeneratedSRSItemCreateOrConnectWithoutContentItemInput[]
+    upsert?: GeneratedSRSItemUpsertWithWhereUniqueWithoutContentItemInput | GeneratedSRSItemUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: GeneratedSRSItemCreateManyContentItemInputEnvelope
+    set?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    disconnect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    delete?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    connect?: GeneratedSRSItemWhereUniqueInput | GeneratedSRSItemWhereUniqueInput[]
+    update?: GeneratedSRSItemUpdateWithWhereUniqueWithoutContentItemInput | GeneratedSRSItemUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: GeneratedSRSItemUpdateManyWithWhereWithoutContentItemInput | GeneratedSRSItemUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: GeneratedSRSItemScalarWhereInput | GeneratedSRSItemScalarWhereInput[]
+  }
+
+  export type UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput = {
+    create?: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput> | UserContentProgressCreateWithoutContentItemInput[] | UserContentProgressUncheckedCreateWithoutContentItemInput[]
+    connectOrCreate?: UserContentProgressCreateOrConnectWithoutContentItemInput | UserContentProgressCreateOrConnectWithoutContentItemInput[]
+    upsert?: UserContentProgressUpsertWithWhereUniqueWithoutContentItemInput | UserContentProgressUpsertWithWhereUniqueWithoutContentItemInput[]
+    createMany?: UserContentProgressCreateManyContentItemInputEnvelope
+    set?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    disconnect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    delete?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+    update?: UserContentProgressUpdateWithWhereUniqueWithoutContentItemInput | UserContentProgressUpdateWithWhereUniqueWithoutContentItemInput[]
+    updateMany?: UserContentProgressUpdateManyWithWhereWithoutContentItemInput | UserContentProgressUpdateManyWithWhereWithoutContentItemInput[]
+    deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+  }
+
+  export type ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput = {
+    create?: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+    connectOrCreate?: ContentImportJobCreateOrConnectWithoutContentItemInput
+    upsert?: ContentImportJobUpsertWithoutContentItemInput
+    disconnect?: ContentImportJobWhereInput | boolean
+    delete?: ContentImportJobWhereInput | boolean
+    connect?: ContentImportJobWhereUniqueInput
+    update?: XOR<XOR<ContentImportJobUpdateToOneWithWhereWithoutContentItemInput, ContentImportJobUpdateWithoutContentItemInput>, ContentImportJobUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type ContentItemCreateNestedOneWithoutSectionsInput = {
+    create?: XOR<ContentItemCreateWithoutSectionsInput, ContentItemUncheckedCreateWithoutSectionsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSectionsInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutSectionsNestedInput = {
+    create?: XOR<ContentItemCreateWithoutSectionsInput, ContentItemUncheckedCreateWithoutSectionsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSectionsInput
+    upsert?: ContentItemUpsertWithoutSectionsInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutSectionsInput, ContentItemUpdateWithoutSectionsInput>, ContentItemUncheckedUpdateWithoutSectionsInput>
+  }
+
+  export type ContentItemCreateNestedOneWithoutAudioInput = {
+    create?: XOR<ContentItemCreateWithoutAudioInput, ContentItemUncheckedCreateWithoutAudioInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutAudioInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutAudioNestedInput = {
+    create?: XOR<ContentItemCreateWithoutAudioInput, ContentItemUncheckedCreateWithoutAudioInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutAudioInput
+    upsert?: ContentItemUpsertWithoutAudioInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutAudioInput, ContentItemUpdateWithoutAudioInput>, ContentItemUncheckedUpdateWithoutAudioInput>
+  }
+
+  export type ContentItemCreateNestedOneWithoutQuestionsInput = {
+    create?: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutQuestionsInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type EnumQuestionTypeFieldUpdateOperationsInput = {
+    set?: $Enums.QuestionType
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutQuestionsNestedInput = {
+    create?: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutQuestionsInput
+    upsert?: ContentItemUpsertWithoutQuestionsInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutQuestionsInput, ContentItemUpdateWithoutQuestionsInput>, ContentItemUncheckedUpdateWithoutQuestionsInput>
+  }
+
+  export type ContentItemCreateNestedOneWithoutSrsItemsInput = {
+    create?: XOR<ContentItemCreateWithoutSrsItemsInput, ContentItemUncheckedCreateWithoutSrsItemsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSrsItemsInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutSrsItemsNestedInput = {
+    create?: XOR<ContentItemCreateWithoutSrsItemsInput, ContentItemUncheckedCreateWithoutSrsItemsInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutSrsItemsInput
+    upsert?: ContentItemUpsertWithoutSrsItemsInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutSrsItemsInput, ContentItemUpdateWithoutSrsItemsInput>, ContentItemUncheckedUpdateWithoutSrsItemsInput>
+  }
+
+  export type UserCreateNestedOneWithoutContentProgressInput = {
+    create?: XOR<UserCreateWithoutContentProgressInput, UserUncheckedCreateWithoutContentProgressInput>
+    connectOrCreate?: UserCreateOrConnectWithoutContentProgressInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type ContentItemCreateNestedOneWithoutUserProgressInput = {
+    create?: XOR<ContentItemCreateWithoutUserProgressInput, ContentItemUncheckedCreateWithoutUserProgressInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutUserProgressInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutContentProgressNestedInput = {
+    create?: XOR<UserCreateWithoutContentProgressInput, UserUncheckedCreateWithoutContentProgressInput>
+    connectOrCreate?: UserCreateOrConnectWithoutContentProgressInput
+    upsert?: UserUpsertWithoutContentProgressInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutContentProgressInput, UserUpdateWithoutContentProgressInput>, UserUncheckedUpdateWithoutContentProgressInput>
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutUserProgressNestedInput = {
+    create?: XOR<ContentItemCreateWithoutUserProgressInput, ContentItemUncheckedCreateWithoutUserProgressInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutUserProgressInput
+    upsert?: ContentItemUpsertWithoutUserProgressInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutUserProgressInput, ContentItemUpdateWithoutUserProgressInput>, ContentItemUncheckedUpdateWithoutUserProgressInput>
+  }
+
+  export type ContentItemCreateNestedOneWithoutImportJobInput = {
+    create?: XOR<ContentItemCreateWithoutImportJobInput, ContentItemUncheckedCreateWithoutImportJobInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutImportJobInput
+    connect?: ContentItemWhereUniqueInput
+  }
+
+  export type ContentItemUpdateOneRequiredWithoutImportJobNestedInput = {
+    create?: XOR<ContentItemCreateWithoutImportJobInput, ContentItemUncheckedCreateWithoutImportJobInput>
+    connectOrCreate?: ContentItemCreateOrConnectWithoutImportJobInput
+    upsert?: ContentItemUpsertWithoutImportJobInput
+    connect?: ContentItemWhereUniqueInput
+    update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutImportJobInput, ContentItemUpdateWithoutImportJobInput>, ContentItemUncheckedUpdateWithoutImportJobInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -38939,6 +53390,57 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumCreditTransactionTypeFilter<$PrismaModel>
     _max?: NestedEnumCreditTransactionTypeFilter<$PrismaModel>
+  }
+
+  export type NestedEnumContentTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentType | EnumContentTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentTypeFilter<$PrismaModel> | $Enums.ContentType
+  }
+
+  export type NestedEnumContentStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentStatus | EnumContentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentStatusFilter<$PrismaModel> | $Enums.ContentStatus
+  }
+
+  export type NestedEnumContentTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentType | EnumContentTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentType[] | ListEnumContentTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentTypeWithAggregatesFilter<$PrismaModel> | $Enums.ContentType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumContentTypeFilter<$PrismaModel>
+    _max?: NestedEnumContentTypeFilter<$PrismaModel>
+  }
+
+  export type NestedEnumContentStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ContentStatus | EnumContentStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ContentStatus[] | ListEnumContentStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumContentStatusWithAggregatesFilter<$PrismaModel> | $Enums.ContentStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumContentStatusFilter<$PrismaModel>
+    _max?: NestedEnumContentStatusFilter<$PrismaModel>
+  }
+
+  export type NestedEnumQuestionTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.QuestionType | EnumQuestionTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumQuestionTypeFilter<$PrismaModel> | $Enums.QuestionType
+  }
+
+  export type NestedEnumQuestionTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.QuestionType | EnumQuestionTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.QuestionType[] | ListEnumQuestionTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumQuestionTypeWithAggregatesFilter<$PrismaModel> | $Enums.QuestionType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumQuestionTypeFilter<$PrismaModel>
+    _max?: NestedEnumQuestionTypeFilter<$PrismaModel>
   }
 
   export type AnalyzedVocabularyCreateWithoutUserInput = {
@@ -39364,6 +53866,40 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type UserContentProgressCreateWithoutUserInput = {
+    id?: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    contentItem: ContentItemCreateNestedOneWithoutUserProgressInput
+  }
+
+  export type UserContentProgressUncheckedCreateWithoutUserInput = {
+    id?: string
+    contentItemId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserContentProgressCreateOrConnectWithoutUserInput = {
+    where: UserContentProgressWhereUniqueInput
+    create: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput>
+  }
+
+  export type UserContentProgressCreateManyUserInputEnvelope = {
+    data: UserContentProgressCreateManyUserInput | UserContentProgressCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
   export type AnalyzedVocabularyUpsertWithWhereUniqueWithoutUserInput = {
     where: AnalyzedVocabularyWhereUniqueInput
     update: XOR<AnalyzedVocabularyUpdateWithoutUserInput, AnalyzedVocabularyUncheckedUpdateWithoutUserInput>
@@ -39746,6 +54282,38 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"AuditLog"> | Date | string
   }
 
+  export type UserContentProgressUpsertWithWhereUniqueWithoutUserInput = {
+    where: UserContentProgressWhereUniqueInput
+    update: XOR<UserContentProgressUpdateWithoutUserInput, UserContentProgressUncheckedUpdateWithoutUserInput>
+    create: XOR<UserContentProgressCreateWithoutUserInput, UserContentProgressUncheckedCreateWithoutUserInput>
+  }
+
+  export type UserContentProgressUpdateWithWhereUniqueWithoutUserInput = {
+    where: UserContentProgressWhereUniqueInput
+    data: XOR<UserContentProgressUpdateWithoutUserInput, UserContentProgressUncheckedUpdateWithoutUserInput>
+  }
+
+  export type UserContentProgressUpdateManyWithWhereWithoutUserInput = {
+    where: UserContentProgressScalarWhereInput
+    data: XOR<UserContentProgressUpdateManyMutationInput, UserContentProgressUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type UserContentProgressScalarWhereInput = {
+    AND?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+    OR?: UserContentProgressScalarWhereInput[]
+    NOT?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+    id?: StringFilter<"UserContentProgress"> | string
+    userId?: StringFilter<"UserContentProgress"> | string
+    contentItemId?: StringFilter<"UserContentProgress"> | string
+    status?: StringFilter<"UserContentProgress"> | string
+    lastSectionIndex?: IntFilter<"UserContentProgress"> | number
+    savedWords?: JsonFilter<"UserContentProgress">
+    quizScore?: IntNullableFilter<"UserContentProgress"> | number | null
+    quizAttempts?: IntFilter<"UserContentProgress"> | number
+    createdAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserContentProgress"> | Date | string
+  }
+
   export type UserCreateWithoutAnalyzedVocabularyInput = {
     id?: string
     email: string
@@ -39784,6 +54352,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAnalyzedVocabularyInput = {
@@ -39824,6 +54393,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAnalyzedVocabularyInput = {
@@ -39880,6 +54450,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAnalyzedVocabularyInput = {
@@ -39920,6 +54491,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type LessonCreateWithoutCourseInput = {
@@ -40259,6 +54831,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPlacementTestAttemptInput = {
@@ -40299,6 +54872,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPlacementTestAttemptInput = {
@@ -40384,6 +54958,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPlacementTestAttemptInput = {
@@ -40424,6 +54999,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutUserFlashcardInput = {
@@ -40464,6 +55040,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserFlashcardInput = {
@@ -40504,6 +55081,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserFlashcardInput = {
@@ -40560,6 +55138,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserFlashcardInput = {
@@ -40600,6 +55179,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type LessonCreateWithoutUserLessonProgressInput = {
@@ -40677,6 +55257,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserLessonProgressInput = {
@@ -40717,6 +55298,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserLessonProgressInput = {
@@ -40816,6 +55398,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserLessonProgressInput = {
@@ -40856,6 +55439,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutSubscriptionsInput = {
@@ -40896,6 +55480,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutSubscriptionsInput = {
@@ -40936,6 +55521,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutSubscriptionsInput = {
@@ -40992,6 +55578,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSubscriptionsInput = {
@@ -41032,6 +55619,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutPaymentsInput = {
@@ -41072,6 +55660,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPaymentsInput = {
@@ -41112,6 +55701,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPaymentsInput = {
@@ -41168,6 +55758,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPaymentsInput = {
@@ -41208,6 +55799,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutCreditTransactionsInput = {
@@ -41248,6 +55840,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutCreditTransactionsInput = {
@@ -41288,6 +55881,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutCreditTransactionsInput = {
@@ -41344,6 +55938,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutCreditTransactionsInput = {
@@ -41384,6 +55979,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutVocabulariesInput = {
@@ -41424,6 +56020,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutVocabulariesInput = {
@@ -41464,6 +56061,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutVocabulariesInput = {
@@ -41520,6 +56118,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutVocabulariesInput = {
@@ -41560,6 +56159,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutUserPackProgressInput = {
@@ -41600,6 +56200,7 @@ export namespace Prisma {
     vocabularies?: VocabularyCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserPackProgressInput = {
@@ -41640,6 +56241,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserPackProgressInput = {
@@ -41696,6 +56298,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserPackProgressInput = {
@@ -41736,6 +56339,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutLearningStatsInput = {
@@ -41776,6 +56380,7 @@ export namespace Prisma {
     vocabularies?: VocabularyCreateNestedManyWithoutUserInput
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLearningStatsInput = {
@@ -41816,6 +56421,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLearningStatsInput = {
@@ -41872,6 +56478,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLearningStatsInput = {
@@ -41912,6 +56519,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutAuditLogsInput = {
@@ -41952,6 +56560,7 @@ export namespace Prisma {
     vocabularies?: VocabularyCreateNestedManyWithoutUserInput
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAuditLogsInput = {
@@ -41992,6 +56601,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAuditLogsInput = {
@@ -42048,6 +56658,7 @@ export namespace Prisma {
     vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAuditLogsInput = {
@@ -42088,6 +56699,1656 @@ export namespace Prisma {
     vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ContentItemCreateWithoutTopicInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutTopicInput = {
+    id?: string
+    sourceId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutTopicInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput>
+  }
+
+  export type ContentItemCreateManyTopicInputEnvelope = {
+    data: ContentItemCreateManyTopicInput | ContentItemCreateManyTopicInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContentItemUpsertWithWhereUniqueWithoutTopicInput = {
+    where: ContentItemWhereUniqueInput
+    update: XOR<ContentItemUpdateWithoutTopicInput, ContentItemUncheckedUpdateWithoutTopicInput>
+    create: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput>
+  }
+
+  export type ContentItemUpdateWithWhereUniqueWithoutTopicInput = {
+    where: ContentItemWhereUniqueInput
+    data: XOR<ContentItemUpdateWithoutTopicInput, ContentItemUncheckedUpdateWithoutTopicInput>
+  }
+
+  export type ContentItemUpdateManyWithWhereWithoutTopicInput = {
+    where: ContentItemScalarWhereInput
+    data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyWithoutTopicInput>
+  }
+
+  export type ContentItemScalarWhereInput = {
+    AND?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+    OR?: ContentItemScalarWhereInput[]
+    NOT?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+    id?: StringFilter<"ContentItem"> | string
+    sourceId?: StringNullableFilter<"ContentItem"> | string | null
+    topicId?: StringNullableFilter<"ContentItem"> | string | null
+    title?: StringFilter<"ContentItem"> | string
+    titleZh?: StringFilter<"ContentItem"> | string
+    url?: StringFilter<"ContentItem"> | string
+    imageUrl?: StringNullableFilter<"ContentItem"> | string | null
+    rawText?: StringFilter<"ContentItem"> | string
+    cleanedText?: StringFilter<"ContentItem"> | string
+    simplifiedText?: StringNullableFilter<"ContentItem"> | string | null
+    summary?: StringNullableFilter<"ContentItem"> | string | null
+    contentType?: EnumContentTypeFilter<"ContentItem"> | $Enums.ContentType
+    status?: EnumContentStatusFilter<"ContentItem"> | $Enums.ContentStatus
+    jlptLevel?: StringFilter<"ContentItem"> | string
+    wordCount?: IntFilter<"ContentItem"> | number
+    estimatedMinutes?: IntFilter<"ContentItem"> | number
+    extractedVocab?: JsonNullableFilter<"ContentItem">
+    extractedGrammar?: JsonNullableFilter<"ContentItem">
+    publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
+    createdAt?: DateTimeFilter<"ContentItem"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
+  }
+
+  export type ContentItemCreateWithoutSourceInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutSourceInput = {
+    id?: string
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutSourceInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput>
+  }
+
+  export type ContentItemCreateManySourceInputEnvelope = {
+    data: ContentItemCreateManySourceInput | ContentItemCreateManySourceInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContentItemUpsertWithWhereUniqueWithoutSourceInput = {
+    where: ContentItemWhereUniqueInput
+    update: XOR<ContentItemUpdateWithoutSourceInput, ContentItemUncheckedUpdateWithoutSourceInput>
+    create: XOR<ContentItemCreateWithoutSourceInput, ContentItemUncheckedCreateWithoutSourceInput>
+  }
+
+  export type ContentItemUpdateWithWhereUniqueWithoutSourceInput = {
+    where: ContentItemWhereUniqueInput
+    data: XOR<ContentItemUpdateWithoutSourceInput, ContentItemUncheckedUpdateWithoutSourceInput>
+  }
+
+  export type ContentItemUpdateManyWithWhereWithoutSourceInput = {
+    where: ContentItemScalarWhereInput
+    data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyWithoutSourceInput>
+  }
+
+  export type ContentSourceCreateWithoutContentInput = {
+    id?: string
+    name: string
+    type: string
+    baseUrl?: string
+    description?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentSourceUncheckedCreateWithoutContentInput = {
+    id?: string
+    name: string
+    type: string
+    baseUrl?: string
+    description?: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentSourceCreateOrConnectWithoutContentInput = {
+    where: ContentSourceWhereUniqueInput
+    create: XOR<ContentSourceCreateWithoutContentInput, ContentSourceUncheckedCreateWithoutContentInput>
+  }
+
+  export type TopicCreateWithoutContentInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TopicUncheckedCreateWithoutContentInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type TopicCreateOrConnectWithoutContentInput = {
+    where: TopicWhereUniqueInput
+    create: XOR<TopicCreateWithoutContentInput, TopicUncheckedCreateWithoutContentInput>
+  }
+
+  export type ContentSectionCreateWithoutContentItemInput = {
+    id?: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionCreateOrConnectWithoutContentItemInput = {
+    where: ContentSectionWhereUniqueInput
+    create: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type ContentSectionCreateManyContentItemInputEnvelope = {
+    data: ContentSectionCreateManyContentItemInput | ContentSectionCreateManyContentItemInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContentAudioCreateWithoutContentItemInput = {
+    id?: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ContentAudioUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ContentAudioCreateOrConnectWithoutContentItemInput = {
+    where: ContentAudioWhereUniqueInput
+    create: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type ContentAudioCreateManyContentItemInputEnvelope = {
+    data: ContentAudioCreateManyContentItemInput | ContentAudioCreateManyContentItemInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GeneratedQuestionCreateWithoutContentItemInput = {
+    id?: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionCreateOrConnectWithoutContentItemInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    create: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type GeneratedQuestionCreateManyContentItemInputEnvelope = {
+    data: GeneratedQuestionCreateManyContentItemInput | GeneratedQuestionCreateManyContentItemInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GeneratedSRSItemCreateWithoutContentItemInput = {
+    id?: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedSRSItemUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedSRSItemCreateOrConnectWithoutContentItemInput = {
+    where: GeneratedSRSItemWhereUniqueInput
+    create: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type GeneratedSRSItemCreateManyContentItemInputEnvelope = {
+    data: GeneratedSRSItemCreateManyContentItemInput | GeneratedSRSItemCreateManyContentItemInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserContentProgressCreateWithoutContentItemInput = {
+    id?: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutContentProgressInput
+  }
+
+  export type UserContentProgressUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    userId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserContentProgressCreateOrConnectWithoutContentItemInput = {
+    where: UserContentProgressWhereUniqueInput
+    create: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type UserContentProgressCreateManyContentItemInputEnvelope = {
+    data: UserContentProgressCreateManyContentItemInput | UserContentProgressCreateManyContentItemInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContentImportJobCreateWithoutContentItemInput = {
+    id?: string
+    url: string
+    status?: string
+    progress?: number
+    error?: string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentImportJobUncheckedCreateWithoutContentItemInput = {
+    id?: string
+    url: string
+    status?: string
+    progress?: number
+    error?: string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentImportJobCreateOrConnectWithoutContentItemInput = {
+    where: ContentImportJobWhereUniqueInput
+    create: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type ContentSourceUpsertWithoutContentInput = {
+    update: XOR<ContentSourceUpdateWithoutContentInput, ContentSourceUncheckedUpdateWithoutContentInput>
+    create: XOR<ContentSourceCreateWithoutContentInput, ContentSourceUncheckedCreateWithoutContentInput>
+    where?: ContentSourceWhereInput
+  }
+
+  export type ContentSourceUpdateToOneWithWhereWithoutContentInput = {
+    where?: ContentSourceWhereInput
+    data: XOR<ContentSourceUpdateWithoutContentInput, ContentSourceUncheckedUpdateWithoutContentInput>
+  }
+
+  export type ContentSourceUpdateWithoutContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSourceUncheckedUpdateWithoutContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    baseUrl?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TopicUpsertWithoutContentInput = {
+    update: XOR<TopicUpdateWithoutContentInput, TopicUncheckedUpdateWithoutContentInput>
+    create: XOR<TopicCreateWithoutContentInput, TopicUncheckedCreateWithoutContentInput>
+    where?: TopicWhereInput
+  }
+
+  export type TopicUpdateToOneWithWhereWithoutContentInput = {
+    where?: TopicWhereInput
+    data: XOR<TopicUpdateWithoutContentInput, TopicUncheckedUpdateWithoutContentInput>
+  }
+
+  export type TopicUpdateWithoutContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TopicUncheckedUpdateWithoutContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSectionUpsertWithWhereUniqueWithoutContentItemInput = {
+    where: ContentSectionWhereUniqueInput
+    update: XOR<ContentSectionUpdateWithoutContentItemInput, ContentSectionUncheckedUpdateWithoutContentItemInput>
+    create: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type ContentSectionUpdateWithWhereUniqueWithoutContentItemInput = {
+    where: ContentSectionWhereUniqueInput
+    data: XOR<ContentSectionUpdateWithoutContentItemInput, ContentSectionUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type ContentSectionUpdateManyWithWhereWithoutContentItemInput = {
+    where: ContentSectionScalarWhereInput
+    data: XOR<ContentSectionUpdateManyMutationInput, ContentSectionUncheckedUpdateManyWithoutContentItemInput>
+  }
+
+  export type ContentSectionScalarWhereInput = {
+    AND?: ContentSectionScalarWhereInput | ContentSectionScalarWhereInput[]
+    OR?: ContentSectionScalarWhereInput[]
+    NOT?: ContentSectionScalarWhereInput | ContentSectionScalarWhereInput[]
+    id?: StringFilter<"ContentSection"> | string
+    contentItemId?: StringFilter<"ContentSection"> | string
+    orderIndex?: IntFilter<"ContentSection"> | number
+    type?: StringFilter<"ContentSection"> | string
+    text?: StringFilter<"ContentSection"> | string
+    jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
+    vocabHighlights?: JsonNullableFilter<"ContentSection">
+    grammarTags?: JsonNullableFilter<"ContentSection">
+  }
+
+  export type ContentAudioUpsertWithWhereUniqueWithoutContentItemInput = {
+    where: ContentAudioWhereUniqueInput
+    update: XOR<ContentAudioUpdateWithoutContentItemInput, ContentAudioUncheckedUpdateWithoutContentItemInput>
+    create: XOR<ContentAudioCreateWithoutContentItemInput, ContentAudioUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type ContentAudioUpdateWithWhereUniqueWithoutContentItemInput = {
+    where: ContentAudioWhereUniqueInput
+    data: XOR<ContentAudioUpdateWithoutContentItemInput, ContentAudioUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type ContentAudioUpdateManyWithWhereWithoutContentItemInput = {
+    where: ContentAudioScalarWhereInput
+    data: XOR<ContentAudioUpdateManyMutationInput, ContentAudioUncheckedUpdateManyWithoutContentItemInput>
+  }
+
+  export type ContentAudioScalarWhereInput = {
+    AND?: ContentAudioScalarWhereInput | ContentAudioScalarWhereInput[]
+    OR?: ContentAudioScalarWhereInput[]
+    NOT?: ContentAudioScalarWhereInput | ContentAudioScalarWhereInput[]
+    id?: StringFilter<"ContentAudio"> | string
+    contentItemId?: StringFilter<"ContentAudio"> | string
+    audioUrl?: StringFilter<"ContentAudio"> | string
+    type?: StringFilter<"ContentAudio"> | string
+    duration?: IntNullableFilter<"ContentAudio"> | number | null
+    transcript?: StringNullableFilter<"ContentAudio"> | string | null
+    createdAt?: DateTimeFilter<"ContentAudio"> | Date | string
+  }
+
+  export type GeneratedQuestionUpsertWithWhereUniqueWithoutContentItemInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    update: XOR<GeneratedQuestionUpdateWithoutContentItemInput, GeneratedQuestionUncheckedUpdateWithoutContentItemInput>
+    create: XOR<GeneratedQuestionCreateWithoutContentItemInput, GeneratedQuestionUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type GeneratedQuestionUpdateWithWhereUniqueWithoutContentItemInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    data: XOR<GeneratedQuestionUpdateWithoutContentItemInput, GeneratedQuestionUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type GeneratedQuestionUpdateManyWithWhereWithoutContentItemInput = {
+    where: GeneratedQuestionScalarWhereInput
+    data: XOR<GeneratedQuestionUpdateManyMutationInput, GeneratedQuestionUncheckedUpdateManyWithoutContentItemInput>
+  }
+
+  export type GeneratedQuestionScalarWhereInput = {
+    AND?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+    OR?: GeneratedQuestionScalarWhereInput[]
+    NOT?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+    id?: StringFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
+    prompt?: StringFilter<"GeneratedQuestion"> | string
+    options?: JsonNullableFilter<"GeneratedQuestion">
+    answer?: StringFilter<"GeneratedQuestion"> | string
+    explanation?: StringFilter<"GeneratedQuestion"> | string
+    explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
+    jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
+  }
+
+  export type GeneratedSRSItemUpsertWithWhereUniqueWithoutContentItemInput = {
+    where: GeneratedSRSItemWhereUniqueInput
+    update: XOR<GeneratedSRSItemUpdateWithoutContentItemInput, GeneratedSRSItemUncheckedUpdateWithoutContentItemInput>
+    create: XOR<GeneratedSRSItemCreateWithoutContentItemInput, GeneratedSRSItemUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type GeneratedSRSItemUpdateWithWhereUniqueWithoutContentItemInput = {
+    where: GeneratedSRSItemWhereUniqueInput
+    data: XOR<GeneratedSRSItemUpdateWithoutContentItemInput, GeneratedSRSItemUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type GeneratedSRSItemUpdateManyWithWhereWithoutContentItemInput = {
+    where: GeneratedSRSItemScalarWhereInput
+    data: XOR<GeneratedSRSItemUpdateManyMutationInput, GeneratedSRSItemUncheckedUpdateManyWithoutContentItemInput>
+  }
+
+  export type GeneratedSRSItemScalarWhereInput = {
+    AND?: GeneratedSRSItemScalarWhereInput | GeneratedSRSItemScalarWhereInput[]
+    OR?: GeneratedSRSItemScalarWhereInput[]
+    NOT?: GeneratedSRSItemScalarWhereInput | GeneratedSRSItemScalarWhereInput[]
+    id?: StringFilter<"GeneratedSRSItem"> | string
+    contentItemId?: StringFilter<"GeneratedSRSItem"> | string
+    userId?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    word?: StringFilter<"GeneratedSRSItem"> | string
+    furigana?: StringFilter<"GeneratedSRSItem"> | string
+    pos?: StringFilter<"GeneratedSRSItem"> | string
+    meaningZh?: StringFilter<"GeneratedSRSItem"> | string
+    contextSentence?: StringFilter<"GeneratedSRSItem"> | string
+    cardType?: StringFilter<"GeneratedSRSItem"> | string
+    jlptLevel?: StringNullableFilter<"GeneratedSRSItem"> | string | null
+    createdAt?: DateTimeFilter<"GeneratedSRSItem"> | Date | string
+  }
+
+  export type UserContentProgressUpsertWithWhereUniqueWithoutContentItemInput = {
+    where: UserContentProgressWhereUniqueInput
+    update: XOR<UserContentProgressUpdateWithoutContentItemInput, UserContentProgressUncheckedUpdateWithoutContentItemInput>
+    create: XOR<UserContentProgressCreateWithoutContentItemInput, UserContentProgressUncheckedCreateWithoutContentItemInput>
+  }
+
+  export type UserContentProgressUpdateWithWhereUniqueWithoutContentItemInput = {
+    where: UserContentProgressWhereUniqueInput
+    data: XOR<UserContentProgressUpdateWithoutContentItemInput, UserContentProgressUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type UserContentProgressUpdateManyWithWhereWithoutContentItemInput = {
+    where: UserContentProgressScalarWhereInput
+    data: XOR<UserContentProgressUpdateManyMutationInput, UserContentProgressUncheckedUpdateManyWithoutContentItemInput>
+  }
+
+  export type ContentImportJobUpsertWithoutContentItemInput = {
+    update: XOR<ContentImportJobUpdateWithoutContentItemInput, ContentImportJobUncheckedUpdateWithoutContentItemInput>
+    create: XOR<ContentImportJobCreateWithoutContentItemInput, ContentImportJobUncheckedCreateWithoutContentItemInput>
+    where?: ContentImportJobWhereInput
+  }
+
+  export type ContentImportJobUpdateToOneWithWhereWithoutContentItemInput = {
+    where?: ContentImportJobWhereInput
+    data: XOR<ContentImportJobUpdateWithoutContentItemInput, ContentImportJobUncheckedUpdateWithoutContentItemInput>
+  }
+
+  export type ContentImportJobUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentImportJobUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    progress?: IntFieldUpdateOperationsInput | number
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    scrapeResult?: NullableJsonNullValueInput | InputJsonValue
+    aiAnalysis?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentItemCreateWithoutSectionsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutSectionsInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutSectionsInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutSectionsInput, ContentItemUncheckedCreateWithoutSectionsInput>
+  }
+
+  export type ContentItemUpsertWithoutSectionsInput = {
+    update: XOR<ContentItemUpdateWithoutSectionsInput, ContentItemUncheckedUpdateWithoutSectionsInput>
+    create: XOR<ContentItemCreateWithoutSectionsInput, ContentItemUncheckedCreateWithoutSectionsInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutSectionsInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutSectionsInput, ContentItemUncheckedUpdateWithoutSectionsInput>
+  }
+
+  export type ContentItemUpdateWithoutSectionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutSectionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemCreateWithoutAudioInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutAudioInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutAudioInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutAudioInput, ContentItemUncheckedCreateWithoutAudioInput>
+  }
+
+  export type ContentItemUpsertWithoutAudioInput = {
+    update: XOR<ContentItemUpdateWithoutAudioInput, ContentItemUncheckedUpdateWithoutAudioInput>
+    create: XOR<ContentItemCreateWithoutAudioInput, ContentItemUncheckedCreateWithoutAudioInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutAudioInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutAudioInput, ContentItemUncheckedUpdateWithoutAudioInput>
+  }
+
+  export type ContentItemUpdateWithoutAudioInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutAudioInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemCreateWithoutQuestionsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutQuestionsInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutQuestionsInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
+  }
+
+  export type ContentItemUpsertWithoutQuestionsInput = {
+    update: XOR<ContentItemUpdateWithoutQuestionsInput, ContentItemUncheckedUpdateWithoutQuestionsInput>
+    create: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutQuestionsInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutQuestionsInput, ContentItemUncheckedUpdateWithoutQuestionsInput>
+  }
+
+  export type ContentItemUpdateWithoutQuestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutQuestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemCreateWithoutSrsItemsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutSrsItemsInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutSrsItemsInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutSrsItemsInput, ContentItemUncheckedCreateWithoutSrsItemsInput>
+  }
+
+  export type ContentItemUpsertWithoutSrsItemsInput = {
+    update: XOR<ContentItemUpdateWithoutSrsItemsInput, ContentItemUncheckedUpdateWithoutSrsItemsInput>
+    create: XOR<ContentItemCreateWithoutSrsItemsInput, ContentItemUncheckedCreateWithoutSrsItemsInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutSrsItemsInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutSrsItemsInput, ContentItemUncheckedUpdateWithoutSrsItemsInput>
+  }
+
+  export type ContentItemUpdateWithoutSrsItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutSrsItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type UserCreateWithoutContentProgressInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressCreateNestedManyWithoutUserInput
+    payments?: PaymentCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutContentProgressInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardUncheckedCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressUncheckedCreateNestedManyWithoutUserInput
+    payments?: PaymentUncheckedCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionUncheckedCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutContentProgressInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutContentProgressInput, UserUncheckedCreateWithoutContentProgressInput>
+  }
+
+  export type ContentItemCreateWithoutUserProgressInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutUserProgressInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutUserProgressInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutUserProgressInput, ContentItemUncheckedCreateWithoutUserProgressInput>
+  }
+
+  export type UserUpsertWithoutContentProgressInput = {
+    update: XOR<UserUpdateWithoutContentProgressInput, UserUncheckedUpdateWithoutContentProgressInput>
+    create: XOR<UserCreateWithoutContentProgressInput, UserUncheckedCreateWithoutContentProgressInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutContentProgressInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutContentProgressInput, UserUncheckedUpdateWithoutContentProgressInput>
+  }
+
+  export type UserUpdateWithoutContentProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUpdateManyWithoutUserNestedInput
+    payments?: PaymentUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutContentProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUncheckedUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUncheckedUpdateManyWithoutUserNestedInput
+    payments?: PaymentUncheckedUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUncheckedUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ContentItemUpsertWithoutUserProgressInput = {
+    update: XOR<ContentItemUpdateWithoutUserProgressInput, ContentItemUncheckedUpdateWithoutUserProgressInput>
+    create: XOR<ContentItemCreateWithoutUserProgressInput, ContentItemUncheckedCreateWithoutUserProgressInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutUserProgressInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutUserProgressInput, ContentItemUncheckedUpdateWithoutUserProgressInput>
+  }
+
+  export type ContentItemUpdateWithoutUserProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutUserProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemCreateWithoutImportJobInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutImportJobInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutImportJobInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutImportJobInput, ContentItemUncheckedCreateWithoutImportJobInput>
+  }
+
+  export type ContentItemUpsertWithoutImportJobInput = {
+    update: XOR<ContentItemUpdateWithoutImportJobInput, ContentItemUncheckedUpdateWithoutImportJobInput>
+    create: XOR<ContentItemCreateWithoutImportJobInput, ContentItemUncheckedCreateWithoutImportJobInput>
+    where?: ContentItemWhereInput
+  }
+
+  export type ContentItemUpdateToOneWithWhereWithoutImportJobInput = {
+    where?: ContentItemWhereInput
+    data: XOR<ContentItemUpdateWithoutImportJobInput, ContentItemUncheckedUpdateWithoutImportJobInput>
+  }
+
+  export type ContentItemUpdateWithoutImportJobInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutImportJobInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
   }
 
   export type AnalyzedVocabularyCreateManyUserInput = {
@@ -42233,6 +58494,18 @@ export namespace Prisma {
     ipAddress?: string | null
     userAgent?: string | null
     createdAt?: Date | string
+  }
+
+  export type UserContentProgressCreateManyUserInput = {
+    id?: string
+    contentItemId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type AnalyzedVocabularyUpdateWithoutUserInput = {
@@ -42672,6 +58945,42 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserContentProgressUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneRequiredWithoutUserProgressNestedInput
+  }
+
+  export type UserContentProgressUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type LessonCreateManyCourseInput = {
     id?: string
     lessonNumber: number
@@ -42824,6 +59133,438 @@ export namespace Prisma {
     isCorrect?: BoolFieldUpdateOperationsInput | boolean
     timeSpentSeconds?: IntFieldUpdateOperationsInput | number
     answeredAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentItemCreateManyTopicInput = {
+    id?: string
+    sourceId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentItemUpdateWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateManyWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentItemCreateManySourceInput = {
+    id?: string
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentItemUpdateWithoutSourceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutSourceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateManyWithoutSourceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentSectionCreateManyContentItemInput = {
+    id?: string
+    orderIndex: number
+    type?: string
+    text: string
+    jlptLevel?: string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentAudioCreateManyContentItemInput = {
+    id?: string
+    audioUrl: string
+    type?: string
+    duration?: number | null
+    transcript?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionCreateManyContentItemInput = {
+    id?: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type GeneratedSRSItemCreateManyContentItemInput = {
+    id?: string
+    userId?: string | null
+    word: string
+    furigana?: string
+    pos?: string
+    meaningZh?: string
+    contextSentence?: string
+    cardType?: string
+    jlptLevel?: string | null
+    createdAt?: Date | string
+  }
+
+  export type UserContentProgressCreateManyContentItemInput = {
+    id?: string
+    userId: string
+    status?: string
+    lastSectionIndex?: number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ContentSectionUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentSectionUncheckedUpdateManyWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    type?: StringFieldUpdateOperationsInput | string
+    text?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
+    grammarTags?: NullableJsonNullValueInput | InputJsonValue
+  }
+
+  export type ContentAudioUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentAudioUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContentAudioUncheckedUpdateManyWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionUncheckedUpdateManyWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedSRSItemUncheckedUpdateManyWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: NullableStringFieldUpdateOperationsInput | string | null
+    word?: StringFieldUpdateOperationsInput | string
+    furigana?: StringFieldUpdateOperationsInput | string
+    pos?: StringFieldUpdateOperationsInput | string
+    meaningZh?: StringFieldUpdateOperationsInput | string
+    contextSentence?: StringFieldUpdateOperationsInput | string
+    cardType?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutContentProgressNestedInput
+  }
+
+  export type UserContentProgressUncheckedUpdateWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserContentProgressUncheckedUpdateManyWithoutContentItemInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSectionIndex?: IntFieldUpdateOperationsInput | number
+    savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

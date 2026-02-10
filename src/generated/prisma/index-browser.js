@@ -451,6 +451,125 @@ exports.Prisma.AuditLogScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.TopicScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  nameZh: 'nameZh',
+  nameJa: 'nameJa',
+  icon: 'icon',
+  sortOrder: 'sortOrder',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ContentSourceScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  type: 'type',
+  baseUrl: 'baseUrl',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ContentItemScalarFieldEnum = {
+  id: 'id',
+  sourceId: 'sourceId',
+  topicId: 'topicId',
+  title: 'title',
+  titleZh: 'titleZh',
+  url: 'url',
+  imageUrl: 'imageUrl',
+  rawText: 'rawText',
+  cleanedText: 'cleanedText',
+  simplifiedText: 'simplifiedText',
+  summary: 'summary',
+  contentType: 'contentType',
+  status: 'status',
+  jlptLevel: 'jlptLevel',
+  wordCount: 'wordCount',
+  estimatedMinutes: 'estimatedMinutes',
+  extractedVocab: 'extractedVocab',
+  extractedGrammar: 'extractedGrammar',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ContentSectionScalarFieldEnum = {
+  id: 'id',
+  contentItemId: 'contentItemId',
+  orderIndex: 'orderIndex',
+  type: 'type',
+  text: 'text',
+  jlptLevel: 'jlptLevel',
+  vocabHighlights: 'vocabHighlights',
+  grammarTags: 'grammarTags'
+};
+
+exports.Prisma.ContentAudioScalarFieldEnum = {
+  id: 'id',
+  contentItemId: 'contentItemId',
+  audioUrl: 'audioUrl',
+  type: 'type',
+  duration: 'duration',
+  transcript: 'transcript',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GeneratedQuestionScalarFieldEnum = {
+  id: 'id',
+  contentItemId: 'contentItemId',
+  type: 'type',
+  prompt: 'prompt',
+  options: 'options',
+  answer: 'answer',
+  explanation: 'explanation',
+  explanationWrong: 'explanationWrong',
+  jlptLevel: 'jlptLevel',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GeneratedSRSItemScalarFieldEnum = {
+  id: 'id',
+  contentItemId: 'contentItemId',
+  userId: 'userId',
+  word: 'word',
+  furigana: 'furigana',
+  pos: 'pos',
+  meaningZh: 'meaningZh',
+  contextSentence: 'contextSentence',
+  cardType: 'cardType',
+  jlptLevel: 'jlptLevel',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserContentProgressScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentItemId: 'contentItemId',
+  status: 'status',
+  lastSectionIndex: 'lastSectionIndex',
+  savedWords: 'savedWords',
+  quizScore: 'quizScore',
+  quizAttempts: 'quizAttempts',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ContentImportJobScalarFieldEnum = {
+  id: 'id',
+  contentItemId: 'contentItemId',
+  url: 'url',
+  status: 'status',
+  progress: 'progress',
+  error: 'error',
+  scrapeResult: 'scrapeResult',
+  aiAnalysis: 'aiAnalysis',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -521,6 +640,32 @@ exports.CreditTransactionType = exports.$Enums.CreditTransactionType = {
   BONUS: 'BONUS'
 };
 
+exports.ContentType = exports.$Enums.ContentType = {
+  ARTICLE: 'ARTICLE',
+  NEWS: 'NEWS',
+  BLOG: 'BLOG',
+  MAGAZINE: 'MAGAZINE',
+  SONG: 'SONG',
+  ANIME: 'ANIME',
+  PODCAST: 'PODCAST'
+};
+
+exports.ContentStatus = exports.$Enums.ContentStatus = {
+  DRAFT: 'DRAFT',
+  PROCESSING: 'PROCESSING',
+  READY: 'READY',
+  FAILED: 'FAILED',
+  ARCHIVED: 'ARCHIVED'
+};
+
+exports.QuestionType = exports.$Enums.QuestionType = {
+  MCQ: 'MCQ',
+  CLOZE: 'CLOZE',
+  READING_COMPREHENSION: 'READING_COMPREHENSION',
+  LISTENING: 'LISTENING',
+  DICTATION: 'DICTATION'
+};
+
 exports.Prisma.ModelName = {
   User: 'User',
   AnalyzedVocabulary: 'AnalyzedVocabulary',
@@ -545,7 +690,16 @@ exports.Prisma.ModelName = {
   WordDetailCache: 'WordDetailCache',
   TranslationCache: 'TranslationCache',
   GrammarAnalysisCache: 'GrammarAnalysisCache',
-  AuditLog: 'AuditLog'
+  AuditLog: 'AuditLog',
+  Topic: 'Topic',
+  ContentSource: 'ContentSource',
+  ContentItem: 'ContentItem',
+  ContentSection: 'ContentSection',
+  ContentAudio: 'ContentAudio',
+  GeneratedQuestion: 'GeneratedQuestion',
+  GeneratedSRSItem: 'GeneratedSRSItem',
+  UserContentProgress: 'UserContentProgress',
+  ContentImportJob: 'ContentImportJob'
 };
 
 /**
