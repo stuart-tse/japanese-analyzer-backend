@@ -95,6 +95,7 @@ model User {
   userPackProgress     UserPackProgress[]
   learningStats        LearningStats?
   auditLogs            AuditLog[]
+  contentProgress      UserContentProgress[]
 
   @@unique([provider, providerId])
   @@index([email])
@@ -562,4 +563,212 @@ model AuditLog {
   @@index([userId])
   @@index([action])
   @@index([createdAt])
+}
+
+// ============================================
+// CONTENT LIBRARY — Enums
+// ============================================
+
+enum ContentType {
+  ARTICLE
+  NEWS
+  BLOG
+  MAGAZINE
+  SONG
+  ANIME
+  PODCAST
+}
+
+enum ContentStatus {
+  DRAFT
+  PROCESSING
+  READY
+  FAILED
+  ARCHIVED
+}
+
+enum QuestionType {
+  MCQ
+  CLOZE
+  READING_COMPREHENSION
+  LISTENING
+  DICTATION
+}
+
+// ============================================
+// CONTENT LIBRARY — Models
+// ============================================
+
+model Topic {
+  id        String        @id @default(cuid())
+  name      String        @unique // English name
+  nameZh    String        // Chinese name
+  nameJa    String        @default("") // Japanese name
+  icon      String        @default("") // emoji or icon name
+  sortOrder Int           @default(0)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  content   ContentItem[]
+
+  @@index([sortOrder])
+}
+
+model ContentSource {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  type        String        // "news", "blog", "magazine", etc.
+  baseUrl     String        @default("")
+  description String        @default("")
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  content     ContentItem[]
+}
+
+model ContentItem {
+  id               String             @id @default(cuid())
+  sourceId         String?
+  source           ContentSource?     @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  topicId          String?
+  topic            Topic?             @relation(fields: [topicId], references: [id], onDelete: SetNull)
+
+  // Metadata
+  title            String
+  titleZh          String             @default("")
+  url              String             @default("")
+  imageUrl         String?
+
+  // Content
+  rawText          String             @db.Text
+  cleanedText      String             @default("") @db.Text
+  simplifiedText   String?            @db.Text
+  summary          String?            @db.Text
+
+  // Classification
+  contentType      ContentType        @default(ARTICLE)
+  status           ContentStatus      @default(DRAFT)
+  jlptLevel        String             @default("N3")
+  wordCount        Int                @default(0)
+  estimatedMinutes Int                @default(0)
+
+  // Extracted data (JSON)
+  extractedVocab   Json?              // Array<{word, furigana, pos, meaningZh, jlptLevel}>
+  extractedGrammar Json?              // Array<{pattern, meaningZh, level, examples[]}>
+
+  // Timestamps
+  publishedAt      DateTime?
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+
+  // Relations
+  sections         ContentSection[]
+  audio            ContentAudio[]
+  questions        GeneratedQuestion[]
+  srsItems         GeneratedSRSItem[]
+  userProgress     UserContentProgress[]
+  importJob        ContentImportJob?
+
+  @@index([topicId])
+  @@index([status])
+  @@index([jlptLevel])
+  @@index([contentType])
+  @@index([publishedAt])
+  @@index([status, jlptLevel, contentType])
+}
+
+model ContentSection {
+  id              String      @id @default(cuid())
+  contentItemId   String
+  contentItem     ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  orderIndex      Int
+  type            String      @default("paragraph") // "paragraph", "heading", "quote"
+  text            String      @db.Text
+  jlptLevel       String?
+  vocabHighlights Json?       // Array<{word, furigana, pos, meaningZh, startIdx, endIdx}>
+  grammarTags     Json?       // Array<{pattern, meaningZh, startIdx, endIdx}>
+
+  @@unique([contentItemId, orderIndex])
+  @@index([contentItemId])
+}
+
+model ContentAudio {
+  id            String      @id @default(cuid())
+  contentItemId String
+  contentItem   ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  audioUrl      String
+  type          String      @default("full") // "full", "section", "word"
+  duration      Int?        // seconds
+  transcript    String?     @db.Text
+  createdAt     DateTime    @default(now())
+
+  @@index([contentItemId])
+}
+
+model GeneratedQuestion {
+  id               String      @id @default(cuid())
+  contentItemId    String
+  contentItem      ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  type             QuestionType
+  prompt           String      @db.Text
+  options          Json?       // Array<{id, text}> for MCQ
+  answer           String      // Correct answer text or option ID
+  explanation      String      @db.Text
+  explanationWrong Json?       // Record<optionId, explanation>
+  jlptLevel        String?
+  createdAt        DateTime    @default(now())
+
+  @@index([contentItemId])
+  @@index([type])
+}
+
+model GeneratedSRSItem {
+  id              String      @id @default(cuid())
+  contentItemId   String
+  contentItem     ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  userId          String?     // null = template, non-null = user-specific
+  word            String
+  furigana        String      @default("")
+  pos             String      @default("")
+  meaningZh       String      @default("")
+  contextSentence String      @default("") @db.Text
+  cardType        String      @default("vocab") // "vocab", "grammar", "kanji"
+  jlptLevel       String?
+  createdAt       DateTime    @default(now())
+
+  @@index([contentItemId])
+  @@index([userId])
+}
+
+model UserContentProgress {
+  id               String      @id @default(cuid())
+  userId           String
+  user             User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  contentItemId    String
+  contentItem      ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  status           String      @default("not_started") // "not_started", "reading", "completed"
+  lastSectionIndex Int         @default(0)
+  savedWords       Json        @default("[]") // Array<string> — saved word keys
+  quizScore        Int?
+  quizAttempts     Int         @default(0)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  @@unique([userId, contentItemId])
+  @@index([userId])
+  @@index([contentItemId])
+}
+
+model ContentImportJob {
+  id            String      @id @default(cuid())
+  contentItemId String      @unique
+  contentItem   ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  url           String
+  status        String      @default("pending") // "pending", "scraping", "analyzing", "generating", "done", "failed"
+  progress      Int         @default(0) // 0-100
+  error         String?     @db.Text
+  scrapeResult  Json?       // Raw scrape data
+  aiAnalysis    Json?       // AI analysis results
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@index([status])
 }

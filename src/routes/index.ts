@@ -27,6 +27,9 @@ import analyzedVocabularyRouter from './analyzedVocabulary.js';
 import userStatsRouter from './userStats.js';
 import profileRouter from './profile.js';
 import paymentMethodsRouter from './paymentMethods.js';
+import topicsRouter from './topics.js';
+import contentRouter from './content.js';
+import adminContentRouter from './adminContent.js';
 
 const router = Router();
 
@@ -71,5 +74,10 @@ router.use('/payment-methods', paymentMethodsRouter);
 
 // Mobile-optimized routes (require auth)
 router.use('/mobile', mobileRouter);
+
+// Content library routes
+router.use('/topics', topicsRouter);
+router.use('/content', contentRouter);
+router.use('/admin/content', adminContentRouter);
 
 export default router;
