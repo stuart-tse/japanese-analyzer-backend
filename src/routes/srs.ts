@@ -32,6 +32,7 @@ router.get('/due', requireAuth, async (req: Request, res: Response) => {
       srsInterval: v.srsInterval,
       reviewCount: v.reviewCount,
       wrongCount: v.wrongCount,
+      notes: typeof v.notes === 'string' ? v.notes : '',
     }));
 
     res.json({ items: result, count: result.length });
