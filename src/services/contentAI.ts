@@ -58,35 +58,53 @@ async function callAI(prompt: string, maxTokens: number = 4000): Promise<string>
     throw new Error('API key not configured');
   }
 
-  const response = await fetch(config.apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: config.modelName,
-      messages: [{ role: 'user', content: prompt }],
-      temperature: 0.3,
-      max_tokens: maxTokens,
-    }),
-  });
+  const maxRetries = 4;
+  let lastError: Error | null = null;
 
-  if (!response.ok) {
-    const errorText = await response.text().catch(() => 'unknown');
-    throw new Error(`AI API error (${response.status}): ${errorText}`);
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    if (attempt > 0) {
+      // Exponential backoff: 10s, 30s, 60s
+      const delay = Math.min(10000 * Math.pow(3, attempt - 1), 60000);
+      await new Promise((r) => setTimeout(r, delay));
+    }
+
+    const response = await fetch(config.apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: config.modelName,
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.3,
+        max_tokens: maxTokens,
+      }),
+    });
+
+    if (response.status === 429) {
+      lastError = new Error(`AI API rate limited (attempt ${attempt + 1}/${maxRetries})`);
+      continue;
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => 'unknown');
+      throw new Error(`AI API error (${response.status}): ${errorText}`);
+    }
+
+    const data = (await response.json()) as {
+      choices?: Array<{ message?: { content?: string } }>;
+    };
+
+    const content = data.choices?.[0]?.message?.content || '';
+    if (!content) {
+      throw new Error('AI returned empty response');
+    }
+
+    return content;
   }
 
-  const data = (await response.json()) as {
-    choices?: Array<{ message?: { content?: string } }>;
-  };
-
-  const content = data.choices?.[0]?.message?.content || '';
-  if (!content) {
-    throw new Error('AI returned empty response');
-  }
-
-  return content;
+  throw lastError || new Error('AI call failed after retries');
 }
 
 function parseJsonFromResponse<T>(content: string, label: string): T {
@@ -239,39 +257,173 @@ export async function generateSections(
   text: string,
   vocab: ExtractedVocab[]
 ): Promise<ContentSection[]> {
-  const truncated = text.slice(0, 4000);
-  const vocabWords = vocab.map((v) => v.word);
+  try {
+    return await generateSectionsAI(text, vocab);
+  } catch {
+    // Fallback: programmatic paragraph splitting + string-match highlights
+    return generateSectionsFallback(text, vocab);
+  }
+}
 
-  const prompt = `Split this Japanese article text into logical sections (paragraphs) and identify vocabulary highlights within each section.
+async function generateSectionsAI(
+  text: string,
+  vocab: ExtractedVocab[]
+): Promise<ContentSection[]> {
+  const truncated = text.slice(0, 3000);
+  const vocabWords = vocab.slice(0, 15).map((v) => v.word);
 
-Article text:
+  const prompt = `Split this Japanese article into paragraphs and find vocabulary highlights.
+
+Text:
 """
 ${truncated}
 """
 
-Known vocabulary words: ${JSON.stringify(vocabWords)}
+Vocabulary to find: ${JSON.stringify(vocabWords)}
 
-Return a JSON array of section objects, each with:
-- "orderIndex": section number starting from 0
-- "type": "heading" or "paragraph"
-- "text": the section text (exact text from the article)
-- "vocabHighlights": array of vocabulary occurrences found in this section, each with:
-  - "word": the word
-  - "furigana": hiragana reading
-  - "pos": part of speech (Japanese)
-  - "meaningZh": Chinese meaning
-  - "startIdx": character start index within this section's text
-  - "endIdx": character end index within this section's text
+Return a JSON array. Each element:
+{"orderIndex":0,"type":"paragraph","text":"exact paragraph text","vocabHighlights":[{"word":"単語","furigana":"たんご","pos":"名詞","meaningZh":"单词","startIdx":5,"endIdx":7}]}
 
-Important:
-- Keep the original text exactly as-is
-- startIdx and endIdx must be accurate character positions
-- Only highlight words from the known vocabulary list
+Rules:
+- type: "heading" for short title lines, "paragraph" for body text
+- startIdx/endIdx: character positions within that section's text
+- Only highlight words from the vocabulary list
+- Return ONLY valid JSON, nothing else`;
 
-Return ONLY the JSON array, no other text.`;
-
-  const content = await callAI(prompt, 8000);
+  const content = await callAI(prompt, 6000);
   return parseJsonFromResponse<ContentSection[]>(content, 'sections');
+}
+
+/**
+ * Fallback: split text into paragraphs and find vocab by string matching.
+ * No AI required — deterministic and always succeeds.
+ */
+function generateSectionsFallback(
+  text: string,
+  vocab: ExtractedVocab[]
+): ContentSection[] {
+  const paragraphs = text
+    .split(/\n{2,}/)
+    .map((p) => p.trim())
+    .filter((p) => p.length > 0);
+
+  return paragraphs.map((para, idx) => {
+    const isHeading = para.length < 60 && !para.includes('。');
+
+    const highlights: ContentSection['vocabHighlights'] = [];
+    for (const v of vocab) {
+      let searchFrom = 0;
+      while (searchFrom < para.length) {
+        const foundIdx = para.indexOf(v.word, searchFrom);
+        if (foundIdx === -1) break;
+        highlights.push({
+          word: v.word,
+          furigana: v.furigana,
+          pos: v.pos,
+          meaningZh: v.meaningZh,
+          startIdx: foundIdx,
+          endIdx: foundIdx + v.word.length,
+        });
+        searchFrom = foundIdx + v.word.length;
+      }
+    }
+
+    // Sort by position, deduplicate overlaps
+    highlights.sort((a, b) => a.startIdx - b.startIdx);
+    const deduped: ContentSection['vocabHighlights'] = [];
+    let lastEnd = -1;
+    for (const hl of highlights) {
+      if (hl.startIdx >= lastEnd) {
+        deduped.push(hl);
+        lastEnd = hl.endIdx;
+      }
+    }
+
+    return {
+      orderIndex: idx,
+      type: isHeading ? 'heading' : 'paragraph',
+      text: para,
+      vocabHighlights: deduped,
+    };
+  });
+}
+
+export interface ContentTranslations {
+  titleZh: string;
+  summary: string;
+  sectionTranslations: string[];
+}
+
+export async function generateTranslations(
+  title: string,
+  sectionTexts: string[],
+  sectionTypes?: string[]
+): Promise<ContentTranslations> {
+  const count = sectionTexts.length;
+
+  // Build a compact payload: numbered sections with type labels
+  const numberedSections = sectionTexts
+    .map((t, i) => {
+      const typeLabel = sectionTypes?.[i] ? ` (${sectionTypes[i]})` : '';
+      return `[${i}]${typeLabel} ${t.slice(0, 500)}`;
+    })
+    .join('\n');
+  const truncated = numberedSections.slice(0, 4000);
+
+  const prompt = `Translate the following Japanese article into Chinese (Simplified).
+
+Title: ${title}
+
+There are exactly ${count} sections. Each is labeled [index] (type).
+
+Sections:
+"""
+${truncated}
+"""
+
+CRITICAL RULES:
+1. Return a JSON object with "titleZh", "summary", and "sectionTranslations"
+2. "sectionTranslations" MUST be an array of EXACTLY ${count} strings
+3. sectionTranslations[i] is the Chinese translation of section [i] — strict 1:1 mapping
+4. Do NOT merge or skip any section. Every section gets its own translation, even headings
+5. For short heading sections, translate the heading text only (keep it brief)
+
+Return ONLY the JSON object, no other text.`;
+
+  const content = await callAI(prompt, 6000);
+
+  // Parse as object directly — parseJsonFromResponse tries arrays first
+  // which incorrectly matches the inner sectionTranslations array
+  const codeBlockMatch = content.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/);
+  const rawJson = codeBlockMatch ? codeBlockMatch[1] : content;
+  const objMatch = rawJson.match(/\{[\s\S]*\}/);
+  if (!objMatch) {
+    throw new Error('Failed to parse AI translations response as JSON object');
+  }
+  const raw = JSON.parse(objMatch[0]) as Record<string, unknown>;
+
+  // Normalize: AI may use different key names
+  const titleZh = (raw.titleZh || raw.title_zh || raw.title || '') as string;
+  const summary = (raw.summary || raw.summaryZh || raw.summary_zh || '') as string;
+  const rawTranslations: string[] = (
+    raw.sectionTranslations ||
+    raw.section_translations ||
+    raw.translations ||
+    raw.sections ||
+    []
+  ) as string[];
+
+  // Strip numbered prefixes like "[0] " that AI may echo from the prompt
+  const sectionTranslations = rawTranslations.map((t) =>
+    t.replace(/^\[\d+\]\s*/, '')
+  );
+
+  // Ensure array matches input length
+  while (sectionTranslations.length < sectionTexts.length) {
+    sectionTranslations.push('');
+  }
+
+  return { titleZh, summary, sectionTranslations };
 }
 
 export async function generateSimplifiedVersion(

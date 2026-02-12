@@ -504,7 +504,8 @@ exports.Prisma.ContentSectionScalarFieldEnum = {
   text: 'text',
   jlptLevel: 'jlptLevel',
   vocabHighlights: 'vocabHighlights',
-  grammarTags: 'grammarTags'
+  grammarTags: 'grammarTags',
+  translationZh: 'translationZh'
 };
 
 exports.Prisma.ContentAudioScalarFieldEnum = {

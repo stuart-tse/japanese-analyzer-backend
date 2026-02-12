@@ -7,6 +7,7 @@ import {
   generateQuestions,
   generateSections,
   generateSimplifiedVersion,
+  generateTranslations,
 } from './contentAI.js';
 import type { ContentStatus, QuestionType } from '../generated/prisma/index.js';
 
@@ -191,21 +192,48 @@ export async function processContent(contentItemId: string): Promise<void> {
     }
     await updateJobProgress(jobId, 'generating', 95);
 
-    // ─── Step 8: Generate Simplified Version ───
-    const simplifiedText = await generateSimplifiedVersion(
-      rawText,
-      jlptEstimation.overallLevel === 'N1' || jlptEstimation.overallLevel === 'N2'
-        ? 'N3'
-        : 'N4'
-    );
+    // ─── Step 8: Generate Translations (Chinese) ───
+    await updateJobProgress(jobId, 'generating', 95);
 
-    await prisma.contentItem.update({
-      where: { id: contentItemId },
-      data: {
-        simplifiedText,
-        status: 'DRAFT' as ContentStatus,
-      },
+    // Retrieve created sections in order for translation
+    const createdSections = await prisma.contentSection.findMany({
+      where: { contentItemId },
+      orderBy: { orderIndex: 'asc' },
     });
+    const sectionTexts = createdSections.map((s) => s.text);
+    const sectionTypes = createdSections.map((s) => s.type);
+
+    try {
+      const translations = await generateTranslations(title, sectionTexts, sectionTypes);
+
+      // Update titleZh + summary on ContentItem
+      await prisma.contentItem.update({
+        where: { id: contentItemId },
+        data: {
+          titleZh: translations.titleZh,
+          summary: translations.summary,
+          status: 'DRAFT' as ContentStatus,
+        },
+      });
+
+      // Update each section's translationZh
+      for (let i = 0; i < createdSections.length; i++) {
+        const translationZh = translations.sectionTranslations[i] || '';
+        if (translationZh) {
+          await prisma.contentSection.update({
+            where: { id: createdSections[i].id },
+            data: { translationZh },
+          });
+        }
+      }
+    } catch (translationError) {
+      // Translation is non-critical — log and continue
+      console.error('Translation generation failed (non-fatal):', translationError);
+      await prisma.contentItem.update({
+        where: { id: contentItemId },
+        data: { status: 'DRAFT' as ContentStatus },
+      });
+    }
 
     // ─── Done (100%) ───
     await updateJobProgress(jobId, 'done', 100, {

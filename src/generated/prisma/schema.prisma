@@ -685,6 +685,7 @@ model ContentSection {
   jlptLevel       String?
   vocabHighlights Json? // Array<{word, furigana, pos, meaningZh, startIdx, endIdx}>
   grammarTags     Json? // Array<{pattern, meaningZh, startIdx, endIdx}>
+  translationZh   String?     @db.Text
 
   @@unique([contentItemId, orderIndex])
   @@index([contentItemId])

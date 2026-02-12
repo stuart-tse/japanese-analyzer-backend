@@ -35615,6 +35615,7 @@ export namespace Prisma {
     type: string | null
     text: string | null
     jlptLevel: string | null
+    translationZh: string | null
   }
 
   export type ContentSectionMaxAggregateOutputType = {
@@ -35624,6 +35625,7 @@ export namespace Prisma {
     type: string | null
     text: string | null
     jlptLevel: string | null
+    translationZh: string | null
   }
 
   export type ContentSectionCountAggregateOutputType = {
@@ -35635,6 +35637,7 @@ export namespace Prisma {
     jlptLevel: number
     vocabHighlights: number
     grammarTags: number
+    translationZh: number
     _all: number
   }
 
@@ -35654,6 +35657,7 @@ export namespace Prisma {
     type?: true
     text?: true
     jlptLevel?: true
+    translationZh?: true
   }
 
   export type ContentSectionMaxAggregateInputType = {
@@ -35663,6 +35667,7 @@ export namespace Prisma {
     type?: true
     text?: true
     jlptLevel?: true
+    translationZh?: true
   }
 
   export type ContentSectionCountAggregateInputType = {
@@ -35674,6 +35679,7 @@ export namespace Prisma {
     jlptLevel?: true
     vocabHighlights?: true
     grammarTags?: true
+    translationZh?: true
     _all?: true
   }
 
@@ -35772,6 +35778,7 @@ export namespace Prisma {
     jlptLevel: string | null
     vocabHighlights: JsonValue | null
     grammarTags: JsonValue | null
+    translationZh: string | null
     _count: ContentSectionCountAggregateOutputType | null
     _avg: ContentSectionAvgAggregateOutputType | null
     _sum: ContentSectionSumAggregateOutputType | null
@@ -35802,6 +35809,7 @@ export namespace Prisma {
     jlptLevel?: boolean
     vocabHighlights?: boolean
     grammarTags?: boolean
+    translationZh?: boolean
     contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["contentSection"]>
 
@@ -35814,6 +35822,7 @@ export namespace Prisma {
     jlptLevel?: boolean
     vocabHighlights?: boolean
     grammarTags?: boolean
+    translationZh?: boolean
     contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["contentSection"]>
 
@@ -35826,6 +35835,7 @@ export namespace Prisma {
     jlptLevel?: boolean
     vocabHighlights?: boolean
     grammarTags?: boolean
+    translationZh?: boolean
     contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["contentSection"]>
 
@@ -35838,9 +35848,10 @@ export namespace Prisma {
     jlptLevel?: boolean
     vocabHighlights?: boolean
     grammarTags?: boolean
+    translationZh?: boolean
   }
 
-  export type ContentSectionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "orderIndex" | "type" | "text" | "jlptLevel" | "vocabHighlights" | "grammarTags", ExtArgs["result"]["contentSection"]>
+  export type ContentSectionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "orderIndex" | "type" | "text" | "jlptLevel" | "vocabHighlights" | "grammarTags" | "translationZh", ExtArgs["result"]["contentSection"]>
   export type ContentSectionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
   }
@@ -35865,6 +35876,7 @@ export namespace Prisma {
       jlptLevel: string | null
       vocabHighlights: Prisma.JsonValue | null
       grammarTags: Prisma.JsonValue | null
+      translationZh: string | null
     }, ExtArgs["result"]["contentSection"]>
     composites: {}
   }
@@ -36297,6 +36309,7 @@ export namespace Prisma {
     readonly jlptLevel: FieldRef<"ContentSection", 'String'>
     readonly vocabHighlights: FieldRef<"ContentSection", 'Json'>
     readonly grammarTags: FieldRef<"ContentSection", 'Json'>
+    readonly translationZh: FieldRef<"ContentSection", 'String'>
   }
     
 
@@ -42877,7 +42890,8 @@ export namespace Prisma {
     text: 'text',
     jlptLevel: 'jlptLevel',
     vocabHighlights: 'vocabHighlights',
-    grammarTags: 'grammarTags'
+    grammarTags: 'grammarTags',
+    translationZh: 'translationZh'
   };
 
   export type ContentSectionScalarFieldEnum = (typeof ContentSectionScalarFieldEnum)[keyof typeof ContentSectionScalarFieldEnum]
@@ -45610,6 +45624,7 @@ export namespace Prisma {
     jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
     vocabHighlights?: JsonNullableFilter<"ContentSection">
     grammarTags?: JsonNullableFilter<"ContentSection">
+    translationZh?: StringNullableFilter<"ContentSection"> | string | null
     contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
   }
 
@@ -45622,6 +45637,7 @@ export namespace Prisma {
     jlptLevel?: SortOrderInput | SortOrder
     vocabHighlights?: SortOrderInput | SortOrder
     grammarTags?: SortOrderInput | SortOrder
+    translationZh?: SortOrderInput | SortOrder
     contentItem?: ContentItemOrderByWithRelationInput
   }
 
@@ -45638,6 +45654,7 @@ export namespace Prisma {
     jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
     vocabHighlights?: JsonNullableFilter<"ContentSection">
     grammarTags?: JsonNullableFilter<"ContentSection">
+    translationZh?: StringNullableFilter<"ContentSection"> | string | null
     contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
   }, "id" | "contentItemId_orderIndex">
 
@@ -45650,6 +45667,7 @@ export namespace Prisma {
     jlptLevel?: SortOrderInput | SortOrder
     vocabHighlights?: SortOrderInput | SortOrder
     grammarTags?: SortOrderInput | SortOrder
+    translationZh?: SortOrderInput | SortOrder
     _count?: ContentSectionCountOrderByAggregateInput
     _avg?: ContentSectionAvgOrderByAggregateInput
     _max?: ContentSectionMaxOrderByAggregateInput
@@ -45669,6 +45687,7 @@ export namespace Prisma {
     jlptLevel?: StringNullableWithAggregatesFilter<"ContentSection"> | string | null
     vocabHighlights?: JsonNullableWithAggregatesFilter<"ContentSection">
     grammarTags?: JsonNullableWithAggregatesFilter<"ContentSection">
+    translationZh?: StringNullableWithAggregatesFilter<"ContentSection"> | string | null
   }
 
   export type ContentAudioWhereInput = {
@@ -48787,6 +48806,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
     contentItem: ContentItemCreateNestedOneWithoutSectionsInput
   }
 
@@ -48799,6 +48819,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
   }
 
   export type ContentSectionUpdateInput = {
@@ -48809,6 +48830,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
     contentItem?: ContentItemUpdateOneRequiredWithoutSectionsNestedInput
   }
 
@@ -48821,6 +48843,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentSectionCreateManyInput = {
@@ -48832,6 +48855,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
   }
 
   export type ContentSectionUpdateManyMutationInput = {
@@ -48842,6 +48866,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentSectionUncheckedUpdateManyInput = {
@@ -48853,6 +48878,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentAudioCreateInput = {
@@ -51348,6 +51374,7 @@ export namespace Prisma {
     jlptLevel?: SortOrder
     vocabHighlights?: SortOrder
     grammarTags?: SortOrder
+    translationZh?: SortOrder
   }
 
   export type ContentSectionAvgOrderByAggregateInput = {
@@ -51361,6 +51388,7 @@ export namespace Prisma {
     type?: SortOrder
     text?: SortOrder
     jlptLevel?: SortOrder
+    translationZh?: SortOrder
   }
 
   export type ContentSectionMinOrderByAggregateInput = {
@@ -51370,6 +51398,7 @@ export namespace Prisma {
     type?: SortOrder
     text?: SortOrder
     jlptLevel?: SortOrder
+    translationZh?: SortOrder
   }
 
   export type ContentSectionSumOrderByAggregateInput = {
@@ -56957,6 +56986,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
   }
 
   export type ContentSectionUncheckedCreateWithoutContentItemInput = {
@@ -56967,6 +56997,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
   }
 
   export type ContentSectionCreateOrConnectWithoutContentItemInput = {
@@ -57232,6 +57263,7 @@ export namespace Prisma {
     jlptLevel?: StringNullableFilter<"ContentSection"> | string | null
     vocabHighlights?: JsonNullableFilter<"ContentSection">
     grammarTags?: JsonNullableFilter<"ContentSection">
+    translationZh?: StringNullableFilter<"ContentSection"> | string | null
   }
 
   export type ContentAudioUpsertWithWhereUniqueWithoutContentItemInput = {
@@ -59351,6 +59383,7 @@ export namespace Prisma {
     jlptLevel?: string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: string | null
   }
 
   export type ContentAudioCreateManyContentItemInput = {
@@ -59407,6 +59440,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentSectionUncheckedUpdateWithoutContentItemInput = {
@@ -59417,6 +59451,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentSectionUncheckedUpdateManyWithoutContentItemInput = {
@@ -59427,6 +59462,7 @@ export namespace Prisma {
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
     vocabHighlights?: NullableJsonNullValueInput | InputJsonValue
     grammarTags?: NullableJsonNullValueInput | InputJsonValue
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ContentAudioUpdateWithoutContentItemInput = {
