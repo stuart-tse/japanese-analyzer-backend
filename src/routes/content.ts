@@ -2,6 +2,8 @@ import { Router, Request, Response } from 'express';
 import { prisma } from '../config/prisma.js';
 import { requireAuth, optionalAuth } from '../middleware/auth.js';
 import { TEXTS } from '../constants/texts.js';
+import { generateContentAudio } from '../services/audioGeneration.js';
+import { deleteFromS3 } from '../services/s3Service.js';
 import type { ContentStatus } from '../generated/prisma/index.js';
 
 const router = Router();
@@ -108,6 +110,104 @@ router.get('/:id', optionalAuth, async (req: Request, res: Response) => {
   } catch (error) {
     console.error('Get content detail error:', error);
     res.status(500).json({ error: { message: '获取内容详情失败' } });
+  }
+});
+
+// ─── GET /:id/audio — Get or generate article audio ───
+router.get('/:id/audio', optionalAuth, async (req: Request, res: Response) => {
+  try {
+    const contentItemId = req.params.id as string;
+
+    // 1. Check if audio already exists in DB
+    const existing = await prisma.contentAudio.findUnique({
+      where: { contentItemId_type: { contentItemId, type: 'full' } },
+    });
+
+    if (existing) {
+      const sectionTimestamps = existing.transcript
+        ? JSON.parse(existing.transcript)
+        : [];
+
+      res.json({
+        id: existing.id,
+        audioUrl: existing.audioUrl,
+        type: 'full',
+        duration: existing.duration ?? 0,
+        sectionTimestamps,
+      });
+      return;
+    }
+
+    // 2. Fetch content sections for TTS generation
+    const contentItem = await prisma.contentItem.findUnique({
+      where: { id: contentItemId },
+      include: {
+        sections: {
+          orderBy: { orderIndex: 'asc' },
+          select: { orderIndex: true, text: true, type: true },
+        },
+      },
+    });
+
+    if (!contentItem) {
+      res.status(404).json({ error: { message: TEXTS.CONTENT.NOT_FOUND } });
+      return;
+    }
+
+    // 3. Generate TTS audio and upload to S3
+    let result;
+    try {
+      result = await generateContentAudio(contentItemId, contentItem.sections);
+    } catch (err) {
+      console.error('TTS generation failed:', err);
+      res.status(500).json({
+        error: { message: '生成音频失败', code: 'tts_failed' },
+      });
+      return;
+    }
+
+    // 4. Save metadata to DB (upsert handles race conditions)
+    let audioRecord;
+    try {
+      audioRecord = await prisma.contentAudio.upsert({
+        where: { contentItemId_type: { contentItemId, type: 'full' } },
+        update: {
+          audioUrl: result.url,
+          duration: result.duration,
+          transcript: JSON.stringify(result.sectionTimestamps),
+        },
+        create: {
+          contentItemId,
+          audioUrl: result.url,
+          type: 'full',
+          duration: result.duration,
+          transcript: JSON.stringify(result.sectionTimestamps),
+        },
+      });
+    } catch (dbErr) {
+      // DB write failed after S3 upload — best-effort cleanup
+      console.error('DB write failed after S3 upload:', dbErr);
+      deleteFromS3(result.s3Key).catch((cleanupErr) => {
+        console.error('S3 cleanup failed (orphaned object):', result.s3Key, cleanupErr);
+      });
+      res.status(500).json({
+        error: { message: '保存音频记录失败', code: 'upload_failed' },
+      });
+      return;
+    }
+
+    res.json({
+      id: audioRecord.id,
+      audioUrl: result.url,
+      type: 'full',
+      duration: result.duration,
+      sectionTimestamps: result.sectionTimestamps,
+    });
+  } catch (error) {
+    console.error('Content audio error:', error);
+    res.status(500).json({
+      error: { message: '生成音频失败' },
+    });
   }
 });
 

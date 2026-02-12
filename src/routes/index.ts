@@ -30,6 +30,8 @@ import paymentMethodsRouter from './paymentMethods.js';
 import topicsRouter from './topics.js';
 import contentRouter from './content.js';
 import adminContentRouter from './adminContent.js';
+import listeningRouter from './listening.js';
+import adminListeningRouter from './adminListening.js';
 
 const router = Router();
 
@@ -79,5 +81,7 @@ router.use('/mobile', mobileRouter);
 router.use('/topics', topicsRouter);
 router.use('/content', contentRouter);
 router.use('/admin/content', adminContentRouter);
+router.use('/listening', listeningRouter);
+router.use('/admin/listening', adminListeningRouter);
 
 export default router;

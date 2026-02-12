@@ -1,14 +1,14 @@
 import { Router, Request, Response } from 'express';
+import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 import { rateLimit } from '../middleware/rateLimit.js';
 import { config } from '../config/index.js';
 
 const GEMINI_TTS_URL =
   'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-tts:generateContent';
-const EDGE_TTS_URL = 'https://api.howen.ink/api/tts';
 
 const EDGE_VOICES: Record<string, string> = {
-  male: 'ja-JP-Masaru:DragonHDLatestNeural',
-  female: 'ja-JP-Nanami:DragonHDLatestNeural',
+  male: 'ja-JP-KeitaNeural',
+  female: 'ja-JP-NanamiNeural',
 };
 
 const GEMINI_VOICES = ['Kore', 'Puck', 'Zephyr', 'Aoede', 'Leda', 'Charon'];
@@ -37,31 +37,30 @@ router.post('/', rateLimit({ maxTokens: 10, refillRate: 1 }), async (req: Reques
         return;
       }
 
-      const payload = { text, voice: EDGE_VOICES[gender], rate, pitch: 0 };
+      const ttsClient = new MsEdgeTTS();
+      await ttsClient.setMetadata(
+        EDGE_VOICES[gender],
+        OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3,
+      );
 
-      const upstreamRes = await fetch(EDGE_TTS_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+      const rateStr = rate >= 0 ? `+${rate}%` : `${rate}%`;
+      const { audioStream } = ttsClient.toStream(text, { rate: rateStr });
+
+      const chunks: Buffer[] = [];
+      audioStream.on('data', (chunk: Buffer) => chunks.push(chunk));
+      await new Promise<void>((resolve, reject) => {
+        audioStream.on('end', resolve);
+        audioStream.on('error', reject);
       });
+      ttsClient.close();
 
-      if (!upstreamRes.ok) {
-        const data = await upstreamRes.json().catch(() => ({}));
-        console.error('Edge TTS API error:', data);
-        res.status(upstreamRes.status).json({
-          error: (data as Record<string, unknown>).error || { message: 'Edge TTS 请求失败' },
-        });
-        return;
-      }
-
-      const audioBuffer = await upstreamRes.arrayBuffer();
-
-      if (!audioBuffer || audioBuffer.byteLength === 0) {
+      const audioBuffer = Buffer.concat(chunks);
+      if (audioBuffer.byteLength === 0) {
         res.status(500).json({ error: { message: '无有效音频数据' } });
         return;
       }
 
-      const base64Audio = Buffer.from(audioBuffer).toString('base64');
+      const base64Audio = audioBuffer.toString('base64');
       res.json({ audio: base64Audio, mimeType: 'audio/mp3' });
     } else if (provider === 'gemini') {
       const headerKey = req.headers['x-gemini-key'] as string | undefined;

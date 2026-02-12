@@ -178,6 +178,21 @@ export type UserContentProgress = $Result.DefaultSelection<Prisma.$UserContentPr
  * 
  */
 export type ContentImportJob = $Result.DefaultSelection<Prisma.$ContentImportJobPayload>
+/**
+ * Model ListeningContent
+ * 
+ */
+export type ListeningContent = $Result.DefaultSelection<Prisma.$ListeningContentPayload>
+/**
+ * Model ListeningSegment
+ * 
+ */
+export type ListeningSegment = $Result.DefaultSelection<Prisma.$ListeningSegmentPayload>
+/**
+ * Model UserListeningProgress
+ * 
+ */
+export type UserListeningProgress = $Result.DefaultSelection<Prisma.$UserListeningProgressPayload>
 
 /**
  * Enums
@@ -276,6 +291,14 @@ export const QuestionType: {
 
 export type QuestionType = (typeof QuestionType)[keyof typeof QuestionType]
 
+
+export const ListeningSourceType: {
+  UPLOAD: 'UPLOAD',
+  URL: 'URL'
+};
+
+export type ListeningSourceType = (typeof ListeningSourceType)[keyof typeof ListeningSourceType]
+
 }
 
 export type SubscriptionTier = $Enums.SubscriptionTier
@@ -313,6 +336,10 @@ export const ContentStatus: typeof $Enums.ContentStatus
 export type QuestionType = $Enums.QuestionType
 
 export const QuestionType: typeof $Enums.QuestionType
+
+export type ListeningSourceType = $Enums.ListeningSourceType
+
+export const ListeningSourceType: typeof $Enums.ListeningSourceType
 
 /**
  * ##  Prisma Client ʲˢ
@@ -760,6 +787,36 @@ export class PrismaClient<
     * ```
     */
   get contentImportJob(): Prisma.ContentImportJobDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.listeningContent`: Exposes CRUD operations for the **ListeningContent** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ListeningContents
+    * const listeningContents = await prisma.listeningContent.findMany()
+    * ```
+    */
+  get listeningContent(): Prisma.ListeningContentDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.listeningSegment`: Exposes CRUD operations for the **ListeningSegment** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ListeningSegments
+    * const listeningSegments = await prisma.listeningSegment.findMany()
+    * ```
+    */
+  get listeningSegment(): Prisma.ListeningSegmentDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userListeningProgress`: Exposes CRUD operations for the **UserListeningProgress** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserListeningProgresses
+    * const userListeningProgresses = await prisma.userListeningProgress.findMany()
+    * ```
+    */
+  get userListeningProgress(): Prisma.UserListeningProgressDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -1226,7 +1283,10 @@ export namespace Prisma {
     GeneratedQuestion: 'GeneratedQuestion',
     GeneratedSRSItem: 'GeneratedSRSItem',
     UserContentProgress: 'UserContentProgress',
-    ContentImportJob: 'ContentImportJob'
+    ContentImportJob: 'ContentImportJob',
+    ListeningContent: 'ListeningContent',
+    ListeningSegment: 'ListeningSegment',
+    UserListeningProgress: 'UserListeningProgress'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -1242,7 +1302,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "analyzedVocabulary" | "course" | "lesson" | "placementQuestion" | "lessonNotification" | "placementTestAnswer" | "placementTestAttempt" | "userFlashcard" | "userLessonProgress" | "subscription" | "payment" | "creditTransaction" | "analysis" | "vocabulary" | "wordPack" | "userPackProgress" | "learningStats" | "wordExample" | "analysisCache" | "wordDetailCache" | "translationCache" | "grammarAnalysisCache" | "auditLog" | "topic" | "contentSource" | "contentItem" | "contentSection" | "contentAudio" | "generatedQuestion" | "generatedSRSItem" | "userContentProgress" | "contentImportJob"
+      modelProps: "user" | "analyzedVocabulary" | "course" | "lesson" | "placementQuestion" | "lessonNotification" | "placementTestAnswer" | "placementTestAttempt" | "userFlashcard" | "userLessonProgress" | "subscription" | "payment" | "creditTransaction" | "analysis" | "vocabulary" | "wordPack" | "userPackProgress" | "learningStats" | "wordExample" | "analysisCache" | "wordDetailCache" | "translationCache" | "grammarAnalysisCache" | "auditLog" | "topic" | "contentSource" | "contentItem" | "contentSection" | "contentAudio" | "generatedQuestion" | "generatedSRSItem" | "userContentProgress" | "contentImportJob" | "listeningContent" | "listeningSegment" | "userListeningProgress"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -3688,6 +3748,228 @@ export namespace Prisma {
           }
         }
       }
+      ListeningContent: {
+        payload: Prisma.$ListeningContentPayload<ExtArgs>
+        fields: Prisma.ListeningContentFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ListeningContentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ListeningContentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          findFirst: {
+            args: Prisma.ListeningContentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ListeningContentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          findMany: {
+            args: Prisma.ListeningContentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>[]
+          }
+          create: {
+            args: Prisma.ListeningContentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          createMany: {
+            args: Prisma.ListeningContentCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ListeningContentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>[]
+          }
+          delete: {
+            args: Prisma.ListeningContentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          update: {
+            args: Prisma.ListeningContentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          deleteMany: {
+            args: Prisma.ListeningContentDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ListeningContentUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ListeningContentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>[]
+          }
+          upsert: {
+            args: Prisma.ListeningContentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningContentPayload>
+          }
+          aggregate: {
+            args: Prisma.ListeningContentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateListeningContent>
+          }
+          groupBy: {
+            args: Prisma.ListeningContentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ListeningContentGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ListeningContentCountArgs<ExtArgs>
+            result: $Utils.Optional<ListeningContentCountAggregateOutputType> | number
+          }
+        }
+      }
+      ListeningSegment: {
+        payload: Prisma.$ListeningSegmentPayload<ExtArgs>
+        fields: Prisma.ListeningSegmentFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ListeningSegmentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ListeningSegmentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          findFirst: {
+            args: Prisma.ListeningSegmentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ListeningSegmentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          findMany: {
+            args: Prisma.ListeningSegmentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>[]
+          }
+          create: {
+            args: Prisma.ListeningSegmentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          createMany: {
+            args: Prisma.ListeningSegmentCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ListeningSegmentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>[]
+          }
+          delete: {
+            args: Prisma.ListeningSegmentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          update: {
+            args: Prisma.ListeningSegmentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          deleteMany: {
+            args: Prisma.ListeningSegmentDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ListeningSegmentUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ListeningSegmentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>[]
+          }
+          upsert: {
+            args: Prisma.ListeningSegmentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ListeningSegmentPayload>
+          }
+          aggregate: {
+            args: Prisma.ListeningSegmentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateListeningSegment>
+          }
+          groupBy: {
+            args: Prisma.ListeningSegmentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ListeningSegmentGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ListeningSegmentCountArgs<ExtArgs>
+            result: $Utils.Optional<ListeningSegmentCountAggregateOutputType> | number
+          }
+        }
+      }
+      UserListeningProgress: {
+        payload: Prisma.$UserListeningProgressPayload<ExtArgs>
+        fields: Prisma.UserListeningProgressFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserListeningProgressFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserListeningProgressFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          findFirst: {
+            args: Prisma.UserListeningProgressFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserListeningProgressFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          findMany: {
+            args: Prisma.UserListeningProgressFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>[]
+          }
+          create: {
+            args: Prisma.UserListeningProgressCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          createMany: {
+            args: Prisma.UserListeningProgressCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserListeningProgressCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>[]
+          }
+          delete: {
+            args: Prisma.UserListeningProgressDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          update: {
+            args: Prisma.UserListeningProgressUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserListeningProgressDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserListeningProgressUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserListeningProgressUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserListeningProgressUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserListeningProgressPayload>
+          }
+          aggregate: {
+            args: Prisma.UserListeningProgressAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserListeningProgress>
+          }
+          groupBy: {
+            args: Prisma.UserListeningProgressGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserListeningProgressGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserListeningProgressCountArgs<ExtArgs>
+            result: $Utils.Optional<UserListeningProgressCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -3829,6 +4111,9 @@ export namespace Prisma {
     generatedSRSItem?: GeneratedSRSItemOmit
     userContentProgress?: UserContentProgressOmit
     contentImportJob?: ContentImportJobOmit
+    listeningContent?: ListeningContentOmit
+    listeningSegment?: ListeningSegmentOmit
+    userListeningProgress?: UserListeningProgressOmit
   }
 
   /* Types for Logging */
@@ -3920,6 +4205,7 @@ export namespace Prisma {
     userPackProgress: number
     auditLogs: number
     contentProgress: number
+    listeningProgress: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3934,6 +4220,7 @@ export namespace Prisma {
     userPackProgress?: boolean | UserCountOutputTypeCountUserPackProgressArgs
     auditLogs?: boolean | UserCountOutputTypeCountAuditLogsArgs
     contentProgress?: boolean | UserCountOutputTypeCountContentProgressArgs
+    listeningProgress?: boolean | UserCountOutputTypeCountListeningProgressArgs
   }
 
   // Custom InputTypes
@@ -4022,6 +4309,13 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountContentProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: UserContentProgressWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountListeningProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserListeningProgressWhereInput
   }
 
 
@@ -4124,10 +4418,12 @@ export namespace Prisma {
 
   export type TopicCountOutputType = {
     content: number
+    listeningContent: number
   }
 
   export type TopicCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     content?: boolean | TopicCountOutputTypeCountContentArgs
+    listeningContent?: boolean | TopicCountOutputTypeCountListeningContentArgs
   }
 
   // Custom InputTypes
@@ -4146,6 +4442,13 @@ export namespace Prisma {
    */
   export type TopicCountOutputTypeCountContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ContentItemWhereInput
+  }
+
+  /**
+   * TopicCountOutputType without action
+   */
+  export type TopicCountOutputTypeCountListeningContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ListeningContentWhereInput
   }
 
 
@@ -4244,6 +4547,55 @@ export namespace Prisma {
    */
   export type ContentItemCountOutputTypeCountUserProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: UserContentProgressWhereInput
+  }
+
+
+  /**
+   * Count Type ListeningContentCountOutputType
+   */
+
+  export type ListeningContentCountOutputType = {
+    segments: number
+    questions: number
+    userProgress: number
+  }
+
+  export type ListeningContentCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    segments?: boolean | ListeningContentCountOutputTypeCountSegmentsArgs
+    questions?: boolean | ListeningContentCountOutputTypeCountQuestionsArgs
+    userProgress?: boolean | ListeningContentCountOutputTypeCountUserProgressArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ListeningContentCountOutputType without action
+   */
+  export type ListeningContentCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContentCountOutputType
+     */
+    select?: ListeningContentCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ListeningContentCountOutputType without action
+   */
+  export type ListeningContentCountOutputTypeCountSegmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ListeningSegmentWhereInput
+  }
+
+  /**
+   * ListeningContentCountOutputType without action
+   */
+  export type ListeningContentCountOutputTypeCountQuestionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GeneratedQuestionWhereInput
+  }
+
+  /**
+   * ListeningContentCountOutputType without action
+   */
+  export type ListeningContentCountOutputTypeCountUserProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserListeningProgressWhereInput
   }
 
 
@@ -4649,6 +5001,7 @@ export namespace Prisma {
     learningStats?: boolean | User$learningStatsArgs<ExtArgs>
     auditLogs?: boolean | User$auditLogsArgs<ExtArgs>
     contentProgress?: boolean | User$contentProgressArgs<ExtArgs>
+    listeningProgress?: boolean | User$listeningProgressArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -4756,6 +5109,7 @@ export namespace Prisma {
     learningStats?: boolean | User$learningStatsArgs<ExtArgs>
     auditLogs?: boolean | User$auditLogsArgs<ExtArgs>
     contentProgress?: boolean | User$contentProgressArgs<ExtArgs>
+    listeningProgress?: boolean | User$listeningProgressArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -4776,6 +5130,7 @@ export namespace Prisma {
       learningStats: Prisma.$LearningStatsPayload<ExtArgs> | null
       auditLogs: Prisma.$AuditLogPayload<ExtArgs>[]
       contentProgress: Prisma.$UserContentProgressPayload<ExtArgs>[]
+      listeningProgress: Prisma.$UserListeningProgressPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -5211,6 +5566,7 @@ export namespace Prisma {
     learningStats<T extends User$learningStatsArgs<ExtArgs> = {}>(args?: Subset<T, User$learningStatsArgs<ExtArgs>>): Prisma__LearningStatsClient<$Result.GetResult<Prisma.$LearningStatsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     auditLogs<T extends User$auditLogsArgs<ExtArgs> = {}>(args?: Subset<T, User$auditLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     contentProgress<T extends User$contentProgressArgs<ExtArgs> = {}>(args?: Subset<T, User$contentProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserContentProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    listeningProgress<T extends User$listeningProgressArgs<ExtArgs> = {}>(args?: Subset<T, User$listeningProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5935,6 +6291,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: UserContentProgressScalarFieldEnum | UserContentProgressScalarFieldEnum[]
+  }
+
+  /**
+   * User.listeningProgress
+   */
+  export type User$listeningProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    where?: UserListeningProgressWhereInput
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    cursor?: UserListeningProgressWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: UserListeningProgressScalarFieldEnum | UserListeningProgressScalarFieldEnum[]
   }
 
   /**
@@ -32065,6 +32445,7 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     content?: boolean | Topic$contentArgs<ExtArgs>
+    listeningContent?: boolean | Topic$listeningContentArgs<ExtArgs>
     _count?: boolean | TopicCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["topic"]>
 
@@ -32104,6 +32485,7 @@ export namespace Prisma {
   export type TopicOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "nameZh" | "nameJa" | "icon" | "sortOrder" | "createdAt" | "updatedAt", ExtArgs["result"]["topic"]>
   export type TopicInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     content?: boolean | Topic$contentArgs<ExtArgs>
+    listeningContent?: boolean | Topic$listeningContentArgs<ExtArgs>
     _count?: boolean | TopicCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type TopicIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -32113,6 +32495,7 @@ export namespace Prisma {
     name: "Topic"
     objects: {
       content: Prisma.$ContentItemPayload<ExtArgs>[]
+      listeningContent: Prisma.$ListeningContentPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -32518,6 +32901,7 @@ export namespace Prisma {
   export interface Prisma__TopicClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     content<T extends Topic$contentArgs<ExtArgs> = {}>(args?: Subset<T, Topic$contentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    listeningContent<T extends Topic$listeningContentArgs<ExtArgs> = {}>(args?: Subset<T, Topic$listeningContentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -32964,6 +33348,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * Topic.listeningContent
+   */
+  export type Topic$listeningContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    where?: ListeningContentWhereInput
+    orderBy?: ListeningContentOrderByWithRelationInput | ListeningContentOrderByWithRelationInput[]
+    cursor?: ListeningContentWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ListeningContentScalarFieldEnum | ListeningContentScalarFieldEnum[]
   }
 
   /**
@@ -37855,6 +38263,7 @@ export namespace Prisma {
   export type GeneratedQuestionMinAggregateOutputType = {
     id: string | null
     contentItemId: string | null
+    listeningContentId: string | null
     type: $Enums.QuestionType | null
     prompt: string | null
     answer: string | null
@@ -37866,6 +38275,7 @@ export namespace Prisma {
   export type GeneratedQuestionMaxAggregateOutputType = {
     id: string | null
     contentItemId: string | null
+    listeningContentId: string | null
     type: $Enums.QuestionType | null
     prompt: string | null
     answer: string | null
@@ -37877,6 +38287,7 @@ export namespace Prisma {
   export type GeneratedQuestionCountAggregateOutputType = {
     id: number
     contentItemId: number
+    listeningContentId: number
     type: number
     prompt: number
     options: number
@@ -37884,6 +38295,7 @@ export namespace Prisma {
     explanation: number
     explanationWrong: number
     jlptLevel: number
+    audioClip: number
     createdAt: number
     _all: number
   }
@@ -37892,6 +38304,7 @@ export namespace Prisma {
   export type GeneratedQuestionMinAggregateInputType = {
     id?: true
     contentItemId?: true
+    listeningContentId?: true
     type?: true
     prompt?: true
     answer?: true
@@ -37903,6 +38316,7 @@ export namespace Prisma {
   export type GeneratedQuestionMaxAggregateInputType = {
     id?: true
     contentItemId?: true
+    listeningContentId?: true
     type?: true
     prompt?: true
     answer?: true
@@ -37914,6 +38328,7 @@ export namespace Prisma {
   export type GeneratedQuestionCountAggregateInputType = {
     id?: true
     contentItemId?: true
+    listeningContentId?: true
     type?: true
     prompt?: true
     options?: true
@@ -37921,6 +38336,7 @@ export namespace Prisma {
     explanation?: true
     explanationWrong?: true
     jlptLevel?: true
+    audioClip?: true
     createdAt?: true
     _all?: true
   }
@@ -37999,7 +38415,8 @@ export namespace Prisma {
 
   export type GeneratedQuestionGroupByOutputType = {
     id: string
-    contentItemId: string
+    contentItemId: string | null
+    listeningContentId: string | null
     type: $Enums.QuestionType
     prompt: string
     options: JsonValue | null
@@ -38007,6 +38424,7 @@ export namespace Prisma {
     explanation: string
     explanationWrong: JsonValue | null
     jlptLevel: string | null
+    audioClip: JsonValue | null
     createdAt: Date
     _count: GeneratedQuestionCountAggregateOutputType | null
     _min: GeneratedQuestionMinAggregateOutputType | null
@@ -38030,6 +38448,7 @@ export namespace Prisma {
   export type GeneratedQuestionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     contentItemId?: boolean
+    listeningContentId?: boolean
     type?: boolean
     prompt?: boolean
     options?: boolean
@@ -38037,13 +38456,16 @@ export namespace Prisma {
     explanation?: boolean
     explanationWrong?: boolean
     jlptLevel?: boolean
+    audioClip?: boolean
     createdAt?: boolean
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }, ExtArgs["result"]["generatedQuestion"]>
 
   export type GeneratedQuestionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     contentItemId?: boolean
+    listeningContentId?: boolean
     type?: boolean
     prompt?: boolean
     options?: boolean
@@ -38051,13 +38473,16 @@ export namespace Prisma {
     explanation?: boolean
     explanationWrong?: boolean
     jlptLevel?: boolean
+    audioClip?: boolean
     createdAt?: boolean
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }, ExtArgs["result"]["generatedQuestion"]>
 
   export type GeneratedQuestionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     contentItemId?: boolean
+    listeningContentId?: boolean
     type?: boolean
     prompt?: boolean
     options?: boolean
@@ -38065,13 +38490,16 @@ export namespace Prisma {
     explanation?: boolean
     explanationWrong?: boolean
     jlptLevel?: boolean
+    audioClip?: boolean
     createdAt?: boolean
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }, ExtArgs["result"]["generatedQuestion"]>
 
   export type GeneratedQuestionSelectScalar = {
     id?: boolean
     contentItemId?: boolean
+    listeningContentId?: boolean
     type?: boolean
     prompt?: boolean
     options?: boolean
@@ -38079,28 +38507,34 @@ export namespace Prisma {
     explanation?: boolean
     explanationWrong?: boolean
     jlptLevel?: boolean
+    audioClip?: boolean
     createdAt?: boolean
   }
 
-  export type GeneratedQuestionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "type" | "prompt" | "options" | "answer" | "explanation" | "explanationWrong" | "jlptLevel" | "createdAt", ExtArgs["result"]["generatedQuestion"]>
+  export type GeneratedQuestionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "contentItemId" | "listeningContentId" | "type" | "prompt" | "options" | "answer" | "explanation" | "explanationWrong" | "jlptLevel" | "audioClip" | "createdAt", ExtArgs["result"]["generatedQuestion"]>
   export type GeneratedQuestionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }
   export type GeneratedQuestionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }
   export type GeneratedQuestionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    contentItem?: boolean | ContentItemDefaultArgs<ExtArgs>
+    contentItem?: boolean | GeneratedQuestion$contentItemArgs<ExtArgs>
+    listeningContent?: boolean | GeneratedQuestion$listeningContentArgs<ExtArgs>
   }
 
   export type $GeneratedQuestionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "GeneratedQuestion"
     objects: {
-      contentItem: Prisma.$ContentItemPayload<ExtArgs>
+      contentItem: Prisma.$ContentItemPayload<ExtArgs> | null
+      listeningContent: Prisma.$ListeningContentPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      contentItemId: string
+      contentItemId: string | null
+      listeningContentId: string | null
       type: $Enums.QuestionType
       prompt: string
       options: Prisma.JsonValue | null
@@ -38108,6 +38542,7 @@ export namespace Prisma {
       explanation: string
       explanationWrong: Prisma.JsonValue | null
       jlptLevel: string | null
+      audioClip: Prisma.JsonValue | null
       createdAt: Date
     }, ExtArgs["result"]["generatedQuestion"]>
     composites: {}
@@ -38503,7 +38938,8 @@ export namespace Prisma {
    */
   export interface Prisma__GeneratedQuestionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    contentItem<T extends ContentItemDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ContentItemDefaultArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    contentItem<T extends GeneratedQuestion$contentItemArgs<ExtArgs> = {}>(args?: Subset<T, GeneratedQuestion$contentItemArgs<ExtArgs>>): Prisma__ContentItemClient<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    listeningContent<T extends GeneratedQuestion$listeningContentArgs<ExtArgs> = {}>(args?: Subset<T, GeneratedQuestion$listeningContentArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -38535,6 +38971,7 @@ export namespace Prisma {
   interface GeneratedQuestionFieldRefs {
     readonly id: FieldRef<"GeneratedQuestion", 'String'>
     readonly contentItemId: FieldRef<"GeneratedQuestion", 'String'>
+    readonly listeningContentId: FieldRef<"GeneratedQuestion", 'String'>
     readonly type: FieldRef<"GeneratedQuestion", 'QuestionType'>
     readonly prompt: FieldRef<"GeneratedQuestion", 'String'>
     readonly options: FieldRef<"GeneratedQuestion", 'Json'>
@@ -38542,6 +38979,7 @@ export namespace Prisma {
     readonly explanation: FieldRef<"GeneratedQuestion", 'String'>
     readonly explanationWrong: FieldRef<"GeneratedQuestion", 'Json'>
     readonly jlptLevel: FieldRef<"GeneratedQuestion", 'String'>
+    readonly audioClip: FieldRef<"GeneratedQuestion", 'Json'>
     readonly createdAt: FieldRef<"GeneratedQuestion", 'DateTime'>
   }
     
@@ -38936,6 +39374,44 @@ export namespace Prisma {
      * Limit how many GeneratedQuestions to delete.
      */
     limit?: number
+  }
+
+  /**
+   * GeneratedQuestion.contentItem
+   */
+  export type GeneratedQuestion$contentItemArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    where?: ContentItemWhereInput
+  }
+
+  /**
+   * GeneratedQuestion.listeningContent
+   */
+  export type GeneratedQuestion$listeningContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    where?: ListeningContentWhereInput
   }
 
   /**
@@ -42412,6 +42888,3662 @@ export namespace Prisma {
 
 
   /**
+   * Model ListeningContent
+   */
+
+  export type AggregateListeningContent = {
+    _count: ListeningContentCountAggregateOutputType | null
+    _avg: ListeningContentAvgAggregateOutputType | null
+    _sum: ListeningContentSumAggregateOutputType | null
+    _min: ListeningContentMinAggregateOutputType | null
+    _max: ListeningContentMaxAggregateOutputType | null
+  }
+
+  export type ListeningContentAvgAggregateOutputType = {
+    duration: number | null
+  }
+
+  export type ListeningContentSumAggregateOutputType = {
+    duration: number | null
+  }
+
+  export type ListeningContentMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    titleZh: string | null
+    description: string | null
+    descriptionZh: string | null
+    imageUrl: string | null
+    sourceType: $Enums.ListeningSourceType | null
+    audioUrl: string | null
+    audioS3Key: string | null
+    duration: number | null
+    transcript: string | null
+    topicId: string | null
+    jlptLevel: string | null
+    status: $Enums.ContentStatus | null
+    publishedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ListeningContentMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    titleZh: string | null
+    description: string | null
+    descriptionZh: string | null
+    imageUrl: string | null
+    sourceType: $Enums.ListeningSourceType | null
+    audioUrl: string | null
+    audioS3Key: string | null
+    duration: number | null
+    transcript: string | null
+    topicId: string | null
+    jlptLevel: string | null
+    status: $Enums.ContentStatus | null
+    publishedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ListeningContentCountAggregateOutputType = {
+    id: number
+    title: number
+    titleZh: number
+    description: number
+    descriptionZh: number
+    imageUrl: number
+    sourceType: number
+    audioUrl: number
+    audioS3Key: number
+    duration: number
+    transcript: number
+    topicId: number
+    jlptLevel: number
+    status: number
+    publishedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ListeningContentAvgAggregateInputType = {
+    duration?: true
+  }
+
+  export type ListeningContentSumAggregateInputType = {
+    duration?: true
+  }
+
+  export type ListeningContentMinAggregateInputType = {
+    id?: true
+    title?: true
+    titleZh?: true
+    description?: true
+    descriptionZh?: true
+    imageUrl?: true
+    sourceType?: true
+    audioUrl?: true
+    audioS3Key?: true
+    duration?: true
+    transcript?: true
+    topicId?: true
+    jlptLevel?: true
+    status?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ListeningContentMaxAggregateInputType = {
+    id?: true
+    title?: true
+    titleZh?: true
+    description?: true
+    descriptionZh?: true
+    imageUrl?: true
+    sourceType?: true
+    audioUrl?: true
+    audioS3Key?: true
+    duration?: true
+    transcript?: true
+    topicId?: true
+    jlptLevel?: true
+    status?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ListeningContentCountAggregateInputType = {
+    id?: true
+    title?: true
+    titleZh?: true
+    description?: true
+    descriptionZh?: true
+    imageUrl?: true
+    sourceType?: true
+    audioUrl?: true
+    audioS3Key?: true
+    duration?: true
+    transcript?: true
+    topicId?: true
+    jlptLevel?: true
+    status?: true
+    publishedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ListeningContentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ListeningContent to aggregate.
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningContents to fetch.
+     */
+    orderBy?: ListeningContentOrderByWithRelationInput | ListeningContentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ListeningContentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningContents from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningContents.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ListeningContents
+    **/
+    _count?: true | ListeningContentCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ListeningContentAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ListeningContentSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ListeningContentMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ListeningContentMaxAggregateInputType
+  }
+
+  export type GetListeningContentAggregateType<T extends ListeningContentAggregateArgs> = {
+        [P in keyof T & keyof AggregateListeningContent]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateListeningContent[P]>
+      : GetScalarType<T[P], AggregateListeningContent[P]>
+  }
+
+
+
+
+  export type ListeningContentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ListeningContentWhereInput
+    orderBy?: ListeningContentOrderByWithAggregationInput | ListeningContentOrderByWithAggregationInput[]
+    by: ListeningContentScalarFieldEnum[] | ListeningContentScalarFieldEnum
+    having?: ListeningContentScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ListeningContentCountAggregateInputType | true
+    _avg?: ListeningContentAvgAggregateInputType
+    _sum?: ListeningContentSumAggregateInputType
+    _min?: ListeningContentMinAggregateInputType
+    _max?: ListeningContentMaxAggregateInputType
+  }
+
+  export type ListeningContentGroupByOutputType = {
+    id: string
+    title: string
+    titleZh: string
+    description: string | null
+    descriptionZh: string | null
+    imageUrl: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl: string
+    audioS3Key: string | null
+    duration: number | null
+    transcript: string
+    topicId: string | null
+    jlptLevel: string
+    status: $Enums.ContentStatus
+    publishedAt: Date | null
+    createdAt: Date
+    updatedAt: Date
+    _count: ListeningContentCountAggregateOutputType | null
+    _avg: ListeningContentAvgAggregateOutputType | null
+    _sum: ListeningContentSumAggregateOutputType | null
+    _min: ListeningContentMinAggregateOutputType | null
+    _max: ListeningContentMaxAggregateOutputType | null
+  }
+
+  type GetListeningContentGroupByPayload<T extends ListeningContentGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ListeningContentGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ListeningContentGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ListeningContentGroupByOutputType[P]>
+            : GetScalarType<T[P], ListeningContentGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ListeningContentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    titleZh?: boolean
+    description?: boolean
+    descriptionZh?: boolean
+    imageUrl?: boolean
+    sourceType?: boolean
+    audioUrl?: boolean
+    audioS3Key?: boolean
+    duration?: boolean
+    transcript?: boolean
+    topicId?: boolean
+    jlptLevel?: boolean
+    status?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+    segments?: boolean | ListeningContent$segmentsArgs<ExtArgs>
+    questions?: boolean | ListeningContent$questionsArgs<ExtArgs>
+    userProgress?: boolean | ListeningContent$userProgressArgs<ExtArgs>
+    _count?: boolean | ListeningContentCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningContent"]>
+
+  export type ListeningContentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    titleZh?: boolean
+    description?: boolean
+    descriptionZh?: boolean
+    imageUrl?: boolean
+    sourceType?: boolean
+    audioUrl?: boolean
+    audioS3Key?: boolean
+    duration?: boolean
+    transcript?: boolean
+    topicId?: boolean
+    jlptLevel?: boolean
+    status?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningContent"]>
+
+  export type ListeningContentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    titleZh?: boolean
+    description?: boolean
+    descriptionZh?: boolean
+    imageUrl?: boolean
+    sourceType?: boolean
+    audioUrl?: boolean
+    audioS3Key?: boolean
+    duration?: boolean
+    transcript?: boolean
+    topicId?: boolean
+    jlptLevel?: boolean
+    status?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningContent"]>
+
+  export type ListeningContentSelectScalar = {
+    id?: boolean
+    title?: boolean
+    titleZh?: boolean
+    description?: boolean
+    descriptionZh?: boolean
+    imageUrl?: boolean
+    sourceType?: boolean
+    audioUrl?: boolean
+    audioS3Key?: boolean
+    duration?: boolean
+    transcript?: boolean
+    topicId?: boolean
+    jlptLevel?: boolean
+    status?: boolean
+    publishedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ListeningContentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "titleZh" | "description" | "descriptionZh" | "imageUrl" | "sourceType" | "audioUrl" | "audioS3Key" | "duration" | "transcript" | "topicId" | "jlptLevel" | "status" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["listeningContent"]>
+  export type ListeningContentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+    segments?: boolean | ListeningContent$segmentsArgs<ExtArgs>
+    questions?: boolean | ListeningContent$questionsArgs<ExtArgs>
+    userProgress?: boolean | ListeningContent$userProgressArgs<ExtArgs>
+    _count?: boolean | ListeningContentCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ListeningContentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+  }
+  export type ListeningContentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    topic?: boolean | ListeningContent$topicArgs<ExtArgs>
+  }
+
+  export type $ListeningContentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ListeningContent"
+    objects: {
+      topic: Prisma.$TopicPayload<ExtArgs> | null
+      segments: Prisma.$ListeningSegmentPayload<ExtArgs>[]
+      questions: Prisma.$GeneratedQuestionPayload<ExtArgs>[]
+      userProgress: Prisma.$UserListeningProgressPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      titleZh: string
+      description: string | null
+      descriptionZh: string | null
+      imageUrl: string | null
+      sourceType: $Enums.ListeningSourceType
+      audioUrl: string
+      audioS3Key: string | null
+      duration: number | null
+      transcript: string
+      topicId: string | null
+      jlptLevel: string
+      status: $Enums.ContentStatus
+      publishedAt: Date | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["listeningContent"]>
+    composites: {}
+  }
+
+  type ListeningContentGetPayload<S extends boolean | null | undefined | ListeningContentDefaultArgs> = $Result.GetResult<Prisma.$ListeningContentPayload, S>
+
+  type ListeningContentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ListeningContentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ListeningContentCountAggregateInputType | true
+    }
+
+  export interface ListeningContentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ListeningContent'], meta: { name: 'ListeningContent' } }
+    /**
+     * Find zero or one ListeningContent that matches the filter.
+     * @param {ListeningContentFindUniqueArgs} args - Arguments to find a ListeningContent
+     * @example
+     * // Get one ListeningContent
+     * const listeningContent = await prisma.listeningContent.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ListeningContentFindUniqueArgs>(args: SelectSubset<T, ListeningContentFindUniqueArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ListeningContent that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ListeningContentFindUniqueOrThrowArgs} args - Arguments to find a ListeningContent
+     * @example
+     * // Get one ListeningContent
+     * const listeningContent = await prisma.listeningContent.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ListeningContentFindUniqueOrThrowArgs>(args: SelectSubset<T, ListeningContentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ListeningContent that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentFindFirstArgs} args - Arguments to find a ListeningContent
+     * @example
+     * // Get one ListeningContent
+     * const listeningContent = await prisma.listeningContent.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ListeningContentFindFirstArgs>(args?: SelectSubset<T, ListeningContentFindFirstArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ListeningContent that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentFindFirstOrThrowArgs} args - Arguments to find a ListeningContent
+     * @example
+     * // Get one ListeningContent
+     * const listeningContent = await prisma.listeningContent.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ListeningContentFindFirstOrThrowArgs>(args?: SelectSubset<T, ListeningContentFindFirstOrThrowArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ListeningContents that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ListeningContents
+     * const listeningContents = await prisma.listeningContent.findMany()
+     * 
+     * // Get first 10 ListeningContents
+     * const listeningContents = await prisma.listeningContent.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const listeningContentWithIdOnly = await prisma.listeningContent.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ListeningContentFindManyArgs>(args?: SelectSubset<T, ListeningContentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ListeningContent.
+     * @param {ListeningContentCreateArgs} args - Arguments to create a ListeningContent.
+     * @example
+     * // Create one ListeningContent
+     * const ListeningContent = await prisma.listeningContent.create({
+     *   data: {
+     *     // ... data to create a ListeningContent
+     *   }
+     * })
+     * 
+     */
+    create<T extends ListeningContentCreateArgs>(args: SelectSubset<T, ListeningContentCreateArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ListeningContents.
+     * @param {ListeningContentCreateManyArgs} args - Arguments to create many ListeningContents.
+     * @example
+     * // Create many ListeningContents
+     * const listeningContent = await prisma.listeningContent.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ListeningContentCreateManyArgs>(args?: SelectSubset<T, ListeningContentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ListeningContents and returns the data saved in the database.
+     * @param {ListeningContentCreateManyAndReturnArgs} args - Arguments to create many ListeningContents.
+     * @example
+     * // Create many ListeningContents
+     * const listeningContent = await prisma.listeningContent.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ListeningContents and only return the `id`
+     * const listeningContentWithIdOnly = await prisma.listeningContent.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ListeningContentCreateManyAndReturnArgs>(args?: SelectSubset<T, ListeningContentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ListeningContent.
+     * @param {ListeningContentDeleteArgs} args - Arguments to delete one ListeningContent.
+     * @example
+     * // Delete one ListeningContent
+     * const ListeningContent = await prisma.listeningContent.delete({
+     *   where: {
+     *     // ... filter to delete one ListeningContent
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ListeningContentDeleteArgs>(args: SelectSubset<T, ListeningContentDeleteArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ListeningContent.
+     * @param {ListeningContentUpdateArgs} args - Arguments to update one ListeningContent.
+     * @example
+     * // Update one ListeningContent
+     * const listeningContent = await prisma.listeningContent.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ListeningContentUpdateArgs>(args: SelectSubset<T, ListeningContentUpdateArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ListeningContents.
+     * @param {ListeningContentDeleteManyArgs} args - Arguments to filter ListeningContents to delete.
+     * @example
+     * // Delete a few ListeningContents
+     * const { count } = await prisma.listeningContent.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ListeningContentDeleteManyArgs>(args?: SelectSubset<T, ListeningContentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ListeningContents.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ListeningContents
+     * const listeningContent = await prisma.listeningContent.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ListeningContentUpdateManyArgs>(args: SelectSubset<T, ListeningContentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ListeningContents and returns the data updated in the database.
+     * @param {ListeningContentUpdateManyAndReturnArgs} args - Arguments to update many ListeningContents.
+     * @example
+     * // Update many ListeningContents
+     * const listeningContent = await prisma.listeningContent.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ListeningContents and only return the `id`
+     * const listeningContentWithIdOnly = await prisma.listeningContent.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ListeningContentUpdateManyAndReturnArgs>(args: SelectSubset<T, ListeningContentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ListeningContent.
+     * @param {ListeningContentUpsertArgs} args - Arguments to update or create a ListeningContent.
+     * @example
+     * // Update or create a ListeningContent
+     * const listeningContent = await prisma.listeningContent.upsert({
+     *   create: {
+     *     // ... data to create a ListeningContent
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ListeningContent we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ListeningContentUpsertArgs>(args: SelectSubset<T, ListeningContentUpsertArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ListeningContents.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentCountArgs} args - Arguments to filter ListeningContents to count.
+     * @example
+     * // Count the number of ListeningContents
+     * const count = await prisma.listeningContent.count({
+     *   where: {
+     *     // ... the filter for the ListeningContents we want to count
+     *   }
+     * })
+    **/
+    count<T extends ListeningContentCountArgs>(
+      args?: Subset<T, ListeningContentCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ListeningContentCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ListeningContent.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ListeningContentAggregateArgs>(args: Subset<T, ListeningContentAggregateArgs>): Prisma.PrismaPromise<GetListeningContentAggregateType<T>>
+
+    /**
+     * Group by ListeningContent.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningContentGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ListeningContentGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ListeningContentGroupByArgs['orderBy'] }
+        : { orderBy?: ListeningContentGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ListeningContentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetListeningContentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ListeningContent model
+   */
+  readonly fields: ListeningContentFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ListeningContent.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ListeningContentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    topic<T extends ListeningContent$topicArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContent$topicArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    segments<T extends ListeningContent$segmentsArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContent$segmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    questions<T extends ListeningContent$questionsArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContent$questionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    userProgress<T extends ListeningContent$userProgressArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContent$userProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ListeningContent model
+   */
+  interface ListeningContentFieldRefs {
+    readonly id: FieldRef<"ListeningContent", 'String'>
+    readonly title: FieldRef<"ListeningContent", 'String'>
+    readonly titleZh: FieldRef<"ListeningContent", 'String'>
+    readonly description: FieldRef<"ListeningContent", 'String'>
+    readonly descriptionZh: FieldRef<"ListeningContent", 'String'>
+    readonly imageUrl: FieldRef<"ListeningContent", 'String'>
+    readonly sourceType: FieldRef<"ListeningContent", 'ListeningSourceType'>
+    readonly audioUrl: FieldRef<"ListeningContent", 'String'>
+    readonly audioS3Key: FieldRef<"ListeningContent", 'String'>
+    readonly duration: FieldRef<"ListeningContent", 'Int'>
+    readonly transcript: FieldRef<"ListeningContent", 'String'>
+    readonly topicId: FieldRef<"ListeningContent", 'String'>
+    readonly jlptLevel: FieldRef<"ListeningContent", 'String'>
+    readonly status: FieldRef<"ListeningContent", 'ContentStatus'>
+    readonly publishedAt: FieldRef<"ListeningContent", 'DateTime'>
+    readonly createdAt: FieldRef<"ListeningContent", 'DateTime'>
+    readonly updatedAt: FieldRef<"ListeningContent", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ListeningContent findUnique
+   */
+  export type ListeningContentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningContent to fetch.
+     */
+    where: ListeningContentWhereUniqueInput
+  }
+
+  /**
+   * ListeningContent findUniqueOrThrow
+   */
+  export type ListeningContentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningContent to fetch.
+     */
+    where: ListeningContentWhereUniqueInput
+  }
+
+  /**
+   * ListeningContent findFirst
+   */
+  export type ListeningContentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningContent to fetch.
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningContents to fetch.
+     */
+    orderBy?: ListeningContentOrderByWithRelationInput | ListeningContentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ListeningContents.
+     */
+    cursor?: ListeningContentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningContents from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningContents.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ListeningContents.
+     */
+    distinct?: ListeningContentScalarFieldEnum | ListeningContentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent findFirstOrThrow
+   */
+  export type ListeningContentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningContent to fetch.
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningContents to fetch.
+     */
+    orderBy?: ListeningContentOrderByWithRelationInput | ListeningContentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ListeningContents.
+     */
+    cursor?: ListeningContentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningContents from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningContents.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ListeningContents.
+     */
+    distinct?: ListeningContentScalarFieldEnum | ListeningContentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent findMany
+   */
+  export type ListeningContentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningContents to fetch.
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningContents to fetch.
+     */
+    orderBy?: ListeningContentOrderByWithRelationInput | ListeningContentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ListeningContents.
+     */
+    cursor?: ListeningContentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningContents from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningContents.
+     */
+    skip?: number
+    distinct?: ListeningContentScalarFieldEnum | ListeningContentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent create
+   */
+  export type ListeningContentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ListeningContent.
+     */
+    data: XOR<ListeningContentCreateInput, ListeningContentUncheckedCreateInput>
+  }
+
+  /**
+   * ListeningContent createMany
+   */
+  export type ListeningContentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ListeningContents.
+     */
+    data: ListeningContentCreateManyInput | ListeningContentCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ListeningContent createManyAndReturn
+   */
+  export type ListeningContentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * The data used to create many ListeningContents.
+     */
+    data: ListeningContentCreateManyInput | ListeningContentCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ListeningContent update
+   */
+  export type ListeningContentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ListeningContent.
+     */
+    data: XOR<ListeningContentUpdateInput, ListeningContentUncheckedUpdateInput>
+    /**
+     * Choose, which ListeningContent to update.
+     */
+    where: ListeningContentWhereUniqueInput
+  }
+
+  /**
+   * ListeningContent updateMany
+   */
+  export type ListeningContentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ListeningContents.
+     */
+    data: XOR<ListeningContentUpdateManyMutationInput, ListeningContentUncheckedUpdateManyInput>
+    /**
+     * Filter which ListeningContents to update
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * Limit how many ListeningContents to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ListeningContent updateManyAndReturn
+   */
+  export type ListeningContentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * The data used to update ListeningContents.
+     */
+    data: XOR<ListeningContentUpdateManyMutationInput, ListeningContentUncheckedUpdateManyInput>
+    /**
+     * Filter which ListeningContents to update
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * Limit how many ListeningContents to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ListeningContent upsert
+   */
+  export type ListeningContentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ListeningContent to update in case it exists.
+     */
+    where: ListeningContentWhereUniqueInput
+    /**
+     * In case the ListeningContent found by the `where` argument doesn't exist, create a new ListeningContent with this data.
+     */
+    create: XOR<ListeningContentCreateInput, ListeningContentUncheckedCreateInput>
+    /**
+     * In case the ListeningContent was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ListeningContentUpdateInput, ListeningContentUncheckedUpdateInput>
+  }
+
+  /**
+   * ListeningContent delete
+   */
+  export type ListeningContentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+    /**
+     * Filter which ListeningContent to delete.
+     */
+    where: ListeningContentWhereUniqueInput
+  }
+
+  /**
+   * ListeningContent deleteMany
+   */
+  export type ListeningContentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ListeningContents to delete
+     */
+    where?: ListeningContentWhereInput
+    /**
+     * Limit how many ListeningContents to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ListeningContent.topic
+   */
+  export type ListeningContent$topicArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Topic
+     */
+    select?: TopicSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Topic
+     */
+    omit?: TopicOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TopicInclude<ExtArgs> | null
+    where?: TopicWhereInput
+  }
+
+  /**
+   * ListeningContent.segments
+   */
+  export type ListeningContent$segmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    where?: ListeningSegmentWhereInput
+    orderBy?: ListeningSegmentOrderByWithRelationInput | ListeningSegmentOrderByWithRelationInput[]
+    cursor?: ListeningSegmentWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ListeningSegmentScalarFieldEnum | ListeningSegmentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent.questions
+   */
+  export type ListeningContent$questionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GeneratedQuestion
+     */
+    select?: GeneratedQuestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GeneratedQuestion
+     */
+    omit?: GeneratedQuestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GeneratedQuestionInclude<ExtArgs> | null
+    where?: GeneratedQuestionWhereInput
+    orderBy?: GeneratedQuestionOrderByWithRelationInput | GeneratedQuestionOrderByWithRelationInput[]
+    cursor?: GeneratedQuestionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GeneratedQuestionScalarFieldEnum | GeneratedQuestionScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent.userProgress
+   */
+  export type ListeningContent$userProgressArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    where?: UserListeningProgressWhereInput
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    cursor?: UserListeningProgressWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: UserListeningProgressScalarFieldEnum | UserListeningProgressScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningContent without action
+   */
+  export type ListeningContentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningContent
+     */
+    select?: ListeningContentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningContent
+     */
+    omit?: ListeningContentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningContentInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ListeningSegment
+   */
+
+  export type AggregateListeningSegment = {
+    _count: ListeningSegmentCountAggregateOutputType | null
+    _avg: ListeningSegmentAvgAggregateOutputType | null
+    _sum: ListeningSegmentSumAggregateOutputType | null
+    _min: ListeningSegmentMinAggregateOutputType | null
+    _max: ListeningSegmentMaxAggregateOutputType | null
+  }
+
+  export type ListeningSegmentAvgAggregateOutputType = {
+    orderIndex: number | null
+    startTime: number | null
+    endTime: number | null
+  }
+
+  export type ListeningSegmentSumAggregateOutputType = {
+    orderIndex: number | null
+    startTime: number | null
+    endTime: number | null
+  }
+
+  export type ListeningSegmentMinAggregateOutputType = {
+    id: string | null
+    listeningContentId: string | null
+    orderIndex: number | null
+    text: string | null
+    translationZh: string | null
+    startTime: number | null
+    endTime: number | null
+  }
+
+  export type ListeningSegmentMaxAggregateOutputType = {
+    id: string | null
+    listeningContentId: string | null
+    orderIndex: number | null
+    text: string | null
+    translationZh: string | null
+    startTime: number | null
+    endTime: number | null
+  }
+
+  export type ListeningSegmentCountAggregateOutputType = {
+    id: number
+    listeningContentId: number
+    orderIndex: number
+    text: number
+    translationZh: number
+    startTime: number
+    endTime: number
+    _all: number
+  }
+
+
+  export type ListeningSegmentAvgAggregateInputType = {
+    orderIndex?: true
+    startTime?: true
+    endTime?: true
+  }
+
+  export type ListeningSegmentSumAggregateInputType = {
+    orderIndex?: true
+    startTime?: true
+    endTime?: true
+  }
+
+  export type ListeningSegmentMinAggregateInputType = {
+    id?: true
+    listeningContentId?: true
+    orderIndex?: true
+    text?: true
+    translationZh?: true
+    startTime?: true
+    endTime?: true
+  }
+
+  export type ListeningSegmentMaxAggregateInputType = {
+    id?: true
+    listeningContentId?: true
+    orderIndex?: true
+    text?: true
+    translationZh?: true
+    startTime?: true
+    endTime?: true
+  }
+
+  export type ListeningSegmentCountAggregateInputType = {
+    id?: true
+    listeningContentId?: true
+    orderIndex?: true
+    text?: true
+    translationZh?: true
+    startTime?: true
+    endTime?: true
+    _all?: true
+  }
+
+  export type ListeningSegmentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ListeningSegment to aggregate.
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningSegments to fetch.
+     */
+    orderBy?: ListeningSegmentOrderByWithRelationInput | ListeningSegmentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ListeningSegmentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningSegments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningSegments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ListeningSegments
+    **/
+    _count?: true | ListeningSegmentCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ListeningSegmentAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ListeningSegmentSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ListeningSegmentMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ListeningSegmentMaxAggregateInputType
+  }
+
+  export type GetListeningSegmentAggregateType<T extends ListeningSegmentAggregateArgs> = {
+        [P in keyof T & keyof AggregateListeningSegment]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateListeningSegment[P]>
+      : GetScalarType<T[P], AggregateListeningSegment[P]>
+  }
+
+
+
+
+  export type ListeningSegmentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ListeningSegmentWhereInput
+    orderBy?: ListeningSegmentOrderByWithAggregationInput | ListeningSegmentOrderByWithAggregationInput[]
+    by: ListeningSegmentScalarFieldEnum[] | ListeningSegmentScalarFieldEnum
+    having?: ListeningSegmentScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ListeningSegmentCountAggregateInputType | true
+    _avg?: ListeningSegmentAvgAggregateInputType
+    _sum?: ListeningSegmentSumAggregateInputType
+    _min?: ListeningSegmentMinAggregateInputType
+    _max?: ListeningSegmentMaxAggregateInputType
+  }
+
+  export type ListeningSegmentGroupByOutputType = {
+    id: string
+    listeningContentId: string
+    orderIndex: number
+    text: string
+    translationZh: string | null
+    startTime: number
+    endTime: number
+    _count: ListeningSegmentCountAggregateOutputType | null
+    _avg: ListeningSegmentAvgAggregateOutputType | null
+    _sum: ListeningSegmentSumAggregateOutputType | null
+    _min: ListeningSegmentMinAggregateOutputType | null
+    _max: ListeningSegmentMaxAggregateOutputType | null
+  }
+
+  type GetListeningSegmentGroupByPayload<T extends ListeningSegmentGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ListeningSegmentGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ListeningSegmentGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ListeningSegmentGroupByOutputType[P]>
+            : GetScalarType<T[P], ListeningSegmentGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ListeningSegmentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    listeningContentId?: boolean
+    orderIndex?: boolean
+    text?: boolean
+    translationZh?: boolean
+    startTime?: boolean
+    endTime?: boolean
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningSegment"]>
+
+  export type ListeningSegmentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    listeningContentId?: boolean
+    orderIndex?: boolean
+    text?: boolean
+    translationZh?: boolean
+    startTime?: boolean
+    endTime?: boolean
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningSegment"]>
+
+  export type ListeningSegmentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    listeningContentId?: boolean
+    orderIndex?: boolean
+    text?: boolean
+    translationZh?: boolean
+    startTime?: boolean
+    endTime?: boolean
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["listeningSegment"]>
+
+  export type ListeningSegmentSelectScalar = {
+    id?: boolean
+    listeningContentId?: boolean
+    orderIndex?: boolean
+    text?: boolean
+    translationZh?: boolean
+    startTime?: boolean
+    endTime?: boolean
+  }
+
+  export type ListeningSegmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "listeningContentId" | "orderIndex" | "text" | "translationZh" | "startTime" | "endTime", ExtArgs["result"]["listeningSegment"]>
+  export type ListeningSegmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+  export type ListeningSegmentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+  export type ListeningSegmentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+
+  export type $ListeningSegmentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ListeningSegment"
+    objects: {
+      listeningContent: Prisma.$ListeningContentPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      listeningContentId: string
+      orderIndex: number
+      text: string
+      translationZh: string | null
+      startTime: number
+      endTime: number
+    }, ExtArgs["result"]["listeningSegment"]>
+    composites: {}
+  }
+
+  type ListeningSegmentGetPayload<S extends boolean | null | undefined | ListeningSegmentDefaultArgs> = $Result.GetResult<Prisma.$ListeningSegmentPayload, S>
+
+  type ListeningSegmentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ListeningSegmentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ListeningSegmentCountAggregateInputType | true
+    }
+
+  export interface ListeningSegmentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ListeningSegment'], meta: { name: 'ListeningSegment' } }
+    /**
+     * Find zero or one ListeningSegment that matches the filter.
+     * @param {ListeningSegmentFindUniqueArgs} args - Arguments to find a ListeningSegment
+     * @example
+     * // Get one ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ListeningSegmentFindUniqueArgs>(args: SelectSubset<T, ListeningSegmentFindUniqueArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ListeningSegment that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ListeningSegmentFindUniqueOrThrowArgs} args - Arguments to find a ListeningSegment
+     * @example
+     * // Get one ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ListeningSegmentFindUniqueOrThrowArgs>(args: SelectSubset<T, ListeningSegmentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ListeningSegment that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentFindFirstArgs} args - Arguments to find a ListeningSegment
+     * @example
+     * // Get one ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ListeningSegmentFindFirstArgs>(args?: SelectSubset<T, ListeningSegmentFindFirstArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ListeningSegment that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentFindFirstOrThrowArgs} args - Arguments to find a ListeningSegment
+     * @example
+     * // Get one ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ListeningSegmentFindFirstOrThrowArgs>(args?: SelectSubset<T, ListeningSegmentFindFirstOrThrowArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ListeningSegments that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ListeningSegments
+     * const listeningSegments = await prisma.listeningSegment.findMany()
+     * 
+     * // Get first 10 ListeningSegments
+     * const listeningSegments = await prisma.listeningSegment.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const listeningSegmentWithIdOnly = await prisma.listeningSegment.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ListeningSegmentFindManyArgs>(args?: SelectSubset<T, ListeningSegmentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ListeningSegment.
+     * @param {ListeningSegmentCreateArgs} args - Arguments to create a ListeningSegment.
+     * @example
+     * // Create one ListeningSegment
+     * const ListeningSegment = await prisma.listeningSegment.create({
+     *   data: {
+     *     // ... data to create a ListeningSegment
+     *   }
+     * })
+     * 
+     */
+    create<T extends ListeningSegmentCreateArgs>(args: SelectSubset<T, ListeningSegmentCreateArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ListeningSegments.
+     * @param {ListeningSegmentCreateManyArgs} args - Arguments to create many ListeningSegments.
+     * @example
+     * // Create many ListeningSegments
+     * const listeningSegment = await prisma.listeningSegment.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ListeningSegmentCreateManyArgs>(args?: SelectSubset<T, ListeningSegmentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ListeningSegments and returns the data saved in the database.
+     * @param {ListeningSegmentCreateManyAndReturnArgs} args - Arguments to create many ListeningSegments.
+     * @example
+     * // Create many ListeningSegments
+     * const listeningSegment = await prisma.listeningSegment.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ListeningSegments and only return the `id`
+     * const listeningSegmentWithIdOnly = await prisma.listeningSegment.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ListeningSegmentCreateManyAndReturnArgs>(args?: SelectSubset<T, ListeningSegmentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ListeningSegment.
+     * @param {ListeningSegmentDeleteArgs} args - Arguments to delete one ListeningSegment.
+     * @example
+     * // Delete one ListeningSegment
+     * const ListeningSegment = await prisma.listeningSegment.delete({
+     *   where: {
+     *     // ... filter to delete one ListeningSegment
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ListeningSegmentDeleteArgs>(args: SelectSubset<T, ListeningSegmentDeleteArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ListeningSegment.
+     * @param {ListeningSegmentUpdateArgs} args - Arguments to update one ListeningSegment.
+     * @example
+     * // Update one ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ListeningSegmentUpdateArgs>(args: SelectSubset<T, ListeningSegmentUpdateArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ListeningSegments.
+     * @param {ListeningSegmentDeleteManyArgs} args - Arguments to filter ListeningSegments to delete.
+     * @example
+     * // Delete a few ListeningSegments
+     * const { count } = await prisma.listeningSegment.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ListeningSegmentDeleteManyArgs>(args?: SelectSubset<T, ListeningSegmentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ListeningSegments.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ListeningSegments
+     * const listeningSegment = await prisma.listeningSegment.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ListeningSegmentUpdateManyArgs>(args: SelectSubset<T, ListeningSegmentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ListeningSegments and returns the data updated in the database.
+     * @param {ListeningSegmentUpdateManyAndReturnArgs} args - Arguments to update many ListeningSegments.
+     * @example
+     * // Update many ListeningSegments
+     * const listeningSegment = await prisma.listeningSegment.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ListeningSegments and only return the `id`
+     * const listeningSegmentWithIdOnly = await prisma.listeningSegment.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ListeningSegmentUpdateManyAndReturnArgs>(args: SelectSubset<T, ListeningSegmentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ListeningSegment.
+     * @param {ListeningSegmentUpsertArgs} args - Arguments to update or create a ListeningSegment.
+     * @example
+     * // Update or create a ListeningSegment
+     * const listeningSegment = await prisma.listeningSegment.upsert({
+     *   create: {
+     *     // ... data to create a ListeningSegment
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ListeningSegment we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ListeningSegmentUpsertArgs>(args: SelectSubset<T, ListeningSegmentUpsertArgs<ExtArgs>>): Prisma__ListeningSegmentClient<$Result.GetResult<Prisma.$ListeningSegmentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ListeningSegments.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentCountArgs} args - Arguments to filter ListeningSegments to count.
+     * @example
+     * // Count the number of ListeningSegments
+     * const count = await prisma.listeningSegment.count({
+     *   where: {
+     *     // ... the filter for the ListeningSegments we want to count
+     *   }
+     * })
+    **/
+    count<T extends ListeningSegmentCountArgs>(
+      args?: Subset<T, ListeningSegmentCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ListeningSegmentCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ListeningSegment.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ListeningSegmentAggregateArgs>(args: Subset<T, ListeningSegmentAggregateArgs>): Prisma.PrismaPromise<GetListeningSegmentAggregateType<T>>
+
+    /**
+     * Group by ListeningSegment.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ListeningSegmentGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ListeningSegmentGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ListeningSegmentGroupByArgs['orderBy'] }
+        : { orderBy?: ListeningSegmentGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ListeningSegmentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetListeningSegmentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ListeningSegment model
+   */
+  readonly fields: ListeningSegmentFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ListeningSegment.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ListeningSegmentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    listeningContent<T extends ListeningContentDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContentDefaultArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ListeningSegment model
+   */
+  interface ListeningSegmentFieldRefs {
+    readonly id: FieldRef<"ListeningSegment", 'String'>
+    readonly listeningContentId: FieldRef<"ListeningSegment", 'String'>
+    readonly orderIndex: FieldRef<"ListeningSegment", 'Int'>
+    readonly text: FieldRef<"ListeningSegment", 'String'>
+    readonly translationZh: FieldRef<"ListeningSegment", 'String'>
+    readonly startTime: FieldRef<"ListeningSegment", 'Float'>
+    readonly endTime: FieldRef<"ListeningSegment", 'Float'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ListeningSegment findUnique
+   */
+  export type ListeningSegmentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningSegment to fetch.
+     */
+    where: ListeningSegmentWhereUniqueInput
+  }
+
+  /**
+   * ListeningSegment findUniqueOrThrow
+   */
+  export type ListeningSegmentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningSegment to fetch.
+     */
+    where: ListeningSegmentWhereUniqueInput
+  }
+
+  /**
+   * ListeningSegment findFirst
+   */
+  export type ListeningSegmentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningSegment to fetch.
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningSegments to fetch.
+     */
+    orderBy?: ListeningSegmentOrderByWithRelationInput | ListeningSegmentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ListeningSegments.
+     */
+    cursor?: ListeningSegmentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningSegments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningSegments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ListeningSegments.
+     */
+    distinct?: ListeningSegmentScalarFieldEnum | ListeningSegmentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningSegment findFirstOrThrow
+   */
+  export type ListeningSegmentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningSegment to fetch.
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningSegments to fetch.
+     */
+    orderBy?: ListeningSegmentOrderByWithRelationInput | ListeningSegmentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ListeningSegments.
+     */
+    cursor?: ListeningSegmentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningSegments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningSegments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ListeningSegments.
+     */
+    distinct?: ListeningSegmentScalarFieldEnum | ListeningSegmentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningSegment findMany
+   */
+  export type ListeningSegmentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter, which ListeningSegments to fetch.
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ListeningSegments to fetch.
+     */
+    orderBy?: ListeningSegmentOrderByWithRelationInput | ListeningSegmentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ListeningSegments.
+     */
+    cursor?: ListeningSegmentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ListeningSegments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ListeningSegments.
+     */
+    skip?: number
+    distinct?: ListeningSegmentScalarFieldEnum | ListeningSegmentScalarFieldEnum[]
+  }
+
+  /**
+   * ListeningSegment create
+   */
+  export type ListeningSegmentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ListeningSegment.
+     */
+    data: XOR<ListeningSegmentCreateInput, ListeningSegmentUncheckedCreateInput>
+  }
+
+  /**
+   * ListeningSegment createMany
+   */
+  export type ListeningSegmentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ListeningSegments.
+     */
+    data: ListeningSegmentCreateManyInput | ListeningSegmentCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ListeningSegment createManyAndReturn
+   */
+  export type ListeningSegmentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * The data used to create many ListeningSegments.
+     */
+    data: ListeningSegmentCreateManyInput | ListeningSegmentCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ListeningSegment update
+   */
+  export type ListeningSegmentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ListeningSegment.
+     */
+    data: XOR<ListeningSegmentUpdateInput, ListeningSegmentUncheckedUpdateInput>
+    /**
+     * Choose, which ListeningSegment to update.
+     */
+    where: ListeningSegmentWhereUniqueInput
+  }
+
+  /**
+   * ListeningSegment updateMany
+   */
+  export type ListeningSegmentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ListeningSegments.
+     */
+    data: XOR<ListeningSegmentUpdateManyMutationInput, ListeningSegmentUncheckedUpdateManyInput>
+    /**
+     * Filter which ListeningSegments to update
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * Limit how many ListeningSegments to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ListeningSegment updateManyAndReturn
+   */
+  export type ListeningSegmentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * The data used to update ListeningSegments.
+     */
+    data: XOR<ListeningSegmentUpdateManyMutationInput, ListeningSegmentUncheckedUpdateManyInput>
+    /**
+     * Filter which ListeningSegments to update
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * Limit how many ListeningSegments to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ListeningSegment upsert
+   */
+  export type ListeningSegmentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ListeningSegment to update in case it exists.
+     */
+    where: ListeningSegmentWhereUniqueInput
+    /**
+     * In case the ListeningSegment found by the `where` argument doesn't exist, create a new ListeningSegment with this data.
+     */
+    create: XOR<ListeningSegmentCreateInput, ListeningSegmentUncheckedCreateInput>
+    /**
+     * In case the ListeningSegment was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ListeningSegmentUpdateInput, ListeningSegmentUncheckedUpdateInput>
+  }
+
+  /**
+   * ListeningSegment delete
+   */
+  export type ListeningSegmentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+    /**
+     * Filter which ListeningSegment to delete.
+     */
+    where: ListeningSegmentWhereUniqueInput
+  }
+
+  /**
+   * ListeningSegment deleteMany
+   */
+  export type ListeningSegmentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ListeningSegments to delete
+     */
+    where?: ListeningSegmentWhereInput
+    /**
+     * Limit how many ListeningSegments to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ListeningSegment without action
+   */
+  export type ListeningSegmentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ListeningSegment
+     */
+    select?: ListeningSegmentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ListeningSegment
+     */
+    omit?: ListeningSegmentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ListeningSegmentInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model UserListeningProgress
+   */
+
+  export type AggregateUserListeningProgress = {
+    _count: UserListeningProgressCountAggregateOutputType | null
+    _avg: UserListeningProgressAvgAggregateOutputType | null
+    _sum: UserListeningProgressSumAggregateOutputType | null
+    _min: UserListeningProgressMinAggregateOutputType | null
+    _max: UserListeningProgressMaxAggregateOutputType | null
+  }
+
+  export type UserListeningProgressAvgAggregateOutputType = {
+    lastSegmentIndex: number | null
+    totalListens: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+  }
+
+  export type UserListeningProgressSumAggregateOutputType = {
+    lastSegmentIndex: number | null
+    totalListens: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+  }
+
+  export type UserListeningProgressMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    listeningContentId: string | null
+    status: string | null
+    lastSegmentIndex: number | null
+    totalListens: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserListeningProgressMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    listeningContentId: string | null
+    status: string | null
+    lastSegmentIndex: number | null
+    totalListens: number | null
+    quizScore: number | null
+    quizAttempts: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type UserListeningProgressCountAggregateOutputType = {
+    id: number
+    userId: number
+    listeningContentId: number
+    status: number
+    lastSegmentIndex: number
+    totalListens: number
+    quizScore: number
+    quizAttempts: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type UserListeningProgressAvgAggregateInputType = {
+    lastSegmentIndex?: true
+    totalListens?: true
+    quizScore?: true
+    quizAttempts?: true
+  }
+
+  export type UserListeningProgressSumAggregateInputType = {
+    lastSegmentIndex?: true
+    totalListens?: true
+    quizScore?: true
+    quizAttempts?: true
+  }
+
+  export type UserListeningProgressMinAggregateInputType = {
+    id?: true
+    userId?: true
+    listeningContentId?: true
+    status?: true
+    lastSegmentIndex?: true
+    totalListens?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserListeningProgressMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    listeningContentId?: true
+    status?: true
+    lastSegmentIndex?: true
+    totalListens?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type UserListeningProgressCountAggregateInputType = {
+    id?: true
+    userId?: true
+    listeningContentId?: true
+    status?: true
+    lastSegmentIndex?: true
+    totalListens?: true
+    quizScore?: true
+    quizAttempts?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type UserListeningProgressAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserListeningProgress to aggregate.
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserListeningProgresses to fetch.
+     */
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserListeningProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserListeningProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserListeningProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserListeningProgresses
+    **/
+    _count?: true | UserListeningProgressCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: UserListeningProgressAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: UserListeningProgressSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserListeningProgressMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserListeningProgressMaxAggregateInputType
+  }
+
+  export type GetUserListeningProgressAggregateType<T extends UserListeningProgressAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserListeningProgress]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserListeningProgress[P]>
+      : GetScalarType<T[P], AggregateUserListeningProgress[P]>
+  }
+
+
+
+
+  export type UserListeningProgressGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserListeningProgressWhereInput
+    orderBy?: UserListeningProgressOrderByWithAggregationInput | UserListeningProgressOrderByWithAggregationInput[]
+    by: UserListeningProgressScalarFieldEnum[] | UserListeningProgressScalarFieldEnum
+    having?: UserListeningProgressScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserListeningProgressCountAggregateInputType | true
+    _avg?: UserListeningProgressAvgAggregateInputType
+    _sum?: UserListeningProgressSumAggregateInputType
+    _min?: UserListeningProgressMinAggregateInputType
+    _max?: UserListeningProgressMaxAggregateInputType
+  }
+
+  export type UserListeningProgressGroupByOutputType = {
+    id: string
+    userId: string
+    listeningContentId: string
+    status: string
+    lastSegmentIndex: number
+    totalListens: number
+    quizScore: number | null
+    quizAttempts: number
+    createdAt: Date
+    updatedAt: Date
+    _count: UserListeningProgressCountAggregateOutputType | null
+    _avg: UserListeningProgressAvgAggregateOutputType | null
+    _sum: UserListeningProgressSumAggregateOutputType | null
+    _min: UserListeningProgressMinAggregateOutputType | null
+    _max: UserListeningProgressMaxAggregateOutputType | null
+  }
+
+  type GetUserListeningProgressGroupByPayload<T extends UserListeningProgressGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserListeningProgressGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserListeningProgressGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserListeningProgressGroupByOutputType[P]>
+            : GetScalarType<T[P], UserListeningProgressGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserListeningProgressSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    listeningContentId?: boolean
+    status?: boolean
+    lastSegmentIndex?: boolean
+    totalListens?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userListeningProgress"]>
+
+  export type UserListeningProgressSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    listeningContentId?: boolean
+    status?: boolean
+    lastSegmentIndex?: boolean
+    totalListens?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userListeningProgress"]>
+
+  export type UserListeningProgressSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    listeningContentId?: boolean
+    status?: boolean
+    lastSegmentIndex?: boolean
+    totalListens?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userListeningProgress"]>
+
+  export type UserListeningProgressSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    listeningContentId?: boolean
+    status?: boolean
+    lastSegmentIndex?: boolean
+    totalListens?: boolean
+    quizScore?: boolean
+    quizAttempts?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type UserListeningProgressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "listeningContentId" | "status" | "lastSegmentIndex" | "totalListens" | "quizScore" | "quizAttempts" | "createdAt" | "updatedAt", ExtArgs["result"]["userListeningProgress"]>
+  export type UserListeningProgressInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+  export type UserListeningProgressIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+  export type UserListeningProgressIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    listeningContent?: boolean | ListeningContentDefaultArgs<ExtArgs>
+  }
+
+  export type $UserListeningProgressPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserListeningProgress"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      listeningContent: Prisma.$ListeningContentPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      listeningContentId: string
+      status: string
+      lastSegmentIndex: number
+      totalListens: number
+      quizScore: number | null
+      quizAttempts: number
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["userListeningProgress"]>
+    composites: {}
+  }
+
+  type UserListeningProgressGetPayload<S extends boolean | null | undefined | UserListeningProgressDefaultArgs> = $Result.GetResult<Prisma.$UserListeningProgressPayload, S>
+
+  type UserListeningProgressCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserListeningProgressFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserListeningProgressCountAggregateInputType | true
+    }
+
+  export interface UserListeningProgressDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserListeningProgress'], meta: { name: 'UserListeningProgress' } }
+    /**
+     * Find zero or one UserListeningProgress that matches the filter.
+     * @param {UserListeningProgressFindUniqueArgs} args - Arguments to find a UserListeningProgress
+     * @example
+     * // Get one UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserListeningProgressFindUniqueArgs>(args: SelectSubset<T, UserListeningProgressFindUniqueArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserListeningProgress that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserListeningProgressFindUniqueOrThrowArgs} args - Arguments to find a UserListeningProgress
+     * @example
+     * // Get one UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserListeningProgressFindUniqueOrThrowArgs>(args: SelectSubset<T, UserListeningProgressFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserListeningProgress that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressFindFirstArgs} args - Arguments to find a UserListeningProgress
+     * @example
+     * // Get one UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserListeningProgressFindFirstArgs>(args?: SelectSubset<T, UserListeningProgressFindFirstArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserListeningProgress that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressFindFirstOrThrowArgs} args - Arguments to find a UserListeningProgress
+     * @example
+     * // Get one UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserListeningProgressFindFirstOrThrowArgs>(args?: SelectSubset<T, UserListeningProgressFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserListeningProgresses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserListeningProgresses
+     * const userListeningProgresses = await prisma.userListeningProgress.findMany()
+     * 
+     * // Get first 10 UserListeningProgresses
+     * const userListeningProgresses = await prisma.userListeningProgress.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userListeningProgressWithIdOnly = await prisma.userListeningProgress.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserListeningProgressFindManyArgs>(args?: SelectSubset<T, UserListeningProgressFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserListeningProgress.
+     * @param {UserListeningProgressCreateArgs} args - Arguments to create a UserListeningProgress.
+     * @example
+     * // Create one UserListeningProgress
+     * const UserListeningProgress = await prisma.userListeningProgress.create({
+     *   data: {
+     *     // ... data to create a UserListeningProgress
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserListeningProgressCreateArgs>(args: SelectSubset<T, UserListeningProgressCreateArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserListeningProgresses.
+     * @param {UserListeningProgressCreateManyArgs} args - Arguments to create many UserListeningProgresses.
+     * @example
+     * // Create many UserListeningProgresses
+     * const userListeningProgress = await prisma.userListeningProgress.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserListeningProgressCreateManyArgs>(args?: SelectSubset<T, UserListeningProgressCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserListeningProgresses and returns the data saved in the database.
+     * @param {UserListeningProgressCreateManyAndReturnArgs} args - Arguments to create many UserListeningProgresses.
+     * @example
+     * // Create many UserListeningProgresses
+     * const userListeningProgress = await prisma.userListeningProgress.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserListeningProgresses and only return the `id`
+     * const userListeningProgressWithIdOnly = await prisma.userListeningProgress.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserListeningProgressCreateManyAndReturnArgs>(args?: SelectSubset<T, UserListeningProgressCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserListeningProgress.
+     * @param {UserListeningProgressDeleteArgs} args - Arguments to delete one UserListeningProgress.
+     * @example
+     * // Delete one UserListeningProgress
+     * const UserListeningProgress = await prisma.userListeningProgress.delete({
+     *   where: {
+     *     // ... filter to delete one UserListeningProgress
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserListeningProgressDeleteArgs>(args: SelectSubset<T, UserListeningProgressDeleteArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserListeningProgress.
+     * @param {UserListeningProgressUpdateArgs} args - Arguments to update one UserListeningProgress.
+     * @example
+     * // Update one UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserListeningProgressUpdateArgs>(args: SelectSubset<T, UserListeningProgressUpdateArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserListeningProgresses.
+     * @param {UserListeningProgressDeleteManyArgs} args - Arguments to filter UserListeningProgresses to delete.
+     * @example
+     * // Delete a few UserListeningProgresses
+     * const { count } = await prisma.userListeningProgress.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserListeningProgressDeleteManyArgs>(args?: SelectSubset<T, UserListeningProgressDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserListeningProgresses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserListeningProgresses
+     * const userListeningProgress = await prisma.userListeningProgress.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserListeningProgressUpdateManyArgs>(args: SelectSubset<T, UserListeningProgressUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserListeningProgresses and returns the data updated in the database.
+     * @param {UserListeningProgressUpdateManyAndReturnArgs} args - Arguments to update many UserListeningProgresses.
+     * @example
+     * // Update many UserListeningProgresses
+     * const userListeningProgress = await prisma.userListeningProgress.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserListeningProgresses and only return the `id`
+     * const userListeningProgressWithIdOnly = await prisma.userListeningProgress.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserListeningProgressUpdateManyAndReturnArgs>(args: SelectSubset<T, UserListeningProgressUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserListeningProgress.
+     * @param {UserListeningProgressUpsertArgs} args - Arguments to update or create a UserListeningProgress.
+     * @example
+     * // Update or create a UserListeningProgress
+     * const userListeningProgress = await prisma.userListeningProgress.upsert({
+     *   create: {
+     *     // ... data to create a UserListeningProgress
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserListeningProgress we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserListeningProgressUpsertArgs>(args: SelectSubset<T, UserListeningProgressUpsertArgs<ExtArgs>>): Prisma__UserListeningProgressClient<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserListeningProgresses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressCountArgs} args - Arguments to filter UserListeningProgresses to count.
+     * @example
+     * // Count the number of UserListeningProgresses
+     * const count = await prisma.userListeningProgress.count({
+     *   where: {
+     *     // ... the filter for the UserListeningProgresses we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserListeningProgressCountArgs>(
+      args?: Subset<T, UserListeningProgressCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserListeningProgressCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserListeningProgress.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserListeningProgressAggregateArgs>(args: Subset<T, UserListeningProgressAggregateArgs>): Prisma.PrismaPromise<GetUserListeningProgressAggregateType<T>>
+
+    /**
+     * Group by UserListeningProgress.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserListeningProgressGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserListeningProgressGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserListeningProgressGroupByArgs['orderBy'] }
+        : { orderBy?: UserListeningProgressGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserListeningProgressGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserListeningProgressGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserListeningProgress model
+   */
+  readonly fields: UserListeningProgressFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserListeningProgress.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserListeningProgressClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    listeningContent<T extends ListeningContentDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ListeningContentDefaultArgs<ExtArgs>>): Prisma__ListeningContentClient<$Result.GetResult<Prisma.$ListeningContentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserListeningProgress model
+   */
+  interface UserListeningProgressFieldRefs {
+    readonly id: FieldRef<"UserListeningProgress", 'String'>
+    readonly userId: FieldRef<"UserListeningProgress", 'String'>
+    readonly listeningContentId: FieldRef<"UserListeningProgress", 'String'>
+    readonly status: FieldRef<"UserListeningProgress", 'String'>
+    readonly lastSegmentIndex: FieldRef<"UserListeningProgress", 'Int'>
+    readonly totalListens: FieldRef<"UserListeningProgress", 'Int'>
+    readonly quizScore: FieldRef<"UserListeningProgress", 'Int'>
+    readonly quizAttempts: FieldRef<"UserListeningProgress", 'Int'>
+    readonly createdAt: FieldRef<"UserListeningProgress", 'DateTime'>
+    readonly updatedAt: FieldRef<"UserListeningProgress", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserListeningProgress findUnique
+   */
+  export type UserListeningProgressFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserListeningProgress to fetch.
+     */
+    where: UserListeningProgressWhereUniqueInput
+  }
+
+  /**
+   * UserListeningProgress findUniqueOrThrow
+   */
+  export type UserListeningProgressFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserListeningProgress to fetch.
+     */
+    where: UserListeningProgressWhereUniqueInput
+  }
+
+  /**
+   * UserListeningProgress findFirst
+   */
+  export type UserListeningProgressFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserListeningProgress to fetch.
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserListeningProgresses to fetch.
+     */
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserListeningProgresses.
+     */
+    cursor?: UserListeningProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserListeningProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserListeningProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserListeningProgresses.
+     */
+    distinct?: UserListeningProgressScalarFieldEnum | UserListeningProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserListeningProgress findFirstOrThrow
+   */
+  export type UserListeningProgressFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserListeningProgress to fetch.
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserListeningProgresses to fetch.
+     */
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserListeningProgresses.
+     */
+    cursor?: UserListeningProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserListeningProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserListeningProgresses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserListeningProgresses.
+     */
+    distinct?: UserListeningProgressScalarFieldEnum | UserListeningProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserListeningProgress findMany
+   */
+  export type UserListeningProgressFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter, which UserListeningProgresses to fetch.
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserListeningProgresses to fetch.
+     */
+    orderBy?: UserListeningProgressOrderByWithRelationInput | UserListeningProgressOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserListeningProgresses.
+     */
+    cursor?: UserListeningProgressWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserListeningProgresses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserListeningProgresses.
+     */
+    skip?: number
+    distinct?: UserListeningProgressScalarFieldEnum | UserListeningProgressScalarFieldEnum[]
+  }
+
+  /**
+   * UserListeningProgress create
+   */
+  export type UserListeningProgressCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserListeningProgress.
+     */
+    data: XOR<UserListeningProgressCreateInput, UserListeningProgressUncheckedCreateInput>
+  }
+
+  /**
+   * UserListeningProgress createMany
+   */
+  export type UserListeningProgressCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserListeningProgresses.
+     */
+    data: UserListeningProgressCreateManyInput | UserListeningProgressCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserListeningProgress createManyAndReturn
+   */
+  export type UserListeningProgressCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserListeningProgresses.
+     */
+    data: UserListeningProgressCreateManyInput | UserListeningProgressCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * UserListeningProgress update
+   */
+  export type UserListeningProgressUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserListeningProgress.
+     */
+    data: XOR<UserListeningProgressUpdateInput, UserListeningProgressUncheckedUpdateInput>
+    /**
+     * Choose, which UserListeningProgress to update.
+     */
+    where: UserListeningProgressWhereUniqueInput
+  }
+
+  /**
+   * UserListeningProgress updateMany
+   */
+  export type UserListeningProgressUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserListeningProgresses.
+     */
+    data: XOR<UserListeningProgressUpdateManyMutationInput, UserListeningProgressUncheckedUpdateManyInput>
+    /**
+     * Filter which UserListeningProgresses to update
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * Limit how many UserListeningProgresses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserListeningProgress updateManyAndReturn
+   */
+  export type UserListeningProgressUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * The data used to update UserListeningProgresses.
+     */
+    data: XOR<UserListeningProgressUpdateManyMutationInput, UserListeningProgressUncheckedUpdateManyInput>
+    /**
+     * Filter which UserListeningProgresses to update
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * Limit how many UserListeningProgresses to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * UserListeningProgress upsert
+   */
+  export type UserListeningProgressUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserListeningProgress to update in case it exists.
+     */
+    where: UserListeningProgressWhereUniqueInput
+    /**
+     * In case the UserListeningProgress found by the `where` argument doesn't exist, create a new UserListeningProgress with this data.
+     */
+    create: XOR<UserListeningProgressCreateInput, UserListeningProgressUncheckedCreateInput>
+    /**
+     * In case the UserListeningProgress was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserListeningProgressUpdateInput, UserListeningProgressUncheckedUpdateInput>
+  }
+
+  /**
+   * UserListeningProgress delete
+   */
+  export type UserListeningProgressDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+    /**
+     * Filter which UserListeningProgress to delete.
+     */
+    where: UserListeningProgressWhereUniqueInput
+  }
+
+  /**
+   * UserListeningProgress deleteMany
+   */
+  export type UserListeningProgressDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserListeningProgresses to delete
+     */
+    where?: UserListeningProgressWhereInput
+    /**
+     * Limit how many UserListeningProgresses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserListeningProgress without action
+   */
+  export type UserListeningProgressDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserListeningProgress
+     */
+    select?: UserListeningProgressSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserListeningProgress
+     */
+    omit?: UserListeningProgressOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserListeningProgressInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -42913,6 +47045,7 @@ export namespace Prisma {
   export const GeneratedQuestionScalarFieldEnum: {
     id: 'id',
     contentItemId: 'contentItemId',
+    listeningContentId: 'listeningContentId',
     type: 'type',
     prompt: 'prompt',
     options: 'options',
@@ -42920,6 +47053,7 @@ export namespace Prisma {
     explanation: 'explanation',
     explanationWrong: 'explanationWrong',
     jlptLevel: 'jlptLevel',
+    audioClip: 'audioClip',
     createdAt: 'createdAt'
   };
 
@@ -42973,6 +47107,58 @@ export namespace Prisma {
   };
 
   export type ContentImportJobScalarFieldEnum = (typeof ContentImportJobScalarFieldEnum)[keyof typeof ContentImportJobScalarFieldEnum]
+
+
+  export const ListeningContentScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    titleZh: 'titleZh',
+    description: 'description',
+    descriptionZh: 'descriptionZh',
+    imageUrl: 'imageUrl',
+    sourceType: 'sourceType',
+    audioUrl: 'audioUrl',
+    audioS3Key: 'audioS3Key',
+    duration: 'duration',
+    transcript: 'transcript',
+    topicId: 'topicId',
+    jlptLevel: 'jlptLevel',
+    status: 'status',
+    publishedAt: 'publishedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ListeningContentScalarFieldEnum = (typeof ListeningContentScalarFieldEnum)[keyof typeof ListeningContentScalarFieldEnum]
+
+
+  export const ListeningSegmentScalarFieldEnum: {
+    id: 'id',
+    listeningContentId: 'listeningContentId',
+    orderIndex: 'orderIndex',
+    text: 'text',
+    translationZh: 'translationZh',
+    startTime: 'startTime',
+    endTime: 'endTime'
+  };
+
+  export type ListeningSegmentScalarFieldEnum = (typeof ListeningSegmentScalarFieldEnum)[keyof typeof ListeningSegmentScalarFieldEnum]
+
+
+  export const UserListeningProgressScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    listeningContentId: 'listeningContentId',
+    status: 'status',
+    lastSegmentIndex: 'lastSegmentIndex',
+    totalListens: 'totalListens',
+    quizScore: 'quizScore',
+    quizAttempts: 'quizAttempts',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type UserListeningProgressScalarFieldEnum = (typeof UserListeningProgressScalarFieldEnum)[keyof typeof UserListeningProgressScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -43243,6 +47429,20 @@ export namespace Prisma {
    */
   export type ListEnumQuestionTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QuestionType[]'>
     
+
+
+  /**
+   * Reference to a field of type 'ListeningSourceType'
+   */
+  export type EnumListeningSourceTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ListeningSourceType'>
+    
+
+
+  /**
+   * Reference to a field of type 'ListeningSourceType[]'
+   */
+  export type ListEnumListeningSourceTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ListeningSourceType[]'>
+    
   /**
    * Deep Input Types
    */
@@ -43291,6 +47491,7 @@ export namespace Prisma {
     learningStats?: XOR<LearningStatsNullableScalarRelationFilter, LearningStatsWhereInput> | null
     auditLogs?: AuditLogListRelationFilter
     contentProgress?: UserContentProgressListRelationFilter
+    listeningProgress?: UserListeningProgressListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -43333,6 +47534,7 @@ export namespace Prisma {
     learningStats?: LearningStatsOrderByWithRelationInput
     auditLogs?: AuditLogOrderByRelationAggregateInput
     contentProgress?: UserContentProgressOrderByRelationAggregateInput
+    listeningProgress?: UserListeningProgressOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -43379,6 +47581,7 @@ export namespace Prisma {
     learningStats?: XOR<LearningStatsNullableScalarRelationFilter, LearningStatsWhereInput> | null
     auditLogs?: AuditLogListRelationFilter
     contentProgress?: UserContentProgressListRelationFilter
+    listeningProgress?: UserListeningProgressListRelationFilter
   }, "id" | "email" | "customerId" | "provider_providerId">
 
   export type UserOrderByWithAggregationInput = {
@@ -45330,6 +49533,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Topic"> | Date | string
     updatedAt?: DateTimeFilter<"Topic"> | Date | string
     content?: ContentItemListRelationFilter
+    listeningContent?: ListeningContentListRelationFilter
   }
 
   export type TopicOrderByWithRelationInput = {
@@ -45342,6 +49546,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     content?: ContentItemOrderByRelationAggregateInput
+    listeningContent?: ListeningContentOrderByRelationAggregateInput
   }
 
   export type TopicWhereUniqueInput = Prisma.AtLeast<{
@@ -45357,6 +49562,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Topic"> | Date | string
     updatedAt?: DateTimeFilter<"Topic"> | Date | string
     content?: ContentItemListRelationFilter
+    listeningContent?: ListeningContentListRelationFilter
   }, "id" | "name">
 
   export type TopicOrderByWithAggregationInput = {
@@ -45717,6 +49923,7 @@ export namespace Prisma {
 
   export type ContentAudioWhereUniqueInput = Prisma.AtLeast<{
     id?: string
+    contentItemId_type?: ContentAudioContentItemIdTypeCompoundUniqueInput
     AND?: ContentAudioWhereInput | ContentAudioWhereInput[]
     OR?: ContentAudioWhereInput[]
     NOT?: ContentAudioWhereInput | ContentAudioWhereInput[]
@@ -45727,7 +49934,7 @@ export namespace Prisma {
     transcript?: StringNullableFilter<"ContentAudio"> | string | null
     createdAt?: DateTimeFilter<"ContentAudio"> | Date | string
     contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
-  }, "id">
+  }, "id" | "contentItemId_type">
 
   export type ContentAudioOrderByWithAggregationInput = {
     id?: SortOrder
@@ -45762,7 +49969,8 @@ export namespace Prisma {
     OR?: GeneratedQuestionWhereInput[]
     NOT?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
     id?: StringFilter<"GeneratedQuestion"> | string
-    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    listeningContentId?: StringNullableFilter<"GeneratedQuestion"> | string | null
     type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
     prompt?: StringFilter<"GeneratedQuestion"> | string
     options?: JsonNullableFilter<"GeneratedQuestion">
@@ -45770,13 +49978,16 @@ export namespace Prisma {
     explanation?: StringFilter<"GeneratedQuestion"> | string
     explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
     jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    audioClip?: JsonNullableFilter<"GeneratedQuestion">
     createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
-    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+    contentItem?: XOR<ContentItemNullableScalarRelationFilter, ContentItemWhereInput> | null
+    listeningContent?: XOR<ListeningContentNullableScalarRelationFilter, ListeningContentWhereInput> | null
   }
 
   export type GeneratedQuestionOrderByWithRelationInput = {
     id?: SortOrder
-    contentItemId?: SortOrder
+    contentItemId?: SortOrderInput | SortOrder
+    listeningContentId?: SortOrderInput | SortOrder
     type?: SortOrder
     prompt?: SortOrder
     options?: SortOrderInput | SortOrder
@@ -45784,8 +49995,10 @@ export namespace Prisma {
     explanation?: SortOrder
     explanationWrong?: SortOrderInput | SortOrder
     jlptLevel?: SortOrderInput | SortOrder
+    audioClip?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     contentItem?: ContentItemOrderByWithRelationInput
+    listeningContent?: ListeningContentOrderByWithRelationInput
   }
 
   export type GeneratedQuestionWhereUniqueInput = Prisma.AtLeast<{
@@ -45793,7 +50006,8 @@ export namespace Prisma {
     AND?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
     OR?: GeneratedQuestionWhereInput[]
     NOT?: GeneratedQuestionWhereInput | GeneratedQuestionWhereInput[]
-    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    listeningContentId?: StringNullableFilter<"GeneratedQuestion"> | string | null
     type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
     prompt?: StringFilter<"GeneratedQuestion"> | string
     options?: JsonNullableFilter<"GeneratedQuestion">
@@ -45801,13 +50015,16 @@ export namespace Prisma {
     explanation?: StringFilter<"GeneratedQuestion"> | string
     explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
     jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    audioClip?: JsonNullableFilter<"GeneratedQuestion">
     createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
-    contentItem?: XOR<ContentItemScalarRelationFilter, ContentItemWhereInput>
+    contentItem?: XOR<ContentItemNullableScalarRelationFilter, ContentItemWhereInput> | null
+    listeningContent?: XOR<ListeningContentNullableScalarRelationFilter, ListeningContentWhereInput> | null
   }, "id">
 
   export type GeneratedQuestionOrderByWithAggregationInput = {
     id?: SortOrder
-    contentItemId?: SortOrder
+    contentItemId?: SortOrderInput | SortOrder
+    listeningContentId?: SortOrderInput | SortOrder
     type?: SortOrder
     prompt?: SortOrder
     options?: SortOrderInput | SortOrder
@@ -45815,6 +50032,7 @@ export namespace Prisma {
     explanation?: SortOrder
     explanationWrong?: SortOrderInput | SortOrder
     jlptLevel?: SortOrderInput | SortOrder
+    audioClip?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     _count?: GeneratedQuestionCountOrderByAggregateInput
     _max?: GeneratedQuestionMaxOrderByAggregateInput
@@ -45826,7 +50044,8 @@ export namespace Prisma {
     OR?: GeneratedQuestionScalarWhereWithAggregatesInput[]
     NOT?: GeneratedQuestionScalarWhereWithAggregatesInput | GeneratedQuestionScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
-    contentItemId?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringNullableWithAggregatesFilter<"GeneratedQuestion"> | string | null
+    listeningContentId?: StringNullableWithAggregatesFilter<"GeneratedQuestion"> | string | null
     type?: EnumQuestionTypeWithAggregatesFilter<"GeneratedQuestion"> | $Enums.QuestionType
     prompt?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
     options?: JsonNullableWithAggregatesFilter<"GeneratedQuestion">
@@ -45834,6 +50053,7 @@ export namespace Prisma {
     explanation?: StringWithAggregatesFilter<"GeneratedQuestion"> | string
     explanationWrong?: JsonNullableWithAggregatesFilter<"GeneratedQuestion">
     jlptLevel?: StringNullableWithAggregatesFilter<"GeneratedQuestion"> | string | null
+    audioClip?: JsonNullableWithAggregatesFilter<"GeneratedQuestion">
     createdAt?: DateTimeWithAggregatesFilter<"GeneratedQuestion"> | Date | string
   }
 
@@ -46090,6 +50310,286 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"ContentImportJob"> | Date | string
   }
 
+  export type ListeningContentWhereInput = {
+    AND?: ListeningContentWhereInput | ListeningContentWhereInput[]
+    OR?: ListeningContentWhereInput[]
+    NOT?: ListeningContentWhereInput | ListeningContentWhereInput[]
+    id?: StringFilter<"ListeningContent"> | string
+    title?: StringFilter<"ListeningContent"> | string
+    titleZh?: StringFilter<"ListeningContent"> | string
+    description?: StringNullableFilter<"ListeningContent"> | string | null
+    descriptionZh?: StringNullableFilter<"ListeningContent"> | string | null
+    imageUrl?: StringNullableFilter<"ListeningContent"> | string | null
+    sourceType?: EnumListeningSourceTypeFilter<"ListeningContent"> | $Enums.ListeningSourceType
+    audioUrl?: StringFilter<"ListeningContent"> | string
+    audioS3Key?: StringNullableFilter<"ListeningContent"> | string | null
+    duration?: IntNullableFilter<"ListeningContent"> | number | null
+    transcript?: StringFilter<"ListeningContent"> | string
+    topicId?: StringNullableFilter<"ListeningContent"> | string | null
+    jlptLevel?: StringFilter<"ListeningContent"> | string
+    status?: EnumContentStatusFilter<"ListeningContent"> | $Enums.ContentStatus
+    publishedAt?: DateTimeNullableFilter<"ListeningContent"> | Date | string | null
+    createdAt?: DateTimeFilter<"ListeningContent"> | Date | string
+    updatedAt?: DateTimeFilter<"ListeningContent"> | Date | string
+    topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    segments?: ListeningSegmentListRelationFilter
+    questions?: GeneratedQuestionListRelationFilter
+    userProgress?: UserListeningProgressListRelationFilter
+  }
+
+  export type ListeningContentOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    description?: SortOrderInput | SortOrder
+    descriptionZh?: SortOrderInput | SortOrder
+    imageUrl?: SortOrderInput | SortOrder
+    sourceType?: SortOrder
+    audioUrl?: SortOrder
+    audioS3Key?: SortOrderInput | SortOrder
+    duration?: SortOrderInput | SortOrder
+    transcript?: SortOrder
+    topicId?: SortOrderInput | SortOrder
+    jlptLevel?: SortOrder
+    status?: SortOrder
+    publishedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    topic?: TopicOrderByWithRelationInput
+    segments?: ListeningSegmentOrderByRelationAggregateInput
+    questions?: GeneratedQuestionOrderByRelationAggregateInput
+    userProgress?: UserListeningProgressOrderByRelationAggregateInput
+  }
+
+  export type ListeningContentWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ListeningContentWhereInput | ListeningContentWhereInput[]
+    OR?: ListeningContentWhereInput[]
+    NOT?: ListeningContentWhereInput | ListeningContentWhereInput[]
+    title?: StringFilter<"ListeningContent"> | string
+    titleZh?: StringFilter<"ListeningContent"> | string
+    description?: StringNullableFilter<"ListeningContent"> | string | null
+    descriptionZh?: StringNullableFilter<"ListeningContent"> | string | null
+    imageUrl?: StringNullableFilter<"ListeningContent"> | string | null
+    sourceType?: EnumListeningSourceTypeFilter<"ListeningContent"> | $Enums.ListeningSourceType
+    audioUrl?: StringFilter<"ListeningContent"> | string
+    audioS3Key?: StringNullableFilter<"ListeningContent"> | string | null
+    duration?: IntNullableFilter<"ListeningContent"> | number | null
+    transcript?: StringFilter<"ListeningContent"> | string
+    topicId?: StringNullableFilter<"ListeningContent"> | string | null
+    jlptLevel?: StringFilter<"ListeningContent"> | string
+    status?: EnumContentStatusFilter<"ListeningContent"> | $Enums.ContentStatus
+    publishedAt?: DateTimeNullableFilter<"ListeningContent"> | Date | string | null
+    createdAt?: DateTimeFilter<"ListeningContent"> | Date | string
+    updatedAt?: DateTimeFilter<"ListeningContent"> | Date | string
+    topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    segments?: ListeningSegmentListRelationFilter
+    questions?: GeneratedQuestionListRelationFilter
+    userProgress?: UserListeningProgressListRelationFilter
+  }, "id">
+
+  export type ListeningContentOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    description?: SortOrderInput | SortOrder
+    descriptionZh?: SortOrderInput | SortOrder
+    imageUrl?: SortOrderInput | SortOrder
+    sourceType?: SortOrder
+    audioUrl?: SortOrder
+    audioS3Key?: SortOrderInput | SortOrder
+    duration?: SortOrderInput | SortOrder
+    transcript?: SortOrder
+    topicId?: SortOrderInput | SortOrder
+    jlptLevel?: SortOrder
+    status?: SortOrder
+    publishedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ListeningContentCountOrderByAggregateInput
+    _avg?: ListeningContentAvgOrderByAggregateInput
+    _max?: ListeningContentMaxOrderByAggregateInput
+    _min?: ListeningContentMinOrderByAggregateInput
+    _sum?: ListeningContentSumOrderByAggregateInput
+  }
+
+  export type ListeningContentScalarWhereWithAggregatesInput = {
+    AND?: ListeningContentScalarWhereWithAggregatesInput | ListeningContentScalarWhereWithAggregatesInput[]
+    OR?: ListeningContentScalarWhereWithAggregatesInput[]
+    NOT?: ListeningContentScalarWhereWithAggregatesInput | ListeningContentScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ListeningContent"> | string
+    title?: StringWithAggregatesFilter<"ListeningContent"> | string
+    titleZh?: StringWithAggregatesFilter<"ListeningContent"> | string
+    description?: StringNullableWithAggregatesFilter<"ListeningContent"> | string | null
+    descriptionZh?: StringNullableWithAggregatesFilter<"ListeningContent"> | string | null
+    imageUrl?: StringNullableWithAggregatesFilter<"ListeningContent"> | string | null
+    sourceType?: EnumListeningSourceTypeWithAggregatesFilter<"ListeningContent"> | $Enums.ListeningSourceType
+    audioUrl?: StringWithAggregatesFilter<"ListeningContent"> | string
+    audioS3Key?: StringNullableWithAggregatesFilter<"ListeningContent"> | string | null
+    duration?: IntNullableWithAggregatesFilter<"ListeningContent"> | number | null
+    transcript?: StringWithAggregatesFilter<"ListeningContent"> | string
+    topicId?: StringNullableWithAggregatesFilter<"ListeningContent"> | string | null
+    jlptLevel?: StringWithAggregatesFilter<"ListeningContent"> | string
+    status?: EnumContentStatusWithAggregatesFilter<"ListeningContent"> | $Enums.ContentStatus
+    publishedAt?: DateTimeNullableWithAggregatesFilter<"ListeningContent"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"ListeningContent"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ListeningContent"> | Date | string
+  }
+
+  export type ListeningSegmentWhereInput = {
+    AND?: ListeningSegmentWhereInput | ListeningSegmentWhereInput[]
+    OR?: ListeningSegmentWhereInput[]
+    NOT?: ListeningSegmentWhereInput | ListeningSegmentWhereInput[]
+    id?: StringFilter<"ListeningSegment"> | string
+    listeningContentId?: StringFilter<"ListeningSegment"> | string
+    orderIndex?: IntFilter<"ListeningSegment"> | number
+    text?: StringFilter<"ListeningSegment"> | string
+    translationZh?: StringNullableFilter<"ListeningSegment"> | string | null
+    startTime?: FloatFilter<"ListeningSegment"> | number
+    endTime?: FloatFilter<"ListeningSegment"> | number
+    listeningContent?: XOR<ListeningContentScalarRelationFilter, ListeningContentWhereInput>
+  }
+
+  export type ListeningSegmentOrderByWithRelationInput = {
+    id?: SortOrder
+    listeningContentId?: SortOrder
+    orderIndex?: SortOrder
+    text?: SortOrder
+    translationZh?: SortOrderInput | SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+    listeningContent?: ListeningContentOrderByWithRelationInput
+  }
+
+  export type ListeningSegmentWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    listeningContentId_orderIndex?: ListeningSegmentListeningContentIdOrderIndexCompoundUniqueInput
+    AND?: ListeningSegmentWhereInput | ListeningSegmentWhereInput[]
+    OR?: ListeningSegmentWhereInput[]
+    NOT?: ListeningSegmentWhereInput | ListeningSegmentWhereInput[]
+    listeningContentId?: StringFilter<"ListeningSegment"> | string
+    orderIndex?: IntFilter<"ListeningSegment"> | number
+    text?: StringFilter<"ListeningSegment"> | string
+    translationZh?: StringNullableFilter<"ListeningSegment"> | string | null
+    startTime?: FloatFilter<"ListeningSegment"> | number
+    endTime?: FloatFilter<"ListeningSegment"> | number
+    listeningContent?: XOR<ListeningContentScalarRelationFilter, ListeningContentWhereInput>
+  }, "id" | "listeningContentId_orderIndex">
+
+  export type ListeningSegmentOrderByWithAggregationInput = {
+    id?: SortOrder
+    listeningContentId?: SortOrder
+    orderIndex?: SortOrder
+    text?: SortOrder
+    translationZh?: SortOrderInput | SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+    _count?: ListeningSegmentCountOrderByAggregateInput
+    _avg?: ListeningSegmentAvgOrderByAggregateInput
+    _max?: ListeningSegmentMaxOrderByAggregateInput
+    _min?: ListeningSegmentMinOrderByAggregateInput
+    _sum?: ListeningSegmentSumOrderByAggregateInput
+  }
+
+  export type ListeningSegmentScalarWhereWithAggregatesInput = {
+    AND?: ListeningSegmentScalarWhereWithAggregatesInput | ListeningSegmentScalarWhereWithAggregatesInput[]
+    OR?: ListeningSegmentScalarWhereWithAggregatesInput[]
+    NOT?: ListeningSegmentScalarWhereWithAggregatesInput | ListeningSegmentScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ListeningSegment"> | string
+    listeningContentId?: StringWithAggregatesFilter<"ListeningSegment"> | string
+    orderIndex?: IntWithAggregatesFilter<"ListeningSegment"> | number
+    text?: StringWithAggregatesFilter<"ListeningSegment"> | string
+    translationZh?: StringNullableWithAggregatesFilter<"ListeningSegment"> | string | null
+    startTime?: FloatWithAggregatesFilter<"ListeningSegment"> | number
+    endTime?: FloatWithAggregatesFilter<"ListeningSegment"> | number
+  }
+
+  export type UserListeningProgressWhereInput = {
+    AND?: UserListeningProgressWhereInput | UserListeningProgressWhereInput[]
+    OR?: UserListeningProgressWhereInput[]
+    NOT?: UserListeningProgressWhereInput | UserListeningProgressWhereInput[]
+    id?: StringFilter<"UserListeningProgress"> | string
+    userId?: StringFilter<"UserListeningProgress"> | string
+    listeningContentId?: StringFilter<"UserListeningProgress"> | string
+    status?: StringFilter<"UserListeningProgress"> | string
+    lastSegmentIndex?: IntFilter<"UserListeningProgress"> | number
+    totalListens?: IntFilter<"UserListeningProgress"> | number
+    quizScore?: IntNullableFilter<"UserListeningProgress"> | number | null
+    quizAttempts?: IntFilter<"UserListeningProgress"> | number
+    createdAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    listeningContent?: XOR<ListeningContentScalarRelationFilter, ListeningContentWhereInput>
+  }
+
+  export type UserListeningProgressOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    listeningContentId?: SortOrder
+    status?: SortOrder
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrderInput | SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    listeningContent?: ListeningContentOrderByWithRelationInput
+  }
+
+  export type UserListeningProgressWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_listeningContentId?: UserListeningProgressUserIdListeningContentIdCompoundUniqueInput
+    AND?: UserListeningProgressWhereInput | UserListeningProgressWhereInput[]
+    OR?: UserListeningProgressWhereInput[]
+    NOT?: UserListeningProgressWhereInput | UserListeningProgressWhereInput[]
+    userId?: StringFilter<"UserListeningProgress"> | string
+    listeningContentId?: StringFilter<"UserListeningProgress"> | string
+    status?: StringFilter<"UserListeningProgress"> | string
+    lastSegmentIndex?: IntFilter<"UserListeningProgress"> | number
+    totalListens?: IntFilter<"UserListeningProgress"> | number
+    quizScore?: IntNullableFilter<"UserListeningProgress"> | number | null
+    quizAttempts?: IntFilter<"UserListeningProgress"> | number
+    createdAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    listeningContent?: XOR<ListeningContentScalarRelationFilter, ListeningContentWhereInput>
+  }, "id" | "userId_listeningContentId">
+
+  export type UserListeningProgressOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    listeningContentId?: SortOrder
+    status?: SortOrder
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrderInput | SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: UserListeningProgressCountOrderByAggregateInput
+    _avg?: UserListeningProgressAvgOrderByAggregateInput
+    _max?: UserListeningProgressMaxOrderByAggregateInput
+    _min?: UserListeningProgressMinOrderByAggregateInput
+    _sum?: UserListeningProgressSumOrderByAggregateInput
+  }
+
+  export type UserListeningProgressScalarWhereWithAggregatesInput = {
+    AND?: UserListeningProgressScalarWhereWithAggregatesInput | UserListeningProgressScalarWhereWithAggregatesInput[]
+    OR?: UserListeningProgressScalarWhereWithAggregatesInput[]
+    NOT?: UserListeningProgressScalarWhereWithAggregatesInput | UserListeningProgressScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserListeningProgress"> | string
+    userId?: StringWithAggregatesFilter<"UserListeningProgress"> | string
+    listeningContentId?: StringWithAggregatesFilter<"UserListeningProgress"> | string
+    status?: StringWithAggregatesFilter<"UserListeningProgress"> | string
+    lastSegmentIndex?: IntWithAggregatesFilter<"UserListeningProgress"> | number
+    totalListens?: IntWithAggregatesFilter<"UserListeningProgress"> | number
+    quizScore?: IntNullableWithAggregatesFilter<"UserListeningProgress"> | number | null
+    quizAttempts?: IntWithAggregatesFilter<"UserListeningProgress"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"UserListeningProgress"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"UserListeningProgress"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email: string
@@ -46130,6 +50630,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -46172,6 +50673,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -46214,6 +50716,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -46256,6 +50759,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -48463,6 +52967,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     content?: ContentItemCreateNestedManyWithoutTopicInput
+    listeningContent?: ListeningContentCreateNestedManyWithoutTopicInput
   }
 
   export type TopicUncheckedCreateInput = {
@@ -48475,6 +52980,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     content?: ContentItemUncheckedCreateNestedManyWithoutTopicInput
+    listeningContent?: ListeningContentUncheckedCreateNestedManyWithoutTopicInput
   }
 
   export type TopicUpdateInput = {
@@ -48487,6 +52993,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     content?: ContentItemUpdateManyWithoutTopicNestedInput
+    listeningContent?: ListeningContentUpdateManyWithoutTopicNestedInput
   }
 
   export type TopicUncheckedUpdateInput = {
@@ -48499,6 +53006,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     content?: ContentItemUncheckedUpdateManyWithoutTopicNestedInput
+    listeningContent?: ListeningContentUncheckedUpdateManyWithoutTopicNestedInput
   }
 
   export type TopicCreateManyInput = {
@@ -48959,13 +53467,16 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
-    contentItem: ContentItemCreateNestedOneWithoutQuestionsInput
+    contentItem?: ContentItemCreateNestedOneWithoutQuestionsInput
+    listeningContent?: ListeningContentCreateNestedOneWithoutQuestionsInput
   }
 
   export type GeneratedQuestionUncheckedCreateInput = {
     id?: string
-    contentItemId: string
+    contentItemId?: string | null
+    listeningContentId?: string | null
     type: $Enums.QuestionType
     prompt: string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -48973,6 +53484,7 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
@@ -48985,13 +53497,16 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    contentItem?: ContentItemUpdateOneRequiredWithoutQuestionsNestedInput
+    contentItem?: ContentItemUpdateOneWithoutQuestionsNestedInput
+    listeningContent?: ListeningContentUpdateOneWithoutQuestionsNestedInput
   }
 
   export type GeneratedQuestionUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    contentItemId?: StringFieldUpdateOperationsInput | string
+    contentItemId?: NullableStringFieldUpdateOperationsInput | string | null
+    listeningContentId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
     prompt?: StringFieldUpdateOperationsInput | string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -48999,12 +53514,14 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type GeneratedQuestionCreateManyInput = {
     id?: string
-    contentItemId: string
+    contentItemId?: string | null
+    listeningContentId?: string | null
     type: $Enums.QuestionType
     prompt: string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -49012,6 +53529,7 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
@@ -49024,12 +53542,14 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type GeneratedQuestionUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    contentItemId?: StringFieldUpdateOperationsInput | string
+    contentItemId?: NullableStringFieldUpdateOperationsInput | string | null
+    listeningContentId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
     prompt?: StringFieldUpdateOperationsInput | string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -49037,6 +53557,7 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -49316,6 +53837,315 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type ListeningContentCreateInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    topic?: TopicCreateNestedOneWithoutListeningContentInput
+    segments?: ListeningSegmentCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUncheckedCreateInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    topicId?: string | null
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    segments?: ListeningSegmentUncheckedCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    topic?: TopicUpdateOneWithoutListeningContentNestedInput
+    segments?: ListeningSegmentUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    segments?: ListeningSegmentUncheckedUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUncheckedUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentCreateManyInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    topicId?: string | null
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ListeningContentUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ListeningContentUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ListeningSegmentCreateInput = {
+    id?: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+    listeningContent: ListeningContentCreateNestedOneWithoutSegmentsInput
+  }
+
+  export type ListeningSegmentUncheckedCreateInput = {
+    id?: string
+    listeningContentId: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+  }
+
+  export type ListeningSegmentUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+    listeningContent?: ListeningContentUpdateOneRequiredWithoutSegmentsNestedInput
+  }
+
+  export type ListeningSegmentUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type ListeningSegmentCreateManyInput = {
+    id?: string
+    listeningContentId: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+  }
+
+  export type ListeningSegmentUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type ListeningSegmentUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type UserListeningProgressCreateInput = {
+    id?: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutListeningProgressInput
+    listeningContent: ListeningContentCreateNestedOneWithoutUserProgressInput
+  }
+
+  export type UserListeningProgressUncheckedCreateInput = {
+    id?: string
+    userId: string
+    listeningContentId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserListeningProgressUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutListeningProgressNestedInput
+    listeningContent?: ListeningContentUpdateOneRequiredWithoutUserProgressNestedInput
+  }
+
+  export type UserListeningProgressUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserListeningProgressCreateManyInput = {
+    id?: string
+    userId: string
+    listeningContentId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserListeningProgressUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserListeningProgressUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -49450,6 +54280,12 @@ export namespace Prisma {
     none?: UserContentProgressWhereInput
   }
 
+  export type UserListeningProgressListRelationFilter = {
+    every?: UserListeningProgressWhereInput
+    some?: UserListeningProgressWhereInput
+    none?: UserListeningProgressWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -49496,6 +54332,10 @@ export namespace Prisma {
   }
 
   export type UserContentProgressOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserListeningProgressOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -51113,7 +55953,17 @@ export namespace Prisma {
     none?: ContentItemWhereInput
   }
 
+  export type ListeningContentListRelationFilter = {
+    every?: ListeningContentWhereInput
+    some?: ListeningContentWhereInput
+    none?: ListeningContentWhereInput
+  }
+
   export type ContentItemOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ListeningContentOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -51405,6 +56255,11 @@ export namespace Prisma {
     orderIndex?: SortOrder
   }
 
+  export type ContentAudioContentItemIdTypeCompoundUniqueInput = {
+    contentItemId: string
+    type: string
+  }
+
   export type ContentAudioCountOrderByAggregateInput = {
     id?: SortOrder
     contentItemId?: SortOrder
@@ -51450,9 +56305,20 @@ export namespace Prisma {
     not?: NestedEnumQuestionTypeFilter<$PrismaModel> | $Enums.QuestionType
   }
 
+  export type ContentItemNullableScalarRelationFilter = {
+    is?: ContentItemWhereInput | null
+    isNot?: ContentItemWhereInput | null
+  }
+
+  export type ListeningContentNullableScalarRelationFilter = {
+    is?: ListeningContentWhereInput | null
+    isNot?: ListeningContentWhereInput | null
+  }
+
   export type GeneratedQuestionCountOrderByAggregateInput = {
     id?: SortOrder
     contentItemId?: SortOrder
+    listeningContentId?: SortOrder
     type?: SortOrder
     prompt?: SortOrder
     options?: SortOrder
@@ -51460,12 +56326,14 @@ export namespace Prisma {
     explanation?: SortOrder
     explanationWrong?: SortOrder
     jlptLevel?: SortOrder
+    audioClip?: SortOrder
     createdAt?: SortOrder
   }
 
   export type GeneratedQuestionMaxOrderByAggregateInput = {
     id?: SortOrder
     contentItemId?: SortOrder
+    listeningContentId?: SortOrder
     type?: SortOrder
     prompt?: SortOrder
     answer?: SortOrder
@@ -51477,6 +56345,7 @@ export namespace Prisma {
   export type GeneratedQuestionMinOrderByAggregateInput = {
     id?: SortOrder
     contentItemId?: SortOrder
+    listeningContentId?: SortOrder
     type?: SortOrder
     prompt?: SortOrder
     answer?: SortOrder
@@ -51634,6 +56503,211 @@ export namespace Prisma {
     progress?: SortOrder
   }
 
+  export type EnumListeningSourceTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ListeningSourceType | EnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumListeningSourceTypeFilter<$PrismaModel> | $Enums.ListeningSourceType
+  }
+
+  export type ListeningSegmentListRelationFilter = {
+    every?: ListeningSegmentWhereInput
+    some?: ListeningSegmentWhereInput
+    none?: ListeningSegmentWhereInput
+  }
+
+  export type ListeningSegmentOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ListeningContentCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    description?: SortOrder
+    descriptionZh?: SortOrder
+    imageUrl?: SortOrder
+    sourceType?: SortOrder
+    audioUrl?: SortOrder
+    audioS3Key?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    topicId?: SortOrder
+    jlptLevel?: SortOrder
+    status?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ListeningContentAvgOrderByAggregateInput = {
+    duration?: SortOrder
+  }
+
+  export type ListeningContentMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    description?: SortOrder
+    descriptionZh?: SortOrder
+    imageUrl?: SortOrder
+    sourceType?: SortOrder
+    audioUrl?: SortOrder
+    audioS3Key?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    topicId?: SortOrder
+    jlptLevel?: SortOrder
+    status?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ListeningContentMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    titleZh?: SortOrder
+    description?: SortOrder
+    descriptionZh?: SortOrder
+    imageUrl?: SortOrder
+    sourceType?: SortOrder
+    audioUrl?: SortOrder
+    audioS3Key?: SortOrder
+    duration?: SortOrder
+    transcript?: SortOrder
+    topicId?: SortOrder
+    jlptLevel?: SortOrder
+    status?: SortOrder
+    publishedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ListeningContentSumOrderByAggregateInput = {
+    duration?: SortOrder
+  }
+
+  export type EnumListeningSourceTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ListeningSourceType | EnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumListeningSourceTypeWithAggregatesFilter<$PrismaModel> | $Enums.ListeningSourceType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumListeningSourceTypeFilter<$PrismaModel>
+    _max?: NestedEnumListeningSourceTypeFilter<$PrismaModel>
+  }
+
+  export type ListeningContentScalarRelationFilter = {
+    is?: ListeningContentWhereInput
+    isNot?: ListeningContentWhereInput
+  }
+
+  export type ListeningSegmentListeningContentIdOrderIndexCompoundUniqueInput = {
+    listeningContentId: string
+    orderIndex: number
+  }
+
+  export type ListeningSegmentCountOrderByAggregateInput = {
+    id?: SortOrder
+    listeningContentId?: SortOrder
+    orderIndex?: SortOrder
+    text?: SortOrder
+    translationZh?: SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+  }
+
+  export type ListeningSegmentAvgOrderByAggregateInput = {
+    orderIndex?: SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+  }
+
+  export type ListeningSegmentMaxOrderByAggregateInput = {
+    id?: SortOrder
+    listeningContentId?: SortOrder
+    orderIndex?: SortOrder
+    text?: SortOrder
+    translationZh?: SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+  }
+
+  export type ListeningSegmentMinOrderByAggregateInput = {
+    id?: SortOrder
+    listeningContentId?: SortOrder
+    orderIndex?: SortOrder
+    text?: SortOrder
+    translationZh?: SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+  }
+
+  export type ListeningSegmentSumOrderByAggregateInput = {
+    orderIndex?: SortOrder
+    startTime?: SortOrder
+    endTime?: SortOrder
+  }
+
+  export type UserListeningProgressUserIdListeningContentIdCompoundUniqueInput = {
+    userId: string
+    listeningContentId: string
+  }
+
+  export type UserListeningProgressCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    listeningContentId?: SortOrder
+    status?: SortOrder
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserListeningProgressAvgOrderByAggregateInput = {
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+  }
+
+  export type UserListeningProgressMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    listeningContentId?: SortOrder
+    status?: SortOrder
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserListeningProgressMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    listeningContentId?: SortOrder
+    status?: SortOrder
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserListeningProgressSumOrderByAggregateInput = {
+    lastSegmentIndex?: SortOrder
+    totalListens?: SortOrder
+    quizScore?: SortOrder
+    quizAttempts?: SortOrder
+  }
+
   export type AnalyzedVocabularyCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -51717,6 +56791,13 @@ export namespace Prisma {
     connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
   }
 
+  export type UserListeningProgressCreateNestedManyWithoutUserInput = {
+    create?: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput> | UserListeningProgressCreateWithoutUserInput[] | UserListeningProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutUserInput | UserListeningProgressCreateOrConnectWithoutUserInput[]
+    createMany?: UserListeningProgressCreateManyUserInputEnvelope
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -51798,6 +56879,13 @@ export namespace Prisma {
     connectOrCreate?: UserContentProgressCreateOrConnectWithoutUserInput | UserContentProgressCreateOrConnectWithoutUserInput[]
     createMany?: UserContentProgressCreateManyUserInputEnvelope
     connect?: UserContentProgressWhereUniqueInput | UserContentProgressWhereUniqueInput[]
+  }
+
+  export type UserListeningProgressUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput> | UserListeningProgressCreateWithoutUserInput[] | UserListeningProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutUserInput | UserListeningProgressCreateOrConnectWithoutUserInput[]
+    createMany?: UserListeningProgressCreateManyUserInputEnvelope
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -51988,6 +57076,20 @@ export namespace Prisma {
     deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
   }
 
+  export type UserListeningProgressUpdateManyWithoutUserNestedInput = {
+    create?: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput> | UserListeningProgressCreateWithoutUserInput[] | UserListeningProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutUserInput | UserListeningProgressCreateOrConnectWithoutUserInput[]
+    upsert?: UserListeningProgressUpsertWithWhereUniqueWithoutUserInput | UserListeningProgressUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: UserListeningProgressCreateManyUserInputEnvelope
+    set?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    disconnect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    delete?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    update?: UserListeningProgressUpdateWithWhereUniqueWithoutUserInput | UserListeningProgressUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: UserListeningProgressUpdateManyWithWhereWithoutUserInput | UserListeningProgressUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -52150,6 +57252,20 @@ export namespace Prisma {
     update?: UserContentProgressUpdateWithWhereUniqueWithoutUserInput | UserContentProgressUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: UserContentProgressUpdateManyWithWhereWithoutUserInput | UserContentProgressUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: UserContentProgressScalarWhereInput | UserContentProgressScalarWhereInput[]
+  }
+
+  export type UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput> | UserListeningProgressCreateWithoutUserInput[] | UserListeningProgressUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutUserInput | UserListeningProgressCreateOrConnectWithoutUserInput[]
+    upsert?: UserListeningProgressUpsertWithWhereUniqueWithoutUserInput | UserListeningProgressUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: UserListeningProgressCreateManyUserInputEnvelope
+    set?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    disconnect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    delete?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    update?: UserListeningProgressUpdateWithWhereUniqueWithoutUserInput | UserListeningProgressUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: UserListeningProgressUpdateManyWithWhereWithoutUserInput | UserListeningProgressUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutAnalyzedVocabularyInput = {
@@ -52541,11 +57657,25 @@ export namespace Prisma {
     connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
   }
 
+  export type ListeningContentCreateNestedManyWithoutTopicInput = {
+    create?: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput> | ListeningContentCreateWithoutTopicInput[] | ListeningContentUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutTopicInput | ListeningContentCreateOrConnectWithoutTopicInput[]
+    createMany?: ListeningContentCreateManyTopicInputEnvelope
+    connect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+  }
+
   export type ContentItemUncheckedCreateNestedManyWithoutTopicInput = {
     create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
     connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
     createMany?: ContentItemCreateManyTopicInputEnvelope
     connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type ListeningContentUncheckedCreateNestedManyWithoutTopicInput = {
+    create?: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput> | ListeningContentCreateWithoutTopicInput[] | ListeningContentUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutTopicInput | ListeningContentCreateOrConnectWithoutTopicInput[]
+    createMany?: ListeningContentCreateManyTopicInputEnvelope
+    connect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
   }
 
   export type ContentItemUpdateManyWithoutTopicNestedInput = {
@@ -52562,6 +57692,20 @@ export namespace Prisma {
     deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
   }
 
+  export type ListeningContentUpdateManyWithoutTopicNestedInput = {
+    create?: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput> | ListeningContentCreateWithoutTopicInput[] | ListeningContentUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutTopicInput | ListeningContentCreateOrConnectWithoutTopicInput[]
+    upsert?: ListeningContentUpsertWithWhereUniqueWithoutTopicInput | ListeningContentUpsertWithWhereUniqueWithoutTopicInput[]
+    createMany?: ListeningContentCreateManyTopicInputEnvelope
+    set?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    disconnect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    delete?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    connect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    update?: ListeningContentUpdateWithWhereUniqueWithoutTopicInput | ListeningContentUpdateWithWhereUniqueWithoutTopicInput[]
+    updateMany?: ListeningContentUpdateManyWithWhereWithoutTopicInput | ListeningContentUpdateManyWithWhereWithoutTopicInput[]
+    deleteMany?: ListeningContentScalarWhereInput | ListeningContentScalarWhereInput[]
+  }
+
   export type ContentItemUncheckedUpdateManyWithoutTopicNestedInput = {
     create?: XOR<ContentItemCreateWithoutTopicInput, ContentItemUncheckedCreateWithoutTopicInput> | ContentItemCreateWithoutTopicInput[] | ContentItemUncheckedCreateWithoutTopicInput[]
     connectOrCreate?: ContentItemCreateOrConnectWithoutTopicInput | ContentItemCreateOrConnectWithoutTopicInput[]
@@ -52574,6 +57718,20 @@ export namespace Prisma {
     update?: ContentItemUpdateWithWhereUniqueWithoutTopicInput | ContentItemUpdateWithWhereUniqueWithoutTopicInput[]
     updateMany?: ContentItemUpdateManyWithWhereWithoutTopicInput | ContentItemUpdateManyWithWhereWithoutTopicInput[]
     deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type ListeningContentUncheckedUpdateManyWithoutTopicNestedInput = {
+    create?: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput> | ListeningContentCreateWithoutTopicInput[] | ListeningContentUncheckedCreateWithoutTopicInput[]
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutTopicInput | ListeningContentCreateOrConnectWithoutTopicInput[]
+    upsert?: ListeningContentUpsertWithWhereUniqueWithoutTopicInput | ListeningContentUpsertWithWhereUniqueWithoutTopicInput[]
+    createMany?: ListeningContentCreateManyTopicInputEnvelope
+    set?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    disconnect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    delete?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    connect?: ListeningContentWhereUniqueInput | ListeningContentWhereUniqueInput[]
+    update?: ListeningContentUpdateWithWhereUniqueWithoutTopicInput | ListeningContentUpdateWithWhereUniqueWithoutTopicInput[]
+    updateMany?: ListeningContentUpdateManyWithWhereWithoutTopicInput | ListeningContentUpdateManyWithWhereWithoutTopicInput[]
+    deleteMany?: ListeningContentScalarWhereInput | ListeningContentScalarWhereInput[]
   }
 
   export type ContentItemCreateNestedManyWithoutSourceInput = {
@@ -52934,16 +58092,34 @@ export namespace Prisma {
     connect?: ContentItemWhereUniqueInput
   }
 
+  export type ListeningContentCreateNestedOneWithoutQuestionsInput = {
+    create?: XOR<ListeningContentCreateWithoutQuestionsInput, ListeningContentUncheckedCreateWithoutQuestionsInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutQuestionsInput
+    connect?: ListeningContentWhereUniqueInput
+  }
+
   export type EnumQuestionTypeFieldUpdateOperationsInput = {
     set?: $Enums.QuestionType
   }
 
-  export type ContentItemUpdateOneRequiredWithoutQuestionsNestedInput = {
+  export type ContentItemUpdateOneWithoutQuestionsNestedInput = {
     create?: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
     connectOrCreate?: ContentItemCreateOrConnectWithoutQuestionsInput
     upsert?: ContentItemUpsertWithoutQuestionsInput
+    disconnect?: ContentItemWhereInput | boolean
+    delete?: ContentItemWhereInput | boolean
     connect?: ContentItemWhereUniqueInput
     update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutQuestionsInput, ContentItemUpdateWithoutQuestionsInput>, ContentItemUncheckedUpdateWithoutQuestionsInput>
+  }
+
+  export type ListeningContentUpdateOneWithoutQuestionsNestedInput = {
+    create?: XOR<ListeningContentCreateWithoutQuestionsInput, ListeningContentUncheckedCreateWithoutQuestionsInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutQuestionsInput
+    upsert?: ListeningContentUpsertWithoutQuestionsInput
+    disconnect?: ListeningContentWhereInput | boolean
+    delete?: ListeningContentWhereInput | boolean
+    connect?: ListeningContentWhereUniqueInput
+    update?: XOR<XOR<ListeningContentUpdateToOneWithWhereWithoutQuestionsInput, ListeningContentUpdateWithoutQuestionsInput>, ListeningContentUncheckedUpdateWithoutQuestionsInput>
   }
 
   export type ContentItemCreateNestedOneWithoutSrsItemsInput = {
@@ -53000,6 +58176,194 @@ export namespace Prisma {
     upsert?: ContentItemUpsertWithoutImportJobInput
     connect?: ContentItemWhereUniqueInput
     update?: XOR<XOR<ContentItemUpdateToOneWithWhereWithoutImportJobInput, ContentItemUpdateWithoutImportJobInput>, ContentItemUncheckedUpdateWithoutImportJobInput>
+  }
+
+  export type TopicCreateNestedOneWithoutListeningContentInput = {
+    create?: XOR<TopicCreateWithoutListeningContentInput, TopicUncheckedCreateWithoutListeningContentInput>
+    connectOrCreate?: TopicCreateOrConnectWithoutListeningContentInput
+    connect?: TopicWhereUniqueInput
+  }
+
+  export type ListeningSegmentCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput> | ListeningSegmentCreateWithoutListeningContentInput[] | ListeningSegmentUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: ListeningSegmentCreateOrConnectWithoutListeningContentInput | ListeningSegmentCreateOrConnectWithoutListeningContentInput[]
+    createMany?: ListeningSegmentCreateManyListeningContentInputEnvelope
+    connect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+  }
+
+  export type GeneratedQuestionCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput> | GeneratedQuestionCreateWithoutListeningContentInput[] | GeneratedQuestionUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutListeningContentInput | GeneratedQuestionCreateOrConnectWithoutListeningContentInput[]
+    createMany?: GeneratedQuestionCreateManyListeningContentInputEnvelope
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+  }
+
+  export type UserListeningProgressCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput> | UserListeningProgressCreateWithoutListeningContentInput[] | UserListeningProgressUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutListeningContentInput | UserListeningProgressCreateOrConnectWithoutListeningContentInput[]
+    createMany?: UserListeningProgressCreateManyListeningContentInputEnvelope
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+  }
+
+  export type ListeningSegmentUncheckedCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput> | ListeningSegmentCreateWithoutListeningContentInput[] | ListeningSegmentUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: ListeningSegmentCreateOrConnectWithoutListeningContentInput | ListeningSegmentCreateOrConnectWithoutListeningContentInput[]
+    createMany?: ListeningSegmentCreateManyListeningContentInputEnvelope
+    connect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+  }
+
+  export type GeneratedQuestionUncheckedCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput> | GeneratedQuestionCreateWithoutListeningContentInput[] | GeneratedQuestionUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutListeningContentInput | GeneratedQuestionCreateOrConnectWithoutListeningContentInput[]
+    createMany?: GeneratedQuestionCreateManyListeningContentInputEnvelope
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+  }
+
+  export type UserListeningProgressUncheckedCreateNestedManyWithoutListeningContentInput = {
+    create?: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput> | UserListeningProgressCreateWithoutListeningContentInput[] | UserListeningProgressUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutListeningContentInput | UserListeningProgressCreateOrConnectWithoutListeningContentInput[]
+    createMany?: UserListeningProgressCreateManyListeningContentInputEnvelope
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+  }
+
+  export type EnumListeningSourceTypeFieldUpdateOperationsInput = {
+    set?: $Enums.ListeningSourceType
+  }
+
+  export type TopicUpdateOneWithoutListeningContentNestedInput = {
+    create?: XOR<TopicCreateWithoutListeningContentInput, TopicUncheckedCreateWithoutListeningContentInput>
+    connectOrCreate?: TopicCreateOrConnectWithoutListeningContentInput
+    upsert?: TopicUpsertWithoutListeningContentInput
+    disconnect?: TopicWhereInput | boolean
+    delete?: TopicWhereInput | boolean
+    connect?: TopicWhereUniqueInput
+    update?: XOR<XOR<TopicUpdateToOneWithWhereWithoutListeningContentInput, TopicUpdateWithoutListeningContentInput>, TopicUncheckedUpdateWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput> | ListeningSegmentCreateWithoutListeningContentInput[] | ListeningSegmentUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: ListeningSegmentCreateOrConnectWithoutListeningContentInput | ListeningSegmentCreateOrConnectWithoutListeningContentInput[]
+    upsert?: ListeningSegmentUpsertWithWhereUniqueWithoutListeningContentInput | ListeningSegmentUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: ListeningSegmentCreateManyListeningContentInputEnvelope
+    set?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    disconnect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    delete?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    connect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    update?: ListeningSegmentUpdateWithWhereUniqueWithoutListeningContentInput | ListeningSegmentUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: ListeningSegmentUpdateManyWithWhereWithoutListeningContentInput | ListeningSegmentUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: ListeningSegmentScalarWhereInput | ListeningSegmentScalarWhereInput[]
+  }
+
+  export type GeneratedQuestionUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput> | GeneratedQuestionCreateWithoutListeningContentInput[] | GeneratedQuestionUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutListeningContentInput | GeneratedQuestionCreateOrConnectWithoutListeningContentInput[]
+    upsert?: GeneratedQuestionUpsertWithWhereUniqueWithoutListeningContentInput | GeneratedQuestionUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: GeneratedQuestionCreateManyListeningContentInputEnvelope
+    set?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    disconnect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    delete?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    update?: GeneratedQuestionUpdateWithWhereUniqueWithoutListeningContentInput | GeneratedQuestionUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: GeneratedQuestionUpdateManyWithWhereWithoutListeningContentInput | GeneratedQuestionUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+  }
+
+  export type UserListeningProgressUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput> | UserListeningProgressCreateWithoutListeningContentInput[] | UserListeningProgressUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutListeningContentInput | UserListeningProgressCreateOrConnectWithoutListeningContentInput[]
+    upsert?: UserListeningProgressUpsertWithWhereUniqueWithoutListeningContentInput | UserListeningProgressUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: UserListeningProgressCreateManyListeningContentInputEnvelope
+    set?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    disconnect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    delete?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    update?: UserListeningProgressUpdateWithWhereUniqueWithoutListeningContentInput | UserListeningProgressUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: UserListeningProgressUpdateManyWithWhereWithoutListeningContentInput | UserListeningProgressUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
+  }
+
+  export type ListeningSegmentUncheckedUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput> | ListeningSegmentCreateWithoutListeningContentInput[] | ListeningSegmentUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: ListeningSegmentCreateOrConnectWithoutListeningContentInput | ListeningSegmentCreateOrConnectWithoutListeningContentInput[]
+    upsert?: ListeningSegmentUpsertWithWhereUniqueWithoutListeningContentInput | ListeningSegmentUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: ListeningSegmentCreateManyListeningContentInputEnvelope
+    set?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    disconnect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    delete?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    connect?: ListeningSegmentWhereUniqueInput | ListeningSegmentWhereUniqueInput[]
+    update?: ListeningSegmentUpdateWithWhereUniqueWithoutListeningContentInput | ListeningSegmentUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: ListeningSegmentUpdateManyWithWhereWithoutListeningContentInput | ListeningSegmentUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: ListeningSegmentScalarWhereInput | ListeningSegmentScalarWhereInput[]
+  }
+
+  export type GeneratedQuestionUncheckedUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput> | GeneratedQuestionCreateWithoutListeningContentInput[] | GeneratedQuestionUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: GeneratedQuestionCreateOrConnectWithoutListeningContentInput | GeneratedQuestionCreateOrConnectWithoutListeningContentInput[]
+    upsert?: GeneratedQuestionUpsertWithWhereUniqueWithoutListeningContentInput | GeneratedQuestionUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: GeneratedQuestionCreateManyListeningContentInputEnvelope
+    set?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    disconnect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    delete?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    connect?: GeneratedQuestionWhereUniqueInput | GeneratedQuestionWhereUniqueInput[]
+    update?: GeneratedQuestionUpdateWithWhereUniqueWithoutListeningContentInput | GeneratedQuestionUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: GeneratedQuestionUpdateManyWithWhereWithoutListeningContentInput | GeneratedQuestionUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
+  }
+
+  export type UserListeningProgressUncheckedUpdateManyWithoutListeningContentNestedInput = {
+    create?: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput> | UserListeningProgressCreateWithoutListeningContentInput[] | UserListeningProgressUncheckedCreateWithoutListeningContentInput[]
+    connectOrCreate?: UserListeningProgressCreateOrConnectWithoutListeningContentInput | UserListeningProgressCreateOrConnectWithoutListeningContentInput[]
+    upsert?: UserListeningProgressUpsertWithWhereUniqueWithoutListeningContentInput | UserListeningProgressUpsertWithWhereUniqueWithoutListeningContentInput[]
+    createMany?: UserListeningProgressCreateManyListeningContentInputEnvelope
+    set?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    disconnect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    delete?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    connect?: UserListeningProgressWhereUniqueInput | UserListeningProgressWhereUniqueInput[]
+    update?: UserListeningProgressUpdateWithWhereUniqueWithoutListeningContentInput | UserListeningProgressUpdateWithWhereUniqueWithoutListeningContentInput[]
+    updateMany?: UserListeningProgressUpdateManyWithWhereWithoutListeningContentInput | UserListeningProgressUpdateManyWithWhereWithoutListeningContentInput[]
+    deleteMany?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
+  }
+
+  export type ListeningContentCreateNestedOneWithoutSegmentsInput = {
+    create?: XOR<ListeningContentCreateWithoutSegmentsInput, ListeningContentUncheckedCreateWithoutSegmentsInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutSegmentsInput
+    connect?: ListeningContentWhereUniqueInput
+  }
+
+  export type ListeningContentUpdateOneRequiredWithoutSegmentsNestedInput = {
+    create?: XOR<ListeningContentCreateWithoutSegmentsInput, ListeningContentUncheckedCreateWithoutSegmentsInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutSegmentsInput
+    upsert?: ListeningContentUpsertWithoutSegmentsInput
+    connect?: ListeningContentWhereUniqueInput
+    update?: XOR<XOR<ListeningContentUpdateToOneWithWhereWithoutSegmentsInput, ListeningContentUpdateWithoutSegmentsInput>, ListeningContentUncheckedUpdateWithoutSegmentsInput>
+  }
+
+  export type UserCreateNestedOneWithoutListeningProgressInput = {
+    create?: XOR<UserCreateWithoutListeningProgressInput, UserUncheckedCreateWithoutListeningProgressInput>
+    connectOrCreate?: UserCreateOrConnectWithoutListeningProgressInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type ListeningContentCreateNestedOneWithoutUserProgressInput = {
+    create?: XOR<ListeningContentCreateWithoutUserProgressInput, ListeningContentUncheckedCreateWithoutUserProgressInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutUserProgressInput
+    connect?: ListeningContentWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutListeningProgressNestedInput = {
+    create?: XOR<UserCreateWithoutListeningProgressInput, UserUncheckedCreateWithoutListeningProgressInput>
+    connectOrCreate?: UserCreateOrConnectWithoutListeningProgressInput
+    upsert?: UserUpsertWithoutListeningProgressInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutListeningProgressInput, UserUpdateWithoutListeningProgressInput>, UserUncheckedUpdateWithoutListeningProgressInput>
+  }
+
+  export type ListeningContentUpdateOneRequiredWithoutUserProgressNestedInput = {
+    create?: XOR<ListeningContentCreateWithoutUserProgressInput, ListeningContentUncheckedCreateWithoutUserProgressInput>
+    connectOrCreate?: ListeningContentCreateOrConnectWithoutUserProgressInput
+    upsert?: ListeningContentUpsertWithoutUserProgressInput
+    connect?: ListeningContentWhereUniqueInput
+    update?: XOR<XOR<ListeningContentUpdateToOneWithWhereWithoutUserProgressInput, ListeningContentUpdateWithoutUserProgressInput>, ListeningContentUncheckedUpdateWithoutUserProgressInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -53472,6 +58836,23 @@ export namespace Prisma {
     _max?: NestedEnumQuestionTypeFilter<$PrismaModel>
   }
 
+  export type NestedEnumListeningSourceTypeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ListeningSourceType | EnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumListeningSourceTypeFilter<$PrismaModel> | $Enums.ListeningSourceType
+  }
+
+  export type NestedEnumListeningSourceTypeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ListeningSourceType | EnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    in?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ListeningSourceType[] | ListEnumListeningSourceTypeFieldRefInput<$PrismaModel>
+    not?: NestedEnumListeningSourceTypeWithAggregatesFilter<$PrismaModel> | $Enums.ListeningSourceType
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumListeningSourceTypeFilter<$PrismaModel>
+    _max?: NestedEnumListeningSourceTypeFilter<$PrismaModel>
+  }
+
   export type AnalyzedVocabularyCreateWithoutUserInput = {
     id?: string
     word: string
@@ -53929,6 +59310,40 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type UserListeningProgressCreateWithoutUserInput = {
+    id?: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    listeningContent: ListeningContentCreateNestedOneWithoutUserProgressInput
+  }
+
+  export type UserListeningProgressUncheckedCreateWithoutUserInput = {
+    id?: string
+    listeningContentId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserListeningProgressCreateOrConnectWithoutUserInput = {
+    where: UserListeningProgressWhereUniqueInput
+    create: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput>
+  }
+
+  export type UserListeningProgressCreateManyUserInputEnvelope = {
+    data: UserListeningProgressCreateManyUserInput | UserListeningProgressCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
   export type AnalyzedVocabularyUpsertWithWhereUniqueWithoutUserInput = {
     where: AnalyzedVocabularyWhereUniqueInput
     update: XOR<AnalyzedVocabularyUpdateWithoutUserInput, AnalyzedVocabularyUncheckedUpdateWithoutUserInput>
@@ -54343,6 +59758,38 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"UserContentProgress"> | Date | string
   }
 
+  export type UserListeningProgressUpsertWithWhereUniqueWithoutUserInput = {
+    where: UserListeningProgressWhereUniqueInput
+    update: XOR<UserListeningProgressUpdateWithoutUserInput, UserListeningProgressUncheckedUpdateWithoutUserInput>
+    create: XOR<UserListeningProgressCreateWithoutUserInput, UserListeningProgressUncheckedCreateWithoutUserInput>
+  }
+
+  export type UserListeningProgressUpdateWithWhereUniqueWithoutUserInput = {
+    where: UserListeningProgressWhereUniqueInput
+    data: XOR<UserListeningProgressUpdateWithoutUserInput, UserListeningProgressUncheckedUpdateWithoutUserInput>
+  }
+
+  export type UserListeningProgressUpdateManyWithWhereWithoutUserInput = {
+    where: UserListeningProgressScalarWhereInput
+    data: XOR<UserListeningProgressUpdateManyMutationInput, UserListeningProgressUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type UserListeningProgressScalarWhereInput = {
+    AND?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
+    OR?: UserListeningProgressScalarWhereInput[]
+    NOT?: UserListeningProgressScalarWhereInput | UserListeningProgressScalarWhereInput[]
+    id?: StringFilter<"UserListeningProgress"> | string
+    userId?: StringFilter<"UserListeningProgress"> | string
+    listeningContentId?: StringFilter<"UserListeningProgress"> | string
+    status?: StringFilter<"UserListeningProgress"> | string
+    lastSegmentIndex?: IntFilter<"UserListeningProgress"> | number
+    totalListens?: IntFilter<"UserListeningProgress"> | number
+    quizScore?: IntNullableFilter<"UserListeningProgress"> | number | null
+    quizAttempts?: IntFilter<"UserListeningProgress"> | number
+    createdAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+    updatedAt?: DateTimeFilter<"UserListeningProgress"> | Date | string
+  }
+
   export type UserCreateWithoutAnalyzedVocabularyInput = {
     id?: string
     email: string
@@ -54382,6 +59829,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAnalyzedVocabularyInput = {
@@ -54423,6 +59871,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAnalyzedVocabularyInput = {
@@ -54480,6 +59929,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAnalyzedVocabularyInput = {
@@ -54521,6 +59971,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type LessonCreateWithoutCourseInput = {
@@ -54861,6 +60312,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPlacementTestAttemptInput = {
@@ -54902,6 +60354,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPlacementTestAttemptInput = {
@@ -54988,6 +60441,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPlacementTestAttemptInput = {
@@ -55029,6 +60483,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutUserFlashcardInput = {
@@ -55070,6 +60525,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserFlashcardInput = {
@@ -55111,6 +60567,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserFlashcardInput = {
@@ -55168,6 +60625,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserFlashcardInput = {
@@ -55209,6 +60667,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type LessonCreateWithoutUserLessonProgressInput = {
@@ -55287,6 +60746,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserLessonProgressInput = {
@@ -55328,6 +60788,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserLessonProgressInput = {
@@ -55428,6 +60889,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserLessonProgressInput = {
@@ -55469,6 +60931,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutSubscriptionsInput = {
@@ -55510,6 +60973,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutSubscriptionsInput = {
@@ -55551,6 +61015,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutSubscriptionsInput = {
@@ -55608,6 +61073,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSubscriptionsInput = {
@@ -55649,6 +61115,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutPaymentsInput = {
@@ -55690,6 +61157,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPaymentsInput = {
@@ -55731,6 +61199,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPaymentsInput = {
@@ -55788,6 +61257,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPaymentsInput = {
@@ -55829,6 +61299,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutCreditTransactionsInput = {
@@ -55870,6 +61341,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutCreditTransactionsInput = {
@@ -55911,6 +61383,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutCreditTransactionsInput = {
@@ -55968,6 +61441,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutCreditTransactionsInput = {
@@ -56009,6 +61483,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutVocabulariesInput = {
@@ -56050,6 +61525,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutVocabulariesInput = {
@@ -56091,6 +61567,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutVocabulariesInput = {
@@ -56148,6 +61625,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutVocabulariesInput = {
@@ -56189,6 +61667,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutUserPackProgressInput = {
@@ -56230,6 +61709,7 @@ export namespace Prisma {
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutUserPackProgressInput = {
@@ -56271,6 +61751,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutUserPackProgressInput = {
@@ -56328,6 +61809,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserPackProgressInput = {
@@ -56369,6 +61851,7 @@ export namespace Prisma {
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutLearningStatsInput = {
@@ -56410,6 +61893,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLearningStatsInput = {
@@ -56451,6 +61935,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLearningStatsInput = {
@@ -56508,6 +61993,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLearningStatsInput = {
@@ -56549,6 +62035,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutAuditLogsInput = {
@@ -56590,6 +62077,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAuditLogsInput = {
@@ -56631,6 +62119,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAuditLogsInput = {
@@ -56688,6 +62177,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAuditLogsInput = {
@@ -56729,6 +62219,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ContentItemCreateWithoutTopicInput = {
@@ -56799,6 +62290,60 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type ListeningContentCreateWithoutTopicInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    segments?: ListeningSegmentCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUncheckedCreateWithoutTopicInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    segments?: ListeningSegmentUncheckedCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentCreateOrConnectWithoutTopicInput = {
+    where: ListeningContentWhereUniqueInput
+    create: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput>
+  }
+
+  export type ListeningContentCreateManyTopicInputEnvelope = {
+    data: ListeningContentCreateManyTopicInput | ListeningContentCreateManyTopicInput[]
+    skipDuplicates?: boolean
+  }
+
   export type ContentItemUpsertWithWhereUniqueWithoutTopicInput = {
     where: ContentItemWhereUniqueInput
     update: XOR<ContentItemUpdateWithoutTopicInput, ContentItemUncheckedUpdateWithoutTopicInput>
@@ -56840,6 +62385,45 @@ export namespace Prisma {
     publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
     createdAt?: DateTimeFilter<"ContentItem"> | Date | string
     updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
+  }
+
+  export type ListeningContentUpsertWithWhereUniqueWithoutTopicInput = {
+    where: ListeningContentWhereUniqueInput
+    update: XOR<ListeningContentUpdateWithoutTopicInput, ListeningContentUncheckedUpdateWithoutTopicInput>
+    create: XOR<ListeningContentCreateWithoutTopicInput, ListeningContentUncheckedCreateWithoutTopicInput>
+  }
+
+  export type ListeningContentUpdateWithWhereUniqueWithoutTopicInput = {
+    where: ListeningContentWhereUniqueInput
+    data: XOR<ListeningContentUpdateWithoutTopicInput, ListeningContentUncheckedUpdateWithoutTopicInput>
+  }
+
+  export type ListeningContentUpdateManyWithWhereWithoutTopicInput = {
+    where: ListeningContentScalarWhereInput
+    data: XOR<ListeningContentUpdateManyMutationInput, ListeningContentUncheckedUpdateManyWithoutTopicInput>
+  }
+
+  export type ListeningContentScalarWhereInput = {
+    AND?: ListeningContentScalarWhereInput | ListeningContentScalarWhereInput[]
+    OR?: ListeningContentScalarWhereInput[]
+    NOT?: ListeningContentScalarWhereInput | ListeningContentScalarWhereInput[]
+    id?: StringFilter<"ListeningContent"> | string
+    title?: StringFilter<"ListeningContent"> | string
+    titleZh?: StringFilter<"ListeningContent"> | string
+    description?: StringNullableFilter<"ListeningContent"> | string | null
+    descriptionZh?: StringNullableFilter<"ListeningContent"> | string | null
+    imageUrl?: StringNullableFilter<"ListeningContent"> | string | null
+    sourceType?: EnumListeningSourceTypeFilter<"ListeningContent"> | $Enums.ListeningSourceType
+    audioUrl?: StringFilter<"ListeningContent"> | string
+    audioS3Key?: StringNullableFilter<"ListeningContent"> | string | null
+    duration?: IntNullableFilter<"ListeningContent"> | number | null
+    transcript?: StringFilter<"ListeningContent"> | string
+    topicId?: StringNullableFilter<"ListeningContent"> | string | null
+    jlptLevel?: StringFilter<"ListeningContent"> | string
+    status?: EnumContentStatusFilter<"ListeningContent"> | $Enums.ContentStatus
+    publishedAt?: DateTimeNullableFilter<"ListeningContent"> | Date | string | null
+    createdAt?: DateTimeFilter<"ListeningContent"> | Date | string
+    updatedAt?: DateTimeFilter<"ListeningContent"> | Date | string
   }
 
   export type ContentItemCreateWithoutSourceInput = {
@@ -56960,6 +62544,7 @@ export namespace Prisma {
     sortOrder?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    listeningContent?: ListeningContentCreateNestedManyWithoutTopicInput
   }
 
   export type TopicUncheckedCreateWithoutContentInput = {
@@ -56971,6 +62556,7 @@ export namespace Prisma {
     sortOrder?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    listeningContent?: ListeningContentUncheckedCreateNestedManyWithoutTopicInput
   }
 
   export type TopicCreateOrConnectWithoutContentInput = {
@@ -57047,11 +62633,14 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
+    listeningContent?: ListeningContentCreateNestedOneWithoutQuestionsInput
   }
 
   export type GeneratedQuestionUncheckedCreateWithoutContentItemInput = {
     id?: string
+    listeningContentId?: string | null
     type: $Enums.QuestionType
     prompt: string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -57059,6 +62648,7 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
@@ -57222,6 +62812,7 @@ export namespace Prisma {
     sortOrder?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    listeningContent?: ListeningContentUpdateManyWithoutTopicNestedInput
   }
 
   export type TopicUncheckedUpdateWithoutContentInput = {
@@ -57233,6 +62824,7 @@ export namespace Prisma {
     sortOrder?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    listeningContent?: ListeningContentUncheckedUpdateManyWithoutTopicNestedInput
   }
 
   export type ContentSectionUpsertWithWhereUniqueWithoutContentItemInput = {
@@ -57316,7 +62908,8 @@ export namespace Prisma {
     OR?: GeneratedQuestionScalarWhereInput[]
     NOT?: GeneratedQuestionScalarWhereInput | GeneratedQuestionScalarWhereInput[]
     id?: StringFilter<"GeneratedQuestion"> | string
-    contentItemId?: StringFilter<"GeneratedQuestion"> | string
+    contentItemId?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    listeningContentId?: StringNullableFilter<"GeneratedQuestion"> | string | null
     type?: EnumQuestionTypeFilter<"GeneratedQuestion"> | $Enums.QuestionType
     prompt?: StringFilter<"GeneratedQuestion"> | string
     options?: JsonNullableFilter<"GeneratedQuestion">
@@ -57324,6 +62917,7 @@ export namespace Prisma {
     explanation?: StringFilter<"GeneratedQuestion"> | string
     explanationWrong?: JsonNullableFilter<"GeneratedQuestion">
     jlptLevel?: StringNullableFilter<"GeneratedQuestion"> | string | null
+    audioClip?: JsonNullableFilter<"GeneratedQuestion">
     createdAt?: DateTimeFilter<"GeneratedQuestion"> | Date | string
   }
 
@@ -57738,6 +63332,55 @@ export namespace Prisma {
     create: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
   }
 
+  export type ListeningContentCreateWithoutQuestionsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    topic?: TopicCreateNestedOneWithoutListeningContentInput
+    segments?: ListeningSegmentCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUncheckedCreateWithoutQuestionsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    topicId?: string | null
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    segments?: ListeningSegmentUncheckedCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentCreateOrConnectWithoutQuestionsInput = {
+    where: ListeningContentWhereUniqueInput
+    create: XOR<ListeningContentCreateWithoutQuestionsInput, ListeningContentUncheckedCreateWithoutQuestionsInput>
+  }
+
   export type ContentItemUpsertWithoutQuestionsInput = {
     update: XOR<ContentItemUpdateWithoutQuestionsInput, ContentItemUncheckedUpdateWithoutQuestionsInput>
     create: XOR<ContentItemCreateWithoutQuestionsInput, ContentItemUncheckedCreateWithoutQuestionsInput>
@@ -57805,6 +63448,61 @@ export namespace Prisma {
     srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
     userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
     importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ListeningContentUpsertWithoutQuestionsInput = {
+    update: XOR<ListeningContentUpdateWithoutQuestionsInput, ListeningContentUncheckedUpdateWithoutQuestionsInput>
+    create: XOR<ListeningContentCreateWithoutQuestionsInput, ListeningContentUncheckedCreateWithoutQuestionsInput>
+    where?: ListeningContentWhereInput
+  }
+
+  export type ListeningContentUpdateToOneWithWhereWithoutQuestionsInput = {
+    where?: ListeningContentWhereInput
+    data: XOR<ListeningContentUpdateWithoutQuestionsInput, ListeningContentUncheckedUpdateWithoutQuestionsInput>
+  }
+
+  export type ListeningContentUpdateWithoutQuestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    topic?: TopicUpdateOneWithoutListeningContentNestedInput
+    segments?: ListeningSegmentUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateWithoutQuestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    segments?: ListeningSegmentUncheckedUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUncheckedUpdateManyWithoutListeningContentNestedInput
   }
 
   export type ContentItemCreateWithoutSrsItemsInput = {
@@ -57978,6 +63676,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutContentProgressInput = {
@@ -58019,6 +63718,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
     learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
     auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutContentProgressInput = {
@@ -58139,6 +63839,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutContentProgressInput = {
@@ -58180,6 +63881,7 @@ export namespace Prisma {
     userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
     learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
     auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ContentItemUpsertWithoutUserProgressInput = {
@@ -58383,6 +64085,623 @@ export namespace Prisma {
     userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
   }
 
+  export type TopicCreateWithoutListeningContentInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemCreateNestedManyWithoutTopicInput
+  }
+
+  export type TopicUncheckedCreateWithoutListeningContentInput = {
+    id?: string
+    name: string
+    nameZh: string
+    nameJa?: string
+    icon?: string
+    sortOrder?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    content?: ContentItemUncheckedCreateNestedManyWithoutTopicInput
+  }
+
+  export type TopicCreateOrConnectWithoutListeningContentInput = {
+    where: TopicWhereUniqueInput
+    create: XOR<TopicCreateWithoutListeningContentInput, TopicUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentCreateWithoutListeningContentInput = {
+    id?: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+  }
+
+  export type ListeningSegmentUncheckedCreateWithoutListeningContentInput = {
+    id?: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+  }
+
+  export type ListeningSegmentCreateOrConnectWithoutListeningContentInput = {
+    where: ListeningSegmentWhereUniqueInput
+    create: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentCreateManyListeningContentInputEnvelope = {
+    data: ListeningSegmentCreateManyListeningContentInput | ListeningSegmentCreateManyListeningContentInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GeneratedQuestionCreateWithoutListeningContentInput = {
+    id?: string
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    contentItem?: ContentItemCreateNestedOneWithoutQuestionsInput
+  }
+
+  export type GeneratedQuestionUncheckedCreateWithoutListeningContentInput = {
+    id?: string
+    contentItemId?: string | null
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+  }
+
+  export type GeneratedQuestionCreateOrConnectWithoutListeningContentInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    create: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type GeneratedQuestionCreateManyListeningContentInputEnvelope = {
+    data: GeneratedQuestionCreateManyListeningContentInput | GeneratedQuestionCreateManyListeningContentInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserListeningProgressCreateWithoutListeningContentInput = {
+    id?: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutListeningProgressInput
+  }
+
+  export type UserListeningProgressUncheckedCreateWithoutListeningContentInput = {
+    id?: string
+    userId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserListeningProgressCreateOrConnectWithoutListeningContentInput = {
+    where: UserListeningProgressWhereUniqueInput
+    create: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type UserListeningProgressCreateManyListeningContentInputEnvelope = {
+    data: UserListeningProgressCreateManyListeningContentInput | UserListeningProgressCreateManyListeningContentInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type TopicUpsertWithoutListeningContentInput = {
+    update: XOR<TopicUpdateWithoutListeningContentInput, TopicUncheckedUpdateWithoutListeningContentInput>
+    create: XOR<TopicCreateWithoutListeningContentInput, TopicUncheckedCreateWithoutListeningContentInput>
+    where?: TopicWhereInput
+  }
+
+  export type TopicUpdateToOneWithWhereWithoutListeningContentInput = {
+    where?: TopicWhereInput
+    data: XOR<TopicUpdateWithoutListeningContentInput, TopicUncheckedUpdateWithoutListeningContentInput>
+  }
+
+  export type TopicUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUpdateManyWithoutTopicNestedInput
+  }
+
+  export type TopicUncheckedUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    nameZh?: StringFieldUpdateOperationsInput | string
+    nameJa?: StringFieldUpdateOperationsInput | string
+    icon?: StringFieldUpdateOperationsInput | string
+    sortOrder?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    content?: ContentItemUncheckedUpdateManyWithoutTopicNestedInput
+  }
+
+  export type ListeningSegmentUpsertWithWhereUniqueWithoutListeningContentInput = {
+    where: ListeningSegmentWhereUniqueInput
+    update: XOR<ListeningSegmentUpdateWithoutListeningContentInput, ListeningSegmentUncheckedUpdateWithoutListeningContentInput>
+    create: XOR<ListeningSegmentCreateWithoutListeningContentInput, ListeningSegmentUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentUpdateWithWhereUniqueWithoutListeningContentInput = {
+    where: ListeningSegmentWhereUniqueInput
+    data: XOR<ListeningSegmentUpdateWithoutListeningContentInput, ListeningSegmentUncheckedUpdateWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentUpdateManyWithWhereWithoutListeningContentInput = {
+    where: ListeningSegmentScalarWhereInput
+    data: XOR<ListeningSegmentUpdateManyMutationInput, ListeningSegmentUncheckedUpdateManyWithoutListeningContentInput>
+  }
+
+  export type ListeningSegmentScalarWhereInput = {
+    AND?: ListeningSegmentScalarWhereInput | ListeningSegmentScalarWhereInput[]
+    OR?: ListeningSegmentScalarWhereInput[]
+    NOT?: ListeningSegmentScalarWhereInput | ListeningSegmentScalarWhereInput[]
+    id?: StringFilter<"ListeningSegment"> | string
+    listeningContentId?: StringFilter<"ListeningSegment"> | string
+    orderIndex?: IntFilter<"ListeningSegment"> | number
+    text?: StringFilter<"ListeningSegment"> | string
+    translationZh?: StringNullableFilter<"ListeningSegment"> | string | null
+    startTime?: FloatFilter<"ListeningSegment"> | number
+    endTime?: FloatFilter<"ListeningSegment"> | number
+  }
+
+  export type GeneratedQuestionUpsertWithWhereUniqueWithoutListeningContentInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    update: XOR<GeneratedQuestionUpdateWithoutListeningContentInput, GeneratedQuestionUncheckedUpdateWithoutListeningContentInput>
+    create: XOR<GeneratedQuestionCreateWithoutListeningContentInput, GeneratedQuestionUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type GeneratedQuestionUpdateWithWhereUniqueWithoutListeningContentInput = {
+    where: GeneratedQuestionWhereUniqueInput
+    data: XOR<GeneratedQuestionUpdateWithoutListeningContentInput, GeneratedQuestionUncheckedUpdateWithoutListeningContentInput>
+  }
+
+  export type GeneratedQuestionUpdateManyWithWhereWithoutListeningContentInput = {
+    where: GeneratedQuestionScalarWhereInput
+    data: XOR<GeneratedQuestionUpdateManyMutationInput, GeneratedQuestionUncheckedUpdateManyWithoutListeningContentInput>
+  }
+
+  export type UserListeningProgressUpsertWithWhereUniqueWithoutListeningContentInput = {
+    where: UserListeningProgressWhereUniqueInput
+    update: XOR<UserListeningProgressUpdateWithoutListeningContentInput, UserListeningProgressUncheckedUpdateWithoutListeningContentInput>
+    create: XOR<UserListeningProgressCreateWithoutListeningContentInput, UserListeningProgressUncheckedCreateWithoutListeningContentInput>
+  }
+
+  export type UserListeningProgressUpdateWithWhereUniqueWithoutListeningContentInput = {
+    where: UserListeningProgressWhereUniqueInput
+    data: XOR<UserListeningProgressUpdateWithoutListeningContentInput, UserListeningProgressUncheckedUpdateWithoutListeningContentInput>
+  }
+
+  export type UserListeningProgressUpdateManyWithWhereWithoutListeningContentInput = {
+    where: UserListeningProgressScalarWhereInput
+    data: XOR<UserListeningProgressUpdateManyMutationInput, UserListeningProgressUncheckedUpdateManyWithoutListeningContentInput>
+  }
+
+  export type ListeningContentCreateWithoutSegmentsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    topic?: TopicCreateNestedOneWithoutListeningContentInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUncheckedCreateWithoutSegmentsInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    topicId?: string | null
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutListeningContentInput
+    userProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentCreateOrConnectWithoutSegmentsInput = {
+    where: ListeningContentWhereUniqueInput
+    create: XOR<ListeningContentCreateWithoutSegmentsInput, ListeningContentUncheckedCreateWithoutSegmentsInput>
+  }
+
+  export type ListeningContentUpsertWithoutSegmentsInput = {
+    update: XOR<ListeningContentUpdateWithoutSegmentsInput, ListeningContentUncheckedUpdateWithoutSegmentsInput>
+    create: XOR<ListeningContentCreateWithoutSegmentsInput, ListeningContentUncheckedCreateWithoutSegmentsInput>
+    where?: ListeningContentWhereInput
+  }
+
+  export type ListeningContentUpdateToOneWithWhereWithoutSegmentsInput = {
+    where?: ListeningContentWhereInput
+    data: XOR<ListeningContentUpdateWithoutSegmentsInput, ListeningContentUncheckedUpdateWithoutSegmentsInput>
+  }
+
+  export type ListeningContentUpdateWithoutSegmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    topic?: TopicUpdateOneWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateWithoutSegmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUncheckedUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type UserCreateWithoutListeningProgressInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressCreateNestedManyWithoutUserInput
+    payments?: PaymentCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutListeningProgressInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardUncheckedCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressUncheckedCreateNestedManyWithoutUserInput
+    payments?: PaymentUncheckedCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionUncheckedCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutListeningProgressInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutListeningProgressInput, UserUncheckedCreateWithoutListeningProgressInput>
+  }
+
+  export type ListeningContentCreateWithoutUserProgressInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    topic?: TopicCreateNestedOneWithoutListeningContentInput
+    segments?: ListeningSegmentCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentUncheckedCreateWithoutUserProgressInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    topicId?: string | null
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    segments?: ListeningSegmentUncheckedCreateNestedManyWithoutListeningContentInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutListeningContentInput
+  }
+
+  export type ListeningContentCreateOrConnectWithoutUserProgressInput = {
+    where: ListeningContentWhereUniqueInput
+    create: XOR<ListeningContentCreateWithoutUserProgressInput, ListeningContentUncheckedCreateWithoutUserProgressInput>
+  }
+
+  export type UserUpsertWithoutListeningProgressInput = {
+    update: XOR<UserUpdateWithoutListeningProgressInput, UserUncheckedUpdateWithoutListeningProgressInput>
+    create: XOR<UserCreateWithoutListeningProgressInput, UserUncheckedCreateWithoutListeningProgressInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutListeningProgressInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutListeningProgressInput, UserUncheckedUpdateWithoutListeningProgressInput>
+  }
+
+  export type UserUpdateWithoutListeningProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUpdateManyWithoutUserNestedInput
+    payments?: PaymentUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutListeningProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUncheckedUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUncheckedUpdateManyWithoutUserNestedInput
+    payments?: PaymentUncheckedUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUncheckedUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ListeningContentUpsertWithoutUserProgressInput = {
+    update: XOR<ListeningContentUpdateWithoutUserProgressInput, ListeningContentUncheckedUpdateWithoutUserProgressInput>
+    create: XOR<ListeningContentCreateWithoutUserProgressInput, ListeningContentUncheckedCreateWithoutUserProgressInput>
+    where?: ListeningContentWhereInput
+  }
+
+  export type ListeningContentUpdateToOneWithWhereWithoutUserProgressInput = {
+    where?: ListeningContentWhereInput
+    data: XOR<ListeningContentUpdateWithoutUserProgressInput, ListeningContentUncheckedUpdateWithoutUserProgressInput>
+  }
+
+  export type ListeningContentUpdateWithoutUserProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    topic?: TopicUpdateOneWithoutListeningContentNestedInput
+    segments?: ListeningSegmentUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateWithoutUserProgressInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    segments?: ListeningSegmentUncheckedUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutListeningContentNestedInput
+  }
+
   export type AnalyzedVocabularyCreateManyUserInput = {
     id?: string
     word: string
@@ -58534,6 +64853,18 @@ export namespace Prisma {
     status?: string
     lastSectionIndex?: number
     savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type UserListeningProgressCreateManyUserInput = {
+    id?: string
+    listeningContentId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
     quizScore?: number | null
     quizAttempts?: number
     createdAt?: Date | string
@@ -59013,6 +65344,42 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserListeningProgressUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    listeningContent?: ListeningContentUpdateOneRequiredWithoutUserProgressNestedInput
+  }
+
+  export type UserListeningProgressUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserListeningProgressUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type LessonCreateManyCourseInput = {
     id?: string
     lessonNumber: number
@@ -59190,6 +65557,25 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
+  export type ListeningContentCreateManyTopicInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    description?: string | null
+    descriptionZh?: string | null
+    imageUrl?: string | null
+    sourceType: $Enums.ListeningSourceType
+    audioUrl?: string
+    audioS3Key?: string | null
+    duration?: number | null
+    transcript: string
+    jlptLevel?: string
+    status?: $Enums.ContentStatus
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
   export type ContentItemUpdateWithoutTopicInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
@@ -59266,6 +65652,69 @@ export namespace Prisma {
     estimatedMinutes?: IntFieldUpdateOperationsInput | number
     extractedVocab?: NullableJsonNullValueInput | InputJsonValue
     extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ListeningContentUpdateWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    segments?: ListeningSegmentUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    segments?: ListeningSegmentUncheckedUpdateManyWithoutListeningContentNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutListeningContentNestedInput
+    userProgress?: UserListeningProgressUncheckedUpdateManyWithoutListeningContentNestedInput
+  }
+
+  export type ListeningContentUncheckedUpdateManyWithoutTopicInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    descriptionZh?: NullableStringFieldUpdateOperationsInput | string | null
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    sourceType?: EnumListeningSourceTypeFieldUpdateOperationsInput | $Enums.ListeningSourceType
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    audioS3Key?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableIntFieldUpdateOperationsInput | number | null
+    transcript?: StringFieldUpdateOperationsInput | string
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -59397,6 +65846,7 @@ export namespace Prisma {
 
   export type GeneratedQuestionCreateManyContentItemInput = {
     id?: string
+    listeningContentId?: string | null
     type: $Enums.QuestionType
     prompt: string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -59404,6 +65854,7 @@ export namespace Prisma {
     explanation: string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
@@ -59501,11 +65952,14 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    listeningContent?: ListeningContentUpdateOneWithoutQuestionsNestedInput
   }
 
   export type GeneratedQuestionUncheckedUpdateWithoutContentItemInput = {
     id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
     prompt?: StringFieldUpdateOperationsInput | string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -59513,11 +65967,13 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type GeneratedQuestionUncheckedUpdateManyWithoutContentItemInput = {
     id?: StringFieldUpdateOperationsInput | string
+    listeningContentId?: NullableStringFieldUpdateOperationsInput | string | null
     type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
     prompt?: StringFieldUpdateOperationsInput | string
     options?: NullableJsonNullValueInput | InputJsonValue
@@ -59525,6 +65981,7 @@ export namespace Prisma {
     explanation?: StringFieldUpdateOperationsInput | string
     explanationWrong?: NullableJsonNullValueInput | InputJsonValue
     jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -59597,6 +66054,146 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     lastSectionIndex?: IntFieldUpdateOperationsInput | number
     savedWords?: JsonNullValueInput | InputJsonValue
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ListeningSegmentCreateManyListeningContentInput = {
+    id?: string
+    orderIndex: number
+    text: string
+    translationZh?: string | null
+    startTime: number
+    endTime: number
+  }
+
+  export type GeneratedQuestionCreateManyListeningContentInput = {
+    id?: string
+    contentItemId?: string | null
+    type: $Enums.QuestionType
+    prompt: string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer: string
+    explanation: string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+  }
+
+  export type UserListeningProgressCreateManyListeningContentInput = {
+    id?: string
+    userId: string
+    status?: string
+    lastSegmentIndex?: number
+    totalListens?: number
+    quizScore?: number | null
+    quizAttempts?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ListeningSegmentUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type ListeningSegmentUncheckedUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type ListeningSegmentUncheckedUpdateManyWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    text?: StringFieldUpdateOperationsInput | string
+    translationZh?: NullableStringFieldUpdateOperationsInput | string | null
+    startTime?: FloatFieldUpdateOperationsInput | number
+    endTime?: FloatFieldUpdateOperationsInput | number
+  }
+
+  export type GeneratedQuestionUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    contentItem?: ContentItemUpdateOneWithoutQuestionsNestedInput
+  }
+
+  export type GeneratedQuestionUncheckedUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GeneratedQuestionUncheckedUpdateManyWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    contentItemId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: EnumQuestionTypeFieldUpdateOperationsInput | $Enums.QuestionType
+    prompt?: StringFieldUpdateOperationsInput | string
+    options?: NullableJsonNullValueInput | InputJsonValue
+    answer?: StringFieldUpdateOperationsInput | string
+    explanation?: StringFieldUpdateOperationsInput | string
+    explanationWrong?: NullableJsonNullValueInput | InputJsonValue
+    jlptLevel?: NullableStringFieldUpdateOperationsInput | string | null
+    audioClip?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserListeningProgressUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutListeningProgressNestedInput
+  }
+
+  export type UserListeningProgressUncheckedUpdateWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
+    quizScore?: NullableIntFieldUpdateOperationsInput | number | null
+    quizAttempts?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserListeningProgressUncheckedUpdateManyWithoutListeningContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSegmentIndex?: IntFieldUpdateOperationsInput | number
+    totalListens?: IntFieldUpdateOperationsInput | number
     quizScore?: NullableIntFieldUpdateOperationsInput | number | null
     quizAttempts?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string

@@ -521,6 +521,7 @@ exports.Prisma.ContentAudioScalarFieldEnum = {
 exports.Prisma.GeneratedQuestionScalarFieldEnum = {
   id: 'id',
   contentItemId: 'contentItemId',
+  listeningContentId: 'listeningContentId',
   type: 'type',
   prompt: 'prompt',
   options: 'options',
@@ -528,6 +529,7 @@ exports.Prisma.GeneratedQuestionScalarFieldEnum = {
   explanation: 'explanation',
   explanationWrong: 'explanationWrong',
   jlptLevel: 'jlptLevel',
+  audioClip: 'audioClip',
   createdAt: 'createdAt'
 };
 
@@ -567,6 +569,49 @@ exports.Prisma.ContentImportJobScalarFieldEnum = {
   error: 'error',
   scrapeResult: 'scrapeResult',
   aiAnalysis: 'aiAnalysis',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ListeningContentScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  titleZh: 'titleZh',
+  description: 'description',
+  descriptionZh: 'descriptionZh',
+  imageUrl: 'imageUrl',
+  sourceType: 'sourceType',
+  audioUrl: 'audioUrl',
+  audioS3Key: 'audioS3Key',
+  duration: 'duration',
+  transcript: 'transcript',
+  topicId: 'topicId',
+  jlptLevel: 'jlptLevel',
+  status: 'status',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ListeningSegmentScalarFieldEnum = {
+  id: 'id',
+  listeningContentId: 'listeningContentId',
+  orderIndex: 'orderIndex',
+  text: 'text',
+  translationZh: 'translationZh',
+  startTime: 'startTime',
+  endTime: 'endTime'
+};
+
+exports.Prisma.UserListeningProgressScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  listeningContentId: 'listeningContentId',
+  status: 'status',
+  lastSegmentIndex: 'lastSegmentIndex',
+  totalListens: 'totalListens',
+  quizScore: 'quizScore',
+  quizAttempts: 'quizAttempts',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -667,6 +712,11 @@ exports.QuestionType = exports.$Enums.QuestionType = {
   DICTATION: 'DICTATION'
 };
 
+exports.ListeningSourceType = exports.$Enums.ListeningSourceType = {
+  UPLOAD: 'UPLOAD',
+  URL: 'URL'
+};
+
 exports.Prisma.ModelName = {
   User: 'User',
   AnalyzedVocabulary: 'AnalyzedVocabulary',
@@ -700,7 +750,10 @@ exports.Prisma.ModelName = {
   GeneratedQuestion: 'GeneratedQuestion',
   GeneratedSRSItem: 'GeneratedSRSItem',
   UserContentProgress: 'UserContentProgress',
-  ContentImportJob: 'ContentImportJob'
+  ContentImportJob: 'ContentImportJob',
+  ListeningContent: 'ListeningContent',
+  ListeningSegment: 'ListeningSegment',
+  UserListeningProgress: 'UserListeningProgress'
 };
 
 /**

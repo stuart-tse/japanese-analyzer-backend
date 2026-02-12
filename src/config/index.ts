@@ -42,6 +42,14 @@ export const config = {
     },
   },
 
+  // AWS
+  aws: {
+    region: process.env.AWS_REGION || 'ap-northeast-1',
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID || '',
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || '',
+    audioBucket: process.env.S3_AUDIO_BUCKET || 'japanese-analyzer-audio',
+  },
+
   // PostgreSQL
   databaseUrl: process.env.DATABASE_URL || '',
 };

@@ -96,6 +96,7 @@ model User {
   learningStats        LearningStats?
   auditLogs            AuditLog[]
   contentProgress      UserContentProgress[]
+  listeningProgress    UserListeningProgress[]
 
   @@unique([provider, providerId])
   @@index([email])
@@ -595,6 +596,11 @@ enum QuestionType {
   DICTATION
 }
 
+enum ListeningSourceType {
+  UPLOAD
+  URL
+}
+
 // ============================================
 // CONTENT LIBRARY — Models
 // ============================================
@@ -608,7 +614,8 @@ model Topic {
   sortOrder Int           @default(0)
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
-  content   ContentItem[]
+  content          ContentItem[]
+  listeningContent ListeningContent[]
 
   @@index([sortOrder])
 }
@@ -701,23 +708,28 @@ model ContentAudio {
   transcript    String?     @db.Text
   createdAt     DateTime    @default(now())
 
+  @@unique([contentItemId, type])
   @@index([contentItemId])
 }
 
 model GeneratedQuestion {
-  id               String      @id @default(cuid())
-  contentItemId    String
-  contentItem      ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
-  type             QuestionType
-  prompt           String      @db.Text
-  options          Json?       // Array<{id, text}> for MCQ
-  answer           String      // Correct answer text or option ID
-  explanation      String      @db.Text
-  explanationWrong Json?       // Record<optionId, explanation>
-  jlptLevel        String?
-  createdAt        DateTime    @default(now())
+  id                 String            @id @default(cuid())
+  contentItemId      String?
+  contentItem        ContentItem?      @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  listeningContentId String?
+  listeningContent   ListeningContent? @relation(fields: [listeningContentId], references: [id], onDelete: Cascade)
+  type               QuestionType
+  prompt             String            @db.Text
+  options            Json?             // Array<{id, text}> for MCQ
+  answer             String            // Correct answer text or option ID
+  explanation        String            @db.Text
+  explanationWrong   Json?             // Record<optionId, explanation>
+  jlptLevel          String?
+  audioClip          Json?             // {startTime, endTime, segmentIndex}
+  createdAt          DateTime          @default(now())
 
   @@index([contentItemId])
+  @@index([listeningContentId])
   @@index([type])
 }
 
@@ -772,4 +784,71 @@ model ContentImportJob {
   updatedAt     DateTime    @updatedAt
 
   @@index([status])
+}
+
+// ============================================
+// LISTENING CONTENT LIBRARY
+// ============================================
+
+model ListeningContent {
+  id            String              @id @default(cuid())
+  title         String
+  titleZh       String              @default("")
+  description   String?             @db.Text
+  descriptionZh String?             @db.Text
+  imageUrl      String?
+  sourceType    ListeningSourceType
+  audioUrl      String              @default("")
+  audioS3Key    String?
+  duration      Int?
+  transcript    String              @db.Text
+  topicId       String?
+  topic         Topic?              @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  jlptLevel     String              @default("N3")
+  status        ContentStatus       @default(DRAFT)
+  publishedAt   DateTime?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  segments      ListeningSegment[]
+  questions     GeneratedQuestion[]
+  userProgress  UserListeningProgress[]
+
+  @@index([topicId])
+  @@index([status])
+  @@index([jlptLevel])
+  @@index([status, jlptLevel])
+  @@index([publishedAt])
+}
+
+model ListeningSegment {
+  id                 String           @id @default(cuid())
+  listeningContentId String
+  listeningContent   ListeningContent @relation(fields: [listeningContentId], references: [id], onDelete: Cascade)
+  orderIndex         Int
+  text               String           @db.Text
+  translationZh      String?          @db.Text
+  startTime          Float
+  endTime            Float
+
+  @@unique([listeningContentId, orderIndex])
+  @@index([listeningContentId])
+}
+
+model UserListeningProgress {
+  id                 String           @id @default(cuid())
+  userId             String
+  user               User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listeningContentId String
+  listeningContent   ListeningContent @relation(fields: [listeningContentId], references: [id], onDelete: Cascade)
+  status             String           @default("not_started")
+  lastSegmentIndex   Int              @default(0)
+  totalListens       Int              @default(0)
+  quizScore          Int?
+  quizAttempts       Int              @default(0)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@unique([userId, listeningContentId])
+  @@index([userId])
+  @@index([listeningContentId])
 }
