@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../middleware/auth.js';
 import { prisma } from '../config/prisma.js';
+import { recordActivity } from '../services/streakService.js';
 
 const router = Router();
 
@@ -230,6 +231,11 @@ router.post('/:packId/study', requireAuth, async (req: Request, res: Response) =
       },
     });
 
+    // Track streak + challenge progress (fire-and-forget)
+    recordActivity({ userId, activityType: 'pack_study' }).catch((err) => {
+      console.error('Streak update failed for pack_study:', err);
+    });
+
     res.json({ studiedWords: progress.studiedWords, status: progress.status });
   } catch (error) {
     console.error('Pack study error:', error);
@@ -336,18 +342,11 @@ router.post('/:packId/quiz', requireAuth, async (req: Request, res: Response) =>
         }
       }
 
-      // Update learning stats
-      await prisma.learningStats.upsert({
-        where: { userId },
-        update: {
-          totalWordsLearned: { increment: packWords.length },
-          lastActiveDate: new Date(),
-        },
-        create: {
-          userId,
-          totalWordsLearned: packWords.length,
-          lastActiveDate: new Date(),
-        },
+      // Update learning stats + streak via unified service
+      await recordActivity({
+        userId,
+        activityType: 'pack_quiz',
+        wordsLearned: packWords.length,
       });
 
       // Unlock next pack — scoped to same jlptLevel + type

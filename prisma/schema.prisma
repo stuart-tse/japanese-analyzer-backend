@@ -97,6 +97,7 @@ model User {
   auditLogs            AuditLog[]
   contentProgress      UserContentProgress[]
   listeningProgress    UserListeningProgress[]
+  dailyChallenges      UserDailyChallenge[]
 
   @@unique([provider, providerId])
   @@index([email])
@@ -471,18 +472,53 @@ model UserPackProgress {
 // ============================================
 
 model LearningStats {
-  id                String   @id @default(cuid())
-  userId            String   @unique
-  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  totalAnalyses     Int      @default(0)
-  totalWordsLearned Int      @default(0)
-  streakDays        Int      @default(0)
-  lastActiveDate    DateTime @default(now())
-  jlptProgress      Json     @default("{}")  // Record<string, number>
-  dailyActivity     Json     @default("[]")  // Array<{date: string, count: number}>
-  achievements      Json     @default("[]")  // String[]
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  id                       String   @id @default(cuid())
+  userId                   String   @unique
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalAnalyses            Int      @default(0)
+  totalWordsLearned        Int      @default(0)
+  streakDays               Int      @default(0)
+  lastActiveDate           DateTime @default(now())
+  jlptProgress             Json     @default("{}")  // Record<string, number>
+  dailyActivity            Json     @default("[]")  // Array<{date: string, count: number}>
+  achievements             Json     @default("[]")  // String[]
+  streakMilestoneNotified  Int      @default(0)     // Last celebrated milestone (0, 3, 7, 14, 30)
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+}
+
+// ============================================
+// DAILY CHALLENGES
+// ============================================
+
+model DailyChallenge {
+  id              String               @id @default(cuid())
+  date            String               @unique          // "YYYY-MM-DD"
+  type            String                                // "srs_review" | "pack_study" | "pack_quiz" | "analyze_text" | "mixed"
+  titleZh         String
+  descriptionZh   String
+  targetCount     Int                  @default(1)
+  xpReward        Int                  @default(10)
+  createdAt       DateTime             @default(now())
+  userChallenges  UserDailyChallenge[]
+
+  @@index([date])
+}
+
+model UserDailyChallenge {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  challengeId     String
+  challenge       DailyChallenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  currentProgress Int            @default(0)
+  completed       Boolean        @default(false)
+  completedAt     DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@unique([userId, challengeId])
+  @@index([userId])
 }
 
 // ============================================

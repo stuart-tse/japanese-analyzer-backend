@@ -394,6 +394,29 @@ exports.Prisma.LearningStatsScalarFieldEnum = {
   jlptProgress: 'jlptProgress',
   dailyActivity: 'dailyActivity',
   achievements: 'achievements',
+  streakMilestoneNotified: 'streakMilestoneNotified',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.DailyChallengeScalarFieldEnum = {
+  id: 'id',
+  date: 'date',
+  type: 'type',
+  titleZh: 'titleZh',
+  descriptionZh: 'descriptionZh',
+  targetCount: 'targetCount',
+  xpReward: 'xpReward',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserDailyChallengeScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  challengeId: 'challengeId',
+  currentProgress: 'currentProgress',
+  completed: 'completed',
+  completedAt: 'completedAt',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -736,6 +759,8 @@ exports.Prisma.ModelName = {
   WordPack: 'WordPack',
   UserPackProgress: 'UserPackProgress',
   LearningStats: 'LearningStats',
+  DailyChallenge: 'DailyChallenge',
+  UserDailyChallenge: 'UserDailyChallenge',
   WordExample: 'WordExample',
   AnalysisCache: 'AnalysisCache',
   WordDetailCache: 'WordDetailCache',

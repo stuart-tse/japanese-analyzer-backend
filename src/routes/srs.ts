@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../middleware/auth.js';
 import { prisma } from '../config/prisma.js';
+import { recordActivity } from '../services/streakService.js';
 
 const router = Router();
 
@@ -152,6 +153,9 @@ router.post('/review', requireAuth, async (req: Request, res: Response) => {
       },
     });
 
+    // Track streak + challenge progress for SRS review
+    const streakResult = await recordActivity({ userId, activityType: 'srs_review' });
+
     res.json({
       word: updated.word,
       srsStage: updated.srsStage,
@@ -159,6 +163,7 @@ router.post('/review', requireAuth, async (req: Request, res: Response) => {
       srsDueDate: updated.srsDueDate,
       reviewCount: updated.reviewCount,
       mastered: updated.mastered,
+      streakMilestone: streakResult.isNewMilestone ? streakResult.milestone : null,
     });
   } catch (error) {
     console.error('SRS review error:', error);
