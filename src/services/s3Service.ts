@@ -2,6 +2,7 @@ import {
   S3Client,
   PutObjectCommand,
   DeleteObjectCommand,
+  GetObjectCommand,
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { randomUUID } from "node:crypto";
@@ -34,7 +35,7 @@ export async function uploadAudioToS3(
     }),
   );
 
-  return `https://${config.aws.audioBucket}.s3.amazonaws.com/${key}`;
+  return `https://${config.aws.audioBucket}.s3.${config.aws.region}.amazonaws.com/${key}`;
 }
 
 /**
@@ -54,9 +55,50 @@ export async function generateAudioUploadUrl(
   });
 
   const uploadUrl = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
-  const objectUrl = `https://${config.aws.audioBucket}.s3.amazonaws.com/${s3Key}`;
+  const objectUrl = `https://${config.aws.audioBucket}.s3.${config.aws.region}.amazonaws.com/${s3Key}`;
 
   return { uploadUrl, objectUrl, s3Key };
+}
+
+/**
+ * Generate a presigned GET URL for an S3 audio object.
+ * Expires in 1 hour. Works regardless of bucket public access settings.
+ */
+export async function getPresignedAudioUrl(s3Key: string): Promise<string> {
+  if (!s3Key || typeof s3Key !== "string") {
+    throw new Error("Invalid S3 key: empty or non-string");
+  }
+  if (s3Key.includes("..") || s3Key.startsWith("/")) {
+    throw new Error("Invalid S3 key: path traversal detected");
+  }
+
+  const command = new GetObjectCommand({
+    Bucket: config.aws.audioBucket,
+    Key: s3Key,
+  });
+  return getSignedUrl(s3Client, command, { expiresIn: 3600 });
+}
+
+/**
+ * Extract S3 key from a stored audio URL.
+ * Handles both regional and non-regional URL formats.
+ */
+export function extractS3KeyFromUrl(url: string): string | null {
+  if (!url || typeof url !== "string" || url.length > 2048) {
+    return null;
+  }
+
+  const bucket = config.aws.audioBucket;
+  if (!bucket) return null;
+
+  // Escape bucket name for regex safety
+  const escapedBucket = bucket.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  // Match: https://bucket.s3.region.amazonaws.com/key or https://bucket.s3.amazonaws.com/key
+  const pattern = new RegExp(
+    `^https://${escapedBucket}\\.s3(?:\\.[a-z0-9-]+)?\\.amazonaws\\.com/(.+)$`,
+  );
+  const match = url.match(pattern);
+  return match ? match[1] : null;
 }
 
 /**

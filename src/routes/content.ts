@@ -3,7 +3,7 @@ import { prisma } from '../config/prisma.js';
 import { requireAuth, optionalAuth } from '../middleware/auth.js';
 import { TEXTS } from '../constants/texts.js';
 import { generateContentAudio } from '../services/audioGeneration.js';
-import { deleteFromS3 } from '../services/s3Service.js';
+import { deleteFromS3, getPresignedAudioUrl, extractS3KeyFromUrl } from '../services/s3Service.js';
 import type { ContentStatus } from '../generated/prisma/index.js';
 
 const router = Router();
@@ -128,9 +128,24 @@ router.get('/:id/audio', optionalAuth, async (req: Request, res: Response) => {
         ? JSON.parse(existing.transcript)
         : [];
 
+      // Generate presigned URL so audio works regardless of bucket public access
+      let audioUrl = existing.audioUrl;
+      const s3Key = extractS3KeyFromUrl(existing.audioUrl);
+      if (s3Key) {
+        try {
+          audioUrl = await getPresignedAudioUrl(s3Key);
+        } catch (presignErr) {
+          console.error('Presign URL failed:', presignErr);
+          res.status(503).json({
+            error: { message: '生成音频访问链接失败，请稍后重试', code: 'presign_failed' },
+          });
+          return;
+        }
+      }
+
       res.json({
         id: existing.id,
-        audioUrl: existing.audioUrl,
+        audioUrl,
         type: 'full',
         duration: existing.duration ?? 0,
         sectionTimestamps,
@@ -196,9 +211,19 @@ router.get('/:id/audio', optionalAuth, async (req: Request, res: Response) => {
       return;
     }
 
+    // Generate presigned URL for the freshly uploaded audio
+    let audioUrl = result.url;
+    try {
+      audioUrl = await getPresignedAudioUrl(result.s3Key);
+    } catch (presignErr) {
+      console.error('Presign URL failed for new audio, using stored URL:', presignErr);
+      // For new audio we still return the stored URL as best-effort
+      // since the audio was just uploaded and may be accessible
+    }
+
     res.json({
       id: audioRecord.id,
-      audioUrl: result.url,
+      audioUrl,
       type: 'full',
       duration: result.duration,
       sectionTimestamps: result.sectionTimestamps,
