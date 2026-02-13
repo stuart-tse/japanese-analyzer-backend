@@ -17,6 +17,7 @@ import vocabularyRouter from './vocabulary.js';
 import packsRouter from './packs.js';
 import srsRouter from './srs.js';
 import dailyChallengeRouter from './dailyChallenge.js';
+import jlptReadinessRouter from './jlptReadiness.js';
 import wordExamplesRouter from './wordExamples.js';
 import subscriptionRouter from './subscription.js';
 import creditsRouter from './credits.js';
@@ -65,6 +66,7 @@ router.use('/placement-test', placementTestRouter);
 router.use('/packs', packsRouter);
 router.use('/srs', srsRouter);
 router.use('/daily-challenge', dailyChallengeRouter);
+router.use('/jlpt-readiness', jlptReadinessRouter);
 router.use('/words', wordExamplesRouter);
 
 // Profile routes (require auth)

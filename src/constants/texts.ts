@@ -72,4 +72,7 @@ export const TEXTS = {
     AUDIO_URL_REQUIRED: '外部音频地址不能为空',
     SOURCE_TYPE_REQUIRED: '请提供来源类型（UPLOAD 或 URL）',
   },
+  READINESS: {
+    FETCH_FAILED: '获取JLPT准备度失败',
+  },
 } as const;
