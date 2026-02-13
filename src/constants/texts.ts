@@ -75,4 +75,24 @@ export const TEXTS = {
   READINESS: {
     FETCH_FAILED: '获取JLPT准备度失败',
   },
+  SENTENCES: {
+    GENERATE_FAILED: '生成例句失败',
+    BATCH_LIMIT: '每次最多生成10个词的例句',
+  },
+  COURSE: {
+    NOT_FOUND: '课程不存在',
+    CREATE_SUCCESS: '课程创建成功',
+    UPDATE_SUCCESS: '课程更新成功',
+    DELETE_SUCCESS: '课程删除成功',
+    PUBLISH_SUCCESS: '课程已发布',
+    UNPUBLISH_SUCCESS: '课程已取消发布',
+    HAS_PROGRESS: '该课程已有学习进度，无法删除',
+    LESSON_NOT_FOUND: '课时不存在',
+    LESSON_CREATE_SUCCESS: '课时创建成功',
+    LESSON_UPDATE_SUCCESS: '课时更新成功',
+    LESSON_DELETE_SUCCESS: '课时删除成功',
+    LESSON_NUMBER_CONFLICT: '课时编号已存在',
+    REORDER_SUCCESS: '课时排序更新成功',
+    VALIDATION_FAILED: '输入验证失败',
+  },
 } as const;

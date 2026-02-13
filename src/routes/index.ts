@@ -19,6 +19,7 @@ import srsRouter from './srs.js';
 import dailyChallengeRouter from './dailyChallenge.js';
 import jlptReadinessRouter from './jlptReadiness.js';
 import wordExamplesRouter from './wordExamples.js';
+import sentenceGenerationRouter from './sentenceGeneration.js';
 import subscriptionRouter from './subscription.js';
 import creditsRouter from './credits.js';
 import asianPaymentsRouter from './asianPayments.js';
@@ -34,6 +35,7 @@ import contentRouter from './content.js';
 import adminContentRouter from './adminContent.js';
 import listeningRouter from './listening.js';
 import adminListeningRouter from './adminListening.js';
+import adminCoursesRouter from './adminCourses.js';
 
 const router = Router();
 
@@ -68,6 +70,7 @@ router.use('/srs', srsRouter);
 router.use('/daily-challenge', dailyChallengeRouter);
 router.use('/jlpt-readiness', jlptReadinessRouter);
 router.use('/words', wordExamplesRouter);
+router.use('/sentences', sentenceGenerationRouter);
 
 // Profile routes (require auth)
 router.use('/me/profile', profileRouter);
@@ -87,5 +90,6 @@ router.use('/content', contentRouter);
 router.use('/admin/content', adminContentRouter);
 router.use('/listening', listeningRouter);
 router.use('/admin/listening', adminListeningRouter);
+router.use('/admin/courses', adminCoursesRouter);
 
 export default router;
