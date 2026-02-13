@@ -95,4 +95,11 @@ export const TEXTS = {
     REORDER_SUCCESS: '课时排序更新成功',
     VALIDATION_FAILED: '输入验证失败',
   },
+  GRAMMAR_MATCH: {
+    NO_TOKENS: '请提供Token数据',
+    TOO_MANY_TOKENS: 'Token数量超过上限',
+    INVALID_TOKEN_FORMAT: 'Token格式无效',
+    MATCH_SUCCESS: '语法模式匹配完成',
+    MATCH_FAILED: '语法模式匹配失败',
+  },
 } as const;

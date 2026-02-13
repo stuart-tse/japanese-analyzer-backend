@@ -36,6 +36,7 @@ import adminContentRouter from './adminContent.js';
 import listeningRouter from './listening.js';
 import adminListeningRouter from './adminListening.js';
 import adminCoursesRouter from './adminCourses.js';
+import grammarMatchRouter from './grammarMatch.js';
 
 const router = Router();
 
@@ -49,6 +50,7 @@ router.use('/chat', chatRouter);
 router.use('/image-to-text', imageToTextRouter);
 router.use('/tts', ttsRouter);
 router.use('/dictionary', dictionaryRouter);
+router.use('/grammar', grammarMatchRouter);
 
 // Auth routes
 router.use('/auth/code-gate', codeGateRouter);
