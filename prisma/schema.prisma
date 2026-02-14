@@ -98,6 +98,7 @@ model User {
   contentProgress      UserContentProgress[]
   listeningProgress    UserListeningProgress[]
   dailyChallenges      UserDailyChallenge[]
+  activityLogs         ActivityLog[]
 
   @@unique([provider, providerId])
   @@index([email])
@@ -887,4 +888,20 @@ model UserListeningProgress {
   @@unique([userId, listeningContentId])
   @@index([userId])
   @@index([listeningContentId])
+}
+
+// ============================================
+// ACTIVITY LOG (for dashboard timeline)
+// ============================================
+
+model ActivityLog {
+  id           String   @id @default(cuid())
+  userId       String
+  activityType String
+  title        String
+  meta         String?
+  createdAt    DateTime @default(now())
+  User         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
 }

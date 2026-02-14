@@ -639,6 +639,15 @@ exports.Prisma.UserListeningProgressScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
+exports.Prisma.ActivityLogScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  activityType: 'activityType',
+  title: 'title',
+  meta: 'meta',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -778,7 +787,8 @@ exports.Prisma.ModelName = {
   ContentImportJob: 'ContentImportJob',
   ListeningContent: 'ListeningContent',
   ListeningSegment: 'ListeningSegment',
-  UserListeningProgress: 'UserListeningProgress'
+  UserListeningProgress: 'UserListeningProgress',
+  ActivityLog: 'ActivityLog'
 };
 
 /**

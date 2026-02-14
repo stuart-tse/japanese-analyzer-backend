@@ -1,5 +1,9 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/prisma.js';
+import { requireAuth } from '../middleware/auth.js';
+import { optionalAuth } from '../middleware/auth.js';
+import { recordActivity } from '../services/streakService.js';
+import { getTitleForActivity, getMetaForActivity } from '../services/activityLogHelpers.js';
 
 const router = Router();
 
@@ -176,6 +180,104 @@ router.get('/:courseId/lessons/:lessonNumber', async (req: Request, res: Respons
       success: false,
       error: 'Failed to fetch lesson',
     });
+  }
+});
+
+/**
+ * POST /courses/:courseId/lessons/:lessonId/progress
+ * Mark a lesson as completed for the authenticated user.
+ */
+router.post('/:courseId/lessons/:lessonId/progress', requireAuth, async (req: Request, res: Response) => {
+  try {
+    const userId = req.jwtUser!.userId;
+    const courseId = Array.isArray(req.params.courseId) ? req.params.courseId[0] : req.params.courseId;
+    const lessonId = Array.isArray(req.params.lessonId) ? req.params.lessonId[0] : req.params.lessonId;
+
+    // Validate lesson exists and belongs to the course
+    const lesson = await prisma.lesson.findFirst({
+      where: { id: lessonId, courseId },
+      select: { id: true, title: true },
+    });
+
+    if (!lesson) {
+      res.status(404).json({ success: false, error: 'Lesson not found in this course' });
+      return;
+    }
+
+    // Upsert progress
+    const progress = await prisma.userLessonProgress.upsert({
+      where: { userId_lessonId: { userId, lessonId } },
+      create: {
+        id: `${userId}_${lessonId}`,
+        userId,
+        lessonId,
+        isCompleted: true,
+        completedAt: new Date(),
+      },
+      update: {
+        isCompleted: true,
+        completedAt: new Date(),
+        lastAccessedAt: new Date(),
+      },
+    });
+
+    // Record activity for streak tracking (fire-and-forget)
+    recordActivity({ userId, activityType: 'pack_study' }).catch((err) => {
+      console.error('Record activity failed for lesson complete:', err);
+    });
+
+    // Write activity log entry for lesson completion (fire-and-forget)
+    prisma.activityLog.create({
+      data: {
+        userId,
+        activityType: 'lesson_complete',
+        title: getTitleForActivity('pack_study', { lessonTitle: lesson.title }),
+        meta: getMetaForActivity('pack_study', { lessonTitle: lesson.title }),
+      },
+    }).catch((err: unknown) => {
+      console.error('Activity log write failed for lesson complete:', err);
+    });
+
+    res.json({ success: true, progress });
+  } catch (error) {
+    console.error('Lesson progress save error:', error);
+    res.status(500).json({ success: false, error: 'Failed to save lesson progress' });
+  }
+});
+
+/**
+ * GET /courses/:courseId/progress
+ * Fetch completed lesson IDs for the authenticated user (or empty for guests).
+ */
+router.get('/:courseId/progress', optionalAuth, async (req: Request, res: Response) => {
+  try {
+    const courseId = Array.isArray(req.params.courseId) ? req.params.courseId[0] : req.params.courseId;
+
+    if (!req.jwtUser) {
+      res.json({ completedLessonIds: [], completedCount: 0 });
+      return;
+    }
+
+    const userId = req.jwtUser.userId;
+
+    const completedLessons = await prisma.userLessonProgress.findMany({
+      where: {
+        userId,
+        isCompleted: true,
+        Lesson: { courseId },
+      },
+      select: { lessonId: true },
+    });
+
+    const completedLessonIds = completedLessons.map((p) => p.lessonId);
+
+    res.json({
+      completedLessonIds,
+      completedCount: completedLessonIds.length,
+    });
+  } catch (error) {
+    console.error('Course progress fetch error:', error);
+    res.status(500).json({ success: false, error: 'Failed to fetch course progress' });
   }
 });
 

@@ -1,9 +1,10 @@
 import { prisma } from '../config/prisma.js';
 import { incrementChallengeProgress, getOrCreateTodayChallenge } from './challengeService.js';
+import { getTitleForActivity, getMetaForActivity } from './activityLogHelpers.js';
 
 // --- Types ---
 
-export type ActivityType = 'analysis' | 'srs_review' | 'pack_study' | 'pack_quiz';
+export type ActivityType = 'analysis' | 'srs_review' | 'pack_study' | 'pack_quiz' | 'cloze_practice';
 
 export interface RecordActivityOptions {
   readonly userId: string;
@@ -118,6 +119,18 @@ export async function recordActivity(opts: RecordActivityOptions): Promise<Recor
     console.error('Challenge progress update failed:', { userId, activityType, error: err });
   });
 
+  // Write activity log entry (fire-and-forget)
+  prisma.activityLog.create({
+    data: {
+      userId,
+      activityType,
+      title: getTitleForActivity(activityType, { wordsLearned }),
+      meta: getMetaForActivity(activityType, { wordsLearned }),
+    },
+  }).catch((err: unknown) => {
+    console.error('Activity log write failed:', { userId, activityType, error: err });
+  });
+
   return result;
 }
 
@@ -130,7 +143,8 @@ async function incrementChallengeForActivity(userId: string, activityType: Activ
   // Determine if this activity contributes to today's challenge
   const typeMatch = challenge.type === activityType
     || challenge.type === 'mixed'
-    || (challenge.type === 'analyze_text' && activityType === 'analysis');
+    || (challenge.type === 'analyze_text' && activityType === 'analysis')
+    || (challenge.type === 'cloze_practice' && activityType === 'cloze_practice');
 
   if (typeMatch) {
     await incrementChallengeProgress(userId, challenge.id, activityType);
