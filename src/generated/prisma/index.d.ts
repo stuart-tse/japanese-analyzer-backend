@@ -5021,6 +5021,7 @@ export namespace Prisma {
     avatar: number
     phone: number
     role: number
+    roles: number
     refreshTokenHash: number
     lastLoginAt: number
     subscriptionTier: number
@@ -5127,6 +5128,7 @@ export namespace Prisma {
     avatar?: true
     phone?: true
     role?: true
+    roles?: true
     refreshTokenHash?: true
     lastLoginAt?: true
     subscriptionTier?: true
@@ -5244,6 +5246,7 @@ export namespace Prisma {
     avatar: string | null
     phone: string | null
     role: string
+    roles: string[]
     refreshTokenHash: string | null
     lastLoginAt: Date | null
     subscriptionTier: string
@@ -5293,6 +5296,7 @@ export namespace Prisma {
     avatar?: boolean
     phone?: boolean
     role?: boolean
+    roles?: boolean
     refreshTokenHash?: boolean
     lastLoginAt?: boolean
     subscriptionTier?: boolean
@@ -5339,6 +5343,7 @@ export namespace Prisma {
     avatar?: boolean
     phone?: boolean
     role?: boolean
+    roles?: boolean
     refreshTokenHash?: boolean
     lastLoginAt?: boolean
     subscriptionTier?: boolean
@@ -5369,6 +5374,7 @@ export namespace Prisma {
     avatar?: boolean
     phone?: boolean
     role?: boolean
+    roles?: boolean
     refreshTokenHash?: boolean
     lastLoginAt?: boolean
     subscriptionTier?: boolean
@@ -5399,6 +5405,7 @@ export namespace Prisma {
     avatar?: boolean
     phone?: boolean
     role?: boolean
+    roles?: boolean
     refreshTokenHash?: boolean
     lastLoginAt?: boolean
     subscriptionTier?: boolean
@@ -5419,7 +5426,7 @@ export namespace Prisma {
     instagram?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "passwordHash" | "displayName" | "provider" | "providerId" | "avatar" | "phone" | "role" | "refreshTokenHash" | "lastLoginAt" | "subscriptionTier" | "credits" | "customerId" | "subscriptionId" | "subscriptionExpiry" | "createdAt" | "updatedAt" | "lastActivityDate" | "learningStreak" | "totalAnalyses" | "wordsLearned" | "twitter" | "weibo" | "douyin" | "tiktok" | "instagram", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "passwordHash" | "displayName" | "provider" | "providerId" | "avatar" | "phone" | "role" | "roles" | "refreshTokenHash" | "lastLoginAt" | "subscriptionTier" | "credits" | "customerId" | "subscriptionId" | "subscriptionExpiry" | "createdAt" | "updatedAt" | "lastActivityDate" | "learningStreak" | "totalAnalyses" | "wordsLearned" | "twitter" | "weibo" | "douyin" | "tiktok" | "instagram", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     AnalyzedVocabulary?: boolean | User$AnalyzedVocabularyArgs<ExtArgs>
     PlacementTestAttempt?: boolean | User$PlacementTestAttemptArgs<ExtArgs>
@@ -5470,6 +5477,7 @@ export namespace Prisma {
       avatar: string | null
       phone: string | null
       role: string
+      roles: string[]
       refreshTokenHash: string | null
       lastLoginAt: Date | null
       subscriptionTier: string
@@ -5935,6 +5943,7 @@ export namespace Prisma {
     readonly avatar: FieldRef<"User", 'String'>
     readonly phone: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'String'>
+    readonly roles: FieldRef<"User", 'String[]'>
     readonly refreshTokenHash: FieldRef<"User", 'String'>
     readonly lastLoginAt: FieldRef<"User", 'DateTime'>
     readonly subscriptionTier: FieldRef<"User", 'String'>
@@ -50319,6 +50328,7 @@ export namespace Prisma {
     avatar: 'avatar',
     phone: 'phone',
     role: 'role',
+    roles: 'roles',
     refreshTokenHash: 'refreshTokenHash',
     lastLoginAt: 'lastLoginAt',
     subscriptionTier: 'subscriptionTier',
@@ -51254,6 +51264,7 @@ export namespace Prisma {
     avatar?: StringNullableFilter<"User"> | string | null
     phone?: StringNullableFilter<"User"> | string | null
     role?: StringFilter<"User"> | string
+    roles?: StringNullableListFilter<"User">
     refreshTokenHash?: StringNullableFilter<"User"> | string | null
     lastLoginAt?: DateTimeNullableFilter<"User"> | Date | string | null
     subscriptionTier?: StringFilter<"User"> | string
@@ -51299,6 +51310,7 @@ export namespace Prisma {
     avatar?: SortOrderInput | SortOrder
     phone?: SortOrderInput | SortOrder
     role?: SortOrder
+    roles?: SortOrder
     refreshTokenHash?: SortOrderInput | SortOrder
     lastLoginAt?: SortOrderInput | SortOrder
     subscriptionTier?: SortOrder
@@ -51349,6 +51361,7 @@ export namespace Prisma {
     avatar?: StringNullableFilter<"User"> | string | null
     phone?: StringNullableFilter<"User"> | string | null
     role?: StringFilter<"User"> | string
+    roles?: StringNullableListFilter<"User">
     refreshTokenHash?: StringNullableFilter<"User"> | string | null
     lastLoginAt?: DateTimeNullableFilter<"User"> | Date | string | null
     subscriptionTier?: StringFilter<"User"> | string
@@ -51393,6 +51406,7 @@ export namespace Prisma {
     avatar?: SortOrderInput | SortOrder
     phone?: SortOrderInput | SortOrder
     role?: SortOrder
+    roles?: SortOrder
     refreshTokenHash?: SortOrderInput | SortOrder
     lastLoginAt?: SortOrderInput | SortOrder
     subscriptionTier?: SortOrder
@@ -51431,6 +51445,7 @@ export namespace Prisma {
     avatar?: StringNullableWithAggregatesFilter<"User"> | string | null
     phone?: StringNullableWithAggregatesFilter<"User"> | string | null
     role?: StringWithAggregatesFilter<"User"> | string
+    roles?: StringNullableListFilter<"User">
     refreshTokenHash?: StringNullableWithAggregatesFilter<"User"> | string | null
     lastLoginAt?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
     subscriptionTier?: StringWithAggregatesFilter<"User"> | string
@@ -54612,6 +54627,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -54657,6 +54673,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -54702,6 +54719,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -54747,6 +54765,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -54792,6 +54811,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -54822,6 +54842,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -54852,6 +54873,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -58421,6 +58443,14 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type StringNullableListFilter<$PrismaModel = never> = {
+    equals?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    has?: string | StringFieldRefInput<$PrismaModel> | null
+    hasEvery?: string[] | ListStringFieldRefInput<$PrismaModel>
+    hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
+    isEmpty?: boolean
+  }
+
   export type DateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -58619,6 +58649,7 @@ export namespace Prisma {
     avatar?: SortOrder
     phone?: SortOrder
     role?: SortOrder
+    roles?: SortOrder
     refreshTokenHash?: SortOrder
     lastLoginAt?: SortOrder
     subscriptionTier?: SortOrder
@@ -61099,6 +61130,10 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type UserCreaterolesInput = {
+    set: string[]
+  }
+
   export type AnalyzedVocabularyCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -61313,6 +61348,11 @@ export namespace Prisma {
 
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
+  }
+
+  export type UserUpdaterolesInput = {
+    set?: string[]
+    push?: string | string[]
   }
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
@@ -64477,6 +64517,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -64521,6 +64562,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -64581,6 +64623,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -64625,6 +64668,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -64968,6 +65012,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65012,6 +65057,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65101,6 +65147,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65145,6 +65192,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65189,6 +65237,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65233,6 +65282,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65293,6 +65343,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65337,6 +65388,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65418,6 +65470,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65462,6 +65515,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65565,6 +65619,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65609,6 +65664,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65653,6 +65709,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65697,6 +65754,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65757,6 +65815,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65801,6 +65860,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65845,6 +65905,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65889,6 +65950,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -65949,6 +66011,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -65993,6 +66056,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66037,6 +66101,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66081,6 +66146,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66141,6 +66207,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66185,6 +66252,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66229,6 +66297,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66273,6 +66342,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66333,6 +66403,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66377,6 +66448,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66421,6 +66493,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66465,6 +66538,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66525,6 +66599,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66569,6 +66644,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66613,6 +66689,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66657,6 +66734,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66717,6 +66795,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66761,6 +66840,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -66851,6 +66931,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66895,6 +66976,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -66982,6 +67064,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -67026,6 +67109,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -67103,6 +67187,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -67147,6 +67232,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -67207,6 +67293,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -67251,6 +67338,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -68710,6 +68798,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -68754,6 +68843,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -68877,6 +68967,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -68921,6 +69012,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -69495,6 +69587,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -69539,6 +69632,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -69648,6 +69742,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -69692,6 +69787,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -69791,6 +69887,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -69835,6 +69932,7 @@ export namespace Prisma {
     avatar?: string | null
     phone?: string | null
     role?: string
+    roles?: UserCreaterolesInput | string[]
     refreshTokenHash?: string | null
     lastLoginAt?: Date | string | null
     subscriptionTier?: string
@@ -69895,6 +69993,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string
@@ -69939,6 +70038,7 @@ export namespace Prisma {
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
     refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
     lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     subscriptionTier?: StringFieldUpdateOperationsInput | string

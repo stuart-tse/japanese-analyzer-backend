@@ -62,7 +62,8 @@ model User {
   providerId           String?
   avatar               String?
   phone                String?
-  role                 String                 @default("user") // "user" | "admin"
+  role                 String                 @default("user") // legacy: "user" | "admin"
+  roles                String[]               @default(["student"])
   refreshTokenHash     String?
   lastLoginAt          DateTime?
   subscriptionTier     String                 @default("FREE")
