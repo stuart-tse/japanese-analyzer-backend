@@ -46,6 +46,13 @@ const CHALLENGE_POOL: ReadonlyArray<ChallengeTemplate> = [
     targetCount: 2,
     xpReward: 15,
   },
+  {
+    type: 'cloze_practice',
+    titleZh: '完成3道填空题',
+    descriptionZh: '通过填空练习强化词汇记忆',
+    targetCount: 3,
+    xpReward: 15,
+  },
 ];
 
 /**

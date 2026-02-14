@@ -43,6 +43,57 @@ router.get('/due', requireAuth, async (req: Request, res: Response) => {
   }
 });
 
+// GET /srs/due-enriched — due words with example sentences joined
+router.get('/due-enriched', requireAuth, async (req: Request, res: Response) => {
+  try {
+    const userId = req.jwtUser!.userId;
+    const limit = Math.min(50, parseInt(req.query.limit as string) || 20);
+
+    const dueWords = await prisma.vocabulary.findMany({
+      where: {
+        userId,
+        srsStage: { in: ['learning', 'review'] },
+        srsDueDate: { lte: new Date() },
+      },
+      orderBy: { srsDueDate: 'asc' },
+      take: limit,
+    });
+
+    // Batch-join example sentences
+    const wordList = [...new Set(dueWords.map(v => v.word))];
+    const examples = wordList.length > 0
+      ? await prisma.wordExample.findMany({
+          where: { word: { in: wordList } },
+        })
+      : [];
+
+    const exampleMap = new Map(
+      examples.map(e => [e.word, e.examples as Array<{ sentence: string; furigana: string; meaning_zh_CN: string }>]),
+    );
+
+    const result = dueWords.map(v => ({
+      _id: v.id,
+      word: v.word,
+      furigana: v.furigana,
+      romaji: v.romaji,
+      meaning_zh_CN: v.meaningZhCN,
+      pos: v.pos,
+      jlptLevel: v.jlptLevel,
+      srsStage: v.srsStage,
+      srsInterval: v.srsInterval,
+      reviewCount: v.reviewCount,
+      wrongCount: v.wrongCount,
+      notes: typeof v.notes === 'string' ? v.notes : '',
+      exampleSentences: exampleMap.get(v.word) ?? null,
+    }));
+
+    res.json({ items: result, count: result.length });
+  } catch (error) {
+    console.error('SRS due-enriched error:', error);
+    res.status(500).json({ error: { message: '获取复习词汇失败' } });
+  }
+});
+
 // GET /srs/stats — review dashboard stats
 router.get('/stats', requireAuth, async (req: Request, res: Response) => {
   try {
@@ -73,7 +124,7 @@ router.get('/stats', requireAuth, async (req: Request, res: Response) => {
 router.post('/review', requireAuth, async (req: Request, res: Response) => {
   try {
     const userId = req.jwtUser!.userId;
-    const { wordId, quality } = req.body as { wordId: string; quality: number };
+    const { wordId, quality, cardType } = req.body as { wordId: string; quality: number; cardType?: string };
 
     if (!wordId || typeof quality !== 'number' || quality < 0 || quality > 5) {
       res.status(400).json({ error: { message: '参数无效' } });
@@ -155,6 +206,11 @@ router.post('/review', requireAuth, async (req: Request, res: Response) => {
 
     // Track streak + challenge progress for SRS review
     const streakResult = await recordActivity({ userId, activityType: 'srs_review' });
+
+    // If this was a cloze/audio_cloze card, also track cloze_practice for challenge progress
+    if (cardType === 'cloze' || cardType === 'audio_cloze') {
+      recordActivity({ userId, activityType: 'cloze_practice' }).catch(() => {});
+    }
 
     res.json({
       word: updated.word,

@@ -36,10 +36,10 @@ router.get('/:word/examples', async (req: Request, res: Response) => {
     }
 
     const levelDesc = levelDescriptions[validLevel];
-    const prompt = `Generate exactly 2 example sentences using the Japanese word 「${word}」.
+    const prompt = `Generate exactly 3 example sentences using the Japanese word 「${word}」.
 These sentences should be suitable for ${levelDesc}
 
-Return a JSON array with exactly 2 objects, each having:
+Return a JSON array with exactly 3 objects, each having:
 - "sentence": the Japanese sentence
 - "furigana": the full sentence in hiragana
 - "meaning_zh_CN": Chinese (Simplified) translation
