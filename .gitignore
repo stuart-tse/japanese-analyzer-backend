@@ -26,6 +26,12 @@ coverage/
 # Screenshots
 *.png
 
+# Build output
+dist/
+
+# Generated audio
+data/audio/
+
 # Serverless / Lambda
 .serverless/
 lambda-deploy.zip
