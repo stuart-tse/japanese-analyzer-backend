@@ -1,7 +1,8 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
-import { requireAdmin } from '../middleware/admin.js';
+import { attachRoles, requireRole } from '../middleware/rbac.js';
+import { ROLES } from '../constants/permissions.js';
 import { processContent } from '../services/contentPipeline.js';
 import { TEXTS } from '../constants/texts.js';
 import type { ContentStatus, ContentType } from '../generated/prisma/index.js';
@@ -10,7 +11,8 @@ const router = Router();
 
 // All routes require auth + admin
 router.use(requireAuth);
-router.use(requireAdmin);
+router.use(attachRoles);
+router.use(requireRole(ROLES.ADMIN));
 
 // ─── POST /import — Import content from URL ───
 router.post('/import', async (req: Request, res: Response) => {

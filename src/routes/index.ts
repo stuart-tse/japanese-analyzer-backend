@@ -37,7 +37,14 @@ import listeningRouter from "./listening.js";
 import adminListeningRouter from "./adminListening.js";
 import adminCoursesRouter from "./adminCourses.js";
 import adminUsersRouter from "./adminUsers.js";
+import adminStatsRouter from "./adminStats.js";
+import adminAuditLogsRouter from "./adminAuditLogs.js";
 import grammarMatchRouter from "./grammarMatch.js";
+import creatorStatsRouter from "./creatorStats.js";
+import creatorContentRouter from "./creatorContent.js";
+import creatorAnalyticsRouter from "./creatorAnalytics.js";
+import teacherStatsRouter from "./teacherStats.js";
+import teacherCoursesRouter from "./teacherCourses.js";
 
 const router = Router();
 
@@ -95,5 +102,16 @@ router.use("/listening", listeningRouter);
 router.use("/admin/listening", adminListeningRouter);
 router.use("/admin/courses", adminCoursesRouter);
 router.use("/admin/users", adminUsersRouter);
+router.use("/admin/stats", adminStatsRouter);
+router.use("/admin/audit-logs", adminAuditLogsRouter);
+
+// Creator routes
+router.use("/creator/stats", creatorStatsRouter);
+router.use("/creator/content", creatorContentRouter);
+router.use("/creator/analytics", creatorAnalyticsRouter);
+
+// Teacher routes
+router.use("/teacher/stats", teacherStatsRouter);
+router.use("/teacher/courses", teacherCoursesRouter);
 
 export default router;

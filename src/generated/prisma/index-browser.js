@@ -175,6 +175,7 @@ exports.Prisma.CourseScalarFieldEnum = {
   requiredTier: 'requiredTier',
   creditCostPerLesson: 'creditCostPerLesson',
   isPublished: 'isPublished',
+  teacherId: 'teacherId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -500,6 +501,7 @@ exports.Prisma.ContentItemScalarFieldEnum = {
   id: 'id',
   sourceId: 'sourceId',
   topicId: 'topicId',
+  creatorId: 'creatorId',
   title: 'title',
   titleZh: 'titleZh',
   url: 'url',

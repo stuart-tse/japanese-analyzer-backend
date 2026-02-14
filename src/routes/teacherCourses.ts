@@ -15,20 +15,36 @@ import { ZodError } from 'zod';
 
 const router = Router();
 
-// All routes require auth + admin
+// All routes require auth + teacher
 router.use(requireAuth);
 router.use(attachRoles);
-router.use(requireRole(ROLES.ADMIN));
+router.use(requireRole(ROLES.TEACHER));
 
 // ─── Helper: format Zod errors ───
 function formatZodError(error: ZodError<unknown>): string {
-  return error.issues.map((issue) => `${String(issue.path.join('.'))}: ${issue.message}`).join('; ');
+  return error.issues
+    .map((issue) => `${String(issue.path.join('.'))}: ${issue.message}`)
+    .join('; ');
 }
 
-// ─── GET / — List all courses (admin view) ───
-router.get('/', async (_req: Request, res: Response) => {
+// ─── Helper: verify course ownership ───
+async function verifyOwnership(courseId: string, teacherId: string) {
+  const course = await prisma.course.findUnique({
+    where: { id: courseId },
+  });
+  if (!course) return { error: 'not_found' as const, course: null };
+  if (course.teacherId !== teacherId)
+    return { error: 'not_owner' as const, course: null };
+  return { error: null, course };
+}
+
+// ─── GET / — List teacher's courses ───
+router.get('/', async (req: Request, res: Response) => {
   try {
+    const teacherId = req.jwtUser!.userId;
+
     const courses = await prisma.course.findMany({
+      where: { teacherId },
       include: {
         _count: { select: { lessons: true } },
       },
@@ -52,8 +68,8 @@ router.get('/', async (_req: Request, res: Response) => {
       })),
     });
   } catch (error) {
-    console.error('Admin list courses error:', error);
-    res.status(500).json({ error: { message: '获取课程列表失败' } });
+    console.error('Teacher list courses error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.LIST_FAILED } });
   }
 });
 
@@ -61,11 +77,13 @@ router.get('/', async (_req: Request, res: Response) => {
 router.post('/', async (req: Request, res: Response) => {
   try {
     const validated = createCourseSchema.parse(req.body);
+    const teacherId = req.jwtUser!.userId;
 
     const course = await prisma.course.create({
       data: {
         ...validated,
         totalLessons: 0,
+        teacherId,
       },
     });
 
@@ -87,29 +105,39 @@ router.post('/', async (req: Request, res: Response) => {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      res.status(400).json({ error: { message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}` } });
+      res.status(400).json({
+        error: {
+          message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}`,
+        },
+      });
       return;
     }
-    console.error('Admin create course error:', error);
-    res.status(500).json({ error: { message: '创建课程失败' } });
+    console.error('Teacher create course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.CREATE_FAILED } });
   }
 });
 
-// ─── GET /:id — Course detail with all lessons ───
+// ─── GET /:id — Course detail with lessons ───
 router.get('/:id', async (req: Request, res: Response) => {
   try {
+    const teacherId = req.jwtUser!.userId;
     const course = await prisma.course.findUnique({
       where: { id: req.params.id as string },
       include: {
-        lessons: {
-          orderBy: { lessonNumber: 'asc' },
-        },
+        lessons: { orderBy: { lessonNumber: 'asc' } },
         _count: { select: { lessons: true } },
       },
     });
 
     if (!course) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+
+    if (course.teacherId !== teacherId) {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -144,8 +172,8 @@ router.get('/:id', async (req: Request, res: Response) => {
       },
     });
   } catch (error) {
-    console.error('Admin get course error:', error);
-    res.status(500).json({ error: { message: '获取课程详情失败' } });
+    console.error('Teacher get course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.LIST_FAILED } });
   }
 });
 
@@ -153,13 +181,20 @@ router.get('/:id', async (req: Request, res: Response) => {
 router.patch('/:id', async (req: Request, res: Response) => {
   try {
     const validated = updateCourseSchema.parse(req.body);
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    const existing = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
-
-    if (!existing) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -193,35 +228,46 @@ router.patch('/:id', async (req: Request, res: Response) => {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      res.status(400).json({ error: { message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}` } });
+      res.status(400).json({
+        error: {
+          message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}`,
+        },
+      });
       return;
     }
-    console.error('Admin update course error:', error);
-    res.status(500).json({ error: { message: '更新课程失败' } });
+    console.error('Teacher update course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.UPDATE_FAILED } });
   }
 });
 
 // ─── DELETE /:id — Delete course (guarded) ───
 router.delete('/:id', async (req: Request, res: Response) => {
   try {
-    const existing = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    if (!existing) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
-    // Check for existing user progress
     const progressCount = await prisma.userLessonProgress.count({
-      where: {
-        Lesson: { courseId: req.params.id as string },
-      },
+      where: { Lesson: { courseId: req.params.id as string } },
     });
 
     if (progressCount > 0) {
-      res.status(409).json({ error: { message: TEXTS.COURSE.HAS_PROGRESS } });
+      res
+        .status(409)
+        .json({ error: { message: TEXTS.TEACHER.DELETE_HAS_PROGRESS } });
       return;
     }
 
@@ -231,20 +277,28 @@ router.delete('/:id', async (req: Request, res: Response) => {
 
     res.json({ message: TEXTS.COURSE.DELETE_SUCCESS });
   } catch (error) {
-    console.error('Admin delete course error:', error);
-    res.status(500).json({ error: { message: '删除课程失败' } });
+    console.error('Teacher delete course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.DELETE_FAILED } });
   }
 });
 
 // ─── POST /:id/publish — Publish course ───
 router.post('/:id/publish', async (req: Request, res: Response) => {
   try {
-    const existing = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    if (!existing) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -255,20 +309,28 @@ router.post('/:id/publish', async (req: Request, res: Response) => {
 
     res.json({ message: TEXTS.COURSE.PUBLISH_SUCCESS });
   } catch (error) {
-    console.error('Admin publish course error:', error);
-    res.status(500).json({ error: { message: '发布课程失败' } });
+    console.error('Teacher publish course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.UPDATE_FAILED } });
   }
 });
 
 // ─── POST /:id/unpublish — Unpublish course ───
 router.post('/:id/unpublish', async (req: Request, res: Response) => {
   try {
-    const existing = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    if (!existing) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -279,20 +341,28 @@ router.post('/:id/unpublish', async (req: Request, res: Response) => {
 
     res.json({ message: TEXTS.COURSE.UNPUBLISH_SUCCESS });
   } catch (error) {
-    console.error('Admin unpublish course error:', error);
-    res.status(500).json({ error: { message: '取消发布课程失败' } });
+    console.error('Teacher unpublish course error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.UPDATE_FAILED } });
   }
 });
 
-// ─── GET /:id/lessons — List lessons (full content) ───
+// ─── GET /:id/lessons — List lessons ───
 router.get('/:id/lessons', async (req: Request, res: Response) => {
   try {
-    const course = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    if (!course) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -318,8 +388,8 @@ router.get('/:id/lessons', async (req: Request, res: Response) => {
       })),
     });
   } catch (error) {
-    console.error('Admin list lessons error:', error);
-    res.status(500).json({ error: { message: '获取课时列表失败' } });
+    console.error('Teacher list lessons error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.LIST_FAILED } });
   }
 });
 
@@ -327,13 +397,20 @@ router.get('/:id/lessons', async (req: Request, res: Response) => {
 router.post('/:id/lessons', async (req: Request, res: Response) => {
   try {
     const validated = createLessonSchema.parse(req.body);
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    const course = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
-
-    if (!course) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -348,7 +425,9 @@ router.post('/:id/lessons', async (req: Request, res: Response) => {
     });
 
     if (existing) {
-      res.status(409).json({ error: { message: TEXTS.COURSE.LESSON_NUMBER_CONFLICT } });
+      res
+        .status(409)
+        .json({ error: { message: TEXTS.TEACHER.LESSON_NUMBER_CONFLICT } });
       return;
     }
 
@@ -391,48 +470,15 @@ router.post('/:id/lessons', async (req: Request, res: Response) => {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      res.status(400).json({ error: { message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}` } });
+      res.status(400).json({
+        error: {
+          message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}`,
+        },
+      });
       return;
     }
-    console.error('Admin create lesson error:', error);
-    res.status(500).json({ error: { message: '创建课时失败' } });
-  }
-});
-
-// ─── GET /:id/lessons/:lessonId — Single lesson detail ───
-router.get('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
-  try {
-    const lesson = await prisma.lesson.findFirst({
-      where: {
-        id: req.params.lessonId as string,
-        courseId: req.params.id as string,
-      },
-    });
-
-    if (!lesson) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.LESSON_NOT_FOUND } });
-      return;
-    }
-
-    res.json({
-      lesson: {
-        id: lesson.id,
-        lessonNumber: lesson.lessonNumber,
-        unitNumber: lesson.unitNumber,
-        title: lesson.title,
-        description: lesson.description,
-        vocabularyItems: lesson.vocabularyItems,
-        grammarPoints: lesson.grammarPoints,
-        practiceExercises: lesson.practiceExercises,
-        isQuiz: lesson.isQuiz,
-        estimatedMinutes: lesson.estimatedMinutes,
-        createdAt: lesson.createdAt.toISOString(),
-        updatedAt: lesson.updatedAt.toISOString(),
-      },
-    });
-  } catch (error) {
-    console.error('Admin get lesson error:', error);
-    res.status(500).json({ error: { message: '获取课时详情失败' } });
+    console.error('Teacher create lesson error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.CREATE_FAILED } });
   }
 });
 
@@ -440,6 +486,22 @@ router.get('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
 router.patch('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
   try {
     const validated = updateLessonSchema.parse(req.body);
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
+
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
+      return;
+    }
 
     const lesson = await prisma.lesson.findFirst({
       where: {
@@ -449,12 +511,17 @@ router.patch('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
     });
 
     if (!lesson) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.LESSON_NOT_FOUND } });
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.LESSON_NOT_FOUND } });
       return;
     }
 
     // If lessonNumber is changing, check for conflict
-    if (validated.lessonNumber !== undefined && validated.lessonNumber !== lesson.lessonNumber) {
+    if (
+      validated.lessonNumber !== undefined &&
+      validated.lessonNumber !== lesson.lessonNumber
+    ) {
       const conflict = await prisma.lesson.findUnique({
         where: {
           courseId_lessonNumber: {
@@ -465,7 +532,9 @@ router.patch('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
       });
 
       if (conflict) {
-        res.status(409).json({ error: { message: TEXTS.COURSE.LESSON_NUMBER_CONFLICT } });
+        res
+          .status(409)
+          .json({ error: { message: TEXTS.TEACHER.LESSON_NUMBER_CONFLICT } });
         return;
       }
     }
@@ -501,61 +570,96 @@ router.patch('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
     });
   } catch (error) {
     if (error instanceof ZodError) {
-      res.status(400).json({ error: { message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}` } });
+      res.status(400).json({
+        error: {
+          message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}`,
+        },
+      });
       return;
     }
-    console.error('Admin update lesson error:', error);
-    res.status(500).json({ error: { message: '更新课时失败' } });
+    console.error('Teacher update lesson error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.UPDATE_FAILED } });
   }
 });
 
 // ─── DELETE /:id/lessons/:lessonId — Delete lesson ───
-router.delete('/:id/lessons/:lessonId', async (req: Request, res: Response) => {
-  try {
-    const lesson = await prisma.lesson.findFirst({
-      where: {
-        id: req.params.lessonId as string,
-        courseId: req.params.id as string,
-      },
-    });
+router.delete(
+  '/:id/lessons/:lessonId',
+  async (req: Request, res: Response) => {
+    try {
+      const teacherId = req.jwtUser!.userId;
+      const { error } = await verifyOwnership(
+        req.params.id as string,
+        teacherId,
+      );
 
-    if (!lesson) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.LESSON_NOT_FOUND } });
-      return;
+      if (error === 'not_found') {
+        res
+          .status(404)
+          .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+        return;
+      }
+      if (error === 'not_owner') {
+        res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
+        return;
+      }
+
+      const lesson = await prisma.lesson.findFirst({
+        where: {
+          id: req.params.lessonId as string,
+          courseId: req.params.id as string,
+        },
+      });
+
+      if (!lesson) {
+        res
+          .status(404)
+          .json({ error: { message: TEXTS.TEACHER.LESSON_NOT_FOUND } });
+        return;
+      }
+
+      await prisma.lesson.delete({
+        where: { id: req.params.lessonId as string },
+      });
+
+      // Update course totalLessons
+      const lessonCount = await prisma.lesson.count({
+        where: { courseId: req.params.id as string },
+      });
+
+      await prisma.course.update({
+        where: { id: req.params.id as string },
+        data: { totalLessons: lessonCount },
+      });
+
+      res.json({ message: TEXTS.COURSE.LESSON_DELETE_SUCCESS });
+    } catch (error) {
+      console.error('Teacher delete lesson error:', error);
+      res
+        .status(500)
+        .json({ error: { message: TEXTS.TEACHER.DELETE_FAILED } });
     }
-
-    await prisma.lesson.delete({
-      where: { id: req.params.lessonId as string },
-    });
-
-    // Update course totalLessons
-    const lessonCount = await prisma.lesson.count({
-      where: { courseId: req.params.id as string },
-    });
-
-    await prisma.course.update({
-      where: { id: req.params.id as string },
-      data: { totalLessons: lessonCount },
-    });
-
-    res.json({ message: TEXTS.COURSE.LESSON_DELETE_SUCCESS });
-  } catch (error) {
-    console.error('Admin delete lesson error:', error);
-    res.status(500).json({ error: { message: '删除课时失败' } });
-  }
-});
+  },
+);
 
 // ─── POST /:id/lessons/reorder — Reorder lessons ───
 router.post('/:id/lessons/reorder', async (req: Request, res: Response) => {
   try {
     const validated = reorderLessonsSchema.parse(req.body);
+    const teacherId = req.jwtUser!.userId;
+    const { error } = await verifyOwnership(
+      req.params.id as string,
+      teacherId,
+    );
 
-    const course = await prisma.course.findUnique({
-      where: { id: req.params.id as string },
-    });
-
-    if (!course) {
-      res.status(404).json({ error: { message: TEXTS.COURSE.NOT_FOUND } });
+    if (error === 'not_found') {
+      res
+        .status(404)
+        .json({ error: { message: TEXTS.TEACHER.COURSE_NOT_FOUND } });
+      return;
+    }
+    if (error === 'not_owner') {
+      res.status(403).json({ error: { message: TEXTS.TEACHER.NOT_OWNER } });
       return;
     }
 
@@ -569,13 +673,13 @@ router.post('/:id/lessons/reorder', async (req: Request, res: Response) => {
     });
 
     if (courseLessons.length !== validated.lessonIds.length) {
-      res.status(400).json({ error: { message: TEXTS.COURSE.VALIDATION_FAILED } });
+      res
+        .status(400)
+        .json({ error: { message: TEXTS.COURSE.VALIDATION_FAILED } });
       return;
     }
 
-    // Two-pass approach to avoid unique constraint violation:
-    // Pass 1: Set all lesson numbers to negative temporaries
-    // Pass 2: Set to final positive values
+    // Two-pass approach to avoid unique constraint violation
     await prisma.$transaction(async (tx) => {
       // Pass 1: negative temporaries
       for (let i = 0; i < validated.lessonIds.length; i++) {
@@ -597,11 +701,15 @@ router.post('/:id/lessons/reorder', async (req: Request, res: Response) => {
     res.json({ message: TEXTS.COURSE.REORDER_SUCCESS });
   } catch (error) {
     if (error instanceof ZodError) {
-      res.status(400).json({ error: { message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}` } });
+      res.status(400).json({
+        error: {
+          message: `${TEXTS.COURSE.VALIDATION_FAILED}: ${formatZodError(error)}`,
+        },
+      });
       return;
     }
-    console.error('Admin reorder lessons error:', error);
-    res.status(500).json({ error: { message: '排序课时失败' } });
+    console.error('Teacher reorder lessons error:', error);
+    res.status(500).json({ error: { message: TEXTS.TEACHER.UPDATE_FAILED } });
   }
 });
 

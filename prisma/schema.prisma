@@ -100,6 +100,8 @@ model User {
   listeningProgress    UserListeningProgress[]
   dailyChallenges      UserDailyChallenge[]
   activityLogs         ActivityLog[]
+  createdContent       ContentItem[]      @relation("CreatedContent")
+  teacherCourses       Course[]           @relation("TeacherCourses")
 
   @@unique([provider, providerId])
   @@index([email])
@@ -135,12 +137,15 @@ model Course {
   requiredTier        String   @default("FREE")
   creditCostPerLesson Int      @default(0)
   isPublished         Boolean  @default(false)
+  teacherId           String?
+  teacher             User?    @relation("TeacherCourses", fields: [teacherId], references: [id], onDelete: SetNull)
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
   lessons             Lesson[]
 
   @@index([level])
   @@index([isPublished])
+  @@index([teacherId])
 }
 
 model Lesson {
@@ -675,6 +680,8 @@ model ContentItem {
   source           ContentSource?     @relation(fields: [sourceId], references: [id], onDelete: SetNull)
   topicId          String?
   topic            Topic?             @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  creatorId        String?
+  creator          User?              @relation("CreatedContent", fields: [creatorId], references: [id], onDelete: SetNull)
 
   // Metadata
   title            String
@@ -718,6 +725,7 @@ model ContentItem {
   @@index([contentType])
   @@index([publishedAt])
   @@index([status, jlptLevel, contentType])
+  @@index([creatorId])
 }
 
 model ContentSection {

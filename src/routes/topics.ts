@@ -1,7 +1,8 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
-import { requireAdmin } from '../middleware/admin.js';
+import { attachRoles, requireRole } from '../middleware/rbac.js';
+import { ROLES } from '../constants/permissions.js';
 import { TEXTS } from '../constants/texts.js';
 
 const router = Router();
@@ -33,7 +34,8 @@ router.get('/', async (_req: Request, res: Response) => {
 router.post(
   '/admin',
   requireAuth,
-  requireAdmin,
+  attachRoles,
+  requireRole(ROLES.ADMIN),
   async (req: Request, res: Response) => {
     try {
       const { name, nameZh, nameJa, icon, sortOrder } = req.body as {
@@ -77,7 +79,8 @@ router.post(
 router.patch(
   '/admin/:id',
   requireAuth,
-  requireAdmin,
+  attachRoles,
+  requireRole(ROLES.ADMIN),
   async (req: Request, res: Response) => {
     try {
       const { name, nameZh, nameJa, icon, sortOrder } = req.body as {

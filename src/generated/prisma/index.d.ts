@@ -4481,6 +4481,8 @@ export namespace Prisma {
     listeningProgress: number
     dailyChallenges: number
     activityLogs: number
+    createdContent: number
+    teacherCourses: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4498,6 +4500,8 @@ export namespace Prisma {
     listeningProgress?: boolean | UserCountOutputTypeCountListeningProgressArgs
     dailyChallenges?: boolean | UserCountOutputTypeCountDailyChallengesArgs
     activityLogs?: boolean | UserCountOutputTypeCountActivityLogsArgs
+    createdContent?: boolean | UserCountOutputTypeCountCreatedContentArgs
+    teacherCourses?: boolean | UserCountOutputTypeCountTeacherCoursesArgs
   }
 
   // Custom InputTypes
@@ -4607,6 +4611,20 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountActivityLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ActivityLogWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountCreatedContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContentItemWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountTeacherCoursesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CourseWhereInput
   }
 
 
@@ -5330,6 +5348,8 @@ export namespace Prisma {
     listeningProgress?: boolean | User$listeningProgressArgs<ExtArgs>
     dailyChallenges?: boolean | User$dailyChallengesArgs<ExtArgs>
     activityLogs?: boolean | User$activityLogsArgs<ExtArgs>
+    createdContent?: boolean | User$createdContentArgs<ExtArgs>
+    teacherCourses?: boolean | User$teacherCoursesArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -5443,6 +5463,8 @@ export namespace Prisma {
     listeningProgress?: boolean | User$listeningProgressArgs<ExtArgs>
     dailyChallenges?: boolean | User$dailyChallengesArgs<ExtArgs>
     activityLogs?: boolean | User$activityLogsArgs<ExtArgs>
+    createdContent?: boolean | User$createdContentArgs<ExtArgs>
+    teacherCourses?: boolean | User$teacherCoursesArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -5466,6 +5488,8 @@ export namespace Prisma {
       listeningProgress: Prisma.$UserListeningProgressPayload<ExtArgs>[]
       dailyChallenges: Prisma.$UserDailyChallengePayload<ExtArgs>[]
       activityLogs: Prisma.$ActivityLogPayload<ExtArgs>[]
+      createdContent: Prisma.$ContentItemPayload<ExtArgs>[]
+      teacherCourses: Prisma.$CoursePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -5905,6 +5929,8 @@ export namespace Prisma {
     listeningProgress<T extends User$listeningProgressArgs<ExtArgs> = {}>(args?: Subset<T, User$listeningProgressArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserListeningProgressPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     dailyChallenges<T extends User$dailyChallengesArgs<ExtArgs> = {}>(args?: Subset<T, User$dailyChallengesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserDailyChallengePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     activityLogs<T extends User$activityLogsArgs<ExtArgs> = {}>(args?: Subset<T, User$activityLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ActivityLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    createdContent<T extends User$createdContentArgs<ExtArgs> = {}>(args?: Subset<T, User$createdContentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    teacherCourses<T extends User$teacherCoursesArgs<ExtArgs> = {}>(args?: Subset<T, User$teacherCoursesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CoursePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6702,6 +6728,54 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ActivityLogScalarFieldEnum | ActivityLogScalarFieldEnum[]
+  }
+
+  /**
+   * User.createdContent
+   */
+  export type User$createdContentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ContentItem
+     */
+    select?: ContentItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ContentItem
+     */
+    omit?: ContentItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContentItemInclude<ExtArgs> | null
+    where?: ContentItemWhereInput
+    orderBy?: ContentItemOrderByWithRelationInput | ContentItemOrderByWithRelationInput[]
+    cursor?: ContentItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContentItemScalarFieldEnum | ContentItemScalarFieldEnum[]
+  }
+
+  /**
+   * User.teacherCourses
+   */
+  export type User$teacherCoursesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Course
+     */
+    select?: CourseSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Course
+     */
+    omit?: CourseOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseInclude<ExtArgs> | null
+    where?: CourseWhereInput
+    orderBy?: CourseOrderByWithRelationInput | CourseOrderByWithRelationInput[]
+    cursor?: CourseWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CourseScalarFieldEnum | CourseScalarFieldEnum[]
   }
 
   /**
@@ -7931,6 +8005,7 @@ export namespace Prisma {
     requiredTier: string | null
     creditCostPerLesson: number | null
     isPublished: boolean | null
+    teacherId: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -7945,6 +8020,7 @@ export namespace Prisma {
     requiredTier: string | null
     creditCostPerLesson: number | null
     isPublished: boolean | null
+    teacherId: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -7959,6 +8035,7 @@ export namespace Prisma {
     requiredTier: number
     creditCostPerLesson: number
     isPublished: number
+    teacherId: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -7987,6 +8064,7 @@ export namespace Prisma {
     requiredTier?: true
     creditCostPerLesson?: true
     isPublished?: true
+    teacherId?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -8001,6 +8079,7 @@ export namespace Prisma {
     requiredTier?: true
     creditCostPerLesson?: true
     isPublished?: true
+    teacherId?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -8015,6 +8094,7 @@ export namespace Prisma {
     requiredTier?: true
     creditCostPerLesson?: true
     isPublished?: true
+    teacherId?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -8116,6 +8196,7 @@ export namespace Prisma {
     requiredTier: string
     creditCostPerLesson: number
     isPublished: boolean
+    teacherId: string | null
     createdAt: Date
     updatedAt: Date
     _count: CourseCountAggregateOutputType | null
@@ -8149,8 +8230,10 @@ export namespace Prisma {
     requiredTier?: boolean
     creditCostPerLesson?: boolean
     isPublished?: boolean
+    teacherId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
     lessons?: boolean | Course$lessonsArgs<ExtArgs>
     _count?: boolean | CourseCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["course"]>
@@ -8165,8 +8248,10 @@ export namespace Prisma {
     requiredTier?: boolean
     creditCostPerLesson?: boolean
     isPublished?: boolean
+    teacherId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
   }, ExtArgs["result"]["course"]>
 
   export type CourseSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -8179,8 +8264,10 @@ export namespace Prisma {
     requiredTier?: boolean
     creditCostPerLesson?: boolean
     isPublished?: boolean
+    teacherId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
   }, ExtArgs["result"]["course"]>
 
   export type CourseSelectScalar = {
@@ -8193,21 +8280,28 @@ export namespace Prisma {
     requiredTier?: boolean
     creditCostPerLesson?: boolean
     isPublished?: boolean
+    teacherId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type CourseOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "level" | "title" | "description" | "totalLessons" | "estimatedHours" | "requiredTier" | "creditCostPerLesson" | "isPublished" | "createdAt" | "updatedAt", ExtArgs["result"]["course"]>
+  export type CourseOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "level" | "title" | "description" | "totalLessons" | "estimatedHours" | "requiredTier" | "creditCostPerLesson" | "isPublished" | "teacherId" | "createdAt" | "updatedAt", ExtArgs["result"]["course"]>
   export type CourseInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
     lessons?: boolean | Course$lessonsArgs<ExtArgs>
     _count?: boolean | CourseCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type CourseIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type CourseIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type CourseIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
+  }
+  export type CourseIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    teacher?: boolean | Course$teacherArgs<ExtArgs>
+  }
 
   export type $CoursePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Course"
     objects: {
+      teacher: Prisma.$UserPayload<ExtArgs> | null
       lessons: Prisma.$LessonPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
@@ -8220,6 +8314,7 @@ export namespace Prisma {
       requiredTier: string
       creditCostPerLesson: number
       isPublished: boolean
+      teacherId: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["course"]>
@@ -8616,6 +8711,7 @@ export namespace Prisma {
    */
   export interface Prisma__CourseClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    teacher<T extends Course$teacherArgs<ExtArgs> = {}>(args?: Subset<T, Course$teacherArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     lessons<T extends Course$lessonsArgs<ExtArgs> = {}>(args?: Subset<T, Course$lessonsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LessonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -8655,6 +8751,7 @@ export namespace Prisma {
     readonly requiredTier: FieldRef<"Course", 'String'>
     readonly creditCostPerLesson: FieldRef<"Course", 'Int'>
     readonly isPublished: FieldRef<"Course", 'Boolean'>
+    readonly teacherId: FieldRef<"Course", 'String'>
     readonly createdAt: FieldRef<"Course", 'DateTime'>
     readonly updatedAt: FieldRef<"Course", 'DateTime'>
   }
@@ -8906,6 +9003,10 @@ export namespace Prisma {
      */
     data: CourseCreateManyInput | CourseCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -8976,6 +9077,10 @@ export namespace Prisma {
      * Limit how many Courses to update.
      */
     limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CourseIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -9042,6 +9147,25 @@ export namespace Prisma {
      * Limit how many Courses to delete.
      */
     limit?: number
+  }
+
+  /**
+   * Course.teacher
+   */
+  export type Course$teacherArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    where?: UserWhereInput
   }
 
   /**
@@ -37205,6 +37329,7 @@ export namespace Prisma {
     id: string | null
     sourceId: string | null
     topicId: string | null
+    creatorId: string | null
     title: string | null
     titleZh: string | null
     url: string | null
@@ -37227,6 +37352,7 @@ export namespace Prisma {
     id: string | null
     sourceId: string | null
     topicId: string | null
+    creatorId: string | null
     title: string | null
     titleZh: string | null
     url: string | null
@@ -37249,6 +37375,7 @@ export namespace Prisma {
     id: number
     sourceId: number
     topicId: number
+    creatorId: number
     title: number
     titleZh: number
     url: number
@@ -37285,6 +37412,7 @@ export namespace Prisma {
     id?: true
     sourceId?: true
     topicId?: true
+    creatorId?: true
     title?: true
     titleZh?: true
     url?: true
@@ -37307,6 +37435,7 @@ export namespace Prisma {
     id?: true
     sourceId?: true
     topicId?: true
+    creatorId?: true
     title?: true
     titleZh?: true
     url?: true
@@ -37329,6 +37458,7 @@ export namespace Prisma {
     id?: true
     sourceId?: true
     topicId?: true
+    creatorId?: true
     title?: true
     titleZh?: true
     url?: true
@@ -37440,6 +37570,7 @@ export namespace Prisma {
     id: string
     sourceId: string | null
     topicId: string | null
+    creatorId: string | null
     title: string
     titleZh: string
     url: string
@@ -37483,6 +37614,7 @@ export namespace Prisma {
     id?: boolean
     sourceId?: boolean
     topicId?: boolean
+    creatorId?: boolean
     title?: boolean
     titleZh?: boolean
     url?: boolean
@@ -37503,6 +37635,7 @@ export namespace Prisma {
     updatedAt?: boolean
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
     sections?: boolean | ContentItem$sectionsArgs<ExtArgs>
     audio?: boolean | ContentItem$audioArgs<ExtArgs>
     questions?: boolean | ContentItem$questionsArgs<ExtArgs>
@@ -37516,6 +37649,7 @@ export namespace Prisma {
     id?: boolean
     sourceId?: boolean
     topicId?: boolean
+    creatorId?: boolean
     title?: boolean
     titleZh?: boolean
     url?: boolean
@@ -37536,12 +37670,14 @@ export namespace Prisma {
     updatedAt?: boolean
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
   }, ExtArgs["result"]["contentItem"]>
 
   export type ContentItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     sourceId?: boolean
     topicId?: boolean
+    creatorId?: boolean
     title?: boolean
     titleZh?: boolean
     url?: boolean
@@ -37562,12 +37698,14 @@ export namespace Prisma {
     updatedAt?: boolean
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
   }, ExtArgs["result"]["contentItem"]>
 
   export type ContentItemSelectScalar = {
     id?: boolean
     sourceId?: boolean
     topicId?: boolean
+    creatorId?: boolean
     title?: boolean
     titleZh?: boolean
     url?: boolean
@@ -37588,10 +37726,11 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type ContentItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "sourceId" | "topicId" | "title" | "titleZh" | "url" | "imageUrl" | "rawText" | "cleanedText" | "simplifiedText" | "summary" | "contentType" | "status" | "jlptLevel" | "wordCount" | "estimatedMinutes" | "extractedVocab" | "extractedGrammar" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["contentItem"]>
+  export type ContentItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "sourceId" | "topicId" | "creatorId" | "title" | "titleZh" | "url" | "imageUrl" | "rawText" | "cleanedText" | "simplifiedText" | "summary" | "contentType" | "status" | "jlptLevel" | "wordCount" | "estimatedMinutes" | "extractedVocab" | "extractedGrammar" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["contentItem"]>
   export type ContentItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
     sections?: boolean | ContentItem$sectionsArgs<ExtArgs>
     audio?: boolean | ContentItem$audioArgs<ExtArgs>
     questions?: boolean | ContentItem$questionsArgs<ExtArgs>
@@ -37603,10 +37742,12 @@ export namespace Prisma {
   export type ContentItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
   }
   export type ContentItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     source?: boolean | ContentItem$sourceArgs<ExtArgs>
     topic?: boolean | ContentItem$topicArgs<ExtArgs>
+    creator?: boolean | ContentItem$creatorArgs<ExtArgs>
   }
 
   export type $ContentItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -37614,6 +37755,7 @@ export namespace Prisma {
     objects: {
       source: Prisma.$ContentSourcePayload<ExtArgs> | null
       topic: Prisma.$TopicPayload<ExtArgs> | null
+      creator: Prisma.$UserPayload<ExtArgs> | null
       sections: Prisma.$ContentSectionPayload<ExtArgs>[]
       audio: Prisma.$ContentAudioPayload<ExtArgs>[]
       questions: Prisma.$GeneratedQuestionPayload<ExtArgs>[]
@@ -37625,6 +37767,7 @@ export namespace Prisma {
       id: string
       sourceId: string | null
       topicId: string | null
+      creatorId: string | null
       title: string
       titleZh: string
       url: string
@@ -38039,6 +38182,7 @@ export namespace Prisma {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     source<T extends ContentItem$sourceArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$sourceArgs<ExtArgs>>): Prisma__ContentSourceClient<$Result.GetResult<Prisma.$ContentSourcePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     topic<T extends ContentItem$topicArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$topicArgs<ExtArgs>>): Prisma__TopicClient<$Result.GetResult<Prisma.$TopicPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    creator<T extends ContentItem$creatorArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$creatorArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     sections<T extends ContentItem$sectionsArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$sectionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentSectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     audio<T extends ContentItem$audioArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$audioArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContentAudioPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     questions<T extends ContentItem$questionsArgs<ExtArgs> = {}>(args?: Subset<T, ContentItem$questionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GeneratedQuestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
@@ -38077,6 +38221,7 @@ export namespace Prisma {
     readonly id: FieldRef<"ContentItem", 'String'>
     readonly sourceId: FieldRef<"ContentItem", 'String'>
     readonly topicId: FieldRef<"ContentItem", 'String'>
+    readonly creatorId: FieldRef<"ContentItem", 'String'>
     readonly title: FieldRef<"ContentItem", 'String'>
     readonly titleZh: FieldRef<"ContentItem", 'String'>
     readonly url: FieldRef<"ContentItem", 'String'>
@@ -38526,6 +38671,25 @@ export namespace Prisma {
      */
     include?: TopicInclude<ExtArgs> | null
     where?: TopicWhereInput
+  }
+
+  /**
+   * ContentItem.creator
+   */
+  export type ContentItem$creatorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the User
+     */
+    select?: UserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the User
+     */
+    omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    where?: UserWhereInput
   }
 
   /**
@@ -50379,6 +50543,7 @@ export namespace Prisma {
     requiredTier: 'requiredTier',
     creditCostPerLesson: 'creditCostPerLesson',
     isPublished: 'isPublished',
+    teacherId: 'teacherId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -50782,6 +50947,7 @@ export namespace Prisma {
     id: 'id',
     sourceId: 'sourceId',
     topicId: 'topicId',
+    creatorId: 'creatorId',
     title: 'title',
     titleZh: 'titleZh',
     url: 'url',
@@ -51298,6 +51464,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressListRelationFilter
     dailyChallenges?: UserDailyChallengeListRelationFilter
     activityLogs?: ActivityLogListRelationFilter
+    createdContent?: ContentItemListRelationFilter
+    teacherCourses?: CourseListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -51344,6 +51512,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressOrderByRelationAggregateInput
     dailyChallenges?: UserDailyChallengeOrderByRelationAggregateInput
     activityLogs?: ActivityLogOrderByRelationAggregateInput
+    createdContent?: ContentItemOrderByRelationAggregateInput
+    teacherCourses?: CourseOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -51394,6 +51564,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressListRelationFilter
     dailyChallenges?: UserDailyChallengeListRelationFilter
     activityLogs?: ActivityLogListRelationFilter
+    createdContent?: ContentItemListRelationFilter
+    teacherCourses?: CourseListRelationFilter
   }, "id" | "email" | "customerId" | "provider_providerId">
 
   export type UserOrderByWithAggregationInput = {
@@ -51566,8 +51738,10 @@ export namespace Prisma {
     requiredTier?: StringFilter<"Course"> | string
     creditCostPerLesson?: IntFilter<"Course"> | number
     isPublished?: BoolFilter<"Course"> | boolean
+    teacherId?: StringNullableFilter<"Course"> | string | null
     createdAt?: DateTimeFilter<"Course"> | Date | string
     updatedAt?: DateTimeFilter<"Course"> | Date | string
+    teacher?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     lessons?: LessonListRelationFilter
   }
 
@@ -51581,8 +51755,10 @@ export namespace Prisma {
     requiredTier?: SortOrder
     creditCostPerLesson?: SortOrder
     isPublished?: SortOrder
+    teacherId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    teacher?: UserOrderByWithRelationInput
     lessons?: LessonOrderByRelationAggregateInput
   }
 
@@ -51599,8 +51775,10 @@ export namespace Prisma {
     requiredTier?: StringFilter<"Course"> | string
     creditCostPerLesson?: IntFilter<"Course"> | number
     isPublished?: BoolFilter<"Course"> | boolean
+    teacherId?: StringNullableFilter<"Course"> | string | null
     createdAt?: DateTimeFilter<"Course"> | Date | string
     updatedAt?: DateTimeFilter<"Course"> | Date | string
+    teacher?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     lessons?: LessonListRelationFilter
   }, "id">
 
@@ -51614,6 +51792,7 @@ export namespace Prisma {
     requiredTier?: SortOrder
     creditCostPerLesson?: SortOrder
     isPublished?: SortOrder
+    teacherId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: CourseCountOrderByAggregateInput
@@ -51636,6 +51815,7 @@ export namespace Prisma {
     requiredTier?: StringWithAggregatesFilter<"Course"> | string
     creditCostPerLesson?: IntWithAggregatesFilter<"Course"> | number
     isPublished?: BoolWithAggregatesFilter<"Course"> | boolean
+    teacherId?: StringNullableWithAggregatesFilter<"Course"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Course"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Course"> | Date | string
   }
@@ -53634,6 +53814,7 @@ export namespace Prisma {
     id?: StringFilter<"ContentItem"> | string
     sourceId?: StringNullableFilter<"ContentItem"> | string | null
     topicId?: StringNullableFilter<"ContentItem"> | string | null
+    creatorId?: StringNullableFilter<"ContentItem"> | string | null
     title?: StringFilter<"ContentItem"> | string
     titleZh?: StringFilter<"ContentItem"> | string
     url?: StringFilter<"ContentItem"> | string
@@ -53654,6 +53835,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
     source?: XOR<ContentSourceNullableScalarRelationFilter, ContentSourceWhereInput> | null
     topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    creator?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     sections?: ContentSectionListRelationFilter
     audio?: ContentAudioListRelationFilter
     questions?: GeneratedQuestionListRelationFilter
@@ -53666,6 +53848,7 @@ export namespace Prisma {
     id?: SortOrder
     sourceId?: SortOrderInput | SortOrder
     topicId?: SortOrderInput | SortOrder
+    creatorId?: SortOrderInput | SortOrder
     title?: SortOrder
     titleZh?: SortOrder
     url?: SortOrder
@@ -53686,6 +53869,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
     source?: ContentSourceOrderByWithRelationInput
     topic?: TopicOrderByWithRelationInput
+    creator?: UserOrderByWithRelationInput
     sections?: ContentSectionOrderByRelationAggregateInput
     audio?: ContentAudioOrderByRelationAggregateInput
     questions?: GeneratedQuestionOrderByRelationAggregateInput
@@ -53701,6 +53885,7 @@ export namespace Prisma {
     NOT?: ContentItemWhereInput | ContentItemWhereInput[]
     sourceId?: StringNullableFilter<"ContentItem"> | string | null
     topicId?: StringNullableFilter<"ContentItem"> | string | null
+    creatorId?: StringNullableFilter<"ContentItem"> | string | null
     title?: StringFilter<"ContentItem"> | string
     titleZh?: StringFilter<"ContentItem"> | string
     url?: StringFilter<"ContentItem"> | string
@@ -53721,6 +53906,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
     source?: XOR<ContentSourceNullableScalarRelationFilter, ContentSourceWhereInput> | null
     topic?: XOR<TopicNullableScalarRelationFilter, TopicWhereInput> | null
+    creator?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     sections?: ContentSectionListRelationFilter
     audio?: ContentAudioListRelationFilter
     questions?: GeneratedQuestionListRelationFilter
@@ -53733,6 +53919,7 @@ export namespace Prisma {
     id?: SortOrder
     sourceId?: SortOrderInput | SortOrder
     topicId?: SortOrderInput | SortOrder
+    creatorId?: SortOrderInput | SortOrder
     title?: SortOrder
     titleZh?: SortOrder
     url?: SortOrder
@@ -53765,6 +53952,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"ContentItem"> | string
     sourceId?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
     topicId?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
+    creatorId?: StringNullableWithAggregatesFilter<"ContentItem"> | string | null
     title?: StringWithAggregatesFilter<"ContentItem"> | string
     titleZh?: StringWithAggregatesFilter<"ContentItem"> | string
     url?: StringWithAggregatesFilter<"ContentItem"> | string
@@ -54661,6 +54849,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -54707,6 +54897,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUpdateInput = {
@@ -54753,6 +54945,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -54799,6 +54993,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -55003,6 +55199,7 @@ export namespace Prisma {
     isPublished?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
+    teacher?: UserCreateNestedOneWithoutTeacherCoursesInput
     lessons?: LessonCreateNestedManyWithoutCourseInput
   }
 
@@ -55016,6 +55213,7 @@ export namespace Prisma {
     requiredTier?: string
     creditCostPerLesson?: number
     isPublished?: boolean
+    teacherId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     lessons?: LessonUncheckedCreateNestedManyWithoutCourseInput
@@ -55033,6 +55231,7 @@ export namespace Prisma {
     isPublished?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    teacher?: UserUpdateOneWithoutTeacherCoursesNestedInput
     lessons?: LessonUpdateManyWithoutCourseNestedInput
   }
 
@@ -55046,6 +55245,7 @@ export namespace Prisma {
     requiredTier?: StringFieldUpdateOperationsInput | string
     creditCostPerLesson?: IntFieldUpdateOperationsInput | number
     isPublished?: BoolFieldUpdateOperationsInput | boolean
+    teacherId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     lessons?: LessonUncheckedUpdateManyWithoutCourseNestedInput
@@ -55061,6 +55261,7 @@ export namespace Prisma {
     requiredTier?: string
     creditCostPerLesson?: number
     isPublished?: boolean
+    teacherId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -55089,6 +55290,7 @@ export namespace Prisma {
     requiredTier?: StringFieldUpdateOperationsInput | string
     creditCostPerLesson?: IntFieldUpdateOperationsInput | number
     isPublished?: BoolFieldUpdateOperationsInput | boolean
+    teacherId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -57343,6 +57545,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -57355,6 +57558,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -57403,6 +57607,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -57415,6 +57620,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -57445,6 +57651,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -57491,6 +57698,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -58573,6 +58781,18 @@ export namespace Prisma {
     none?: ActivityLogWhereInput
   }
 
+  export type ContentItemListRelationFilter = {
+    every?: ContentItemWhereInput
+    some?: ContentItemWhereInput
+    none?: ContentItemWhereInput
+  }
+
+  export type CourseListRelationFilter = {
+    every?: CourseWhereInput
+    some?: CourseWhereInput
+    none?: CourseWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -58631,6 +58851,14 @@ export namespace Prisma {
   }
 
   export type ActivityLogOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ContentItemOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CourseOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -58897,6 +59125,11 @@ export namespace Prisma {
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
+  export type UserNullableScalarRelationFilter = {
+    is?: UserWhereInput | null
+    isNot?: UserWhereInput | null
+  }
+
   export type LessonListRelationFilter = {
     every?: LessonWhereInput
     some?: LessonWhereInput
@@ -58917,6 +59150,7 @@ export namespace Prisma {
     requiredTier?: SortOrder
     creditCostPerLesson?: SortOrder
     isPublished?: SortOrder
+    teacherId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -58937,6 +59171,7 @@ export namespace Prisma {
     requiredTier?: SortOrder
     creditCostPerLesson?: SortOrder
     isPublished?: SortOrder
+    teacherId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -58951,6 +59186,7 @@ export namespace Prisma {
     requiredTier?: SortOrder
     creditCostPerLesson?: SortOrder
     isPublished?: SortOrder
+    teacherId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -60342,20 +60578,10 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ContentItemListRelationFilter = {
-    every?: ContentItemWhereInput
-    some?: ContentItemWhereInput
-    none?: ContentItemWhereInput
-  }
-
   export type ListeningContentListRelationFilter = {
     every?: ListeningContentWhereInput
     some?: ListeningContentWhereInput
     none?: ListeningContentWhereInput
-  }
-
-  export type ContentItemOrderByRelationAggregateInput = {
-    _count?: SortOrder
   }
 
   export type ListeningContentOrderByRelationAggregateInput = {
@@ -60506,6 +60732,7 @@ export namespace Prisma {
     id?: SortOrder
     sourceId?: SortOrder
     topicId?: SortOrder
+    creatorId?: SortOrder
     title?: SortOrder
     titleZh?: SortOrder
     url?: SortOrder
@@ -60535,6 +60762,7 @@ export namespace Prisma {
     id?: SortOrder
     sourceId?: SortOrder
     topicId?: SortOrder
+    creatorId?: SortOrder
     title?: SortOrder
     titleZh?: SortOrder
     url?: SortOrder
@@ -60557,6 +60785,7 @@ export namespace Prisma {
     id?: SortOrder
     sourceId?: SortOrder
     topicId?: SortOrder
+    creatorId?: SortOrder
     title?: SortOrder
     titleZh?: SortOrder
     url?: SortOrder
@@ -61238,6 +61467,20 @@ export namespace Prisma {
     connect?: ActivityLogWhereUniqueInput | ActivityLogWhereUniqueInput[]
   }
 
+  export type ContentItemCreateNestedManyWithoutCreatorInput = {
+    create?: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput> | ContentItemCreateWithoutCreatorInput[] | ContentItemUncheckedCreateWithoutCreatorInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutCreatorInput | ContentItemCreateOrConnectWithoutCreatorInput[]
+    createMany?: ContentItemCreateManyCreatorInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type CourseCreateNestedManyWithoutTeacherInput = {
+    create?: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput> | CourseCreateWithoutTeacherInput[] | CourseUncheckedCreateWithoutTeacherInput[]
+    connectOrCreate?: CourseCreateOrConnectWithoutTeacherInput | CourseCreateOrConnectWithoutTeacherInput[]
+    createMany?: CourseCreateManyTeacherInputEnvelope
+    connect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -61340,6 +61583,20 @@ export namespace Prisma {
     connectOrCreate?: ActivityLogCreateOrConnectWithoutUserInput | ActivityLogCreateOrConnectWithoutUserInput[]
     createMany?: ActivityLogCreateManyUserInputEnvelope
     connect?: ActivityLogWhereUniqueInput | ActivityLogWhereUniqueInput[]
+  }
+
+  export type ContentItemUncheckedCreateNestedManyWithoutCreatorInput = {
+    create?: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput> | ContentItemCreateWithoutCreatorInput[] | ContentItemUncheckedCreateWithoutCreatorInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutCreatorInput | ContentItemCreateOrConnectWithoutCreatorInput[]
+    createMany?: ContentItemCreateManyCreatorInputEnvelope
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+  }
+
+  export type CourseUncheckedCreateNestedManyWithoutTeacherInput = {
+    create?: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput> | CourseCreateWithoutTeacherInput[] | CourseUncheckedCreateWithoutTeacherInput[]
+    connectOrCreate?: CourseCreateOrConnectWithoutTeacherInput | CourseCreateOrConnectWithoutTeacherInput[]
+    createMany?: CourseCreateManyTeacherInputEnvelope
+    connect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -61577,6 +61834,34 @@ export namespace Prisma {
     deleteMany?: ActivityLogScalarWhereInput | ActivityLogScalarWhereInput[]
   }
 
+  export type ContentItemUpdateManyWithoutCreatorNestedInput = {
+    create?: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput> | ContentItemCreateWithoutCreatorInput[] | ContentItemUncheckedCreateWithoutCreatorInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutCreatorInput | ContentItemCreateOrConnectWithoutCreatorInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutCreatorInput | ContentItemUpsertWithWhereUniqueWithoutCreatorInput[]
+    createMany?: ContentItemCreateManyCreatorInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutCreatorInput | ContentItemUpdateWithWhereUniqueWithoutCreatorInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutCreatorInput | ContentItemUpdateManyWithWhereWithoutCreatorInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type CourseUpdateManyWithoutTeacherNestedInput = {
+    create?: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput> | CourseCreateWithoutTeacherInput[] | CourseUncheckedCreateWithoutTeacherInput[]
+    connectOrCreate?: CourseCreateOrConnectWithoutTeacherInput | CourseCreateOrConnectWithoutTeacherInput[]
+    upsert?: CourseUpsertWithWhereUniqueWithoutTeacherInput | CourseUpsertWithWhereUniqueWithoutTeacherInput[]
+    createMany?: CourseCreateManyTeacherInputEnvelope
+    set?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    disconnect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    delete?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    connect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    update?: CourseUpdateWithWhereUniqueWithoutTeacherInput | CourseUpdateWithWhereUniqueWithoutTeacherInput[]
+    updateMany?: CourseUpdateManyWithWhereWithoutTeacherInput | CourseUpdateManyWithWhereWithoutTeacherInput[]
+    deleteMany?: CourseScalarWhereInput | CourseScalarWhereInput[]
+  }
+
   export type AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<AnalyzedVocabularyCreateWithoutUserInput, AnalyzedVocabularyUncheckedCreateWithoutUserInput> | AnalyzedVocabularyCreateWithoutUserInput[] | AnalyzedVocabularyUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AnalyzedVocabularyCreateOrConnectWithoutUserInput | AnalyzedVocabularyCreateOrConnectWithoutUserInput[]
@@ -61783,6 +62068,34 @@ export namespace Prisma {
     deleteMany?: ActivityLogScalarWhereInput | ActivityLogScalarWhereInput[]
   }
 
+  export type ContentItemUncheckedUpdateManyWithoutCreatorNestedInput = {
+    create?: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput> | ContentItemCreateWithoutCreatorInput[] | ContentItemUncheckedCreateWithoutCreatorInput[]
+    connectOrCreate?: ContentItemCreateOrConnectWithoutCreatorInput | ContentItemCreateOrConnectWithoutCreatorInput[]
+    upsert?: ContentItemUpsertWithWhereUniqueWithoutCreatorInput | ContentItemUpsertWithWhereUniqueWithoutCreatorInput[]
+    createMany?: ContentItemCreateManyCreatorInputEnvelope
+    set?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    disconnect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    delete?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    connect?: ContentItemWhereUniqueInput | ContentItemWhereUniqueInput[]
+    update?: ContentItemUpdateWithWhereUniqueWithoutCreatorInput | ContentItemUpdateWithWhereUniqueWithoutCreatorInput[]
+    updateMany?: ContentItemUpdateManyWithWhereWithoutCreatorInput | ContentItemUpdateManyWithWhereWithoutCreatorInput[]
+    deleteMany?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+  }
+
+  export type CourseUncheckedUpdateManyWithoutTeacherNestedInput = {
+    create?: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput> | CourseCreateWithoutTeacherInput[] | CourseUncheckedCreateWithoutTeacherInput[]
+    connectOrCreate?: CourseCreateOrConnectWithoutTeacherInput | CourseCreateOrConnectWithoutTeacherInput[]
+    upsert?: CourseUpsertWithWhereUniqueWithoutTeacherInput | CourseUpsertWithWhereUniqueWithoutTeacherInput[]
+    createMany?: CourseCreateManyTeacherInputEnvelope
+    set?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    disconnect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    delete?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    connect?: CourseWhereUniqueInput | CourseWhereUniqueInput[]
+    update?: CourseUpdateWithWhereUniqueWithoutTeacherInput | CourseUpdateWithWhereUniqueWithoutTeacherInput[]
+    updateMany?: CourseUpdateManyWithWhereWithoutTeacherInput | CourseUpdateManyWithWhereWithoutTeacherInput[]
+    deleteMany?: CourseScalarWhereInput | CourseScalarWhereInput[]
+  }
+
   export type UserCreateNestedOneWithoutAnalyzedVocabularyInput = {
     create?: XOR<UserCreateWithoutAnalyzedVocabularyInput, UserUncheckedCreateWithoutAnalyzedVocabularyInput>
     connectOrCreate?: UserCreateOrConnectWithoutAnalyzedVocabularyInput
@@ -61795,6 +62108,12 @@ export namespace Prisma {
     upsert?: UserUpsertWithoutAnalyzedVocabularyInput
     connect?: UserWhereUniqueInput
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAnalyzedVocabularyInput, UserUpdateWithoutAnalyzedVocabularyInput>, UserUncheckedUpdateWithoutAnalyzedVocabularyInput>
+  }
+
+  export type UserCreateNestedOneWithoutTeacherCoursesInput = {
+    create?: XOR<UserCreateWithoutTeacherCoursesInput, UserUncheckedCreateWithoutTeacherCoursesInput>
+    connectOrCreate?: UserCreateOrConnectWithoutTeacherCoursesInput
+    connect?: UserWhereUniqueInput
   }
 
   export type LessonCreateNestedManyWithoutCourseInput = {
@@ -61821,6 +62140,16 @@ export namespace Prisma {
 
   export type BoolFieldUpdateOperationsInput = {
     set?: boolean
+  }
+
+  export type UserUpdateOneWithoutTeacherCoursesNestedInput = {
+    create?: XOR<UserCreateWithoutTeacherCoursesInput, UserUncheckedCreateWithoutTeacherCoursesInput>
+    connectOrCreate?: UserCreateOrConnectWithoutTeacherCoursesInput
+    upsert?: UserUpsertWithoutTeacherCoursesInput
+    disconnect?: UserWhereInput | boolean
+    delete?: UserWhereInput | boolean
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutTeacherCoursesInput, UserUpdateWithoutTeacherCoursesInput>, UserUncheckedUpdateWithoutTeacherCoursesInput>
   }
 
   export type LessonUpdateManyWithoutCourseNestedInput = {
@@ -62373,6 +62702,12 @@ export namespace Prisma {
     connect?: TopicWhereUniqueInput
   }
 
+  export type UserCreateNestedOneWithoutCreatedContentInput = {
+    create?: XOR<UserCreateWithoutCreatedContentInput, UserUncheckedCreateWithoutCreatedContentInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCreatedContentInput
+    connect?: UserWhereUniqueInput
+  }
+
   export type ContentSectionCreateNestedManyWithoutContentItemInput = {
     create?: XOR<ContentSectionCreateWithoutContentItemInput, ContentSectionUncheckedCreateWithoutContentItemInput> | ContentSectionCreateWithoutContentItemInput[] | ContentSectionUncheckedCreateWithoutContentItemInput[]
     connectOrCreate?: ContentSectionCreateOrConnectWithoutContentItemInput | ContentSectionCreateOrConnectWithoutContentItemInput[]
@@ -62481,6 +62816,16 @@ export namespace Prisma {
     delete?: TopicWhereInput | boolean
     connect?: TopicWhereUniqueInput
     update?: XOR<XOR<TopicUpdateToOneWithWhereWithoutContentInput, TopicUpdateWithoutContentInput>, TopicUncheckedUpdateWithoutContentInput>
+  }
+
+  export type UserUpdateOneWithoutCreatedContentNestedInput = {
+    create?: XOR<UserCreateWithoutCreatedContentInput, UserUncheckedCreateWithoutCreatedContentInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCreatedContentInput
+    upsert?: UserUpsertWithoutCreatedContentInput
+    disconnect?: UserWhereInput | boolean
+    delete?: UserWhereInput | boolean
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCreatedContentInput, UserUpdateWithoutCreatedContentInput>, UserUncheckedUpdateWithoutCreatedContentInput>
   }
 
   export type ContentSectionUpdateManyWithoutContentItemNestedInput = {
@@ -64001,6 +64346,116 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type ContentItemCreateWithoutCreatorInput = {
+    id?: string
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    source?: ContentSourceCreateNestedOneWithoutContentInput
+    topic?: TopicCreateNestedOneWithoutContentInput
+    sections?: ContentSectionCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemUncheckedCreateWithoutCreatorInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sections?: ContentSectionUncheckedCreateNestedManyWithoutContentItemInput
+    audio?: ContentAudioUncheckedCreateNestedManyWithoutContentItemInput
+    questions?: GeneratedQuestionUncheckedCreateNestedManyWithoutContentItemInput
+    srsItems?: GeneratedSRSItemUncheckedCreateNestedManyWithoutContentItemInput
+    userProgress?: UserContentProgressUncheckedCreateNestedManyWithoutContentItemInput
+    importJob?: ContentImportJobUncheckedCreateNestedOneWithoutContentItemInput
+  }
+
+  export type ContentItemCreateOrConnectWithoutCreatorInput = {
+    where: ContentItemWhereUniqueInput
+    create: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput>
+  }
+
+  export type ContentItemCreateManyCreatorInputEnvelope = {
+    data: ContentItemCreateManyCreatorInput | ContentItemCreateManyCreatorInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type CourseCreateWithoutTeacherInput = {
+    id?: string
+    level: string
+    title: string
+    description?: string | null
+    totalLessons: number
+    estimatedHours?: number | null
+    requiredTier?: string
+    creditCostPerLesson?: number
+    isPublished?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lessons?: LessonCreateNestedManyWithoutCourseInput
+  }
+
+  export type CourseUncheckedCreateWithoutTeacherInput = {
+    id?: string
+    level: string
+    title: string
+    description?: string | null
+    totalLessons: number
+    estimatedHours?: number | null
+    requiredTier?: string
+    creditCostPerLesson?: number
+    isPublished?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lessons?: LessonUncheckedCreateNestedManyWithoutCourseInput
+  }
+
+  export type CourseCreateOrConnectWithoutTeacherInput = {
+    where: CourseWhereUniqueInput
+    create: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput>
+  }
+
+  export type CourseCreateManyTeacherInputEnvelope = {
+    data: CourseCreateManyTeacherInput | CourseCreateManyTeacherInput[]
+    skipDuplicates?: boolean
+  }
+
   export type AnalyzedVocabularyUpsertWithWhereUniqueWithoutUserInput = {
     where: AnalyzedVocabularyWhereUniqueInput
     update: XOR<AnalyzedVocabularyUpdateWithoutUserInput, AnalyzedVocabularyUncheckedUpdateWithoutUserInput>
@@ -64507,6 +64962,84 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"ActivityLog"> | Date | string
   }
 
+  export type ContentItemUpsertWithWhereUniqueWithoutCreatorInput = {
+    where: ContentItemWhereUniqueInput
+    update: XOR<ContentItemUpdateWithoutCreatorInput, ContentItemUncheckedUpdateWithoutCreatorInput>
+    create: XOR<ContentItemCreateWithoutCreatorInput, ContentItemUncheckedCreateWithoutCreatorInput>
+  }
+
+  export type ContentItemUpdateWithWhereUniqueWithoutCreatorInput = {
+    where: ContentItemWhereUniqueInput
+    data: XOR<ContentItemUpdateWithoutCreatorInput, ContentItemUncheckedUpdateWithoutCreatorInput>
+  }
+
+  export type ContentItemUpdateManyWithWhereWithoutCreatorInput = {
+    where: ContentItemScalarWhereInput
+    data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyWithoutCreatorInput>
+  }
+
+  export type ContentItemScalarWhereInput = {
+    AND?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+    OR?: ContentItemScalarWhereInput[]
+    NOT?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
+    id?: StringFilter<"ContentItem"> | string
+    sourceId?: StringNullableFilter<"ContentItem"> | string | null
+    topicId?: StringNullableFilter<"ContentItem"> | string | null
+    creatorId?: StringNullableFilter<"ContentItem"> | string | null
+    title?: StringFilter<"ContentItem"> | string
+    titleZh?: StringFilter<"ContentItem"> | string
+    url?: StringFilter<"ContentItem"> | string
+    imageUrl?: StringNullableFilter<"ContentItem"> | string | null
+    rawText?: StringFilter<"ContentItem"> | string
+    cleanedText?: StringFilter<"ContentItem"> | string
+    simplifiedText?: StringNullableFilter<"ContentItem"> | string | null
+    summary?: StringNullableFilter<"ContentItem"> | string | null
+    contentType?: EnumContentTypeFilter<"ContentItem"> | $Enums.ContentType
+    status?: EnumContentStatusFilter<"ContentItem"> | $Enums.ContentStatus
+    jlptLevel?: StringFilter<"ContentItem"> | string
+    wordCount?: IntFilter<"ContentItem"> | number
+    estimatedMinutes?: IntFilter<"ContentItem"> | number
+    extractedVocab?: JsonNullableFilter<"ContentItem">
+    extractedGrammar?: JsonNullableFilter<"ContentItem">
+    publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
+    createdAt?: DateTimeFilter<"ContentItem"> | Date | string
+    updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
+  }
+
+  export type CourseUpsertWithWhereUniqueWithoutTeacherInput = {
+    where: CourseWhereUniqueInput
+    update: XOR<CourseUpdateWithoutTeacherInput, CourseUncheckedUpdateWithoutTeacherInput>
+    create: XOR<CourseCreateWithoutTeacherInput, CourseUncheckedCreateWithoutTeacherInput>
+  }
+
+  export type CourseUpdateWithWhereUniqueWithoutTeacherInput = {
+    where: CourseWhereUniqueInput
+    data: XOR<CourseUpdateWithoutTeacherInput, CourseUncheckedUpdateWithoutTeacherInput>
+  }
+
+  export type CourseUpdateManyWithWhereWithoutTeacherInput = {
+    where: CourseScalarWhereInput
+    data: XOR<CourseUpdateManyMutationInput, CourseUncheckedUpdateManyWithoutTeacherInput>
+  }
+
+  export type CourseScalarWhereInput = {
+    AND?: CourseScalarWhereInput | CourseScalarWhereInput[]
+    OR?: CourseScalarWhereInput[]
+    NOT?: CourseScalarWhereInput | CourseScalarWhereInput[]
+    id?: StringFilter<"Course"> | string
+    level?: StringFilter<"Course"> | string
+    title?: StringFilter<"Course"> | string
+    description?: StringNullableFilter<"Course"> | string | null
+    totalLessons?: IntFilter<"Course"> | number
+    estimatedHours?: IntNullableFilter<"Course"> | number | null
+    requiredTier?: StringFilter<"Course"> | string
+    creditCostPerLesson?: IntFilter<"Course"> | number
+    isPublished?: BoolFilter<"Course"> | boolean
+    teacherId?: StringNullableFilter<"Course"> | string | null
+    createdAt?: DateTimeFilter<"Course"> | Date | string
+    updatedAt?: DateTimeFilter<"Course"> | Date | string
+  }
+
   export type UserCreateWithoutAnalyzedVocabularyInput = {
     id?: string
     email: string
@@ -64550,6 +65083,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutAnalyzedVocabularyInput = {
@@ -64595,6 +65130,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutAnalyzedVocabularyInput = {
@@ -64656,6 +65193,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAnalyzedVocabularyInput = {
@@ -64701,6 +65240,107 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
+  }
+
+  export type UserCreateWithoutTeacherCoursesInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    roles?: UserCreaterolesInput | string[]
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressCreateNestedManyWithoutUserInput
+    payments?: PaymentCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
+    dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
+    activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+  }
+
+  export type UserUncheckedCreateWithoutTeacherCoursesInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    roles?: UserCreaterolesInput | string[]
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardUncheckedCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressUncheckedCreateNestedManyWithoutUserInput
+    payments?: PaymentUncheckedCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionUncheckedCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
+    dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
+    activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+  }
+
+  export type UserCreateOrConnectWithoutTeacherCoursesInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutTeacherCoursesInput, UserUncheckedCreateWithoutTeacherCoursesInput>
   }
 
   export type LessonCreateWithoutCourseInput = {
@@ -64743,6 +65383,111 @@ export namespace Prisma {
   export type LessonCreateManyCourseInputEnvelope = {
     data: LessonCreateManyCourseInput | LessonCreateManyCourseInput[]
     skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutTeacherCoursesInput = {
+    update: XOR<UserUpdateWithoutTeacherCoursesInput, UserUncheckedUpdateWithoutTeacherCoursesInput>
+    create: XOR<UserCreateWithoutTeacherCoursesInput, UserUncheckedCreateWithoutTeacherCoursesInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutTeacherCoursesInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutTeacherCoursesInput, UserUncheckedUpdateWithoutTeacherCoursesInput>
+  }
+
+  export type UserUpdateWithoutTeacherCoursesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUpdateManyWithoutUserNestedInput
+    payments?: PaymentUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
+    dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
+    activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutTeacherCoursesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUncheckedUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUncheckedUpdateManyWithoutUserNestedInput
+    payments?: PaymentUncheckedUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUncheckedUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
+    dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
+    activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
   }
 
   export type LessonUpsertWithWhereUniqueWithoutCourseInput = {
@@ -64792,6 +65537,7 @@ export namespace Prisma {
     isPublished?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
+    teacher?: UserCreateNestedOneWithoutTeacherCoursesInput
   }
 
   export type CourseUncheckedCreateWithoutLessonsInput = {
@@ -64804,6 +65550,7 @@ export namespace Prisma {
     requiredTier?: string
     creditCostPerLesson?: number
     isPublished?: boolean
+    teacherId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -64874,6 +65621,7 @@ export namespace Prisma {
     isPublished?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    teacher?: UserUpdateOneWithoutTeacherCoursesNestedInput
   }
 
   export type CourseUncheckedUpdateWithoutLessonsInput = {
@@ -64886,6 +65634,7 @@ export namespace Prisma {
     requiredTier?: StringFieldUpdateOperationsInput | string
     creditCostPerLesson?: IntFieldUpdateOperationsInput | number
     isPublished?: BoolFieldUpdateOperationsInput | boolean
+    teacherId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -65045,6 +65794,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutPlacementTestAttemptInput = {
@@ -65090,6 +65841,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutPlacementTestAttemptInput = {
@@ -65180,6 +65933,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPlacementTestAttemptInput = {
@@ -65225,6 +65980,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutUserFlashcardInput = {
@@ -65270,6 +66027,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutUserFlashcardInput = {
@@ -65315,6 +66074,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutUserFlashcardInput = {
@@ -65376,6 +66137,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserFlashcardInput = {
@@ -65421,6 +66184,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type LessonCreateWithoutUserLessonProgressInput = {
@@ -65503,6 +66268,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutUserLessonProgressInput = {
@@ -65548,6 +66315,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutUserLessonProgressInput = {
@@ -65652,6 +66421,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserLessonProgressInput = {
@@ -65697,6 +66468,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutSubscriptionsInput = {
@@ -65742,6 +66515,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutSubscriptionsInput = {
@@ -65787,6 +66562,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutSubscriptionsInput = {
@@ -65848,6 +66625,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSubscriptionsInput = {
@@ -65893,6 +66672,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutPaymentsInput = {
@@ -65938,6 +66719,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutPaymentsInput = {
@@ -65983,6 +66766,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutPaymentsInput = {
@@ -66044,6 +66829,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPaymentsInput = {
@@ -66089,6 +66876,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutCreditTransactionsInput = {
@@ -66134,6 +66923,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutCreditTransactionsInput = {
@@ -66179,6 +66970,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutCreditTransactionsInput = {
@@ -66240,6 +67033,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutCreditTransactionsInput = {
@@ -66285,6 +67080,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutVocabulariesInput = {
@@ -66330,6 +67127,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutVocabulariesInput = {
@@ -66375,6 +67174,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutVocabulariesInput = {
@@ -66436,6 +67237,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutVocabulariesInput = {
@@ -66481,6 +67284,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutUserPackProgressInput = {
@@ -66526,6 +67331,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutUserPackProgressInput = {
@@ -66571,6 +67378,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutUserPackProgressInput = {
@@ -66632,6 +67441,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutUserPackProgressInput = {
@@ -66677,6 +67488,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserCreateWithoutLearningStatsInput = {
@@ -66722,6 +67535,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutLearningStatsInput = {
@@ -66767,6 +67582,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutLearningStatsInput = {
@@ -66828,6 +67645,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLearningStatsInput = {
@@ -66873,6 +67692,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserDailyChallengeCreateWithoutChallengeInput = {
@@ -66964,6 +67785,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutDailyChallengesInput = {
@@ -67009,6 +67832,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutDailyChallengesInput = {
@@ -67097,6 +67922,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutDailyChallengesInput = {
@@ -67142,6 +67969,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type DailyChallengeUpsertWithoutUserChallengesInput = {
@@ -67220,6 +68049,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutAuditLogsInput = {
@@ -67265,6 +68096,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutAuditLogsInput = {
@@ -67326,6 +68159,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAuditLogsInput = {
@@ -67371,6 +68206,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type ContentItemCreateWithoutTopicInput = {
@@ -67394,6 +68231,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -67405,6 +68243,7 @@ export namespace Prisma {
   export type ContentItemUncheckedCreateWithoutTopicInput = {
     id?: string
     sourceId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -67511,33 +68350,6 @@ export namespace Prisma {
     data: XOR<ContentItemUpdateManyMutationInput, ContentItemUncheckedUpdateManyWithoutTopicInput>
   }
 
-  export type ContentItemScalarWhereInput = {
-    AND?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
-    OR?: ContentItemScalarWhereInput[]
-    NOT?: ContentItemScalarWhereInput | ContentItemScalarWhereInput[]
-    id?: StringFilter<"ContentItem"> | string
-    sourceId?: StringNullableFilter<"ContentItem"> | string | null
-    topicId?: StringNullableFilter<"ContentItem"> | string | null
-    title?: StringFilter<"ContentItem"> | string
-    titleZh?: StringFilter<"ContentItem"> | string
-    url?: StringFilter<"ContentItem"> | string
-    imageUrl?: StringNullableFilter<"ContentItem"> | string | null
-    rawText?: StringFilter<"ContentItem"> | string
-    cleanedText?: StringFilter<"ContentItem"> | string
-    simplifiedText?: StringNullableFilter<"ContentItem"> | string | null
-    summary?: StringNullableFilter<"ContentItem"> | string | null
-    contentType?: EnumContentTypeFilter<"ContentItem"> | $Enums.ContentType
-    status?: EnumContentStatusFilter<"ContentItem"> | $Enums.ContentStatus
-    jlptLevel?: StringFilter<"ContentItem"> | string
-    wordCount?: IntFilter<"ContentItem"> | number
-    estimatedMinutes?: IntFilter<"ContentItem"> | number
-    extractedVocab?: JsonNullableFilter<"ContentItem">
-    extractedGrammar?: JsonNullableFilter<"ContentItem">
-    publishedAt?: DateTimeNullableFilter<"ContentItem"> | Date | string | null
-    createdAt?: DateTimeFilter<"ContentItem"> | Date | string
-    updatedAt?: DateTimeFilter<"ContentItem"> | Date | string
-  }
-
   export type ListeningContentUpsertWithWhereUniqueWithoutTopicInput = {
     where: ListeningContentWhereUniqueInput
     update: XOR<ListeningContentUpdateWithoutTopicInput, ListeningContentUncheckedUpdateWithoutTopicInput>
@@ -67598,6 +68410,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -67609,6 +68422,7 @@ export namespace Prisma {
   export type ContentItemUncheckedCreateWithoutSourceInput = {
     id?: string
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -67713,6 +68527,105 @@ export namespace Prisma {
   export type TopicCreateOrConnectWithoutContentInput = {
     where: TopicWhereUniqueInput
     create: XOR<TopicCreateWithoutContentInput, TopicUncheckedCreateWithoutContentInput>
+  }
+
+  export type UserCreateWithoutCreatedContentInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    roles?: UserCreaterolesInput | string[]
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressCreateNestedManyWithoutUserInput
+    payments?: PaymentCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
+    dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
+    activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
+  }
+
+  export type UserUncheckedCreateWithoutCreatedContentInput = {
+    id?: string
+    email: string
+    passwordHash?: string | null
+    displayName?: string | null
+    provider?: string
+    providerId?: string | null
+    avatar?: string | null
+    phone?: string | null
+    role?: string
+    roles?: UserCreaterolesInput | string[]
+    refreshTokenHash?: string | null
+    lastLoginAt?: Date | string | null
+    subscriptionTier?: string
+    credits?: number
+    customerId?: string | null
+    subscriptionId?: string | null
+    subscriptionExpiry?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    lastActivityDate?: Date | string | null
+    learningStreak?: number
+    totalAnalyses?: number
+    wordsLearned?: number
+    twitter?: string | null
+    weibo?: string | null
+    douyin?: string | null
+    tiktok?: string | null
+    instagram?: string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedCreateNestedManyWithoutUserInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedCreateNestedManyWithoutUserInput
+    UserFlashcard?: UserFlashcardUncheckedCreateNestedManyWithoutUserInput
+    UserLessonProgress?: UserLessonProgressUncheckedCreateNestedManyWithoutUserInput
+    payments?: PaymentUncheckedCreateNestedManyWithoutUserInput
+    creditTransactions?: CreditTransactionUncheckedCreateNestedManyWithoutUserInput
+    subscriptions?: SubscriptionUncheckedCreateNestedManyWithoutUserInput
+    vocabularies?: VocabularyUncheckedCreateNestedManyWithoutUserInput
+    userPackProgress?: UserPackProgressUncheckedCreateNestedManyWithoutUserInput
+    learningStats?: LearningStatsUncheckedCreateNestedOneWithoutUserInput
+    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutUserInput
+    contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
+    listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
+    dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
+    activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
+  }
+
+  export type UserCreateOrConnectWithoutCreatedContentInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutCreatedContentInput, UserUncheckedCreateWithoutCreatedContentInput>
   }
 
   export type ContentSectionCreateWithoutContentItemInput = {
@@ -67978,6 +68891,111 @@ export namespace Prisma {
     listeningContent?: ListeningContentUncheckedUpdateManyWithoutTopicNestedInput
   }
 
+  export type UserUpsertWithoutCreatedContentInput = {
+    update: XOR<UserUpdateWithoutCreatedContentInput, UserUncheckedUpdateWithoutCreatedContentInput>
+    create: XOR<UserCreateWithoutCreatedContentInput, UserUncheckedCreateWithoutCreatedContentInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutCreatedContentInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutCreatedContentInput, UserUncheckedUpdateWithoutCreatedContentInput>
+  }
+
+  export type UserUpdateWithoutCreatedContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUpdateManyWithoutUserNestedInput
+    payments?: PaymentUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
+    dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
+    activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutCreatedContentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: StringFieldUpdateOperationsInput | string
+    providerId?: NullableStringFieldUpdateOperationsInput | string | null
+    avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    phone?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: StringFieldUpdateOperationsInput | string
+    roles?: UserUpdaterolesInput | string[]
+    refreshTokenHash?: NullableStringFieldUpdateOperationsInput | string | null
+    lastLoginAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    subscriptionTier?: StringFieldUpdateOperationsInput | string
+    credits?: IntFieldUpdateOperationsInput | number
+    customerId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionId?: NullableStringFieldUpdateOperationsInput | string | null
+    subscriptionExpiry?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    learningStreak?: IntFieldUpdateOperationsInput | number
+    totalAnalyses?: IntFieldUpdateOperationsInput | number
+    wordsLearned?: IntFieldUpdateOperationsInput | number
+    twitter?: NullableStringFieldUpdateOperationsInput | string | null
+    weibo?: NullableStringFieldUpdateOperationsInput | string | null
+    douyin?: NullableStringFieldUpdateOperationsInput | string | null
+    tiktok?: NullableStringFieldUpdateOperationsInput | string | null
+    instagram?: NullableStringFieldUpdateOperationsInput | string | null
+    AnalyzedVocabulary?: AnalyzedVocabularyUncheckedUpdateManyWithoutUserNestedInput
+    PlacementTestAttempt?: PlacementTestAttemptUncheckedUpdateManyWithoutUserNestedInput
+    UserFlashcard?: UserFlashcardUncheckedUpdateManyWithoutUserNestedInput
+    UserLessonProgress?: UserLessonProgressUncheckedUpdateManyWithoutUserNestedInput
+    payments?: PaymentUncheckedUpdateManyWithoutUserNestedInput
+    creditTransactions?: CreditTransactionUncheckedUpdateManyWithoutUserNestedInput
+    subscriptions?: SubscriptionUncheckedUpdateManyWithoutUserNestedInput
+    vocabularies?: VocabularyUncheckedUpdateManyWithoutUserNestedInput
+    userPackProgress?: UserPackProgressUncheckedUpdateManyWithoutUserNestedInput
+    learningStats?: LearningStatsUncheckedUpdateOneWithoutUserNestedInput
+    auditLogs?: AuditLogUncheckedUpdateManyWithoutUserNestedInput
+    contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
+    listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
+    dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
+    activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
+  }
+
   export type ContentSectionUpsertWithWhereUniqueWithoutContentItemInput = {
     where: ContentSectionWhereUniqueInput
     update: XOR<ContentSectionUpdateWithoutContentItemInput, ContentSectionUncheckedUpdateWithoutContentItemInput>
@@ -68178,6 +69196,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
     srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
@@ -68189,6 +69208,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -68252,6 +69272,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
     srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
@@ -68263,6 +69284,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -68310,6 +69332,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
     srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
@@ -68321,6 +69344,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -68384,6 +69408,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
     srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
@@ -68395,6 +69420,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -68442,6 +69468,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     srsItems?: GeneratedSRSItemCreateNestedManyWithoutContentItemInput
@@ -68453,6 +69480,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -68565,6 +69593,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
@@ -68576,6 +69605,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -68678,6 +69708,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -68689,6 +69720,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -68752,6 +69784,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -68763,6 +69796,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -68831,6 +69865,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutContentProgressInput = {
@@ -68876,6 +69912,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutContentProgressInput = {
@@ -68905,6 +69943,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -68916,6 +69955,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -69000,6 +70040,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutContentProgressInput = {
@@ -69045,6 +70087,8 @@ export namespace Prisma {
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type ContentItemUpsertWithoutUserProgressInput = {
@@ -69080,6 +70124,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -69091,6 +70136,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -69138,6 +70184,7 @@ export namespace Prisma {
     updatedAt?: Date | string
     source?: ContentSourceCreateNestedOneWithoutContentInput
     topic?: TopicCreateNestedOneWithoutContentInput
+    creator?: UserCreateNestedOneWithoutCreatedContentInput
     sections?: ContentSectionCreateNestedManyWithoutContentItemInput
     audio?: ContentAudioCreateNestedManyWithoutContentItemInput
     questions?: GeneratedQuestionCreateNestedManyWithoutContentItemInput
@@ -69149,6 +70196,7 @@ export namespace Prisma {
     id?: string
     sourceId?: string | null
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -69212,6 +70260,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -69223,6 +70272,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -69620,6 +70670,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutListeningProgressInput = {
@@ -69665,6 +70717,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
     activityLogs?: ActivityLogUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutListeningProgressInput = {
@@ -69775,6 +70829,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutListeningProgressInput = {
@@ -69820,6 +70876,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
     activityLogs?: ActivityLogUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type ListeningContentUpsertWithoutUserProgressInput = {
@@ -69920,6 +70978,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressCreateNestedManyWithoutUserInput
     listeningProgress?: UserListeningProgressCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseCreateNestedManyWithoutTeacherInput
   }
 
   export type UserUncheckedCreateWithoutActivityLogsInput = {
@@ -69965,6 +71025,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedCreateNestedManyWithoutUserInput
     listeningProgress?: UserListeningProgressUncheckedCreateNestedManyWithoutUserInput
     dailyChallenges?: UserDailyChallengeUncheckedCreateNestedManyWithoutUserInput
+    createdContent?: ContentItemUncheckedCreateNestedManyWithoutCreatorInput
+    teacherCourses?: CourseUncheckedCreateNestedManyWithoutTeacherInput
   }
 
   export type UserCreateOrConnectWithoutActivityLogsInput = {
@@ -70026,6 +71088,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUpdateManyWithoutUserNestedInput
     listeningProgress?: UserListeningProgressUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUpdateManyWithoutTeacherNestedInput
   }
 
   export type UserUncheckedUpdateWithoutActivityLogsInput = {
@@ -70071,6 +71135,8 @@ export namespace Prisma {
     contentProgress?: UserContentProgressUncheckedUpdateManyWithoutUserNestedInput
     listeningProgress?: UserListeningProgressUncheckedUpdateManyWithoutUserNestedInput
     dailyChallenges?: UserDailyChallengeUncheckedUpdateManyWithoutUserNestedInput
+    createdContent?: ContentItemUncheckedUpdateManyWithoutCreatorNestedInput
+    teacherCourses?: CourseUncheckedUpdateManyWithoutTeacherNestedInput
   }
 
   export type AnalyzedVocabularyCreateManyUserInput = {
@@ -70258,6 +71324,44 @@ export namespace Prisma {
     title: string
     meta?: string | null
     createdAt?: Date | string
+  }
+
+  export type ContentItemCreateManyCreatorInput = {
+    id?: string
+    sourceId?: string | null
+    topicId?: string | null
+    title: string
+    titleZh?: string
+    url?: string
+    imageUrl?: string | null
+    rawText: string
+    cleanedText?: string
+    simplifiedText?: string | null
+    summary?: string | null
+    contentType?: $Enums.ContentType
+    status?: $Enums.ContentStatus
+    jlptLevel?: string
+    wordCount?: number
+    estimatedMinutes?: number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CourseCreateManyTeacherInput = {
+    id?: string
+    level: string
+    title: string
+    description?: string | null
+    totalLessons: number
+    estimatedHours?: number | null
+    requiredTier?: string
+    creditCostPerLesson?: number
+    isPublished?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type AnalyzedVocabularyUpdateWithoutUserInput = {
@@ -70823,6 +71927,134 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type ContentItemUpdateWithoutCreatorInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    source?: ContentSourceUpdateOneWithoutContentNestedInput
+    topic?: TopicUpdateOneWithoutContentNestedInput
+    sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateWithoutCreatorInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sections?: ContentSectionUncheckedUpdateManyWithoutContentItemNestedInput
+    audio?: ContentAudioUncheckedUpdateManyWithoutContentItemNestedInput
+    questions?: GeneratedQuestionUncheckedUpdateManyWithoutContentItemNestedInput
+    srsItems?: GeneratedSRSItemUncheckedUpdateManyWithoutContentItemNestedInput
+    userProgress?: UserContentProgressUncheckedUpdateManyWithoutContentItemNestedInput
+    importJob?: ContentImportJobUncheckedUpdateOneWithoutContentItemNestedInput
+  }
+
+  export type ContentItemUncheckedUpdateManyWithoutCreatorInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    title?: StringFieldUpdateOperationsInput | string
+    titleZh?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    rawText?: StringFieldUpdateOperationsInput | string
+    cleanedText?: StringFieldUpdateOperationsInput | string
+    simplifiedText?: NullableStringFieldUpdateOperationsInput | string | null
+    summary?: NullableStringFieldUpdateOperationsInput | string | null
+    contentType?: EnumContentTypeFieldUpdateOperationsInput | $Enums.ContentType
+    status?: EnumContentStatusFieldUpdateOperationsInput | $Enums.ContentStatus
+    jlptLevel?: StringFieldUpdateOperationsInput | string
+    wordCount?: IntFieldUpdateOperationsInput | number
+    estimatedMinutes?: IntFieldUpdateOperationsInput | number
+    extractedVocab?: NullableJsonNullValueInput | InputJsonValue
+    extractedGrammar?: NullableJsonNullValueInput | InputJsonValue
+    publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CourseUpdateWithoutTeacherInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    totalLessons?: IntFieldUpdateOperationsInput | number
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    requiredTier?: StringFieldUpdateOperationsInput | string
+    creditCostPerLesson?: IntFieldUpdateOperationsInput | number
+    isPublished?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lessons?: LessonUpdateManyWithoutCourseNestedInput
+  }
+
+  export type CourseUncheckedUpdateWithoutTeacherInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    totalLessons?: IntFieldUpdateOperationsInput | number
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    requiredTier?: StringFieldUpdateOperationsInput | string
+    creditCostPerLesson?: IntFieldUpdateOperationsInput | number
+    isPublished?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    lessons?: LessonUncheckedUpdateManyWithoutCourseNestedInput
+  }
+
+  export type CourseUncheckedUpdateManyWithoutTeacherInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    level?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    totalLessons?: IntFieldUpdateOperationsInput | number
+    estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
+    requiredTier?: StringFieldUpdateOperationsInput | string
+    creditCostPerLesson?: IntFieldUpdateOperationsInput | number
+    isPublished?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type LessonCreateManyCourseInput = {
     id?: string
     lessonNumber: number
@@ -71020,6 +72252,7 @@ export namespace Prisma {
   export type ContentItemCreateManyTopicInput = {
     id?: string
     sourceId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -71080,6 +72313,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     source?: ContentSourceUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -71091,6 +72325,7 @@ export namespace Prisma {
   export type ContentItemUncheckedUpdateWithoutTopicInput = {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -71120,6 +72355,7 @@ export namespace Prisma {
   export type ContentItemUncheckedUpdateManyWithoutTopicInput = {
     id?: StringFieldUpdateOperationsInput | string
     sourceId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -71206,6 +72442,7 @@ export namespace Prisma {
   export type ContentItemCreateManySourceInput = {
     id?: string
     topicId?: string | null
+    creatorId?: string | null
     title: string
     titleZh?: string
     url?: string
@@ -71247,6 +72484,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     topic?: TopicUpdateOneWithoutContentNestedInput
+    creator?: UserUpdateOneWithoutCreatedContentNestedInput
     sections?: ContentSectionUpdateManyWithoutContentItemNestedInput
     audio?: ContentAudioUpdateManyWithoutContentItemNestedInput
     questions?: GeneratedQuestionUpdateManyWithoutContentItemNestedInput
@@ -71258,6 +72496,7 @@ export namespace Prisma {
   export type ContentItemUncheckedUpdateWithoutSourceInput = {
     id?: StringFieldUpdateOperationsInput | string
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
@@ -71287,6 +72526,7 @@ export namespace Prisma {
   export type ContentItemUncheckedUpdateManyWithoutSourceInput = {
     id?: StringFieldUpdateOperationsInput | string
     topicId?: NullableStringFieldUpdateOperationsInput | string | null
+    creatorId?: NullableStringFieldUpdateOperationsInput | string | null
     title?: StringFieldUpdateOperationsInput | string
     titleZh?: StringFieldUpdateOperationsInput | string
     url?: StringFieldUpdateOperationsInput | string
